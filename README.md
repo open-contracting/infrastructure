@@ -42,7 +42,7 @@ The technical development workplan consists of the following four components:
 
 * **Schema and guidance development (July/August 2018)** - providing a clearly documented approach to the use of the core Open Contracting Data Standard (and extensions if appropriate) to provide the proactive disclosures required by CoST, and outlining implementation models for this.
 
-* **Implementation resources (October 2018 - February 2019)** - creating guidance for implementers seeking to deploy the open contracting data standard as part of a CoST Infrastructure Transparency initiative. 
+* **Implementation resources (October 2018 - February 2019)** - creating guidance for implementers seeking to deploy the open contracting data standard for infrastructure projects
 
 ## In this repository
 
