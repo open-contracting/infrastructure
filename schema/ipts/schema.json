@@ -1,0 +1,1139 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
+  "title": "Infrastructure Project Transparency Schema ",
+  "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "title": "Identifier or Reference",
+      "description": "A unique identifier or reference number for this infrastructure project. TODO: GUIDANCE ON PROJECT IDENTIFIERS",
+      "type": "string"
+    },
+    "updated": {
+      "title": "Last updated",
+      "description": "The date on which project level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project level data has been updated as a result, or to provide explanations or justifications for those changes.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "title": {
+      "title": "Project title",
+      "description": "The title of the project.",
+      "type": "string"
+    },
+    "description": {
+      "title": "Project description",
+      "description": "A description of this project. This should usually be no longer than a single paragraph.",
+      "type": "string"
+    },
+    "status": {
+      "title": "Status",
+      "description": "The status of this project, from the projectStatus codelist.",
+      "type": "string",
+      "codelist": "projectStatus.csv",
+      "openCodelist": false,
+      "enum": [
+        "planned",
+        "active",
+        "complete",
+        "cancelled"
+      ],
+      "enum_titles": [
+        "Planned",
+        "Active",
+        "Complete",
+        "Cancelled"
+      ]
+    },
+    "phase": {
+      "title": "Phase",
+      "description": "The phase of this project, from the projectPhase codelist.",
+      "type": "string",
+      "codelist": "projectPhase.csv",
+      "openCodelist": true,
+      "enum": [
+        "identification",
+        "preparation",
+        "construction",
+        "completion"
+      ],
+      "enum_titles": [
+        "Identification",
+        "Preparation",
+        "construction",
+        "Completion"
+      ],
+      "enum_descriptions": [
+        "Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).",
+        "Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.",
+        "Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.",
+        "Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time."
+      ],
+      "schema_notes": "We have not included 'procurement' as a phase, as this overlaps with implementation, and can be inferred from the details in `contractingProcesses`. We have also used 'implementation' rather than 'construction' - a difference from the GN9 draft."
+    },
+    "period": {
+      "title": "Project period",
+      "description": "The period over which this project will run. This may be updated as the project moves through each phase as more information becomes available to more accurately specify anticipated start and end dates. Implementations may vary as to whether the period is taken to run from the earliest planning to the latest monitoring report, or whether the period only represents the major construction phase.",
+      "$ref": "#/definitions/Period"
+    },
+    "sector": {
+      "title": "Project sector",
+      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended. It should be ",
+      "$ref": "#/definitions/Classification"
+    },
+    "additionalClassifications": {
+      "title": "Additional sector classifications",
+      "description": "Additional project classification, by other sector classifications, or using other classification schemes (e.g. against a strategic framework).",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Classification"
+      },
+      "uniqueItems": true
+    },
+    "locations": {
+      "title": "Project location",
+      "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Location"
+      },
+      "uniqueItems": true
+    },
+    "budget": {
+      "title": "Total project value",
+      "description": "Specify the projected costs or allocated budget for the project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "$ref": "#/Definitions/Value"
+        },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included amongst the project documents with the documentType set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "budgetBreakdown": {
+          "type": "array",
+          "title": "Budget breakdown",
+          "description": "A detailed breakdown of the budget by period and/or participating funders.",
+          "items": {
+            "$ref": "#/definitions/BudgetBreakdown"
+          }
+        }
+      }
+    },
+    "parties": {
+      "title": "Parties",
+      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the project and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Organization"
+      },
+      "uniqueItems": true
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Document"
+      }
+    },
+    "completion": {
+      "title": "Completion",
+      "description": "This information is provided at project completion, and reflects the final timing and values relating to the project. The reason for any variation (not already explained) between the anticipated project scope, period and value should be detailed.",
+      "type": "object",
+      "properties": {
+        "endDate": {
+          "title": "End date",
+          "description": "The actual completion date for the project (compare with the endDate in project period.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "endDateDetails": {
+          "title": "End date details",
+          "description": "Details related to the endDate. This may be a justification for the contract's completion date being different than in the original contract.",
+          "type": "string"
+        },
+        "finalValue": {
+          "title": "Final value",
+          "description": "The total cost of this project at completion (compare with project budget).",
+          "$ref": "#/definitions/Value"
+        },
+        "finalValueDetails": {
+          "title": "Final value details",
+          "description": "Details related to the final value. This may be a justification for the completed project's value being different than in the original or latest revised budget.",
+          "type": "string"
+        },
+        "finalScope": {
+          "title": "Final scope",
+          "description": "A short description of the final scope of the project at completion.",
+          "type": "string"
+        },
+        "finalScopeDetails": {
+          "title": "Final scope details",
+          "description": "A reason, explanation or justification for any variation between the anticipated scope (compare to the projectScope document) and the final scope at completion. If appropriate, additional details may be included in the documents section, with a title indicating that these documents will describe and differences between the planned and completed scope of work.",
+          "type": "string"
+        }
+      }
+    },
+    "contractingProcesses": {
+      "title": "Contracting Processes",
+      "description": "Each of the contracting processes will go here.",
+      "type": "object"
+    }
+  },
+  "definitions": {
+    "Period": {
+      "title": "Period",
+      "description": "Key events during a project or contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values.",
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "title": "Start date",
+          "description": "The start date for the period. When known, a precise start date must always be provided.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "endDate": {
+          "title": "End date",
+          "description": "The end date for the period. When known, a precise end date must always be provided.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "maxExtentDate": {
+          "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available data for extension or renewal of this period.",
+          "format": "date-time",
+          "title": "Maximum extent",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "durationInDays": {
+          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+          "title": "Duration (days)",
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "Classification": {
+      "title": "Classification",
+      "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is drawn, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+      "type": "object",
+      "properties": {
+        "scheme": {
+          "title": "Scheme",
+          "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "title": "ID",
+          "description": "The classification code drawn from the selected scheme.",
+          "type": [
+            "string",
+            "integer",
+            "null"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "description": "A textual description or title for the code.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uri": {
+          "title": "URI",
+          "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        }
+      },
+      "patternProperties": {
+        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Location": {
+      "type": "object",
+      "title": "Delivery Location",
+      "description": "The location where activity related to this project will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both.",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geometry": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "title": "Geometry",
+          "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using latitude and longitude values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+          "properties": {
+            "type": {
+              "title": "Type",
+              "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "enum": [
+                "Point",
+                "MultiPoint",
+                "LineString",
+                "MultiLineString",
+                "Polygon",
+                "MultiPolygon",
+                null
+              ],
+              "codelist": "geometryType.csv",
+              "openCodelist": false
+            },
+            "coordinates": {
+              "title": "Coordinates",
+              "description": "The relevant array of points, e.g. [latitude,longitude], or nested array, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "number",
+                  "array"
+                ]
+              }
+            }
+          }
+        },
+        "gazetteer": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "title": "Gazetteer",
+          "description": "A gazetteer is a geographical index or directory. The specific gazetteer used should be specified in scheme, and one or more codes from that gazetteer used in identifier.",
+          "properties": {
+            "scheme": {
+              "title": "Gazetteer scheme",
+              "description": "The entry of the selected gazetteer in the gazetteers codelist. The codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
+              "type": [
+                "string",
+                "null"
+              ],
+              "codelist": "locationGazetteers.csv",
+              "openCodelist": true
+            },
+            "identifiers": {
+              "title": "Identifiers",
+              "description": "An array of one or more codes drawn from the gazetteer indicated in scheme.",
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "string"
+                ]
+              }
+            }
+          }
+        },
+        "uri": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "URI",
+          "description": "A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location."
+        }
+      }
+    },
+    "Value": {
+      "title": "Value",
+      "description": "Financial values should always be published with a currency attached.",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "title": "Amount",
+          "description": "Amount as a number.",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "title": "Currency",
+          "description": "The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "currency.csv",
+          "openCodelist": false,
+          "enum": [
+            "ADP",
+            "AED",
+            "AFA",
+            "AFN",
+            "ALK",
+            "ALL",
+            "AMD",
+            "ANG",
+            "AOA",
+            "AOK",
+            "AON",
+            "AOR",
+            "ARA",
+            "ARP",
+            "ARS",
+            "ARY",
+            "ATS",
+            "AUD",
+            "AWG",
+            "AYM",
+            "AZM",
+            "AZN",
+            "BAD",
+            "BAM",
+            "BBD",
+            "BDT",
+            "BEC",
+            "BEF",
+            "BEL",
+            "BGJ",
+            "BGK",
+            "BGL",
+            "BGN",
+            "BHD",
+            "BIF",
+            "BMD",
+            "BND",
+            "BOB",
+            "BOP",
+            "BOV",
+            "BRB",
+            "BRC",
+            "BRE",
+            "BRL",
+            "BRN",
+            "BRR",
+            "BSD",
+            "BTN",
+            "BUK",
+            "BWP",
+            "BYB",
+            "BYN",
+            "BYR",
+            "BZD",
+            "CAD",
+            "CDF",
+            "CHC",
+            "CHE",
+            "CHF",
+            "CHW",
+            "CLF",
+            "CLP",
+            "CNY",
+            "COP",
+            "COU",
+            "CRC",
+            "CSD",
+            "CSJ",
+            "CSK",
+            "CUC",
+            "CUP",
+            "CVE",
+            "CYP",
+            "CZK",
+            "DDM",
+            "DEM",
+            "DJF",
+            "DKK",
+            "DOP",
+            "DZD",
+            "ECS",
+            "ECV",
+            "EEK",
+            "EGP",
+            "ERN",
+            "ESA",
+            "ESB",
+            "ESP",
+            "ETB",
+            "EUR",
+            "FIM",
+            "FJD",
+            "FKP",
+            "FRF",
+            "GBP",
+            "GEK",
+            "GEL",
+            "GHC",
+            "GHP",
+            "GHS",
+            "GIP",
+            "GMD",
+            "GNE",
+            "GNF",
+            "GNS",
+            "GQE",
+            "GRD",
+            "GTQ",
+            "GWE",
+            "GWP",
+            "GYD",
+            "HKD",
+            "HNL",
+            "HRD",
+            "HRK",
+            "HTG",
+            "HUF",
+            "IDR",
+            "IEP",
+            "ILP",
+            "ILR",
+            "ILS",
+            "INR",
+            "IQD",
+            "IRR",
+            "ISJ",
+            "ISK",
+            "ITL",
+            "JMD",
+            "JOD",
+            "JPY",
+            "KES",
+            "KGS",
+            "KHR",
+            "KMF",
+            "KPW",
+            "KRW",
+            "KWD",
+            "KYD",
+            "KZT",
+            "LAJ",
+            "LAK",
+            "LBP",
+            "LKR",
+            "LRD",
+            "LSL",
+            "LSM",
+            "LTL",
+            "LTT",
+            "LUC",
+            "LUF",
+            "LUL",
+            "LVL",
+            "LVR",
+            "LYD",
+            "MAD",
+            "MDL",
+            "MGA",
+            "MGF",
+            "MKD",
+            "MLF",
+            "MMK",
+            "MNT",
+            "MOP",
+            "MRO",
+            "MRU",
+            "MTL",
+            "MTP",
+            "MUR",
+            "MVQ",
+            "MVR",
+            "MWK",
+            "MXN",
+            "MXP",
+            "MXV",
+            "MYR",
+            "MZE",
+            "MZM",
+            "MZN",
+            "NAD",
+            "NGN",
+            "NIC",
+            "NIO",
+            "NLG",
+            "NOK",
+            "NPR",
+            "NZD",
+            "OMR",
+            "PAB",
+            "PEH",
+            "PEI",
+            "PEN",
+            "PES",
+            "PGK",
+            "PHP",
+            "PKR",
+            "PLN",
+            "PLZ",
+            "PTE",
+            "PYG",
+            "QAR",
+            "RHD",
+            "ROK",
+            "ROL",
+            "RON",
+            "RSD",
+            "RUB",
+            "RUR",
+            "RWF",
+            "SAR",
+            "SBD",
+            "SCR",
+            "SDD",
+            "SDG",
+            "SDP",
+            "SEK",
+            "SGD",
+            "SHP",
+            "SIT",
+            "SKK",
+            "SLL",
+            "SOS",
+            "SRD",
+            "SRG",
+            "SSP",
+            "STD",
+            "STN",
+            "SUR",
+            "SVC",
+            "SYP",
+            "SZL",
+            "THB",
+            "TJR",
+            "TJS",
+            "TMM",
+            "TMT",
+            "TND",
+            "TOP",
+            "TPE",
+            "TRL",
+            "TRY",
+            "TTD",
+            "TWD",
+            "TZS",
+            "UAH",
+            "UAK",
+            "UGS",
+            "UGW",
+            "UGX",
+            "USD",
+            "USN",
+            "USS",
+            "UYI",
+            "UYN",
+            "UYP",
+            "UYU",
+            "UZS",
+            "VEB",
+            "VEF",
+            "VNC",
+            "VND",
+            "VUV",
+            "WST",
+            "XAF",
+            "XAG",
+            "XAU",
+            "XBA",
+            "XBB",
+            "XBC",
+            "XBD",
+            "XCD",
+            "XDR",
+            "XEU",
+            "XFO",
+            "XFU",
+            "XOF",
+            "XPD",
+            "XPF",
+            "XPT",
+            "XRE",
+            "XSU",
+            "XTS",
+            "XUA",
+            "XXX",
+            "YDD",
+            "YER",
+            "YUD",
+            "YUM",
+            "YUN",
+            "ZAL",
+            "ZAR",
+            "ZMK",
+            "ZMW",
+            "ZRN",
+            "ZRZ",
+            "ZWC",
+            "ZWD",
+            "ZWL",
+            "ZWN",
+            "ZWR",
+            null
+          ]
+        }
+      }
+    },
+    "Organization": {
+      "title": "Organization",
+      "description": "A party (organization)",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Common name",
+          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string"
+          ],
+          "description": "The ID used for cross-referencing to this party from other sections of the release. This field may be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}).",
+          "title": "Entity ID"
+        },
+        "identifier": {
+          "title": "Primary identifier",
+          "description": "The primary identifier for this organization or participant. Identifiers that uniquely pick out a legal entity should be preferred. Consult the [organization identifier guidance](http://standard.open-contracting.org/master/en/schema/identifiers/) for the preferred scheme and identifier to use.",
+          "$ref": "#/definitions/Identifier"
+        },
+        "additionalIdentifiers": {
+          "title": "Additional identifiers",
+          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](http://standard.open-contracting.org/master/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Identifier"
+          },
+          "uniqueItems": true,
+          "wholeListMerge": true
+        },
+        "address": {
+          "title": "Address",
+          "description": "An address. This may be the legally registered address of the organization, or may be a correspondence address for this particular contracting process.",
+          "$ref": "#/definitions/Address"
+        },
+        "contactPoint": {
+          "title": "Contact point",
+          "description": "Contact details that can be used for this party.",
+          "$ref": "#/definitions/ContactPoint"
+        },
+        "roles": {
+          "title": "Party roles",
+          "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/master/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "partyRole.csv",
+          "openCodelist": true
+        },
+        "details": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular properties and classification schemes.",
+          "title": "Details"
+        },
+        "shareholders": {
+          "title": "Organization shareholders",
+          "description": "A list of shareholders in the organization: used to provide company ownership information for firms, primarily in the case of large and complex contracts, or Public Private Partnerships, that require disclosure of this information for certain bidders or awarded parties.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Shareholder"
+          },
+          "uniqueItems": true
+        },
+        "beneficialOwnership": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "title": "Beneficial ownership",
+          "description": "This section can be used to record information concerning individuals or organizations with a beneficial ownership or control interests in this party. Where structured data is available, this section may be extended by embedding or linking to information modelled using the [Beneficial Ownership Data Standard (BODS)](https://github.com/openownership/data-standard).",
+          "properties": {
+            "description": {
+              "title": "Description",
+              "description": "A free text description of beneficial ownership or control arrangements.",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      },
+      "patternProperties": {
+        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "OrganizationReference": {
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
+          "title": "Organization name",
+          "minLength": 1
+        },
+        "id": {
+          "type": [
+            "string",
+            "integer"
+          ],
+          "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
+          "title": "Organization ID"
+        }
+      },
+      "type": "object",
+      "description": "The id and name of the party being referenced. Used to cross-reference to the parties section",
+      "title": "Organization reference"
+    },
+    "Address": {
+      "title": "Address",
+      "description": "An address.",
+      "type": "object",
+      "properties": {
+        "streetAddress": {
+          "title": "Street address",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The street address. For example, 1600 Amphitheatre Pkwy."
+        },
+        "locality": {
+          "title": "Locality",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The locality. For example, Mountain View."
+        },
+        "region": {
+          "title": "Region",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The region. For example, CA."
+        },
+        "postalCode": {
+          "title": "Postal code",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The postal code. For example, 94043."
+        },
+        "countryName": {
+          "title": "Country name",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The country name. For example, United States."
+        }
+      },
+      "patternProperties": {
+        "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "ContactPoint": {
+      "title": "Contact point",
+      "type": "object",
+      "description": "An person, contact point or department to contact in relation to this contracting process.",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+        },
+        "email": {
+          "title": "Email",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The e-mail address of the contact point/person."
+        },
+        "telephone": {
+          "title": "Telephone",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The telephone number of the contact point/person. This should include the international dialing code."
+        },
+        "faxNumber": {
+          "title": "Fax number",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The fax number of the contact point/person. This should include the international dialing code."
+        },
+        "url": {
+          "title": "URL",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "A web address for the contact point/person.",
+          "format": "uri"
+        }
+      },
+      "patternProperties": {
+        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "BudgetBreakdown": {
+      "type": "object",
+      "title": "Detailed budget breakdown",
+      "description": "This section allows a detailed budget breakdown to be expressed, covering multiple budget sources and multiple periods",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "An identifier for this particular budget entry.",
+          "mergeStrategy": "ocdsVersion",
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short free text description of this budget entry.",
+          "mergeStrategy": "ocdsVersion",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "amount": {
+          "title": "Amount",
+          "description": "The value of the budget line item.",
+          "$ref": "#/definitions/Value"
+        },
+        "uri": {
+          "title": "Linked budget information",
+          "description": "A URI pointing directly to a machine-readable information about this budget entry.",
+          "mergeStrategy": "ocdsVersion",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "period": {
+          "$ref": "#/definitions/Period",
+          "title": "Budget period",
+          "description": "The period covered by this budget entry."
+        },
+        "sourceParty": {
+          "$ref": "#/definitions/OrganizationReference",
+          "title": "Source party",
+          "description": "The organization or other party related to this budget entry. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party."
+        }
+      }
+    },
+    "Document": {
+      "type": "object",
+      "title": "Document",
+      "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents may be supporting information, formal notices, downloadable forms, or any other kind of resource that should be made public as part of full open contracting.",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism.",
+          "type": [
+            "string",
+            "integer"
+          ],
+          "minLength": 1
+        },
+        "documentType": {
+          "title": "Document type",
+          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/master/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "documentType.csv",
+          "openCodelist": true
+        },
+        "title": {
+          "title": "Title",
+          "description": "The document title.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "title": "URL",
+          "description": "direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "datePublished": {
+          "title": "Date published",
+          "description": "The date on which the document was first published. This is particularly important for legally important documents such as notices of a tender.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "dateModified": {
+          "title": "Date modified",
+          "description": "Date that the document was last modified",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "format": {
+          "title": "Format",
+          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "title": "Language",
+          "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pageStart": {
+          "title": "Page start",
+          "description": "When the information referenced exists within a large document, indicate the first page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "mergeStrategy": "ocdsVersion"
+        },
+        "pageEnd": {
+          "title": "Page end",
+          "description": "When the information referenced exists within a large document, indicate the last page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "mergeStrategy": "ocdsVersion"
+        },
+        "accessDetails": {
+          "title": "Access details",
+          "description": "A description of any special arrangements required to access this document. This may include a requirement to register for document access, a fee to be paid, or the location where documents can be inspected.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "mergeStrategy": "ocdsVersion"
+        },
+        "author": {
+          "title": "Author",
+          "description": "The name of the author of these documents. Include the name of individuals and/or organizations responsible. For example, when a technical specification was written by a consultant, include the name and organization of the consultant.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "mergeStrategy": "ocdsVersion"
+        }
+      },
+      "patternProperties": {
+        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
