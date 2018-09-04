@@ -60,7 +60,7 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = 'Open Contracting Data Standard for TODO'
+project = 'Open Contracting for Infrastructure'
 copyright = '2018 Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
@@ -120,7 +120,7 @@ locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 
 gettext_compact = False
 
 # The `DOMAIN_PREFIX` from `config.mk`.
-gettext_domain_prefix = 'TODO-'
+gettext_domain_prefix = 'infrastructure'
 
 # The version of OCDS to patch.
 standard_tag = '1__1__3'

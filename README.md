@@ -46,5 +46,30 @@ The technical development workplan consists of the following four components:
 
 ## In this repository
 
-Right now only this README is provided. We will update this index with links to other outputs from our research process as it develops. 
- 
+This repository contains a draft profile for the Open Contracting Data Standard, along with schema for a Project Level Data Standard that assists in meeting the requirements of the CoST Infrastructure Disclosure Standard. 
+
+### Getting started
+
+The documentation is built using sphinx, building on the [standard profile template](https://github.com/open-contracting/standard_profile_template).
+
+To build the documentation, first set-up a virtual environment with:
+
+```
+python3 -m venv .ve
+source .ve/bin/activate
+pip install -r requirements.txt
+```
+
+Then run 
+
+```
+make
+```
+
+To preview documentation locally, run
+
+```
+python -m http.server
+```
+
+and access the documents at http://localhost:8000/build/en/

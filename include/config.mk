@@ -21,7 +21,7 @@ DIST_FILES=schema/profile/release-schema.json schema/profile/codelists schema/pa
 # Directory in which to build .pot files.
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
-DOMAIN_PREFIX=
+DOMAIN_PREFIX=infrastructure
 # Directory containing assets to copy to the build directory (no trailing slash).
 ASSETS_DIR=
 # The Transifex project name.
