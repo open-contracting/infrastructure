@@ -151,9 +151,9 @@ def setup(app):
     language = app.config.overrides.get('language', 'en')
 
     arguments = (
-        (['schema.json'], 'schema/project-level', os.path.join('docs', '_static','project-level')),
+        (['project-schema.json'], 'schema/project-level', os.path.join('docs', '_static','project-level')),
         (['release-schema.json'], 'schema/profile', os.path.join('build', language)),
-        (['schema.json'], 'schema/project-level', os.path.join('build', language)),
+        (['project-schema.json'], 'schema/project-level', os.path.join('build', language)),
     )
 
     for filenames, sourcedir, builddir in arguments:

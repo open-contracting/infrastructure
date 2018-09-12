@@ -35,8 +35,10 @@ def copy_codelist(codelist):
 
 pppSchema = _json_loads(requests.get(base_url + "release-schema.json").text)
 
-with open(schema_folder + "/schema.json","r") as schemaFile:
+with open(schema_folder + "/project-schema.json","r") as schemaFile:
     schema = _json_loads(schemaFile.read())
+
+copy_def("Identifier")
 
 copy_def("Value")
 copy_codelist("currency")
@@ -49,6 +51,7 @@ copy_def("BudgetBreakdown")
 
 copy_def("Organization")
 copy_def("OrganizationReference")
+copy_def("Shareholder")
 copy_codelist("partyRole")
 
 copy_def("Address")
@@ -68,7 +71,7 @@ schema['definitions']['Classification']['properties']['scheme']['description'] =
 del(schema['definitions']['Classification']['properties']['scheme']['codelist'])
 del(schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
 
-with open(schema_folder + "/schema.json","w") as outFile:
+with open(schema_folder + "/project-schema.json","w") as outFile:
     outFile.write(json.dumps(schema,indent=2))
 
 
