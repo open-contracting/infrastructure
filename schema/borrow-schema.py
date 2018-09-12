@@ -17,7 +17,7 @@ import requests
 
 
 base_url = "http://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/"
-schema_folder = "ipts"
+schema_folder = "project-level"
 
 def _json_loads(data):
     """
@@ -60,7 +60,7 @@ copy_codelist("documentType")
 copy_def("Location")
 schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
 copy_codelist("geometryType")
-copy_codelist("locationGazetteer")
+copy_codelist("locationGazetteers")
 
 
 copy_def("Classification")

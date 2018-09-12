@@ -151,8 +151,9 @@ def setup(app):
     language = app.config.overrides.get('language', 'en')
 
     arguments = (
-        (['patched/release-schema.json'], 'schema', os.path.join('docs', '_static')),
+        (['schema.json'], 'schema/project-level', os.path.join('docs', '_static','project-level')),
         (['release-schema.json'], 'schema/profile', os.path.join('build', language)),
+        (['schema.json'], 'schema/project-level', os.path.join('build', language)),
     )
 
     for filenames, sourcedir, builddir in arguments:
@@ -169,8 +170,9 @@ def setup(app):
             ocds_version=standard_version)
 
     directories = (
-        ('schema/patched', os.path.join('docs', '_static', 'patched', 'codelists')),
-        ('schema/profile', os.path.join('build', language, 'codelists')),
+        ('schema/project-level', os.path.join('docs', '_static', 'project-level', 'codelists')),
+        ('schema/project-level', os.path.join('build', language, 'codelists')),
+
     )
 
     for sourcedir, builddir in directories:

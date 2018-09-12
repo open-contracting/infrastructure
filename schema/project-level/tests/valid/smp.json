@@ -10,7 +10,7 @@
     "extensions":[]
   },
   "id":"uk.m23-junctions-8-to-10-smart-motorway",
-  "updated":"",
+  "updated":"2018-09-03T15:00:00Z",
   "title":"M23 junctions 8 to 10: smart motorway",
   "description":"Upgrading the 11 mile (18km) stretch of the M23 near Gatwick Airport, between junction 8 near Merstham and junction 10 at Copthorne, to an all-lane running smart motorway.",
   "status":"active",
@@ -138,7 +138,7 @@
                 "name":""
             }
         ],
-        "releases":[
+        "releaseIndex":[
             {
                 "id":"",
                 "tag":"planning",
@@ -147,19 +147,19 @@
                 "variations":{
                     "duration":{
                         "description":"",
-                        "explanation":""
+                        "reason":""
                     },
                     "price":{
                         "description":"",
-                        "explanation":""
+                        "reason":""
                     },
                     "scope":{
                         "description":"",
-                        "explanation":""
+                        "reason":""
                     },
                     "other":{
                         "description":"",
-                        "explanation":""
+                        "reason":""
                     }
                 }
             }

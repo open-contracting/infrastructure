@@ -10,6 +10,9 @@
   "title":"",
   "description":"",
   "status":"",
+  "period":{
+
+  },
   "classifications":[
 
   ],
@@ -40,7 +43,14 @@
   "financing":{
 
   },
-
+  "completion":{
+    "endDate":"",
+    "endDateDetails":"",
+    "finalValue":"",
+    "finalValueDetails":"",
+    "finalScope":"",
+    "finalScopeDetails":""
+  },
   "contractingProcesses":[
     {
         "ocid":"",
