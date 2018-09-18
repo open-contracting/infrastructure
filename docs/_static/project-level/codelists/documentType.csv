@@ -1,0 +1,45 @@
+Code,Title,Description,Extension
+needsAssessment,Needs Assessment,"Information on the project need, benefits provided, and economic and social impact",OCDS for PPPs Extension
+valueForMoneyAnalysis,Value for money analysis,"A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes.",OCDS for PPPs Extension
+technicalSpecifications,Technical Specifications,Detailed technical information about goods or services to be provided.,OCDS for PPPs Extension
+serviceDescription,Service descriptions,A high-level description of the services,OCDS for PPPs Extension
+estimatedDemand,Estimated demand,A narrative describing the estimated demand to be served (annually) by the project.,OCDS for PPPs Extension
+projectAdditionality,Project additionality,A description of the additionality provided by the project,OCDS for PPPs Extension
+financeAdditionality,Finance additionality,A description of the additionality provided by the finance method,OCDS for PPPs Extension
+pppModeRationale,Rationale for PPP modality,A description of the reasons for choosing to conduct this project as a PPP,OCDS for PPPs Extension
+contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for PPPs Extension
+contractSchedule,Schedules and milestones,Documentation setting out key milestones and schedules. Structured versions of this information may be modelled using the milestones block.,OCDS for PPPs Extension
+contractSigned,Signed Contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs Extension
+feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs Extension
+environmentalImpact,Environmental Impact,"Documentation of environmental impact assessments carried out before, during or after the contracting process.",OCDS for PPPs Extension
+finalAudit,Final Audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs Extension
+tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs Extension
+evaluationCommittee,Evaluation Committee Details,Information on the constitution of the evaluation committee,OCDS for PPPs Extension
+requestForQualification,Request for Qualification,"The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase).",OCDS for PPPs Extension
+evaluationCriteria,Evaluation Criteria,Documentation on how bids will be evaluated.,OCDS for PPPs Extension
+minutes,Minutes,"Minutes of pre-bid meetings, or other relevant meetings.",OCDS for PPPs Extension
+shortlistedFirms,Shortlisted Firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.,OCDS for PPPs Extension
+negotiationParameters,Negotiation Parameters,A description of the parameters for negotiation with the preferred proponent,OCDS for PPPs Extension
+riskProvisions,Provisions for management of risks and liabilities,Documentation covering how risks will be managed as part of this contracting process.,OCDS for PPPs Extension
+evaluationReports,Evaluation report,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award",OCDS for PPPs Extension
+riskComparison,Risk comparison,Risk comparison of other financing methods,OCDS for PPPs Extension
+discountRate,Discount rate and risk premium,"An explanation of the discount rate, and any risk premium used, including information on project-specific circumstances that justify the risk premium rate used.",OCDS for PPPs Extension
+equityTransferCaps,Equity transfer caps,"Details of any restrictions on the transfer of equity by shareholders or other relevant participants in the project. Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter.",OCDS for PPPs Extension
+financeArrangements,Security and step in arrangements,"Details of any rights granted to a lender to access value in the event of default by a borrower and any rights granted to a party to ""step in"" to the shoes of another party, for example, a right granted to a lender or public authority to take over temporarily the operation of a project in case of failure to perform by a private party.",OCDS for PPPs Extension
+contractGuarantees,Guarantees,Documentation of guarantees relating to a contracting process or contract.,OCDS for PPPs Extension
+guaranteeReports,Fiscal commitments and contingent liabilities disclosure reports,"Reports detailing the fiscal commitments of the public authority to the PPP, for example known payments that must be made if the PPP proceeds or payment commitments whose occurrence, timing and magnitude depend on some uncertain future event, outside the control of the public authority.",OCDS for PPPs Extension
+grants,Grants,"Information on grants given to support the project. Grant information should detail the total value of subsidy, and/or the value of subsidy as a proportion of the overall project value, as well as providing information on the nature of the grant. For capital subsidies paid during construction of a project, or operating subsidies paid during operation, details of periodicity of grant payments, and particular grant milestones, should be provided.",OCDS for PPPs Extension
+servicePayments,Service payments,"Service payments are payments made by the public authority or purchaser to the private provider for infrastructure services (applicable in some types of Public Private Partnership projects). The documentation should cover the total number of payments and their periodicity, as well as the methodology used for calculating payments and the indexation used.",OCDS for PPPs Extension
+landTransfer,Land transfer,"Details of land transferred on lease or other basis by government, including details of property numbers with the quantum of land transferred, zoning information and conditions of transfer.",OCDS for PPPs Extension
+assetTransfer,Asset Transfer,"Details of asset, human resource of personnel transfers, including documentation of the conditions of transfer.",OCDS for PPPs Extension
+revenueShare,Revenue Share,"Documentation of any revenue share arrangements, including revenue share on the base-case and upside for a public private partnership project.",OCDS for PPPs Extension
+otherGovernmentSupport,Other government support,"Documentation of any other government support, including non-complete clauses or provision for revenue shortfall loans.",OCDS for PPPs Extension
+tariffMethod,Tariff method,"For summarizing the method by which tariffs are set, and linking to detailed documentation of the methods for setting tariffs. This may include written documentation, and spreadsheets providing the models used to calculate tariffs. This should make clear who sets the tariff and on what basis.",OCDS for PPPs Extension
+tariffReview,Tariff review,"For summarizing the arrangements for the review and regulation of tariffs, and linking to detailed documentation that covers how tariffs are regulated. This is important to explain to users why they are paying what they are paying, and the scope for changes to payment structures.",OCDS for PPPs Extension
+tariffs,Tariffs,For providing tariff and pricing schedules.,OCDS for PPPs Extension
+tariffIllustration,Tariff illustrations,"For linking to graphs and reports on the change over time in tariff prices. Use the relevant image media type when linking to PNG, JPEG or GIF graphs to allow applications to directly display this content.",OCDS for PPPs Extension
+defaultEvents,Defaults,Information on events of default,OCDS for PPPs Extension
+termination,Termination,Information on contract termination,OCDS for PPPs Extension
+handover,Handover,"Contractual provisions for, or reporting on, handover of assets back to the state, including details of condition of assets and any other conditions of handover.",OCDS for PPPs Extension
+financialStatement,Financial statement,Audited financial statements of the project company,OCDS for PPPs Extension
+performanceReport,Performance report,Performance assessment reports,OCDS for PPPs Extension

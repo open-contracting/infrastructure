@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
-  "title": "Infrastructure Project Transparency Schema ",
+  "title": "Infrastructure Project Transparency Schema",
   "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
   "required": [
@@ -81,7 +81,7 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended. It should be ",
+      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended. It should be",
       "$ref": "#/definitions/Classification"
     },
     "additionalClassifications": {
@@ -288,7 +288,7 @@
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
+          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -311,12 +311,12 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A unique identifier for this update of information. This should be taken from the related OCDS `release.id` where available. ",
+          "description": "A unique identifier for this update of information. This should be taken from the related OCDS `release.id` where available.",
           "type": "string"
         },
         "tag": {
           "title": "Release tag",
-          "description": "One or more values from the [releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the related OCDS `release.tag` where available. ",
+          "description": "One or more values from the [releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the related OCDS `release.tag` where available.",
           "type": "string",
           "codelist": "releaseTag.csv",
           "openCodelist": false
@@ -1185,7 +1185,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. ",
+          "description": "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting.",
           "type": [
             "string",
             "null"

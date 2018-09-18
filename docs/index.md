@@ -12,9 +12,9 @@ This Open Contracting for Infrastructure site will show you how to:
 
 * Extract infrastructure contracting data from existing procurement portals;
 
-* Connect contract and project level information using the **project level schema**;
+* Connect contract and project level information using the [project level schema](project/index.md).
 
-* Assess published data against the CoST Infrastructure Data Standard;
+* Assess published data against the [CoST Infrastructure Data Standard](project/mapping.md);
 
 * Make use of data in infrastructure monitoring.
 
@@ -28,5 +28,6 @@ This Open Contracting for Infrastructure site will show you how to:
    :maxdepth: 2
    :glob:
 
-   */index
+   projects/index
+   projects/mapping
 ```

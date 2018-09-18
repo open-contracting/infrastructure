@@ -186,6 +186,18 @@ def setup(app):
             localedir=localedir,
             language=language)
 
+    # Copy our mapping files as well. This currently does not perform translation, which would need to be added
+    mapping_files = (
+        ('project-level.csv', os.path.join(basedir, 'mapping')),
+        ('process-level.csv', os.path.join(basedir, 'mapping'))
+    )
+
+    for filename, sourcedir in mapping_files:
+        with open(os.path.join(sourcedir, filename)) as f:
+            mapping_file = f.read()
+        with open(os.path.join(basedir, 'build', language, filename), 'w') as f:
+            f.write(mapping_file)
+
     # Copy the untranslated extension.json file.
     with open(os.path.join(basedir, 'schema', 'profile', 'extension.json')) as f:
         extension_json = f.read()

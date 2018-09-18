@@ -38,6 +38,8 @@ pppSchema = _json_loads(requests.get(base_url + "release-schema.json").text)
 with open(schema_folder + "/project-schema.json","r") as schemaFile:
     schema = _json_loads(schemaFile.read())
 
+copy_codelist("releaseTag")
+
 copy_def("Identifier")
 
 copy_def("Value")
@@ -79,6 +81,7 @@ schema['definitions']['Location']['properties']['address'] = {
         }
 copy_codelist("geometryType")
 copy_codelist("locationGazetteers")
+
 
 
 copy_def("Classification")

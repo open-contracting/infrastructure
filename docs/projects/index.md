@@ -10,13 +10,37 @@ This includes:
 * A change history for each contracting process, with details of variations in value, timing and scope and explanations of these changes
 * Project completion information
 
-## Schema structure
+## Project level
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include: 
-    :collapse: period,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents
+    :collapse: period,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
+
+```
+
+## ContractingProcess
+
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :include: 
+    :pointer: /definitions/ContractingProcess
+    :collapse: releaseList
+
+```
+
+
+## ReleaseList
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :include: 
+    :pointer: /definitions/ReleaseListEntry
+    :collapse: releaseList
 
 ```
 
@@ -56,6 +80,17 @@ For each organization, provide as much structured data as you can.
     :pointer: /definitions/Organization
     :include: 
     :collapse: identifier,additionalIdentifiers,address,contactPoint
+
+```
+
+### OrganizationReference
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/OrganizationReference
+    :include: 
+    :collapse: 
 
 ```
 
