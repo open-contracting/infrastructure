@@ -110,8 +110,11 @@
   },
   "contractingProcesses":[
     {
+        "externalReference":"SOME SORT OF FIELD USED WHEN LINKING OUT",
         "ocid":"",
-        "projectPhase":"planning",
+        "title":"",
+        "description":"",
+        "contractFocus":"planning",
         "status":"",
         "totalValue":"",
         "contractType":"",

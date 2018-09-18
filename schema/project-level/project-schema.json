@@ -182,9 +182,73 @@
       }
     },
     "contractingProcesses": {
-      "title": "Contracting Processes",
-      "description": "Each of the contracting processes will go here.",
-      "type": "object"
+      "title": "Contracting processes",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n(b) the latest summary information about them; \n(c) a change history with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "type": "object",
+      "properties": {
+        "ocid": {
+          "title": "Open Contracting Identifier",
+          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an OCID may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "type": "string"
+        },
+        "externalReference": {
+          "title": "External reference",
+          "description": "If this contracting process is identified by some external reference number it may be recorded here.",
+          "type": "string"
+        },
+        "focus": {
+          "title": "Focus",
+          "description": "This field should record whether this contract is related to planning, construction or monitoring.",
+          "type": "string",
+          "enum": [
+            "planning",
+            "construction",
+            "monitoring"
+          ],
+          "enum_titles": [
+            "Planning",
+            "Construction",
+            "Monitoring"
+          ],
+          "enum_descriptions": [
+            "This contracting process relates to planning the project.",
+            "This contracting process relates to construction work for the project",
+            "This contracting process relates to monitoring of the project"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "description": "The description should summarise the purpose of this contract and the scope of work to be undertaken.",
+          "type": "string"
+        },
+        "status": {
+          "title": "Status",
+          "description": "The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be calculated by checking for the most recent OCDS release, and the stage this has reached.",
+          "type": "string",
+          "enum": [
+            "planning",
+            "tender",
+            "award",
+            "contract",
+            "implementation",
+            "cancelled",
+            "completion"
+          ]
+        },
+        "tenderValue": {
+          "title": "Tender value (cost estimate)",
+          "description": "This may be taken from the `tender.value` field of the latest OCDS release.",
+          "$ref": "#/definitions/Value"
+        },
+        "awardValue": {},
+        "finalValue": {},
+        "contractType": {},
+        "numberOfTenderers": {},
+        "contractPeriod": {},
+        "procuringEntity": {},
+        "suppliers": {},
+        "releaseIndex": {}
+      }
     }
   },
   "definitions": {
@@ -259,15 +323,6 @@
             "string",
             "null"
           ]
-        },
-        "uri": {
-          "title": "URI",
-          "description": "A URI to identify the code. In the event individual URIs are not available for items in the identifier scheme this value should be left blank.",
-          "type": [
-            "string",
-            "null"
-          ],
-          "format": "uri"
         }
       },
       "patternProperties": {
@@ -282,7 +337,7 @@
     "Location": {
       "type": "object",
       "title": "Delivery Location",
-      "description": "The location where activity related to this project will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both.",
+      "description": "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these.",
       "properties": {
         "description": {
           "title": "Description",
@@ -375,6 +430,11 @@
           ],
           "title": "URI",
           "description": "A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location."
+        },
+        "address": {
+          "title": "Address",
+          "description": "A physical address where works will take place.",
+          "$ref": "#/definitions/Address"
         }
       }
     },
@@ -753,7 +813,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the contracting process. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array",
             "null"
@@ -763,41 +823,6 @@
           },
           "codelist": "partyRole.csv",
           "openCodelist": true
-        },
-        "details": {
-          "type": [
-            "object",
-            "null"
-          ],
-          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular properties and classification schemes.",
-          "title": "Details"
-        },
-        "shareholders": {
-          "title": "Organization shareholders",
-          "description": "A list of shareholders in the organization: used to provide company ownership information for firms, primarily in the case of large and complex contracts, or Public Private Partnerships, that require disclosure of this information for certain bidders or awarded parties.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Shareholder"
-          },
-          "uniqueItems": true
-        },
-        "beneficialOwnership": {
-          "type": [
-            "object",
-            "null"
-          ],
-          "title": "Beneficial ownership",
-          "description": "This section can be used to record information concerning individuals or organizations with a beneficial ownership or control interests in this party. Where structured data is available, this section may be extended by embedding or linking to information modelled using the [Beneficial Ownership Data Standard (BODS)](https://github.com/openownership/data-standard).",
-          "properties": {
-            "description": {
-              "title": "Description",
-              "description": "A free text description of beneficial ownership or control arrangements.",
-              "type": [
-                "string",
-                "null"
-              ]
-            }
-          }
         }
       },
       "patternProperties": {
@@ -899,7 +924,7 @@
             "string",
             "null"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this contracting process."
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this project."
         },
         "email": {
           "title": "Email",
@@ -1034,7 +1059,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
+          "description": "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. ",
           "type": [
             "string",
             "null"
@@ -1042,7 +1067,7 @@
         },
         "url": {
           "title": "URL",
-          "description": "direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type.",
+          "description": "This should be a direct link to the document or web page where the information described by the current documentType exists.",
           "type": [
             "string",
             "null"
