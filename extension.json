@@ -1,0 +1,14 @@
+{
+  "name": {
+    "en": "Open Contracting for Infrastructure"
+  },
+  "description": {
+    "en": "Collects, into a single extension, the extensions that compose the Open Contracting for Infrastructure profile."
+  },
+  "documentationUrl": {
+    "en": "http://standard.open-contracting.org/profiles/infrastructure"
+  },
+  "compatibility": [
+    "1.1"
+  ]
+}
