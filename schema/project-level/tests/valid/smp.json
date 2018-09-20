@@ -141,11 +141,11 @@
                 "name":""
             }
         ],
-        "releaseIndex":[
+        "releaseList":[
             {
                 "id":"",
                 "tag":"planning",
-                "updated":"",
+                "date":"",
                 "uri":"",
                 "variations":{
                     "duration":{

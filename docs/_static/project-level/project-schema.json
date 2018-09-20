@@ -143,6 +143,14 @@
         "$ref": "#/definitions/Document"
       }
     },
+    "contractingProcesses": {
+      "title": "Contracting processes",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContractingProcess"
+      }
+    },
     "completion": {
       "title": "Completion",
       "description": "This information is provided at project completion, and reflects the final timing and values relating to the project. The reason for any variation (not already explained) between the anticipated project scope, period and value should be detailed.",
@@ -179,14 +187,6 @@
           "description": "A reason, explanation or justification for any variation between the anticipated scope (compare to the projectScope document) and the final scope at completion. If appropriate, additional details may be included in the documents section, with a title indicating that these documents will describe and differences between the planned and completed scope of work.",
           "type": "string"
         }
-      }
-    },
-    "contractingProcesses": {
-      "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ContractingProcess"
       }
     }
   },
@@ -229,7 +229,7 @@
         "title": {
           "title": "Title",
           "description": "The formal name of this contracting process. This may be derived from the `release.title`, `tender.title`, `award.title` or `contract.title`. Once set, it should not normally by changed.",
-          "type": "text"
+          "type": "string"
         },
         "description": {
           "title": "Description",
@@ -282,7 +282,7 @@
           "$ref": "#/definitions/OrganizationReference"
         },
         "administrativeEntity": {
-          "title": "Procuring entity",
+          "title": "Administrative entity",
           "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
           "$ref": "#/definitions/OrganizationReference"
         },
