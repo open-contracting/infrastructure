@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
-  "title": "Infrastructure Project Transparency Schema",
+  "title": "Infrastructure Project Level Data Schema",
   "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
   "required": [
@@ -143,6 +143,14 @@
         "$ref": "#/definitions/Document"
       }
     },
+    "contractingProcesses": {
+      "title": "Contracting processes",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContractingProcess"
+      }
+    },
     "completion": {
       "title": "Completion",
       "description": "This information is provided at project completion, and reflects the final timing and values relating to the project. The reason for any variation (not already explained) between the anticipated project scope, period and value should be detailed.",
@@ -180,14 +188,6 @@
           "type": "string"
         }
       }
-    },
-    "contractingProcesses": {
-      "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ContractingProcess"
-      }
     }
   },
   "definitions": {
@@ -208,28 +208,31 @@
         },
         "focus": {
           "title": "Focus",
-          "description": "This field should record whether this contract is related to planning, construction or monitoring.",
-          "type": "string",
-          "enum": [
-            "planning",
-            "construction",
-            "monitoring"
-          ],
-          "enum_titles": [
-            "Planning",
-            "Construction",
-            "Monitoring"
-          ],
-          "enum_descriptions": [
-            "This contracting process relates to planning the project.",
-            "This contracting process relates to construction work for the project",
-            "This contracting process relates to monitoring of the project"
-          ]
+          "description": "This array field should record whether this contract is related to design, build or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "design",
+              "build",
+              "supervision"
+            ],
+            "enum_titles": [
+              "Planning",
+              "Construction",
+              "Monitoring"
+            ],
+            "enum_descriptions": [
+              "This contracting process relates to planning the project.",
+              "This contracting process relates to construction work for the project",
+              "This contracting process relates to monitoring of the project"
+            ]
+          }
         },
         "title": {
           "title": "Title",
           "description": "The formal name of this contracting process. This may be derived from the `release.title`, `tender.title`, `award.title` or `contract.title`. Once set, it should not normally by changed.",
-          "type": "text"
+          "type": "string"
         },
         "description": {
           "title": "Description",
@@ -250,6 +253,22 @@
             "completion"
           ],
           "TODO": "SETUP CODELIST PROPERLY"
+        },
+        "procurementMethod": {
+          "title": "Procurement method",
+          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct).",
+          "type": "string",
+          "enum": [
+            "open",
+            "selective",
+            "limited",
+            "direct"
+          ]
+        },
+        "procurementMethodDetails": {
+          "title": "Procurement method details",
+          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
+          "type": "string"
         },
         "costEstimate": {
           "title": "Cost estimate",
@@ -282,7 +301,7 @@
           "$ref": "#/definitions/OrganizationReference"
         },
         "administrativeEntity": {
-          "title": "Procuring entity",
+          "title": "Administrative entity",
           "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
           "$ref": "#/definitions/OrganizationReference"
         },

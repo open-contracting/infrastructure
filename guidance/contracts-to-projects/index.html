@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mapping &mdash; Open Contracting for Infrastructure 1.0.0-rc.1 documentation</title>
+  <title>Using open contracting data to understand infrastructure projects &mdash; Open Contracting for Infrastructure 1.0.0-rc.1 documentation</title>
   
 
   
@@ -40,8 +40,7 @@
         <link rel="index" title="Index"
               href="../../genindex/"/>
         <link rel="search" title="Search" href="../../search/"/>
-    <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="../../"/>
-        <link rel="prev" title="Project level data" href="../"/> 
+    <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="../../"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -97,13 +96,11 @@
           
             
             
-                <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../">Project level data</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Mapping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#project-level">Project level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#process-level">Process level</a></li>
-</ul>
-</li>
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/">Project level data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/schema/">Schema browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/reference/">Specification Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cost/mapping/">Mapping</a></li>
 </ul>
 
             
@@ -159,11 +156,11 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../">Docs</a> &raquo;</li>
       
-    <li>Mapping</li>
+    <li>Using open contracting data to understand infrastructure projects</li>
     <li class="wy-breadcrumbs-aside">
       
         
-          <a href="../../_sources/projects/mapping.md.txt" rel="nofollow"> View page source</a>
+          <a href="../../_sources/guidance/contracts-to-projects.md.txt" rel="nofollow"> View page source</a>
         
       
     </li>
@@ -173,228 +170,121 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="mapping">
-<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
-<p>The following mapping template describe how each element of the CoST Infrastructure Data Standard can be represented as <strong>structured data</strong> using:</p>
+  <div class="section" id="using-open-contracting-data-to-understand-infrastructure-projects">
+<h1>Using open contracting data to understand infrastructure projects<a class="headerlink" href="#using-open-contracting-data-to-understand-infrastructure-projects" title="Permalink to this headline">¶</a></h1>
+<p>An increasing number of procurement portals now publish data using the Open Contracting Data Standard (OCDS). When OCDS is implemented in full, then:</p>
 <ul class="simple">
-<li>The Project Level Data Specification.</li>
-<li>Contracting Process information embedded within Project Level Data</li>
-<li>Individual OCDS releases</li>
+<li>Each contracting process is given a unique identifier (<code class="docutils literal"><span class="pre">ocid</span></code>);</li>
+<li>Every update to that process, from planning through to implementation, should be published under the same <code class="docutils literal"><span class="pre">ocid</span></code>, and in a structured open data format;</li>
+<li>It should be possible to download bulk data in OCDS format, or access this structured data via an API.</li>
 </ul>
-<div class="section" id="project-level">
-<h2>Project level<a class="headerlink" href="#project-level" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils" id="id3">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">CoST IDS Element</th>
-<th class="head">Maps to</th>
-<th class="head">Notes</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Project owner</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;owner&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Sector</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">sector</span></code>, with additional sectors in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
-<td>DISCUSSION ON CODELIST</td>
-</tr>
-<tr class="row-even"><td>Subsector</td>
-<td>&nbsp;</td>
-<td>DISCUSSION ON CODELIST</td>
-</tr>
-<tr class="row-odd"><td>Project name</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">title</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project Location</td>
-<td>Project Level: Publish using the <code class="docutils literal"><span class="pre">location</span></code> fields as an address, geometry (point/line/polygon) or gazetter entry.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Purpose</td>
-<td>&nbsp;</td>
-<td>DISCUSSION QUESTION???</td>
-</tr>
-<tr class="row-even"><td>Project description</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">description</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project Scope (main output)</td>
-<td>Project Level: Publish as a [document]($/Document), with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;scope&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Environmental impact</td>
-<td>Project Level: Publish as a [document]($/Document), with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;environmentalImpact&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Land and settlement impact</td>
-<td>Project Level: Publish as a [document]($/Document), with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;landAndSettlementImpact&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contact details</td>
-<td>Project Level: Include <code class="docutils literal"><span class="pre">.address</span></code> and <code class="docutils literal"><span class="pre">.contactPoint</span></code> information for the Party with the &#8216;owner&#8217; <code class="docutils literal"><span class="pre">.role</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Funding sources</td>
-<td>Project Level: Include each of the funding organisations as a [party]($/Parties) with &#8216;funder&#8217; as a <code class="docutils literal"><span class="pre">.role</span></code>. When information on the amount provided by each funder is available, use <code class="docutils literal"><span class="pre">budget/budgetBreakdown</span></code> to provide details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project Budget</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">budget/amount</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project budget approval date</td>
-<td>Projet Level: Publish as <code class="docutils literal"><span class="pre">budget/approvalDate</span></code> and include additional document with <code class="docutils literal"><span class="pre">.type</span></code> of &#8216;budgetApproval&#8217; if required</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project status (current)</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">status</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project completion) cost</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">completion/finalValue</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Completion date</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">completion/endDate</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project Scope at completion (projected)</td>
-<td>ProjectLevel: Publish free text as <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code> and/or include document with <code class="docutils literal"><span class="pre">.type</span></code> of <code class="docutils literal"><span class="pre">scope</span></code> and dates and descriptions that show this is final scope at completion.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Reasons for project changes</td>
-<td>Project Level: Publish using <code class="docutils literal"><span class="pre">completion/endDateDetails</span></code>, <code class="docutils literal"><span class="pre">completion/finalValueDetails</span></code> and <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Reference to audit and evaluation reports</td>
-<td>Project Level: Publish as a [document]($/Document), with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;finalAudit&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+<p>Even when an OCDS publisher does not provide data for every stage of the contracting process, it is still possible to use OCDS data to:</p>
+<ul class="simple">
+<li>Discover contracts related to infrastructure projects;</li>
+<li>Track these contracting processes, including changes to tenders, details of suppliers selected, and, in some cases, details of contract variations.</li>
+</ul>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p><em>The following steps may require support from a technical expert. You can also contact the OCDS Helpdesk (<a class="reference external" href="guidance/guidance/mailto:data&#64;open-contracting.org">data&#64;open-contracting.org</a>) for guidance.</em></p>
+<div class="section" id="evaluate-the-open-contracting-data">
+<h3>(1) Evaluate the Open Contracting Data<a class="headerlink" href="#evaluate-the-open-contracting-data" title="Permalink to this headline">¶</a></h3>
+<p>Check that the data you plan to analyse is in OCDS format (Tip: you can use the <a class="reference external" href="http://standard.open-contacting.org/validator">data validator/review tool</a> for this).</p>
+<p>Check which stages of the contracting process the data covers.</p>
+<p>Check whether the publisher keeps a change history (multiple releases for each contracting process), or whether as a user of the data you will need to keep the change history.</p>
 </div>
-<div class="section" id="process-level">
-<h2>Process level<a class="headerlink" href="#process-level" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils" id="id4">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">CoST IDS Element</th>
-<th class="head">Guidance note 9 definition</th>
-<th class="head">Maps to</th>
-<th class="head">Notes</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Procuring entity</td>
-<td>Enter name of the organisation carrying out the procurement</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;procuringEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <cite>contractingProcesses.procuringEntity</cite></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Procuring entity contact details</td>
-<td>Postal and Electronic address</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;procuringEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> and record the name and identifier in <cite>contractingProcesses.procuringEntity</cite></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract administrative entity</td>
-<td>Enter name of the organisation carrying out the contract administrative entity if different from the Procuring Entity</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;administativeEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <cite>contractingProcesses.administrativeEntity</cite></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract status</td>
-<td>Select from pre-award, active or closed</td>
-<td>Contracting process: Add a value to <code class="docutils literal"><span class="pre">contractingProcesses.status</span></code> from the contractStatus codelist.</td>
-<td>DIFFERENT MAPPING</td>
-</tr>
-<tr class="row-even"><td>Procurement process</td>
-<td>Develop a list such as International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework, Direct Award</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract type</td>
-<td>Develop a list such as Design, Supervision, Design &amp; Supervision, Design &amp; Build, Construction</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Number of firms tendering</td>
-<td>Number of firms who submit a tender</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.numberOfTenderers</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Cost estimate</td>
-<td>Currency and amount of the original pre-tender estimate of the contract</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.costEstimate</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract title</td>
-<td>The formal name of the contract</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.title</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract firm(s)</td>
-<td>Legal name of supplier</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;supplier&#8217; included in its <a href="#id1"><span class="problematic" id="id2">``</span></a><code class="docutils literal"><span class="pre">.roles``</span></code> | Contracting process: Record the name and identifier in <code class="docutils literal"><span class="pre">contractingProcesses.suppliers</span></code> array</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract price</td>
-<td>Currency and price at contract award</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractValue</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract scope of work</td>
-<td>Main outputs from the contract e.g. detailed design, supervision, project management and or type, quantity, unit for construction</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.description</span></code>. Additionally detailed documentation may be provided as documents within linked releases.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract start date and contract period (duration)</td>
-<td>Enter dates and Number of weeks from contract start date to (anticipated) completion date</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractPeriod</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Variation to contract price</td>
-<td>Difference between the price at contract award and the current projected price</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.price</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Escalation of contract price</td>
-<td>Escalation to date of the price of materials, labour, equipment etc. due to fluctuations in inflation, currency etc.</td>
-<td><code class="docutils literal"><span class="pre">variations.price.description</span></code> should indicate clearly that this change represents an increase, and <code class="docutils literal"><span class="pre">variations.price.reason</span></code> should explain the reasons for the variation.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Variation to contract duration</td>
-<td>Difference between original duration at contract award and the current projected duration in weeks.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.duration</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Variation to contract scope</td>
-<td>Any changes between original scope at contract award and the current scope</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.scope</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Reasons for price changes</td>
-<td>Summary of reasons for primary of changes (e.g. variations) that then lead to changes in contract price, major price fluctuations and accumulative increase or decrease in price.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.price</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Reasons for scope and duration changes</td>
-<td>Summary of reasons for primary of changes (e.g. variations) that then lead to changes in the scope and duration.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.scope</span></code> or <code class="docutils literal"><span class="pre">variations.duration</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="identify-how-you-will-query-the-data">
+<h3>(2) Identify how you will query the data<a class="headerlink" href="#identify-how-you-will-query-the-data" title="Permalink to this headline">¶</a></h3>
+<p>Some OCDS publishers provide an API that can be used to query data. Others provide access to bulk data that you can download into your own tools for querying.</p>
+<p>Tip: <a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a> is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources.</p>
+</div>
+<div class="section" id="develop-a-search-strategy-to-discover-infrastructure-projects">
+<h3>(3) Develop a search strategy to discover infrastructure projects<a class="headerlink" href="#develop-a-search-strategy-to-discover-infrastructure-projects" title="Permalink to this headline">¶</a></h3>
+<p>Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.</p>
+<p>However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.</p>
+<p>This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.</p>
+<p>For example, using the UK Contracts Finder dataset in OCDS format, and <a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a>, we can use the following query to fetch contracting processes classified under the <a class="reference external" href="http://cpv.data.ac.uk/code-71000000.html">&#8216;Architectural, construction, engineering and inspection services&#8217;</a> hierarchy of the EU Common Procurement Vocabulary.</p>
+<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="cm">/* The following query runs against a filtered set of data in Kingfisher */</span>
+<span class="k">SELECT</span> 
+    <span class="k">data</span><span class="p">,</span>
+        <span class="cm">/* The &#39;data&#39; field contains the JSON representation of a contracting process. The data -&gt; &#39;object&#39; -&gt;&gt; &#39;value&#39; syntax </span>
+<span class="cm">           is used to navigate this structure and select values. </span>
+<span class="cm">           </span>
+<span class="cm">           data -&gt; &#39;tender&#39; -&gt; &#39;tenderPeriod&#39; -&gt;&gt; &#39;endDate&#39; for example is analogous to the json path tender/tenderPeriod/endDate</span>
+<span class="cm">        */</span>
+    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;buyer&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">as</span> <span class="n">buyer</span><span class="p">,</span>
+    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;tenderPeriod&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;endDate&#39;</span> <span class="k">as</span> <span class="n">tenderEndDate</span><span class="p">,</span>
+    <span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span> <span class="k">from</span> <span class="k">cast</span><span class="p">(</span><span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;tenderPeriod&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;endDate&#39;</span> <span class="k">as</span> <span class="k">timestamp</span><span class="p">))</span> <span class="k">as</span> <span class="n">tenderYear</span><span class="p">,</span>
+    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;title&#39;</span> <span class="k">as</span> <span class="n">title</span><span class="p">,</span>
+    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;value&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;currency&#39;</span> <span class="k">as</span> <span class="n">currency</span><span class="p">,</span>
+    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;value&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;amount&#39;</span> <span class="k">as</span> <span class="n">value</span>
+
+        <span class="cm">/* We us a sub-query in order to select only contracting processes where there is at least one tender/item with a particular classification */</span>
+<span class="k">FROM</span> <span class="p">(</span> 
+    <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">data</span> <span class="k">from</span> <span class="k">data</span> 
+        <span class="cm">/* In Kingfisher, OCDS data is sorted as &#39;json blobs&#39; (jsonb). The next line expands the items array into a table we can join against */</span>
+    <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="k">LATERAL</span> <span class="n">jsonb_array_elements</span><span class="p">(</span><span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;items&#39;</span><span class="p">)</span> <span class="n">items</span> <span class="k">on</span> <span class="k">TRUE</span> 
+        <span class="cm">/* All &#39;Architectural, construction, engineering and inspection services&#39; have CPV codes starting with 71 */</span>
+    <span class="k">WHERE</span> <span class="n">items</span><span class="o">-&gt;</span><span class="s1">&#39;classification&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;id&#39;</span> <span class="k">LIKE</span> <span class="s1">&#39;71%&#39;</span>  
+ <span class="p">)</span> <span class="k">data</span>
+ 
+    <span class="cm">/* We sort by value (highest first). We cast values from the JSON before sorting. */</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">cast</span><span class="p">(</span><span class="k">data</span> <span class="o">-&gt;</span> <span class="s1">&#39;tender&#39;</span> <span class="o">-&gt;</span> <span class="s1">&#39;value&#39;</span> <span class="o">-&gt;&gt;</span> <span class="s1">&#39;amount&#39;</span> <span class="k">as</span> <span class="nb">float</span><span class="p">)</span> <span class="k">DESC</span>
+</pre></div>
+</div>
+<p>This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring.</p>
+</div>
+<div class="section" id="populate-project-level-data">
+<h3>(4) Populate project level data<a class="headerlink" href="#populate-project-level-data" title="Permalink to this headline">¶</a></h3>
+<p>If your analysis of OCDS data reveals infrastructure projects to monitor, you can:</p>
+<ul class="simple">
+<li>Use the information from a contracting process data to start populating a <strong>project level disclosure</strong>;</li>
+</ul>
+<!--TODO: ADD LINK TO READ MORE HERE ABOUT POPULATING PROJECT LEVEL DATA SCHEMA FROM OCDS RELEASES--><ul class="simple">
+<li>Search for <strong>related contracts</strong> in order to link any other design, construction or monitoring contracts to this project;</li>
+</ul>
+<p>Tip: When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities.</p>
+<p>You may not be able to fill all the project-level details from the contracts, and may need to undertake additional research to find:</p>
+<ul class="simple">
+<li>The project owner and name</li>
+<li>The full scope of the project</li>
+<li>The total project budget and cost estimates</li>
+<li>Any environmental impact or land and settlement impact studies that have been undertaken</li>
+</ul>
+</div>
+<div class="section" id="monitoring-contracting-process-updates">
+<h3>(5) Monitoring contracting process updates<a class="headerlink" href="#monitoring-contracting-process-updates" title="Permalink to this headline">¶</a></h3>
+<p>When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same <code class="docutils literal"><span class="pre">ocid</span></code>, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.</p>
+<p>Keep a copy each time the data changes, and if you see variations to:</p>
+<ul class="simple">
+<li>Price</li>
+<li>Duration</li>
+<li>Scope</li>
+</ul>
+<p>check whether an adequate explanation has been given for these.</p>
+<p>You can use the Project Level Data Specification to record each time a change is detected, and the reasons that are given for the change.</p>
+</div>
+<div class="section" id="add-project-completion-data">
+<h3>(6) Add project completion data<a class="headerlink" href="#add-project-completion-data" title="Permalink to this headline">¶</a></h3>
+<p>When there is evidence that a project has reached completion, it is important to further update the <strong>project level disclosure</strong>.</p>
+<p>If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible variations that are in need to explanation.</p>
+<p>In other cases, you may need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.</p>
+</div>
+</div>
+<div class="section" id="tools-and-platform">
+<h2>Tools and platform<a class="headerlink" href="#tools-and-platform" title="Permalink to this headline">¶</a></h2>
+<p>You can use OCDS data as part of a manual monitoring process, or you can integrate OCDS into a comprehensive transparency portal.</p>
+<p>Tools to help you with manual monitoring include:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a> - a framework for regularly fetching, storing and querying OCDS data.</li>
+<li><a class="reference external" href="https://github.com/open-contracting/ocds-merge">OCDS Merge</a> - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedReleased).</li>
+<li><a class="reference external" href="https://github.com/open-contracting/ocds-show">OCDS Show</a> - a flexible framework for presenting templated views of OCDS data. Given a merged OCDS record, OCDS Show can highlight change over time.</li>
+</ul>
+<p>When building an integrated tool that integrates OCDS data into infrastructure project monitoring:</p>
+<ul class="simple">
+<li>The <a class="reference external" href="guidance/guidance/project/index">Project Level Data Specification</a> provides a common data structure for recording project-level information;</li>
+<li>The <a class="reference external" href="guidance/guidance/cost/mapping">Open Contracting for Infrastructure - CoST Mapping</a> provides guidance on how to use OCDS data to populate project level, and project:contracting data.</li>
+</ul>
+<p>(TODO UPDATE MAPPING LINK ABOVE)</p>
 </div>
 </div>
 
@@ -402,13 +292,6 @@
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../" class="btn btn-neutral" title="Project level data" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

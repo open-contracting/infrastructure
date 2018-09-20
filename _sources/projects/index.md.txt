@@ -1,219 +1,121 @@
 # Project level data
 
-Structured data on infrastructure projects should be provided using the project level schema. 
+The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded construction projects. Using a common schema to record the information that is needed to monitor projects can enable more advanced analysis, both within, and across, infrastructure projects.
 
-This includes:
+## What is a project?
 
-* Overview information about the project, summary text and links to external projects
-* A list of the contracting processes the project involves
-* Summary details about each of those contracting processes - most of which should be derived automatically from OCDS data
-* A change history for each contracting process, with details of variations in value, timing and scope and explanations of these changes
-* Project completion information
+An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts. 
 
-## Project level
+![A project may form part of a wider programme, and may involve multiple contracts](../../_static/images/programme-project-contract.png)
 
-```eval_rst
+A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project. 
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :include: 
-    :collapse: period,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
+## What is project level data?
 
-```
+![Project level data covers a number of stages](../../_static/images/identification-preparation-implementation-completion.png)
 
-## ContractingProcess
+Project level data covers:
 
+* **identification** - the decision to develop a project within the budget and programme of a project owner.
+* **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.
+* **implementation** - covers the procurement and implementation of the planning, design and works according to the procurement strategy.
+* **completion** - covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.
 
-```eval_rst
+[CoST](http://infrastructuretransparency.org/) have developed a framework of information that should be pro-actively disclosed and kept updated at each stage. This framework has been used as the basis for the Project Level Data Specification.
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :include: 
-    :pointer: /definitions/ContractingProcess
-    :collapse: releaseList
+## How does contracting data fit in?
 
-```
+![Project level data covers a number of stages](../../_static/images/project-contract-linkage.png)
 
+The preparation and implementation stages may be delivered using contractors. This will lead to one or more contracting processes, each with their own planning, tender, award, contract and implementation stages.
 
-## ReleaseList
+Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts. 
 
-```eval_rst
+It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :include: 
-    :pointer: /definitions/ReleaseListEntry
-    :collapse: releaseList
+## How is the Project Level Data Specification structured? 
 
-```
+The Project Level Data Schema is structured in three parts:
 
+### Project Level Data
 
-## Components
+Project level data includes summary information on project identification, preparation and completion.
 
-### Classification
+### Contracting summaries 
 
-A classification consists of an identifier for the codelist (the `scheme`) and a code from that codelist (the `id`), and then a human-readable label for the classification (the `description`). 
+The `contractingProcesses` array may be used to provide a summary of each of the contracting processes that is used to support preparation and implementation. 
 
-```eval_rst
+Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Classification
-    :include: 
-    :collapse: 
+### Contracting process details 
 
-```
+The `contractingProcesses/releaseList` array may be used to record each update from a contracting process, and any variations. 
 
-For example:
+Where OCDS data is available, the contracting details section should act as an index of (cached) OCDS releases, with explanations of any variations detected when comparing releases.
 
-```json
-{
-    "scheme":"COFOG",
-    "id":"05.2",
-    "description":"Waste water management"
-}
-```
+Where OCDS data is not available, the contracting details section can be used to manually record variation information.
 
-### Organization
+## How can I use the project level data specification? 
 
-For each organization, provide as much structured data as you can.
+### If you have an existing infrastructure transparency portal...
+
+**... you can add a Project Level Data Specification export option to your system.**
+
+**Why?** 
+
+So that your project information can be compared with information from others, and to support the development of common tools for analysis of infrastructure project information. There are already many tools that work with contracting process data in OCDS format. 
 
 ```eval_rst
+.. admonition:: Step by step
+    :class: tip
+    
+    .. markdown:: 
+        (1) Map you existing data structures onto the Project Level Data Specification and project a JSON file for each project your system has information on.
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Organization
-    :include: 
-    :collapse: identifier,additionalIdentifiers,address,contactPoint
+        (2) Publish this JSON file (as a static file or via an API) at a stable URL, such as:
 
+        > http://{your website}/opendata/projects/{project-id}.json
+
+        (3) Map any contracting data you record to the [Open Contracting Data Standard](http://standard.open-contracting.org/) and publish each new release of data as a JSON file at a stable URL such as:
+
+        > http://{your website}/opendata/contracting/{ocid}/{release-id}.json
+
+        (4) Make sure your project level files include links in the `contractingProcess/releaseList` to each related OCDS file.
+
+        (5) Provide a regularly updated bulk file of all your data for download 
+
+        (e.g. a zip archive of all the folders and files under `/opendata/` if you used the path structures suggested in the example above)
+
+        (6) Provide a page on your website with details of how users can access this data.
 ```
 
-### OrganizationReference
+### If you are designing a new infrastructure transparency portal...
+
+**... the Project Level Data Specification can be used by structure your data collection.**
+
+**Why?** 
+
+The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contacting data sources, but to also work in cases where structured open contracting is not available. 
+
+Some of the data structures, such as the organisation identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
 
 ```eval_rst
+.. admonition:: Things to consider
+    :class: tip
 
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/OrganizationReference
-    :include: 
-    :collapse: 
+    .. markdown::
 
-```
+        Whilst the schema can be used directly to build a data entry form, user interfaces should always be designed around user needs. 
 
-### Identifier
-
-Use of stable official organisation identifiers can help join up data between systems. 
-
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organisation, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field. 
-
-For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`. 
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Identifier
-    :include: 
-    :collapse: 
+        Data can be stored directly in the JSON structure described by the schema of the specification **or** it can be stored in custom data structures, and only converted to the specification's structure when importing or exporting data. 
 
 ```
+<!--TODO - Consider worked example of a data entry form -->
 
+### If you are designing other data collection tools...
 
-### Locations
+... the Project Level Data Specification provides definitions and codelists that can be used to collect consistent data. 
 
-A project may have one or more locations. Locations may be expressed in a number of different ways, using one or more of:
+Consult the [specification reference for definitions](reference.md).
 
-* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
-* A gazetteer entry (e.g. town name);
-* An address.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Identifier
-    :include: 
-    :collapse: 
-
-```
-
-### Address
-
-We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code. 
-
-When working with data, users should be aware that addresses may not always be broken down using all the properties the specification provides.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Address
-    :include: 
-    :collapse: 
-
-```
-
-### ContactPoint
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/ContactPoint
-    :include: 
-    :collapse: 
-
-```
-
-### Document
-
-For each document the following structured information may be provided. 
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Document
-    :include: 
-    :collapse: 
-
-```
-
-
-### Value
-
-All values should be published along with their currency using the following structure. 
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Value
-    :include: 
-    :collapse: 
-
-```
-
-
-### BudgetBreakdown
-
-A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two. 
-
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting/ocds_budget_and_spend_extension).
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/BudgetBreakdown
-    :include: 
-    :collapse: 
-
-```
-
-### Period
-
-Dates MUST be expressed using a full ISO 8601 date-time including a timezone. E.g.:
-
-> 2018-09-18T11:26:04+01:00
-
-Where the source system does not contain time information, a judgement should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.). 
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Period
-    :include: 
-    :collapse: 
-
-```
-
-## Worked example
 

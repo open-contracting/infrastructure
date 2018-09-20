@@ -99,7 +99,10 @@
             
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="projects/">Project level data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="projects/mapping/">Mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/schema/">Schema browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/reference/">Specification Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guidance/">Implementation guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - Infrastructure Transparency Initiative</a></li>
 </ul>
 
             
@@ -187,16 +190,32 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="projects/">Project level data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="projects/#project-level">Project level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/#contractingprocess">ContractingProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/#releaselist">ReleaseList</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/#components">Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/#worked-example">Worked example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/#what-is-a-project">What is a project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/#what-is-project-level-data">What is project level data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/#how-does-contracting-data-fit-in">How does contracting data fit in?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/#how-is-the-project-level-data-specification-structured">How is the Project Level Data Specification structured?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/#how-can-i-use-the-project-level-data-specification">How can I use the project level data specification?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="projects/mapping/">Mapping</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="projects/mapping/#project-level">Project level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="projects/mapping/#process-level">Process level</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projects/schema/">Schema browser</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/schema/#data-validation">Data validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/schema/#extending-the-schema">Extending the schema</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projects/reference/">Specification Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projects/reference/#project-level">Project level</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/reference/#contractingprocess">ContractingProcess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/reference/#releaselist">ReleaseList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/reference/#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projects/reference/#codelists">Codelists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guidance/">Implementation guidance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guidance/contracts-to-projects/">Using open contracting data to understand infrastructure projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - Infrastructure Transparency Initiative</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cost/#mapping-and-measuring-project-and-contacting-level-data-against-the-ids">Mapping and measuring project and contacting level data against the IDS</a></li>
 </ul>
 </li>
 </ul>
@@ -204,124 +223,6 @@
 </div>
 <div class="section" id="why-we-need-open-contracting-for-infrastructure">
 <h2>Why we need open contracting for infrastructure?<a class="headerlink" href="#why-we-need-open-contracting-for-infrastructure" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="i-want-to-use-open-contracting-data-to-understand-infrastructure-projects">
-<h2>I want to... use open contracting data to understand infrastructure projects<a class="headerlink" href="#i-want-to-use-open-contracting-data-to-understand-infrastructure-projects" title="Permalink to this headline">¶</a></h2>
-<p>An increasing number of procurement portals now publish data using the Open Contracting Data Standard (OCDS). When OCDS is implemented in full, then:</p>
-<ul class="simple">
-<li>Each contracting process is given a unique identifier (<code class="docutils literal"><span class="pre">ocid</span></code>);</li>
-<li>Every update to that process, from planning through to implementation, should be published under the same <code class="docutils literal"><span class="pre">ocid</span></code>, and in a structured open data format;</li>
-<li>It should be possible to download bulk data in OCDS format, or access this structured data via an API.</li>
-</ul>
-<p>Even when an OCDS publisher does not provide data for every stage of the contracting process, it is still possible to use OCDS data to:</p>
-<ul class="simple">
-<li>Discover contracts related to infrastructure projects;</li>
-<li>Track these contracting processes, including changes to tenders, details of suppliers selected, and, in some cases, details of contract variations.</li>
-</ul>
-<div class="section" id="getting-started">
-<h3>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
-<p><em>The following steps may require support from a technical expert. You can also contact the OCDS Helpdesk (<a class="reference external" href="mailto:data&#37;&#52;&#48;open-contracting&#46;org">data<span>&#64;</span>open-contracting<span>&#46;</span>org</a>) for guidance.</em></p>
-<div class="section" id="evaluate-the-open-contracting-data">
-<h4>(1) Evaluate the Open Contracting Data<a class="headerlink" href="#evaluate-the-open-contracting-data" title="Permalink to this headline">¶</a></h4>
-<p>Check that the data you plan to analyse is in OCDS format (Tip: you can use the <a class="reference external" href="http://standard.open-contacting.org/validator">data validator/review tool</a> for this).</p>
-<p>Check which stages of the contracting process the data covers.</p>
-<p>Check whether the publisher keeps a change history (multiple releases for each contracting process), or whether as a user of the data you will need to keep the change history.</p>
-</div>
-<div class="section" id="identify-how-you-will-query-the-data">
-<h4>(2) Identify how you will query the data<a class="headerlink" href="#identify-how-you-will-query-the-data" title="Permalink to this headline">¶</a></h4>
-<p>Some OCDS publishers provide an API that can be used to query data. Others provide access to bulk data that you can download into your own tools for querying.</p>
-<p>Tip: <a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a> is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources.</p>
-</div>
-<div class="section" id="develop-a-search-strategy-to-discover-infrastructure-projects">
-<h4>(3) Develop a search strategy to discover infrastructure projects<a class="headerlink" href="#develop-a-search-strategy-to-discover-infrastructure-projects" title="Permalink to this headline">¶</a></h4>
-<p>Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.</p>
-<p>However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.</p>
-<p>This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.</p>
-<p>For example, using the UK Contracts Finder dataset in OCDS format, and <a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a>, we can use the following query to fetch contracting processes classified under the <a class="reference external" href="http://cpv.data.ac.uk/code-71000000.html">&#8216;Architectural, construction, engineering and inspection services&#8217;</a> hierarchy of the EU Common Procurement Vocabulary.</p>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="cm">/* The following query runs against a filtered set of data in Kingfisher */</span>
-<span class="k">SELECT</span> 
-    <span class="k">data</span><span class="p">,</span>
-        <span class="cm">/* The &#39;data&#39; field contains the JSON representation of a contracting process. The data -&gt; &#39;object&#39; -&gt;&gt; &#39;value&#39; syntax </span>
-<span class="cm">           is used to navigate this structure and select values. </span>
-<span class="cm">           </span>
-<span class="cm">           data -&gt; &#39;tender&#39; -&gt; &#39;tenderPeriod&#39; -&gt;&gt; &#39;endDate&#39; for example is analogous to the json path tender/tenderPeriod/endDate</span>
-<span class="cm">        */</span>
-    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;buyer&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;name&#39;</span> <span class="k">as</span> <span class="n">buyer</span><span class="p">,</span>
-    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;tenderPeriod&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;endDate&#39;</span> <span class="k">as</span> <span class="n">tenderEndDate</span><span class="p">,</span>
-    <span class="k">EXTRACT</span><span class="p">(</span><span class="k">YEAR</span> <span class="k">from</span> <span class="k">cast</span><span class="p">(</span><span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;tenderPeriod&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;endDate&#39;</span> <span class="k">as</span> <span class="k">timestamp</span><span class="p">))</span> <span class="k">as</span> <span class="n">tenderYear</span><span class="p">,</span>
-    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;title&#39;</span> <span class="k">as</span> <span class="n">title</span><span class="p">,</span>
-    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;value&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;currency&#39;</span> <span class="k">as</span> <span class="n">currency</span><span class="p">,</span>
-    <span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;value&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;amount&#39;</span> <span class="k">as</span> <span class="n">value</span>
-
-        <span class="cm">/* We us a sub-query in order to select only contracting processes where there is at least one tender/item with a particular classification */</span>
-<span class="k">FROM</span> <span class="p">(</span> 
-    <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">data</span> <span class="k">from</span> <span class="k">data</span> 
-        <span class="cm">/* In Kingfisher, OCDS data is sorted as &#39;json blobs&#39; (jsonb). The next line expands the items array into a table we can join against */</span>
-    <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="k">LATERAL</span> <span class="n">jsonb_array_elements</span><span class="p">(</span><span class="k">data</span><span class="o">-&gt;</span><span class="s1">&#39;tender&#39;</span><span class="o">-&gt;</span><span class="s1">&#39;items&#39;</span><span class="p">)</span> <span class="n">items</span> <span class="k">on</span> <span class="k">TRUE</span> 
-        <span class="cm">/* All &#39;Architectural, construction, engineering and inspection services&#39; have CPV codes starting with 71 */</span>
-    <span class="k">WHERE</span> <span class="n">items</span><span class="o">-&gt;</span><span class="s1">&#39;classification&#39;</span><span class="o">-&gt;&gt;</span><span class="s1">&#39;id&#39;</span> <span class="k">LIKE</span> <span class="s1">&#39;71%&#39;</span>  
- <span class="p">)</span> <span class="k">data</span>
- 
-    <span class="cm">/* We sort by value (highest first). We cast values from the JSON before sorting. */</span>
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">cast</span><span class="p">(</span><span class="k">data</span> <span class="o">-&gt;</span> <span class="s1">&#39;tender&#39;</span> <span class="o">-&gt;</span> <span class="s1">&#39;value&#39;</span> <span class="o">-&gt;&gt;</span> <span class="s1">&#39;amount&#39;</span> <span class="k">as</span> <span class="nb">float</span><span class="p">)</span> <span class="k">DESC</span>
-</pre></div>
-</div>
-<p>This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring.</p>
-</div>
-<div class="section" id="populate-project-level-data">
-<h4>(4) Populate project level data<a class="headerlink" href="#populate-project-level-data" title="Permalink to this headline">¶</a></h4>
-<p>If your analysis of OCDS data reveals infrastructure projects to monitor, you can:</p>
-<ul class="simple">
-<li>Use the information from a contracting process data to start populating a <strong>project level disclosure</strong>;</li>
-</ul>
-<p>(TODO: READ MORE HERE ABOUT POPULATING PROJECT LEVEL DATA SCHEMA FROM OCDS RELEASES)</p>
-<ul class="simple">
-<li>Search for <strong>related contracts</strong> in order to link any other design, construction or monitoring contracts to this project;</li>
-</ul>
-<p>Tip: When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities.</p>
-<p>You may not be able to fill all the project-level details from the contracts, and may need to undertake additional research to find:</p>
-<ul class="simple">
-<li>The project owner and name</li>
-<li>The full scope of the project</li>
-<li>The total project budget and cost estimates</li>
-<li>Any environmental impact or land and settlement impact studies that have been undertaken</li>
-</ul>
-</div>
-<div class="section" id="monitoring-contracting-process-updates">
-<h4>(5) Monitoring contracting process updates<a class="headerlink" href="#monitoring-contracting-process-updates" title="Permalink to this headline">¶</a></h4>
-<p>When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same <code class="docutils literal"><span class="pre">ocid</span></code>, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.</p>
-<p>Keep a copy each time the data changes, and if you see variations to:</p>
-<ul class="simple">
-<li>Price</li>
-<li>Duration</li>
-<li>Scope</li>
-</ul>
-<p>check whether an adequate explanation has been given for these.</p>
-<p>You can use the Project Level Data Specification to record each time a change is detected, and the reasons that are given for the change.</p>
-</div>
-<div class="section" id="add-project-completion-data">
-<h4>(6) Add project completion data<a class="headerlink" href="#add-project-completion-data" title="Permalink to this headline">¶</a></h4>
-<p>When there is evidence that a project has reached completion, it is important to further update the <strong>project level disclosure</strong>.</p>
-<p>If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible variations that are in need to explanation.</p>
-<p>In other cases, you may need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.</p>
-</div>
-</div>
-<div class="section" id="tools-and-platform">
-<h3>Tools and platform<a class="headerlink" href="#tools-and-platform" title="Permalink to this headline">¶</a></h3>
-<p>You can use OCDS data as part of a manual monitoring process, or you can integrate OCDS into a comprehensive transparency portal.</p>
-<p>Tools to help you with manual monitoring include:</p>
-<ul class="simple">
-<li><a class="reference external" href="https://github.com/open-contracting/kingfisher/">OCDS Kingfisher</a> - a framework for regularly fetching, storing and querying OCDS data.</li>
-<li><a class="reference external" href="https://github.com/open-contracting/ocds-merge">OCDS Merge</a> - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedReleased).</li>
-<li><a class="reference external" href="https://github.com/open-contracting/ocds-show">OCDS Show</a> - a flexible framework for presenting templated views of OCDS data. Given a merged OCDS record, OCDS Show can highlight change over time.</li>
-</ul>
-<p>When building an integrated tool that integrates OCDS data into infrastructure project monitoring:</p>
-<ul class="simple">
-<li>The <a class="reference external" href="project/index">Project Level Data Specification</a> provides a common data structure for recording project-level information;</li>
-<li>The <a class="reference external" href="cost/mapping">Open Contracting for Infrastructure - CoST Mapping</a> provides guidance on how to use OCDS data to populate project level, and project:contracting data.</li>
-</ul>
-<p>(TODO UPDATE MAPPING LINK ABOVE)</p>
-</div>
 </div>
 <div class="section" id="i-want-to-publish-open-data-about-infrastructure-projects">
 <h2>I want to... publish open data about infrastructure projects<a class="headerlink" href="#i-want-to-publish-open-data-about-infrastructure-projects" title="Permalink to this headline">¶</a></h2>
