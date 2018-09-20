@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Mapping &mdash; Open Contracting for Infrastructure 1.0.0-rc.1 documentation</title>
+  <title>Evaluating disclosures against the Infrastructure Data Standard &mdash; Open Contracting for Infrastructure 1.0.0-rc.1 documentation</title>
   
 
   
@@ -37,12 +37,15 @@
   
 
   
+        <link rel="author" title="About these documents"
+              href="../../about/"/>
         <link rel="index" title="Index"
               href="../../genindex/"/>
         <link rel="search" title="Search" href="../../search/"/>
     <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="../../"/>
-        <link rel="up" title="CoST - Infrastructure Transparency Initiative" href="../"/>
-        <link rel="prev" title="CoST - Infrastructure Transparency Initiative" href="../"/> 
+        <link rel="up" title="Implementation guidance" href="../"/>
+        <link rel="next" title="Using open contracting data to understand infrastructure projects" href="../contracts-to-projects/"/>
+        <link rel="prev" title="Implementation guidance" href="../"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -90,7 +93,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
           
-<a href="../../">Open Contracting for Infrastructure</a>
+<p style="text-align:center">
+<a href="../../">Open Contracting for Infrastructure</a><br/>
+(alpha)
+</p>
 
         </div>
 
@@ -99,21 +105,17 @@
             
             
                 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/">Project level data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/schema/">Schema browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/reference/">Specification Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guidance/">Implementation guidance</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../">CoST - Infrastructure Transparency Initiative</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../#mapping-and-measuring-project-and-contacting-level-data-against-the-ids">Mapping and measuring project and contacting level data against the IDS</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Mapping</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#project-level">Project level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#process-level">Process level</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Implementation guidance</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Evaluating disclosures against the Infrastructure Data Standard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contracts-to-projects/">Using open contracting data to understand infrastructure projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-from-portal/">Using OCDS + Project Level Data Spec to publish from an infrastructure transparency portal</a></li>
 </ul>
 </li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cost/">CoST - IDS Mapping</a></li>
 </ul>
 
             
@@ -134,6 +136,7 @@
   </svg>
 </div>
           
+  
           <p class="oc-developed-by"> Developed By </p>
           <a class="oc-logo-text" href="http://open-contracting.org">
             <svg>
@@ -141,6 +144,11 @@
             </svg>
           </a>
           
+  <p class="oc-developed-by" style="margin-top: 0px">and</p>
+  <a href="http://infrastructuretransparency.org/"> 
+    <img src="../../_static/images/logos//cost.png" style="padding-left:40px; padding-right:40px;"/>
+  </a>
+
         </div>
       </div>
     </nav>
@@ -169,13 +177,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../">Docs</a> &raquo;</li>
       
-        <li><a href="../">CoST - Infrastructure Transparency Initiative</a> &raquo;</li>
+        <li><a href="../">Implementation guidance</a> &raquo;</li>
       
-    <li>Mapping</li>
+    <li>Evaluating disclosures against the Infrastructure Data Standard</li>
     <li class="wy-breadcrumbs-aside">
       
         
-          <a href="../../_sources/cost/mapping.md.txt" rel="nofollow"> View page source</a>
+          <a href="../../_sources/guidance/assess-against-ids.md.txt" rel="nofollow"> View page source</a>
         
       
     </li>
@@ -185,250 +193,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <style>
-.wy-nav-content {
-max-width: 1200px;
-}</style><div class="section" id="mapping">
-<h1>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h1>
-<p>The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as <strong>structured data</strong> using the <a class="reference internal" href="../../projects/"><span class="doc">Project Level Data Specification</span></a> and contracting process information embedded within the project level data.</p>
-<p>In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be <strong>automatically populated</strong> using the OCDS data.</p>
-<!--TODO - Format better into the stages of CoST disclosure --><div class="section" id="project-level">
-<h2>Project level<a class="headerlink" href="#project-level" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="colwidths-given docutils" id="id3">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col width="20%" />
-<col width="30%" />
-<col width="40%" />
-<col width="10%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">CoST IDS Element</th>
-<th class="head">Draft definition</th>
-<th class="head">Maps to</th>
-<th class="head">Discussion</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Project owner</td>
-<td>Name of the sponsoring Government department</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;owner&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Sector</td>
-<td>Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">sector</span></code>, with additional sectors in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
-<td>DISCUSSION ON CODELIST</td>
-</tr>
-<tr class="row-even"><td>Subsector</td>
-<td>Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.</td>
-<td>&nbsp;</td>
-<td>DISCUSSION ON CODELIST</td>
-</tr>
-<tr class="row-odd"><td>Project name</td>
-<td>Specify the project name</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">title</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project Location</td>
-<td>Briefly specify location of the project</td>
-<td>Project Level: Publish using the <code class="docutils literal"><span class="pre">location</span></code> fields as an address, geometry (point/line/polygon) or gazetter entry.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Purpose</td>
-<td>Specify the socio economic purpose of the project</td>
-<td>&nbsp;</td>
-<td>DISCUSSION QUESTION???</td>
-</tr>
-<tr class="row-even"><td>Project description</td>
-<td>Concise description and details of the project</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">description</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project Scope (main output)</td>
-<td>Main outputs from the project that are being taken forward into construction (type, quantity, unit)</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">documents</span></code>, with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;scope&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Environmental impact</td>
-<td>Briefly describe the environmental impacts and mitigation measures for this project e.g. impacts on flora, fauna &amp; woodlands, areas of natural beauty, carbon emissions etc. and mitigation measures e.g. pollution control, low carbon solutions, sustainable timber etc.</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">documents</span></code>, with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;environmentalImpact&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Land and settlement impact</td>
-<td>State the amount of land and property that was acquired for the project e.g. 25km2 land, and related impacts e.g. archaeological issues (moved saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased).</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">documents</span></code>, with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;landAndSettlementImpact&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contact details</td>
-<td>Postal and electronic address of the Project Owner</td>
-<td>Project Level: Include <code class="docutils literal"><span class="pre">.address</span></code> and <code class="docutils literal"><span class="pre">.contactPoint</span></code> information for the Party with the &#8216;owner&#8217; <code class="docutils literal"><span class="pre">.role</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Funding sources</td>
-<td>Name the funding organisation(s)/sources of funding</td>
-<td>Project Level: Include each of the funding organisations in the <code class="docutils literal"><span class="pre">parties</span></code> array with &#8216;funder&#8217; as a <code class="docutils literal"><span class="pre">.role</span></code>. When information on the amount provided by each funder is available, use <code class="docutils literal"><span class="pre">budget/budgetBreakdown</span></code> to provide details.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project Budget</td>
-<td>Specify the projected costs/allocated budget for the project (currency and amount). The budget includes land / property acquisition, environmental mitigation measures, H&amp;S provisions, client, consultant &amp; contractor costs, VAT etc.</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">budget/amount</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project budget approval date</td>
-<td>Date project budget was authorised</td>
-<td>Projet Level: Publish as <code class="docutils literal"><span class="pre">budget/approvalDate</span></code> and include additional document with <code class="docutils literal"><span class="pre">.type</span></code> of &#8216;budgetApproval&#8217; if required</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Project status (current)</td>
-<td>The current stage of the project. Select from identification, preparation, construction or completed</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">status</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project completion) cost</td>
-<td>State projected or actual completion cost
-(currency and amount)</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">completion/finalValue</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Completion date</td>
-<td>State projected or actual completion date</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">completion/endDate</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Project Scope at completion (projected)</td>
-<td>Indicate projected or actual scope of project. Aim is to show if the completed project scope differs from the original project scope. Specify main outputs (type, quantity, unit)</td>
-<td>ProjectLevel: Publish free text as <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code> and/or include document with <code class="docutils literal"><span class="pre">.type</span></code> of <code class="docutils literal"><span class="pre">scope</span></code> and dates and descriptions that show this is final scope at completion.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Reasons for project changes</td>
-<td>Summary of primary reasons for any changes in scope, time and cost</td>
-<td>Project Level: Publish using <code class="docutils literal"><span class="pre">completion/endDateDetails</span></code>, <code class="docutils literal"><span class="pre">completion/finalValueDetails</span></code> and <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Reference to audit and evaluation reports</td>
-<td>Reference to publicly available technical and financial audits</td>
-<td>Project Level: Publish in <code class="docutils literal"><span class="pre">documents</span></code>, with <code class="docutils literal"><span class="pre">.type</span></code> set to &#8216;finalAudit&#8217; and include a short description and/or a link to a document providing details.</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="process-level">
-<h2>Process level<a class="headerlink" href="#process-level" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="colwidths-given docutils" id="id4">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col width="20%" />
-<col width="30%" />
-<col width="40%" />
-<col width="10%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">CoST IDS Element</th>
-<th class="head">Draft definition</th>
-<th class="head">Maps to</th>
-<th class="head">Discussion</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>Procuring entity</td>
-<td>Enter name of the organisation carrying out the procurement</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;procuringEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <code class="docutils literal"><span class="pre">contractingProcesses.procuringEntity</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Procuring entity contact details</td>
-<td>Postal and Electronic address</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;procuringEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: record the name and identifier in <cite>contractingProcesses.procuringEntity</cite></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract administrative entity</td>
-<td>Enter name of the organisation carrying out the contract administrative entity if different from the Procuring Entity</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;administativeEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <cite>contractingProcesses.administrativeEntity</cite></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract status</td>
-<td>Select from pre-award, active or closed</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.status</span></code> using the processStatus codelist.</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/1">Issue #1</a></td>
-</tr>
-<tr class="row-even"><td>Procurement process</td>
-<td>Develop a list such as International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework, Direct Award</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.procurementMethodDetails</span></code> and map to <code class="docutils literal"><span class="pre">contractingProcess.procurementMethod</span></code>.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract type</td>
-<td>Develop a list such as Design, Supervision, Design &amp; Supervision, Design &amp; Build, Construction</td>
-<td>Contract process: Add one or more values to the <code class="docutils literal"><span class="pre">contractingProcess.focus</span></code> array. (e.g. [&#8216;design&#8217;,&#8217;build&#8217;] for a design and build contract).</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Number of firms tendering</td>
-<td>Number of firms who submit a tender</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.numberOfTenderers</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Cost estimate</td>
-<td>Currency and amount of the original pre-tender estimate of the contract</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.costEstimate</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract title</td>
-<td>The formal name of the contract</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.title</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract firm(s)</td>
-<td>Legal name of supplier</td>
-<td>Project Level: Add a [party]($/Parties) with &#8216;supplier&#8217; included in its <a href="#id1"><span class="problematic" id="id2">``</span></a><code class="docutils literal"><span class="pre">.roles``</span></code> | Contracting process: Record the name and identifier in <code class="docutils literal"><span class="pre">contractingProcesses.suppliers</span></code> array</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract price</td>
-<td>Currency and price at contract award</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractValue</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Contract scope of work</td>
-<td>Main outputs from the contract e.g. detailed design, supervision, project management and or type, quantity, unit for construction</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.description</span></code>. Additionally detailed documentation may be provided as documents within linked releases.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Contract start date and contract period (duration)</td>
-<td>Enter dates and Number of weeks from contract start date to (anticipated) completion date</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractPeriod</span></code></td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Variation to contract price</td>
-<td>Difference between the price at contract award and the current projected price</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.price</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Escalation of contract price</td>
-<td>Escalation to date of the price of materials, labour, equipment etc. due to fluctuations in inflation, currency etc.</td>
-<td><code class="docutils literal"><span class="pre">variations.price.description</span></code> should indicate clearly that this change represents an increase, and <code class="docutils literal"><span class="pre">variations.price.reason</span></code> should explain the reasons for the variation.</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Variation to contract duration</td>
-<td>Difference between original duration at contract award and the current projected duration in weeks.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.duration</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Variation to contract scope</td>
-<td>Any changes between original scope at contract award and the current scope</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.scope</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-odd"><td>Reasons for price changes</td>
-<td>Summary of reasons for primary of changes (e.g. variations) that then lead to changes in contract price, major price fluctuations and accumulative increase or decrease in price.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.price</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-<tr class="row-even"><td>Reasons for scope and duration changes</td>
-<td>Summary of reasons for primary of changes (e.g. variations) that then lead to changes in the scope and duration.</td>
-<td>Contracting process &gt; Release List: For each variation, publish an entry with a description and reason in <code class="docutils literal"><span class="pre">variations.scope</span></code> or <code class="docutils literal"><span class="pre">variations.duration</span></code> .</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="evaluating-disclosures-against-the-infrastructure-data-standard">
+<h1>Evaluating disclosures against the Infrastructure Data Standard<a class="headerlink" href="#evaluating-disclosures-against-the-infrastructure-data-standard" title="Permalink to this headline">¶</a></h1>
+<div class="note admonition">
+<p class="first admonition-title">Coming soon</p>
+<p class="last">This guidance is currently being developed. Contact <a class="reference external" href="guidance/mailto:data&#64;open-contracting.org">data&#64;open-contracting.org</a> for more information in the meantime.</p>
 </div>
 </div>
 
@@ -439,8 +208,10 @@ max-width: 1200px;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../contracts-to-projects/" class="btn btn-neutral float-right" title="Using open contracting data to understand infrastructure projects" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-        <a href="../" class="btn btn-neutral" title="CoST - Infrastructure Transparency Initiative" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+        <a href="../" class="btn btn-neutral" title="Implementation guidance" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

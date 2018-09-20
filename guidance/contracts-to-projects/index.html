@@ -37,10 +37,15 @@
   
 
   
+        <link rel="author" title="About these documents"
+              href="../../about/"/>
         <link rel="index" title="Index"
               href="../../genindex/"/>
         <link rel="search" title="Search" href="../../search/"/>
-    <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="../../"/> 
+    <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="../../"/>
+        <link rel="up" title="Implementation guidance" href="../"/>
+        <link rel="next" title="Using OCDS + Project Level Data Spec to publish from an infrastructure transparency portal" href="../publishing-from-portal/"/>
+        <link rel="prev" title="Evaluating disclosures against the Infrastructure Data Standard" href="../assess-against-ids/"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -88,7 +93,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
           
-<a href="../../">Open Contracting for Infrastructure</a>
+<p style="text-align:center">
+<a href="../../">Open Contracting for Infrastructure</a><br/>
+(alpha)
+</p>
 
         </div>
 
@@ -96,11 +104,30 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../about/">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/">Project level data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/schema/">Schema browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../projects/reference/">Specification Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../cost/mapping/">Mapping</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../">Implementation guidance</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../assess-against-ids/">Evaluating disclosures against the Infrastructure Data Standard</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Using open contracting data to understand infrastructure projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#evaluate-the-open-contracting-data">(1) Evaluate the Open Contracting Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identify-how-you-will-query-the-data">(2) Identify how you will query the data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#develop-a-search-strategy-to-discover-infrastructure-projects">(3) Develop a search strategy to discover infrastructure projects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#populate-project-level-data">(4) Populate project level data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#monitoring-contracting-process-updates">(5) Monitoring contracting process updates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-project-completion-data">(6) Add project completion data</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-and-platform">Tools and platform</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../publishing-from-portal/">Using OCDS + Project Level Data Spec to publish from an infrastructure transparency portal</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cost/">CoST - IDS Mapping</a></li>
 </ul>
 
             
@@ -121,6 +148,7 @@
   </svg>
 </div>
           
+  
           <p class="oc-developed-by"> Developed By </p>
           <a class="oc-logo-text" href="http://open-contracting.org">
             <svg>
@@ -128,6 +156,11 @@
             </svg>
           </a>
           
+  <p class="oc-developed-by" style="margin-top: 0px">and</p>
+  <a href="http://infrastructuretransparency.org/"> 
+    <img src="../../_static/images/logos//cost.png" style="padding-left:40px; padding-right:40px;"/>
+  </a>
+
         </div>
       </div>
     </nav>
@@ -155,6 +188,8 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../">Docs</a> &raquo;</li>
+      
+        <li><a href="../">Implementation guidance</a> &raquo;</li>
       
     <li>Using open contracting data to understand infrastructure projects</li>
     <li class="wy-breadcrumbs-aside">
@@ -281,10 +316,9 @@
 </ul>
 <p>When building an integrated tool that integrates OCDS data into infrastructure project monitoring:</p>
 <ul class="simple">
-<li>The <a class="reference external" href="guidance/guidance/project/index">Project Level Data Specification</a> provides a common data structure for recording project-level information;</li>
-<li>The <a class="reference external" href="guidance/guidance/cost/mapping">Open Contracting for Infrastructure - CoST Mapping</a> provides guidance on how to use OCDS data to populate project level, and project:contracting data.</li>
+<li>The <a class="reference external" href="guidance/project/index.mc">Project Level Data Specification</a> provides a common data structure for recording project-level information;</li>
+<li>The <a class="reference external" href="guidance/cost/mapping.md">Open Contracting for Infrastructure - CoST Mapping</a> provides guidance on how to use OCDS data to populate project level, and project:contracting data.</li>
 </ul>
-<p>(TODO UPDATE MAPPING LINK ABOVE)</p>
 </div>
 </div>
 
@@ -292,6 +326,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../publishing-from-portal/" class="btn btn-neutral float-right" title="Using OCDS + Project Level Data Spec to publish from an infrastructure transparency portal" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../assess-against-ids/" class="btn btn-neutral" title="Evaluating disclosures against the Infrastructure Data Standard" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -37,11 +37,13 @@
   
 
   
+        <link rel="author" title="About these documents"
+              href="about/"/>
         <link rel="index" title="Index"
               href="genindex/"/>
         <link rel="search" title="Search" href="search/"/>
     <link rel="top" title="Open Contracting for Infrastructure 1.0.0-rc.1 documentation" href="#"/>
-        <link rel="next" title="Project level data" href="projects/"/> 
+        <link rel="next" title="About" href="about/"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -89,7 +91,10 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search">
           
-<a href="#">Open Contracting for Infrastructure</a>
+<p style="text-align:center">
+<a href="#">Open Contracting for Infrastructure</a><br/>
+(alpha)
+</p>
 
         </div>
 
@@ -98,11 +103,12 @@
             
             
                 <ul>
+<li class="toctree-l1"><a class="reference internal" href="about/">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/">Project level data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/schema/">Schema browser</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projects/reference/">Specification Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guidance/">Implementation guidance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - Infrastructure Transparency Initiative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - IDS Mapping</a></li>
 </ul>
 
             
@@ -123,6 +129,7 @@
   </svg>
 </div>
           
+  
           <p class="oc-developed-by"> Developed By </p>
           <a class="oc-logo-text" href="http://open-contracting.org">
             <svg>
@@ -130,6 +137,11 @@
             </svg>
           </a>
           
+  <p class="oc-developed-by" style="margin-top: 0px">and</p>
+  <a href="http://infrastructuretransparency.org/"> 
+    <img src="_static/images/logos//cost.png" style="padding-left:40px; padding-right:40px;"/>
+  </a>
+
         </div>
       </div>
     </nav>
@@ -180,15 +192,25 @@
 <p>This Open Contracting for Infrastructure site will show you how to:</p>
 <ul class="simple">
 <li>Publish standardised contracting data for major infrastructure projects using the <strong>open contracting data standard (OCDS)</strong>;</li>
-<li>Extract infrastructure contracting data from existing procurement portals;</li>
-<li>Connect contract and project level information using the <a class="reference external" href="project/index.md">project level schema</a>.</li>
-<li>Assess published data against the <a class="reference external" href="project/mapping.md">CoST Infrastructure Data Standard</a>;</li>
+<li>Extract <a class="reference internal" href="guidance/contracts-to-projects/"><span class="doc">infrastructure contracting data from existing procurement portals</span></a>;</li>
+<li>Connect contract and project level information using the <a class="reference internal" href="projects/"><span class="doc">project level schema</span></a>.</li>
+<li>Assess published data against the <a class="reference internal" href="cost/"><span class="doc">CoST Infrastructure Data Standard</span></a>;</li>
 <li>Make use of data in infrastructure monitoring.</li>
 </ul>
+<div class="warning admonition">
+<p class="first admonition-title">Alpha Release</p>
+<p>This is the first draft release of &#8216;Open Contracting for Infrastructure&#8217;.</p>
+<p class="last">It should be considered work in progress, and any elements of the schemas and guidance presented here are subject to change.</p>
+</div>
 <div class="section" id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="about/">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="about/#background">Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="about/#theory-of-change-and-workplan">Theory of Change and workplan</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="projects/">Project level data</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="projects/#what-is-a-project">What is a project?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="projects/#what-is-project-level-data">What is project level data?</a></li>
@@ -211,24 +233,17 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="guidance/">Implementation guidance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guidance/assess-against-ids/">Evaluating disclosures against the Infrastructure Data Standard</a></li>
 <li class="toctree-l2"><a class="reference internal" href="guidance/contracts-to-projects/">Using open contracting data to understand infrastructure projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="guidance/publishing-from-portal/">Using OCDS + Project Level Data Spec to publish from an infrastructure transparency portal</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - Infrastructure Transparency Initiative</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cost/#mapping-and-measuring-project-and-contacting-level-data-against-the-ids">Mapping and measuring project and contacting level data against the IDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cost/">CoST - IDS Mapping</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cost/#mapping-against-the-ids">Mapping against the IDS</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-<div class="section" id="why-we-need-open-contracting-for-infrastructure">
-<h2>Why we need open contracting for infrastructure?<a class="headerlink" href="#why-we-need-open-contracting-for-infrastructure" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="i-want-to-publish-open-data-about-infrastructure-projects">
-<h2>I want to... publish open data about infrastructure projects<a class="headerlink" href="#i-want-to-publish-open-data-about-infrastructure-projects" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="i-want-to-assess-my-data-against-the-cost-infrastructure-data-standard">
-<h2>I want to... assess my data against the CoST Infrastructure Data Standard<a class="headerlink" href="#i-want-to-assess-my-data-against-the-cost-infrastructure-data-standard" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -239,7 +254,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="projects/" class="btn btn-neutral float-right" title="Project level data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="about/" class="btn btn-neutral float-right" title="About" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

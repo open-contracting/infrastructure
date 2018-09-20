@@ -126,8 +126,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [Project Level Data Specification](project/index) provides a common data structure for recording project-level information;
+* The [Project Level Data Specification](../project/index.mc) provides a common data structure for recording project-level information;
 
-* The [Open Contracting for Infrastructure - CoST Mapping](cost/mapping) provides guidance on how to use OCDS data to populate project level, and project:contracting data. 
-
-(TODO UPDATE MAPPING LINK ABOVE)
+* The [Open Contracting for Infrastructure - CoST Mapping](../cost/mapping.md) provides guidance on how to use OCDS data to populate project level, and project:contracting data. 

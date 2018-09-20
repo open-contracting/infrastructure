@@ -10,14 +10,23 @@ This Open Contracting for Infrastructure site will show you how to:
 
 * Publish standardised contracting data for major infrastructure projects using the **open contracting data standard (OCDS)**;
 
-* Extract infrastructure contracting data from existing procurement portals;
+* Extract [infrastructure contracting data from existing procurement portals](guidance/contracts-to-projects.md);
 
-* Connect contract and project level information using the [project level schema](project/index.md).
+* Connect contract and project level information using the [project level schema](projects/index.md).
 
-* Assess published data against the [CoST Infrastructure Data Standard](project/mapping.md);
+* Assess published data against the [CoST Infrastructure Data Standard](cost/index.md);
 
 * Make use of data in infrastructure monitoring.
 
+```eval_rst
+.. admonition:: Alpha Release
+    :class: Warning
+
+    This is the first draft release of 'Open Contracting for Infrastructure'.
+
+    It should be considered work in progress, and any elements of the schemas and guidance presented here are subject to change. 
+
+```
 
 ## Contents
 
@@ -26,7 +35,7 @@ This Open Contracting for Infrastructure site will show you how to:
    :maxdepth: 2
    :glob:
 
-
+   about
    projects/index
    projects/schema
    projects/reference
@@ -35,19 +44,9 @@ This Open Contracting for Infrastructure site will show you how to:
 ```
 
 
-## Why we need open contracting for infrastructure? 
 
 
 
-
-
-
-## I want to... publish open data about infrastructure projects
-
-
-
-
-## I want to... assess my data against the CoST Infrastructure Data Standard
 
 
 
