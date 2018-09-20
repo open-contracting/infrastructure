@@ -2,7 +2,10 @@
 {% extends "!layout.html" %}
 
 {% block sidebartitle %}
-<a href="{{ pathto(master_doc) }}">{{ project }}</a>
+<p style="text-align:center">
+<a href="{{ pathto(master_doc) }}">{{ project }}</a><br/>
+(alpha)
+</p>
 {% endblock %}
 
 {% block mobile_nav %}
@@ -12,6 +15,16 @@
 
 {% block extra_links %}
 {% endblock %}
+
+
+{% block developed_by %}
+  {{ super() }}
+  <p class="oc-developed-by" style="margin-top: 0px">and</p>
+  <a href="http://infrastructuretransparency.org/"> 
+    <img src="{{ pathto('_static/images/logos/') }}cost.png" style="padding-left:40px; padding-right:40px;"/>
+  </a>
+{% endblock %}
+
 
 {% block language_options %}
             <option>Language</option>
@@ -23,3 +36,5 @@
 {% endblock %}
 
 {% block root %}/profiles/infrastructure{% endblock %}
+
+

@@ -1,5 +1,9 @@
-# CoST - Infrastructure Transparency Initiative
+<style>
+.wy-nav-content {
+max-width: 1200px;
+}</style>
 
+# CoST - IDS Mapping
 
 CoST – the Infrastructure Transparency Initiative (CoST) is the leading global initiative improving transparency and accountability in public infrastructure.
 
@@ -31,12 +35,28 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 ## Mapping against the IDS 
 
-We have prepared a set of mapping tables that show how the items of data described by CoST can be represented using the Project Level Data Specification, and how many contracting level data items can be derived from Open Contracting Data Standard data. 
+<!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
+
+The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project Level Data Specification](../projects/index.md) and contracting process information embedded within the project level data.
+
+In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be **automatically populated** using the OCDS data. 
+
+<!--TODO - Format better into the stages of CoST disclosure -->
+
+### Project level
 
 ```eval_rst
-.. toctree::
-   :maxdepth: 2
-   :glob:
+.. csv-table-no-translate:: Mapping
+   :header-rows: 1
+   :widths: 20 30 40 10
+   :file: ../../build/current_lang/project-level.csv
+```
 
-   mapping
+### Process level
+
+```eval_rst
+.. csv-table-no-translate:: Mapping
+   :header-rows: 1
+   :widths: 20 30 40 10
+   :file: ../../build/current_lang/process-level.csv
 ```
