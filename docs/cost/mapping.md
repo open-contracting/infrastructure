@@ -1,27 +1,30 @@
+<style><!-- 
+.wy-nav-content {
+max-width: 1200px;
+}--></style>
+
 # Mapping
 
-The following mapping template describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using:
+The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project Level Data Specification](../projects/index.md) and contracting process information embedded within the project level data.
 
-* The Project Level Data Specification.
+In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be **automatically populated** using the OCDS data. 
 
-* Contracting Process information embedded within Project Level Data
-
-* Individual OCDS releases
+<!--TODO - Format better into the stages of CoST disclosure -->
 
 ## Project level
 
 ```eval_rst
 .. csv-table-no-translate:: Mapping
    :header-rows: 1
+   :widths: 20 30 40 10
    :file: ../../build/current_lang/project-level.csv
 ```
-
-
 
 ## Process level
 
 ```eval_rst
 .. csv-table-no-translate:: Mapping
    :header-rows: 1
+   :widths: 20 30 40 10
    :file: ../../build/current_lang/process-level.csv
 ```

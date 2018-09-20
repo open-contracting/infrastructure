@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
-  "title": "Infrastructure Project Transparency Schema",
+  "title": "Infrastructure Project Level Data Schema",
   "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
   "required": [
@@ -208,23 +208,26 @@
         },
         "focus": {
           "title": "Focus",
-          "description": "This field should record whether this contract is related to planning, construction or monitoring.",
-          "type": "string",
-          "enum": [
-            "planning",
-            "construction",
-            "monitoring"
-          ],
-          "enum_titles": [
-            "Planning",
-            "Construction",
-            "Monitoring"
-          ],
-          "enum_descriptions": [
-            "This contracting process relates to planning the project.",
-            "This contracting process relates to construction work for the project",
-            "This contracting process relates to monitoring of the project"
-          ]
+          "description": "This array field should record whether this contract is related to design, build or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "design",
+              "build",
+              "supervision"
+            ],
+            "enum_titles": [
+              "Planning",
+              "Construction",
+              "Monitoring"
+            ],
+            "enum_descriptions": [
+              "This contracting process relates to planning the project.",
+              "This contracting process relates to construction work for the project",
+              "This contracting process relates to monitoring of the project"
+            ]
+          }
         },
         "title": {
           "title": "Title",
@@ -250,6 +253,22 @@
             "completion"
           ],
           "TODO": "SETUP CODELIST PROPERLY"
+        },
+        "procurementMethod": {
+          "title": "Procurement method",
+          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct).",
+          "type": "string",
+          "enum": [
+            "open",
+            "selective",
+            "limited",
+            "direct"
+          ]
+        },
+        "procurementMethodDetails": {
+          "title": "Procurement method details",
+          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
+          "type": "string"
         },
         "costEstimate": {
           "title": "Cost estimate",
