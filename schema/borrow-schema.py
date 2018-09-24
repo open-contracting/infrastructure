@@ -6,8 +6,12 @@ across into the Infrastructure Project Transparency Schema, making
 modifications to titles or descriptions where required.
 
 The goal of this is to make it easier to see where changes might be needed in
-future to keep Infrastructure Project Transparency Standard aligned with OCDS
+future to keep Project Level Data Specification aligned with OCDS
 object definitions.
+
+When major updates to OCDS take place, and OCDS for PPPs is updated, this script 
+should be run, and the diffs compared to see if changes to the project level data
+specification should be made.
 """
 
 import json
@@ -37,6 +41,7 @@ pppSchema = _json_loads(requests.get(base_url + "release-schema.json").text)
 
 with open(schema_folder + "/project-schema.json","r") as schemaFile:
     schema = _json_loads(schemaFile.read())
+
 
 copy_codelist("releaseTag")
 
@@ -73,7 +78,7 @@ schema['definitions']['Document']['properties']['description']['description'] = 
 schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."
 copy_codelist("documentType")
 
-
+"""Recognising that the buyer address may not be appropriate for geolocation, but that projects may have a physical address, we add 'address' to location"""
 copy_def("Location")
 schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."
 schema['definitions']['Location']['properties']['address'] = {
@@ -90,6 +95,7 @@ copy_def("Classification")
 schema['definitions']['Classification']['properties']['scheme']['description'] = "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn."
 del(schema['definitions']['Classification']['properties']['scheme']['codelist'])
 del(schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
+"""The URI property has been poorly used within OCDS, so is removed from project level data specification."""
 del(schema['definitions']['Classification']['properties']['uri'])
 
 with open(schema_folder + "/project-schema.json","w") as outFile:
