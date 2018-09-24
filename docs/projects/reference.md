@@ -121,9 +121,9 @@ A project may have one or more locations. Locations may be expressed in a number
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Identifier
+    :pointer: /definitions/Location
     :include: 
-    :collapse: 
+    :collapse: address
 
 ```
 
