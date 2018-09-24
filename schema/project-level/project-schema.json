@@ -218,14 +218,14 @@
               "supervision"
             ],
             "enum_titles": [
-              "Planning",
-              "Construction",
-              "Monitoring"
+              "Design",
+              "Build",
+              "Supervision"
             ],
             "enum_descriptions": [
-              "This contracting process relates to planning the project.",
-              "This contracting process relates to construction work for the project",
-              "This contracting process relates to monitoring of the project"
+              "This contracting process relates to design of the project.",
+              "This contracting process relates to build or construction work for the project",
+              "This contracting process relates to supervision or monitoring of the project"
             ]
           }
         },
