@@ -110,7 +110,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specification Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#project-level">Project level</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#contractingprocess">ContractingProcess</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#releaselist">ReleaseList</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#releaselistentry">ReleaseListEntry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#components">Components</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#classification">Classification</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#organization">Organization</a></li>
@@ -237,7 +237,7 @@
 <td colspan="1">Required</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Identifier or Reference</td>
-<td colspan="4">A unique identifier or reference number for this infrastructure project. TODO: GUIDANCE ON PROJECT IDENTIFIERS</td>
+<td colspan="4">A unique identifier or reference number for this infrastructure project.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,updated"><span class="pre">updated</span></code></td>
 <td colspan="1">string</td>
@@ -297,7 +297,7 @@ See <a class="reference external" href="#period">Period</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Project sector</td>
-<td colspan="4"><p class="first">The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of <a class="reference external" href="https://unstats.un.org/unsd/classifications/Family/Detail/4">UN COFOG codes</a>, with &#8216;COFOG&#8217; as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the <a class="reference external" href="https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors">PPP Certification guide</a> with &#8216;PPPCERT&#8217; as the classification scheme, is recommended. It should be</p>
+<td colspan="4"><p class="first">The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of <a class="reference external" href="https://unstats.un.org/unsd/classifications/Family/Detail/4">UN COFOG codes</a>, with &#8216;COFOG&#8217; as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the <a class="reference external" href="https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors">PPP Certification guide</a> with &#8216;PPPCERT&#8217; as the classification scheme, is recommended.</p>
 <p class="last">
 
 See <a class="reference external" href="#classification">Classification</a></p>
@@ -807,8 +807,8 @@ See <a class="reference external" href="#releaselistentry">ReleaseListEntry</a><
 </tbody>
 </table>
 </div>
-<div class="section" id="releaselist">
-<h2>ReleaseList<a class="headerlink" href="#releaselist" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="releaselistentry">
+<h2>ReleaseListEntry<a class="headerlink" href="#releaselistentry" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="20%" />
@@ -1266,37 +1266,97 @@ See <a class="reference external" href="#contactpoint">ContactPoint</a></p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Identifier,scheme"><span class="pre">scheme</span></code></td>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,description"><span class="pre">description</span></code></td>
 <td colspan="1">[string, null]</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">Scheme</td>
-<td colspan="4">Organization identifiers should be drawn from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is drawn. This value should be drawn from the <a class="reference external" href="http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme">Organization Identifier Scheme</a> codelist.</td>
+<tr class="row-odd"><td colspan="1">Description</td>
+<td colspan="4">A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.</td>
 </tr>
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Identifier,id"><span class="pre">id</span></code></td>
-<td colspan="1">[string, integer, null]</td>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,geometry"><span class="pre">geometry</span></code></td>
+<td colspan="1">[object, null]</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">ID</td>
-<td colspan="4">The identifier of the organization in the selected scheme.</td>
+<tr class="row-odd"><td colspan="1">Geometry</td>
+<td colspan="4">We follow the <a class="reference external" href="http://geojson.org/">GeoJSON standard</a> to express basic location information, using latitude and longitude values in the <a class="reference external" href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS84</a> (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.</td>
 </tr>
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Identifier,legalName"><span class="pre">legalName</span></code></td>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,geometry/type"><span class="pre">geometry/type</span></code></td>
 <td colspan="1">[string, null]</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">Legal Name</td>
-<td colspan="4">The legally registered name of the organization.</td>
+<tr class="row-odd"><td colspan="1">Type</td>
+<td colspan="4">The type of <a class="reference external" href="http://geojson.org/geojson-spec.html#geometry-objects">GeoJSON Geometry Objects</a> being provided. To provide latitude and longitude use &#8216;point&#8217;, and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.</td>
 </tr>
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Identifier,uri"><span class="pre">uri</span></code></td>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,geometry/coordinates"><span class="pre">geometry/coordinates</span></code></td>
+<td colspan="1">[array, null]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Coordinates</td>
+<td colspan="4">The relevant array of points, e.g. [latitude,longitude], or nested array, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,geometry/coordinates"><span class="pre">geometry/coordinates</span></code></td>
+<td colspan="1">array[[number, array]]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Coordinates</td>
+<td colspan="4">The relevant array of points, e.g. [latitude,longitude], or nested array, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,gazetteer"><span class="pre">gazetteer</span></code></td>
+<td colspan="1">[object, null]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Gazetteer</td>
+<td colspan="4">A gazetteer is a geographical index or directory. The specific gazetteer used should be specified in scheme, and one or more codes from that gazetteer used in identifier.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,gazetteer/scheme"><span class="pre">gazetteer/scheme</span></code></td>
 <td colspan="1">[string, null]</td>
-<td colspan="1">uri</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Gazetteer scheme</td>
+<td colspan="4">The entry of the selected gazetteer in the gazetteers codelist. The codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,gazetteer/identifiers"><span class="pre">gazetteer/identifiers</span></code></td>
+<td colspan="1">[array, null]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Identifiers</td>
+<td colspan="4">An array of one or more codes drawn from the gazetteer indicated in scheme.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,gazetteer/identifiers"><span class="pre">gazetteer/identifiers</span></code></td>
+<td colspan="1">array[[string]]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Identifiers</td>
+<td colspan="4">An array of one or more codes drawn from the gazetteer indicated in scheme.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,uri"><span class="pre">uri</span></code></td>
+<td colspan="1">[string, null]</td>
+<td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">URI</td>
-<td colspan="4">A URI to identify the organization, such as those provided by <a class="reference external" href="http://www.opencorporates.com">Open Corporates</a> or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.</td>
+<td colspan="4">A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location.</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/Location,address"><span class="pre">address</span></code></td>
+<td colspan="1">object</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Address</td>
+<td colspan="4"><p class="first">A physical address where works will take place.</p>
+<p class="last">
+
+See <a class="reference external" href="#address">Address</a></p>
+</td>
 </tr>
 </tbody>
 </table>
