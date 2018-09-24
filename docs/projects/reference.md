@@ -31,7 +31,7 @@ The tables below describe each of the fields and objects in the Project Level Da
 ```
 
 
-## ReleaseList
+## ReleaseListEntry
 
 ```eval_rst
 
