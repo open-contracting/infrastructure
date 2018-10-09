@@ -276,7 +276,7 @@
           "$ref": "#/definitions/Value"
         },
         "contractValue": {
-          "title": "Award value",
+          "title": "Contract value",
           "description": "This should be the price agreed for the work covered by this contracting process. Where linked OCDS data is available this may by the sum of `awards.value`, or, if contract values are available, the sum of `contracts.value`. (In cases of a single award and single contract, it may not be necessary to sum across values).",
           "$ref": "#/definitions/Value"
         },
