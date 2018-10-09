@@ -76,7 +76,6 @@ For each organization, provide as much structured data as you can.
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/Organization
-    :include: 
     :collapse: identifier,additionalIdentifiers,address,contactPoint
 
 ```

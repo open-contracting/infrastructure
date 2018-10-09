@@ -256,7 +256,7 @@
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct).",
+          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
           "type": "string",
           "enum": [
             "open",
@@ -267,7 +267,7 @@
         },
         "procurementMethodDetails": {
           "title": "Procurement method details",
-          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
+          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
           "type": "string"
         },
         "costEstimate": {

@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "title": "Identifier or Reference",
-      "description": "A unique identifier or reference number for this infrastructure project. TODO: GUIDANCE ON PROJECT IDENTIFIERS",
+      "description": "A unique identifier or reference number for this infrastructure project.",
       "type": "string"
     },
     "updated": {
@@ -81,7 +81,7 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended. It should be",
+      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended.",
       "$ref": "#/definitions/Classification"
     },
     "additionalClassifications": {
@@ -218,14 +218,14 @@
               "supervision"
             ],
             "enum_titles": [
-              "Planning",
-              "Construction",
-              "Monitoring"
+              "Design",
+              "Build",
+              "Supervision"
             ],
             "enum_descriptions": [
-              "This contracting process relates to planning the project.",
-              "This contracting process relates to construction work for the project",
-              "This contracting process relates to monitoring of the project"
+              "This contracting process relates to design of the project.",
+              "This contracting process relates to build or construction work for the project.",
+              "This contracting process relates to supervision or monitoring of the project."
             ]
           }
         },
