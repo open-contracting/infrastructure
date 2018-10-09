@@ -193,7 +193,7 @@
   "definitions": {
     "ContractingProcess": {
       "title": "Contracting process",
-      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
+      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases. Where OCDS data is available, most ContractingProcess summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
       "type": "object",
       "properties": {
         "ocid": {
