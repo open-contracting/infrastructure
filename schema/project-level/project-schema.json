@@ -31,48 +31,18 @@
     },
     "status": {
       "title": "Status",
-      "description": "The status of this project, from the projectStatus codelist.",
+      "description": "The current phase and status of this project, from the [projectStatus](#projectStatus) codelist.",
       "type": "string",
       "codelist": "projectStatus.csv",
       "openCodelist": false,
       "enum": [
-        "planned",
-        "active",
-        "complete",
-        "cancelled"
-      ],
-      "enum_titles": [
-        "Planned",
-        "Active",
-        "Complete",
-        "Cancelled"
-      ]
-    },
-    "phase": {
-      "title": "Phase",
-      "description": "The phase of this project, from the projectPhase codelist.",
-      "type": "string",
-      "codelist": "projectPhase.csv",
-      "openCodelist": true,
-      "enum": [
         "identification",
         "preparation",
         "construction",
-        "completion"
-      ],
-      "enum_titles": [
-        "Identification",
-        "Preparation",
-        "construction",
-        "Completion"
-      ],
-      "enum_descriptions": [
-        "Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).",
-        "Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.",
-        "Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.",
-        "Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time."
-      ],
-      "schema_notes": "We have not included 'procurement' as a phase, as this overlaps with implementation, and can be inferred from the details in `contractingProcesses`. We have also used 'implementation' rather than 'construction' - a difference from the GN9 draft."
+        "completion",
+        "completed",
+        "cancelled"
+      ]
     },
     "period": {
       "title": "Project period",
@@ -216,16 +186,6 @@
               "design",
               "build",
               "supervision"
-            ],
-            "enum_titles": [
-              "Design",
-              "Build",
-              "Supervision"
-            ],
-            "enum_descriptions": [
-              "This contracting process relates to design of the project.",
-              "This contracting process relates to build or construction work for the project.",
-              "This contracting process relates to supervision or monitoring of the project."
             ]
           }
         },
@@ -252,7 +212,7 @@
             "cancelled",
             "completion"
           ],
-          "TODO": "SETUP CODELIST PROPERLY"
+          "codelist": "contractingProcessStatus.csv"
         },
         "procurementMethod": {
           "title": "Procurement method",
@@ -263,7 +223,8 @@
             "selective",
             "limited",
             "direct"
-          ]
+          ],
+          "codelist": "procurementMethod.csv"
         },
         "procurementMethodDetails": {
           "title": "Procurement method details",
