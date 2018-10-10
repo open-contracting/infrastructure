@@ -60,3 +60,16 @@ In cases where OCDS data is available, many of the contracting process fields wi
    :widths: 20 30 40 10
    :file: ../../build/current_lang/process-level.csv
 ```
+
+### Reactive disclosures
+
+The CoST IDS also sets out a number of data points under the heading of 'reactive disclosure'. It is possible to also disclose many of these fields **pro-actively** either as **document** entries with free text or linked documents, or using structured OCDS fields and extensions.
+
+Specifically:
+
+* Details of a individuals involved at the project or contract level can be included in the ``parties`` array with a suitable role. Role is an open codelist. As individuals will not have an 'organization identifier' a locally defined identifier may be used instead. 
+
+* Plans, reports and assessments may be included in the project or contracting process level `documents` blocks, or may be published within individual OCDS releases. 
+
+* The [budget_breakdown](https://github.com/open-contracting/ocds_budget_breakdown_extension) and [budget_and_spend](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension) extensions can be used to provide guidance on modelling detailed financial information.
+
