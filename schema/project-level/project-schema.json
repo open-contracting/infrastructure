@@ -52,7 +52,7 @@
     "sector": {
       "title": "Project sector",
       "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
-      "type":"string"
+      "type": "string"
     },
     "additionalClassifications": {
       "title": "Additional classifications",
@@ -62,6 +62,23 @@
         "$ref": "#/definitions/Classification"
       },
       "uniqueItems": true
+    },
+    "projectType": {
+      "title": "Project type",
+      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#ProjectType) codelist",
+      "type": "string",
+      "enum": [
+        "construction",
+        "rehabilitation",
+        "replacement"
+      ],
+      "openCodelist": false,
+      "codelist": "projectType.csv"
+    },
+    "assetLifetime":{
+      "title":"Asset lifetime",
+      "description":"Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.",
+      "$ref": "#/definitions/Period"
     },
     "locations": {
       "title": "Project location",
@@ -278,12 +295,12 @@
             "$ref": "#/definitions/ReleaseListEntry"
           }
         },
-        "documents":{
-          "title":"Documents",
-          "description":"Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
-          "type":"array",
-          "items":{
-            "$ref":"#/definitions/Document"
+        "documents": {
+          "title": "Documents",
+          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
           }
         }
       }
