@@ -201,16 +201,12 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be calculated by checking for the most recent OCDS release, and the stage this has reached.",
+          "description": "The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be derived using the business logic set out in the codelist..",
           "type": "string",
           "enum": [
-            "planning",
-            "tender",
-            "award",
-            "contract",
-            "implementation",
-            "cancelled",
-            "completion"
+            "pre-award",
+            "active",
+            "closed"
           ],
           "codelist": "contractingProcessStatus.csv"
         },
@@ -224,7 +220,7 @@
             "limited",
             "direct"
           ],
-          "codelist": "procurementMethod.csv"
+          "codelist": "method.csv"
         },
         "procurementMethodDetails": {
           "title": "Procurement method details",

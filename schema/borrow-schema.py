@@ -51,6 +51,7 @@ copy_def("Value")
 copy_codelist("currency")
 
 copy_codelist("method")
+copy_codelist("method")
 
 copy_def("Period")
 schema['definitions']['Period']['description'] = "Key events during a project or contracting process may have a known start date, end date, duration, or maximum extent (the latest date the period can extend to). In some cases, not all of these fields will have known or relevant values."
