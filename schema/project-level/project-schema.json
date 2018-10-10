@@ -51,12 +51,12 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended.",
-      "$ref": "#/definitions/Classification"
+      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
+      "type":"string"
     },
     "additionalClassifications": {
-      "title": "Additional sector classifications",
-      "description": "Additional project classification, by other sector classifications, or using other classification schemes (e.g. against a strategic framework).",
+      "title": "Additional classifications",
+      "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist such as UN COFOG (Classification of the Functions of Government).",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
