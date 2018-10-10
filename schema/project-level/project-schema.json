@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](#projectStatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
       "type": "string",
       "codelist": "projectStatus.csv",
       "openCodelist": false,
@@ -65,7 +65,7 @@
     },
     "projectType": {
       "title": "Project type",
-      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#ProjectType) codelist",
+      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#projecttype) codelist",
       "type": "string",
       "enum": [
         "construction",
@@ -218,7 +218,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be derived using the business logic set out in the codelist..",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist..",
           "type": "string",
           "enum": [
             "pre-award",

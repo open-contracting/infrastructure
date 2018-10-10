@@ -213,8 +213,64 @@ Where the source system does not contain time information, a judgement should be
 
 ## Codelists
 
-### ProjectType
+Selected codelists are displayed below.
 
+### ContractingProcessStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
+
+```
+
+### DocumentType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/documentType.csv
+
+```
+
+### Method
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/method.csv
+
+```
+
+### ProjectPhase
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectPhase.csv
+
+```
+
+### ProjectStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectStatus.csv
+
+```
+
+### ProjectType
 
 ```eval_rst
 
