@@ -1,7 +1,7 @@
 CoST IDS Element,Draft definition,Maps to,Discussion
 Project owner,Name of the sponsoring Government department,Project Level: Add an entry to ``parties`` with 'owner' included in its ``.roles``.,
-Sector,"Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.","Project Level: Publish as ``sector``, with additional sectors in ``additionalClassifications``.",`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
-Subsector,"Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.",,`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
+Sector,"Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.","Project Level: Publish as ``sector``, with any additional sectors in ``additionalClassifications``.",`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
+Subsector,"Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.",Publish in ``additionalClassifications``. ,`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
 Project name,Specify the project name,Project Level: Publish as ``title``,
 Project Location,Briefly specify location of the project,"Project Level: Publish using the ``location`` fields as an address, geometry (point/line/polygon) or gazetter entry.",
 Purpose,Specify the socio economic purpose of the project,,`Issue #15 <https://github.com/open-contracting/infrastructure/issues/15>`_
@@ -13,7 +13,7 @@ Contact details,Postal and electronic address of the Project Owner,Project Level
 Funding sources,Name the funding organisation(s)/sources of funding,"Project Level: Include each of the funding organisations in the ``parties`` array with 'funder' in ``.roles``. When information on the amount provided by each funder is available, use ``budget/budgetBreakdown`` to provide details.",
 Project Budget,"Specify the projected costs/allocated budget for the project (currency and amount). The budget includes land / property acquisition, environmental mitigation measures, H&S provisions, client, consultant & contractor costs, VAT etc.",Project Level: Publish as ``budget/amount``.,
 Project budget approval date,Date project budget was authorised,Projet Level: Publish as ``budget/approvalDate`` and include additional document with ``.type`` of 'budgetApproval' if required,
-Project status (current),"The current stage of the project. Select from identification, preparation, construction or completed",Project Level: Publish as ``status``.,`Issue #10 <https://github.com/open-contracting/infrastructure/issues/10>`_
+Project status (current),"The current stage of the project. Select from identification, preparation, construction, completion, completed or cancelled.",Project Level: Publish as ``status``.,`Issue #10 <https://github.com/open-contracting/infrastructure/issues/10>`_
 Project completion) cost,"State projected or actual completion cost
 (currency and amount)",Project Level: Publish as ``completion/finalValue``,
 Completion date,State projected or actual completion date,Project Level: Publish as ``completion/endDate``,

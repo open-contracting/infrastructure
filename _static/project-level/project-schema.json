@@ -31,48 +31,18 @@
     },
     "status": {
       "title": "Status",
-      "description": "The status of this project, from the projectStatus codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
       "type": "string",
       "codelist": "projectStatus.csv",
       "openCodelist": false,
       "enum": [
-        "planned",
-        "active",
-        "complete",
-        "cancelled"
-      ],
-      "enum_titles": [
-        "Planned",
-        "Active",
-        "Complete",
-        "Cancelled"
-      ]
-    },
-    "phase": {
-      "title": "Phase",
-      "description": "The phase of this project, from the projectPhase codelist.",
-      "type": "string",
-      "codelist": "projectPhase.csv",
-      "openCodelist": true,
-      "enum": [
         "identification",
         "preparation",
         "construction",
-        "completion"
-      ],
-      "enum_titles": [
-        "Identification",
-        "Preparation",
-        "construction",
-        "Completion"
-      ],
-      "enum_descriptions": [
-        "Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).",
-        "Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.",
-        "Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.",
-        "Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time."
-      ],
-      "schema_notes": "We have not included 'procurement' as a phase, as this overlaps with implementation, and can be inferred from the details in `contractingProcesses`. We have also used 'implementation' rather than 'construction' - a difference from the GN9 draft."
+        "completion",
+        "completed",
+        "cancelled"
+      ]
     },
     "period": {
       "title": "Project period",
@@ -81,17 +51,34 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of [UN COFOG codes](https://unstats.un.org/unsd/classifications/Family/Detail/4), with 'COFOG' as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the [PPP Certification guide](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors) with 'PPPCERT' as the classification scheme, is recommended.",
-      "$ref": "#/definitions/Classification"
+      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
+      "type": "string"
     },
     "additionalClassifications": {
-      "title": "Additional sector classifications",
-      "description": "Additional project classification, by other sector classifications, or using other classification schemes (e.g. against a strategic framework).",
+      "title": "Additional classifications",
+      "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist such as UN COFOG (Classification of the Functions of Government).",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
       },
       "uniqueItems": true
+    },
+    "projectType": {
+      "title": "Project type",
+      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#projecttype) codelist",
+      "type": "string",
+      "enum": [
+        "construction",
+        "rehabilitation",
+        "replacement"
+      ],
+      "openCodelist": false,
+      "codelist": "projectType.csv"
+    },
+    "assetLifetime": {
+      "title": "Asset lifetime",
+      "description": "Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.",
+      "$ref": "#/definitions/Period"
     },
     "locations": {
       "title": "Project location",
@@ -193,7 +180,7 @@
   "definitions": {
     "ContractingProcess": {
       "title": "Contracting process",
-      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
+      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases. Where OCDS data is available, most ContractingProcess summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
       "type": "object",
       "properties": {
         "ocid": {
@@ -216,16 +203,6 @@
               "design",
               "build",
               "supervision"
-            ],
-            "enum_titles": [
-              "Design",
-              "Build",
-              "Supervision"
-            ],
-            "enum_descriptions": [
-              "This contracting process relates to design of the project.",
-              "This contracting process relates to build or construction work for the project.",
-              "This contracting process relates to supervision or monitoring of the project."
             ]
           }
         },
@@ -241,33 +218,30 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be calculated by checking for the most recent OCDS release, and the stage this has reached.",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist..",
           "type": "string",
           "enum": [
-            "planning",
-            "tender",
-            "award",
-            "contract",
-            "implementation",
-            "cancelled",
-            "completion"
+            "pre-award",
+            "active",
+            "closed"
           ],
-          "TODO": "SETUP CODELIST PROPERLY"
+          "codelist": "contractingProcessStatus.csv"
         },
         "procurementMethod": {
           "title": "Procurement method",
-          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct).",
+          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
           "type": "string",
           "enum": [
             "open",
             "selective",
             "limited",
             "direct"
-          ]
+          ],
+          "codelist": "method.csv"
         },
         "procurementMethodDetails": {
           "title": "Procurement method details",
-          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
+          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
           "type": "string"
         },
         "costEstimate": {
@@ -276,7 +250,7 @@
           "$ref": "#/definitions/Value"
         },
         "contractValue": {
-          "title": "Award value",
+          "title": "Contract value",
           "description": "This should be the price agreed for the work covered by this contracting process. Where linked OCDS data is available this may by the sum of `awards.value`, or, if contract values are available, the sum of `contracts.value`. (In cases of a single award and single contract, it may not be necessary to sum across values).",
           "$ref": "#/definitions/Value"
         },
@@ -319,6 +293,14 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/ReleaseListEntry"
+          }
+        },
+        "documents": {
+          "title": "Documents",
+          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
           }
         }
       }

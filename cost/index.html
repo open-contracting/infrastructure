@@ -112,6 +112,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#mapping-against-the-ids">Mapping against the IDS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#project-level">Project level</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#process-level">Process level</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reactive-disclosures">Reactive disclosures</a></li>
 </ul>
 </li>
 </ul>
@@ -240,12 +241,12 @@ max-width: 1200px;
 </tr>
 <tr class="row-odd"><td>Sector</td>
 <td>Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.</td>
-<td>Project Level: Publish as <code class="docutils literal"><span class="pre">sector</span></code>, with additional sectors in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
+<td>Project Level: Publish as <code class="docutils literal"><span class="pre">sector</span></code>, with any additional sectors in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
 <td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/16">Issue #16</a></td>
 </tr>
 <tr class="row-even"><td>Subsector</td>
 <td>Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.</td>
-<td>&nbsp;</td>
+<td>Publish in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
 <td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/16">Issue #16</a></td>
 </tr>
 <tr class="row-odd"><td>Project name</td>
@@ -304,7 +305,7 @@ max-width: 1200px;
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Project status (current)</td>
-<td>The current stage of the project. Select from identification, preparation, construction or completed</td>
+<td>The current stage of the project. Select from identification, preparation, construction, completion, completed or cancelled.</td>
 <td>Project Level: Publish as <code class="docutils literal"><span class="pre">status</span></code>.</td>
 <td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/10">Issue #10</a></td>
 </tr>
@@ -452,6 +453,16 @@ max-width: 1200px;
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="reactive-disclosures">
+<h3>Reactive disclosures<a class="headerlink" href="#reactive-disclosures" title="Permalink to this headline">¶</a></h3>
+<p>The CoST IDS also sets out a number of data points under the heading of &#8216;reactive disclosure&#8217;. It is possible to also disclose many of these fields <strong>pro-actively</strong> either as <strong>document</strong> entries with free text or linked documents, or using structured OCDS fields and extensions.</p>
+<p>Specifically:</p>
+<ul class="simple">
+<li>Details of a individuals involved at the project or contract level can be included in the <code class="docutils literal"><span class="pre">parties</span></code> array with a suitable role. Role is an open codelist. As individuals will not have an &#8216;organization identifier&#8217; a locally defined identifier may be used instead.</li>
+<li>Plans, reports and assessments may be included in the project or contracting process level <code class="docutils literal"><span class="pre">documents</span></code> blocks, or may be published within individual OCDS releases.</li>
+<li>The <a class="reference external" href="https://github.com/open-contracting/ocds_budget_breakdown_extension">budget_breakdown</a> and <a class="reference external" href="https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension">budget_and_spend</a> extensions can be used to provide guidance on modelling detailed financial information.</li>
+</ul>
 </div>
 </div>
 </div>

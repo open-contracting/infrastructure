@@ -125,7 +125,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#period">Period</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#codelists">Codelists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#codelists">Codelists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#contractingprocessstatus">ContractingProcessStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#documenttype">DocumentType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projectphase">ProjectPhase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projectstatus">ProjectStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#projecttype">ProjectType</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../guidance/">Implementation guidance</a></li>
@@ -269,15 +277,7 @@
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Status</td>
-<td colspan="4">The status of this project, from the projectStatus codelist.</td>
-</tr>
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,phase"><span class="pre">phase</span></code></td>
-<td colspan="1">string</td>
-<td colspan="1">&nbsp;</td>
-<td colspan="1">&nbsp;</td>
-</tr>
-<tr class="row-odd"><td colspan="1">Phase</td>
-<td colspan="4">The phase of this project, from the projectPhase codelist.</td>
+<td colspan="4">The current phase or status of this project, from the <a class="reference external" href="#projectstatus">projectStatus</a> codelist.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,period"><span class="pre">period</span></code></td>
 <td colspan="1">object</td>
@@ -292,27 +292,43 @@ See <a class="reference external" href="#period">Period</a></p>
 </td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,sector"><span class="pre">sector</span></code></td>
-<td colspan="1">object</td>
+<td colspan="1">string</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Project sector</td>
-<td colspan="4"><p class="first">The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country. When these codelists are organised hierarchically, it should be possibly to classify at the sub-sector level, but then infer the top-level sector from this. In the absence of an appropriate national list, either (a) use of <a class="reference external" href="https://unstats.un.org/unsd/classifications/Family/Detail/4">UN COFOG codes</a>, with &#8216;COFOG&#8217; as the classification scheme, and the numerical COFOG code used; or (b) use of the sector list from the <a class="reference external" href="https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors">PPP Certification guide</a> with &#8216;PPPCERT&#8217; as the classification scheme, is recommended.</p>
-<p class="last">
-
-See <a class="reference external" href="#classification">Classification</a></p>
-</td>
+<td colspan="4">The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the <a class="reference external" href="https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors">PPPCert Type of Assets table</a>.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,additionalClassifications"><span class="pre">additionalClassifications</span></code></td>
 <td colspan="1">array[Classification]</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">Additional sector classifications</td>
-<td colspan="4"><p class="first">Additional project classification, by other sector classifications, or using other classification schemes (e.g. against a strategic framework).</p>
+<tr class="row-odd"><td colspan="1">Additional classifications</td>
+<td colspan="4"><p class="first">One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist such as UN COFOG (Classification of the Functions of Government).</p>
 <p class="last">
 
 See <a class="reference external" href="#classification">Classification</a></p>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,projectType"><span class="pre">projectType</span></code></td>
+<td colspan="1">string</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Project type</td>
+<td colspan="4">Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the <a class="reference external" href="#projecttype">projectType</a> codelist</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,assetLifetime"><span class="pre">assetLifetime</span></code></td>
+<td colspan="1">object</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Asset lifetime</td>
+<td colspan="4"><p class="first">Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.</p>
+<p class="last">
+
+See <a class="reference external" href="#period">Period</a></p>
 </td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,locations"><span class="pre">locations</span></code></td>
@@ -552,7 +568,7 @@ See <a class="reference external" href="#value">Value</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Status</td>
-<td colspan="4">The status of this contacting process. Drawn from the contractingProcessStatus codelist. This value may be calculated by checking for the most recent OCDS release, and the stage this has reached.</td>
+<td colspan="4">The status of this contacting process. Drawn from the <a class="reference external" href="#contractingprocessstatus">contractingProcessStatus codelist</a>. This value may be derived using the business logic set out in the codelist..</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/ContractingProcess,procurementMethod"><span class="pre">procurementMethod</span></code></td>
 <td colspan="1">string</td>
@@ -560,7 +576,7 @@ See <a class="reference external" href="#value">Value</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Procurement method</td>
-<td colspan="4">Specify tendering method using the <a class="reference external" href="#method">method</a> codelist (open, selective, limited, direct).</td>
+<td colspan="4">Specify tendering method using the <a class="reference external" href="#method">method</a> codelist (open, selective, limited, direct). This may be derived from the <code class="docutils literal"><span class="pre">tender.procurementMethod</span></code> field of a related OCDS release.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/ContractingProcess,procurementMethodDetails"><span class="pre">procurementMethodDetails</span></code></td>
 <td colspan="1">string</td>
@@ -568,7 +584,7 @@ See <a class="reference external" href="#value">Value</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Procurement method details</td>
-<td colspan="4">Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.</td>
+<td colspan="4">Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the <code class="docutils literal"><span class="pre">tender.procurementMethodDetails</span></code> field of an OCDS release. In other cases this may need manual data entry.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/ContractingProcess,costEstimate"><span class="pre">costEstimate</span></code></td>
 <td colspan="1">object</td>
@@ -603,7 +619,7 @@ See <a class="reference external" href="#value">Value</a></p>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">Award value</td>
+<tr class="row-odd"><td colspan="1">Contract value</td>
 <td colspan="4"><p class="first">This should be the price agreed for the work covered by this contracting process. Where linked OCDS data is available this may by the sum of <code class="docutils literal"><span class="pre">awards.value</span></code>, or, if contract values are available, the sum of <code class="docutils literal"><span class="pre">contracts.value</span></code>. (In cases of a single award and single contract, it may not be necessary to sum across values).</p>
 <p class="last">
 
@@ -802,6 +818,18 @@ See <a class="reference external" href="#organizationreference">OrganizationRefe
 <p class="last">
 
 See <a class="reference external" href="#releaselistentry">ReleaseListEntry</a></p>
+</td>
+</tr>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/ContractingProcess,documents"><span class="pre">documents</span></code></td>
+<td colspan="1">array[Document]</td>
+<td colspan="1">&nbsp;</td>
+<td colspan="1">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="1">Documents</td>
+<td colspan="4"><p class="first">Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.</p>
+<p class="last">
+
+See <a class="reference external" href="#document">Document</a></p>
 </td>
 </tr>
 </tbody>
@@ -1864,7 +1892,448 @@ See <a class="reference external" href="#organizationreference">OrganizationRefe
 </div>
 <div class="section" id="codelists">
 <h2>Codelists<a class="headerlink" href="#codelists" title="Permalink to this headline">¶</a></h2>
-<p>TODO</p>
+<p>Selected codelists are displayed below.</p>
+<div class="section" id="contractingprocessstatus">
+<h3>ContractingProcessStatus<a class="headerlink" href="#contractingprocessstatus" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Business Logic</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>pre-award</td>
+<td>Pre-award</td>
+<td>No contract has yet been awarded, and the process has not ended.</td>
+<td>tender.status is not &#8216;cancelled&#8217;, &#8216;unsuccessful&#8217; or &#8216;withdrawn&#8217;, and one of: There are no awards or contracts; All Award.status and Contract.status are &#8216;pending&#8217;; All award dates (whether expressed as award.date or tender.awardPeriod) are in the future</td>
+</tr>
+<tr class="row-odd"><td>active</td>
+<td>Active</td>
+<td>A contract was awarded, but not all contracts have ended.</td>
+<td>One of: There is at least one Contract.status of &#8216;active&#8217;; At least one contract period (whether expressed as Contract.period, Award.contractPeriod or tender.contractPeriod) includes the present date</td>
+</tr>
+<tr class="row-even"><td>closed</td>
+<td>Closed</td>
+<td>The process ended with no contract being awarded, or all contracts have ended.</td>
+<td>One of: tender.status is &#8216;cancelled&#8217;, &#8216;unsuccessful&#8217; or &#8216;withdrawn&#8217;; There is at least one award, and all Award.status are &#8216;cancelled&#8217; or &#8216;unsuccessful&#8217;; There is at least one contract, and all Contract.status are &#8216;terminated&#8217; or &#8216;cancelled&#8217;; The endDate of all contract periods are in the past</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="documenttype">
+<h3>DocumentType<a class="headerlink" href="#documenttype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Extension</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>needsAssessment</td>
+<td>Needs Assessment</td>
+<td>Information on the project need, benefits provided, and economic and social impact</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>valueForMoneyAnalysis</td>
+<td>Value for money analysis</td>
+<td>A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>technicalSpecifications</td>
+<td>Technical Specifications</td>
+<td>Detailed technical information about goods or services to be provided.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>serviceDescription</td>
+<td>Service descriptions</td>
+<td>A high-level description of the services</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>estimatedDemand</td>
+<td>Estimated demand</td>
+<td>A narrative describing the estimated demand to be served (annually) by the project.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>projectAdditionality</td>
+<td>Project additionality</td>
+<td>A description of the additionality provided by the project</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>financeAdditionality</td>
+<td>Finance additionality</td>
+<td>A description of the additionality provided by the finance method</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>pppModeRationale</td>
+<td>Rationale for PPP modality</td>
+<td>A description of the reasons for choosing to conduct this project as a PPP</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>contractDraft</td>
+<td>Contract draft</td>
+<td>A draft or pro-forma copy of the contract.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>contractSchedule</td>
+<td>Schedules and milestones</td>
+<td>Documentation setting out key milestones and schedules. Structured versions of this information may be modelled using the milestones block.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>contractSigned</td>
+<td>Signed Contract</td>
+<td>A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>feasibilityStudy</td>
+<td>Feasibility study</td>
+<td>Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>environmentalImpact</td>
+<td>Environmental Impact</td>
+<td>Documentation of environmental impact assessments carried out before, during or after the contracting process.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>finalAudit</td>
+<td>Final Audit</td>
+<td>Documentation of a final audit carried out at the end of contract implementation.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>tenderNotice</td>
+<td>Tender Notice</td>
+<td>The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>evaluationCommittee</td>
+<td>Evaluation Committee Details</td>
+<td>Information on the constitution of the evaluation committee</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>requestForQualification</td>
+<td>Request for Qualification</td>
+<td>The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase).</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>evaluationCriteria</td>
+<td>Evaluation Criteria</td>
+<td>Documentation on how bids will be evaluated.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>minutes</td>
+<td>Minutes</td>
+<td>Minutes of pre-bid meetings, or other relevant meetings.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>shortlistedFirms</td>
+<td>Shortlisted Firms</td>
+<td>Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>negotiationParameters</td>
+<td>Negotiation Parameters</td>
+<td>A description of the parameters for negotiation with the preferred proponent</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>riskProvisions</td>
+<td>Provisions for management of risks and liabilities</td>
+<td>Documentation covering how risks will be managed as part of this contracting process.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>evaluationReports</td>
+<td>Evaluation report</td>
+<td>Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>riskComparison</td>
+<td>Risk comparison</td>
+<td>Risk comparison of other financing methods</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>discountRate</td>
+<td>Discount rate and risk premium</td>
+<td>An explanation of the discount rate, and any risk premium used, including information on project-specific circumstances that justify the risk premium rate used.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>equityTransferCaps</td>
+<td>Equity transfer caps</td>
+<td>Details of any restrictions on the transfer of equity by shareholders or other relevant participants in the project. Certain contracts provide for caps on equity transfer in different stages of the contract, especially during the construction stage and for a few years thereafter.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>financeArrangements</td>
+<td>Security and step in arrangements</td>
+<td>Details of any rights granted to a lender to access value in the event of default by a borrower and any rights granted to a party to &#8220;step in&#8221; to the shoes of another party, for example, a right granted to a lender or public authority to take over temporarily the operation of a project in case of failure to perform by a private party.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>contractGuarantees</td>
+<td>Guarantees</td>
+<td>Documentation of guarantees relating to a contracting process or contract.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>guaranteeReports</td>
+<td>Fiscal commitments and contingent liabilities disclosure reports</td>
+<td>Reports detailing the fiscal commitments of the public authority to the PPP, for example known payments that must be made if the PPP proceeds or payment commitments whose occurrence, timing and magnitude depend on some uncertain future event, outside the control of the public authority.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>grants</td>
+<td>Grants</td>
+<td>Information on grants given to support the project. Grant information should detail the total value of subsidy, and/or the value of subsidy as a proportion of the overall project value, as well as providing information on the nature of the grant. For capital subsidies paid during construction of a project, or operating subsidies paid during operation, details of periodicity of grant payments, and particular grant milestones, should be provided.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>servicePayments</td>
+<td>Service payments</td>
+<td>Service payments are payments made by the public authority or purchaser to the private provider for infrastructure services (applicable in some types of Public Private Partnership projects). The documentation should cover the total number of payments and their periodicity, as well as the methodology used for calculating payments and the indexation used.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>landTransfer</td>
+<td>Land transfer</td>
+<td>Details of land transferred on lease or other basis by government, including details of property numbers with the quantum of land transferred, zoning information and conditions of transfer.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>assetTransfer</td>
+<td>Asset Transfer</td>
+<td>Details of asset, human resource of personnel transfers, including documentation of the conditions of transfer.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>revenueShare</td>
+<td>Revenue Share</td>
+<td>Documentation of any revenue share arrangements, including revenue share on the base-case and upside for a public private partnership project.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>otherGovernmentSupport</td>
+<td>Other government support</td>
+<td>Documentation of any other government support, including non-complete clauses or provision for revenue shortfall loans.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>tariffMethod</td>
+<td>Tariff method</td>
+<td>For summarizing the method by which tariffs are set, and linking to detailed documentation of the methods for setting tariffs. This may include written documentation, and spreadsheets providing the models used to calculate tariffs. This should make clear who sets the tariff and on what basis.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>tariffReview</td>
+<td>Tariff review</td>
+<td>For summarizing the arrangements for the review and regulation of tariffs, and linking to detailed documentation that covers how tariffs are regulated. This is important to explain to users why they are paying what they are paying, and the scope for changes to payment structures.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>tariffs</td>
+<td>Tariffs</td>
+<td>For providing tariff and pricing schedules.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>tariffIllustration</td>
+<td>Tariff illustrations</td>
+<td>For linking to graphs and reports on the change over time in tariff prices. Use the relevant image media type when linking to PNG, JPEG or GIF graphs to allow applications to directly display this content.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>defaultEvents</td>
+<td>Defaults</td>
+<td>Information on events of default</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>termination</td>
+<td>Termination</td>
+<td>Information on contract termination</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>handover</td>
+<td>Handover</td>
+<td>Contractual provisions for, or reporting on, handover of assets back to the state, including details of condition of assets and any other conditions of handover.</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-even"><td>financialStatement</td>
+<td>Financial statement</td>
+<td>Audited financial statements of the project company</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+<tr class="row-odd"><td>performanceReport</td>
+<td>Performance report</td>
+<td>Performance assessment reports</td>
+<td>OCDS for PPPs Extension</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="method">
+<h3>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+<th class="head">Extension</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>open</td>
+<td>Open</td>
+<td>All interested suppliers may submit a tender.</td>
+<td>OCDS Core</td>
+</tr>
+<tr class="row-odd"><td>selective</td>
+<td>Selective</td>
+<td>Only qualified suppliers are invited to submit a tender.</td>
+<td>OCDS Core</td>
+</tr>
+<tr class="row-even"><td>limited</td>
+<td>Limited</td>
+<td>The procuring entity contacts a number of suppliers of its choice.</td>
+<td>OCDS Core</td>
+</tr>
+<tr class="row-odd"><td>direct</td>
+<td>Direct</td>
+<td>The contract is awarded to a single supplier without competition.</td>
+<td>OCDS Core</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="projectphase">
+<h3>ProjectPhase<a class="headerlink" href="#projectphase" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>identification</td>
+<td>Identification</td>
+<td>Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).</td>
+</tr>
+<tr class="row-odd"><td>preparation</td>
+<td>Preparation</td>
+<td>Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.</td>
+</tr>
+<tr class="row-even"><td>construction</td>
+<td>construction</td>
+<td>Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.</td>
+</tr>
+<tr class="row-odd"><td>completion</td>
+<td>Completion</td>
+<td>Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.</td>
+</tr>
+<tr class="row-even"><td>completed</td>
+<td>Completed</td>
+<td>Close-out activities have been completed, and this project is no longer active. This project may be displayed as part of a list of archived projects.</td>
+</tr>
+<tr class="row-odd"><td>cancelled</td>
+<td>Cancelled</td>
+<td>This project has been cancelled prior to close-out activities. Cancellation may have taken place at any point after identification.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="projectstatus">
+<h3>ProjectStatus<a class="headerlink" href="#projectstatus" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>identification</td>
+<td>Identification</td>
+<td>Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).</td>
+</tr>
+<tr class="row-odd"><td>preparation</td>
+<td>Preparation</td>
+<td>Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.</td>
+</tr>
+<tr class="row-even"><td>construction</td>
+<td>construction</td>
+<td>Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.</td>
+</tr>
+<tr class="row-odd"><td>completion</td>
+<td>Completion</td>
+<td>Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.</td>
+</tr>
+<tr class="row-even"><td>completed</td>
+<td>Completed</td>
+<td>Close-out activities have been completed, and this project is no longer active. This project may be displayed as part of a list of archived projects.</td>
+</tr>
+<tr class="row-odd"><td>cancelled</td>
+<td>Cancelled</td>
+<td>This project has been cancelled prior to close-out activities. Cancellation may have taken place at any point after identification.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
+<div class="section" id="projecttype">
+<h3>ProjectType<a class="headerlink" href="#projecttype" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><table border="1" class="codelist-table docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Title</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>construction</td>
+<td>Construction</td>
+<td>The primary focus of this project is the construction of a new asset.</td>
+</tr>
+<tr class="row-odd"><td>rehabilitation</td>
+<td>Rehabilitation</td>
+<td>The primary focus of this project is the rehabilitation of an existing asset.</td>
+</tr>
+<tr class="row-even"><td>replacement</td>
+<td>Replacement</td>
+<td>The primary focus of this project is the replacement of an existing asset.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</div>
 </div>
 </div>
 

@@ -14,8 +14,7 @@ The tables below describe each of the fields and objects in the Project Level Da
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include: 
-    :collapse: period,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
-
+    :collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
 ```
 
 ## ContractingProcess
@@ -26,7 +25,7 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include: 
     :pointer: /definitions/ContractingProcess
-    :collapse: releaseList
+    :collapse: releaseList,documents
 
 ```
 
@@ -76,7 +75,6 @@ For each organization, provide as much structured data as you can.
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/Organization
-    :include: 
     :collapse: identifier,additionalIdentifiers,address,contactPoint
 
 ```
@@ -215,5 +213,71 @@ Where the source system does not contain time information, a judgement should be
 
 ## Codelists
 
-TODO
+Selected codelists are displayed below.
+
+### ContractingProcessStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
+
+```
+
+### DocumentType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/documentType.csv
+
+```
+
+### Method
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/method.csv
+
+```
+
+### ProjectPhase
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectPhase.csv
+
+```
+
+### ProjectStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectStatus.csv
+
+```
+
+### ProjectType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectType.csv
+
+```
 
