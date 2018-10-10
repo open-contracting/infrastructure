@@ -1,7 +1,7 @@
 CoST IDS Element,Draft definition,Maps to,Discussion
 Project owner,Name of the sponsoring Government department,Project Level: Add an entry to ``parties`` with 'owner' included in its ``.roles``.,
-Sector,"Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.","Project Level: Publish as ``sector``, with additional sectors in ``additionalClassifications``.",`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
-Subsector,"Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.",,`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
+Sector,"Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.","Project Level: Publish as ``sector``, with any additional sectors in ``additionalClassifications``.",`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
+Subsector,"Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.",Publish in ``additionalClassifications``. ,`Issue #16 <https://github.com/open-contracting/infrastructure/issues/16>`_
 Project name,Specify the project name,Project Level: Publish as ``title``,
 Project Location,Briefly specify location of the project,"Project Level: Publish using the ``location`` fields as an address, geometry (point/line/polygon) or gazetter entry.",
 Purpose,Specify the socio economic purpose of the project,,`Issue #15 <https://github.com/open-contracting/infrastructure/issues/15>`_
