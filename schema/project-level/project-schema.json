@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase and status of this project, from the [projectStatus](#projectStatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](#projectStatus) codelist.",
       "type": "string",
       "codelist": "projectStatus.csv",
       "openCodelist": false,
