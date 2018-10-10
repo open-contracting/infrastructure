@@ -277,6 +277,14 @@
           "items": {
             "$ref": "#/definitions/ReleaseListEntry"
           }
+        },
+        "documents":{
+          "title":"Documents",
+          "description":"Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
+          "type":"array",
+          "items":{
+            "$ref":"#/definitions/Document"
+          }
         }
       }
     },

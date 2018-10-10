@@ -15,7 +15,6 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include: 
     :collapse: period,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
-
 ```
 
 ## ContractingProcess
@@ -26,7 +25,7 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include: 
     :pointer: /definitions/ContractingProcess
-    :collapse: releaseList
+    :collapse: releaseList,documents
 
 ```
 
