@@ -63,9 +63,9 @@
       },
       "uniqueItems": true
     },
-    "projectType": {
+    "type": {
       "title": "Project type",
-      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#projecttype) codelist",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -77,11 +77,11 @@
     },
     "assetLifetime":{
       "title":"Asset lifetime",
-      "description":"Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.",
+      "description":"The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
       "$ref": "#/definitions/Period"
     },
     "locations": {
-      "title": "Project location",
+      "title": "Project locations",
       "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
       "type": "array",
       "items": {
@@ -218,7 +218,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist..",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
           "type": "string",
           "enum": [
             "pre-award",
