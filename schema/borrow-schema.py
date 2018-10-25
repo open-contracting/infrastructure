@@ -9,7 +9,7 @@ The goal of this is to make it easier to see where changes might be needed in
 future to keep Project Level Data Specification aligned with OCDS
 object definitions.
 
-When major updates to OCDS take place, and OCDS for PPPs is updated, this script 
+When major updates to OCDS take place, and OCDS for PPPs is updated, this script
 should be run, and the diffs compared to see if changes to the project level data
 specification should be made.
 """
@@ -64,6 +64,7 @@ copy_def("Organization")
 copy_def("OrganizationReference")
 copy_codelist("partyRole")
 del(schema['definitions']['Organization']['properties']['shareholders'])
+del(schema['definitions']['Shareholder'])
 del(schema['definitions']['Organization']['properties']['beneficialOwnership'])
 del(schema['definitions']['Organization']['properties']['details'])
 schema['definitions']['Organization']['properties']['roles']['description'] = str(schema['definitions']['Organization']['properties']['roles']['description']).replace("contracting process","project")
