@@ -185,6 +185,14 @@
       "properties": {
         "compiledRelease": {
           "$ref": "#/definitions/CompiledRelease"
+        },
+        "releases": {
+          "title": "Release index",
+          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarise any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the `releaseList` can be used to manually record a log of changes, with the date and details of variations.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkedRelease"
+          }
         }
       }
     },
@@ -306,14 +314,6 @@
           }
         }
             }
-          }
-        },
-        "releases": {
-          "title": "Release index",
-          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarise any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the `releaseList` can be used to manually record a log of changes, with the date and details of variations.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/LinkedRelease"
           }
         },
         "documents": {
