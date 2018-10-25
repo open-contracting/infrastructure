@@ -6,7 +6,7 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
 
-![A project may form part of a wider programme, and may involve multiple contracts](../../_static/images/diagram-project-contract.png)
+![Projects typically involve multiple contracts](../../_static/images/diagram-project-contract.png)
 
 A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
 
@@ -14,18 +14,18 @@ A public body may issue contracts for design work, construction and supervision 
 
 ![Project level data covers a number of stages](../../_static/images/diagram-project-phases.png)
 
-Project level data covers:
+[CoST](http://infrastructuretransparency.org/) have developed a framework of information that should be pro-actively disclosed and kept updated at each stage. Project level data covers:
 
 * **identification** - the decision to develop a project within the budget and programme of a project owner.
 * **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.
 * **implementation** - covers the procurement and implementation of the planning, design and works according to the procurement strategy.
 * **completion** - covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.
 
-[CoST](http://infrastructuretransparency.org/) have developed a framework of information that should be pro-actively disclosed and kept updated at each stage. This framework has been used as the basis for the Project Level Data Specification.
+This framework has been used as the basis for the Project Level Data Specification.
 
 ## How does contracting data fit in?
 
-![Project level data covers a number of stages](../../_static/images/diagram-project-contract-phases.png)
+![Design, build and supervision activities may be delivered using contracts](../../_static/images/diagram-project-contract-phases.png)
 
 The preparation and implementation stages may be delivered using contractors. This will lead to one or more contracting processes, each with their own planning, tender, award, contract and implementation stages.
 
@@ -35,7 +35,9 @@ It may be possible to [discover and populate some data about infrastructure proj
 
 ## How is the Project Level Data Specification structured?
 
-The Project Level Data Schema is structured in three parts:
+![The project level data specification is structured in three parts](../../_static/images/diagram-project-level-data-spec.png)
+
+The Project Level Data Specification is structured in three parts:
 
 ### Project Level Data
 
