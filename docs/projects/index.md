@@ -4,15 +4,15 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts. 
+An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
 
-![A project may form part of a wider programme, and may involve multiple contracts](../../_static/images/programme-project-contract.png)
+![A project may form part of a wider programme, and may involve multiple contracts](../../_static/images/diagram-project-contract.png)
 
-A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project. 
+A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
 
 ## What is project level data?
 
-![Project level data covers a number of stages](../../_static/images/identification-preparation-implementation-completion.png)
+![Project level data covers a number of stages](../../_static/images/diagram-project-phases.png)
 
 Project level data covers:
 
@@ -25,15 +25,15 @@ Project level data covers:
 
 ## How does contracting data fit in?
 
-![Project level data covers a number of stages](../../_static/images/project-contract-linkage.png)
+![Project level data covers a number of stages](../../_static/images/diagram-project-contract-phases.png)
 
 The preparation and implementation stages may be delivered using contractors. This will lead to one or more contracting processes, each with their own planning, tender, award, contract and implementation stages.
 
-Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts. 
+Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts.
 
 It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
 
-## How is the Project Level Data Specification structured? 
+## How is the Project Level Data Specification structured?
 
 The Project Level Data Schema is structured in three parts:
 
@@ -41,35 +41,35 @@ The Project Level Data Schema is structured in three parts:
 
 Project level data includes summary information on project identification, preparation and completion.
 
-### Contracting summaries 
+### Contracting summaries
 
-The `contractingProcesses` array may be used to provide a summary of each of the contracting processes that is used to support preparation and implementation. 
+The `contractingProcesses` array may be used to provide a summary of each of the contracting processes that is used to support preparation and implementation.
 
 Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
-### Contracting process details 
+### Contracting process details
 
-The `contractingProcesses/releaseList` array may be used to record each update from a contracting process, and any variations. 
+The `contractingProcesses/releaseList` array may be used to record each update from a contracting process, and any variations.
 
 Where OCDS data is available, the contracting details section should act as an index of (cached) OCDS releases, with explanations of any variations detected when comparing releases.
 
 Where OCDS data is not available, the contracting details section can be used to manually record variation information.
 
-## How can I use the project level data specification? 
+## How can I use the project level data specification?
 
 ### If you have an existing infrastructure transparency portal...
 
 **... you can add a Project Level Data Specification export option to your system.**
 
-**Why?** 
+**Why?**
 
-So that your project information can be compared with information from others, and to support the development of common tools for analysis of infrastructure project information. There are already many tools that work with contracting process data in OCDS format. 
+So that your project information can be compared with information from others, and to support the development of common tools for analysis of infrastructure project information. There are already many tools that work with contracting process data in OCDS format.
 
 ```eval_rst
 .. admonition:: Step by step
     :class: tip
-    
-    .. markdown:: 
+
+    .. markdown::
         (1) Map you existing data structures onto the Project Level Data Specification and project a JSON file for each project your system has information on.
 
         (2) Publish this JSON file (as a static file or via an API) at a stable URL, such as:
@@ -82,7 +82,7 @@ So that your project information can be compared with information from others, a
 
         (4) Make sure your project level files include links in the `contractingProcess/releaseList` to each related OCDS file.
 
-        (5) Provide a regularly updated bulk file of all your data for download 
+        (5) Provide a regularly updated bulk file of all your data for download
 
         (e.g. a zip archive of all the folders and files under `/opendata/` if you used the path structures suggested in the example above)
 
@@ -93,9 +93,9 @@ So that your project information can be compared with information from others, a
 
 **... the Project Level Data Specification can be used by structure your data collection.**
 
-**Why?** 
+**Why?**
 
-The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contacting data sources, but to also work in cases where structured open contracting is not available. 
+The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contacting data sources, but to also work in cases where structured open contracting is not available.
 
 Some of the data structures, such as the organisation identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
 
@@ -105,17 +105,15 @@ Some of the data structures, such as the organisation identifier structure, may 
 
     .. markdown::
 
-        Whilst the schema can be used directly to build a data entry form, user interfaces should always be designed around user needs. 
+        Whilst the schema can be used directly to build a data entry form, user interfaces should always be designed around user needs.
 
-        Data can be stored directly in the JSON structure described by the schema of the specification **or** it can be stored in custom data structures, and only converted to the specification's structure when importing or exporting data. 
+        Data can be stored directly in the JSON structure described by the schema of the specification **or** it can be stored in custom data structures, and only converted to the specification's structure when importing or exporting data.
 
 ```
 <!--TODO - Consider worked example of a data entry form -->
 
 ### If you are designing other data collection tools...
 
-... the Project Level Data Specification provides definitions and codelists that can be used to collect consistent data. 
+... the Project Level Data Specification provides definitions and codelists that can be used to collect consistent data.
 
 Consult the [specification reference for definitions](reference.md).
-
-
