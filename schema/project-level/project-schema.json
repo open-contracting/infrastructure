@@ -135,7 +135,7 @@
       "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ContractingProcess"
+        "$ref": "#/definitions/Record"
       }
     },
     "completion": {
@@ -178,9 +178,17 @@
     }
   },
   "definitions": {
-    "ContractingProcess": {
+    "Record": {
       "title": "Contracting process",
       "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases. Where OCDS data is available, most ContractingProcess summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
+      "type": "object",
+      "properties": {
+        "compiledRelease": {
+          "$ref": "#/definitions/CompiledRelease"
+        }
+      }
+    },
+    "CompiledRelease": {
       "type": "object",
       "properties": {
         "ocid": {
@@ -188,7 +196,7 @@
           "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an OCID may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
           "type": "string"
         },
-        "externalReference": {
+        "id": {
           "title": "External reference",
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
           "type": "string"
@@ -227,6 +235,9 @@
           ],
           "codelist": "contractingProcessStatus.csv"
         },
+        "tender": {
+          "type": "object",
+          "properties": {
         "procurementMethod": {
           "title": "Procurement method",
           "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
@@ -278,7 +289,14 @@
           "title": "Administrative entity",
           "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
           "$ref": "#/definitions/OrganizationReference"
+        }
+          }
         },
+        "awards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
         "suppliers": {
           "title": "Suppliers",
           "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
@@ -286,13 +304,16 @@
           "items": {
             "$ref": "#/definitions/OrganizationReference"
           }
+        }
+            }
+          }
         },
-        "releaseList": {
+        "releases": {
           "title": "Release index",
           "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarise any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the `releaseList` can be used to manually record a log of changes, with the date and details of variations.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ReleaseListEntry"
+            "$ref": "#/definitions/LinkedRelease"
           }
         },
         "documents": {
@@ -305,7 +326,7 @@
         }
       }
     },
-    "ReleaseListEntry": {
+    "LinkedRelease": {
       "title": "Release",
       "description": "A release of data represents the information known or updated at a particular point in time.",
       "type": "object",
@@ -328,7 +349,7 @@
           "type": "string",
           "format": "date-time"
         },
-        "uri": {
+        "url": {
           "title": "URI",
           "description": "A URI (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
           "type": "string",
