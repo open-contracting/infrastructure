@@ -129,7 +129,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#contractingprocessstatus">ContractingProcessStatus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#documenttype">DocumentType</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#method">Method</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#projectphase">ProjectPhase</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#projectstatus">ProjectStatus</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#projecttype">ProjectType</a></li>
 </ul>
@@ -311,13 +310,13 @@ See <a class="reference external" href="#period">Period</a></p>
 See <a class="reference external" href="#classification">Classification</a></p>
 </td>
 </tr>
-<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,projectType"><span class="pre">projectType</span></code></td>
+<tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,type"><span class="pre">type</span></code></td>
 <td colspan="1">string</td>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Project type</td>
-<td colspan="4">Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the <a class="reference external" href="#projecttype">projectType</a> codelist</td>
+<td colspan="4">Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the <a class="reference external" href="#projecttype">projectType</a> codelist.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,,assetLifetime"><span class="pre">assetLifetime</span></code></td>
 <td colspan="1">object</td>
@@ -325,7 +324,7 @@ See <a class="reference external" href="#classification">Classification</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Asset lifetime</td>
-<td colspan="4"><p class="first">Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.</p>
+<td colspan="4"><p class="first">The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.</p>
 <p class="last">
 
 See <a class="reference external" href="#period">Period</a></p>
@@ -336,7 +335,7 @@ See <a class="reference external" href="#period">Period</a></p>
 <td colspan="1">&nbsp;</td>
 <td colspan="1">&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="1">Project location</td>
+<tr class="row-odd"><td colspan="1">Project locations</td>
 <td colspan="4"><p class="first">Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.</p>
 <p class="last">
 
@@ -568,7 +567,7 @@ See <a class="reference external" href="#value">Value</a></p>
 <td colspan="1">&nbsp;</td>
 </tr>
 <tr class="row-odd"><td colspan="1">Status</td>
-<td colspan="4">The status of this contacting process. Drawn from the <a class="reference external" href="#contractingprocessstatus">contractingProcessStatus codelist</a>. This value may be derived using the business logic set out in the codelist..</td>
+<td colspan="4">The status of this contacting process. Drawn from the <a class="reference external" href="#contractingprocessstatus">contractingProcessStatus codelist</a>. This value may be derived using the business logic set out in the codelist.</td>
 </tr>
 <tr class="row-even"><td colspan="2"><code class="first last docutils literal" id="project-schema.json,/definitions/ContractingProcess,procurementMethod"><span class="pre">procurementMethod</span></code></td>
 <td colspan="1">string</td>
@@ -2209,50 +2208,6 @@ See <a class="reference external" href="#organizationreference">OrganizationRefe
 <td>Direct</td>
 <td>The contract is awarded to a single supplier without competition.</td>
 <td>OCDS Core</td>
-</tr>
-</tbody>
-</table>
-</div></blockquote>
-</div>
-<div class="section" id="projectphase">
-<h3>ProjectPhase<a class="headerlink" href="#projectphase" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><table border="1" class="codelist-table docutils">
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Code</th>
-<th class="head">Title</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>identification</td>
-<td>Identification</td>
-<td>Identification refers to the decision to develop a project within the budget and programme of a project owner (the public entity responsible for executing the budget).</td>
-</tr>
-<tr class="row-odd"><td>preparation</td>
-<td>Preparation</td>
-<td>Preparation covers the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.</td>
-</tr>
-<tr class="row-even"><td>construction</td>
-<td>construction</td>
-<td>Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy.</td>
-</tr>
-<tr class="row-odd"><td>completion</td>
-<td>Completion</td>
-<td>Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.</td>
-</tr>
-<tr class="row-even"><td>completed</td>
-<td>Completed</td>
-<td>Close-out activities have been completed, and this project is no longer active. This project may be displayed as part of a list of archived projects.</td>
-</tr>
-<tr class="row-odd"><td>cancelled</td>
-<td>Cancelled</td>
-<td>This project has been cancelled prior to close-out activities. Cancellation may have taken place at any point after identification.</td>
 </tr>
 </tbody>
 </table>

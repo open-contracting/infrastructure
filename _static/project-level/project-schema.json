@@ -63,9 +63,9 @@
       },
       "uniqueItems": true
     },
-    "projectType": {
+    "type": {
       "title": "Project type",
-      "description": "Does this project primarily relate to construction of a new asset or the rehabilitation or replacement of an existing asset. From the [projectType](#projecttype) codelist",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -77,11 +77,11 @@
     },
     "assetLifetime": {
       "title": "Asset lifetime",
-      "description": "Following the completion of this project, what is the anticipated lifetime of this asset. This may be provided using explicit dates, or an estimated duration.",
+      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
       "$ref": "#/definitions/Period"
     },
     "locations": {
-      "title": "Project location",
+      "title": "Project locations",
       "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
       "type": "array",
       "items": {
@@ -218,7 +218,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist..",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
           "type": "string",
           "enum": [
             "pre-award",
@@ -1329,72 +1329,6 @@
       },
       "patternProperties": {
         "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
-    "Shareholder": {
-      "type": "object",
-      "title": "Shareholder",
-      "description": "A shareholder in an organization.",
-      "required": [
-        "id"
-      ],
-      "properties": {
-        "id": {
-          "title": "Shareholder ID",
-          "description": "A local identifier for this shareholder, unique within this block. This field is used to keep track of multiple revisions of a shareholder through the compilation from release to record mechanism.",
-          "type": [
-            "string"
-          ]
-        },
-        "shareholder": {
-          "title": "Shareholder organization reference.",
-          "description": "An organization reference pointing the entry in the parties section for the shareholding organization.",
-          "$ref": "#/definitions/OrganizationReference"
-        },
-        "shareholding": {
-          "title": "Shareholding",
-          "description": "The percentage of shares held by the shareholder, expressed as a decimal value between 0 and 1.",
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 1
-        },
-        "votingRights": {
-          "title": "Shareholder voting rights",
-          "description": "Specify the type of voting rights associated with the shares held by the shareholder against the [voting rights codelist](http://standard.open-contracting.org/latest/en/schema/codelists/#voting-rights).",
-          "type": [
-            "string",
-            "null"
-          ],
-          "codelist": "votingRights.csv",
-          "openCodelist": false,
-          "enum": [
-            "ordinary",
-            "none",
-            "restricted",
-            "additional",
-            "enhanced",
-            null
-          ]
-        },
-        "votingRightsDetails": {
-          "title": "Shareholder voting rights details",
-          "description": "Detailed information about the shareholder's voting rights. This field should be completed when the shareholder voting rights are restricted, additional or enhanced.",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "notes": {
-          "title": "Shareholder notes",
-          "description": "Additional notes on this shareholder. This field should be used to provide details on any caps on equity transfer, or lock-in arrangements, applicable to this shareholder.",
           "type": [
             "string",
             "null"

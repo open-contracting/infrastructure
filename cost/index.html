@@ -218,8 +218,8 @@ max-width: 1200px;
 <p>In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be <strong>automatically populated</strong> using the OCDS data.</p>
 <!--TODO - Format better into the stages of CoST disclosure --><div class="section" id="project-level">
 <h3>Project level<a class="headerlink" href="#project-level" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="colwidths-given docutils" id="id2">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id13">
+<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="30%" />
@@ -242,12 +242,12 @@ max-width: 1200px;
 <tr class="row-odd"><td>Sector</td>
 <td>Develop a list of sectors relevant to country e.g. housing, transport, energy, water etc.</td>
 <td>Project Level: Publish as <code class="docutils literal"><span class="pre">sector</span></code>, with any additional sectors in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/16">Issue #16</a></td>
+<td><a href="#id1"><span class="problematic" id="id2">`</span></a>Issue</td>
 </tr>
 <tr class="row-even"><td>Subsector</td>
 <td>Develop a subset for each sector e.g. Transport could be subdivided into national highway, local road, railway, port, airport etc.</td>
-<td>Publish in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/16">Issue #16</a></td>
+<td>Project Level: Publish in <code class="docutils literal"><span class="pre">additionalClassifications</span></code>.</td>
+<td><a href="#id3"><span class="problematic" id="id4">`</span></a>Issue</td>
 </tr>
 <tr class="row-odd"><td>Project name</td>
 <td>Specify the project name</td>
@@ -262,7 +262,7 @@ max-width: 1200px;
 <tr class="row-odd"><td>Purpose</td>
 <td>Specify the socio economic purpose of the project</td>
 <td>&nbsp;</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/15">Issue #15</a></td>
+<td><a href="#id5"><span class="problematic" id="id6">`</span></a>Issue</td>
 </tr>
 <tr class="row-even"><td>Project description</td>
 <td>Concise description and details of the project</td>
@@ -301,13 +301,13 @@ max-width: 1200px;
 </tr>
 <tr class="row-odd"><td>Project budget approval date</td>
 <td>Date project budget was authorised</td>
-<td>Projet Level: Publish as <code class="docutils literal"><span class="pre">budget/approvalDate</span></code> and include additional document with <code class="docutils literal"><span class="pre">.type</span></code> of &#8216;budgetApproval&#8217; if required</td>
+<td>Project Level: Publish as <code class="docutils literal"><span class="pre">budget/approvalDate</span></code> and include additional document with <code class="docutils literal"><span class="pre">.type</span></code> of &#8216;budgetApproval&#8217; if required</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Project status (current)</td>
 <td>The current stage of the project. Select from identification, preparation, construction, completion, completed or cancelled.</td>
 <td>Project Level: Publish as <code class="docutils literal"><span class="pre">status</span></code>.</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/10">Issue #10</a></td>
+<td><a href="#id7"><span class="problematic" id="id8">`</span></a>Issue</td>
 </tr>
 <tr class="row-odd"><td>Project completion) cost</td>
 <td>State projected or actual completion cost
@@ -322,7 +322,7 @@ max-width: 1200px;
 </tr>
 <tr class="row-odd"><td>Project Scope at completion (projected)</td>
 <td>Indicate projected or actual scope of project. Aim is to show if the completed project scope differs from the original project scope. Specify main outputs (type, quantity, unit)</td>
-<td>ProjectLevel: Publish free text as <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code> and/or include document with <code class="docutils literal"><span class="pre">.type</span></code> of <code class="docutils literal"><span class="pre">scope</span></code> and dates and descriptions that show this is final scope at completion.</td>
+<td>Project Level: Publish free text as <code class="docutils literal"><span class="pre">completion/finalScopeDetails</span></code> and/or include document with <code class="docutils literal"><span class="pre">.type</span></code> of <code class="docutils literal"><span class="pre">scope</span></code> and dates and descriptions that show this is final scope at completion.</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Reasons for project changes</td>
@@ -340,8 +340,8 @@ max-width: 1200px;
 </div>
 <div class="section" id="process-level">
 <h3>Process level<a class="headerlink" href="#process-level" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="colwidths-given docutils" id="id3">
-<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<table border="1" class="colwidths-given docutils" id="id14">
+<caption><span class="caption-text">Mapping</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="30%" />
@@ -363,28 +363,28 @@ max-width: 1200px;
 </tr>
 <tr class="row-odd"><td>Procuring entity contact details</td>
 <td>Postal and Electronic address</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;procuringEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: record the name and identifier in <cite>contractingProcesses.procuringEntity</cite></td>
+<td>Project Level: Publish the postal address as <code class="docutils literal"><span class="pre">parties.address</span></code> and the electronic address in <code class="docutils literal"><span class="pre">parties.contactPoint</span></code></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Contract administrative entity</td>
 <td>Enter name of the organisation carrying out the contract administrative entity if different from the Procuring Entity</td>
-<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;administativeEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <cite>contractingProcesses.administrativeEntity</cite></td>
+<td>Project Level: Add an entry to <code class="docutils literal"><span class="pre">parties</span></code> with &#8216;administativeEntity&#8217; included in its <code class="docutils literal"><span class="pre">.roles</span></code> | Contracting process: Record the name and identifier in <code class="docutils literal"><span class="pre">contractingProcesses.administrativeEntity</span></code></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>Contract status</td>
 <td>Select from pre-award, active or closed</td>
 <td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.status</span></code> using the processStatus codelist.</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/1">Issue #1</a></td>
+<td><a href="#id9"><span class="problematic" id="id10">`</span></a>Issue</td>
 </tr>
 <tr class="row-even"><td>Procurement process</td>
 <td>Develop a list such as International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework, Direct Award</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.procurementMethodDetails</span></code> and map to <code class="docutils literal"><span class="pre">contractingProcess.procurementMethod</span></code>.</td>
+<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.procurementMethodDetails</span></code> and map to <code class="docutils literal"><span class="pre">contractingProcesses.procurementMethod</span></code>.</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>Contract type</td>
 <td>Develop a list such as Design, Supervision, Design &amp; Supervision, Design &amp; Build, Construction</td>
-<td>Contract process: Add one or more values to the <code class="docutils literal"><span class="pre">contractingProcess.focus</span></code> array. (e.g. [&#8216;design&#8217;,&#8217;build&#8217;] for a design and build contract).</td>
-<td><a class="reference external" href="https://github.com/open-contracting/infrastructure/issues/11">Issue #11</a></td>
+<td>Contracting process: Add one or more values to the <code class="docutils literal"><span class="pre">contractingProcesses.focus</span></code> array. (e.g. [&#8216;design&#8217;,&#8217;build&#8217;] for a design and build contract).</td>
+<td><a href="#id11"><span class="problematic" id="id12">`</span></a>Issue</td>
 </tr>
 <tr class="row-even"><td>Number of firms tendering</td>
 <td>Number of firms who submit a tender</td>
@@ -398,7 +398,7 @@ max-width: 1200px;
 </tr>
 <tr class="row-even"><td>Contract title</td>
 <td>The formal name of the contract</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.title</span></code></td>
+<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.title</span></code></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>Contract firm(s)</td>
@@ -408,17 +408,17 @@ max-width: 1200px;
 </tr>
 <tr class="row-even"><td>Contract price</td>
 <td>Currency and price at contract award</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractValue</span></code></td>
+<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.contractValue</span></code></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>Contract scope of work</td>
 <td>Main outputs from the contract e.g. detailed design, supervision, project management and or type, quantity, unit for construction</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.description</span></code>. Additionally detailed documentation may be provided as documents within linked releases.</td>
+<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.description</span></code>. Additionally detailed documentation may be provided as documents within linked releases.</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>Contract start date and contract period (duration)</td>
 <td>Enter dates and Number of weeks from contract start date to (anticipated) completion date</td>
-<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcess.contractPeriod</span></code></td>
+<td>Contracting process: Publish as <code class="docutils literal"><span class="pre">contractingProcesses.contractPeriod</span></code></td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>Variation to contract price</td>
