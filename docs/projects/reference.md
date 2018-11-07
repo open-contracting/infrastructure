@@ -259,6 +259,8 @@ Selected codelists are displayed below.
 
 ```
 
+Projects with status 'completed' may be displayed as part of a list of archived projects.
+
 ### ProjectType
 
 ```eval_rst
