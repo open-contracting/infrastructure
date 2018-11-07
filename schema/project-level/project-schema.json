@@ -54,6 +54,11 @@
       "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
       "type": "string"
     },
+    "purpose": {
+      "title": "Project purpose",
+      "description": "The socioeconomic purpose of this project.",
+      "type": "string"
+    },
     "additionalClassifications": {
       "title": "Additional classifications",
       "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist such as UN COFOG (Classification of the Functions of Government).",
