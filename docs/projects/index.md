@@ -43,15 +43,15 @@ The Project Level Data Specification is structured in three parts:
 
 Project level data includes summary information on project identification, preparation and completion.
 
-### Contracting summaries
+### Contracting process summaries
 
-The `contractingProcesses` array may be used to provide a summary of each of the contracting processes that is used to support preparation and implementation.
+The `contractingProcesses` array may be used to provide a summary of each of the contracting processes that is used to support preparation and implementation in the `summary` section.
 
 Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
 ### Contracting process details
 
-The `contractingProcesses/releaseList` array may be used to record each update from a contracting process, and any variations.
+The `contractingProcesses/releases` array may be used to record each update from a contracting process, and any variations.
 
 Where OCDS data is available, the contracting details section should act as an index of (cached) OCDS releases, with explanations of any variations detected when comparing releases.
 

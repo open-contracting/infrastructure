@@ -75,9 +75,9 @@
       "openCodelist": false,
       "codelist": "projectType.csv"
     },
-    "assetLifetime":{
-      "title":"Asset lifetime",
-      "description":"The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
+    "assetLifetime": {
+      "title": "Asset lifetime",
+      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
       "$ref": "#/definitions/Period"
     },
     "locations": {
@@ -180,8 +180,26 @@
   "definitions": {
     "ContractingProcess": {
       "title": "Contracting process",
-      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases. Where OCDS data is available, most ContractingProcess summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
+      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
       "type": "object",
+      "properties": {
+        "summary": {
+          "$ref": "#/definitions/ContractingProcessSummary"
+        },
+        "releases": {
+          "title": "Linked releases",
+          "description": "The information known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarize any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the this field can be used to manually record a log of changes, with the date and details of variations.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LinkedRelease"
+          }
+        }
+      }
+    },
+    "ContractingProcessSummary": {
+      "type": "object",
+      "title": "Contracting process summary",
+      "description": "Summary information about a contracting process. Summary information may be manually entered, or where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
@@ -227,27 +245,60 @@
           ],
           "codelist": "contractingProcessStatus.csv"
         },
-        "procurementMethod": {
-          "title": "Procurement method",
-          "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
-          "type": "string",
-          "enum": [
-            "open",
-            "selective",
-            "limited",
-            "direct"
-          ],
-          "codelist": "method.csv"
+        "tender": {
+          "type": "object",
+          "properties": {
+            "procurementMethod": {
+              "title": "Procurement method",
+              "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
+              "type": "string",
+              "enum": [
+                "open",
+                "selective",
+                "limited",
+                "direct"
+              ],
+              "codelist": "method.csv"
+            },
+            "procurementMethodDetails": {
+              "title": "Procurement method details",
+              "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
+              "type": "string"
+            },
+            "costEstimate": {
+              "title": "Cost estimate",
+              "description": "This should be the pre-tender estimated value of the contracting process. This may be taken from the `tender.value` field of the most recent release where `tender.status` was 'planning', or may be entered manually.",
+              "$ref": "#/definitions/Value"
+            },
+            "numberOfTenderers": {
+              "title": "Number of tenderers",
+              "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
+              "type": "number"
+            },
+            "contractPeriod": {
+              "title": "Contract period",
+              "description": "The anticipated or confirmed duration of this contract should be provided. This may be derived from the most recent of `tender.contractPeriod`, `awards.contactPeriod` or `contracts.period` in linked OCDS data where available.",
+              "$ref": "#/definitions/Period"
+            },
+            "procuringEntity": {
+              "title": "Procuring entity",
+              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
+              "$ref": "#/definitions/OrganizationReference"
+            },
+            "administrativeEntity": {
+              "title": "Administrative entity",
+              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
+              "$ref": "#/definitions/OrganizationReference"
+            }
+          }
         },
-        "procurementMethodDetails": {
-          "title": "Procurement method details",
-          "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
-          "type": "string"
-        },
-        "costEstimate": {
-          "title": "Cost estimate",
-          "description": "This should be the pre-tender estimated value of the contracting process. This may be taken from the `tender.value` field of the most recent release where `tender.status` was 'planning', or may be entered manually.",
-          "$ref": "#/definitions/Value"
+        "suppliers": {
+          "title": "Suppliers",
+          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/OrganizationReference"
+          }
         },
         "contractValue": {
           "title": "Contract value",
@@ -259,42 +310,6 @@
           "description": "This should be provided when the contracting process is complete. This may be derived from the sum of `contract.implementation.transactions` values in linked OCDS data where available. In other cases, it may need to be identified and entered manually based on other project documentation.",
           "$ref": "#/definitions/Value"
         },
-        "numberOfTenderers": {
-          "title": "Number of tenderers",
-          "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
-          "type": "number"
-        },
-        "contractPeriod": {
-          "title": "Contract period",
-          "description": "The anticipated or confirmed duration of this contract should be provided. This may be derived from the most recent of `tender.contractPeriod`, `awards.contactPeriod` or `contracts.period` in linked OCDS data where available.",
-          "$ref": "#/definitions/Period"
-        },
-        "procuringEntity": {
-          "title": "Procuring entity",
-          "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
-          "$ref": "#/definitions/OrganizationReference"
-        },
-        "administrativeEntity": {
-          "title": "Administrative entity",
-          "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
-          "$ref": "#/definitions/OrganizationReference"
-        },
-        "suppliers": {
-          "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/OrganizationReference"
-          }
-        },
-        "releaseList": {
-          "title": "Release index",
-          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarise any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the `releaseList` can be used to manually record a log of changes, with the date and details of variations.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ReleaseListEntry"
-          }
-        },
         "documents": {
           "title": "Documents",
           "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
@@ -305,7 +320,7 @@
         }
       }
     },
-    "ReleaseListEntry": {
+    "LinkedRelease": {
       "title": "Release",
       "description": "A release of data represents the information known or updated at a particular point in time.",
       "type": "object",
@@ -328,9 +343,9 @@
           "type": "string",
           "format": "date-time"
         },
-        "uri": {
-          "title": "URI",
-          "description": "A URI (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
+        "url": {
+          "title": "URL",
+          "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
           "type": "string",
           "format": "uri"
         },

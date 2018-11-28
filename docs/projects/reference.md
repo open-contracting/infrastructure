@@ -25,18 +25,18 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
     :pointer: /definitions/ContractingProcess
-    :collapse: releaseList,documents
+    :collapse: releases,documents
 
 ```
 
 
-## ReleaseListEntry
+## LinkedRelease
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
-    :pointer: /definitions/ReleaseListEntry
+    :pointer: /definitions/LinkedRelease
     :collapse: releaseList
 
 ```
