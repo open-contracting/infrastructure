@@ -206,7 +206,7 @@
           "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an OCID may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
           "type": "string"
         },
-        "id": {
+        "externalReference": {
           "title": "External reference",
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
           "type": "string"
