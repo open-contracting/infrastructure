@@ -193,6 +193,14 @@
           "items": {
             "$ref": "#/definitions/LinkedRelease"
           }
+        },
+        "variations": {
+          "title": "Variations",
+          "description": "If this release represents a change in the duration, price, scope or other significant features of the contracting process, details should be logged here.\n\n The presence of changes may be detected by comparing values in the latest release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a variation is detected, the contracting process summary information should also be updated.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Variation"
+          }
         }
       }
     },
@@ -348,33 +356,6 @@
           "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
           "type": "string",
           "format": "uri"
-        },
-        "variations": {
-          "title": "Variations",
-          "description": "If this release represents a change in the duration, price, scope or other significant features of the contracting process, details should be logged here.\n\n The presence of changes may be detected by comparing values in the latest release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a variation is detected, the contracting process summary information should also be updated.",
-          "type": "object",
-          "properties": {
-            "duration": {
-              "title": "Duration",
-              "description": "Describe any change to the contact duration. This may be identified based on changes in `award.contractPeriod` or `contract.period`, or updates to milestones and payments that appear to exceed the anticipated `contract.period`.",
-              "$ref": "#/definitions/Variation"
-            },
-            "price": {
-              "title": "Price",
-              "description": "Describe any changes to the contact price. This may be identified based on changes to the sum of `contract.value` (watching for cases where a contract value is varied, or an additional extension contract is signed as part of this process), or by monitoring `contracts.implementation.transactions`.",
-              "$ref": "#/definitions/Variation"
-            },
-            "scope": {
-              "title": "Scope",
-              "description": "Describe any changes to the contract scope. This may be identified by comparing key details from `tender`, `awards` and `contracts`, or by monitoring relevant documents.",
-              "$ref": "#/definitions/Variation"
-            },
-            "other": {
-              "title": "Other",
-              "description": "Describe any other significant variations here.",
-              "$ref": "#/definitions/Variation"
-            }
-          }
         }
       }
     },
@@ -383,14 +364,48 @@
       "description": "Contains a structured description of any changes, along with a free text justification.",
       "type": "object",
       "properties": {
+        "date": {
+          "title": "Date",
+          "description": "The date this variation was recorded. Where the variation relates to an OCDS release, this should be filled from the releated `release.date`.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
         "description": {
           "title": "Description",
           "description": "Details of the variation. This may be free text, or may be generated automatically and provide a structured description of the change.",
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "reason": {
           "title": "Reason",
-          "description": "A summary of the reasons which have led to this variation between originally planned and final scope, period or value."
+          "description": "A summary of the reasons which have led to this variation between originally planned and final scope, period or value.",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "title": "Type",
+          "description": "A value from the variationType codelist, indicating whether the variation relates to the duration, price, scope or other aspect of the contract.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "codelist": "variationType.csv",
+          "openCodelist": true
+        },
+        "releaseID": {
+          "title": "Release ID",
+          "description": "The identifier for the OCDS release this variation relates to. The referenced release should appear in the list of linked releases for this contracting process.",
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     },
