@@ -344,8 +344,8 @@
           "format": "date-time"
         },
         "url": {
-          "title": "URI",
-          "description": "A URI (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
+          "title": "URL",
+          "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
           "type": "string",
           "format": "uri"
         },
