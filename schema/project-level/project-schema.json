@@ -364,6 +364,14 @@
       "description": "Contains a structured description of any changes, along with a free text justification.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifer for this variation.",
+          "type": [
+            "string",
+            "null"
+          ]          
+        },
         "date": {
           "title": "Date",
           "description": "The date this variation was recorded. Where the variation relates to an OCDS release, this should be filled from the releated `release.date`.",
