@@ -1,3 +1,5 @@
 .ve/
 build/
 **pycache**
+/docs/_static/process-level
+/docs/_static/project-level
