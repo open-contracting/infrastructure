@@ -211,8 +211,8 @@
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
           "type": "string"
         },
-        "focus": {
-          "title": "Focus",
+        "nature": {
+          "title": "Nature",
           "description": "This array field should record whether this contract is related to design, build or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
           "type": "array",
           "items": {
