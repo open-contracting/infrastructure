@@ -13,7 +13,7 @@ The [CoST approach](http://infrastructuretransparency.org/our-approach/) is base
 
 * **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account. 
 
-* **Multi-stakeholder working** - each CoST national programme is managed by stakeholder group including government, private sector and civil society.
+* **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
 * **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account. 
 
@@ -27,7 +27,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
     .. markdown:: 
 
-        There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). The former provides a framework identify *categories of information* that should be disclosed. The later describe *specific fields* and how they should be structured as data. 
+        There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data. 
 
         The Project Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard. 
 
