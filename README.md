@@ -52,6 +52,8 @@ This repository contains a draft profile for the Open Contracting Data Standard,
 
 The documentation is built using sphinx, building on the [standard profile template](https://github.com/open-contracting/standard_profile_template).
 
+**Note:** Python 3.6 is required to build the documentation
+
 To build the documentation, first set-up a virtual environment with:
 
 ```
