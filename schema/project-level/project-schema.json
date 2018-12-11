@@ -253,6 +253,8 @@
           "codelist": "contractingProcessStatus.csv"
         },
         "tender": {
+          "title": "Tender",
+          "description": "The activities undertaken in order to enter into a contract.",
           "type": "object",
           "properties": {
             "procurementMethod": {
