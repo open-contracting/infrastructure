@@ -72,7 +72,7 @@ So that your project information can be compared with information from others, a
     :class: tip
 
     .. markdown::
-        (1) Map you existing data structures onto the Project Level Data Specification and project a JSON file for each project your system has information on.
+        (1) Map your existing data structures onto the Project Level Data Specification and create a JSON file for each project your system has information on.
 
         (2) Publish this JSON file (as a static file or via an API) at a stable URL, such as:
 
