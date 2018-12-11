@@ -37,7 +37,7 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
     :pointer: /definitions/LinkedRelease
-    :collapse: releaseList
+    :collapse: releases
 
 ```
 
