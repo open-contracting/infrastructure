@@ -72,23 +72,9 @@ So that your project information can be compared with information from others, a
     :class: tip
 
     .. markdown::
-        (1) Map your existing data structures onto the Project Level Data Specification and create a JSON file for each project your system has information on.
 
-        (2) Publish this JSON file (as a static file or via an API) at a stable URL, such as:
+      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing-from-portal.md) for a step by step guide. 
 
-        > http://{your website}/opendata/projects/{project-id}.json
-
-        (3) Map any contracting data you record to the [Open Contracting Data Standard](http://standard.open-contracting.org/) and publish each new release of data as a JSON file at a stable URL such as:
-
-        > http://{your website}/opendata/contracting/{ocid}/{release-id}.json
-
-        (4) Make sure your project level files include links in the `contractingProcess/releaseList` to each related OCDS file.
-
-        (5) Provide a regularly updated bulk file of all your data for download
-
-        (e.g. a zip archive of all the folders and files under `/opendata/` if you used the path structures suggested in the example above)
-
-        (6) Provide a page on your website with details of how users can access this data.
 ```
 
 ### If you are designing a new infrastructure transparency portal...
