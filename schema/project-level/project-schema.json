@@ -363,14 +363,18 @@
       "title": "Variation",
       "description": "Contains a structured description of any changes, along with a free text justification.",
       "type": "object",
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
           "title": "Identifier",
           "description": "A local identifer for this variation.",
           "type": [
             "string",
-            "null"
-          ]          
+            "integer"
+          ],
+          "minLength": 1
         },
         "date": {
           "title": "Date",
