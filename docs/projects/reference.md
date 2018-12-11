@@ -164,6 +164,19 @@ For each document the following structured information may be provided.
 
 ```
 
+### Variation
+
+For each variation, the following structured information may be provided.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Variation
+    :include:
+    :collapse:
+
+```
+
 
 ### Value
 
