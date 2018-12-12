@@ -33,8 +33,6 @@
       "title": "Status",
       "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
       "type": "string",
-      "codelist": "projectStatus.csv",
-      "openCodelist": false,
       "enum": [
         "identification",
         "preparation",
@@ -42,7 +40,9 @@
         "completion",
         "completed",
         "cancelled"
-      ]
+      ],
+      "codelist": "projectStatus.csv",
+      "openCodelist": false
     },
     "period": {
       "title": "Project period",
@@ -72,8 +72,8 @@
         "rehabilitation",
         "replacement"
       ],
-      "openCodelist": false,
-      "codelist": "projectType.csv"
+      "codelist": "projectType.csv",
+      "openCodelist": false
     },
     "assetLifetime": {
       "title": "Asset lifetime",
@@ -217,18 +217,16 @@
           "type": "array",
           "items": {
             "type": [
-              "string",
-              "null"
+              "string"
             ],
             "enum": [
               "design",
               "construction",
-              "supervision",
-              null
-            ],
-            "codelist": "contractNature.csv",
-            "openCodelist": false
-          }
+              "supervision"
+            ]
+          },
+          "codelist": "contractNature.csv",
+          "openCodelist": false
         },
         "title": {
           "title": "Title",
@@ -249,7 +247,8 @@
             "active",
             "closed"
           ],
-          "codelist": "contractingProcessStatus.csv"
+          "codelist": "contractingProcessStatus.csv",
+          "openCodelist": false
         },
         "tender": {
           "title": "Tender",
@@ -266,7 +265,8 @@
                 "limited",
                 "direct"
               ],
-              "codelist": "method.csv"
+              "codelist": "method.csv",
+              "openCodelist": false
             },
             "procurementMethodDetails": {
               "title": "Procurement method details",
@@ -342,6 +342,30 @@
           "title": "Release tag",
           "description": "One or more values from the [releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the related OCDS `release.tag` where available. ",
           "type": "string",
+          "enum": [
+            "planning",
+            "planningUpdate",
+            "tender",
+            "tenderAmendment",
+            "tenderUpdate",
+            "tenderCancellation",
+            "award",
+            "awardUpdate",
+            "awardCancellation",
+            "contract",
+            "contractUpdate",
+            "contractAmendment",
+            "implementation",
+            "implementationUpdate",
+            "contractTermination",
+            "compiled",
+            "qualification",
+            "qualificationUpdate",
+            "qualificationAmendment",
+            "qualificationCancellation",
+            "shortlist",
+            "shortlistUpdate"
+          ],
           "codelist": "releaseTag.csv",
           "openCodelist": false
         },
@@ -509,8 +533,7 @@
               "title": "Type",
               "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.",
               "type": [
-                "string",
-                "null"
+                "string"
               ],
               "enum": [
                 "Point",
@@ -518,8 +541,7 @@
                 "LineString",
                 "MultiLineString",
                 "Polygon",
-                "MultiPolygon",
-                null
+                "MultiPolygon"
               ],
               "codelist": "geometryType.csv",
               "openCodelist": false
