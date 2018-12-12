@@ -67,6 +67,6 @@ Based on this description, the following pseudo code checks a folder containing 
 ```
 for each json file in folder
   load json
-    if top-level "title" field exists in json and its value is not an empty string
+  if top-level "title" field exists in json and its value is not an empty string
     increment project name count by 1    
 ```
