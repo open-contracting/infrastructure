@@ -174,7 +174,7 @@ def setup(app):
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
 
     project_dir = basedir / 'schema' / 'project-level'
-    project_build_dir = basedir / 'docs' / '_static' / 'process-level'
+    project_build_dir = basedir / 'docs' / '_static' / 'project-level'
     language_dir = basedir / 'build' / language
 
     translate([

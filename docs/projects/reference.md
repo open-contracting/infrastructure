@@ -25,10 +25,21 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
     :pointer: /definitions/ContractingProcess
-    :collapse: releases,documents
+    :collapse: releases,summary
 
 ```
 
+## ContractingProcessSummary
+
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :include:
+    :pointer: /definitions/ContractingProcessSummary
+    :collapse: documents
+
+```
 
 ## LinkedRelease
 
@@ -37,7 +48,6 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
     :pointer: /definitions/LinkedRelease
-    :collapse: releaseList
 
 ```
 
@@ -196,7 +206,7 @@ All values should be published along with their currency using the following str
 
 A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
 
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting/ocds_budget_and_spend_extension).
+See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
 
 ```eval_rst
 
