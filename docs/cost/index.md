@@ -69,4 +69,4 @@ Specifically:
 
 * Plans, reports and assessments may be included in the project or contracting process level `documents` blocks, or may be published within individual OCDS releases.
 
-* The [budget_breakdown](https://github.com/open-contracting/ocds_budget_breakdown_extension) and [budget_and_spend](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension) extensions can be used to provide guidance on modelling detailed financial information.
+* The [budget_breakdown](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) and [budget_and_spend](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension) extensions can be used to provide guidance on modelling detailed financial information.
