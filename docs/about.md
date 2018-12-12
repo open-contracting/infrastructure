@@ -23,7 +23,7 @@ A lot of the information identified by CoST may be captured through contracting 
 
 When open contracting principles and practices are put in place, data about these contracting processes, and documents associated with them, should be openly available in standard formats.
 
-By linking existing open contracting disclosure (and ensuring key fields and documents are provided) with project level information, new opportunities for data-driven infrastructure project monitoring are unlocked.
+By linking existing open contracting disclosure (and ensuring key fields and documents are provided) with project-level information, new opportunities for data-driven infrastructure project monitoring are unlocked.
 
 ## Theory of Change and workplan
 

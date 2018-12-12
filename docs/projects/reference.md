@@ -6,9 +6,9 @@
 
 # Specification Reference
 
-The tables below describe each of the fields and objects in the Project Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
+The tables below describe each of the fields and objects in the Project-Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
 
-## Project level
+## Project-level
 
 ```eval_rst
 

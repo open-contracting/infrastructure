@@ -99,11 +99,11 @@ This may be possible by downloading and filtering spreadsheets of the data, or m
 
 ```
 
-#### (4) Populate project level data
+#### (4) Populate project-level data
 
 If your analysis of OCDS data reveals infrastructure projects to monitor, you can:
 
-* Use the information from a contracting process data to start populating a **project level disclosure**;
+* Use the information from a contracting process data to start populating a **project-level disclosure**;
 
 <!--TODO: ADD LINK TO READ MORE HERE ABOUT POPULATING PROJECT LEVEL DATA SCHEMA FROM OCDS RELEASES-->
 
@@ -138,11 +138,11 @@ Keep a copy each time the data changes, and if you see variations to:
 
 check whether an adequate explanation has been given for these.
 
-You can use the Project Level Data Specification to record each time a change is detected, and the reasons that are given for the change.
+You can use the Project-Level Data Specification to record each time a change is detected, and the reasons that are given for the change.
 
 #### (6) Add project completion data
 
-When there is evidence that a project has reached completion, it is important to further update the **project level disclosure**.
+When there is evidence that a project has reached completion, it is important to further update the **project-level disclosure**.
 
 If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible variations that are in need to explanation.
 
@@ -160,6 +160,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [Project Level Data Specification](../project/index.md) provides a common data structure for recording project-level information;
+* The [Project-Level Data Specification](../project/index.md) provides a common data structure for recording project-level information;
 
-* The [Open Contracting for Infrastructure - CoST Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project level, and project:contracting data.
+* The [Open Contracting for Infrastructure - CoST Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level, and project:contracting data.

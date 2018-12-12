@@ -29,7 +29,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
         There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data. 
 
-        The Project Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard. 
+        The Project-Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard. 
 
 ```
 
@@ -37,13 +37,13 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 <!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
 
-The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project Level Data Specification](../projects/index.md) and contracting process information embedded within the project level data.
+The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md) and contracting process information embedded within the project-level data.
 
-In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be **automatically populated** using the OCDS data. 
+In cases where OCDS data is available, many of the contracting process fields within a project-level data file can also be **automatically populated** using the OCDS data. 
 
 <!--TODO - Format better into the stages of CoST disclosure -->
 
-### Project level
+### Project-level
 
 ```eval_rst
 .. csv-table-no-translate:: Mapping
