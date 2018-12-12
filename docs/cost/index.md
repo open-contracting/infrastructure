@@ -41,7 +41,7 @@ The following mapping tables describe how each element of the CoST Infrastructur
 
 In cases where OCDS data is available, many of the contracting process fields within a project-level data file can also be **automatically populated** using the OCDS data.
 
-### Project-level
+### Project level
 
 ```eval_rst
 .. csv-table-no-translate:: Mapping

@@ -28,7 +28,7 @@ Check that the data you plan to analyse is in OCDS format
 
     .. markdown::
 
-      You can use the [OCDS Data Review Tool](http://standard.open-contacting.org/review) to check whether your data is in the correct format
+      You can use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check whether your data is in the correct format
 
 ```
 
@@ -160,4 +160,4 @@ When building an integrated tool that integrates OCDS data into infrastructure p
 
 * The [Project-Level Data Specification](../project/index.md) provides a common data structure for recording project-level information;
 
-* The [Open Contracting for Infrastructure - CoST Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level, and project:contracting data.
+* The [Open Contracting for Infrastructure - CoST Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

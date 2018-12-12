@@ -20,7 +20,7 @@ The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which 
 
 First, check that the disclosures you want to analyse are in the correct format. If they are not in the correct format, you will need to convert the data.
 
-#### Project-level data
+#### Project level data
 
 Check whether the project-level data is published using the [project-level data specification](../projects/index.md)
 
@@ -68,5 +68,5 @@ Based on this description, the following pseudo code checks a folder containing 
 for each json file in folder
   load json
     if top-level "title" field exists in json and its value is not an empty string
-      increment project name count by 1    
+    increment project name count by 1    
 ```
