@@ -30,17 +30,17 @@ Check whether the project level data is published using the [project level data 
 
     .. markdown::
 
-      You can use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that whether your data is published in the correct format.
+      You can use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that whether your data is in the correct format.
 
 ```
 
-If the data isn’t published using the project level data specification, use the [mapping template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
+If the data isn’t published using the project level data specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
 
 <!-- TODO: replace link to google sheets with link to OCP website resources section -->
 
 #### Contracting data
 
-Check whether the contracting data is published using OCDS (Tip: You can use the OCDS data review tool for this).
+Check whether the contracting data is published using OCDS (Tip: You can use the OCDS Data Review tool for this).
 
 ```eval_rst
 .. admonition:: Tip
@@ -56,7 +56,7 @@ If the contracting data is published using OCDS then use it to populate the cont
 
 <!-- TODO: update link once input mapping added to documentation -->
 
-If the data isn’t published using OCDS, use the [mapping template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes section](../projects/reference.md#contractingprocess) of the project level data specification and add the data to the OC for Infrastructure JSON files for each project.
+If the data isn’t published using OCDS, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes section](../projects/reference.md#contractingprocess) of the project level data specification and add the data to the OC for Infrastructure JSON files for each project.
 
 <!-- TODO: replace link to google sheets with link to OCP website resources section -->
 
@@ -72,7 +72,7 @@ Based on this description, the following pseudo code checks a folder containing 
 
 ```
 for each json file in folder
-    load json
-if top-level "title" field exists in json and its value is not an empty string
-        increment project name count by 1    
+  load json
+    if top-level "title" field exists in json and its value is not an empty string
+      increment project name count by 1    
 ```

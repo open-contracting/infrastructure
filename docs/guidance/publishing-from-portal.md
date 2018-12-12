@@ -42,7 +42,7 @@ Map existing data structures to the [project level data specification](../projec
 
     .. markdown::
 
-      The [field level mapping template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping.
+      The [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping.
 
 ```
 
@@ -63,7 +63,7 @@ If you collect detailed data on contracting processes, refer to the [OCDS implem
 
 Create a project level JSON file for each project your system has information on and use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that the files are structurally correct against the project level data specification.
 
-If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS data review tool](http://standard.open-contracting.org/review/) to check your OCDS releases.
+If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
 
@@ -82,7 +82,7 @@ Make sure your project level files include links in the `contractingProcess/rele
 To make your data easier to access, consider providing:
 
 * A regularly updated bulk file of all your data for download
-* Flattened (spreadsheet or csv) representations of your data
+* Flattened (spreadsheet or CSV) representations of your data
 * A page on your website with details of how users can access your data
 
 ```eval_rst
@@ -91,7 +91,7 @@ To make your data easier to access, consider providing:
 
     .. markdown::
 
-      [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used to convert between JSON and spreadsheet/csv format data.
+      [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used to convert between JSON and spreadsheet/CSV format data.
 
 ```
 
