@@ -46,8 +46,6 @@ Map existing data structures to the [project-level data specification](../projec
 
 ```
 
-<!-- TODO: Update link to mapping template -->
-
 Your mapping might identify:
 
 * **Gaps in your data** where data in the project-level data specification is not currently collected or disclosed in your system. Use the specification as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.

@@ -36,8 +36,6 @@ Check whether the project-level data is published using the [project-level data 
 
 If the data isn’t published using the project-level data specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
 
-<!-- TODO: replace link to google sheets with link to OCP website resources section -->
-
 #### Contracting data
 
 Check whether the contracting data is published using OCDS (Tip: You can use the OCDS Data Review tool for this).
@@ -57,8 +55,6 @@ If the contracting data is published using OCDS then use it to populate the cont
 <!-- TODO: update link once input mapping added to documentation -->
 
 If the data isn’t published using OCDS, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes section](../projects/reference.md#contractingprocess) of the project-level data specification and add the data to the OC for Infrastructure JSON files for each project.
-
-<!-- TODO: replace link to google sheets with link to OCP website resources section -->
 
 ### (2) Check which elements of IDS are disclosed
 
