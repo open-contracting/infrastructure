@@ -73,7 +73,7 @@ So that your project information can be compared with information from others, a
 
     .. markdown::
 
-      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing-from-portal.md) for a step by step guide. 
+      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing-from-portal.md) for a step by step guide.
 
 ```
 
@@ -98,8 +98,6 @@ Some of the data structures, such as the organisation identifier structure, may 
         Data can be stored directly in the JSON structure described by the schema of the specification **or** it can be stored in custom data structures, and only converted to the specification's structure when importing or exporting data.
 
 ```
-<!--TODO - Consider worked example of a data entry form -->
-
 ### If you are designing other data collection tools...
 
 ... the Project-Level Data Specification provides definitions and codelists that can be used to collect consistent data.
