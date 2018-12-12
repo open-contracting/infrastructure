@@ -105,8 +105,6 @@ If your analysis of OCDS data reveals infrastructure projects to monitor, you ca
 
 * Use the information from a contracting process data to start populating a **project-level disclosure**;
 
-<!--TODO: ADD LINK TO READ MORE HERE ABOUT POPULATING PROJECT LEVEL DATA SCHEMA FROM OCDS RELEASES-->
-
 * Search for **related contracts** in order to link any other design, construction or monitoring contracts to this project;
 
 ```eval_rst
