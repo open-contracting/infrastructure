@@ -533,7 +533,8 @@
               "title": "Type",
               "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.",
               "type": [
-                "string"
+                "string",
+                "null"
               ],
               "enum": [
                 "Point",
@@ -541,7 +542,8 @@
                 "LineString",
                 "MultiLineString",
                 "Polygon",
-                "MultiPolygon"
+                "MultiPolygon",
+                null
               ],
               "codelist": "geometryType.csv",
               "openCodelist": false
