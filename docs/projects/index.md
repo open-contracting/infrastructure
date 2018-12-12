@@ -82,7 +82,7 @@ So that your project information can be compared with information from others, a
 
         > http://{your website}/opendata/contracting/{ocid}/{release-id}.json
 
-        (4) Make sure your project level files include links in the `contractingProcess/releaseList` to each related OCDS file.
+        (4) Make sure your project level files include links in the `contractingProcess/releases` list to each related OCDS file.
 
         (5) Provide a regularly updated bulk file of all your data for download
 
