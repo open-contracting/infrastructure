@@ -393,8 +393,8 @@
             "null"
           ]
         },
-        "reason": {
-          "title": "Reason",
+        "rationale": {
+          "title": "Rationale",
           "description": "A summary of the reasons which have led to this variation between originally planned and final scope, period or value.",
           "type": [
             "string",
