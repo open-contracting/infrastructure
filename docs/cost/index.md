@@ -11,37 +11,35 @@ The [CoST approach](http://infrastructuretransparency.org/our-approach/) is base
 
 * **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be disclosed at key stages of an infrastructure project cycle.
 
-* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account. 
+* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
 
 * **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
-* **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account. 
+* **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account.
 
 The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritised different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
 
-You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/). 
+You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/).
 
 ```eval_rst
 .. admonition:: Frameworks and standards
     :class: Note
 
-    .. markdown:: 
+    .. markdown::
 
-        There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data. 
+        There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
 
-        The Project Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard. 
+        The Project-Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
 
 ```
 
-## Mapping against the IDS 
+## Mapping against the IDS
 
 <!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
 
-The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project Level Data Specification](../projects/index.md) and contracting process information embedded within the project level data.
+The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md) and contracting process information embedded within the project-level data.
 
-In cases where OCDS data is available, many of the contracting process fields within a project level data file can also be **automatically populated** using the OCDS data. 
-
-<!--TODO - Format better into the stages of CoST disclosure -->
+In cases where OCDS data is available, many of the contracting process fields within a project-level data file can also be **automatically populated** using the OCDS data.
 
 ### Project level
 
@@ -67,9 +65,8 @@ The CoST IDS also sets out a number of data points under the heading of 'reactiv
 
 Specifically:
 
-* Details of a individuals involved at the project or contract level can be included in the ``parties`` array with a suitable role. Role is an open codelist. As individuals will not have an 'organization identifier' a locally defined identifier may be used instead. 
+* Details of a individuals involved at the project or contract level can be included in the ``parties`` array with a suitable role. Role is an open codelist. As individuals will not have an 'organization identifier' a locally defined identifier may be used instead.
 
-* Plans, reports and assessments may be included in the project or contracting process level `documents` blocks, or may be published within individual OCDS releases. 
+* Plans, reports and assessments may be included in the project or contracting process level `documents` blocks, or may be published within individual OCDS releases.
 
 * The [budget_breakdown](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) and [budget_and_spend](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension) extensions can be used to provide guidance on modelling detailed financial information.
-
