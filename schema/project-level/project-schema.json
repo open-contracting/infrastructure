@@ -188,18 +188,10 @@
         },
         "releases": {
           "title": "Release index",
-          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarise any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, the `releaseList` can be used to manually record a log of changes, with the date and details of variations.",
+          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. This section provides space to record a link to each available release about this contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/LinkedRelease"
-          }
-        },
-        "variations": {
-          "title": "Variations",
-          "description": "If this release represents a change in the duration, price, scope or other significant features of the contracting process, details should be logged here.\n\n The presence of changes may be detected by comparing values in the latest release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a variation is detected, the contracting process summary information should also be updated.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Variation"
           }
         }
       }
@@ -207,7 +199,7 @@
     "Summary": {
       "type": "object",
       "title": "Summary",
-      "description": "Summary information about a contracting process. Summary information may be manually entered, or where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations.",
+      "description": "Summary information about a contracting process and any variations to it.\n\n Summary information can be manually entered and the `variations` list can be used to manually record a log of changes, with the date and details of each variation.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and variations may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `variations`.",
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
@@ -324,6 +316,14 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
+          }
+        },
+        "variations": {
+          "title": "Variations",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n The presence of changes may be detected by comparing values in the latest related OCDS release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a variation is detected, the contracting process summary information should also be updated.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Variation"
           }
         }
       }
