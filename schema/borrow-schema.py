@@ -35,6 +35,12 @@ def coerce_to_list(data, key):
     return item
 
 
+def remove_null(value):
+    if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
+        value['type'].remove('null')
+    if 'enum' in value and None in value['enum']:
+        value['enum'].remove(None)
+
 def copy_def(definition, replacements=None):
     value = deepcopy(ppp_schema['definitions'][definition])
     schema['definitions'][definition] = value
@@ -52,29 +58,19 @@ def remove_null_and_pattern_properties(schema, pointer=''):
 
     for key, value in schema['properties'].items():
         new_pointer = '{}/{}'.format(pointer, key)
+
         prop_type = coerce_to_list(value, 'type')
-
-        if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
-            value['type'].remove('null')
-        if 'enum' in value and None in value['enum']:
-            value['enum'].remove(None)
-
-        # For example, if $ref is used.
-        if not prop_type:
-            continue
+        remove_null(value)
 
         if 'object' in prop_type:
             remove_null_and_pattern_properties(value, pointer=new_pointer)
         elif 'array' in prop_type:
             items_type = coerce_to_list(value['items'], 'type')
+            remove_null(value['items'])
 
-            if 'type' in value['items'] and 'null' in value['items']['type']:
-                value['items']['type'].remove('null')
-            if 'enum' in value['items'] and None in value['items']['enum']:
-                value['items']['enum'].remove(None)
-
+            # Recursing into arrays of arrays or arrays of objecs hasn't been implemented.
             if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
-                raise Exception('{}/items has unexpected type {}'.format(new_pointer, items_type))
+                raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
 
     for key, value in schema.get('definitions', {}).items():
         remove_null_and_pattern_properties(value, pointer='{}/{}'.format(pointer, key))
