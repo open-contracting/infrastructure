@@ -1,4 +1,4 @@
 Code,Title,Description
 duration,Duration,"This variation describes a change to the contact duration. This may be identified based on changes in `award.contractPeriod` or `contract.period`, or updates to milestones and payments that appear to exceed the anticipated `contract.period`."
-price,Price,"This variation describes a change to the contract price. This may be identified based on changes to the sum of `contract.value` (watching for cases where a contract value is varied, or an additional extension contract is signed as part of this process), or by monitoring `contracts.implementation.transactions`."
+value,Value,"This variation describes a change to the contract value. This may be identified based on changes to the sum of `contract.value` (watching for cases where a contract value is varied, or an additional extension contract is signed as part of this process), or by monitoring `contracts.implementation.transactions`."
 scope,Scope,"This variation describes a change to the contract scope. This may be identified by comparing key details from `tender`, `awards` and `contracts`, or by monitoring relevant documents."

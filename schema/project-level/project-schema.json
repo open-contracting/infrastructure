@@ -403,7 +403,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "A value from the variationType codelist, indicating whether the variation relates to the duration, price, scope or other aspect of the contract.",
+          "description": "A value from the variationType codelist, indicating whether the variation relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string",
             "null"
