@@ -283,11 +283,6 @@
               "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
               "type": "number"
             },
-            "contractPeriod": {
-              "title": "Contract period",
-              "description": "The anticipated or confirmed duration of this contract should be provided. This may be derived from the most recent of `tender.contractPeriod`, `awards.contactPeriod` or `contracts.period` in linked OCDS data where available.",
-              "$ref": "#/definitions/Period"
-            },
             "procuringEntity": {
               "title": "Procuring entity",
               "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
@@ -310,8 +305,13 @@
         },
         "contractValue": {
           "title": "Contract value",
-          "description": "This should be the price agreed for the work covered by this contracting process. Where linked OCDS data is available this may by the sum of `awards.value`, or, if contract values are available, the sum of `contracts.value`. (In cases of a single award and single contract, it may not be necessary to sum across values).",
+          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `variations`.",
           "$ref": "#/definitions/Value"
+        },
+        "contractPeriod": {
+          "title": "Contract period",
+          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `variations`.",
+          "$ref": "#/definitions/Period"
         },
         "finalValue": {
           "title": "Final value",
