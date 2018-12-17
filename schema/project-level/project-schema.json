@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
-  "title": "Infrastructure Project Level Data Schema ",
+  "title": "Infrastructure Project-Level Data Schema ",
   "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
   "required": [
@@ -15,7 +15,7 @@
     },
     "updated": {
       "title": "Last updated",
-      "description": "The date on which project level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project level data has been updated as a result, or to provide explanations or justifications for those changes.",
+      "description": "The date on which project-level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project-level data has been updated as a result, or to provide explanations or justifications for those changes.",
       "type": "string",
       "format": "date-time"
     },
@@ -132,7 +132,7 @@
     },
     "contractingProcesses": {
       "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history (in the release list) with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/ContractingProcess"
@@ -180,15 +180,15 @@
   "definitions": {
     "ContractingProcess": {
       "title": "Contracting process",
-      "description": "Within the project level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
+      "description": "Within the project-level data specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
       "type": "object",
       "properties": {
         "summary": {
-          "$ref": "#/definitions/Summary"
+          "$ref": "#/definitions/ContractingProcessSummary"
         },
         "releases": {
-          "title": "Release index",
-          "description": "The information that known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. This section provides space to record a link to each available release about this contracting process.",
+          "title": "Linked releases",
+          "description": "The information known about a contracting process changes over time, both as new information becomes available, and as changes are made (such as amendments to scope and value). In the OCDS, each new update of information is known as a 'release'. \n\n This section provides space to record a link to each available release, and to summarize any variations that occur in that release. Variations may be identified by comparing a new release to previous releases to check for relevant changes.\n\n In cases where OCDS data is not available, this field can be used to manually record a log of changes, with the date and details of variations.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/LinkedRelease"
@@ -196,7 +196,7 @@
         }
       }
     },
-    "Summary": {
+    "ContractingProcessSummary": {
       "type": "object",
       "title": "Summary",
       "description": "Summary information about a contracting process and any variations to it.\n\n Summary information can be manually entered and the `variations` list can be used to manually record a log of changes, with the date and details of each variation.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and variations may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `variations`.",
@@ -211,17 +211,23 @@
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
           "type": "string"
         },
-        "focus": {
-          "title": "Focus",
-          "description": "This array field should record whether this contract is related to design, build or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+        "nature": {
+          "title": "Nature",
+          "description": "This array field should record whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
           "type": "array",
           "items": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "enum": [
               "design",
-              "build",
-              "supervision"
-            ]
+              "construction",
+              "supervision",
+              null
+            ],
+            "codelist": "contractNature.csv",
+            "openCodelist": false
           }
         },
         "title": {
@@ -246,6 +252,8 @@
           "codelist": "contractingProcessStatus.csv"
         },
         "tender": {
+          "title": "Tender",
+          "description": "The activities undertaken in order to enter into a contract.",
           "type": "object",
           "properties": {
             "procurementMethod": {
@@ -275,26 +283,21 @@
               "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
               "type": "number"
             },
-            "contractPeriod": {
-              "title": "Contract period",
-              "description": "The anticipated or confirmed duration of this contract should be provided. This may be derived from the most recent of `tender.contractPeriod`, `awards.contactPeriod` or `contracts.period` in linked OCDS data where available.",
-              "$ref": "#/definitions/Period"
-            },
             "procuringEntity": {
               "title": "Procuring entity",
-              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
+              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
               "$ref": "#/definitions/OrganizationReference"
             },
             "administrativeEntity": {
               "title": "Administrative entity",
-              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
+              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
               "$ref": "#/definitions/OrganizationReference"
             }
           }
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
+          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -302,8 +305,13 @@
         },
         "contractValue": {
           "title": "Contract value",
-          "description": "This should be the price agreed for the work covered by this contracting process. Where linked OCDS data is available this may by the sum of `awards.value`, or, if contract values are available, the sum of `contracts.value`. (In cases of a single award and single contract, it may not be necessary to sum across values).",
+          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `variations`.",
           "$ref": "#/definitions/Value"
+        },
+        "contractPeriod": {
+          "title": "Contract period",
+          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `variations`.",
+          "$ref": "#/definitions/Period"
         },
         "finalValue": {
           "title": "Final value",
