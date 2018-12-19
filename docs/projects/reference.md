@@ -292,3 +292,14 @@ Selected codelists are displayed below.
       :file: ../../build/current_lang/codelists/projectType.csv
 
 ```
+
+### VariationType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/variationType.csv
+
+```
