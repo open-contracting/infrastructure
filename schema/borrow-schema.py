@@ -41,6 +41,7 @@ def remove_null(value):
     if 'enum' in value and None in value['enum']:
         value['enum'].remove(None)
 
+
 def copy_def(definition, replacements=None):
     value = deepcopy(ppp_schema['definitions'][definition])
     schema['definitions'][definition] = value
@@ -74,6 +75,7 @@ def remove_null_and_pattern_properties(schema, pointer=''):
 
     for key, value in schema.get('definitions', {}).items():
         remove_null_and_pattern_properties(value, pointer='{}/{}'.format(pointer, key))
+
 
 def compare(actual, infra_list, ocds_list, prefix, suffix):
     actual = set(actual)
