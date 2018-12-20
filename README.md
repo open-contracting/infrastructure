@@ -26,7 +26,7 @@ In both phases, a lot of the information required may be captured through contra
 
 When open contracting principles and practices are put in place, data about these contracting processes, and documents associated with them, should be openly available in standard formats.
 
-By linking existing open contracting disclosure (and ensuring key fields and documents are provided) with project level information, new opportunities for data-driven infrastructure project monitoring are unlocked.
+By linking existing open contracting disclosure (and ensuring key fields and documents are provided) with project-level information, new opportunities for data-driven infrastructure project monitoring are unlocked.
 
 ## Theory of Change and workplan
 
@@ -46,7 +46,7 @@ The technical development workplan consists of the following four components:
 
 ## In this repository
 
-This repository contains a draft profile for the Open Contracting Data Standard, along with schema for a Project Level Data Specification that assists in meeting the requirements of the CoST Infrastructure Disclosure Standard.
+This repository contains a draft profile for the Open Contracting Data Standard, along with schema for a Project-Level Data Specification that assists in meeting the requirements of the CoST Infrastructure Disclosure Standard.
 
 ### Getting started
 

@@ -6,9 +6,9 @@
 
 # Specification Reference
 
-The tables below describe each of the fields and objects in the Project Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
+The tables below describe each of the fields and objects in the Project-Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
 
-## Project level
+## Project
 
 ```eval_rst
 
@@ -290,5 +290,16 @@ Selected codelists are displayed below.
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/projectType.csv
+
+```
+
+### VariationType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/variationType.csv
 
 ```
