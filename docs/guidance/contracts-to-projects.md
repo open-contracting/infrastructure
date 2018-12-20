@@ -160,4 +160,4 @@ When building an integrated tool that integrates OCDS data into infrastructure p
 
 * The [Project-Level Data Specification](../project/index.md) provides a common data structure for recording project-level information;
 
-* The [Open Contracting for Infrastructure - CoST Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.
+* The [Open Contracting for Infrastructure - CoST IDS & OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

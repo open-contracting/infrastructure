@@ -3,7 +3,7 @@
 max-width: 1200px;
 }</style>
 
-# CoST - IDS Mapping
+# CoST IDS & OCDS Mapping
 
 CoST – the Infrastructure Transparency Initiative (CoST) is the leading global initiative improving transparency and accountability in public infrastructure.
 
@@ -33,30 +33,73 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 ```
 
-## Mapping against the IDS
+## Mapping to IDS and from OCDS
 
 <!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
 
-The following mapping tables describe how each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md) and contracting process information embedded within the project-level data.
+The following mapping tables describe:
 
-In cases where OCDS data is available, many of the contracting process fields within a project-level data file can also be **automatically populated** using the OCDS data.
+* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md), in the 'Mapping to OC for Infrastructure' column.
+
+* How existing OCDS data can be used to populate project-level and contracting process summary data, in the 'Mapping from OCDS' column.
+
+```eval_rst
+.. admonition:: Mapping from OCDS
+    :class: Note
+
+    .. markdown::
+
+        Some mappings use fields from [OCDS extensions](http://standard.open-contracting.org/latest/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
+
+```
 
 ### Project level
 
+#### Project identification
+
 ```eval_rst
-.. csv-table-no-translate:: Mapping
+.. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 30 40 10
-   :file: ../../build/current_lang/project-level.csv
+   :widths: 20 20 30 30 10
+   :file: ../../build/current_lang/project-level-identification.csv
+```
+
+#### Project preparation
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 30 30 10
+   :file: ../../build/current_lang/project-level-preparation.csv
+```
+
+#### Project completion
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 30 30 10
+   :file: ../../build/current_lang/project-level-completion.csv
 ```
 
 ### Process level
 
+#### Procurement
+
 ```eval_rst
-.. csv-table-no-translate:: Mapping
+.. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 30 40 10
-   :file: ../../build/current_lang/process-level.csv
+   :widths: 20 20 30 30 10
+   :file: ../../build/current_lang/process-level-procurement.csv
+```
+
+#### Implementation
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 30 30 10
+   :file: ../../build/current_lang/process-level-implementation.csv
 ```
 
 ### Reactive disclosures
