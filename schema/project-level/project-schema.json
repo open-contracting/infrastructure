@@ -95,6 +95,8 @@
       "type": "object",
       "properties": {
         "amount": {
+          "title": "Amount",
+          "description": "The projected costs or allocated budget for the project.",
           "$ref": "#/definitions/Value"
         },
         "approvalDate": {
@@ -184,6 +186,8 @@
       "type": "object",
       "properties": {
         "summary": {
+          "title": "Summary",
+          "description": "Summary information about a contracting process, including a log of changes over time.",
           "$ref": "#/definitions/ContractingProcessSummary"
         },
         "releases": {
