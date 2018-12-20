@@ -19,10 +19,10 @@ This Open Contracting for Infrastructure site will show you how to:
 * Make use of data in infrastructure monitoring.
 
 ```eval_rst
-.. admonition:: Alpha Release
+.. admonition:: Alpha-2 Release
     :class: Warning
 
-    This is the first draft release of 'Open Contracting for Infrastructure'.
+    This is the second draft release of 'Open Contracting for Infrastructure'.
 
     It should be considered work in progress, and any elements of the schemas and guidance presented here are subject to change.
 
