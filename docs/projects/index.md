@@ -31,7 +31,7 @@ The preparation and implementation stages may be delivered using contractors. Th
 
 Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts.
 
-It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
+It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
 
 ## How is the Project-Level Data Specification structured?
 
