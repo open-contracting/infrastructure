@@ -429,22 +429,22 @@
         },
         "oldContractValue": {
           "title": "Old contract value",
-          "description": "Contract value before the modification, taking into account any prior modifications",
+          "description": "Contract value before the modification, taking into account any prior modifications.",
           "$ref": "#/definitions/Value"
         },
         "newContractValue": {
           "title": "New contract value",
-          "description": "Contract value after the modification",
+          "description": "Contract value after the modification.",
           "$ref": "#/definitions/Value"
         },
         "oldContractPeriod": {
           "title": "Old contract period",
-          "description": "Contract period before the modification, taking into account any prior modifications",
+          "description": "Contract period before the modification, taking into account any prior modifications.",
           "$ref": "#/definitions/Period"
         },
         "newContractPeriod": {
           "title": "New contract period",
-          "description": "Contract period after the modification",
+          "description": "Contract period after the modification.",
           "$ref": "#/definitions/Period"
         }
       }
