@@ -28,6 +28,20 @@ codelists_dir = os.path.join(schema_dir, 'codelists')
 ppp_schema = requests.get(base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
 
 
+def coerce_to_list(data, key):
+    item = data.get(key, [])
+    if isinstance(item, str):
+        return [item]
+    return item
+
+
+def remove_null(value):
+    if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
+        value['type'].remove('null')
+    if 'enum' in value and None in value['enum']:
+        value['enum'].remove(None)
+
+
 def copy_def(definition, replacements=None):
     value = deepcopy(ppp_schema['definitions'][definition])
     schema['definitions'][definition] = value
@@ -39,6 +53,30 @@ def copy_def(definition, replacements=None):
             value[leaf] = replacement(value[leaf])
 
 
+# Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
+def remove_null_and_pattern_properties(schema, pointer=''):
+    schema.pop('patternProperties', None)
+
+    for key, value in schema['properties'].items():
+        new_pointer = '{}/{}'.format(pointer, key)
+
+        prop_type = coerce_to_list(value, 'type')
+        remove_null(value)
+
+        if 'object' in prop_type:
+            remove_null_and_pattern_properties(value, pointer=new_pointer)
+        elif 'array' in prop_type:
+            items_type = coerce_to_list(value['items'], 'type')
+            remove_null(value['items'])
+
+            # Recursing into arrays of arrays or arrays of objecs hasn't been implemented.
+            if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
+                raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
+
+    for key, value in schema.get('definitions', {}).items():
+        remove_null_and_pattern_properties(value, pointer='{}/{}'.format(pointer, key))
+
+
 def compare(actual, infra_list, ocds_list, prefix, suffix):
     actual = set(actual)
 
@@ -46,19 +84,13 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
     added = actual - infra_list - ocds_list
     if added:
         sys.exit('{prefix} has unexpected {items}: add to infra_{suffix} or ocds_{suffix} in borrow-schema.py?'.format(
-            items=', '.join(added),
-            prefix=prefix,
-            suffix=suffix,
-        ))
+            items=', '.join(added), prefix=prefix, suffix=suffix))
 
     # An editor might have removed an infrastructure codelist, without updating this script.
     removed = infra_list - actual
     if removed:
         sys.exit('{prefix} is missing {items}: remove from infra_{suffix} in borrow-schema.py?'.format(
-            items=', '.join(removed),
-            prefix=prefix,
-            suffix=suffix,
-        ))
+            items=', '.join(removed), prefix=prefix, suffix=suffix))
 
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
@@ -70,6 +102,7 @@ infra_codelists = {
     'contractNature.csv',
     'projectStatus.csv',
     'projectType.csv',
+    'variationType.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -85,10 +118,8 @@ compare(os.listdir(codelists_dir), infra_codelists, ocds_codelists,
 
 infra_definitions = {
     'ContractingProcess',
-    # Similar to OCDS release, and includes direction on how to populate from OCDS data.
-    'ContractingProcessSummary',
-    # Similar to linked release in OCDS record package.
-    'LinkedRelease',
+    'ContractingProcessSummary',  # Similar to OCDS release, and includes direction on how to populate from OCDS data.
+    'LinkedRelease',  # Similar to linked release in OCDS record package.
     'Variation',
 }
 ocds_definitions = {
@@ -169,6 +200,7 @@ schema['definitions']['Document']['properties']['url']['description'] = "This sh
 
 copy_def('Identifier')
 
+remove_null_and_pattern_properties(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
     json.dump(schema, f, ensure_ascii=False, indent=2, separators=(',', ': '))

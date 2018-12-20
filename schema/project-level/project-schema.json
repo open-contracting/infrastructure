@@ -33,8 +33,6 @@
       "title": "Status",
       "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
       "type": "string",
-      "codelist": "projectStatus.csv",
-      "openCodelist": false,
       "enum": [
         "identification",
         "preparation",
@@ -42,7 +40,9 @@
         "completion",
         "completed",
         "cancelled"
-      ]
+      ],
+      "codelist": "projectStatus.csv",
+      "openCodelist": false
     },
     "period": {
       "title": "Project period",
@@ -72,8 +72,8 @@
         "rehabilitation",
         "replacement"
       ],
-      "openCodelist": false,
-      "codelist": "projectType.csv"
+      "codelist": "projectType.csv",
+      "openCodelist": false
     },
     "assetLifetime": {
       "title": "Asset lifetime",
@@ -95,6 +95,8 @@
       "type": "object",
       "properties": {
         "amount": {
+          "title": "Amount",
+          "description": "The projected costs or allocated budget for the project.",
           "$ref": "#/definitions/Value"
         },
         "approvalDate": {
@@ -184,6 +186,8 @@
       "type": "object",
       "properties": {
         "summary": {
+          "title": "Summary",
+          "description": "Summary information about a contracting process, including a log of changes over time.",
           "$ref": "#/definitions/ContractingProcessSummary"
         },
         "releases": {
@@ -217,18 +221,16 @@
           "type": "array",
           "items": {
             "type": [
-              "string",
-              "null"
+              "string"
             ],
             "enum": [
               "design",
               "construction",
-              "supervision",
-              null
-            ],
-            "codelist": "contractNature.csv",
-            "openCodelist": false
-          }
+              "supervision"
+            ]
+          },
+          "codelist": "contractNature.csv",
+          "openCodelist": false
         },
         "title": {
           "title": "Title",
@@ -249,7 +251,8 @@
             "active",
             "closed"
           ],
-          "codelist": "contractingProcessStatus.csv"
+          "codelist": "contractingProcessStatus.csv",
+          "openCodelist": false
         },
         "tender": {
           "title": "Tender",
@@ -266,7 +269,8 @@
                 "limited",
                 "direct"
               ],
-              "codelist": "method.csv"
+              "codelist": "method.csv",
+              "openCodelist": false
             },
             "procurementMethodDetails": {
               "title": "Procurement method details",
@@ -350,6 +354,30 @@
           "title": "Release tag",
           "description": "One or more values from the [releaseTag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the related OCDS `release.tag` where available. ",
           "type": "string",
+          "enum": [
+            "planning",
+            "planningUpdate",
+            "tender",
+            "tenderAmendment",
+            "tenderUpdate",
+            "tenderCancellation",
+            "award",
+            "awardUpdate",
+            "awardCancellation",
+            "contract",
+            "contractUpdate",
+            "contractAmendment",
+            "implementation",
+            "implementationUpdate",
+            "contractTermination",
+            "compiled",
+            "qualification",
+            "qualificationUpdate",
+            "qualificationAmendment",
+            "qualificationCancellation",
+            "shortlist",
+            "shortlistUpdate"
+          ],
           "codelist": "releaseTag.csv",
           "openCodelist": false
         },
@@ -388,8 +416,7 @@
           "title": "Date",
           "description": "The date this variation was recorded. Where the variation relates to an OCDS release, this should be filled from the releated `release.date`.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "date-time"
         },
@@ -397,24 +424,21 @@
           "title": "Description",
           "description": "Details of the variation. This may be free text, or may be generated automatically and provide a structured description of the change.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "rationale": {
           "title": "Rationale",
           "description": "A summary of the reasons which have led to this variation between originally planned and final scope, period or value.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "type": {
           "title": "Type",
           "description": "A value from the variationType codelist, indicating whether the variation relates to the duration, value, scope or other aspect of the contract.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "codelist": "variationType.csv",
           "openCodelist": true
@@ -423,8 +447,7 @@
           "title": "Release ID",
           "description": "The identifier for the OCDS release this variation relates to. The referenced release should appear in the list of linked releases for this contracting process.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "oldContractValue": {
@@ -458,8 +481,7 @@
           "title": "Start date",
           "description": "The start date for the period. When known, a precise start date must always be provided.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "date-time"
         },
@@ -467,8 +489,7 @@
           "title": "End date",
           "description": "The end date for the period. When known, a precise end date must always be provided.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "date-time"
         },
@@ -477,16 +498,14 @@
           "format": "date-time",
           "title": "Maximum extent",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "durationInDays": {
           "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
-            "integer",
-            "null"
+            "integer"
           ]
         }
       }
@@ -500,8 +519,7 @@
           "title": "Scheme",
           "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "id": {
@@ -509,24 +527,14 @@
           "description": "The classification code drawn from the selected scheme.",
           "type": [
             "string",
-            "integer",
-            "null"
+            "integer"
           ]
         },
         "description": {
           "title": "Description",
           "description": "A textual description or title for the code.",
           "type": [
-            "string",
-            "null"
-          ]
-        }
-      },
-      "patternProperties": {
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
+            "string"
           ]
         }
       }
@@ -540,14 +548,12 @@
           "title": "Description",
           "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "geometry": {
           "type": [
-            "object",
-            "null"
+            "object"
           ],
           "title": "Geometry",
           "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using latitude and longitude values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
@@ -556,8 +562,7 @@
               "title": "Type",
               "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.",
               "type": [
-                "string",
-                "null"
+                "string"
               ],
               "enum": [
                 "Point",
@@ -565,8 +570,7 @@
                 "LineString",
                 "MultiLineString",
                 "Polygon",
-                "MultiPolygon",
-                null
+                "MultiPolygon"
               ],
               "codelist": "geometryType.csv",
               "openCodelist": false
@@ -575,8 +579,7 @@
               "title": "Coordinates",
               "description": "The relevant array of points, e.g. [latitude,longitude], or nested array, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection",
               "type": [
-                "array",
-                "null"
+                "array"
               ],
               "items": {
                 "type": [
@@ -589,8 +592,7 @@
         },
         "gazetteer": {
           "type": [
-            "object",
-            "null"
+            "object"
           ],
           "title": "Gazetteer",
           "description": "A gazetteer is a geographical index or directory. The specific gazetteer used should be specified in scheme, and one or more codes from that gazetteer used in identifier.",
@@ -599,8 +601,7 @@
               "title": "Gazetteer scheme",
               "description": "The entry of the selected gazetteer in the gazetteers codelist. The codelist provides details of services, where available, that can resolve a gazetteer entry to provide location names.",
               "type": [
-                "string",
-                "null"
+                "string"
               ],
               "codelist": "locationGazetteers.csv",
               "openCodelist": true
@@ -609,8 +610,7 @@
               "title": "Identifiers",
               "description": "An array of one or more codes drawn from the gazetteer indicated in scheme.",
               "type": [
-                "array",
-                "null"
+                "array"
               ],
               "items": {
                 "type": [
@@ -622,8 +622,7 @@
         },
         "uri": {
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "title": "URI",
           "description": "A URI to a further description of the activity location. This may be a human readable document with information on the location, or a machine-readable description of the location."
@@ -644,16 +643,14 @@
           "title": "Amount",
           "description": "Amount as a number.",
           "type": [
-            "number",
-            "null"
+            "number"
           ]
         },
         "currency": {
           "title": "Currency",
           "description": "The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "codelist": "currency.csv",
           "openCodelist": false,
@@ -957,8 +954,7 @@
             "ZWD",
             "ZWL",
             "ZWN",
-            "ZWR",
-            null
+            "ZWR"
           ]
         }
       }
@@ -972,8 +968,7 @@
           "title": "Common name",
           "description": "A common name for this organization or other participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "id": {
@@ -1012,8 +1007,7 @@
           "title": "Party roles",
           "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
-            "array",
-            "null"
+            "array"
           ],
           "items": {
             "type": "string"
@@ -1021,22 +1015,13 @@
           "codelist": "partyRole.csv",
           "openCodelist": true
         }
-      },
-      "patternProperties": {
-        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
       }
     },
     "OrganizationReference": {
       "properties": {
         "name": {
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The name of the party being referenced. This must match the name of an entry in the parties section.",
           "title": "Organization name",
@@ -1063,50 +1048,37 @@
         "streetAddress": {
           "title": "Street address",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The street address. For example, 1600 Amphitheatre Pkwy."
         },
         "locality": {
           "title": "Locality",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The locality. For example, Mountain View."
         },
         "region": {
           "title": "Region",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The region. For example, CA."
         },
         "postalCode": {
           "title": "Postal code",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The postal code. For example, 94043."
         },
         "countryName": {
           "title": "Country name",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The country name. For example, United States."
-        }
-      },
-      "patternProperties": {
-        "^(countryName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1118,51 +1090,38 @@
         "name": {
           "title": "Name",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The name of the contact person, department, or contact point, for correspondence relating to this project."
         },
         "email": {
           "title": "Email",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The e-mail address of the contact point/person."
         },
         "telephone": {
           "title": "Telephone",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The telephone number of the contact point/person. This should include the international dialing code."
         },
         "faxNumber": {
           "title": "Fax number",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "The fax number of the contact point/person. This should include the international dialing code."
         },
         "url": {
           "title": "URL",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "description": "A web address for the contact point/person.",
           "format": "uri"
-        }
-      },
-      "patternProperties": {
-        "^(name_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1188,8 +1147,7 @@
           "description": "A short free text description of this budget entry.",
           "mergeStrategy": "ocdsVersion",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "amount": {
@@ -1202,8 +1160,7 @@
           "description": "A URI pointing directly to a machine-readable information about this budget entry.",
           "mergeStrategy": "ocdsVersion",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "uri"
         },
@@ -1240,8 +1197,7 @@
           "title": "Document type",
           "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "codelist": "documentType.csv",
           "openCodelist": true
@@ -1250,24 +1206,21 @@
           "title": "Title",
           "description": "The document title.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "description": {
           "title": "Description",
           "description": "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. ",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "url": {
           "title": "URL",
           "description": "This should be a direct link to the document or web page where the information described by the current documentType exists.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "uri"
         },
@@ -1275,8 +1228,7 @@
           "title": "Date published",
           "description": "The date on which the document was first published. This is particularly important for legally important documents such as notices of a tender.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "date-time"
         },
@@ -1284,8 +1236,7 @@
           "title": "Date modified",
           "description": "Date that the document was last modified",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "date-time"
         },
@@ -1293,24 +1244,21 @@
           "title": "Format",
           "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "language": {
           "title": "Language",
           "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "pageStart": {
           "title": "Page start",
           "description": "When the information referenced exists within a large document, indicate the first page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "mergeStrategy": "ocdsVersion"
         },
@@ -1318,8 +1266,7 @@
           "title": "Page end",
           "description": "When the information referenced exists within a large document, indicate the last page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "mergeStrategy": "ocdsVersion"
         },
@@ -1327,8 +1274,7 @@
           "title": "Access details",
           "description": "A description of any special arrangements required to access this document. This may include a requirement to register for document access, a fee to be paid, or the location where documents can be inspected.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "mergeStrategy": "ocdsVersion"
         },
@@ -1336,24 +1282,9 @@
           "title": "Author",
           "description": "The name of the author of these documents. Include the name of individuals and/or organizations responsible. For example, when a technical specification was written by a consultant, include the name and organization of the consultant.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "mergeStrategy": "ocdsVersion"
-        }
-      },
-      "patternProperties": {
-        "^(title_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "^(description_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     },
@@ -1366,8 +1297,7 @@
           "title": "Scheme",
           "description": "Organization identifiers should be drawn from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is drawn. This value should be drawn from the [Organization Identifier Scheme](http://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "id": {
@@ -1375,34 +1305,23 @@
           "description": "The identifier of the organization in the selected scheme.",
           "type": [
             "string",
-            "integer",
-            "null"
+            "integer"
           ]
         },
         "legalName": {
           "title": "Legal Name",
           "description": "The legally registered name of the organization.",
           "type": [
-            "string",
-            "null"
+            "string"
           ]
         },
         "uri": {
           "title": "URI",
           "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
           "type": [
-            "string",
-            "null"
+            "string"
           ],
           "format": "uri"
-        }
-      },
-      "patternProperties": {
-        "^(legalName_(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+)))$": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       }
     }
