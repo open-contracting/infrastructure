@@ -56,7 +56,7 @@ If the data isn’t published using OCDS, use the [OC for Infrastructure Field-L
 
 ### (2) Check which elements of IDS are disclosed
 
-Use the [OC for Infrastructure - IDS mapping](../cost/index.md) to construct queries to determine which elements of the IDS are provided in the data.
+Use the [CoST IDS Mapping](../cost/index.md) to construct queries to determine which elements of the IDS are provided in the data.
 
 For example, the CoST IDS mapping describes how the project name element of the IDS should be disclosed:
 
