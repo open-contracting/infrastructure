@@ -35,7 +35,7 @@ It may be possible to [discover and populate some data about infrastructure proj
 
 ## How is the Project-Level Data Specification structured?
 
-![The project-level data specification is structured in three parts](../../_static/images/diagram-project-level-data-spec.png)
+![The Project-Level Data Specification is structured in three parts](../../_static/images/diagram-project-level-data-spec.png)
 
 The Project-Level Data Specification is structured in three parts:
 
@@ -57,7 +57,7 @@ Where OCDS data is available, the `contractingProcesses/releases` array should a
 
 Explanations of any variations detected when comparing releases should be provided in the `variations` section of the contracting process summary.
 
-## How can I use the project-level data specification?
+## How can I use the Project-Level Data Specification?
 
 ### If you have an existing infrastructure transparency portal...
 

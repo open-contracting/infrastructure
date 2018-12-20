@@ -22,7 +22,7 @@ First, check that the disclosures you want to analyse are in the correct format.
 
 #### Project level data
 
-Check whether the project-level data is published using the [project-level data specification](../projects/index.md)
+Check whether the project-level data is published using the [Project-Level Data Specification](../projects/index.md)
 
 ```eval_rst
 .. admonition:: Tip
@@ -34,7 +34,7 @@ Check whether the project-level data is published using the [project-level data 
 
 ```
 
-If the data isn’t published using the project-level data specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
+If the data isn’t published using the Project-Level Data Specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
 
 #### Contracting data
 
@@ -52,7 +52,7 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
 If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](contracts-to-projects.md).
 
-If the data isn’t published using OCDS, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the contracting processes section of the [project-level data specification](../projects/reference.md) and add the data to the OC for Infrastructure JSON files for each project.
+If the data isn’t published using OCDS, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the contracting processes section of the [Project-Level Data Specification](../projects/reference.md) and add the data to the OC for Infrastructure JSON files for each project.
 
 ### (2) Check which elements of IDS are disclosed
 
