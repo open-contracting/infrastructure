@@ -49,7 +49,7 @@ The following mapping tables describe:
 
     .. markdown::
 
-        Some mappings use fields from [OCDS extensions](http://standard.open-contracting.org/latest/en/extensions/), in these cases the name of the extension is noted in brackets and, where possible, alternative mappings are provided which use only fields from the core OCDS schema.
+        Some mappings use fields from [OCDS extensions](http://standard.open-contracting.org/latest/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
 
 ```
 
