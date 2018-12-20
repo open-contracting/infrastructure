@@ -22,7 +22,7 @@ First, check that the disclosures you want to analyse are in the correct format.
 
 #### Project level data
 
-Check whether the project-level data is published using the [project-level data specification](../projects/index.md)
+Check whether the project-level data is published using the [Project-Level Data Specification](../projects/index.md)
 
 ```eval_rst
 .. admonition:: Tip
@@ -34,7 +34,7 @@ Check whether the project-level data is published using the [project-level data 
 
 ```
 
-If the data isn’t published using the project-level data specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
+If the data isn’t published using the Project-Level Data Specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
 
 #### Contracting data
 
