@@ -8,13 +8,13 @@ Trillions of dollars are spent every year on infrastructure, and estimates sugge
 
 This Open Contracting for Infrastructure site will show you how to:
 
-* Publish standardised contracting data for major infrastructure projects using the **open contracting data standard (OCDS)**;
+* Publish standardised contracting data for major infrastructure projects using the **Open Contracting Data Standard (OCDS)**;
 
 * Extract [infrastructure contracting data from existing procurement portals](guidance/contracts-to-projects.md);
 
 * Connect contract and project-level information using the [project-level schema](projects/index.md).
 
-* Assess published data against the [CoST Infrastructure Data Standard](cost/index.md);
+* Assess published data [against the CoST Infrastructure Data Standard](guidance/assess-against-ids.md);
 
 * Make use of data in infrastructure monitoring.
 
