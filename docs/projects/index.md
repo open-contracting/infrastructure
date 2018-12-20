@@ -49,13 +49,13 @@ The `contractingProcesses` array may be used to provide a summary of each of the
 
 Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
+The `variations` section should be used to record information on changes to the contracting process, either linked to OCDS releases or recorded manually.
+
 ### Contracting process details
 
-The `contractingProcesses/releases` array may be used to record each update from a contracting process, and any variations.
+Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of (cached) OCDS releases, recording each update to a contracting process.
 
-Where OCDS data is available, the contracting details section should act as an index of (cached) OCDS releases, with explanations of any variations detected when comparing releases.
-
-Where OCDS data is not available, the contracting details section can be used to manually record variation information.
+Explanations of any variations detected when comparing releases should be provided in the `variations` section of the contracting process summary.
 
 ## How can I use the project-level data specification?
 
