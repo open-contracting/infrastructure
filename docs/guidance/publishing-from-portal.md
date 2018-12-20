@@ -50,7 +50,7 @@ Your mapping might identify:
 
 * **Gaps in your data** where data in the project-level data specification is not currently collected or disclosed in your system. Use the specification as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.
 
-* **Gaps in the data specification** where data is collected by your system but doesn’t map to the specification. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../projects/schema.md#extending-the-schema) for information on including additional fields in your data.
+* **Gaps in the data specification** where data is collected by your system but doesn’t map to the specification. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../projects/schema.md) for information on including additional fields in your data.
 
 
 ### (2b) Map detailed contracting process data
