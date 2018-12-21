@@ -1,0 +1,6 @@
+plugins:
+  - jekyll-redirect-from
+
+title: Open Contracting for Infrastructure
+redirect_to:
+  - http://standard.open-contracting.org/infrastructure
