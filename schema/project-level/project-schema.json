@@ -134,7 +134,7 @@
     },
     "contractingProcesses": {
       "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major variations in contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major modifications to contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/ContractingProcess"
@@ -203,7 +203,7 @@
     "ContractingProcessSummary": {
       "type": "object",
       "title": "Summary",
-      "description": "Summary information about a contracting process and any variations to it.\n\n Summary information can be manually entered and the `variations` list can be used to manually record a log of changes, with the date and details of each variation.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and variations may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `variations`.",
+      "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and modifications may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
@@ -309,12 +309,12 @@
         },
         "contractValue": {
           "title": "Contract value",
-          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `variations`.",
+          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Value"
         },
         "contractPeriod": {
           "title": "Contract period",
-          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `variations`.",
+          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Period"
         },
         "finalValue": {
@@ -330,12 +330,12 @@
             "$ref": "#/definitions/Document"
           }
         },
-        "variations": {
-          "title": "Variations",
-          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n The presence of changes may be detected by comparing values in the latest related OCDS release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a variation is detected, the contracting process summary information should also be updated.",
+        "modifications": {
+          "title": "Modifications",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n The presence of changes may be detected by comparing values in the latest related OCDS release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a modification is detected, the contracting process summary information should also be updated.",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/Variation"
+            "$ref": "#/definitions/Modification"
           }
         }
       }
@@ -395,8 +395,8 @@
         }
       }
     },
-    "Variation": {
-      "title": "Variation",
+    "Modification": {
+      "title": "Modification",
       "description": "Contains a structured description of any changes, along with a free text justification.",
       "type": "object",
       "required": [
@@ -405,7 +405,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "A local identifer for this variation.",
+          "description": "A local identifer for this modification.",
           "type": [
             "string",
             "integer"
@@ -414,7 +414,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date this variation was recorded. Where the variation relates to an OCDS release, this should be filled from the releated `release.date`.",
+          "description": "The date this modification was recorded. Where the modification relates to an OCDS release, this should be filled from the releated `release.date`.",
           "type": [
             "string"
           ],
@@ -422,30 +422,30 @@
         },
         "description": {
           "title": "Description",
-          "description": "Details of the variation. This may be free text, or may be generated automatically and provide a structured description of the change.",
+          "description": "Details of the modification. This may be free text, or may be generated automatically and provide a structured description of the change.",
           "type": [
             "string"
           ]
         },
         "rationale": {
           "title": "Rationale",
-          "description": "A summary of the reasons which have led to this variation between originally planned and final scope, period or value.",
+          "description": "A summary of the reasons which have led to this modification to the originally planned scope, period or value.",
           "type": [
             "string"
           ]
         },
         "type": {
           "title": "Type",
-          "description": "A value from the variationType codelist, indicating whether the variation relates to the duration, value, scope or other aspect of the contract.",
+          "description": "A value from the modificationType codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string"
           ],
-          "codelist": "variationType.csv",
+          "codelist": "modificationType.csv",
           "openCodelist": true
         },
         "releaseID": {
           "title": "Release ID",
-          "description": "The identifier for the OCDS release this variation relates to. The referenced release should appear in the list of linked releases for this contracting process.",
+          "description": "The identifier for the OCDS release this modification relates to. The referenced release should appear in the list of linked releases for this contracting process.",
           "type": [
             "string"
           ]
