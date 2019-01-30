@@ -31,7 +31,7 @@ The preparation and implementation stages may be delivered using contractors. Th
 
 Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts.
 
-It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
+It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and modifications during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any modifications to these contracts.
 
 ## How is the Project-Level Data Specification structured?
 
@@ -49,13 +49,13 @@ The `contractingProcesses` array may be used to provide a summary of each of the
 
 Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
-The `variations` section should be used to record information on changes to the contracting process, either linked to OCDS releases or recorded manually.
+The `modifications` section should be used to record information on changes to the contracting process, either linked to OCDS releases or recorded manually.
 
 ### Contracting process details
 
 Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of (cached) OCDS releases, recording each update to a contracting process.
 
-Explanations of any variations detected when comparing releases should be provided in the `variations` section of the contracting process summary.
+Explanations of any modifications detected when comparing releases should be provided in the `modifications` section of the contracting process summary.
 
 ## How can I use the Project-Level Data Specification?
 
