@@ -497,9 +497,9 @@
             "author": "Motorways UK"
           }
         ],
-        "variations": [
+        "modifications": [
           {
-            "id": "m27-4-5-construction-variation-001",
+            "id": "m27-4-5-construction-modification-001",
             "date": "2018-04-01T15:15:00Z",
             "description": "Construction extended for 5 months",
             "rationale": "Excavation damaged a watercourse. Construction extended for repairs.",
@@ -515,7 +515,7 @@
             }
           },
           {
-            "id": "m27-4-5-construction-variation-002",
+            "id": "m27-4-5-construction-modification-002",
             "date": "2018-04-01T15:15:00Z",
             "description": "Construction scope extended to include repairing a watercourse",
             "rationale": "Excavation damaged a watercourse. Construction scope extended for repairs.",
@@ -523,7 +523,7 @@
             "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015"
           },
           {
-            "id": "m27-4-5-construction-variation-003",
+            "id": "m27-4-5-construction-modifcation-003",
             "date": "2018-04-01T15:15:00Z",
             "description": "Contract value increased from 29000000 to 35250000 to include repairing a watercourse",
             "rationale": "Excavation damaged a watercourse. Construction budget extended for repairs.",
