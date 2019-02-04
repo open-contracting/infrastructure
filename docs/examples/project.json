@@ -293,7 +293,6 @@
             "name": "Motorways UK",
             "id": "GB-GOR-XX1234"
           }
-
         },
         "suppliers": [
           {
@@ -309,7 +308,6 @@
           "startDate": "2016-06-01T00:00:00Z",
           "endDate": "2017-07-07T00:00:00Z"
         },
-
         "finalValue": {
           "amount": 1950000,
           "currency": "GBP"
@@ -359,10 +357,7 @@
             "amount": 5000000,
             "currency": "GBP"
           },
-
-
           "numberOfTenderers": 5,
-
           "procuringEntity": {
             "name": "Motorways UK",
             "id": "GB-GOR-XX1234"
