@@ -42,7 +42,7 @@ Map existing data structures to the [Project-Level Data Specification](../projec
 
     .. markdown::
 
-      The [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping.
+      The [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping.
 
 ```
 

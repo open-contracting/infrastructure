@@ -39,7 +39,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 The following mapping tables describe:
 
-* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md), in the 'Mapping to OC for Infrastructure' column.
+* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md), in the 'Mapping to OC4IDS' column.
 
 * How existing OCDS data can be used to populate project-level and contracting process summary data, in the 'Mapping from OCDS' column.
 
