@@ -18,7 +18,7 @@ Our example is a fictional project to upgrade a motorway in the UK, which has be
 
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer:  
 ```   
 
@@ -32,7 +32,7 @@ This provides contextual information about the project, including:
 * one or more *locations*, which may be expressed in a variety of ways as [outlined in the specification reference](../../../../projects/reference/#locations). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /locations
    :expand:  geometry, gazetteer, address
    :title: location 1
@@ -43,7 +43,7 @@ This provides contextual information about the project, including:
 Multiple *budget breakdown* components within the *budget* section provide details of the budget by period and/or participating funders. In this example, from the overall budget, £10,000,000 was allocated in 2016, as shown in the first *budget breakdown* component.
   ```eval_rst
 
-  .. jsoninclude:: ../_static/project-level/example.json
+  .. jsoninclude:: ../examples/example.json
      :jsonpointer: /budget
      :expand: amount, budgetBreakdown/0
      :title: budget
@@ -52,7 +52,7 @@ Multiple *budget breakdown* components within the *budget* section provide detai
 
   ```eval_rst
 
-  .. jsoninclude:: ../_static/project-level/example.json
+  .. jsoninclude:: ../examples/example.json
      :jsonpointer: /budget/budgetBreakdown/0
      :expand: amount, period, sourceParty
      :title: budgetBreakdown
@@ -64,7 +64,7 @@ An array of *party* components provide details about organizations, economic ope
 
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /parties/0
    :expand: address, contactPoint, roles
    :title: party
@@ -78,7 +78,7 @@ An array of *document* components provide information about a piece of documenta
 
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /documents/0
    :expand: address, contactPoint, roles
    :title: document
@@ -90,7 +90,7 @@ An array of *contracting process* components provide an index, summary and chang
 
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /contractingProcesses/0
    :expand: summary, documents, releases
    :title: contractingProcess
@@ -103,7 +103,7 @@ Contracting processes also contain *variation* components to detail any changes 
 
 ```eval_rst
 
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /contractingProcesses/2/summary/variations/0
    :expand: oldContractPeriod, newContractPeriod
    :title: variation
@@ -114,7 +114,7 @@ Contracting processes also contain *variation* components to detail any changes 
 The single *completion* component provides final timing and values relating to the project. Since in this example there were variations to related contracting processes, the *finalValue* of the project exceeds its original planned budget.
 
 ```eval_rst
-.. jsoninclude:: ../_static/project-level/example.json
+.. jsoninclude:: ../examples/example.json
    :jsonpointer: /completion
    :expand:  finalValue
    :title: Completion
@@ -122,4 +122,4 @@ The single *completion* component provides final timing and values relating to t
 ```
 
 ## Full example
-The full worked example JSON file is available [here](../../../../_static/project-level/example.json).
+The full worked example JSON file is available [here](../../../../examples/example.json).
