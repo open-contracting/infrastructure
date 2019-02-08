@@ -29,7 +29,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
         There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
 
-        The Project-Level Data Specification on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
+        The [Open Contracting for Infrastructure Data Standard](../projects/index.md) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
 
 ```
 
@@ -39,7 +39,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 The following mapping tables describe:
 
-* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Project-Level Data Specification](../projects/index.md), in the 'Mapping to OC4IDS' column.
+* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Open Contracting for Infrastructure Data Standard](../projects/index.md), in the 'Mapping to OC4IDS' column.
 
 * How existing OCDS data can be used to populate project-level and contracting process summary data, in the 'Mapping from OCDS' column.
 
