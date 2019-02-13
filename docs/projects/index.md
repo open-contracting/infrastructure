@@ -1,4 +1,4 @@
-# Project-level data
+# Getting started
 
 The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded construction projects. Using a common schema to record the information that is needed to monitor projects can enable more advanced analysis, both within, and across, infrastructure projects.
 
