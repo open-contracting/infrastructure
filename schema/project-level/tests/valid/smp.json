@@ -1,33 +1,33 @@
 {
   "meta": {
-    "publisher":{
-      "name":"Open Data Services Co-operative",
-      "scheme":"GB-COH",
-      "id":"09506232"
+    "publisher": {
+      "name": "Open Data Services Co-operative",
+      "scheme": "GB-COH",
+      "id": "09506232"
     },
-    "license":{},
-    "version":"1.1",
-    "extensions":[]
+    "license": {},
+    "version": "1.1",
+    "extensions": []
   },
-  "id":"uk.m23-junctions-8-to-10-smart-motorway",
-  "updated":"2018-09-03T15:00:00Z",
-  "title":"M23 junctions 8 to 10: smart motorway",
-  "description":"Upgrading the 11 mile (18km) stretch of the M23 near Gatwick Airport, between junction 8 near Merstham and junction 10 at Copthorne, to an all-lane running smart motorway.",
-  "status":"active",
-  "period":{
-    "startDate":"2016-01-01T09:00:00Z",
-    "endDate":"2020-03-31T17:00:00Z"
+  "id": "uk.m23-junctions-8-to-10-smart-motorway",
+  "updated": "2018-09-03T15:00:00Z",
+  "title": "M23 junctions 8 to 10: smart motorway",
+  "description": "Upgrading the 11 mile (18km) stretch of the M23 near Gatwick Airport, between junction 8 near Merstham and junction 10 at Copthorne, to an all-lane running smart motorway.",
+  "status": "active",
+  "period": {
+    "startDate": "2016-01-01T09:00:00Z",
+    "endDate": "2020-03-31T17:00:00Z"
   },
-  "classifications":[
+  "classifications": [
     {
-      "scheme":"COFOG",
-      "id":"04.5.1",
-      "description":"Road transport"
+      "scheme": "COFOG",
+      "id": "04.5.1",
+      "description": "Road transport"
     }
   ],
-  "locations":[
+  "locations": [
     {
-      "description":"Between M23 Junction 8 near Merstham and M23 Junction 10 at Copthorne.",
+      "description": "Between M23 Junction 8 near Merstham and M23 Junction 10 at Copthorne.",
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -37,145 +37,130 @@
       }
     }
   ],
-  "totalValue":{
-    "currency":"GBP",
-    "amount":164000000
+  "totalValue": {
+    "currency": "GBP",
+    "amount": 164000000
   },
-  "budget":{
-
-  },
-  "financing":{
-
-  },
-  "parties":[
+  "budget": {},
+  "financing": {},
+  "parties": [
     {
-      "name":"Highways England",
-      "identifier":{
-        "id":"09346363",
-        "scheme":"GB-COH",
-        "legalName":"Highways England Company Limited"
+      "name": "Highways England",
+      "identifier": {
+        "id": "09346363",
+        "scheme": "GB-COH",
+        "legalName": "Highways England Company Limited"
       },
       "address": {
-              "streetAddress": "Bridge House, 1 Walnut Tree Close",
-              "locality": "Guildford",
-              "region": "Surrey",
-              "postalCode": "GU1 4LZ",
-              "countryName": "England"
-            },
-            "contactPoint": {
-              "name": "Contact team",
-              "email": "info@highwaysengland.co.uk",
-              "telephone": "0300 123 5000"
-            },
-      "roles":["projectOwner"]
+        "streetAddress": "Bridge House, 1 Walnut Tree Close",
+        "locality": "Guildford",
+        "region": "Surrey",
+        "postalCode": "GU1 4LZ",
+        "countryName": "England"
+      },
+      "contactPoint": {
+        "name": "Contact team",
+        "email": "info@highwaysengland.co.uk",
+        "telephone": "0300 123 5000"
+      },
+      "roles": [
+        "projectOwner"
+      ]
     }
   ],
-  "documents":[
+  "documents": [
     {
-        "id":"1.0",
-        "documentType":"projectScope",
-        "title":"Project Scope",
-        "description":"The M23 is a crucial part of the UK strategic road network connecting Crawley and Gatwick Airport to the M25 motorway, routes into London and the rest of the UK. This stretch of the M23 is heavily used by traffic travelling to and from Gatwick Airport and between Brighton and London, especially during UK holiday periods. As a result safety, congestion and journey times are all key issues that need to be improved. As junction 9 of the M23 is the main access for traffic travelling to and from Gatwick Airport, this scheme is of particular local and national economic and political importance. \n\n ##Aims \n This scheme aims to: \n\n* reduce congestion by smoothing the flow of traffic to improve journey times and make them more reliable\n* facilitate economic growth within the region, by providing much-needed capacity on the motorway\n*  maximise motorway capacity while maintaining safety\n\n## The scheme in detail\n\nThe proposed scheme will enable proactive management of the M23 carriageway, including the link roads from/to the M25 at Junction 8, the spur to Gatwick Airport and to Junction 10.\n\nThe scheme includes:\n\n* converting the hard shoulder to create a permanent fourth lane between junctions 8 and 10\n* converting the westbound hard shoulder along the spur to Gatwick Airport (towards Junction 9a) to create three permanent lanes\n* redefined junction layouts to accommodate the fourth lane. In particular we are creating a dedicated northbound slip road before Junction 9 to minimise congestion as traffic leaves the motorway and heads towards Gatwick airport\n* new gantries with variable message signs, providing customers with better information\n* installing new electronic information signs, signals and CCTV cameras - these will be used to vary speed limits and manage traffic flow and incidents\n* installing 12 emergency areas to use in place of the hard shoulder which include Emergency Roadside Telephones (SOS) and CCTV cameras to improve emergency service response times\n* improving the central reserve and adding a reinforced barrier to improve safety\n* adding new noise barriers in built up areas\n* carriageway widening to provide new acceleration and deceleration lanes to our maintenance facility, Weatherhill Depot\n* creating a new emergency turn-around facility at Coopers Hill Road to minimise our response times to incidents",
-    },
-    { 
-        "id":"2.0",
-        "documentType":"environmentalImpact",
-        "description":"We have considered the full range of environmental topics and found that there will be no significant long-term effects. Temporary effects during construction will be slight changes in views, construction noise, disruption to road users and some loss of habitat. The key issues we've considered are:\n\nnoise and vibration, air quality, ecology and visual impacts in relation to nearby housing\nthe SSSI (Site of Special Scientific Interest) between Mole Gate and Reigate Escarpment\nprotected species and habitats including bats, badgers and great crested newts\nthe setting of conservation areas and heritage assets such as Surrey Hills Area of Outstanding Natural Beauty\npublic rights of way\nWe have carried out surveys for protected species adjacent to the motorway. Mitigation work will be undertaken within Natural England licenses. The vegetation clearance has to be undertaken at certain times of the year to minimise disruption to wildlife.\n\nWe'll retain existing screening planting where possible and propose additional planting upon completion of the scheme to minimise views of the motorway and associated equipment. Much of the M23 between Junction 8 and 10 is either in a cutting or on an embankment, so to provide sufficient structural integrity to the new running lane significant earthworks are necessary. We've tried to minimise vegetation clearance, but in some areas it's not always possible.\n\nWe're installing new environmental barriers to minimise noise effects. A plan showing the location of the existing and new barriers will be provided in due course. The plans will show the length and the height of the new barriers. The type of barrier being used for this scheme is absorptive as this type takes in noise, reducing the noise energy that reaches residents.\n\nThe new lanes (termed Lanes 1 and 4) will have low noise pavement. The existing lanes are in good condition and don't require resurfacing as part of this scheme. We'll resurface these lanes when the condition of pavement falls below our required standards.",
-        "uri":"http://assets.highwaysengland.co.uk/roads/road-projects/M23+junctions+8+to+10++smart+motorway/M23+J8-10SM+Environmental+Study+Report.pdf",
-        "format":"application/pdf",
-
+      "id": "1.0",
+      "documentType": "projectScope",
+      "title": "Project Scope",
+      "description": "The M23 is a crucial part of the UK strategic road network connecting Crawley and Gatwick Airport to the M25 motorway, routes into London and the rest of the UK. This stretch of the M23 is heavily used by traffic travelling to and from Gatwick Airport and between Brighton and London, especially during UK holiday periods. As a result safety, congestion and journey times are all key issues that need to be improved. As junction 9 of the M23 is the main access for traffic travelling to and from Gatwick Airport, this scheme is of particular local and national economic and political importance. \n\n ##Aims \n This scheme aims to: \n\n* reduce congestion by smoothing the flow of traffic to improve journey times and make them more reliable\n* facilitate economic growth within the region, by providing much-needed capacity on the motorway\n*  maximise motorway capacity while maintaining safety\n\n## The scheme in detail\n\nThe proposed scheme will enable proactive management of the M23 carriageway, including the link roads from/to the M25 at Junction 8, the spur to Gatwick Airport and to Junction 10.\n\nThe scheme includes:\n\n* converting the hard shoulder to create a permanent fourth lane between junctions 8 and 10\n* converting the westbound hard shoulder along the spur to Gatwick Airport (towards Junction 9a) to create three permanent lanes\n* redefined junction layouts to accommodate the fourth lane. In particular we are creating a dedicated northbound slip road before Junction 9 to minimise congestion as traffic leaves the motorway and heads towards Gatwick airport\n* new gantries with variable message signs, providing customers with better information\n* installing new electronic information signs, signals and CCTV cameras - these will be used to vary speed limits and manage traffic flow and incidents\n* installing 12 emergency areas to use in place of the hard shoulder which include Emergency Roadside Telephones (SOS) and CCTV cameras to improve emergency service response times\n* improving the central reserve and adding a reinforced barrier to improve safety\n* adding new noise barriers in built up areas\n* carriageway widening to provide new acceleration and deceleration lanes to our maintenance facility, Weatherhill Depot\n* creating a new emergency turn-around facility at Coopers Hill Road to minimise our response times to incidents"
     },
     {
-        "id":"3.0",
-        "documentType":"progressReport",
-        "description":"The consultation for the implementation of Variable Mandatory Speed limits (VMSL) between junctions 8 and 10, and the permanent 50mph speed limit on the westbound carriageway of the Gatwick Spur from the M23 junction 9 to 9a, was undertaken between 11 December 2017 and 15 January 2018. The summary of comments received and our responses can be found in the consultation report.\n\nWe can now announce the formal commencement of the scheme with our delivery partner, Kier.\n\nWe are regularly communicating with Surrey and West Sussex County Council and working closely with Gatwick Airport to issue joint communications when major work is taking place. The Smart Motorways Project can also be found on the Gatwick Airport App and web page.\n\nEarly environmental works are nearing completion. These have included vegetation and tree clearing along the verge. The clearance was undertaken to accommodate new retaining walls, environmental (noise) barriers, gantries and emergency areas as part of the scheme.\n\n## What's next?\nAdvanced works commenced in July 2018. These involved pre-construction surveys, establishing a site compound, which is now in operation, and installation of temporary CCTV and narrow lanes.\n\nOur next works will involve the removal of the gantry signs which are in situ across the carriageways and this will take place in September under lane closures only.\n\nOur next full closure is planned for 7/8/9 December between 10pm and 4am in both directions. Please check the Roadworks tab below for more details, as dates and times are subject to change.",
-        "datePublished":"2018-03-01"
+      "id": "2.0",
+      "documentType": "environmentalImpact",
+      "description": "We have considered the full range of environmental topics and found that there will be no significant long-term effects. Temporary effects during construction will be slight changes in views, construction noise, disruption to road users and some loss of habitat. The key issues we've considered are:\n\nnoise and vibration, air quality, ecology and visual impacts in relation to nearby housing\nthe SSSI (Site of Special Scientific Interest) between Mole Gate and Reigate Escarpment\nprotected species and habitats including bats, badgers and great crested newts\nthe setting of conservation areas and heritage assets such as Surrey Hills Area of Outstanding Natural Beauty\npublic rights of way\nWe have carried out surveys for protected species adjacent to the motorway. Mitigation work will be undertaken within Natural England licenses. The vegetation clearance has to be undertaken at certain times of the year to minimise disruption to wildlife.\n\nWe'll retain existing screening planting where possible and propose additional planting upon completion of the scheme to minimise views of the motorway and associated equipment. Much of the M23 between Junction 8 and 10 is either in a cutting or on an embankment, so to provide sufficient structural integrity to the new running lane significant earthworks are necessary. We've tried to minimise vegetation clearance, but in some areas it's not always possible.\n\nWe're installing new environmental barriers to minimise noise effects. A plan showing the location of the existing and new barriers will be provided in due course. The plans will show the length and the height of the new barriers. The type of barrier being used for this scheme is absorptive as this type takes in noise, reducing the noise energy that reaches residents.\n\nThe new lanes (termed Lanes 1 and 4) will have low noise pavement. The existing lanes are in good condition and don't require resurfacing as part of this scheme. We'll resurface these lanes when the condition of pavement falls below our required standards.",
+      "uri": "http://assets.highwaysengland.co.uk/roads/road-projects/M23+junctions+8+to+10++smart+motorway/M23+J8-10SM+Environmental+Study+Report.pdf",
+      "format": "application/pdf"
     },
     {
-        "id":"4.0",
-        "documentType":"landAndSettlementImpact"
+      "id": "3.0",
+      "documentType": "progressReport",
+      "description": "The consultation for the implementation of Variable Mandatory Speed limits (VMSL) between junctions 8 and 10, and the permanent 50mph speed limit on the westbound carriageway of the Gatwick Spur from the M23 junction 9 to 9a, was undertaken between 11 December 2017 and 15 January 2018. The summary of comments received and our responses can be found in the consultation report.\n\nWe can now announce the formal commencement of the scheme with our delivery partner, Kier.\n\nWe are regularly communicating with Surrey and West Sussex County Council and working closely with Gatwick Airport to issue joint communications when major work is taking place. The Smart Motorways Project can also be found on the Gatwick Airport App and web page.\n\nEarly environmental works are nearing completion. These have included vegetation and tree clearing along the verge. The clearance was undertaken to accommodate new retaining walls, environmental (noise) barriers, gantries and emergency areas as part of the scheme.\n\n## What's next?\nAdvanced works commenced in July 2018. These involved pre-construction surveys, establishing a site compound, which is now in operation, and installation of temporary CCTV and narrow lanes.\n\nOur next works will involve the removal of the gantry signs which are in situ across the carriageways and this will take place in September under lane closures only.\n\nOur next full closure is planned for 7/8/9 December between 10pm and 4am in both directions. Please check the Roadworks tab below for more details, as dates and times are subject to change.",
+      "datePublished": "2018-03-01"
     },
     {
-        "id":"5.0",
-        "documentType":"auditAndEvaluation"
+      "id": "4.0",
+      "documentType": "landAndSettlementImpact"
+    },
+    {
+      "id": "5.0",
+      "documentType": "auditAndEvaluation"
     }
   ],
-  "completion":{
-    "endDate":"",
-    "endDateDetails":"",
-    "finalValue":"",
-    "finalValueDetails":"",
-    "finalScope":"",
-    "finalScopeDetails":""
+  "completion": {
+    "endDate": "",
+    "endDateDetails": "",
+    "finalValue": "",
+    "finalValueDetails": "",
+    "finalScope": "",
+    "finalScopeDetails": ""
   },
-  "contractingProcesses":[
+  "contractingProcesses": [
     {
-        "externalReference":"SOME SORT OF FIELD USED WHEN LINKING OUT",
-        "ocid":"",
-        "title":"",
-        "description":"",
-        "contractFocus":"planning",
-        "status":"",
-        "totalValue":"",
-        "contractType":"",
-        "numberOfTenderers":"",
-        "contractPeriod":{
-
-        },
-        "tenderValue":{
-
-        },
-        "contractValue":{
-
-        },
-        "finalVaue":{
-
-        },
-        "procuringEntity":{
-            "id":"",
-            "name":""
-        },
-        "suppliers":[
-            {
-                "id":"",
-                "name":""
+      "externalReference": "SOME SORT OF FIELD USED WHEN LINKING OUT",
+      "ocid": "",
+      "title": "",
+      "description": "",
+      "contractFocus": "planning",
+      "status": "",
+      "totalValue": "",
+      "contractType": "",
+      "numberOfTenderers": "",
+      "contractPeriod": {},
+      "tenderValue": {},
+      "contractValue": {},
+      "finalVaue": {},
+      "procuringEntity": {
+        "id": "",
+        "name": ""
+      },
+      "suppliers": [
+        {
+          "id": "",
+          "name": ""
+        }
+      ],
+      "releaseList": [
+        {
+          "id": "",
+          "tag": "planning",
+          "date": "",
+          "uri": "",
+          "variations": {
+            "duration": {
+              "description": "",
+              "reason": ""
+            },
+            "price": {
+              "description": "",
+              "reason": ""
+            },
+            "scope": {
+              "description": "",
+              "reason": ""
+            },
+            "other": {
+              "description": "",
+              "reason": ""
             }
-        ],
-        "releaseList":[
-            {
-                "id":"",
-                "tag":"planning",
-                "date":"",
-                "uri":"",
-                "variations":{
-                    "duration":{
-                        "description":"",
-                        "reason":""
-                    },
-                    "price":{
-                        "description":"",
-                        "reason":""
-                    },
-                    "scope":{
-                        "description":"",
-                        "reason":""
-                    },
-                    "other":{
-                        "description":"",
-                        "reason":""
-                    }
-                }
-            }
-        ]
+          }
+        }
+      ]
     }
-
   ],
-
-
-
   "contracts": [
     {
-      "__type":"design",
+      "__type": "design",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/5d826b75-be3f-4b18-bec4-56b0044c8665.json",
       "publishedDate": "2015-08-05T15:49:19Z",
       "publisher": {
@@ -186,7 +171,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
@@ -336,7 +321,7 @@
       ]
     },
     {
-      "__type":"construction",
+      "__type": "construction",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/50c5baa3-a347-4de3-a857-b9a5e4b39dd7.json",
       "publishedDate": "2015-09-16T15:12:32Z",
       "publisher": {
@@ -347,7 +332,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
@@ -497,7 +482,7 @@
       ]
     },
     {
-      "__type":"monitoring",
+      "__type": "monitoring",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/a83c8238-8d07-4824-87a3-173b84a61752.json",
       "publishedDate": "2017-03-02T17:14:37Z",
       "publisher": {
@@ -508,7 +493,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",

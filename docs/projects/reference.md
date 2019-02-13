@@ -6,9 +6,9 @@
 
 # Specification Reference
 
-The tables below describe each of the fields and objects in the Project Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
+The tables below describe each of the fields and objects in the Project-Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
 
-## Project level
+## Project
 
 ```eval_rst
 
@@ -25,19 +25,29 @@ The tables below describe each of the fields and objects in the Project Level Da
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
     :pointer: /definitions/ContractingProcess
-    :collapse: releaseList,documents
+    :collapse: releases,summary
 
 ```
 
+## ContractingProcessSummary
 
-## ReleaseListEntry
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
-    :pointer: /definitions/ReleaseListEntry
-    :collapse: releaseList
+    :pointer: /definitions/ContractingProcessSummary
+    :collapse: documents
+
+```
+
+## LinkedRelease
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :include:
+    :pointer: /definitions/LinkedRelease
 
 ```
 
@@ -164,6 +174,19 @@ For each document the following structured information may be provided.
 
 ```
 
+### Variation
+
+For each variation, the following structured information may be provided.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Variation
+    :include:
+    :collapse:
+
+```
+
 
 ### Value
 
@@ -183,7 +206,7 @@ All values should be published along with their currency using the following str
 
 A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
 
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting/ocds_budget_and_spend_extension).
+See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
 
 ```eval_rst
 
@@ -267,5 +290,16 @@ Selected codelists are displayed below.
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/projectType.csv
+
+```
+
+### VariationType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/variationType.csv
 
 ```

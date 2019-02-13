@@ -4,4 +4,4 @@ preparation,Preparation,"Preparation covers the feasibility study, environmental
 construction,construction,"Implementation or package delivery covers the procurement and implementation of the planning, design and works according to the procurement strategy."
 completion,Completion,"Completion covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time."
 completed,Completed,"Close-out activities have been completed, and this project is no longer active. This project may be displayed as part of a list of archived projects."
-cancelled,Cancelled,"This project has been cancelled prior to close-out activities. Cancellation may have taken place at any point after identification."
+cancelled,Cancelled,This project has been cancelled prior to close-out activities. Cancellation may have taken place at any point after identification.
