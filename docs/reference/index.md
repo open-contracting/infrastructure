@@ -17,6 +17,8 @@ The [schema file is available here](../../../../_static/project-level/project-sc
 
 Full schema and codelist [reference documentation is also available](reference.md).
 
+The OC4IDS schema reuses many of the building blocks from the OCDS schema, these are introduced in the [getting started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
+
 ## Data validation
 
 The Project Level Data Specification uses a permissive schema. It does not enforce strong technical validation requirements on data, other than some structural rules and data type rules (dates, numbers and strings).
