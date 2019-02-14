@@ -41,4 +41,5 @@ This Open Contracting for Infrastructure site will show you how to:
    projects/reference
    guidance/index
    cost/index
+   support
 ```
