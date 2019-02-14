@@ -1,10 +1,21 @@
-# Schema browser
+# Schema and codelist reference
 
-The Infrastructure Project Level Data Specification is described using JSON Schema 0.4. The [schema file is available here](../../../../_static/project-level/project-schema.json) and can be explored using the browser below.
+```eval_rst
+.. toctree::
+   :maxdepth: 2
+   :glob:
+   :hidden:
+
+   schema
+   reference
+
+```
+
+The Infrastructure Project Level Data Specification is described using JSON Schema 0.4.
+
+The [schema file is available here](../../../../_static/project-level/project-schema.json) and can be explored using the [schema browser](schema.md).
 
 Full schema and codelist [reference documentation is also available](reference.md).
-
-<script src="../../_static/docson/widget.js" data-schema="../../_static/project-level/project-schema.json"></script>
 
 ## Data validation
 
