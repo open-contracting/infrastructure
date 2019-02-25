@@ -38,8 +38,6 @@ This Open Contracting for Infrastructure site will show you how to:
    about
    projects/index
    reference/index
-   reference/schema
-   reference/reference
    guidance/index
    cost/index
 ```
