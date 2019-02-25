@@ -1,10 +1,9 @@
-# Schema and codelist reference
+# Schema reference
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :glob:
-   :hidden:
 
    schema
    reference
