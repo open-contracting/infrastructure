@@ -174,14 +174,14 @@ For each document the following structured information may be provided.
 
 ```
 
-### Variation
+### Modification
 
-For each variation, the following structured information may be provided.
+For each modification, the following structured information may be provided.
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Variation
+    :pointer: /definitions/Modification
     :include:
     :collapse:
 
@@ -293,13 +293,13 @@ Selected codelists are displayed below.
 
 ```
 
-### VariationType
+### ModificationType
 
 ```eval_rst
 
    .. csv-table::
       :header-rows: 1
       :class: codelist-table
-      :file: ../../build/current_lang/codelists/variationType.csv
+      :file: ../../build/current_lang/codelists/modificationType.csv
 
 ```
