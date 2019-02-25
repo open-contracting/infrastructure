@@ -9,7 +9,7 @@ We can:
 * Provide guidance on mapping your data structures to the standard;
 * Give you feedback on draft data files, and support with validation of your data;
 
-Through funding from the Open Contracting Partnership and CoST - the infrastructure transparency initiative, this support is provided free of charge.
+Through funding from the Open Contracting Partnership and CoST - the Infrastructure Transparency Initiative, this support is provided free of charge.
 
 E-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the helpdesk team will be in touch with you soon.
 
