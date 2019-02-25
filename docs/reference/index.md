@@ -1,10 +1,22 @@
-# Schema browser
+# Schema reference
 
-The Infrastructure Project Level Data Specification is described using JSON Schema 0.4. The [schema file is available here](../../../../_static/project-level/project-schema.json) and can be explored using the browser below.
+```eval_rst
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   schema
+   reference
+
+```
+
+The Infrastructure Project Level Data Specification is described using JSON Schema 0.4.
+
+The [schema file is available here](../../../../_static/project-level/project-schema.json) and can be explored using the [schema browser](schema.md).
 
 Full schema and codelist [reference documentation is also available](reference.md).
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/project-level/project-schema.json"></script>
+The OC4IDS schema reuses many of the building blocks from the OCDS schema, these are introduced in the [getting started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
 
 ## Data validation
 
