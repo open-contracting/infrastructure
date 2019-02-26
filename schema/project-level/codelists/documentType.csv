@@ -1,5 +1,5 @@
 Code,Title,Description,Source
-needsAssessment,Needs Assessment,"Documentation of the needs assessments carried out for this contracting process or project addressing demand for the project or investment from the affected communities or users.",OC for Infrastructure
+needsAssessment,Needs Assessment,"Documentation of the needs assessments carried out for this contracting process or project addressing demand for the project or investment from the affected communities or users.",OC4IDS
 valueForMoneyAnalysis,Value for money analysis,"A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes.",OCDS for PPPs
 technicalSpecifications,Technical Specifications,Detailed technical information about goods or services to be provided.,OCDS for PPPs
 serviceDescription,Service descriptions,A high-level description of the services,OCDS for PPPs
@@ -8,7 +8,7 @@ contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for
 contractSchedule,Contract schedules,"Any document which contains additional terms, obligations or information related to the contract, such as a schedule, appendix, annex, attachment or addendum.",OCDS
 contractSigned,Signed Contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs
 feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs
-environmentalImpact,Environmental Impact,"Describe the environmental impacts and mitigation measures for this project or contracting process (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.)",OC for Infrastructure
+environmentalImpact,Environmental Impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
 finalAudit,Final Audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs
 tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
 evaluationCommittee,Evaluation Committee Details,Information on the constitution of the evaluation committee,OCDS for PPPs
@@ -49,7 +49,7 @@ illustration,Illustrations,"Images intended to provide supporting information. T
 submissionDocuments,Bid Submission Documents,Documentation submitted by a bidder as part of their proposal.,OCDS
 contractSummary,Contract Summary,Documentation providing an overview of the key terms and sections of the contract. Commonly used for large and complex contracts.,OCDS
 cancellationDetails,Cancellation Details,"Documentation the arrangements, or reasons, for cancellation of a contracting process, award or specific contract.",OCDS
-projectScope,Project scope,"A description of the main outputs from the project that are being taken forward into construction (including type, quantity and units)",OC for Infrastructure
-landAndSettlementImpact,Land and Settlement Impact,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC for Infrastructure
-projectEvaluation,Project evaluation,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery.",OC for Infrastructure
-budgetApproval,Budget approval,Additional details about the approval of the budget.,OC for Infrastructure
+projectScope,Project scope,"A description of the main outputs from the project that are being taken forward into construction (including type, quantity and units)",OC4IDS
+landAndSettlementImpact,Land and Settlement Impact,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC4IDS
+projectEvaluation,Project evaluation,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery.",OC4IDS
+budgetApproval,Budget approval,Additional details about the approval of the budget.,OC4IDS
