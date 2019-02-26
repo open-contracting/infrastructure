@@ -136,7 +136,7 @@ Keep a copy each time the data changes, and if you see modifications to:
 
 check whether an adequate explanation has been given for these.
 
-You can use the Project-Level Data Specification to record each time a change is detected, and the reasons that are given for the change.
+You can use OC4IDS to record each time a change is detected, and the reasons that are given for the change.
 
 #### (6) Add project completion data
 
@@ -158,6 +158,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [Project-Level Data Specification](../projects/index.md) provides a common data structure for recording project-level information;
+* The [OC4IDS](../projects/index.md) provides a common data structure for recording project-level information;
 
 * The [CoST IDS and OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.
