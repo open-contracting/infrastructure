@@ -1,121 +1,97 @@
 {
   "meta": {
-    "publisher":{},
-    "license":{},
-    "version":"1.1",
-    "extensions":[]
+    "publisher": {},
+    "license": {},
+    "version": "1.1",
+    "extensions": []
   },
-  "id":"",
-  "updated":"",
-  "title":"",
-  "description":"",
-  "status":"",
-  "period":{
-
-  },
-  "classifications":[
-
-  ],
-  "location":{
-
-  },
-  "totalValue":{
-
-  },
-  "parties":[],
-  "documents":[
+  "id": "",
+  "updated": "",
+  "title": "",
+  "description": "",
+  "status": "",
+  "period": {},
+  "classifications": [],
+  "location": {},
+  "totalValue": {},
+  "parties": [],
+  "documents": [
     {
-        "documentType":"projectScope"
+      "documentType": "projectScope"
     },
     {
-        "documentType":"environmentalImpact"
+      "documentType": "environmentalImpact"
     },
     {
-        "documentType":"landAndSettlementImpact"
+      "documentType": "landAndSettlementImpact"
     },
     {
-        "documentType":"auditAndEvaluation"
+      "documentType": "auditAndEvaluation"
     }
   ],
-  "budget":{
-
+  "budget": {},
+  "financing": {},
+  "completion": {
+    "endDate": "",
+    "endDateDetails": "",
+    "finalValue": "",
+    "finalValueDetails": "",
+    "finalScope": "",
+    "finalScopeDetails": ""
   },
-  "financing":{
-
-  },
-  "completion":{
-    "endDate":"",
-    "endDateDetails":"",
-    "finalValue":"",
-    "finalValueDetails":"",
-    "finalScope":"",
-    "finalScopeDetails":""
-  },
-  "contractingProcesses":[
+  "contractingProcesses": [
     {
-        "ocid":"",
-        "projectPhase":"planning",
-        "status":"",
-        "totalValue":"",
-        "contractType":"",
-        "numberOfTenderers":"",
-        "contractPeriod":{
-
-        },
-        "tenderValue":{
-
-        },
-        "awardValue":{
-
-        },
-        "finalVaue":{
-
-        },
-        "procuringEntity":{
-            "id":"",
-            "name":""
-        },
-        "suppliers":[
-            {
-                "id":"",
-                "name":""
+      "ocid": "",
+      "projectPhase": "planning",
+      "status": "",
+      "totalValue": "",
+      "contractType": "",
+      "numberOfTenderers": "",
+      "contractPeriod": {},
+      "tenderValue": {},
+      "awardValue": {},
+      "finalVaue": {},
+      "procuringEntity": {
+        "id": "",
+        "name": ""
+      },
+      "suppliers": [
+        {
+          "id": "",
+          "name": ""
+        }
+      ],
+      "releases": [
+        {
+          "id": "",
+          "tag": "planning",
+          "updated": "",
+          "uri": "",
+          "variations": {
+            "duration": {
+              "description": "",
+              "explanation": ""
+            },
+            "price": {
+              "description": "",
+              "explanation": ""
+            },
+            "scope": {
+              "description": "",
+              "explanation": ""
+            },
+            "other": {
+              "description": "",
+              "explanation": ""
             }
-        ],
-        "releases":[
-            {
-                "id":"",
-                "tag":"planning",
-                "updated":"",
-                "uri":"",
-                "variations":{
-                    "duration":{
-                        "description":"",
-                        "explanation":""
-                    },
-                    "price":{
-                        "description":"",
-                        "explanation":""
-                    },
-                    "scope":{
-                        "description":"",
-                        "explanation":""
-                    },
-                    "other":{
-                        "description":"",
-                        "explanation":""
-                    }
-                }
-            }
-        ]
+          }
+        }
+      ]
     }
-
-  ]
-
-
-
+  ],
   "contracts": [
     {
-      "__type":"design",
+      "__type": "design",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/5d826b75-be3f-4b18-bec4-56b0044c8665.json",
       "publishedDate": "2015-08-05T15:49:19Z",
       "publisher": {
@@ -126,7 +102,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
@@ -276,7 +252,7 @@
       ]
     },
     {
-      "__type":"construction",
+      "__type": "construction",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/50c5baa3-a347-4de3-a857-b9a5e4b39dd7.json",
       "publishedDate": "2015-09-16T15:12:32Z",
       "publisher": {
@@ -287,7 +263,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
@@ -437,7 +413,7 @@
       ]
     },
     {
-      "__type":"monitoring",
+      "__type": "monitoring",
       "uri": "https://www.contractsfinder.service.gov.uk/Published/Notice/releases/a83c8238-8d07-4824-87a3-173b84a61752.json",
       "publishedDate": "2017-03-02T17:14:37Z",
       "publisher": {
@@ -448,7 +424,7 @@
       },
       "version": "1.1",
       "extensions": [
-        "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1/extension.json"
+        "https://raw.githubusercontent.com/open-contracting-extensions/ocds_process_title_extension/v1.1/extension.json"
       ],
       "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/",
       "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
