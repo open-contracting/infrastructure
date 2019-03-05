@@ -282,6 +282,17 @@ Selected codelists are displayed below.
 
 ```
 
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
+
+```
+
 ### ProjectType
 
 ```eval_rst
