@@ -95,6 +95,12 @@ The following mapping tables describe:
 
 #### Implementation
 
+Disclosures in the implementation section of the CoST IDS relate to changes made after the contract award to the contract value, duration and scope.
+
+Where OCDS data is available the presence of changes may be detected by comparing values in the most recent OCDS release with a compiledRelease created from all prior releases.
+
+In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
+
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
