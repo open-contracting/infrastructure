@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{version}/{language}/projects/reference/#projectstatus) codelist.",
       "type": "string",
       "enum": [
         "identification",
