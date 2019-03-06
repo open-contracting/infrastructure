@@ -21,7 +21,7 @@ There are different approaches to including project identifiers in contracting d
 
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up a project from the national register to include its identifier in contracting data, and would have to request its addition if it was not already in the register.
 
-  This would allow validation ‘at source’ of the project identifier and would support checks on how many projects have no associated contracts, however it would require the availability of a central actor, the political will and the technical capacity to establish and maintain a register.
+  This approach allows validation ‘at source’ of the project identifier and would support checks on how many projects have no associated contracts, however it would require the availability of a central actor, the political will and the technical capacity to establish and maintain a register.
 
 ## Globally unique identifiers
 
