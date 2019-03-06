@@ -16,6 +16,8 @@ The [schema file is available here](../../../../_static/project-level/project-sc
 
 Full schema and codelist [reference documentation is also available](reference.md).
 
+A [blank example JSON file is available here](../../../_static/blank.json).
+
 The OC4IDS schema reuses many of the building blocks from the OCDS schema; these are introduced in the [Getting Started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
 
 ## Data validation

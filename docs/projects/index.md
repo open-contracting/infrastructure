@@ -4,11 +4,13 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
+An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations).
 
-![Projects typically involve multiple contracts](../../_static/images/diagram-project-contract.png)
+Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts. Note that an infrastructure project is *not* a national investment project: it is not the same as a 'project' in national budget terms.
 
-A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
+![Projects typically involve multiple contracts](../../_static/images/diagram-project-contracting-process.png)
+
+Within an infrastructre project, a public body may issue contracts within contracting processes for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
 
 ## What is project-level data?
 
