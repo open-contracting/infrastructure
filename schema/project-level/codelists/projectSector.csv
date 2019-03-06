@@ -1,0 +1,16 @@
+Code,Title,Description
+education,Education,"Education, including schools, universities and other learning and training facilities"
+health,Health,"Health, including hospitals, healthcare and human services"
+energy,Energy,"Energy, including electric power generation, and the transmission and distribution of electricity, oil and gas, for example: power plants, power lines, gas pipelines"
+communications,Communications,"Communications, including ICT, IT, telecommunications, postal facilities, high-speed internet, broadband"
+waterAndWaste,Water and waste,"Water and waste, including sanitation and wastewater"
+governance,Governance,"Governance, including government accommodations, public buildings, government offices; justice, courts; emergency services / response, local security; security, prisons, corrections; defense, military"
+economy,Economy,"Economy, including agribusiness, agriculture, science and environment"
+cultureSportsAndRecreation,"Culture, sports and recreation","Culture, sports and recreation, including tourism, parks and green areas"
+transport,Transport,Transport. A more detailed breakdown may be provided using the transport.[mode] codes
+transport.air,Air transport,"Air transport, including airports, airways and aviation"
+transport.water,Water transport,"Water transport, including ports and inland waterways"
+transport.rail,Rail transport,Rail transport
+transport.road,Road transport,"Road transport, including roads, highways, streets, tunnels and bridges"
+transport.urban,Urban transport,"Urban transport, including mass transit, urban mobility, buses, cycling, walking and taxi"
+socialHousing,Social housing,Social housing

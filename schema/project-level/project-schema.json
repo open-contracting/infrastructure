@@ -51,8 +51,13 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
-      "type": "string"
+      "description": "One or more values from the [projectSector codelist](#projectSector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "codelist": "projectSector.csv",
+      "openCodelist": true
     },
     "purpose": {
       "title": "Project purpose",
