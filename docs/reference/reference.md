@@ -303,3 +303,69 @@ Selected codelists are displayed below.
       :file: ../../build/current_lang/codelists/modificationType.csv
 
 ```
+
+### ContractNature
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/contractNature.csv
+
+```
+
+### GeometryType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/geometryType.csv
+
+```
+
+### LocationGazetteers
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/locationGazetteers.csv
+
+```
+
+### PartyRole
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/partyRole.csv
+
+```
+
+### DocumentType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/documentType.csv
+
+```
+
+### Currency
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/locationGazetteers.csv
+
+```
