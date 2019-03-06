@@ -284,6 +284,17 @@ Selected codelists are displayed below.
 
 Projects with a `status` of 'completed' may be displayed in a list of archived projects.
 
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
+
+```
+
 ### ProjectType
 
 ```eval_rst
