@@ -122,4 +122,4 @@ The single *completion* component provides final timing and values relating to t
 ```
 
 ## Full example
-The full worked example JSON file is available [here](../../../../examples/example.json).
+The full worked example JSON file is available [here](../../../../_static/example.json).
