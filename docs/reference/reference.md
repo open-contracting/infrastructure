@@ -282,7 +282,7 @@ Selected codelists are displayed below.
 
 ```
 
-Projects with status 'completed' may be displayed as part of a list of archived projects.
+Projects with a `status` of 'completed' may be displayed in a list of archived projects.
 
 ### ProjectType
 
