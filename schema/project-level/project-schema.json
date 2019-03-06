@@ -419,7 +419,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date this modification was recorded. Where the modification relates to an OCDS release, this should be filled from the releated `release.date`.",
+          "description": "The date this modification was recorded.",
           "type": [
             "string"
           ],
