@@ -222,7 +222,7 @@
         },
         "nature": {
           "title": "Nature",
-          "description": "One or more values from the [contractNature]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractNature) codelist, indicating whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "description": "Whether this contracting process relates to the design, construction and/or supervision of the project, from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractnature) codelist. More than one value may be provided if the contract is for both design and construction, or both design and supervision, etc.",
           "type": "array",
           "items": {
             "type": [
@@ -1010,7 +1010,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array"
           ],
@@ -1200,7 +1200,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "string"
           ],
