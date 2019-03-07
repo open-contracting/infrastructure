@@ -1,14 +1,14 @@
 # Schema reference
 
-The Infrastructure Project Level Data Specification is described using JSON Schema 0.4.
+The Open Contracting for Infrastructure Data Standard (OC4IDS) provides a common approach for the disclosure of structured data on infrastructure projects and their related contracting processes.
 
-The [schema file is available here](../../../../_static/project-level/project-schema.json) and can be explored using the [schema browser](schema.md).
+OC4IDS is comprised of a schema file and codelist files, reference documentation is available for the [schema and codelists](reference.md).
 
-Full schema and codelist [reference documentation is also available](reference.md).
+The schema can be explored using the [schema browser](schema.md) and can be downloaded [here](../../../../project-schema.json). The schema is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04).
 
-The [packaging data section](project_package.md) describes how to package OC4IDS data for publication. 
+OC4IDS data must be published as part of project package, which acts as a container for data on multiple projects and adds important metadata about the publication. The [packaging data documentation](project_package.md) describes how to package OC4IDS data for publication.
 
-The OC4IDS schema reuses many of the building blocks from the OCDS schema, these are introduced in the [getting started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
+The OC4IDS schema reuses many of the building blocks from the Open Contracting Data Standard; these are introduced in the [Getting Started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
 
 ```eval_rst
 .. toctree::
