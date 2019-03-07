@@ -8,7 +8,7 @@
     "uri",
     "publisher",
     "publishedDate",
-    "releases",
+    "projects",
     "version"
   ],
   "properties": {
@@ -24,8 +24,14 @@
       "type": "string",
       "format": "date-time"
     },
+    "version": {
+      "title": "OC4IDS schema version",
+      "description": "The version of the OC4IDS schema used in this package, expressed as major.minor[-tag]. For example: 1.0-beta or 1.1",
+      "type": "string"
+    },
     "projects": {
       "title": "Projects",
+      "description": "A list of projects included in this package, in OC4IDS format",
       "type": "array",
       "minItems": 1,
       "items": {
