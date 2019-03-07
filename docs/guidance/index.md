@@ -2,8 +2,7 @@
 
 ```eval_rst
 .. toctree::
-   :hidden:
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
    assess-against-ids

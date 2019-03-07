@@ -97,16 +97,16 @@ An array of *contracting process* components provide an index, summary and chang
 
 ```
 
-#### Variations
+#### Modifications
 
-Contracting processes also contain *variation* components to detail any changes to its duration, price, scope or other significant features. This example shows a change in duration using the *oldContractPeriod* and *newContractPeriod* components.
+Contracting processes also contain *modification* components to detail any changes to its duration, price, scope or other significant features. This example shows a change in duration using the *oldContractPeriod* and *newContractPeriod* components.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /contractingProcesses/2/summary/variations/0
+   :jsonpointer: /contractingProcesses/2/summary/modifications/0
    :expand: oldContractPeriod, newContractPeriod
-   :title: variation
+   :title: modification
 
 ```
 
