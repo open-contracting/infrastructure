@@ -4,9 +4,9 @@
 }
 --></style>
 
-# Specification Reference
+# Schema and codelist reference
 
-The tables below describe each of the fields and objects in the Project-Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
+The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](schema.md).
 
 ## Project
 
@@ -174,14 +174,14 @@ For each document the following structured information may be provided.
 
 ```
 
-### Variation
+### Modification
 
-For each variation, the following structured information may be provided.
+For each modification, the following structured information may be provided.
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Variation
+    :pointer: /definitions/Modification
     :include:
     :collapse:
 
@@ -282,6 +282,17 @@ Selected codelists are displayed below.
 
 ```
 
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
+
+```
+
 ### ProjectType
 
 ```eval_rst
@@ -293,13 +304,13 @@ Selected codelists are displayed below.
 
 ```
 
-### VariationType
+### ModificationType
 
 ```eval_rst
 
    .. csv-table::
       :header-rows: 1
       :class: codelist-table
-      :file: ../../build/current_lang/codelists/variationType.csv
+      :file: ../../build/current_lang/codelists/modificationType.csv
 
 ```

@@ -12,7 +12,7 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 * Discover contracts related to infrastructure projects;
 
-* Track these contracting processes, including changes to tenders, details of suppliers selected, and, in some cases, details of contract variations.
+* Track these contracting processes, including changes to tenders, details of suppliers selected, and, in some cases, details of contract modifications.
 
 ### Getting started
 
@@ -128,7 +128,7 @@ You may not be able to fill all the project-level details from the contracts, an
 
 When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same `ocid`, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.
 
-Keep a copy each time the data changes, and if you see variations to:
+Keep a copy each time the data changes, and if you see modifications to:
 
 * Price
 * Duration
@@ -136,13 +136,13 @@ Keep a copy each time the data changes, and if you see variations to:
 
 check whether an adequate explanation has been given for these.
 
-You can use the Project-Level Data Specification to record each time a change is detected, and the reasons that are given for the change.
+You can use OC4IDS to record each time a change is detected, and the reasons that are given for the change.
 
 #### (6) Add project completion data
 
 When there is evidence that a project has reached completion, it is important to further update the **project-level disclosure**.
 
-If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible variations that are in need to explanation.
+If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible modifications that are in need to explanation.
 
 In other cases, you may need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.
 
@@ -158,6 +158,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [Project-Level Data Specification](../projects/index.md) provides a common data structure for recording project-level information;
+* The [OC4IDS](../projects/index.md) provides a common data structure for recording project-level information;
 
 * The [CoST IDS and OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

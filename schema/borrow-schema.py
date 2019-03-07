@@ -102,7 +102,7 @@ infra_codelists = {
     'contractNature.csv',
     'projectStatus.csv',
     'projectType.csv',
-    'variationType.csv'
+    'modificationType.csv'
 }
 ocds_codelists = {
     'currency.csv',

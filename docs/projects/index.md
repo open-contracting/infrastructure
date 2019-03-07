@@ -1,4 +1,4 @@
-# Project-level data
+# Getting started
 
 The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded construction projects. Using a common schema to record the information that is needed to monitor projects can enable more advanced analysis, both within, and across, infrastructure projects.
 
@@ -21,7 +21,7 @@ A public body may issue contracts for design work, construction and supervision 
 * **implementation** - covers the procurement and implementation of the planning, design and works according to the procurement strategy.
 * **completion** - covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.
 
-This framework has been used as the basis for the Project-Level Data Specification.
+This framework has been used as the basis for OC4IDS.
 
 ## How does contracting data fit in?
 
@@ -31,13 +31,13 @@ The preparation and implementation stages may be delivered using contractors. Th
 
 Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts.
 
-It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and variations during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any variations to these contracts.
+It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/contracts-to-projects.md), and to use data from contacting data systems in order to detect updates and modifications during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any modifications to these contracts.
 
-## How is the Project-Level Data Specification structured?
+## How is OC4IDS structured?
 
-![The Project-Level Data Specification is structured in three parts](../../_static/images/diagram-project-level-data-spec.png)
+![OC4IDS is structured in three parts](../../_static/images/diagram-project-level-data-spec.png)
 
-The Project-Level Data Specification is structured in three parts:
+OC4IDS is structured in three parts:
 
 ### Project-Level Data
 
@@ -49,19 +49,19 @@ The `contractingProcesses` array may be used to provide a summary of each of the
 
 Information on these processes may be manually entered, or, where OCDS data is available, may be automatically populated from OCDS data via a push or pull mechanism.
 
-The `variations` section should be used to record information on changes to the contracting process, either linked to OCDS releases or recorded manually.
+The `modifications` section should be used to record information on changes to the contracting process, either linked to OCDS releases or recorded manually.
 
 ### Contracting process details
 
 Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of (cached) OCDS releases, recording each update to a contracting process.
 
-Explanations of any variations detected when comparing releases should be provided in the `variations` section of the contracting process summary.
+Explanations of any modifications detected when comparing releases should be provided in the `modifications` section of the contracting process summary.
 
-## How can I use the Project-Level Data Specification?
+## How can I use OC4IDS?
 
 ### If you have an existing infrastructure transparency portal...
 
-**... you can add a Project-Level Data Specification export option to your system.**
+**... you can add an OC4IDS export option to your system.**
 
 **Why?**
 
@@ -79,7 +79,7 @@ So that your project information can be compared with information from others, a
 
 ### If you are designing a new infrastructure transparency portal...
 
-**... the Project-Level Data Specification can be used by structure your data collection.**
+**... OC4IDS can be used by structure your data collection.**
 
 **Why?**
 
@@ -100,6 +100,6 @@ Some of the data structures, such as the organisation identifier structure, may 
 ```
 ### If you are designing other data collection tools...
 
-... the Project-Level Data Specification provides definitions and codelists that can be used to collect consistent data.
+... OC4IDS provides definitions and codelists that can be used to collect consistent data.
 
 Consult the [specification reference for definitions](reference.md).

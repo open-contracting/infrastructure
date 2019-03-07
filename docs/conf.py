@@ -61,7 +61,7 @@ source_parsers = {
 master_doc = 'index'
 
 # General information about the project.
-project = 'Open Contracting for Infrastructure'
+project = 'Open Contracting for Infrastructure Data Standards Toolkit'
 copyright = 'Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
