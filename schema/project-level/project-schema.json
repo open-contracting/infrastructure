@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#projectstatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projectstatus) codelist.",
       "type": "string",
       "enum": [
         "identification",
@@ -70,7 +70,7 @@
     },
     "type": {
       "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#projecttype) codelist.",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -222,7 +222,7 @@
         },
         "nature": {
           "title": "Nature",
-          "description": "One or more values from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#contractNature) codelist, indicating whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "description": "One or more values from the [contractNature]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractNature) codelist, indicating whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
           "type": "array",
           "items": {
             "type": [
@@ -249,7 +249,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
           "type": "string",
           "enum": [
             "pre-award",
@@ -266,7 +266,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
+              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
               "type": "string",
               "enum": [
                 "open",
@@ -441,7 +441,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "A value from the [modificationType](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
+          "description": "A value from the [modificationType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string"
           ],
@@ -1010,7 +1010,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array"
           ],
@@ -1200,7 +1200,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "string"
           ],
