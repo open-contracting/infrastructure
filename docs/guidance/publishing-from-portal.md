@@ -61,6 +61,16 @@ If you collect detailed data on contracting processes, refer to the [OCDS implem
 
 Create an OC4IDS JSON file for each project your system has information on and use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that the files are structurally correct against OC4IDS.
 
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+
+```
+
 If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
