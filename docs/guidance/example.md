@@ -8,7 +8,7 @@ The full OC4IDS JSON file for the worked example is available to download [here]
 
 ## Overview
 
-An OC for infrastructure document is made up of a number of sections. These include:
+An OC4IDS document is made up of a number of sections. These include:
 
 * **Project metadata** - contextual information about the project e.g. title, description, location and status.
 * **Budget** - information about the projected costs or allocated budget for this project.
@@ -71,11 +71,12 @@ In this example, the overall budget for the project covers 3 years and is broken
      :title: budgetBreakdown
 
   ```
+
 ### Parties (organizations)
 
 The `parties` array is used to provide details about organizations involved in the project and their roles. Organization references elsewhere in the data refer back to entries in this section.
 
-In this example, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budget breakdown` example above, using the `name` and `id` from the entry in the `parties` section.
+In this example, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` section.
 
 ```eval_rst
 
@@ -86,12 +87,11 @@ In this example, details are given about the fictional Motorways UK entity, whic
 
 ```
 
-
 ### Documents
 
 The `documents` array is used to provide information and links to documents and documentation relating to the project. During different phases of the project, different document types are expected.
 
-In this example, an environmental impact assessment is provided. The `documentType` field is used to categorise the document against the [document type codelist](../../../../reference/codelists/#documenttype).
+In this example, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../../../reference/codelists/#documenttype).
 
 ```eval_rst
 
@@ -105,7 +105,7 @@ In this example, an environmental impact assessment is provided. The `documentTy
 
 The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of modifications and a list of OCDS releases.
 
-This example provides information about a contracting process for the design of the motorway upgrade, with one related document (a tender notice) and 2 related OCDS releases, one for the tender and one for the contract award.
+This example provides information about a contracting process for the design of the motorway upgrade, with one related document (a tender notice) and two related OCDS releases, one for the tender and one for the contract award.
 
 ```eval_rst
 
@@ -132,6 +132,7 @@ This example shows a change in duration using the `oldContractPeriod` and `newCo
 ```
 
 ### Completion
+
 The `completion` section provides final details of the scope, duration and cost for the project.
 
 Since in this example there were variations to related contracting processes, the `finalValue` of the project exceeds its original planned budget.
