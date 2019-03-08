@@ -412,7 +412,13 @@
           "type": "string",
           "format": "uri"
         }
-      }
+      },
+      "required": [
+        "id",
+        "tag",
+        "date",
+        "url"
+      ]
     },
     "Modification": {
       "title": "Modification",
