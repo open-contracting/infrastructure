@@ -10,7 +10,7 @@ Each infrastructure project will usually involve project-level planning and co-o
 
 ![Projects typically involve multiple contracts](../../_static/images/diagram-project-contracting-process.png)
 
-Within an infrastructre project, a public body may issue contracts within contracting processes for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
+Within an infrastructure project, a procuring entity may issue contracts for its design, construction or supervision. Budgets, plans and impact assessments are likely to cut across these.
 
 ## What is project-level data?
 
