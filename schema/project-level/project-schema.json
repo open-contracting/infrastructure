@@ -563,6 +563,12 @@
       "title": "Delivery Location",
       "description": "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these.",
       "properties": {
+        "identifier": {
+          "title": "Identifier",
+          "description": "A local identifier for this location, unique within the array this location appears in.",
+          "type": "string",
+          "minLength": 1
+        },
         "description": {
           "title": "Description",
           "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
@@ -651,7 +657,10 @@
           "description": "A physical address where works will take place.",
           "$ref": "#/definitions/Address"
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "Value": {
       "title": "Value",
