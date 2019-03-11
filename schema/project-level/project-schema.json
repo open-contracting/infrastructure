@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/0__9__beta/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
   "description": "The Open Contracting fo Infrastructure Data Standard Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
