@@ -1,6 +1,6 @@
 ## Packaging data
 
-The project package schema describes the container document for publishing data using the OC4IDS project level schema.
+OC4IDS data must be published as part of project package, which acts as a container for data on multiple projects and adds important metadata about the publication. The project package schema describes this container.
 
 You can view an interactive version of the project package schema below (requires JavaScript) or [download it here](../../../../project-package-schema.json).
 
