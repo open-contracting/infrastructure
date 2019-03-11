@@ -1,3 +1,5 @@
+// See https://github.com/open-contracting/standard/blob/1.1-dev/standard/docs/en/_static/json-example-format.js
+
    $( document ).ready(function() {
          $(".expandjson").each(function(){
           classList = $(this).attr("class").split(/\s+/);
@@ -21,15 +23,15 @@
               $(this).wrap("<div class='selection-container'></div>")
               $(this).parent().prepend(
                   $("<select name='select-"+id +"'></select>")
-                  .change(function(){ 
+                  .change(function(){
                        $(this).siblings(".expandjson").hide();
                        $(this).siblings("."+ $(this).val()).show();
                    }))
-              $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 
-          } else {   
+              $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-","")))
+          } else {
               container = $(this).siblings(".selection-container")
               $(this).detach().appendTo(container)
-              $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-",""))) 
+              $(this).siblings("select").append($("<option></option>").attr("value",filename).text(filename.replace("file-","")))
               $(this).hide()
           }
        });
