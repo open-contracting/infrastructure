@@ -86,6 +86,8 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 ```
 
+Projects with a `status` of 'completed' may be displayed in a list of archived projects.
+
 ### ProjectType
 
 ```eval_rst
@@ -140,6 +142,17 @@ For more information on open and closed codelists, refer to the Open Contracting
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/partyRole.csv
+
+```
+
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
 
 ```
 

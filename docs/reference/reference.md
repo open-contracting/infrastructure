@@ -233,3 +233,89 @@ Where the source system does not contain time information, a judgement should be
     :collapse:
 
 ```
+<<<<<<< HEAD
+=======
+
+## Codelists
+
+Selected codelists are displayed below.
+
+### ContractingProcessStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
+
+```
+
+### DocumentType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/documentType.csv
+
+```
+
+### Method
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/method.csv
+
+```
+
+### ProjectStatus
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectStatus.csv
+
+```
+
+Projects with a `status` of 'completed' may be displayed in a list of archived projects.
+
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
+
+```
+
+### ProjectType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectType.csv
+
+```
+
+### ModificationType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/modificationType.csv
+
+```
+>>>>>>> master

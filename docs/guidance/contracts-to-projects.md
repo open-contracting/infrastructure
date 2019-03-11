@@ -1,4 +1,4 @@
-# Using open contracting data to understand infrastructure projects
+# Using data from procurement systems for infrastructure monitoring
 
 An increasing number of procurement portals now publish data using the Open Contracting Data Standard (OCDS). When OCDS is implemented in full, then:
 
@@ -123,6 +123,16 @@ You may not be able to fill all the project-level details from the contracts, an
 * The full scope of the project
 * The total project budget and cost estimates
 * Any environmental impact or land and settlement impact studies that have been undertaken
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+
+```
 
 #### (5) Monitoring contracting process updates
 
