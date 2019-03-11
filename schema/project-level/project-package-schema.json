@@ -26,8 +26,9 @@
     },
     "version": {
       "title": "OC4IDS schema version",
-      "description": "The version of the OC4IDS schema used in this package, expressed as major.minor[-tag]. For example: 1.0-beta or 1.1",
-      "type": "string"
+      "description": "The version of the OC4IDS schema used in this package, expressed as major.minor. For example: 0.9",
+      "type": "string",
+      "pattern": "^(\\d+\\.)(\\d+)$"
     },
     "projects": {
       "title": "Projects",
