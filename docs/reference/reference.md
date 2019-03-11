@@ -282,6 +282,8 @@ Selected codelists are displayed below.
 
 ```
 
+Projects with a `status` of 'completed' may be displayed in a list of archived projects.
+
 ### ProjectSector
 
 ```eval_rst
