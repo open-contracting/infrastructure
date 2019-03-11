@@ -1,10 +1,10 @@
 # Codelist reference
 
-To make data interoperable OC4IDS uses codelists for some fields. There are two kinds of codelist in OC4IDS:
+Some schema fields refer to codelists, to limit and standardize the possible values of the fields, in order to promote data interoperability.
 
-* **Closed codelists** provide mandatory codes, for fields which reference these codelists publishers must only use codes from the list.
+Codelists can either be open or closed. **Closed codelists** are intended to be comprehensive; for example, the [currency](#currency) codelist covers all currencies in the world. **Open codelists** are intended to be representative, but not comprehensive.
 
-* **Open codelists** provide suggested codes, for fields which reference these codelists publishers should use codes from the list but may extend these lists with new codes where the existing codes are insufficient.
+Publishers must use the codes in the codelists, unless no code is appropriate. If no code is appropriate and the codelist is **open**, then a publisher may use a new code outside those in the codelist. If no code is appropriate and the codelist is **closed**, then a publisher should instead create an issue in the [OC4IDS GitHub repository](https://github.com/open-contracting/infrastructure/issues).
 
 ```eval_rst
 .. admonition:: Extending open codelists
@@ -12,7 +12,7 @@ To make data interoperable OC4IDS uses codelists for some fields. There are two 
 
     .. markdown::
 
-      If you add codes to an open codelist in your data, create an issue on the [OC4IDS Github](https://github.com/open-contracting/infrastructure) so the codes can be considered for formal inclusion in the codelist.
+      If you use new codes outside those in an open codelist, please create an issue in the [OC4IDS GitHub repository](https://github.com/open-contracting/infrastructure/issues), so that the codes can be considered for inclusion in the codelist.
 
 ```
 
@@ -110,17 +110,6 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 ```
 
-### ModificationType
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/modificationType.csv
-
-```
-
 ### LocationGazetteers
 
 ```eval_rst
@@ -129,6 +118,17 @@ For more information on open and closed codelists, refer to the Open Contracting
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/locationGazetteers.csv
+
+```
+
+### ModificationType
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/modificationType.csv
 
 ```
 
