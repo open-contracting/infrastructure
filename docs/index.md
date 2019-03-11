@@ -18,16 +18,6 @@ This Open Contracting for Infrastructure Data Standards (OC4IDS) Toolkit will sh
 
 * Make use of data in infrastructure monitoring.
 
-```eval_rst
-.. admonition:: Alpha-2 Release
-    :class: Warning
-
-    This is the second draft release of the Open Contracting for Infrastructure Data Standards Toolkit.
-
-    It should be considered work in progress, and any elements of the schemas and guidance presented here are subject to change.
-
-```
-
 ## Contents
 
 ```eval_rst
