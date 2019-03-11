@@ -1,6 +1,7 @@
-# Evaluating disclosures against the Infrastructure Data Standard
+# Assessing compliance with the CoST IDS
 
-The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which is adapted by CoST national programmes to meet their local needs. This section sets out how to use the **project-level schema** and **OCDS** to assess coverage of published data against the IDS. For example, to monitor which elements of IDS are being supplied and whether they are available for all projects or only some.
+
+The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which is adapted by CoST national programmes to meet their local needs. This section sets out how to use **OC4IDS** and **OCDS** to assess coverage of published data against the IDS. For example, to monitor which elements of IDS are being supplied and whether they are available for all projects or only some.
 
 ```eval_rst
 .. admonition:: Note
@@ -22,7 +23,7 @@ First, check that the disclosures you want to analyse are in the correct format.
 
 #### Project level data
 
-Check whether the project-level data is published using the [Project-Level Data Specification](../projects/index.md)
+Check whether the project-level data is published using [OC4IDS](../projects/index.md)
 
 ```eval_rst
 .. admonition:: Tip
@@ -34,7 +35,17 @@ Check whether the project-level data is published using the [Project-Level Data 
 
 ```
 
-If the data isn’t published using the Project-Level Data Specification, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC for Infrastructure JSON file for each project.
+If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC4IDS JSON file for each project.
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+
+```
 
 #### Contracting data
 
@@ -52,7 +63,7 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
 If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](contracts-to-projects.md).
 
-If the data isn’t published using OCDS, use the [OC for Infrastructure Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes](../../../../projects/reference/#contractingprocess) section of the Project-Level Data Specification and add the data to the OC for Infrastructure JSON files for each project.
+If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes](../../../../projects/reference/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
 
 ### (2) Check which elements of IDS are disclosed
 
@@ -62,7 +73,7 @@ For example, the CoST IDS mapping describes how the project name element of the 
 
 > Project-Level: Publish as `title`
 
-Based on this description, the following pseudo code checks a folder containing OC for Infrastructure JSON files to count the number of  projects in which the project name is disclosed:
+Based on this description, the following pseudo code checks a folder containing OC4IDS JSON files to count the number of  projects in which the project name is disclosed:
 
 ```
 for each json file in folder

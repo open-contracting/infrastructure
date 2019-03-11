@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://standard.open-contracting.org/infrastructure/0__9__beta/project-schema.json",
-  "title": "Infrastructure Project-Level Data Schema ",
-  "description": "The Infrastructure Project Transparency Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
+  "title": "Open Contracting for Infrastructure Data Standard Schema",
+  "description": "The Open Contracting fo Infrastructure Data Standard Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
   "type": "object",
   "required": [
     "id"
@@ -51,12 +51,22 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
+      "description": "One or more values from the [projectSector codelist](#projectSector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "codelist": "projectSector.csv",
+      "openCodelist": true
+    },
+    "purpose": {
+      "title": "Project purpose",
+      "description": "The socioeconomic purpose of this project.",
       "type": "string"
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist such as UN COFOG (Classification of the Functions of Government).",
+      "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
@@ -182,7 +192,7 @@
   "definitions": {
     "ContractingProcess": {
       "title": "Contracting process",
-      "description": "Within the Project-Level Data Specification, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
+      "description": "Within OC4IDS, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
       "type": "object",
       "properties": {
         "summary": {

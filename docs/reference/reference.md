@@ -6,7 +6,7 @@
 
 # Schema and codelist reference
 
-The tables below describe each of the fields and objects in the Project-Level Data Specification. To see how they fit together, consult the [schema browser](schema.md).
+The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](schema.md).
 
 ## Project
 
@@ -279,6 +279,19 @@ Selected codelists are displayed below.
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/projectStatus.csv
+
+```
+
+Projects with a `status` of 'completed' may be displayed in a list of archived projects.
+
+### ProjectSector
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/projectSector.csv
 
 ```
 

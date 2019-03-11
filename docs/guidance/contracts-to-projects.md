@@ -1,4 +1,4 @@
-# Using open contracting data to understand infrastructure projects
+# Using data from procurement systems for infrastructure monitoring
 
 An increasing number of procurement portals now publish data using the Open Contracting Data Standard (OCDS). When OCDS is implemented in full, then:
 
@@ -124,6 +124,16 @@ You may not be able to fill all the project-level details from the contracts, an
 * The total project budget and cost estimates
 * Any environmental impact or land and settlement impact studies that have been undertaken
 
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+
+```
+
 #### (5) Monitoring contracting process updates
 
 When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same `ocid`, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.
@@ -136,7 +146,7 @@ Keep a copy each time the data changes, and if you see modifications to:
 
 check whether an adequate explanation has been given for these.
 
-You can use the Project-Level Data Specification to record each time a change is detected, and the reasons that are given for the change.
+You can use OC4IDS to record each time a change is detected, and the reasons that are given for the change.
 
 #### (6) Add project completion data
 
@@ -158,6 +168,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [Project-Level Data Specification](../projects/index.md) provides a common data structure for recording project-level information;
+* The [OC4IDS](../projects/index.md) provides a common data structure for recording project-level information;
 
 * The [CoST IDS and OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

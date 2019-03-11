@@ -1,1 +1,22 @@
+.wy-nav-side {
+    background: #37999b;
+}
+.oc-switchers {
+    background: #37999b;
+}
+.wy-menu-vertical a:hover {
+    background: #70babe;
+}
+.wy-nav-content a {
+  color: #807f7f;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
 
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend, .wy-menu-vertical a, .oc-custom-select, #rtd-search-form input, .wy-side-nav-search > a{
+  font-family: 'Montserrat',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.wy-menu-vertical a {
+    font-size: 95%
+}
