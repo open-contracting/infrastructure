@@ -4,7 +4,7 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts. 
+An infrastructure project may stand alone (e.g. a new hospital), or may form part of a wider programme of work (e.g. a new rail station, as part of an extension to a railway line). An infrastructure project is usually implemented through a series of contracts, and usually involves planning and coordination at the project-level.
 
 ```eval_rst
 .. admonition:: Tip
@@ -12,10 +12,9 @@ An infrastructure project may stand alone (e.g. a town building a new hospital),
 
     .. markdown::
 
-      The term 'project' can also be used to refer to a larger programme of work of which an individual infrastructure project is a part, such as the construction of a whole highway. The term 'project' may also refer to a public investment project with funds allocated in the national budget, such as the upgrading of the rail network in a particular region.
+      In the context of OC4IDS, the term 'project' refers to the construction of a **single asset**: for example, the construction of a bridge, highway junction or building.
 
-      However, in OC4IDS, the term 'project' refers to the construction of a single asset, for example the construction of a bridge, a highway junction or building.
-
+      In other contexts, the term 'project' can refer to a larger programme of work – of which projects in the sense of OC4IDS would form part of – like the construction of an entire highway. The term 'project' can also refer to a public investment to which funds are allocated in a government's budget, like the electrification of a rail network.
 
 ```
 
