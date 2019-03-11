@@ -54,6 +54,36 @@ The tables below describe each of the fields and objects in OC4IDS. To see how t
 
 ## Components
 
+### Address
+
+We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
+
+When working with data, users should be aware that addresses may not always be broken down using all the properties the specification provides.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Address
+    :include:
+    :collapse:
+
+```
+
+### BudgetBreakdown
+
+A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
+
+See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/BudgetBreakdown
+    :include:
+    :collapse:
+
+```
+
 ### Classification
 
 A classification consists of an identifier for the codelist (the `scheme`) and a code from that codelist (the `id`), and then a human-readable label for the classification (the `description`).
@@ -75,79 +105,6 @@ For example:
     "id":"05.2",
     "description":"Waste water management"
 }
-```
-
-### Organization
-
-For each organization, provide as much structured data as you can.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Organization
-    :collapse: identifier,additionalIdentifiers,address,contactPoint
-
-```
-
-### OrganizationReference
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/OrganizationReference
-    :include:
-    :collapse:
-
-```
-
-### Identifier
-
-Use of stable official organisation identifiers can help join up data between systems.
-
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organisation, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
-
-For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Identifier
-    :include:
-    :collapse:
-
-```
-
-
-### Locations
-
-A project may have one or more locations. Locations may be expressed in a number of different ways, using one or more of:
-
-* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
-* A gazetteer entry (e.g. town name);
-* An address.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Location
-    :include:
-    :collapse: address
-
-```
-
-### Address
-
-We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
-
-When working with data, users should be aware that addresses may not always be broken down using all the properties the specification provides.
-
-```eval_rst
-
-.. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Address
-    :include:
-    :collapse:
-
 ```
 
 ### ContactPoint
@@ -174,6 +131,40 @@ For each document the following structured information may be provided.
 
 ```
 
+### Identifier
+
+Use of stable official organisation identifiers can help join up data between systems.
+
+Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organisation, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
+
+For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Identifier
+    :include:
+    :collapse:
+
+```
+
+### Location
+
+A project may have one or more locations. Locations may be expressed in a number of different ways, using one or more of:
+
+* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
+* A gazetteer entry (e.g. town name);
+* An address.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Location
+    :include:
+    :collapse: address
+
+```
+
 ### Modification
 
 For each modification, the following structured information may be provided.
@@ -187,31 +178,24 @@ For each modification, the following structured information may be provided.
 
 ```
 
+### Organization
 
-### Value
-
-All values should be published along with their currency using the following structure.
+For each organization, provide as much structured data as you can.
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/Value
-    :include:
-    :collapse:
+    :pointer: /definitions/Organization
+    :collapse: identifier,additionalIdentifiers,address,contactPoint
 
 ```
 
-
-### BudgetBreakdown
-
-A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
-
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
+### OrganizationReference
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
-    :pointer: /definitions/BudgetBreakdown
+    :pointer: /definitions/OrganizationReference
     :include:
     :collapse:
 
@@ -229,6 +213,19 @@ Where the source system does not contain time information, a judgement should be
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/Period
+    :include:
+    :collapse:
+
+```
+
+### Value
+
+All values should be published along with their currency using the following structure.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Value
     :include:
     :collapse:
 
