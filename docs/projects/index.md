@@ -4,7 +4,7 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts. 
+An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
 
 ```eval_rst
 .. admonition:: Tip
@@ -115,4 +115,4 @@ Some of the data structures, such as the organisation identifier structure, may 
 
 ... OC4IDS provides definitions and codelists that can be used to collect consistent data.
 
-Consult the [specification reference for definitions](reference.md).
+Consult the [specification reference for definitions](../reference/index.md).
