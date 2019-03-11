@@ -6,7 +6,7 @@ OC4IDS is comprised of a schema file and codelist files, and reference documenta
 
 The schema can be explored using the [schema browser](schema.md) and can be [downloaded here](../../../../project-schema.json). The schema is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04).
 
-OC4IDS data must be published as part of a [project package](project_package.md), which serves as a container for data on multiple projects and adds important metadata about the data publication. The [packaging data documentation](project_package.md) describes how to package OC4IDS data for publication.
+OC4IDS data must be published as part of a [project package](package.md), which serves as a container for data on multiple projects and adds important metadata about the data publication.
 
 The OC4IDS schema reuses many of the building blocks from the Open Contracting Data Standard; these are introduced in the [Getting Started section of the OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/).
 
@@ -17,7 +17,7 @@ The OC4IDS schema reuses many of the building blocks from the Open Contracting D
 
    schema
    reference
-   project_package
+   package
 
 ```
 
