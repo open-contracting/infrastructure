@@ -184,7 +184,7 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
-    ], localedir, language, version=standard_version)
+    ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
 
     # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
     for filename in glob(str(basedir / 'mapping' / '*.csv')):

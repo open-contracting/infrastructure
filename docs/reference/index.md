@@ -17,6 +17,7 @@ The OC4IDS schema reuses many of the building blocks from the Open Contracting D
 
    schema
    reference
+   codelists
    package
 
 ```

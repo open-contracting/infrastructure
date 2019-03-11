@@ -4,7 +4,7 @@
 }
 --></style>
 
-# Schema and codelist reference
+# Schema reference
 
 The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](schema.md).
 
@@ -233,6 +233,8 @@ Where the source system does not contain time information, a judgement should be
     :collapse:
 
 ```
+<<<<<<< HEAD
+=======
 
 ## Codelists
 
@@ -316,3 +318,4 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
       :file: ../../build/current_lang/codelists/modificationType.csv
 
 ```
+>>>>>>> master
