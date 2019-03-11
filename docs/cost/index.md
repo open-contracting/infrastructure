@@ -95,9 +95,9 @@ The following mapping tables describe:
 
 #### Implementation
 
-Disclosures in the implementation section of the CoST IDS relate to changes made after the contract award to the contract value, duration and scope.
+Disclosures in the implementation section of the CoST IDS relate to changes to a contract's value, duration or scope that were made after the contract was awarded.
 
-Where OCDS data is available the presence of changes may be detected by comparing values in the most recent OCDS release with a compiledRelease created from all prior releases.
+Where OCDS data is available, the fields which should be monitored for changes are described in the mapping table below. Changes can be detected by comparing values in the most recent OCDS release with a compiledRelease created from all prior releases. The OCDS releases model is described in the [OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/releases_and_records/).
 
 In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
 
