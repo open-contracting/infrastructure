@@ -22,7 +22,7 @@ The full JSON file for the example project looks like this:
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer:  
+   :jsonpointer:  /projects/0
 ```   
 
 ## Sections
@@ -42,7 +42,7 @@ This section provides contextual information about the project, including:
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /locations
+   :jsonpointer: /projects/0/locations
    :expand:  geometry, gazetteer, address
    :title: location 1
 
@@ -57,7 +57,7 @@ In this example, the overall budget for the project covers 3 years and is broken
   ```eval_rst
 
   .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /budget
+     :jsonpointer: /projects/0/budget
      :expand: amount, budgetBreakdown/0
      :title: budget
 
@@ -66,7 +66,7 @@ In this example, the overall budget for the project covers 3 years and is broken
   ```eval_rst
 
   .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /budget/budgetBreakdown/0
+     :jsonpointer: /projects/0/budget/budgetBreakdown/0
      :expand: amount, period, sourceParty
      :title: budgetBreakdown
 
@@ -81,7 +81,7 @@ In this example, details are given about the fictional Motorways UK entity, whic
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /parties/0
+   :jsonpointer: /projects/0/parties/0
    :expand: address, contactPoint, roles
    :title: party
 
@@ -96,7 +96,7 @@ In this example, an environmental impact assessment is provided. The `documentTy
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /documents/1
+   :jsonpointer: /projects/0/documents/1
    :expand: address, contactPoint, roles
    :title: document
 
@@ -110,7 +110,7 @@ This example provides information about a contracting process for the design of 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /contractingProcesses/0
+   :jsonpointer: /projects/0/contractingProcesses/0
    :expand: summary, documents, releases
    :title: contractingProcess
 
@@ -125,7 +125,7 @@ This example shows a change in duration using the `oldContractPeriod` and `newCo
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /contractingProcesses/2/summary/modifications/0
+   :jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
    :expand: oldContractPeriod, newContractPeriod
    :title: modification
 
@@ -139,7 +139,7 @@ Since in this example there were variations to related contracting processes, th
 
 ```eval_rst
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /completion
+   :jsonpointer: /projects/0/completion
    :expand:  finalValue
    :title: Completion
 
