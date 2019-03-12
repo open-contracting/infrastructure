@@ -4,7 +4,7 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
+An infrastructure project may stand alone (e.g. a new hospital), or may form part of a wider programme of work (e.g. a new rail station, as part of an extension to a railway line). An infrastructure project is usually implemented through a series of contracts, and usually involves planning and coordination at the project-level.
 
 ```eval_rst
 .. admonition:: Tip
@@ -12,16 +12,15 @@ An infrastructure project may stand alone (e.g. a town building a new hospital),
 
     .. markdown::
 
-      The term 'project' can also be used to refer to a larger programme of work of which an individual infrastructure project is a part, such as the construction of a whole highway. The term 'project' may also refer to a public investment project with funds allocated in the national budget, such as the upgrading of the rail network in a particular region.
+      In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
 
-      However, in OC4IDS, the term 'project' refers to the construction of a single asset, for example the construction of a bridge, a highway junction or building.
-
+      In other contexts, the term 'project' can refer to a larger programme of work – of which projects in the sense of OC4IDS would form part of – like the construction of an entire highway. The term 'project' can also refer to a public investment to which funds are allocated in a government's budget, like the electrification of a rail network.
 
 ```
 
 ![Projects typically involve multiple contracts](../../_static/images/diagram-project-contracting-process.png)
 
-Within an infrastructre project, a public body may issue contracts within contracting processes for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
+Within an infrastructure project, a procuring entity may issue contracts for its design, construction or supervision. Budgets, plans and impact assessments are likely to cut across these.
 
 ## What is project-level data?
 
