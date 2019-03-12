@@ -36,7 +36,7 @@
       "enum": [
         "identification",
         "preparation",
-        "construction",
+        "implementation",
         "completion",
         "completed",
         "cancelled"
