@@ -2,12 +2,13 @@
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
-   assess-against-ids
-   contracts-to-projects
-   publishing-from-portal
+   identifiers
+   publishing
+   using
+   evaluating
    example
 
 ```
