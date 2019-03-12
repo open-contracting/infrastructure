@@ -253,7 +253,7 @@
         },
         "title": {
           "title": "Title",
-          "description": "The formal name of this contracting process. This may be derived from the `release.title`, `tender.title`, `award.title` or `contract.title`. Once set, it should not normally by changed.",
+          "description": "The formal name of this contracting process. Once set, this should not normally by changed.",
           "type": "string"
         },
         "description": {
@@ -263,7 +263,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
             "pre-award",
@@ -280,7 +280,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
+              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct).",
               "type": "string",
               "enum": [
                 "open",
@@ -293,34 +293,34 @@
             },
             "procurementMethodDetails": {
               "title": "Procurement method details",
-              "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
+              "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
               "type": "string"
             },
             "costEstimate": {
               "title": "Cost estimate",
-              "description": "This should be the pre-tender estimated value of the contracting process. This may be taken from the `tender.value` field of the most recent release where `tender.status` was 'planning', or may be entered manually.",
+              "description": "The pre-tender estimated value of the contracting process.",
               "$ref": "#/definitions/Value"
             },
             "numberOfTenderers": {
               "title": "Number of tenderers",
-              "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
+              "description": "The number of parties who placed a bid during this contracting process.",
               "type": "number"
             },
             "procuringEntity": {
               "title": "Procuring entity",
-              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
+              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             },
             "administrativeEntity": {
               "title": "Administrative entity",
-              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
+              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             }
           }
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
+          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -328,12 +328,12 @@
         },
         "contractValue": {
           "title": "Contract value",
-          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `modifications`.",
+          "description": "The initial value of the contract. Changes to the initial value of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Value"
         },
         "contractPeriod": {
           "title": "Contract period",
-          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `modifications`.",
+          "description": "The initial duration of the contract. Changes to the initial duration of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Period"
         },
         "finalValue": {
@@ -351,7 +351,7 @@
         },
         "modifications": {
           "title": "Modifications",
-          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n The presence of changes may be detected by comparing values in the latest related OCDS release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a modification is detected, the contracting process summary information should also be updated.",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n A semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`.\n\n When a modification is detected, the contracting process summary information should also be updated.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
@@ -439,7 +439,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date this modification was recorded. Where the modification relates to an OCDS release, this should be filled from the releated `release.date`.",
+          "description": "The date this modification was recorded.",
           "type": [
             "string"
           ],
