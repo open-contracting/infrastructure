@@ -1,5 +1,5 @@
 {
-  "id": "http://standard.open-contracting.org/infrastructure/beta/project-package-schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/0__9__0__beta/project-package-schema.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Schema for an OC4IDS project package",
   "description": "A package of OC4IDS projects. Note that all projects within a package must have a unique project identifier.",
@@ -36,7 +36,7 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "$ref": "http://standard.open-contracting.org/infrastructure/beta/project-schema.json"
+        "$ref": "http://standard.open-contracting.org/infrastructure/0__9__0__beta/project-schema.json"
       },
       "uniqueItems": true
     },
