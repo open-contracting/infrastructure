@@ -86,7 +86,7 @@ So that your project information can be compared with information from others, a
 
     .. markdown::
 
-      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing-from-portal.md) for a step by step guide.
+      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing.md) for a step by step guide.
 
 ```
 
