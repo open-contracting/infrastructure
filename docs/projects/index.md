@@ -114,4 +114,4 @@ Some of the data structures, such as the organisation identifier structure, may 
 
 ... OC4IDS provides definitions and codelists that can be used to collect consistent data.
 
-Consult the [specification reference for definitions](reference.md).
+Consult the [specification reference for definitions](../reference/index.md).

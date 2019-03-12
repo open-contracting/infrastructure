@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/0__9__beta/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
   "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
   "type": "object",
@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projectstatus) codelist.",
       "type": "string",
       "enum": [
         "identification",
@@ -75,7 +75,7 @@
     },
     "type": {
       "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](#projecttype) codelist.",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -195,6 +195,12 @@
       "description": "Within OC4IDS, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "An identifier for this contracting process. If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "type": "string",
+          "minLength": 1
+        },
         "summary": {
           "title": "Summary",
           "description": "Summary information about a contracting process, including a log of changes over time.",
@@ -208,7 +214,10 @@
             "$ref": "#/definitions/LinkedRelease"
           }
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "ContractingProcessSummary": {
       "type": "object",
@@ -217,7 +226,7 @@
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
-          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an OCID may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
           "type": "string"
         },
         "externalReference": {
@@ -227,7 +236,7 @@
         },
         "nature": {
           "title": "Nature",
-          "description": "This array field should record whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "description": "Whether this contracting process relates to the design, construction and/or supervision of the project, from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractnature) codelist. More than one value may be provided if the contract is for both design and construction, or both design and supervision, etc.",
           "type": "array",
           "items": {
             "type": [
@@ -254,7 +263,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
           "type": "string",
           "enum": [
             "pre-award",
@@ -271,7 +280,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
+              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
               "type": "string",
               "enum": [
                 "open",
@@ -403,7 +412,13 @@
           "type": "string",
           "format": "uri"
         }
-      }
+      },
+      "required": [
+        "id",
+        "tag",
+        "date",
+        "url"
+      ]
     },
     "Modification": {
       "title": "Modification",
@@ -446,7 +461,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "A value from the modificationType codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
+          "description": "A value from the [modificationType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string"
           ],
@@ -554,6 +569,12 @@
       "title": "Delivery Location",
       "description": "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these.",
       "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifier for this location, unique within the array this location appears in.",
+          "type": "string",
+          "minLength": 1
+        },
         "description": {
           "title": "Description",
           "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
@@ -642,7 +663,10 @@
           "description": "A physical address where works will take place.",
           "$ref": "#/definitions/Address"
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "Value": {
       "title": "Value",
@@ -1015,7 +1039,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array"
           ],
@@ -1205,7 +1229,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "string"
           ],
