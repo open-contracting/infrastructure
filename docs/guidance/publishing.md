@@ -1,6 +1,6 @@
 # Publishing data from an infrastructure transparency portal
 
-OC4IDS can be used to publish standardised open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
+OC4IDS can be used to publish standardised open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
 
 Publishing standardised open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
 
@@ -20,7 +20,7 @@ If you also collect detailed data on contracting processes, this can be publishe
 
 ## Getting started
 
-*Some of the following steps may require support from a technical expert. You can also contact the OCDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
+*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
 
 ### (1) Make a commitment
 
@@ -48,9 +48,9 @@ Map existing data structures to [OC4IDS](../projects/index.md).
 
 Your mapping might identify:
 
-* **Gaps in your data** where data in OC4IDS is not currently collected or disclosed in your system. Use the specification as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.
+* **Gaps in your data** where data in OC4IDS is not currently collected or disclosed in your system. Use OC4IDS as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.
 
-* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../../../projects/schema/#extending-the-schema) for information on including additional fields in your data.
+* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../../../reference/#extending-the-schema) for information on including additional fields in your data.
 
 
 ### (2b) Map detailed contracting process data

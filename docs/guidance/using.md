@@ -16,7 +16,7 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 ### Getting started
 
-*The following steps may require support from a technical expert. You can also contact the OCDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
+*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 #### (1) Evaluate the Open Contracting Data
 

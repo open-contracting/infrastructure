@@ -22,7 +22,7 @@ The full JSON file for the example project looks like this:
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer:  
+   :jsonpointer:  /projects/0
 ```   
 
 ## Sections
@@ -31,18 +31,18 @@ The full JSON file for the example project looks like this:
 
 This section provides contextual information about the project, including:
 
-* `status` from the [Project Status codelist](../../../../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
+* `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
 * `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'construction'.
 
 * `sector` from the [Project Sector codelist](../../../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
 
-* one or more `locations`, which may be expressed in a variety of ways as [outlined in the specification reference](../../../../reference/#locations). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
+* one or more `locations`, which may be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /locations
+   :jsonpointer: /projects/0/locations
    :expand:  geometry, gazetteer, address
    :title: location 1
 
@@ -57,7 +57,7 @@ In this example, the overall budget for the project covers 3 years and is broken
   ```eval_rst
 
   .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /budget
+     :jsonpointer: /projects/0/budget
      :expand: amount, budgetBreakdown/0
      :title: budget
 
@@ -66,7 +66,7 @@ In this example, the overall budget for the project covers 3 years and is broken
   ```eval_rst
 
   .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /budget/budgetBreakdown/0
+     :jsonpointer: /projects/0/budget/budgetBreakdown/0
      :expand: amount, period, sourceParty
      :title: budgetBreakdown
 
@@ -81,7 +81,7 @@ In this example, details are given about the fictional Motorways UK entity, whic
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /parties/0
+   :jsonpointer: /projects/0/parties/0
    :expand: address, contactPoint, roles
    :title: party
 
@@ -96,7 +96,7 @@ In this example, an environmental impact assessment is provided. The `documentTy
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /documents/1
+   :jsonpointer: /projects/0/documents/1
    :expand: address, contactPoint, roles
    :title: document
 
@@ -110,7 +110,7 @@ This example provides information about a contracting process for the design of 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /contractingProcesses/0
+   :jsonpointer: /projects/0/contractingProcesses/0
    :expand: summary, documents, releases
    :title: contractingProcess
 
@@ -125,7 +125,7 @@ This example shows a change in duration using the `oldContractPeriod` and `newCo
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /contractingProcesses/2/summary/modifications/0
+   :jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
    :expand: oldContractPeriod, newContractPeriod
    :title: modification
 
@@ -139,7 +139,7 @@ Since in this example there were variations to related contracting processes, th
 
 ```eval_rst
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer: /completion
+   :jsonpointer: /projects/0/completion
    :expand:  finalValue
    :title: Completion
 

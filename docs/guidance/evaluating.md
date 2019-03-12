@@ -14,7 +14,7 @@ The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which 
 
 ## Getting started
 
-*The following steps may require support from a technical expert. You can also contact the OCDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
+*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
 
 ### (1) Check your data formats
 
@@ -60,9 +60,9 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
 ```
 
-If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](contracts-to-projects.md).
+If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](using.md).
 
-If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes](../../../../projects/reference/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
+If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes](../../../../reference/schema/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
 
 ### (2) Check which elements of IDS are disclosed
 

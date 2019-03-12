@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://standard.open-contracting.org/infrastructure/0__9__beta/project-schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/0__9__0__beta/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
   "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
   "type": "object",
@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projectstatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectstatus) codelist.",
       "type": "string",
       "enum": [
         "identification",
@@ -51,7 +51,7 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "One or more values from the [projectSector codelist](#projectSector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
+      "description": "One or more values from the [projectSector codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectsector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
       "type": "array",
       "items": {
         "type": "string"
@@ -75,7 +75,7 @@
     },
     "type": {
       "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projecttype) codelist.",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -236,7 +236,7 @@
         },
         "nature": {
           "title": "Nature",
-          "description": "Whether this contracting process relates to the design, construction and/or supervision of the project, from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractnature) codelist. More than one value may be provided if the contract is for both design and construction, or both design and supervision, etc.",
+          "description": "Whether this contracting process relates to the design, construction and/or supervision of the project, from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractnature) codelist. More than one value may be provided if the contract is for both design and construction, or both design and supervision, etc.",
           "type": "array",
           "items": {
             "type": [
@@ -263,7 +263,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus).",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
             "pre-award",
@@ -280,7 +280,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct).",
+              "description": "Specify tendering method using the [method](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#method) codelist (open, selective, limited, direct).",
               "type": "string",
               "enum": [
                 "open",
@@ -461,7 +461,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "A value from the [modificationType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
+          "description": "A value from the [modificationType](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string"
           ],
@@ -1039,7 +1039,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array"
           ],
@@ -1229,7 +1229,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "string"
           ],
