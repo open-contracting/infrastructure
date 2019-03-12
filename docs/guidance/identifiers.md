@@ -19,11 +19,15 @@ There are different approaches to including project identifiers in contracting d
   However, this approach allows some data quality checks to be run; for example, checking that all the contracting processes over a certain value from a given agency have a project identifier, and that the identifier matches a defined pattern or a local list of project identifiers.
 
   This approach also enables the joining up of data on multiple contracting processes relating to a single infrastructure project.
-  
+
 
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up and use the project's identifier from the national register. If the project is not yet in the register, they would request its addition.
 
-  This approach supports more comprehensive and effective data quality checks; for example, project identifiers entered into procurement systems can be immediately checked against the project register to prevent errors in data entry ("validation at source"). A central register can ensure that project identifiers are locally unique, and more robustly supports use cases like identifying projects lacking related contracts. However, this approach requires political will and technical capacity to establish the central register and integrate it into procurement systems, and it requires an appropriate central actor to manage it.
+  This approach supports more comprehensive and effective data quality checks; for example, project identifiers entered into procurement systems can be immediately checked against the project register to prevent errors in data entry ("validation at source").
+
+  A central register can ensure that project identifiers are locally unique, and more robustly supports use cases like identifying projects lacking related contracts.
+
+  However, this approach requires political will and technical capacity to establish the central register and integrate it into procurement systems, and it requires an appropriate central actor to manage it.
 
 ## Globally unique project identifiers
 
