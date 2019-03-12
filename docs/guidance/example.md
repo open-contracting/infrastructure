@@ -31,13 +31,13 @@ The full JSON file for the example project looks like this:
 
 This section provides contextual information about the project, including:
 
-* `status` from the [Project Status codelist](../../../../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
+* `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
 * `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'construction'.
 
 * `sector` from the [Project Sector codelist](../../../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
 
-* one or more `locations`, which may be expressed in a variety of ways as [outlined in the specification reference](../../../../reference/#locations). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
+* one or more `locations`, which may be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
 
 ```eval_rst
 
