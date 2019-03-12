@@ -22,7 +22,7 @@ There are different approaches to including project identifiers in contracting d
 
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up and use the project's identifier from the national register. If the project is not yet in the register, they would request its addition.
 
-  This approach enables validation ‘at source’ of the project identifier and supports more comprehensive checks on how many projects have no associated contracts; however it requires the availability of a central actor, the political will and the technical capacity to establish and maintain a central register.
+  This approach enables validation ‘at source’ of the project identifier and supports more comprehensive checks on how many projects have no associated contracts. However, this approach requires political will and technical capacity to establish a central register and integrate it into procurement systems, and it requires an appropriate central actor to manage it.
 
   Maintaining a central register can help to make sure project identifiers are unique and validating identifiers entered into procurement systems against the register can help to avoid errors in data entry.
 
@@ -30,7 +30,7 @@ There are different approaches to including project identifiers in contracting d
 
 Project identifiers in OC4IDS should be globally unique; this means that, across the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
 
-Where local project identifiers are available in existing systems or data, these should be re-used to create a globally unique project identifier for use in OC4IDS; otherwise, where local project identifiers are not available, publishers may assign local identifiers to projects in the systems used to generate OC4IDS data.
+If local project identifiers are available in existing systems or data, these should be re-used to create globally unique project identifiers for use in OC4IDS; otherwise, if local project identifiers are not available, publishers may assign local identifiers to projects in the systems used to generate OC4IDS data.
 
 To make local project identifiers globally unique for use in OC4IDS, the OC4IDS Helpdesk assigns a project identifier prefix that publishers must add to local project identifiers, using the following identifier structure: `[project identifier prefix]-[local project identifier]`.
 
