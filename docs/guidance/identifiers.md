@@ -19,6 +19,7 @@ There are different approaches to including project identifiers in contracting d
   However, this approach allows some data quality checks to be run; for example, checking that all the contracting processes over a certain value from a given agency have a project identifier, and that the identifier matches a defined pattern or a local list of project identifiers.
 
   This approach also enables the joining up of data on multiple contracting processes relating to a single infrastructure project.
+  
 
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up and use the project's identifier from the national register. If the project is not yet in the register, they would request its addition.
 
