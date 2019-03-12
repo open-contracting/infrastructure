@@ -8,13 +8,13 @@ Trillions of dollars are spent every year on infrastructure and estimates sugges
 
 This Open Contracting for Infrastructure Data Standards (OC4IDS) Toolkit will show you how to:
 
-* [Publish standardised data](guidance/publishing-from-portal.md)) on infrastructure projects and contracts using the CoST IDS and OCDS.
+* [Publish standardised data](guidance/publishing.md) on infrastructure projects and contracts using the CoST IDS and OCDS.
 
-* Extract [infrastructure contracting data from existing procurement portals](guidance/contracts-to-projects.md);
+* Extract [infrastructure contracting data from existing procurement portals](guidance/using.md).
 
 * Connect contract and project-level information [using OC4IDS](projects/index.md).
 
-* Assess published data [against the CoST IDS](guidance/assess-against-ids.md);
+* Assess published data [against the CoST IDS](guidance/evaluating.md).
 
 * Make use of data when monitoring infrastructure projects.
 
