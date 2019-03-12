@@ -1,10 +1,12 @@
-{% set css_files = css_files + ["_static/basic.css"] %}
+{% set css_files = css_files + ["_static/basic.css", "https://fonts.googleapis.com/css?family=Montserrat"] %}
 {% extends "!layout.html" %}
+{% set css_files = css_files + ["_static/renderjson.css", "_static/basic.css"] %}
+{% set script_files = script_files + ["_static/renderjson.js", "_static/json-example-format.js"] %}
 
 {% block developed_by %}
   {{ super() }}
   <p class="oc-developed-by" style="margin-top: 0px">and</p>
-  <a href="http://infrastructuretransparency.org/"> 
+  <a href="http://infrastructuretransparency.org/">
     <img src="{{ pathto('_static/images/logos/') }}cost.png" style="padding-left:40px; padding-right:40px;"/>
   </a>
 {% endblock %}

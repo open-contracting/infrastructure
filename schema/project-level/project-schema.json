@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://github.com/open-contracting/infrastructure/blob/master/schema/schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/0__9__beta/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
-  "description": "The Open Contracting fo Infrastructure Data Standard Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/).",
+  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
   "type": "object",
   "required": [
     "id"
@@ -31,7 +31,7 @@
     },
     "status": {
       "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](#projectstatus) codelist.",
+      "description": "The current phase or status of this project, from the [projectStatus](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projectstatus) codelist.",
       "type": "string",
       "enum": [
         "identification",
@@ -51,8 +51,13 @@
     },
     "sector": {
       "title": "Project sector",
-      "description": "The main sector this project relates to. CoST guidance suggests that countries should develop a list of sectors and sub-sectors relevant to the country, basing this on the [PPPCert Type of Assets table](https://ppp-certification.com/ppp-certification-guide/4-where-ppps-are-used-%E2%80%93-infrastructure-sectors).",
-      "type": "string"
+      "description": "One or more values from the [projectSector codelist](#projectSector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "codelist": "projectSector.csv",
+      "openCodelist": true
     },
     "purpose": {
       "title": "Project purpose",
@@ -70,7 +75,7 @@
     },
     "type": {
       "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](#projecttype) codelist.",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#projecttype) codelist.",
       "type": "string",
       "enum": [
         "construction",
@@ -190,6 +195,12 @@
       "description": "Within OC4IDS, a contracting process provides both summary information, and a log of changes over time, either manually curated, or automatically generated through linked OCDS releases.",
       "type": "object",
       "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "An identifier for this contracting process. If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "type": "string",
+          "minLength": 1
+        },
         "summary": {
           "title": "Summary",
           "description": "Summary information about a contracting process, including a log of changes over time.",
@@ -203,7 +214,10 @@
             "$ref": "#/definitions/LinkedRelease"
           }
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "ContractingProcessSummary": {
       "type": "object",
@@ -212,7 +226,7 @@
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
-          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an OCID may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](http://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
           "type": "string"
         },
         "externalReference": {
@@ -222,7 +236,7 @@
         },
         "nature": {
           "title": "Nature",
-          "description": "This array field should record whether this contract is related to design, construction or supervision. More than one value may be provided in cases where the contract is for design and build, or design and supervision etc.",
+          "description": "Whether this contracting process relates to the design, construction and/or supervision of the project, from the [contractNature](http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractnature) codelist. More than one value may be provided if the contract is for both design and construction, or both design and supervision, etc.",
           "type": "array",
           "items": {
             "type": [
@@ -239,7 +253,7 @@
         },
         "title": {
           "title": "Title",
-          "description": "The formal name of this contracting process. This may be derived from the `release.title`, `tender.title`, `award.title` or `contract.title`. Once set, it should not normally by changed.",
+          "description": "The formal name of this contracting process. Once set, this should not normally by changed.",
           "type": "string"
         },
         "description": {
@@ -249,7 +263,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](#contractingprocessstatus). This value may be derived using the business logic set out in the codelist.",
+          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
             "pre-award",
@@ -266,7 +280,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method](#method) codelist (open, selective, limited, direct). This may be derived from the `tender.procurementMethod` field of a related OCDS release.",
+              "description": "Specify tendering method using the [method]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#method) codelist (open, selective, limited, direct).",
               "type": "string",
               "enum": [
                 "open",
@@ -279,34 +293,34 @@
             },
             "procurementMethodDetails": {
               "title": "Procurement method details",
-              "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award. When procurement data uses the list required for infrastructure disclosures, this may be derived from the `tender.procurementMethodDetails` field of an OCDS release. In other cases this may need manual data entry.",
+              "description": "Additional detail on the procurement method used. This field should be used to record an agreed list of procurement process types, such as: International Competitive Bidding, National Competitive Bidding, Donor Procurement Rules, Framework or Direct Award.",
               "type": "string"
             },
             "costEstimate": {
               "title": "Cost estimate",
-              "description": "This should be the pre-tender estimated value of the contracting process. This may be taken from the `tender.value` field of the most recent release where `tender.status` was 'planning', or may be entered manually.",
+              "description": "The pre-tender estimated value of the contracting process.",
               "$ref": "#/definitions/Value"
             },
             "numberOfTenderers": {
               "title": "Number of tenderers",
-              "description": "The number of parties who placed a bid during this contracting process. This may be calculated from the `tender.numberOfTenderers` or using the `bids` extension where linked OCDS data is available.",
+              "description": "The number of parties who placed a bid during this contracting process.",
               "type": "number"
             },
             "procuringEntity": {
               "title": "Procuring entity",
-              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity' . This information may be taken from the linked OCDS releases.",
+              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             },
             "administrativeEntity": {
               "title": "Administrative entity",
-              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'. This information may be taken from the linked OCDS releases where available.",
+              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             }
           }
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'. This information may be derived from the linked OCDS releases where available. ",
+          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -314,12 +328,12 @@
         },
         "contractValue": {
           "title": "Contract value",
-          "description": "The initial value of the contract. Where linked OCDS data is available, this may be derived from `awards.value`; for contracting processes with multiple awards this may be derived from the sum of `awards.value`. Changes to the initial value of the contract should be recorded in `modifications`.",
+          "description": "The initial value of the contract. Changes to the initial value of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Value"
         },
         "contractPeriod": {
           "title": "Contract period",
-          "description": "The initial duration of the contract. Where linked OCDS data is available, this may be derived from `awards.contactPeriod` or `tender.contractPeriod`; for contracting processes with multiple awards, set `.startDate` to the earliest of `awards.contractPeriod.startDate` and `.endDate` to the latest of `awards.contractPeriod.endDate`. Changes to the initial duration of the contract should be recorded in `modifications`.",
+          "description": "The initial duration of the contract. Changes to the initial duration of the contract should be recorded in `modifications`.",
           "$ref": "#/definitions/Period"
         },
         "finalValue": {
@@ -337,7 +351,7 @@
         },
         "modifications": {
           "title": "Modifications",
-          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n The presence of changes may be detected by comparing values in the latest related OCDS release with a compiledRelease created from all releases to date.\n\nA semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`. \n\n In some cases, source systems may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may be manually reported.\n\n When a modification is detected, the contracting process summary information should also be updated.",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n A semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`.\n\n When a modification is detected, the contracting process summary information should also be updated.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
@@ -398,7 +412,13 @@
           "type": "string",
           "format": "uri"
         }
-      }
+      },
+      "required": [
+        "id",
+        "tag",
+        "date",
+        "url"
+      ]
     },
     "Modification": {
       "title": "Modification",
@@ -419,7 +439,7 @@
         },
         "date": {
           "title": "Date",
-          "description": "The date this modification was recorded. Where the modification relates to an OCDS release, this should be filled from the releated `release.date`.",
+          "description": "The date this modification was recorded.",
           "type": [
             "string"
           ],
@@ -441,7 +461,7 @@
         },
         "type": {
           "title": "Type",
-          "description": "A value from the modificationType codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
+          "description": "A value from the [modificationType]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#modificationtype) codelist, indicating whether the modification relates to the duration, value, scope or other aspect of the contract.",
           "type": [
             "string"
           ],
@@ -549,6 +569,12 @@
       "title": "Delivery Location",
       "description": "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these.",
       "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifier for this location, unique within the array this location appears in.",
+          "type": "string",
+          "minLength": 1
+        },
         "description": {
           "title": "Description",
           "description": "A name or description of this location. This might include the name(s) of the location(s), or might provide a human readable description of the location to be covered. This description may be used in a user-interface.",
@@ -637,7 +663,10 @@
           "description": "A physical address where works will take place.",
           "$ref": "#/definitions/Address"
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "Value": {
       "title": "Value",
@@ -1010,7 +1039,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#party-role). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "array"
           ],
@@ -1200,7 +1229,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist](http://standard.open-contracting.org/1.1/en/schema/codelists/#document-type). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described taken from the [documentType codelist]((http://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/projects/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
           "type": [
             "string"
           ],

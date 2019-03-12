@@ -9,5 +9,6 @@
    publishing
    using
    evaluating
+   example
 
 ```
