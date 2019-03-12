@@ -60,7 +60,7 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30 10
+   :widths: 20 20 30 30
    :file: ../../build/current_lang/project-level-identification.csv
 ```
 
@@ -69,7 +69,7 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30 10
+   :widths: 20 20 30 30
    :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -78,7 +78,7 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30 10
+   :widths: 20 20 30 30
    :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -89,7 +89,7 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30 10
+   :widths: 20 20 30 30
    :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
@@ -104,7 +104,7 @@ In some cases, OCDS data may include an explanation of changes in the relevant `
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30 10
+   :widths: 20 20 30 30
    :file: ../../build/current_lang/process-level-implementation.csv
 ```
 

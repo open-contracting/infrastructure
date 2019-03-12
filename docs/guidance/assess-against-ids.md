@@ -1,4 +1,5 @@
-# Evaluating disclosures against the Infrastructure Data Standard
+# Assessing compliance with the CoST IDS
+
 
 The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which is adapted by CoST national programmes to meet their local needs. This section sets out how to use **OC4IDS** and **OCDS** to assess coverage of published data against the IDS. For example, to monitor which elements of IDS are being supplied and whether they are available for all projects or only some.
 
@@ -35,6 +36,16 @@ Check whether the project-level data is published using [OC4IDS](../projects/ind
 ```
 
 If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC4IDS JSON file for each project.
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+
+```
 
 #### Contracting data
 

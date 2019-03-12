@@ -4,11 +4,24 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
-An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
+An infrastructure project may stand alone (e.g. a town building a new hospital), or may form part of a wider programme of activity (e.g. construction of a number of railway stations). Each infrastructure project will usually involve project-level planning and co-ordination, managed through a series of contracts and subcontracts.
 
-![Projects typically involve multiple contracts](../../_static/images/diagram-project-contract.png)
+```eval_rst
+.. admonition:: Tip
+    :class: tip
 
-A public body may issue contracts for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
+    .. markdown::
+
+      The term 'project' can also be used to refer to a larger programme of work of which an individual infrastructure project is a part, such as the construction of a whole highway. The term 'project' may also refer to a public investment project with funds allocated in the national budget, such as the upgrading of the rail network in a particular region.
+
+      However, in OC4IDS, the term 'project' refers to the construction of a single asset, for example the construction of a bridge, a highway junction or building.
+
+
+```
+
+![Projects typically involve multiple contracts](../../_static/images/diagram-project-contracting-process.png)
+
+Within an infrastructre project, a public body may issue contracts within contracting processes for design work, construction and supervision or monitoring of the construction work. Budgets, planning and impact assessments are likely to cut across all these components of a project.
 
 ## What is project-level data?
 
@@ -102,4 +115,4 @@ Some of the data structures, such as the organisation identifier structure, may 
 
 ... OC4IDS provides definitions and codelists that can be used to collect consistent data.
 
-Consult the [specification reference for definitions](reference.md).
+Consult the [specification reference for definitions](../reference/index.md).
