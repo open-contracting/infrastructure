@@ -12,19 +12,17 @@ Project identifiers in contracting data should be locally unique; this means tha
 
 There are different approaches to including project identifiers in contracting data, with the best solution depending on the context of an implementation:
 
-* **Include a free-text field for project identifiers in procurement systems** and work with officials entering procurement information to make sure this is populated according to some defined pattern.
+* **Include a free-text field for project identifiers in procurement systems** and work with officials entering procurement information to make sure this is populated according to a defined pattern.
 
   Free-text entry of project identifiers can lead to data quality issues; for example, project identifiers can be mistyped or two groups can accidentally choose to use the same identifier for different projects.
 
-  However, this approach allows some checks to be run; for example, checking that all the contracting processes over a certain value from a given agency have a project identifier, and that the identifier matches a pattern or a local identifier list.
+  However, this approach allows some data quality checks to be run; for example, checking that all the contracting processes over a certain value from a given agency have a project identifier, and that the identifier matches a defined pattern or a local list of project identifiers.
 
-  This approach also allows data on several contracting processes relating to a single project to be joined up.
+  This approach also enables the joining up of data on multiple contracting processes relating to a single infrastructure project.
 
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up and use the project's identifier from the national register. If the project is not yet in the register, they would request its addition.
 
-  This approach enables validation ‘at source’ of the project identifier and supports more comprehensive checks on how many projects have no associated contracts. However, this approach requires political will and technical capacity to establish a central register and integrate it into procurement systems, and it requires an appropriate central actor to manage it.
-
-  Maintaining a central register can help to make sure project identifiers are unique and validating identifiers entered into procurement systems against the register can help to avoid errors in data entry.
+  This approach supports more comprehensive and effective data quality checks; for example, project identifiers entered into procurement systems can be immediately checked against the project register to prevent errors in data entry ("validation at source"). A central register can ensure that project identifiers are locally unique, and more robustly supports use cases like identifying projects lacking related contracts. However, this approach requires political will and technical capacity to establish the central register and integrate it into procurement systems, and it requires an appropriate central actor to manage it.
 
 ## Globally unique project identifiers
 
