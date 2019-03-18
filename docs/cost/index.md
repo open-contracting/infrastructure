@@ -11,13 +11,13 @@ The [CoST approach](http://infrastructuretransparency.org/our-approach/) is base
 
 * **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be disclosed at key stages of an infrastructure project cycle.
 
-* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
+* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST member programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
 
 * **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
 * **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account.
 
-The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritised different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
+The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST member programmes, who have variously prioritised different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
 
 You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/).
 
