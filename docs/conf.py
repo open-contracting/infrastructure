@@ -168,6 +168,7 @@ def setup(app):
 
     language = app.config.overrides.get('language', 'en')
 
+    headers = ['Title', 'Description', 'Extension']
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = '{}schema'.format(gettext_domain_prefix)
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
@@ -184,7 +185,7 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
-    ], localedir, language, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+    ], localedir, language, headers, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
 
     # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
     for filename in glob(str(basedir / 'mapping' / '*.csv')):
