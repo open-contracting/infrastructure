@@ -34,7 +34,7 @@ Check whether the project-level data is published using [OC4IDS](../projects/ind
 
 ```
 
-If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the specification and create an OC4IDS JSON file for each project.
+If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the specification and create an OC4IDS JSON file for each project.
 
 ```eval_rst
 .. admonition:: Tip
@@ -62,7 +62,7 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
 If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](using.md).
 
-If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the [contracting processes](../../../../reference/schema/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
+If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) to map the data to the [contracting processes](../../../../reference/schema/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
 
 ### (2) Check which elements of IDS are disclosed
 

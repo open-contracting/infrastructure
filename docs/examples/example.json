@@ -1,7 +1,7 @@
 {
-  "uri": "https://standard.open-contracting.org/infrastructure/0.9/en/_static/example.json",
-  "publishedDate": "2019-03-14T09:54:00Z",
   "version": "0.9",
+  "uri": "https://standard.open-contracting.org/infrastructure/0.9/en/_static/example.json",
+  "publishedDate": "2018-12-10T15:53:00Z",
   "publisher": {
     "name": "Open Data Services Co-operative Limited",
     "scheme": "GB-COH",
@@ -20,19 +20,16 @@
       "period": {
         "startDate": "2016-01-01T00:00:00Z",
         "endDate": "2018-12-10T00:00:00Z",
-        "maxExtentDate": "2019-12-10T00:00:00Z",
         "durationInDays": 1074
       },
       "sector": [
         "transport",
         "transport.road"
       ],
-      "purpose": "Motorway upgrades to reduce travel times and increase road transport capacity",
       "type": "construction",
       "assetLifetime": {
         "startDate": "2018-07-01T00:00:00Z",
         "endDate": "2040-07-01T00:00:00Z",
-        "maxExtentDate": "2045-07-01T00:00:00Z",
         "durationInDays": 8027
       },
       "locations": [
@@ -99,12 +96,9 @@
               "amount": 10000000,
               "currency": "GBP"
             },
-            "uri": "http://motorways.uk/budgets/xx1234/2019/1",
             "period": {
               "startDate": "2016-01-01T00:00:00Z",
-              "endDate": "2016-12-31T00:00:00Z",
-              "maxExtentDate": "2017-12-31T00:00:00Z",
-              "durationInDays": 365
+              "endDate": "2016-12-31T00:00:00Z"
             },
             "sourceParty": {
               "name": "Motorways UK",
@@ -155,14 +149,6 @@
             "id": "XX1234",
             "uri": "https://government-organisation.register.gov.uk/records/XX1234"
           },
-          "additionalIdentifiers": [
-            {
-              "scheme": "XR-EUCB",
-              "legalName": "Motorways UK",
-              "id": "543-210",
-              "uri": "https://xr-eucb/543-210"
-            }
-          ],
           "address": {
             "postalCode": "LL55 4NY",
             "countryName": "UK",
@@ -354,9 +340,6 @@
                 "url": "https://example.com/Published/a1b1c1-design-001.html",
                 "datePublished": "2018-12-10T16:45:00Z",
                 "format": "text/html",
-                "language": "en",
-                "pageStart": "1",
-                "pageEnd": "5",
                 "author": "Motorways UK"
               }
             ]
@@ -396,6 +379,10 @@
               },
               "numberOfTenderers": 5,
               "procuringEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
               }
@@ -510,8 +497,6 @@
                 "dateModified": "2018-02-11T00:00:00Z",
                 "format": "text/html",
                 "language": "en",
-                "pageStart": "25",
-                "pageEnd": "30",
                 "accessDetails": "Register for document access.",
                 "author": "Motorways UK"
               },
@@ -538,9 +523,7 @@
                 "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b005",
                 "oldContractPeriod": {
                   "startDate": "2017-07-07T00:00:00Z",
-                  "endDate": "2018-07-01T00:00:00Z",
-                  "maxExtentDate": "2018-12-31T00:00:00Z",
-                  "durationInDays": 360
+                  "endDate": "2018-07-01T00:00:00Z"
                 },
                 "newContractPeriod": {
                   "startDate": "2017-07-07T00:00:00Z",

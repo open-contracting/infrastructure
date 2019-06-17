@@ -42,7 +42,7 @@ Map existing data structures to [OC4IDS](../projects/index.md).
 
     .. markdown::
 
-      The [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) can be used to document your mapping.
+      The [OC4IDS Field-Level Mapping Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping.
 
 ```
 
