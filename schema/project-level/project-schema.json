@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "http://standard.open-contracting.org/infrastructure/0__9__0__beta/project-schema.json",
+  "id": "http://standard.open-contracting.org/infrastructure/schema/0__9__1/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
   "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
   "type": "object",

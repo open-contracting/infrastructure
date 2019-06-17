@@ -1,6 +1,18 @@
 # Changelog
 
-## [0.9-beta] - 2019-03-19
+## [0.9.1] - 2019-06-17
+
+### Changed
+
+* Update to 0.1.0 of ocds-babel.
+* Create Changelog.
+
+### Fixed
+
+* Add correct schema urls to schema files.
+
+
+## [0.9.0] - 2019-03-19
 
 This changelog entry indicates notable changes since the alpha-2 development release of OC4IDS, it is not intended to be a complete list of changes.
 
