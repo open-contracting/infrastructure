@@ -12,24 +12,24 @@ In addition to the specific changes to schema and codelists noted below:
 
 ### Packaging
 
-* Add [project package schema](http://standard.open-contracting.org/infrastructure/latest/en/reference/package/), OC4IDS data must be published as part of a project package.
+* Add [project package schema](http://standard.open-contracting.org/infrastructure/latest/en/reference/package/). OC4IDS data must be published as part of a project package.
 
 ### Schema updates
 
 * `sector` - use projectSector open codelist
-* `contractingProcess` - add required `id` field
-* `linkedRelease` - make `id` a required field
-* `variations` - renamed to `modifications`
-* `location` - add required `id` field
+* `ContractingProcess` - add required `id` field
+* `LinkedRelease` - make `id` required
+* `variations` - rename to `modifications`
+* `Location` - add required `id` field
 
 ### New codelists
 
-* projectSector codelist - add codelist for project sector
+* `projectSector` codelist - add codelist for project sector
 
 ### Codelist updates
 
 * projectStatus codelist - replace 'construction' with 'implementation'
-* variationType codelist - rename codelist to modificationType
+* variationType codelist - rename to modificationType
 * partyRole codelist - add OC4IDS codes mentioned in schema and mapping:
   * funder
   * administrativeEntity
@@ -38,7 +38,7 @@ In addition to the specific changes to schema and codelists noted below:
   * procuringEntity
   * supplier
   * tenderer
-* partyRole codelist - remove PPP specific codes:
+* partyRole codelist - remove PPP-specific codes:
   * bidder
   * qualifiedBidder
   * preferredBidder
@@ -53,7 +53,7 @@ In addition to the specific changes to schema and codelists noted below:
   * socialWitness
   * otherWitness
   * notary
-* documentType codelist - remove PPP specific codes:
+* documentType codelist - remove PPP-specific codes:
   * financeAdditionality
   * pppModeRationale
   * riskComparison
