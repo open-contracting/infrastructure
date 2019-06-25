@@ -49,7 +49,7 @@ The following mapping tables describe:
 
     .. markdown::
 
-        Some mappings use fields from [OCDS extensions](http://standard.open-contracting.org/latest/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
+        Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/latest/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
 
 ```
 
@@ -97,7 +97,7 @@ The following mapping tables describe:
 
 Disclosures in the implementation section of the CoST IDS relate to changes to a contract's value, duration or scope that were made after the contract was awarded.
 
-If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below.
+If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](https://standard.open-contracting.org/latest/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below.
 
 In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
 

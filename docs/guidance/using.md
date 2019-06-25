@@ -28,7 +28,7 @@ Check that the data you plan to analyse is in OCDS format
 
     .. markdown::
 
-      You can use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check whether your data is in the correct format
+      You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
 
 ```
 

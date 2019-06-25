@@ -56,7 +56,7 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
     .. markdown::
 
-      You can use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check that whether your data is published in OCDS format.
+      You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check that whether your data is published in OCDS format.
 
 ```
 

@@ -1,7 +1,7 @@
 # About
 
 
-The [Open Contracting Partnership](http://www.open-contracting.org), [CoST](http://www.constructiontransparency.org/) - the Infrastructure Transparency Initiative - and [Open Data Services Co-operative](http://www.opendataservices.coop) are working together to document how the [Open Contracting Data Standard](http://standard.open-contracting.org), and additional standardised data models, can be used to represent, share and analyse all the information required under the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf).
+The [Open Contracting Partnership](http://www.open-contracting.org), [CoST](http://www.constructiontransparency.org/) - the Infrastructure Transparency Initiative - and [Open Data Services Co-operative](http://www.opendataservices.coop) are working together to document how the [Open Contracting Data Standard](https://standard.open-contracting.org), and additional standardised data models, can be used to represent, share and analyse all the information required under the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf).
 
 You can get involved via the [issue tracker](https://github.com/open-contracting/infrastructure), or for more information about this work, contact [Bernadine Fernz](mailto:bfernz@open-contracting.org), Head of Infrastructure at the Open Contracting Partnership and/or [Evelyn Hernandez](mailto:e.hernandez@constructiontransparency.org), Global Technical Adviser at CoST.
 
