@@ -59,7 +59,7 @@ If you collect detailed data on contracting processes, refer to the [OCDS implem
 
 ### (3) Build your data, systems and processes
 
-Create an OC4IDS JSON file for each project your system has information on and use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that the files are structurally correct against OC4IDS.
+Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](http://standard.open-contracting.org/infrastructure/review) to check that the files are structurally correct against OC4IDS.
 
 ```eval_rst
 .. admonition:: Tip
