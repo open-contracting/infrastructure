@@ -30,7 +30,7 @@ Check whether the project-level data is published using [OC4IDS](../projects/ind
 
     .. markdown::
 
-      You can use the [OC4IDS Data Review Tool](http://standard.open-contracting.org/infrastructure/review) to check that whether your data is in the correct format.
+      You can use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that whether your data is in the correct format.
 
 ```
 
