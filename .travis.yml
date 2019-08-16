@@ -15,6 +15,7 @@ deploy:
     all_branches: true
 env:
   - BASEDIR="https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master"
+  - LANGS="en"
 install:
   - curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
   - pip install -r requirements.txt
