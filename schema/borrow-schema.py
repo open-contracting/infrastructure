@@ -22,7 +22,7 @@ from copy import deepcopy
 
 import requests
 
-base_url = 'http://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
+base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
 ppp_schema = requests.get(base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)

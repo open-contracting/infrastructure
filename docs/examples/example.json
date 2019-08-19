@@ -9,7 +9,7 @@
     "uri": "http://data.companieshouse.gov.uk/doc/company/09506232"
   },
   "license": "http://opendatacommons.org/licenses/pddl/1.0/",
-  "publicationPolicy": "http://standard.open-contracting.org/latest/en/implementation/publication_policy/",
+  "publicationPolicy": "https://standard.open-contracting.org/latest/en/implementation/publication_policy/",
   "projects": [
     {
       "id": "m75-junctions-4-to-5-smart-motorway",

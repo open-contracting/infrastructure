@@ -23,7 +23,7 @@ In addition to the specific changes to schema and codelists noted below:
 
 ### Packaging
 
-* Add [project package schema](http://standard.open-contracting.org/infrastructure/latest/en/reference/package/). OC4IDS data must be published as part of a project package.
+* Add [project package schema](https://standard.open-contracting.org/infrastructure/latest/en/reference/package/). OC4IDS data must be published as part of a project package.
 
 ### Schema updates
 
