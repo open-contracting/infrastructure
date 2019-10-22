@@ -4,32 +4,63 @@ The [OC4IDS schema](../reference/index.md) sets out the structure and format of 
 
 This worked example is a fully completed OC4IDS JSON file representing a fictional, completed infrastructure project to upgrade a motorway in the UK.
 
-The full OC4IDS JSON file for the worked example is available to download [here](../../../../_static/example.json) and this page contains excerpts from the example JSON file, showing how key sections of the schema should be populated.
+The full OC4IDS JSON file for the worked example is available to download [here](../../../../_static/example.json).
+
+This page contains excerpts from the example JSON file, showing how key sections of the schema should be populated.
 
 ## Overview
 
 An OC4IDS document is made up of a number of sections. These include:
 
-* **Project metadata** - contextual information about the project e.g. title, description, location and status.
-* **Budget** - information about the projected costs or allocated budget for this project.
-* **Parties** - information about the organizations and other participants involved in this project.
-* **Documents** - documents and documentation relating to this project.
-* **Contracting processes** - information about related contracting processes for different aspects of the project.
-* **Completion** - information on the final scope, duration and costs for the project.
+* **Package metadata** - a container for data on multiple projects with important metadata about the publication
+* **Project information** - for each project including:
+  * **Project metadata** - contextual information about each project such as title, description, location and status.
+  * **Budget** - information about the projected costs or allocated budget for each project.
+  * **Parties** - information about the organizations and other participants involved in each project.
+  * **Documents** - documents and documentation relating to each project.
+  * **Contracting processes** - information about related contracting processes for different aspects of the project.
+  * **Completion** - information on the final scope, duration and costs for the project.
 
-The full JSON file for the example project looks like this:
+## Sections
+
+### Package metadata
+This section provides metadata about the data, including the schema version, publisher, data license and publication policy, and acts as a container for data on multiple projects in a `projects` array.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
-   :jsonpointer:  /projects/0
-```   
+   :jsonpointer:
+   :expand: publisher
+   :title: package
 
-## Sections
+```
+#### License
 
-### Project metadata
+The `license` field should contain a link to an appropriate data license. Further information about licensing can be found in our [OCDS guidance](https://standard.open-contracting.org/latest/en/implementation/licensing/).
 
-This section provides contextual information about the project, including:
+#### Publication policy
+
+The `publicationPolicy` field should contain a link to an OC4IDS publication policy with similar information to an [OCDS publication policy](https://standard.open-contracting.org/latest/en/implementation/publication_policy/). Please refer to that documentation for more details.
+
+### Project information
+
+An OC4IDS document may contain information about multiple infrastructure projects. Each infrastructure project is represented as an entry in the `projects` array. The example contains information about one infrastructure project.
+
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer:
+   :expand: projects
+   :exclude: version, uri, publishedDate, publisher, license, publicationPolicy
+   :title: projects
+
+```
+
+Each project object contains the following sections:
+
+#### Project metadata
+
+This section provides contextual information about the infrastructure project, including:
 
 * `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
@@ -44,21 +75,21 @@ This section provides contextual information about the project, including:
 .. jsoninclude:: ../examples/example.json
    :jsonpointer: /projects/0/locations
    :expand:  geometry, gazetteer, address
-   :title: location 1
+   :title: location1
 
 ```
 
-### Budget and budget breakdown
+#### Budget and budget breakdown
 
 The `budgetBreakdown` array in the `budget` section can be used to provide a breakdown of the budget by period and/or funding source.
 
-In this example, the overall budget for the project covers 3 years and is broken down into amounts per year, with £10,000,000 allocated in 2016, as shown in the first `budgetBreakdown` component.
+In the budget example shown below, the overall budget for the infrastructure project covers 3 years and is broken down into amounts per year, with £10,000,000 allocated in 2016, as shown in the budgetBreakdown_1 example.
 
   ```eval_rst
 
   .. jsoninclude:: ../examples/example.json
      :jsonpointer: /projects/0/budget
-     :expand: amount, budgetBreakdown/0
+     :expand: amount
      :title: budget
 
   ```
@@ -68,70 +99,71 @@ In this example, the overall budget for the project covers 3 years and is broken
   .. jsoninclude:: ../examples/example.json
      :jsonpointer: /projects/0/budget/budgetBreakdown/0
      :expand: amount, period, sourceParty
-     :title: budgetBreakdown
+     :title: budgetBreakdown_1
 
   ```
 
-### Parties (organizations)
+#### Parties (organizations)
 
-The `parties` array is used to provide details about organizations involved in the project and their roles. Organization references elsewhere in the data refer back to entries in this section.
+The `parties` array is used to provide details about organizations involved in the infrastructure project and their roles. Organization references elsewhere in the data refer back to entries in this section.
 
-In this example, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` section.
+In the party_1 example below, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` section.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
    :jsonpointer: /projects/0/parties/0
    :expand: address, contactPoint, roles
-   :title: party
+   :title: party_1
 
 ```
 
-### Documents
+#### Documents
 
-The `documents` array is used to provide information and links to documents and documentation relating to the project. During different phases of the project, different document types are expected.
+The `documents` array is used to provide information and links to documents and documentation relating to the infrastructure project. During different phases of the project, different document types are expected.
 
-In this example, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../../../reference/codelists/#documenttype).
+In the document_2 example below, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../../../reference/codelists/#documenttype).
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
    :jsonpointer: /projects/0/documents/1
    :expand: address, contactPoint, roles
-   :title: document
+   :title: document_2
 
 ```
-### Contracting processes
+
+#### Contracting processes
 
 The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of modifications and a list of OCDS releases.
 
-This example provides information about a contracting process for the design of the motorway upgrade, with one related document (a tender notice) and two related OCDS releases, one for the tender and one for the contract award.
+In the contractingProcess_1 example given below, information is given about a contracting process for the design of the motorway upgrade, with one related document in the `documents` array (a tender notice) and two related OCDS `releases`, one for the tender and one for the contract award.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
    :jsonpointer: /projects/0/contractingProcesses/0
    :expand: summary, documents, releases
-   :title: contractingProcess
+   :title: contractingProcess_1
 
 ```
 
-#### Modifications
+##### Modifications
 
 Each contracting process includes a `modifications` array which is used to list any changes to the duration, price, scope or other significant aspect of the contracting process.
 
-This example shows a change in duration using the `oldContractPeriod` and `newContractPeriod` fields.
+The modification_1 example below shows a change in duration using the `oldContractPeriod` and `newContractPeriod` fields.
 
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
    :jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
    :expand: oldContractPeriod, newContractPeriod
-   :title: modification
+   :title: modification_1
 
 ```
 
-### Completion
+#### Completion
 
 The `completion` section provides final details of the scope, duration and cost for the project.
 
