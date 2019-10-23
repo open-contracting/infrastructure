@@ -7,6 +7,8 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#132](https://github.com/open-contracting/infrastructure/issues/157) - add a publicAuthority organization reference field  
+
 
 ### Codelists
 
