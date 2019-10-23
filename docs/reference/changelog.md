@@ -7,6 +7,7 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#141](https://github.com/open-contracting/infrastructure/issues/141) - update descriptions of contractingProcesses/summary/modifications and contractingProcesses/summary/description
 
 ### Codelists
 
