@@ -7,6 +7,8 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#130](https://github.com/open-contracting/infrastructure/issues/130) - add tenderers field to contractingProcessSummary/tender
+
 
 ### Codelists
 
