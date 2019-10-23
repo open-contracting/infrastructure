@@ -163,7 +163,7 @@
         },
         "endDateDetails": {
           "title": "End date details",
-          "description": "Details related to the endDate. This may be a justification for the contract's completion date being different than in the original contract.",
+          "description": "Details related to the endDate. This may be a justification for the project's completion date being different than in the original project.",
           "type": "string"
         },
         "finalValue": {
