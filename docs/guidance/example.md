@@ -40,7 +40,7 @@ The `license` field should contain a link to the license that applies to the dat
 
 #### Publication policy
 
-The `publicationPolicy` field should contain a link to a guide for data users. For more information about what to include in a publication policy, refer to the [OCDS publication policy guidance](https://standard.open-contracting.org/latest/en/implementation/publication_policy/) and the [OCDS publication policy template](https://www.open-contracting.org/resources/ocds-1-1-publication-policy-template/).  
+The `publicationPolicy` field should contain a link to a guide for data users. For more information about what to include in a publication policy, refer to the [Guidance for data users](guidance_for_data_users.md).
 
 ### Project information
 
