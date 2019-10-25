@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2] - 2019-10-25
+
+### Documentation
+* Update example file [#146](https://github.com/open-contracting/infrastructure/pull/159/commits/cf162cf2e24f3c0cd4489b9a7ff2089c0e11dd3f) - add 'publicAuthority' role and [#136](https://github.com/open-contracting/infrastructure/pull/159/commits/3b58a49139a72b56e469a8eefa2e688ce68b17fd) -   project identifier prefix.
+* Update worked example pages including [#143](https://github.com/open-contracting/infrastructure/pull/159/commits/a199f94982ab720446e668591c8af485f62e33d8) - adding project package, metadata.
+* Added guidance for data users page [#143](https://github.com/open-contracting/infrastructure/pull/159/commits/52f955600c5ecde5cb57f3a4a2ebaf73457c86c7).
+* Replaced owner with publicAuthority in mapping   [#131](https://github.com/open-contracting/infrastructure/pull/159/commits/30d1e5dddcb328ea4f3092f3ff789a87a6c6ecdc).
+
 ## [0.9.1] - 2019-06-17
 
 ### Changed
