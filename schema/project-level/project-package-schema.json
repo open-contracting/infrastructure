@@ -91,7 +91,7 @@
     },
     "publicationPolicy": {
       "title": "Publication policy",
-      "description": "A link to a document describing the publisher's [guidance for data users](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/guidance_for_data_users.md).",
+      "description": "A link to a document describing the publisher's [guidance for data users](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/guidance_for_data_users/).",
       "type": [
         "string",
         "null"
