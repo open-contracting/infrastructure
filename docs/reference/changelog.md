@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.9.2] - 2019-10-28
+
+### Schema
+
+#### OC4IDS project schema
+
+* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make releases/tag an array not a string
+
+
 ## [0.9.1] - 2019-06-17
 
 ### Changed
