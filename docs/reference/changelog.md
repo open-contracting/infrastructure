@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.9.2] - 2019-10-28
+
+### Schema
+
+#### OC4IDS project schema
+
+* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+
 ## [0.9.1] - 2019-06-17
 
 ### Changed

@@ -66,7 +66,7 @@
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications can be provided to described the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
+      "description": "One or more additional project classifications can be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
@@ -197,7 +197,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "An identifier for this contracting process. If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "description": "An identifier for this contracting process. If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](https://standard.open-contracting.org/latest/en/schema/identifiers/#contracting-process-identifier-ocid).",
           "type": "string",
           "minLength": 1
         },
@@ -226,7 +226,7 @@
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
-          "description": "If this contacting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
+          "description": "If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
           "type": "string"
         },
         "externalReference": {
@@ -263,7 +263,7 @@
         },
         "status": {
           "title": "Status",
-          "description": "The status of this contacting process. Drawn from the [contractingProcessStatus codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractingprocessstatus).",
+          "description": "The status of this contracting process. Drawn from the [contractingProcessStatus codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
             "pre-award",
@@ -320,7 +320,7 @@
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. the full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'.",
+          "description": "The name and identifier for each supplier for this contracting process. The full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
@@ -430,7 +430,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "A local identifer for this modification.",
+          "description": "A local identifier for this modification.",
           "type": [
             "string",
             "integer"
@@ -542,7 +542,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "An classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn.",
+          "description": "A classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn.",
           "type": [
             "string"
           ]
@@ -1000,7 +1000,7 @@
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides an space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
           "type": [
             "string"
           ]
@@ -1119,14 +1119,14 @@
     "ContactPoint": {
       "title": "Contact point",
       "type": "object",
-      "description": "An person, contact point or department to contact in relation to this contracting process.",
+      "description": "A person, contact point or department to contact in relation to this contracting process.",
       "properties": {
         "name": {
           "title": "Name",
           "type": [
             "string"
           ],
-          "description": "The name of the contact person, department, or contact point, for correspondence relating to this project."
+          "description": "The name of the contact person, department, or contact point for correspondence relating to this project."
         },
         "email": {
           "title": "Email",
