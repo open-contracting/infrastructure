@@ -8,6 +8,10 @@
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
 
+### Codelists
+
+* [#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist.
+
 ## [0.9.1] - 2019-06-17
 
 ### Changed
