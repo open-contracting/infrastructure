@@ -25,9 +25,9 @@ When open contracting principles and practices are put in place, data about thes
 
 By linking existing open contracting disclosure (and ensuring key fields and documents are provided) with project-level information, new opportunities for data-driven infrastructure project monitoring are unlocked.
 
-## Theory of Change and Work Plan
+## Theory of change and work plan
 
-This project, running from June 2018 through to March 2019, has the following Theory of Change.
+This project, running from June 2018 through to March 2019, has the following theory of change.
 
 ![Theory of Change](../_static/images/OC-CoST-TheoryOfChange-June2018.png)
 
