@@ -20,7 +20,7 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 #### (1) Evaluate the Open Contracting Data
 
-Check that the data you plan to analyse is in OCDS format
+Check that the data you plan to analyze is in OCDS format
 
 ```eval_rst
 .. admonition:: Tip
@@ -46,7 +46,7 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
     .. markdown::
 
-      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources
+      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
 
 ```
 
@@ -163,7 +163,7 @@ You can use OCDS data as part of a manual monitoring process, or you can integra
 Tools to help you with manual monitoring include:
 
 * [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) - a framework for regularly fetching, storing and querying OCDS data.
-* [OCDS Merge](https://github.com/open-contracting/ocds-merge) - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedReleased).
+* [OCDS Merge](https://github.com/open-contracting/ocds-merge) - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedRelease).
 * [OCDS Show](https://github.com/open-contracting/ocds-show) - a flexible framework for presenting templated views of OCDS data. Given a merged OCDS record, OCDS Show can highlight change over time.
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:

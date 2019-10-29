@@ -133,9 +133,9 @@ For each document the following structured information may be provided.
 
 ### Identifier
 
-Use of stable official organisation identifiers can help join up data between systems.
+Use of stable official organization identifiers can help join up data between systems.
 
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organisation, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
+Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
 
 For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
 
@@ -207,7 +207,7 @@ Dates MUST be expressed using a full ISO 8601 date-time including a timezone. E.
 
 > 2018-09-18T11:26:04+01:00
 
-Where the source system does not contain time information, a judgement should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
+Where the source system does not contain time information, a judgment should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
 
 ```eval_rst
 

@@ -111,7 +111,7 @@
         },
         "approvalDate": {
           "title": "Approval date",
-          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included amongst the project documents with the documentType set to 'budgetApproval'.",
+          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included among the project documents with the documentType set to 'budgetApproval'.",
           "type": "string",
           "format": "date-time"
         },
@@ -258,7 +258,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description should summarise the purpose of this contract and the scope of work to be undertaken.",
+          "description": "The description should summarize the purpose of this contract and the scope of work to be undertaken.",
           "type": "string"
         },
         "status": {
@@ -408,7 +408,7 @@
         },
         "url": {
           "title": "URL",
-          "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
+          "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a release package that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
           "type": "string",
           "format": "uri"
         }

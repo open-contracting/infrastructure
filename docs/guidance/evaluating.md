@@ -18,7 +18,7 @@ The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which 
 
 ### (1) Check your data formats
 
-First, check that the disclosures you want to analyse are in the correct format. If they are not in the correct format, you will need to convert the data.
+First, check that the disclosures you want to analyze are in the correct format. If they are not in the correct format, you will need to convert the data.
 
 #### Project level data
 
