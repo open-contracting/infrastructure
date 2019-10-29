@@ -62,7 +62,7 @@ Each project object contains the following sections:
 
 This section provides contextual information about the infrastructure project, including:
 
-* a project identifier in the `id` field. To make the project identifier globally unique, a project identifier prefix must be added to the local identifier for the project. Project identifier prefixes are assigned by the OC4IDS helpdesk. For more information on project identifiers, refer to the [project identifiers guidance](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/#globally-unique-project-identifiers).
+* a project identifier in the `id` field. To make the project identifier globally unique, a project identifier prefix must be added to the local identifier for the project. Project identifier prefixes are assigned by the OC4IDS helpdesk. For more information on project identifiers, refer to the [project identifiers guidance](../../../../guidance/identifiers/#globally-unique-project-identifiers).
 
 * `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
