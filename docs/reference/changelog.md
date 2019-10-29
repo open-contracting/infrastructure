@@ -6,7 +6,7 @@
 
 #### OC4IDS project schema
 
-* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make releases/tag an array not a string
+* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make contractingProcesses/releases/tag an array not a string
 
 
 ## [0.9.1] - 2019-06-17
