@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.9.2] - 2019-10-28
+
+### Schema
+
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
+
+### Codelists
+
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
+
+
 ## [0.9.1] - 2019-06-17
 
 ### Changed
