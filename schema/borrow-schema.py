@@ -97,12 +97,12 @@ with open(os.path.join(schema_dir, 'project-schema.json')) as f:
     schema = json.load(f, object_pairs_hook=OrderedDict)
 
 infra_codelists = {
-    '+documentType.csv',
     'contractingProcessStatus.csv',
     'contractNature.csv',
     'projectStatus.csv',
     'projectType.csv',
-    'modificationType.csv'
+    'modificationType.csv',
+    'projectSector.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -120,7 +120,7 @@ infra_definitions = {
     'ContractingProcess',
     'ContractingProcessSummary',  # Similar to OCDS release, and includes direction on how to populate from OCDS data.
     'LinkedRelease',  # Similar to linked release in OCDS record package.
-    'Variation',
+    'Modification'
 }
 ocds_definitions = {
     'Period',
