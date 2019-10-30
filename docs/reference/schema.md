@@ -14,7 +14,7 @@ The tables below describe each of the fields and objects in OC4IDS. To see how t
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
-    :collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
+    :collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses,relatedProjects
 ```
 
 ## ContractingProcess
@@ -73,7 +73,7 @@ When working with data, users should be aware that addresses may not always be b
 
 A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
 
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
+See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
 
 ```eval_rst
 
@@ -213,6 +213,19 @@ Where the source system does not contain time information, a judgement should be
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/Period
+    :include:
+    :collapse:
+
+```
+
+### RelatedProject
+
+Details of a related project. A project is related when it is involved with the same infrastructure as the current project.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/RelatedProject
     :include:
     :collapse:
 

@@ -7,6 +7,7 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array
 
 ### Codelists
 
