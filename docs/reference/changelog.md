@@ -6,10 +6,12 @@
 
 #### OC4IDS project schema
 
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
 
 ### Codelists
 
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
 * [#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist.
 
 ## [0.9.1] - 2019-06-17
