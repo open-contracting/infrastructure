@@ -7,7 +7,7 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
-* [#160](https://github.com/open-contracting/infrastructure/issues/160) - update project/id to add prefix information
+* [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
 
 ## [0.9.1] - 2019-06-17
 
