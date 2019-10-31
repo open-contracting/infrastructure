@@ -7,7 +7,7 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
-* [#156](https://github.com/open-contracting/infrastructure/issues/156) - update description of endDateDetails
+* [#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*
 
 ## [0.9.1] - 2019-06-17
 
