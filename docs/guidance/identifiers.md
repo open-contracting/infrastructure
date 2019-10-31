@@ -31,9 +31,9 @@ There are different approaches to including project identifiers in contracting d
 
 ### Project identifiers in OCDS
 
-OCDS includes a `projectID` field in the `planning/budget` section which should **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier of the project from the national budget which the contracting process relates to.
+In OCDS, identifiers for the individual infrastructure project a contracting process relates to should be disclosed using the `planning/project/id` field, introduced in the [Budget and Projects extension](https://extensions.open-contracting.org/en/extensions/budget_project/).
 
-Identifiers for individual infrastructure projects should be disclosed using the `planning/project/id` field in OCDS, introduced in the [Budget and Projects extension](https://extensions.open-contracting.org/en/extensions/budget_project/).
+The `planning/budget/projectID` field in OCDS should **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier of the project from the national budget, which may cover multiple infrastructure projects, to which the contracting process relates.
 
 ## Globally unique project identifiers
 
