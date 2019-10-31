@@ -57,7 +57,7 @@ Your mapping might identify:
 
 If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/2) for information and resources about mapping and publishing your contracting data using OCDS.
 
-Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](identifiers.md).
+Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](../../../identifiers#project-identifiers-in-ocds).
 
 ### (3) Build your data, systems and processes
 
