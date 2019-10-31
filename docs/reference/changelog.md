@@ -3,6 +3,7 @@
 ## [0.9.2] - 2019-10-28
 
 ### Documentation
+
 * [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace owner with publicAuthority in mapping.
 * [#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example including adding project package, metadata, add guidance for data users page.
@@ -11,8 +12,16 @@
 ### Schema
 
 #### Project package schema 
+
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update publication policy link in project package schema to reference infrastructure guidance for data users page.
 
+#### OC4IDS project schema
+
+* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+
+### Codelists
+
+* [#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist.
 
 ## [0.9.1] - 2019-06-17
 
