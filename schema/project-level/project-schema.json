@@ -157,7 +157,7 @@
       "properties": {
         "endDate": {
           "title": "End date",
-          "description": "The actual completion date for the project (compare with the endDate in project period.",
+          "description": "The actual completion date for the project (compare with the endDate in project period).",
           "type": "string",
           "format": "date-time"
         },
