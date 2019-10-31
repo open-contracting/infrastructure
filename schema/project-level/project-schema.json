@@ -258,7 +258,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description should summarise the purpose of this contract and the initial scope of work to be undertaken.",
+          "description": "The description should summarise the purpose of this contract and the initial scope of the work to be carried out under the contract.",
           "type": "string"
         },
         "status": {
