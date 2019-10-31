@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "title": "Identifier or Reference",
-      "description": "A unique identifier or reference number for this infrastructure project.",
+      "description": "A unique identifier or reference number for this infrastructure project, composed of a project identifier prefix and a local project identifier. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#globally-unique-project-identifiers).",
       "type": "string"
     },
     "updated": {
