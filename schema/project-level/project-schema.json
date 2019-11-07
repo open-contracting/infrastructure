@@ -258,7 +258,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description should summarise the purpose of this contract and the scope of work to be undertaken.",
+          "description": "The description should summarise the purpose of this contract and the initial scope of the work to be carried out under the contract.",
           "type": "string"
         },
         "status": {
@@ -351,7 +351,7 @@
         },
         "modifications": {
           "title": "Modifications",
-          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n A semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`.\n\n When a modification is detected, the contracting process summary information should also be updated.",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
