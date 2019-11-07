@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "title": "Identifier or Reference",
-      "description": "A unique identifier or reference number for this infrastructure project.",
+      "description": "A unique identifier or reference number for this infrastructure project, composed of a project identifier prefix and a local project identifier. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#globally-unique-project-identifiers).",
       "type": "string"
     },
     "updated": {
@@ -258,7 +258,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description should summarise the purpose of this contract and the scope of work to be undertaken.",
+          "description": "The description should summarise the purpose of this contract and the initial scope of the work to be carried out under the contract.",
           "type": "string"
         },
         "status": {
@@ -351,7 +351,7 @@
         },
         "modifications": {
           "title": "Modifications",
-          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.\n\n A semi-structured description of each change can be provided in the relevant `description` field, and the justification of the change given in `reason`.\n\n When a modification is detected, the contracting process summary information should also be updated.",
+          "description": "Details of changes to the duration, price, scope or other significant features of the contracting process should be logged here.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
@@ -504,7 +504,7 @@
       "properties": {
         "startDate": {
           "title": "Start date",
-          "description": "The start date for the period. When known, a precise start date must always be provided.",
+          "description": "The start date for the period. When known, a precise start date must be provided.",
           "type": [
             "string"
           ],
@@ -512,14 +512,14 @@
         },
         "endDate": {
           "title": "End date",
-          "description": "The end date for the period. When known, a precise end date must always be provided.",
+          "description": "The end date for the period. When known, a precise end date must be provided.",
           "type": [
             "string"
           ],
           "format": "date-time"
         },
         "maxExtentDate": {
-          "description": "The period cannot be extended beyond this date. This field is optional, and can be used to express the maximum available data for extension or renewal of this period.",
+          "description": "The period cannot be extended beyond this date. This field can be used to express the maximum available date for extension or renewal of this period.",
           "format": "date-time",
           "title": "Maximum extent",
           "type": [
@@ -527,7 +527,7 @@
           ]
         },
         "durationInDays": {
-          "description": "The maximum duration of this period in days. A user interface may wish to collect or display this data in months or years as appropriate, but should convert it into days when completing this field. This field can be used when exact dates are not known.  Where a startDate and endDate are given, this field is optional, and should reflect the difference between those two days. Where a startDate and maxExtentDate are given, this field is optional, and should reflect the difference between startDate and maxExtentDate.",
+          "description": "The maximum duration of this period in days. A user interface can collect or display this data in months or years as appropriate, and then convert it into days when storing this field. This field can be used when exact dates are not known. If a startDate and endDate are set, this field, if used, should be equal to the difference between startDate and endDate. Otherwise, if a startDate and maxExtentDate are set, this field, if used, should be equal to the difference between startDate and maxExtentDate.",
           "title": "Duration (days)",
           "type": [
             "integer"
@@ -537,27 +537,28 @@
     },
     "Classification": {
       "title": "Classification",
-      "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is drawn, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
+      "description": "A classification consists of at least two parts: an identifier for the list (scheme) from which the classification is taken, and an identifier for the category from that list being applied. It is useful to also publish a text label and/or URI that users can draw on to interpret the classification.",
       "type": "object",
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "A classification should be drawn from an existing scheme or list of codes. This field is used to indicate the scheme/codelist from which the classification is drawn.",
+          "description": "The scheme or codelist from which the classification code is taken.",
           "type": [
             "string"
           ]
         },
         "id": {
           "title": "ID",
-          "description": "The classification code drawn from the selected scheme.",
+          "description": "The classification code taken from the scheme.",
           "type": [
             "string",
             "integer"
-          ]
+          ],
+          "versionId": true
         },
         "description": {
           "title": "Description",
-          "description": "A textual description or title for the code.",
+          "description": "A textual description or title for the classification code.",
           "type": [
             "string"
           ]
@@ -583,15 +584,13 @@
           ]
         },
         "geometry": {
-          "type": [
-            "object"
-          ],
+          "type": "object",
           "title": "Geometry",
-          "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using latitude and longitude values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection.  A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+          "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using longitude, latitude, and (optionally) elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
           "properties": {
             "type": {
               "title": "Type",
-              "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide latitude and longitude use 'point', and enter an array of [latitude,longitude] as the value of coordinates field: e.g. [37.42,-122.085]. Note the capitalization of type values - set in order to maintain compatibility with GeoJSON.",
+              "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide longitude, latitude, and (optionally) elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42]. Note the capitalization of type values, in order to maintain compatibility with GeoJSON.",
               "type": [
                 "string"
               ],
@@ -608,7 +607,7 @@
             },
             "coordinates": {
               "title": "Coordinates",
-              "description": "The relevant array of points, e.g. [latitude,longitude], or nested array, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection",
+              "description": "The relevant array of points, e.g. [longitude, latitude] or [longitude, latitude, elevation], or a nested array of points, for the GeoJSON geometry being described. The longitude and latitude MUST be expressed in decimal degrees in the WGS84 (EPSG:4326) projection.",
               "type": [
                 "array"
               ],
@@ -622,9 +621,7 @@
           }
         },
         "gazetteer": {
-          "type": [
-            "object"
-          ],
+          "type": "object",
           "title": "Gazetteer",
           "description": "A gazetteer is a geographical index or directory. The specific gazetteer used should be specified in scheme, and one or more codes from that gazetteer used in identifier.",
           "properties": {
@@ -670,7 +667,7 @@
     },
     "Value": {
       "title": "Value",
-      "description": "Financial values should always be published with a currency attached.",
+      "description": "Financial values should be published with a currency attached.",
       "type": "object",
       "properties": {
         "amount": {
@@ -682,7 +679,7 @@
         },
         "currency": {
           "title": "Currency",
-          "description": "The currency for each amount should always be specified using the uppercase 3-letter currency code from ISO4217.",
+          "description": "The currency of the amount, from the closed [currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency) codelist.",
           "type": [
             "string"
           ],
@@ -945,9 +942,11 @@
             "UYN",
             "UYP",
             "UYU",
+            "UYW",
             "UZS",
             "VEB",
             "VEF",
+            "VES",
             "VNC",
             "VND",
             "VUV",
@@ -1000,15 +999,13 @@
       "properties": {
         "name": {
           "title": "Common name",
-          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or could provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
+          "description": "A common name for this organization or other participant in the contracting process. The identifier object provides a space for the formal legal name, and so this may either repeat that value, or may provide the common name by which this organization or entity is known. This field may also include details of the department or sub-unit involved in this contracting process.",
           "type": [
             "string"
           ]
         },
         "id": {
-          "type": [
-            "string"
-          ],
+          "type": "string",
           "description": "The ID used for cross-referencing to this party from other sections of the release. This field may be built with the following structure {identifier.scheme}-{identifier.id}(-{department-identifier}).",
           "title": "Entity ID"
         },
@@ -1019,7 +1016,7 @@
         },
         "additionalIdentifiers": {
           "title": "Additional identifiers",
-          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](https://standard.open-contracting.org/1.1/en/schema/identifiers/). This could be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
+          "description": "A list of additional / supplemental identifiers for the organization or participant, using the [organization identifier guidance](https://standard.open-contracting.org/1.1/en/schema/identifiers/). This can be used to provide an internally used identifier for this organization in addition to the primary legal entity identifier.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Identifier"
@@ -1039,7 +1036,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project. Role(s) should be taken from the [partyRole codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "The party's role(s) in the project, using the open [partyRole](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#partyrole) codelist.",
           "type": [
             "array"
           ],
@@ -1126,7 +1123,7 @@
           "type": [
             "string"
           ],
-          "description": "The name of the contact person, department, or contact point for correspondence relating to this project."
+          "description": "The name of the contact person, department, or contact point, for correspondence relating to this project."
         },
         "email": {
           "title": "Email",
@@ -1170,16 +1167,15 @@
         "id": {
           "title": "Identifier",
           "description": "An identifier for this particular budget entry.",
-          "mergeStrategy": "ocdsVersion",
           "type": [
             "string",
             "integer"
-          ]
+          ],
+          "minLength": 1
         },
         "description": {
           "title": "Description",
           "description": "A short free text description of this budget entry.",
-          "mergeStrategy": "ocdsVersion",
           "type": [
             "string"
           ]
@@ -1192,7 +1188,6 @@
         "uri": {
           "title": "Linked budget information",
           "description": "A URI pointing directly to a machine-readable information about this budget entry.",
-          "mergeStrategy": "ocdsVersion",
           "type": [
             "string"
           ],
@@ -1213,7 +1208,7 @@
     "Document": {
       "type": "object",
       "title": "Document",
-      "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents may be supporting information, formal notices, downloadable forms, or any other kind of resource that should be made public as part of full open contracting.",
+      "description": "Links to, or descriptions of, external documents can be attached at various locations within the standard. Documents can be supporting information, formal notices, downloadable forms, or any other kind of resource that ought to be made public as part of full open contracting.",
       "required": [
         "id"
       ],
@@ -1229,7 +1224,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described taken from the [documentType codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#documenttype). Values from the provided codelist should be used wherever possible, though extended values can be provided if the codelist does not have a relevant code.",
+          "description": "A classification of the document described, using the open [documentType](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#documenttype) codelist.",
           "type": [
             "string"
           ],
@@ -1276,14 +1271,14 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document taken from the [IANA Media Types codelist](http://www.iana.org/assignments/media-types/), with the addition of one extra value for 'offline/print', used when this document entry is being used to describe the offline publication of a document. Use values from the template column. Links to web pages should be tagged 'text/html'.",
+          "description": "The format of the document, using the open [IANA Media Types](http://www.iana.org/assignments/media-types/) codelist (see the values in the 'Template' column), or using the 'offline/print' code if the described document is published offline. For example, web pages have a format of 'text/html'.",
           "type": [
             "string"
           ]
         },
         "language": {
           "title": "Language",
-          "description": "Specifies the language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is strongly recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "The language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
             "string"
           ]
@@ -1293,32 +1288,28 @@
           "description": "When the information referenced exists within a large document, indicate the first page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
             "string"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         },
         "pageEnd": {
           "title": "Page end",
           "description": "When the information referenced exists within a large document, indicate the last page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
             "string"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         },
         "accessDetails": {
           "title": "Access details",
           "description": "A description of any special arrangements required to access this document. This may include a requirement to register for document access, a fee to be paid, or the location where documents can be inspected.",
           "type": [
             "string"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         },
         "author": {
           "title": "Author",
           "description": "The name of the author of these documents. Include the name of individuals and/or organizations responsible. For example, when a technical specification was written by a consultant, include the name and organization of the consultant.",
           "type": [
             "string"
-          ],
-          "mergeStrategy": "ocdsVersion"
+          ]
         }
       }
     },
@@ -1329,7 +1320,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "Organization identifiers should be drawn from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is drawn. This value should be drawn from the [Organization Identifier Scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme) codelist.",
+          "description": "Organization identifiers should be taken from an existing organization identifier list. The scheme field is used to indicate the list or register from which the identifier is taken. This value should be taken from the [Organization Identifier Scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme) codelist.",
           "type": [
             "string"
           ]
@@ -1340,7 +1331,8 @@
           "type": [
             "string",
             "integer"
-          ]
+          ],
+          "versionId": true
         },
         "legalName": {
           "title": "Legal Name",
