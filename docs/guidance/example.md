@@ -76,7 +76,7 @@ In this example, the overall budget for the project covers 3 years and is broken
 
 The `parties` array is used to provide details about organizations involved in the project and their roles. Organization references elsewhere in the data refer back to entries in this section.
 
-In this example, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` section.
+In this example, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` array.
 
 ```eval_rst
 
@@ -84,6 +84,18 @@ In this example, details are given about the fictional Motorways UK entity, whic
    :jsonpointer: /projects/0/parties/0
    :expand: address, contactPoint, roles
    :title: party
+
+```
+
+### Public authority
+
+The `publicAuthority` field indicates the project owner: the unit, body or department within a government that is tendering and contracting the project. It uses the `name` and `id` from the related entry in the project-level `parties` array, where the related entry has a `role` of 'publicAuthority'.
+
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer: /projects/0/publicAuthority
+   :title: publicAuthority
 
 ```
 

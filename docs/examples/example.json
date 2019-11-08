@@ -226,7 +226,7 @@
           "id": "GB-COH-33333333",
           "identifier": {
             "scheme": "GB-COH",
-            "id": "GB-COH-33333333",
+            "id": "33333333",
             "legalName": "Concrete Motorways Construction Ltd",
             "uri": "https://beta.companieshouse.gov.uk/company/33333333"
           },
@@ -247,8 +247,32 @@
           "roles": [
             "supplier"
           ]
+        },
+        {
+          "name": "Transport Focus",
+          "id": "GB-GOR-PB1118",
+          "identifier": {
+            "scheme": "GB-GOR",
+            "id": "PB1118",
+            "legalName": "Transport Focus ",
+            "uri": "https://government-organisation.register.gov.uk/records/PB1118"
+          },
+          "address": {
+            "streetAddress": "Fleetbank House, 2-6 Salisbury Square",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "EC4Y 8AE",
+            "countryName": "UK"
+          },
+          "roles": [
+            "publicAuthority"
+          ]
         }
       ],
+      "publicAuthority": {
+        "name": "Transport Focus",
+        "id": "GB-GOR-PB1118"
+      },
       "documents": [
         {
           "id": "consultation-1234",
