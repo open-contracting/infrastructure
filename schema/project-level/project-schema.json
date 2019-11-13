@@ -1369,63 +1369,50 @@
     },
     "RelatedProject": {
       "title": "Related project",
-      "fdescription": "A reference to a project related to this project. Generally related projects either precede or follow on from the current project.",
+      "description": "A reference to a project related to this project. Generally related projects either precede or follow on from the current project.",
       "type": "object",
       "properties": {
         "id": {
           "title": "Relationship ID",
           "description": "A local identifier for this relationship, unique within this array.",
-          "type": "string"
+          "type": [
+            "string",
+            "integer"
+          ],
+          "minLength": 1
         },
         "relationship": {
           "title": "Relationship",
           "description": "The type of relationship, using the open [relatedProjects](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
-          "type": [
-            "array",
-            "null"
-          ],
+          "type": "string",
           "codelist": "relatedProject.csv",
-          "openCodelist": true,
-          "items": {
-            "type": "string"
-          }
+          "openCodelist": true
         },
         "title": {
           "title": "Related project title",
           "description": "The title of the related project. Where referencing an OC4IDS project, this field should match the `title` field in the related project.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "scheme": {
           "title": "Scheme",
           "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedprojectscheme) codelist.",
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "codelist": "relatedProjectScheme.csv",
           "openCodelist": true
         },
         "identifier": {
           "title": "Identifier",
           "description": "The identifier of the related project. If the scheme is 'oc4ids', this must be an OC4IDS project ID.",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "uri": {
           "title": "Related project URI",
           "description": "A URI pointing to a machine-readable document or project package containing the identified related project.",
           "format": "uri",
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         }
-      }
+      },
+      "required": ["id"]
     }
   }
 }

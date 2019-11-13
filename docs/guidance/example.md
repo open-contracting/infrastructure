@@ -33,12 +33,20 @@ This section provides contextual information about the project, including:
 
 * `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
-* `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'construction'.
+* `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'expansion'.
 
 * `sector` from the [Project Sector codelist](../../../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
 
-* one or more `locations`, which may be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
+* one or more `relatedProjects` to provide information as [outlined in the schema reference](../../../../reference/schema/#relatedproject) about projects related to the same set of infrastructure assets as this project. In the relatedProject example below, information is given about the original project to construct the infrastructure assets, the motorway junctions, that are being upgraded by this project.
 
+* one or more `locations`, which may be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, a motorway junction location is given, using a point location, a gazetteer entry and an address.
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer: /projects/0/relatedProjects
+   :title: relatedProject
+
+```
 ```eval_rst
 
 .. jsoninclude:: ../examples/example.json
