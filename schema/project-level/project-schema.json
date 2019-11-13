@@ -1400,7 +1400,7 @@
         },
         "scheme": {
           "title": "Scheme",
-          "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme]((https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedprojectscheme) codelist.",
+          "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedprojectscheme) codelist.",
           "type": [
             "string",
             "null"
