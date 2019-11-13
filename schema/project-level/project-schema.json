@@ -87,7 +87,7 @@
     },
     "relatedProjects": {
       "title": "Related projects",
-      "description": "The details of projects related by being involved with the same infrastructure as this project. For example, a related project represented under a separate Open Contracting for Infrastructure Data Standard project identifier (OC4IDS id).",
+      "description": "The details of projects related to the same set of infrastructure assets as this project. For example, to link a project for the replacement of a bridge to the project for its initial construction.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/RelatedProject"
