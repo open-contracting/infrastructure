@@ -220,7 +220,7 @@ Where the source system does not contain time information, a judgement should be
 
 ### RelatedProject
 
-Details of a related project. A project is related when it is involved with the same infrastructure as the current project.
+Details of a project related to the same set of infrastructure assets as the current project.
 
 ```eval_rst
 
