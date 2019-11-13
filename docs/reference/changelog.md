@@ -7,7 +7,7 @@
 #### OC4IDS project schema
 
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
-* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make contractingProcesses/releases/tag an array not a string
+* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array not a string (bugfix)
 
 ## [0.9.1] - 2019-06-17
 

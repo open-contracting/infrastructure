@@ -348,13 +348,13 @@
             {
               "id": "ocds-cdf-pc10008",
               "date": "2016-04-01T00:00:00Z",
-              "tag": "tender",
+              "tag": ["tender"],
               "url": "https://www.example.com/releases/ocds-cdf-pc10008.json"
             },
             {
               "id": "ocds-cdf-pc10009",
               "date": "2016-06-01T15:49:19Z",
-              "tag": "award",
+              "tag": ["award"],
               "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
             }
           ]
@@ -421,25 +421,25 @@
             {
               "id": "ocds-a1b1c1-spats-2-033e",
               "date": "2017-03-02T17:14:37Z",
-              "tag": "tender",
+              "tag": ["tender"],
               "url": "https://example.com/releases/ex-a1b1c1--033e.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033f",
               "date": "2017-05-02T17:14:37Z",
-              "tag": "award",
+              "tag": ["award"],
               "url": "https://example.com/releases/ex-a1b1c1--033f.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033g",
               "date": "2017-07-02T17:14:37Z",
-              "tag": "implementation",
+              "tag": ["implementation"],
               "url": "https://example.com/Published/releases/ex-a1b1c1--033g.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033h",
               "date": "2018-12-10T14:45:00Z",
-              "tag": "contractTermination",
+              "tag": ["contractTermination"],
               "url": "https://example.com/releases/ex-a1b1c1--033h.json"
             }
           ]
@@ -560,37 +560,37 @@
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0011",
               "date": "2015-09-16T15:12:32Z",
-              "tag": "tender",
+              "tag": ["tender"],
               "url": "https://example.com/Published/releases/5553-b55.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0012",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "award",
+              "tag": ["award"],
               "url": "https://example.com/Published/releases/5553-b56.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0013",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "contract",
+              "tag": ["contract"],
               "url": "https://example.com/Published/releases/5553-b57.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0014",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "implementation",
+              "tag": ["implementation"],
               "url": "https://example.com/Published/releases/5553-b58.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
               "date": "2018-04-01T15:15:00Z",
-              "tag": "implementationUpdate",
+              "tag": ["implementationUpdate"],
               "url": "https://example.com/Published/releases/5553-b59.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0016",
               "date": "2018-12-10T09:15:00Z",
-              "tag": "contractTermination",
+              "tag": ["contractTermination"],
               "url": "https://example.com/Published/releases/5553-b60.json"
             }
           ]
