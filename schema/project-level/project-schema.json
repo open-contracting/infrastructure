@@ -1410,7 +1410,7 @@
         },
         "identifier": {
           "title": "Identifier",
-          "description": "The identifier of the related project. If the scheme is 'oc4ids', this must be an Open Contracting for Infrastructure Data Standard project ID.",
+          "description": "The identifier of the related project. If the scheme is 'oc4ids', this must be an OC4IDS project ID.",
           "type": [
             "string",
             "null"
