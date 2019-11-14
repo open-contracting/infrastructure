@@ -224,11 +224,6 @@
       "title": "Summary",
       "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and modifications may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
       "properties": {
-        "ocid": {
-          "title": "Open Contracting Identifier",
-          "description": "If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
-          "type": "string"
-        },
         "externalReference": {
           "title": "External reference",
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
