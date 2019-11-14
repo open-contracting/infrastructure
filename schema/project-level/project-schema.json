@@ -429,10 +429,7 @@
         "id": {
           "title": "Identifier",
           "description": "A local identifier for this modification.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "date": {
@@ -548,10 +545,7 @@
         "id": {
           "title": "ID",
           "description": "The classification code taken from the scheme.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "versionId": true
         },
         "description": {
@@ -1057,10 +1051,7 @@
           "minLength": 1
         },
         "id": {
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "description": "The id of the party being referenced. This must match the id of an entry in the parties section.",
           "title": "Organization ID"
         }
@@ -1165,10 +1156,7 @@
         "id": {
           "title": "Identifier",
           "description": "An identifier for this particular budget entry.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "description": {
@@ -1214,10 +1202,7 @@
         "id": {
           "title": "ID",
           "description": "A local, unique identifier for this document. This field is used to keep track of multiple revisions of a document through the compilation from release to record mechanism.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "documentType": {
@@ -1326,10 +1311,7 @@
         "id": {
           "title": "ID",
           "description": "The identifier of the organization in the selected scheme.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "versionId": true
         },
         "legalName": {
