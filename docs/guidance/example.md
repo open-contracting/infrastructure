@@ -89,7 +89,7 @@ In this example, details are given about the fictional Motorways UK entity, whic
 
 ### Public authority
 
-The `publicAuthority` field indicates the project owner: the unit, body or department within a government that is tendering and contracting the project. It uses the `name` and `id` from the related entry in the project-level `parties` array, where the related entry has a `role` of 'publicAuthority'.
+The `publicAuthority` field indicates the project owner: the unit, body or department within a government that is tendering and contracting the project. It refers to an entry in the `parties` array, as described above.
 
 ```eval_rst
 

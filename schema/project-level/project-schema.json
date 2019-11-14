@@ -136,7 +136,7 @@
     },
     "publicAuthority": {
       "title": "Public authority",
-      "description": "A public authority is the project owner: the unit, body or department within a government that is tendering and contracting the project. The full details of this entity should be added to the project-level `parties` array with a `.role` of 'publicAuthority'.",
+      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'publicAuthority'.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "documents": {

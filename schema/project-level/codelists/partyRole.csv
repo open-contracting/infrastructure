@@ -8,5 +8,5 @@ enquirer,Enquirer,A party who has made an enquiry during the enquiry phase of a 
 payer,Payer,A party making a payment from a transaction,OCDS
 payee,Payee,A party in receipt of a payment from a transaction,OCDS
 reviewBody,Review Body,A party responsible for the review of this procurement process. This party often has a role in any challenges made to the contract award.,OCDS
-publicAuthority,Public Authority,The unit/body/department within a government that is tendering and contracting the project.,OC4IDS
+publicAuthority,Public Authority,The project owner: the unit, body or department within a government that is tendering and contracting the project.,OC4IDS
 administrativeEntity,Administrative Entity,The entity responsible for contract administration.,OC4IDS
