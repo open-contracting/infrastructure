@@ -12,7 +12,7 @@
   "publicationPolicy": "https://standard.open-contracting.org/latest/en/implementation/publication_policy/",
   "projects": [
     {
-      "id": "m75-junctions-4-to-5-smart-motorway",
+      "id": "oc4ids-bu3kcz-m75-junctions-4-to-5-smart-motorway",
       "updated": "2018-12-10T15:53:00Z",
       "title": "M75 Junctions 4 to 5 upgrade smart motorway",
       "description": "Upgrading the 5km stretch of the M75 near Birmingham Airport, between junction 4 near Patcham and junction 5 at Windlesham, to an all-lane running smart motorway.",
@@ -165,7 +165,8 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity"
+            "administrativeEntity",
+            "publicAuthority"
           ]
         },
         {
@@ -292,7 +293,6 @@
         {
           "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
           "summary": {
-            "ocid": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
             "externalReference": "2016-SMP-M75-J4_J5-design",
             "nature": [
               "design"
@@ -366,7 +366,6 @@
         {
           "id": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
           "summary": {
-            "ocid": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
             "externalReference": "2016-SMP-M75-J4_J5-supervision",
             "nature": [
               "supervision"
@@ -459,7 +458,6 @@
         {
           "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
           "summary": {
-            "ocid": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
             "externalReference": "2016-SMP-M75-J4_J5-construction",
             "nature": [
               "construction"
