@@ -1,6 +1,6 @@
 # Guidance for data users
 
-Publishing OC4IDS involves making choices about what projects, data and documents to include and/or exclude, and about how to classify and categorize different items.
+Publishing OC4IDS involves making choices about what projects, data and documents to include and/or exclude, and how to map existing data to the fields in OC4IDS.
 
 In order for users to interpret data correctly and make effective use of it, it's important for publishers to describe these local decisions and to provide guidance for data users that includes:
 
