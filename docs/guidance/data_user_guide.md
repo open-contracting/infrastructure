@@ -12,4 +12,4 @@ In order for users to interpret data correctly and make effective use of it, it'
 
 Publishers should link to this data user guide from the project package's `publicationPolicy` field.
 
-For more information, please refer to the [OCDS publication policy guidance](https://standard.open-contracting.org/latest/en/implementation/publication_policy/). For assistance in drafting a data user guide, please refer to the [OCDS publication policy template](https://www.open-contracting.org/resources/ocds-1-1-publication-policy-template/).
+For more information, please refer to the [OCDS publication policy guidance](https://standard.open-contracting.org/1.1/en/implementation/publication_policy/). For assistance in drafting a data user guide, please refer to the [OCDS publication policy template](https://www.open-contracting.org/resources/ocds-1-1-publication-policy-template/).
