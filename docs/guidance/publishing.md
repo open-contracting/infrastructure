@@ -4,7 +4,7 @@ OC4IDS can be used to publish standardised open data on infrastructure projects 
 
 Publishing standardised open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
 
-If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/latest/en/).
+If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/1.1/en/).
 
 ```eval_rst
 .. admonition:: Linking to related information
@@ -57,6 +57,8 @@ Your mapping might identify:
 
 If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/2) for information and resources about mapping and publishing your contracting data using OCDS.
 
+Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](../../../identifiers#project-identifiers-in-ocds).
+
 ### (3) Build your data, systems and processes
 
 Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that the files are structurally correct against OC4IDS.
@@ -103,4 +105,4 @@ To make your data easier to access, consider providing:
 
 ```
 
-Refer to the [OCDS documentation](https://standard.open-contracting.org/latest/en/implementation/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
+Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/implementation/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.

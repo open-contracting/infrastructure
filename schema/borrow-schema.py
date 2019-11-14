@@ -14,18 +14,26 @@ should be run, and the diffs compared to see if changes to the project level dat
 specification should be made.
 """
 
+import csv
 import json
 import os
+import re
 import sys
 from collections import OrderedDict
 from copy import deepcopy
+from io import StringIO
 
 import requests
 
-base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
+ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
+ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
-ppp_schema = requests.get(base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
+ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
+
+
+def csv_reader(url):
+    return csv.DictReader(StringIO(requests.get(url).text))
 
 
 def coerce_to_list(data, key):
@@ -97,12 +105,12 @@ with open(os.path.join(schema_dir, 'project-schema.json')) as f:
     schema = json.load(f, object_pairs_hook=OrderedDict)
 
 infra_codelists = {
-    '+documentType.csv',
     'contractingProcessStatus.csv',
     'contractNature.csv',
+    'modificationType.csv',
+    'projectSector.csv',
     'projectStatus.csv',
     'projectType.csv',
-    'modificationType.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -120,7 +128,7 @@ infra_definitions = {
     'ContractingProcess',
     'ContractingProcessSummary',  # Similar to OCDS release, and includes direction on how to populate from OCDS data.
     'LinkedRelease',  # Similar to linked release in OCDS record package.
-    'Variation',
+    'Modification',
 }
 ocds_definitions = {
     'Period',
@@ -138,10 +146,90 @@ ocds_definitions = {
 compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
 
+# https://docs.google.com/spreadsheets/d/1ttXgMmmLvqBlPRi_4jAJhIobjnCiwMv13YwGfFOnoJk/edit#gid=0
+document_type_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS1VCdsV-Xwvsh6QnK2z9lcpLRyfc472dtpFTicS8C6Yul2MONPYw08lBLd8j55mnerjya9T4qCiekT/pub?gid=0&single=true&output=csv'  # noqa
+
 # Copy the OCDS codelists.
 for basename in ocds_codelists:
-    with open(os.path.join(schema_dir, 'codelists', basename), 'w') as f:
-        f.write(requests.get(base_url + 'codelists/' + basename).text)
+    path = os.path.join(schema_dir, 'codelists', basename)
+
+    if basename in ('documentType.csv', 'partyRole.csv'):
+        with open(path) as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames
+
+            oc4ids_rows = []
+            oc4ids_codes = []
+            for row in reader:
+                if row['Source'] == 'OC4IDS':
+                    oc4ids_rows.append(row)
+                    oc4ids_codes.append(row['Code'])
+
+    with open(path, 'w') as f:
+        if basename == 'documentType.csv':
+            io = StringIO()
+            writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
+            writer.writeheader()
+            seen = []
+
+            # Find which codes from OCDS for PPPs to ignore.
+            reader = csv_reader(document_type_csv_url)
+            ignore = [row['Code'] for row in reader if row['PPP specific?']]
+            ignore.append('contractSchedule')
+
+            # Add codes from OCDS for PPPs.
+            reader = csv_reader(ppp_base_url + 'codelists/' + basename)
+            for row in reader:
+                if row['Code'] not in ignore:
+                    seen.append(row['Code'])
+                    if row['Code'] == 'environmentalImpact':  # environmentalImpact has an entirely new description.
+                        row = next(oc4ids_row for oc4ids_row in oc4ids_rows if oc4ids_row['Code'] == row['Code'])
+                    else:
+                        row['Source'] = 'OCDS for PPPs'
+                    writer.writerow(row)
+
+            # Add codes from CODS.
+            reader = csv_reader(ocds_base_url + 'codelists/documentType.csv')
+            for row in reader:
+                if row['Code'] not in seen:
+                    seen.append(row['Code'])
+                    if row['Code'] in oc4ids_codes:
+                        row['Description'] = re.sub(r'(?<=contracting process)', ' or project', row['Description'])
+                        row['Source'] = 'OC4IDS'
+                    else:
+                        row['Source'] = 'OCDS'
+                    writer.writerow(row)
+
+            # Add pre-existing codes from OC4IDS.
+            writer.writerows(row for row in oc4ids_rows if row['Code'] not in seen)
+
+            text = io.getvalue()
+        elif basename == 'partyRole.csv':
+            io = StringIO()
+            writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
+            writer.writeheader()
+            seen = []
+
+            # Add codes from CODS.
+            reader = csv_reader(ocds_base_url + 'codelists/partyRole.csv')
+            for row in reader:
+                if row['Code'] not in seen:
+                    seen.append(row['Code'])
+                    if row['Code'] in oc4ids_codes:
+                        row['Description'] = re.sub(r'(?<=contracting process)', ' or project', row['Description'])
+                        row['Source'] = 'OC4IDS'
+                    else:
+                        row['Source'] = 'OCDS'
+                    writer.writerow(row)
+
+            # Add pre-existing codes from OC4IDS.
+            writer.writerows(row for row in oc4ids_rows if row['Code'] not in seen)
+
+            text = io.getvalue()
+        else:
+            text = requests.get(ppp_base_url + 'codelists/' + basename).text
+
+        f.write(text)
 
 # The following definitions follow the same order as in project-schema.json.
 
@@ -163,12 +251,21 @@ del(schema['definitions']['Classification']['properties']['uri'])
 copy_def('Location')
 # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
 schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa
+# Add id to Location.
+schema['definitions']['Location']['properties']['id'] = {
+    'title': 'Identifier',
+    'description': 'A local identifier for this location, unique within the array this location appears in.',
+    'type': 'string',
+    'minLength': 1,
+}
 # Add address to Location.
 schema['definitions']['Location']['properties']['address'] = {
     'title': 'Address',
     'description': 'A physical address where works will take place.',
     '$ref': '#/definitions/Address',
 }
+schema['definitions']['Location']['properties'].move_to_end('id', last=False)
+schema['definitions']['Location']['required'] = ['id']
 
 copy_def('Value')
 
