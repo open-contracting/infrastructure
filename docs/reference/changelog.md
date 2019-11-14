@@ -4,16 +4,17 @@
 
 ### Documentation
 
-* [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace owner with publicAuthority in mapping.
+* [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace 'owner' with 'publicAuthority' in mapping.
 * [#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file.
-* [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example including adding project package, metadata, add guidance for data users page.
-* [#146](https://github.com/open-contracting/infrastructure/issues/146) - update example file to add 'publicAuthority' role.
+* [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
+* [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
+* [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
 
 ### Schema
 
-#### Project package schema 
+#### Project package schema
 
-* [#143](https://github.com/open-contracting/infrastructure/issues/143) - update publication policy link in project package schema to reference infrastructure guidance for data users page.
+* [#143](https://github.com/open-contracting/infrastructure/issues/143) - update URL in `publicationPolicy` description to reference the data user guide page.
 
 #### OC4IDS project schema
 
