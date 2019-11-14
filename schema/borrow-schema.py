@@ -100,6 +100,11 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
         sys.exit('{prefix} is missing {items}: remove from infra_{suffix} in borrow-schema.py?'.format(
             items=', '.join(removed), prefix=prefix, suffix=suffix))
 
+#set all `id` fields to only permit strings
+def remove_integer_identifier_types(schema):
+    for definition in schema['definitions'].values():
+        if 'id' in definition['properties']:
+            definition['properties']['id']['type'] = 'string'
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
     schema = json.load(f, object_pairs_hook=OrderedDict)
@@ -298,6 +303,8 @@ schema['definitions']['Document']['properties']['url']['description'] = "This sh
 copy_def('Identifier')
 
 remove_null_and_pattern_properties(schema)
+
+remove_integer_identifier_types(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
     json.dump(schema, f, ensure_ascii=False, indent=2, separators=(',', ': '))
