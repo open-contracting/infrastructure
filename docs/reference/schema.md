@@ -220,7 +220,7 @@ Where the source system does not contain time information, a judgement should be
 
 ### RelatedProject
 
-Details of a project related to the same set of infrastructure assets as the current project.
+A reference to a project related to the same set of infrastructure assets as the current project.
 
 ```eval_rst
 

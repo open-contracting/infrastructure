@@ -87,7 +87,7 @@
     },
     "relatedProjects": {
       "title": "Related projects",
-      "description": "The details of projects related to the same set of infrastructure assets as this project. For example, to link a project for the replacement of a bridge to the project for its initial construction.",
+      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/RelatedProject"
@@ -1369,28 +1369,25 @@
     },
     "RelatedProject": {
       "title": "Related project",
-      "description": "A reference to a project related to this project. Generally related projects either precede or follow on from the current project.",
+      "description": "A reference to a project related to the same set of infrastructure assets as this project. Generally, related projects either precede or follow on from the current project.",
       "type": "object",
       "properties": {
         "id": {
           "title": "Relationship ID",
           "description": "A local identifier for this relationship, unique within this array.",
-          "type": [
-            "string",
-            "integer"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "relationship": {
           "title": "Relationship",
-          "description": "The type of relationship, using the open [relatedProjects](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
+          "description": "The type of relationship, using the open [relatedProject](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
           "type": "string",
           "codelist": "relatedProject.csv",
           "openCodelist": true
         },
         "title": {
           "title": "Related project title",
-          "description": "The title of the related project. Where referencing an OC4IDS project, this field should match the `title` field in the related project.",
+          "description": "The title of the related project. If referencing an OC4IDS project, this should match the value of the `title` field of the related project.",
           "type": "string"
         },
         "scheme": {
@@ -1412,7 +1409,9 @@
           "type": "string"
         }
       },
-      "required": ["id"]
+      "required": [
+        "id"
+      ]
     }
   }
 }
