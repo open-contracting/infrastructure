@@ -156,6 +156,28 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```
 
+### RelatedProject
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/relatedProject.csv
+
+```
+
+### RelatedProjectScheme
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
+
+```
+
 ## OCDS codelists
 
 OC4IDS also reuses some codelists from the Open Contracting Data Standard:

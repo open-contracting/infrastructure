@@ -26,7 +26,16 @@
         "transport",
         "transport.road"
       ],
-      "type": "construction",
+      "type": "expansion",
+      "relatedProjects": [
+        {
+          "id": "1",
+          "scheme": "oc4ids",
+          "identifier": "oc4ids-bu3kcz-m75-junctions-4-to-5-construction",
+          "relationship": "construction",
+          "title": "Original construction of M75 J4-5"
+        }
+      ],
       "assetLifetime": {
         "startDate": "2018-07-01T00:00:00Z",
         "endDate": "2040-07-01T00:00:00Z",

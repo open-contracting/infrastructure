@@ -67,11 +67,21 @@ This section provides contextual information about the infrastructure project, i
 
 * `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
-* `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'construction'.
+* `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'expansion'.
 
 * `sector` from the [Project Sector codelist](../../../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
 
+* one or more `relatedProjects`, to reference other projects that are related to the same set of infrastructure assets, as [outlined in the schema reference](../../../../reference/schema/#relatedproject). In the relatedProject example below, a reference is made to the original project that initially constructed the motorway junctions, which are now being upgraded by this project.
+
 * one or more `locations`, which can be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, one location is given: a motorway junction, using a point location, a gazetteer entry and an address.
+
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer: /projects/0/relatedProjects
+   :title: relatedProject
+
+```
 
 ```eval_rst
 

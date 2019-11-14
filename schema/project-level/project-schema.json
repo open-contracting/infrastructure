@@ -85,6 +85,14 @@
       "codelist": "projectType.csv",
       "openCodelist": false
     },
+    "relatedProjects": {
+      "title": "Related projects",
+      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProject"
+      }
+    },
     "assetLifetime": {
       "title": "Asset lifetime",
       "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
@@ -1348,6 +1356,52 @@
           "format": "uri"
         }
       }
+    },
+    "RelatedProject": {
+      "title": "Related project",
+      "description": "A reference to a project related to the same set of infrastructure assets as this project. Generally, related projects either precede or follow on from the current project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Relationship ID",
+          "description": "A local identifier for this relationship, unique within this array.",
+          "type": "string",
+          "minLength": 1
+        },
+        "scheme": {
+          "title": "Scheme",
+          "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedprojectscheme) codelist.",
+          "type": "string",
+          "codelist": "relatedProjectScheme.csv",
+          "openCodelist": true
+        },
+        "identifier": {
+          "title": "Identifier",
+          "description": "The identifier of the related project. If the scheme is 'oc4ids', this must be an OC4IDS project ID.",
+          "type": "string"
+        },
+        "relationship": {
+          "title": "Relationship",
+          "description": "The type of relationship, using the open [relatedProject](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
+          "type": "string",
+          "codelist": "relatedProject.csv",
+          "openCodelist": true
+        },
+        "title": {
+          "title": "Related project title",
+          "description": "The title of the related project. If referencing an OC4IDS project, this should match the value of the `title` field of the related project.",
+          "type": "string"
+        },
+        "uri": {
+          "title": "Related project URI",
+          "description": "A URI pointing to a machine-readable document or project package containing the identified related project.",
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
     }
   }
 }
