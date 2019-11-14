@@ -1378,18 +1378,6 @@
           "type": "string",
           "minLength": 1
         },
-        "relationship": {
-          "title": "Relationship",
-          "description": "The type of relationship, using the open [relatedProject](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
-          "type": "string",
-          "codelist": "relatedProject.csv",
-          "openCodelist": true
-        },
-        "title": {
-          "title": "Related project title",
-          "description": "The title of the related project. If referencing an OC4IDS project, this should match the value of the `title` field of the related project.",
-          "type": "string"
-        },
         "scheme": {
           "title": "Scheme",
           "description": "The identification scheme used by this cross-reference, using the open [relatedProjectScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedprojectscheme) codelist.",
@@ -1400,6 +1388,18 @@
         "identifier": {
           "title": "Identifier",
           "description": "The identifier of the related project. If the scheme is 'oc4ids', this must be an OC4IDS project ID.",
+          "type": "string"
+        },
+        "relationship": {
+          "title": "Relationship",
+          "description": "The type of relationship, using the open [relatedProject](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#relatedproject) codelist.",
+          "type": "string",
+          "codelist": "relatedProject.csv",
+          "openCodelist": true
+        },
+        "title": {
+          "title": "Related project title",
+          "description": "The title of the related project. If referencing an OC4IDS project, this should match the value of the `title` field of the related project.",
           "type": "string"
         },
         "uri": {
