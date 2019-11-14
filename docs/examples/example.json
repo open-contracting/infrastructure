@@ -200,7 +200,7 @@
           "id": "GB-COH-12345678",
           "identifier": {
             "scheme": "GB-COH",
-            "id": "22222222",
+            "id": "12345678",
             "legalName": "Motorway Design Services PLC",
             "uri": "https://beta.companieshouse.gov.uk/company/22222222"
           },
@@ -249,7 +249,7 @@
           "id": "GB-COH-33333333",
           "identifier": {
             "scheme": "GB-COH",
-            "id": "GB-COH-33333333",
+            "id": "33333333",
             "legalName": "Concrete Motorways Construction Ltd",
             "uri": "https://beta.companieshouse.gov.uk/company/33333333"
           },
