@@ -26,7 +26,7 @@ from io import StringIO
 import requests
 
 ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
-ocds_base_url = 'https://standard.open-contracting.org/latest/en/'
+ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
 ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
