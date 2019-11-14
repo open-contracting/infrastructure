@@ -174,7 +174,8 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity"
+            "administrativeEntity",
+            "publicAuthority"
           ]
         },
         {
