@@ -6,11 +6,18 @@
 
 #### OC4IDS project schema
 
-* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
+* [#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work
+* [#141](https://github.com/open-contracting/infrastructure/issues/141) - remove incorrect guidance about other fields from `contractingProcesses/summary/modifications`
 * [#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array
+* [#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*
+* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
+* [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
+* [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
 
 ### Codelists
 
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/latest/en/schema/changelog/#id1)
 * [#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist.
 
 ## [0.9.1] - 2019-06-17
