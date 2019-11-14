@@ -2,6 +2,10 @@
 
 ## [0.9.2] - 2019-10-28
 
+### Documentation
+
+* [#96](https://github.com/open-contracting/infrastructure/issues/96) - Add guidance on providing project identifiers in OCDS data.
+
 ### Schema
 
 #### OC4IDS project schema

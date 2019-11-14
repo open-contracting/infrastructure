@@ -54,6 +54,16 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
 Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.
 
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers.md) for more information on where to find identifiers for projects.
+
+```
+
 However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
 
 This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.
