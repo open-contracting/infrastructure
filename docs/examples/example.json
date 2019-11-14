@@ -165,7 +165,8 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity"
+            "administrativeEntity",
+            "publicAuthority"
           ]
         },
         {
@@ -247,31 +248,11 @@
           "roles": [
             "supplier"
           ]
-        },
-        {
-          "name": "Transport Focus",
-          "id": "GB-GOR-PB1118",
-          "identifier": {
-            "scheme": "GB-GOR",
-            "id": "PB1118",
-            "legalName": "Transport Focus ",
-            "uri": "https://government-organisation.register.gov.uk/records/PB1118"
-          },
-          "address": {
-            "streetAddress": "Fleetbank House, 2-6 Salisbury Square",
-            "locality": "London",
-            "region": "London",
-            "postalCode": "EC4Y 8AE",
-            "countryName": "UK"
-          },
-          "roles": [
-            "publicAuthority"
-          ]
         }
       ],
       "publicAuthority": {
-        "name": "Transport Focus",
-        "id": "GB-GOR-PB1118"
+        "name": "Motorways UK",
+        "id": "GB-GOR-XX1234"
       },
       "documents": [
         {
