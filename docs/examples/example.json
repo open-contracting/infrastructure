@@ -96,6 +96,7 @@
           "amount": 40000000,
           "currency": "GBP"
         },
+        "requestDate": "2015-05-30T00:00:00Z",
         "approvalDate": "2015-06-24T00:00:00Z",
         "budgetBreakdown": [
           {
