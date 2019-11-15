@@ -46,7 +46,7 @@
     },
     "period": {
       "title": "Project period",
-      "description": "The period over which this project will run. This may be updated as the project moves through each phase as more information becomes available to more accurately specify anticipated start and end dates. Implementations may vary as to whether the period is taken to run from the earliest planning to the latest monitoring report, or whether the period only represents the major construction phase.",
+      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
       "$ref": "#/definitions/Period"
     },
     "sector": {
@@ -150,7 +150,7 @@
     },
     "publicAuthority": {
       "title": "Public authority",
-      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'publicAuthority'.",
+      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `role` of 'publicAuthority'.",
       "$ref": "#/definitions/OrganizationReference"
     },
     "documents": {
@@ -322,19 +322,19 @@
             },
             "procuringEntity": {
               "title": "Procuring entity",
-              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'procuringEntity'.",
+              "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `role` of 'procuringEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             },
             "administrativeEntity": {
               "title": "Administrative entity",
-              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'administrativeEntity'.",
+              "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
             }
           }
         },
         "suppliers": {
           "title": "Suppliers",
-          "description": "The name and identifier for each supplier for this contracting process. The full details of each supplier should be added to the project-level `parties` array with a `.role` of 'supplier'.",
+          "description": "The name and identifier for each supplier for this contracting process. The full details of each supplier should be added to the project-level `parties` array with a `role` of 'supplier'.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
