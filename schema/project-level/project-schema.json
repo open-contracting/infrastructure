@@ -46,7 +46,7 @@
     },
     "period": {
       "title": "Project period",
-      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as more information becomes available to more accurately specify anticipated start and end dates. The planned completion date of the project should be provided in `.endDate`, which can be compared with the actual completion date in `completion.endDate`",
+      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `.endDate`, which can be compared with the actual completion date in `completion.endDate`",
       "$ref": "#/definitions/Period"
     },
     "sector": {
