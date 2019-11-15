@@ -46,7 +46,7 @@
     },
     "period": {
       "title": "Project period",
-      "description": "The period over which this project will run. This may be updated as the project moves through each phase as more information becomes available to more accurately specify anticipated start and end dates. Implementations may vary as to whether the period is taken to run from the earliest planning to the latest monitoring report, or whether the period only represents the major construction phase.",
+      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as more information becomes available to more accurately specify anticipated start and end dates. The planned completion date of the project should be provided in `.endDate`, which can be compared with the actual completion date in `completion.endDate`",
       "$ref": "#/definitions/Period"
     },
     "sector": {
