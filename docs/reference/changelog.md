@@ -29,6 +29,7 @@
 * [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)
 * [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
 * [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
+* [#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project.
 
 ### Codelists
 
