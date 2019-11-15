@@ -236,7 +236,7 @@
           "id": "GB-COH-33333333",
           "identifier": {
             "scheme": "GB-COH",
-            "id": "GB-COH-33333333",
+            "id": "33333333",
             "legalName": "Concrete Motorways Construction Ltd",
             "uri": "https://beta.companieshouse.gov.uk/company/33333333"
           },
@@ -259,6 +259,10 @@
           ]
         }
       ],
+      "publicAuthority": {
+        "name": "Motorways UK",
+        "id": "GB-GOR-XX1234"
+      },
       "documents": [
         {
           "id": "consultation-1234",

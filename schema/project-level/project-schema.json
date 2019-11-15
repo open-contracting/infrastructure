@@ -142,6 +142,11 @@
       },
       "uniqueItems": true
     },
+    "publicAuthority": {
+      "title": "Public authority",
+      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `.role` of 'publicAuthority'.",
+      "$ref": "#/definitions/OrganizationReference"
+    },
     "documents": {
       "title": "Documents",
       "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
