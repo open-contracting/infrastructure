@@ -61,28 +61,56 @@ def copy_def(definition, replacements=None):
             value[leaf] = replacement(value[leaf])
 
 
+def traverse(schema_action=None, object_action=None):
+    """
+    Implements common logic for walking through the schema.
+    """
+    if object_action is None:
+        def object_action(value):
+            pass
+
+    def method(schema, pointer=''):
+        schema_action(schema)
+
+        for key, value in schema['properties'].items():
+            new_pointer = '{}/{}'.format(pointer, key)
+
+            prop_type = coerce_to_list(value, 'type')
+            object_action(value)
+
+            if 'object' in prop_type:
+                method(value, pointer=new_pointer)
+            elif 'array' in prop_type:
+                items_type = coerce_to_list(value['items'], 'type')
+                object_action(value['items'])
+
+                # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
+                if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
+                    raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
+
+        for key, value in schema.get('definitions', {}).items():
+            method(value, pointer='{}/{}'.format(pointer, key))
+
+    return method
+
+
 # Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
-def remove_null_and_pattern_properties(schema, pointer=''):
-    schema.pop('patternProperties', None)
+def remove_null_and_pattern_properties(*args):
+    def schema_action(schema):
+        schema.pop('patternProperties', None)
 
-    for key, value in schema['properties'].items():
-        new_pointer = '{}/{}'.format(pointer, key)
+    traverse(schema_action, remove_null)(*args)
 
-        prop_type = coerce_to_list(value, 'type')
-        remove_null(value)
 
-        if 'object' in prop_type:
-            remove_null_and_pattern_properties(value, pointer=new_pointer)
-        elif 'array' in prop_type:
-            items_type = coerce_to_list(value['items'], 'type')
-            remove_null(value['items'])
+def remove_integer_identifier_types(*args):
+    """
+    Sets all `id` fields to allow only strings, not integers.
+    """
+    def schema_action(schema):
+        if 'id' in schema['properties']:
+            schema['properties']['id']['type'] = 'string'
 
-            # Recursing into arrays of arrays or arrays of objecs hasn't been implemented.
-            if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
-                raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
-
-    for key, value in schema.get('definitions', {}).items():
-        remove_null_and_pattern_properties(value, pointer='{}/{}'.format(pointer, key))
+    traverse(schema_action)(*args)
 
 
 def compare(actual, infra_list, ocds_list, prefix, suffix):
@@ -100,11 +128,6 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
         sys.exit('{prefix} is missing {items}: remove from infra_{suffix} in borrow-schema.py?'.format(
             items=', '.join(removed), prefix=prefix, suffix=suffix))
 
-#set all `id` fields to only permit strings
-def remove_integer_identifier_types(schema):
-    for definition in schema['definitions'].values():
-        if 'id' in definition['properties']:
-            definition['properties']['id']['type'] = 'string'
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
     schema = json.load(f, object_pairs_hook=OrderedDict)
@@ -303,7 +326,6 @@ schema['definitions']['Document']['properties']['url']['description'] = "This sh
 copy_def('Identifier')
 
 remove_null_and_pattern_properties(schema)
-
 remove_integer_identifier_types(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
