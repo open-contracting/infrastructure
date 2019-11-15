@@ -380,12 +380,12 @@
       "properties": {
         "id": {
           "title": "ID",
-          "description": "A unique identifier for this update of information. This should be taken from the related OCDS `release.id` where available. ",
+          "description": "A unique identifier for this update of information. This should be taken from the OCDS `release.id`, if available.",
           "type": "string"
         },
         "tag": {
           "title": "Release tag",
-          "description": "One or more values from the [releaseTag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the related OCDS `release.tag` where available. ",
+          "description": "One or more values from the [releaseTag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag) codelist used to indicate the information contained in this release, and the stage of the contracting process it represents. This should be filled from the OCDS `release.tag`, if available. ",
           "type": "array",
           "items": {
             "type": "string",
@@ -419,13 +419,13 @@
         },
         "date": {
           "title": "Date",
-          "description": "The effective date of this release/update. This should be filled from the related OCDS `release.date` where available.",
+          "description": "The effective date of this release/update. This should be filled from the OCDS `release.date`, if available.",
           "type": "string",
           "format": "date-time"
         },
         "url": {
           "title": "URL",
-          "description": "A URL (Web link) to the related OCDS release where available. This should be provided within a releasePackage that contains only one release. Where this release is sourced from a third party system (e.g. procurement portal), transparency portal developers are encouraged to cache this data and link to their cached copy.",
+          "description": "A URL (web link) to a release package containing the OCDS release, if available.",
           "type": "string",
           "format": "uri"
         }

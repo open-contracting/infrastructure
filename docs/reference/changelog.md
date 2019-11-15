@@ -19,17 +19,18 @@
 
 #### OC4IDS project schema
 
+* [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance
 * [#132](https://github.com/open-contracting/infrastructure/issues/157) - add a publicAuthority organization reference field  
 * [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)
 * [#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work
 * [#141](https://github.com/open-contracting/infrastructure/issues/141) - remove incorrect guidance about other fields from `contractingProcesses/summary/modifications`
 * [#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array
+* [#154](https://github.com/open-contracting/infrastructure/issues/154) - add `.requestDate` field to `project/budget` to record the date of the budget request for the project
 * [#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
 * [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)
 * [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
 * [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
-* [#154](https://github.com/open-contracting/infrastructure/issues/154) - add `.requestDate` field to `project/budget` to record the date of the budget request for the project
 
 ### Codelists
 

@@ -46,6 +46,15 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
     .. markdown::
 
+      If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users.
+```
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
       [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources
 
 ```
