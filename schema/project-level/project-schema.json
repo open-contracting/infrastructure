@@ -117,6 +117,12 @@
           "description": "The projected costs or allocated budget for the project.",
           "$ref": "#/definitions/Value"
         },
+        "requestDate": {
+          "title": "Request date",
+          "description": "The date on which the project budget was requested.",
+          "type": "string",
+          "format": "date-time"
+        },
         "approvalDate": {
           "title": "Approval date",
           "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included amongst the project documents with the documentType set to 'budgetApproval'.",
