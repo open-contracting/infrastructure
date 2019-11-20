@@ -3,3 +3,5 @@ build/
 **pycache**
 /docs/_static/process-level
 /docs/_static/project-level
+/node_modules
+/package-lock.json

@@ -46,6 +46,15 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
     .. markdown::
 
+      If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users.
+```
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
       [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources
 
 ```
@@ -53,6 +62,16 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 #### (3) Develop a search strategy to discover infrastructure projects
 
 Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers.md) for more information on where to find identifiers for projects.
+
+```
 
 However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
 

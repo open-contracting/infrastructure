@@ -8,7 +8,7 @@ The schema can be explored using the [schema browser](browser.md) and can be [do
 
 OC4IDS data must be published as part of a [project package](package.md), which serves as a container for data on multiple projects and adds important metadata about the data publication.
 
-The OC4IDS schema reuses many of the building blocks from the Open Contracting Data Standard; these are introduced in the [Getting Started section of the OCDS documentation](https://standard.open-contracting.org/latest/en/getting_started/).
+The OC4IDS schema reuses many of the building blocks from the Open Contracting Data Standard; these are introduced in the [Getting Started section of the OCDS documentation](https://standard.open-contracting.org/1.1/en/getting_started/).
 
 ```eval_rst
 .. toctree::

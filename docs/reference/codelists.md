@@ -16,7 +16,14 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 
 ```
 
-For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](https://standard.open-contracting.org/latest/en/schema/codelists/).
+For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](https://standard.open-contracting.org/1.1/en/schema/codelists/).
+
+## OCDS codelists
+
+OC4IDS reuses some codelists from the Open Contracting Data Standard:
+
+* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
+* [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 
 ## Closed codelists
 
@@ -156,9 +163,24 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```
 
-## OCDS codelists
+### RelatedProject
 
-OC4IDS also reuses some codelists from the Open Contracting Data Standard:
+```eval_rst
 
-* [Release tag](https://standard.open-contracting.org/latest/en/schema/codelists/#release-tag)
-* [Organization identifier scheme](https://standard.open-contracting.org/latest/en/schema/codelists/#organization-identifier-scheme)
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/relatedProject.csv
+
+```
+
+### RelatedProjectScheme
+
+```eval_rst
+
+   .. csv-table::
+      :header-rows: 1
+      :class: codelist-table
+      :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
+
+```

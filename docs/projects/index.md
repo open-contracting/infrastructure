@@ -65,7 +65,7 @@ The `modifications` section should be used to record information on changes to t
 
 ### Contracting process details
 
-Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of (cached) OCDS releases, recording each update to a contracting process.
+Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of OCDS releases, recording each update to a contracting process.
 
 Explanations of any modifications detected when comparing releases should be provided in the `modifications` section of the contracting process summary.
 
