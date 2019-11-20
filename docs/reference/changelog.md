@@ -11,6 +11,7 @@
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
 * [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
+* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page.
 
 ### Schema
 
