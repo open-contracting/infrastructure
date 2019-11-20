@@ -43,6 +43,8 @@ If local project identifiers are available in existing systems or data, these sh
 
 To make local project identifiers globally unique for use in OC4IDS, the OC4IDS Helpdesk assigns a project identifier prefix that publishers must add to local project identifiers, using the following identifier structure: `[project identifier prefix]-[local project identifier]`.
 
+Project identifier prefixes establish an identifier series and the same prefix is used for all identifiers in a series. For example, the prefix `oc4ids-qu8r7p`, assigned by the OC4IDS Helpdesk, will be added to all the project identifiers from the SISOCS system developed by CoST Honduras.
+
 ```eval_rst
 .. admonition:: Request a project identifier prefix
     :class: tip
