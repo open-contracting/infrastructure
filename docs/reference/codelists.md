@@ -18,6 +18,13 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 
 For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](https://standard.open-contracting.org/1.1/en/schema/codelists/).
 
+## OCDS codelists
+
+OC4IDS reuses some codelists from the Open Contracting Data Standard:
+
+* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
+* [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
+
 ## Closed codelists
 
 ### ContractingProcessStatus
@@ -177,10 +184,3 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
       :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 
 ```
-
-## OCDS codelists
-
-OC4IDS also reuses some codelists from the Open Contracting Data Standard:
-
-* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
-* [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
