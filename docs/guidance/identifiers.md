@@ -37,13 +37,15 @@ The `planning/budget/projectID` field in OCDS should **not** be used to disclose
 
 ## Globally unique project identifiers
 
-Project identifiers in OC4IDS should be globally unique; this means that, across the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
+Project identifiers in OC4IDS should be globally unique; this means that, across all the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
 
-If local project identifiers are available in existing systems or data, these should be re-used to create globally unique project identifiers for use in OC4IDS; otherwise, if local project identifiers are not available, publishers may assign local identifiers to projects in the systems used to generate OC4IDS data.
+If local project identifiers are available in existing systems or data, these should be re-used to create globally unique project identifiers for use in OC4IDS. Otherwise, if local project identifiers are not available, publishers may assign local identifiers to projects in the new systems used to generate OC4IDS data.
 
-To make local project identifiers globally unique for use in OC4IDS, the OC4IDS Helpdesk assigns a project identifier prefix that publishers must add to local project identifiers, using the following identifier structure: `[project identifier prefix]-[local project identifier]`.
+To make local project identifiers globally unique for use in OC4IDS, a publisher requests a project identifier prefix from the [OC4IDS Helpdesk](mailto:data@open-contracting.org). The publisher must then use the assigned prefix in all its project identifiers, according to following structure: `[project identifier prefix]-[local project identifier]`.
 
-Project identifier prefixes establish an identifier series and the same prefix is used for all identifiers in a series. For example, the prefix `oc4ids-qu8r7p`, assigned by the OC4IDS Helpdesk, will be added to all the project identifiers from the SISOCS system developed by CoST Honduras.
+For example: CoST Honduras requests a project identifier prefix from the OC4IDS Helpdesk. The OC4IDS Helpdesk assigns the randomly-generated prefix `oc4ids-qu8r7p`. CoST Honduras then creates globally unique project identifiers, by combining its assigned prefix with each local project identifier from its SISOCS system.
+
+Project identifier prefixes are typically unique to each publisher. However, multiple publishers in the same jurisdiction can collaboratively decide to use the same project identifier prefix: for example, if multiple agencies are independently responsible for different projects. As such, the prefix serves to identify a series of infrastructure projects (to which many publishers can contribute), rather than to identify one publisher.
 
 ```eval_rst
 .. admonition:: Request a project identifier prefix
