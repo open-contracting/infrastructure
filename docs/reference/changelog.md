@@ -10,6 +10,7 @@
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
+* [#120](https://github.com/open-contracting/infrastructure/issues/120) - add [list of registered project identifier prefixes](../guidance/registration.md) to documentation
 
 ### Schema
 
