@@ -202,7 +202,28 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
+          ]
+        },
+        {
+          "name": "Motorway Design Services PLC",
+          "id": "GB-COH-12345678",
+          "identifier": {
+            "scheme": "GB-COH",
+            "id": "12345678",
+            "legalName": "Motorway Design Services PLC",
+            "uri": "https://beta.companieshouse.gov.uk/company/22222222"
+          },
+          "address": {
+            "streetAddress": "567 High Street",
+            "locality": "Mareham",
+            "region": "Eastshire",
+            "postalCode": "ES22 3TW",
+            "countryName": "UK"
+          },
+          "roles": [
+            "tenderer"
           ]
         },
         {
@@ -229,7 +250,8 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
           ]
         },
         {
@@ -256,7 +278,8 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
           ]
         }
       ],
@@ -321,7 +344,17 @@
                 "amount": 2000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 3,
+              "numberOfTenderers": 2,
+              "tenderers": [
+                {
+                  "name": "A1 Expert Smart Moto Design",
+                  "id": "GB-COH-11111111"
+                },
+                {
+                  "name": "Motorway Design Services PLC",
+                  "id": "GB-COH-12345678"
+                }
+              ],
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
@@ -394,7 +427,13 @@
                 "amount": 5000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 5,
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Expert Motorway Supervisors",
+                  "id": "GB-COH-22222222"
+                }
+              ],
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
@@ -486,7 +525,13 @@
                 "amount": 33000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 4,
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Concrete Motorways Construction",
+                  "id": "GB-COH-33333333"
+                }
+              ],
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"

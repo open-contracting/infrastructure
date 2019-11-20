@@ -320,6 +320,15 @@
               "description": "The number of parties who placed a bid during this contracting process.",
               "type": "number"
             },
+            "tenderers": {
+              "title": "Tenderers",
+              "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension in a linked OCDS release.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OrganizationReference"
+              },
+              "uniqueItems": true
+            },
             "procuringEntity": {
               "title": "Procuring entity",
               "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `role` of 'procuringEntity'.",

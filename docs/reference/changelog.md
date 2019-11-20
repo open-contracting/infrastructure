@@ -22,6 +22,7 @@
 #### OC4IDS project schema
 
 * [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance
+* [#130](https://github.com/open-contracting/infrastructure/issues/130) - add tenderers field to contractingProcessSummary/tender
 * [#132](https://github.com/open-contracting/infrastructure/issues/157) - add a publicAuthority organization reference field  
 * [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)
 * [#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project.
