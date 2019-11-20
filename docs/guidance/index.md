@@ -11,6 +11,5 @@
    evaluating
    data_user_guide
    example
-   registration
 
 ```

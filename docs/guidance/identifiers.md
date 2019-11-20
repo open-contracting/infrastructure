@@ -35,7 +35,7 @@ In OCDS, the identifier for the individual infrastructure project to which a con
 
 The `planning/budget/projectID` field in OCDS should **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier for a project in the national budget, which might include multiple infrastructure projects to which the contracting process is related.
 
-## Globally unique project identifiers
+## Project identifier prefixes
 
 Project identifiers in OC4IDS should be globally unique; this means that, across the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
 
@@ -49,6 +49,14 @@ To make local project identifiers globally unique for use in OC4IDS, the OC4IDS 
 
     .. markdown::
 
-        To request a prefix, or view the list of registered prefixes, visit the [registration page](./registration.md).
+        To request a project identifier prefix please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with the name of your organization and a brief description of your OC4IDS implementation.
 
 ```
+
+### Existing prefixes
+
+The list below shows currently registered prefixes.
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pubhtml?gid=506986894&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
+
+[CSV download](https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single=true&output=csv)
