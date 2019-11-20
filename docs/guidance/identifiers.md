@@ -49,6 +49,6 @@ To make local project identifiers globally unique for use in OC4IDS, the OC4IDS 
 
     .. markdown::
 
-        To request a project identifier prefix, contact the OC4IDS Helpdesk by emailing <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> and provide the name of your organization.
+        To request a prefix, or view the list of registered prefixes, visit the [registration page](./registration.md).
 
 ```
