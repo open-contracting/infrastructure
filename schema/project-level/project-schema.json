@@ -11,7 +11,8 @@
     "id": {
       "title": "Identifier or Reference",
       "description": "A unique identifier or reference number for this infrastructure project, composed of a project identifier prefix and a local project identifier. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#globally-unique-project-identifiers).",
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "updated": {
       "title": "Last updated",
@@ -57,7 +58,8 @@
         "type": "string"
       },
       "codelist": "projectSector.csv",
-      "openCodelist": true
+      "openCodelist": true,
+      "uniqueItems": true
     },
     "purpose": {
       "title": "Project purpose",
@@ -91,7 +93,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/RelatedProject"
-      }
+      },
+      "uniqueItems": true
     },
     "assetLifetime": {
       "title": "Asset lifetime",
@@ -135,7 +138,8 @@
           "description": "A detailed breakdown of the budget by period and/or participating funders.",
           "items": {
             "$ref": "#/definitions/BudgetBreakdown"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -159,7 +163,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Document"
-      }
+      },
+      "uniqueItems": true
     },
     "contractingProcesses": {
       "title": "Contracting processes",
@@ -167,7 +172,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/ContractingProcess"
-      }
+      },
+      "uniqueItems": true
     },
     "completion": {
       "title": "Completion",
@@ -231,7 +237,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/LinkedRelease"
-          }
+          },
+          "uniqueItems": true
         }
       },
       "required": [
@@ -268,7 +275,8 @@
             ]
           },
           "codelist": "contractNature.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "uniqueItems": true
         },
         "title": {
           "title": "Title",
@@ -352,7 +360,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
-          }
+          },
+          "uniqueItems": true
         },
         "contractValue": {
           "title": "Contract value",
@@ -375,7 +384,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          }
+          },
+          "uniqueItems": true
         },
         "modifications": {
           "title": "Modifications",
@@ -383,7 +393,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -395,7 +406,8 @@
         "id": {
           "title": "ID",
           "description": "A unique identifier for this update of information. This should be taken from the OCDS `release.id`, if available.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "tag": {
           "title": "Release tag",
@@ -429,7 +441,9 @@
             ]
           },
           "codelist": "releaseTag.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
         },
         "date": {
           "title": "Date",
@@ -669,7 +683,8 @@
                 "type": [
                   "string"
                 ]
-              }
+              },
+              "uniqueItems": true
             }
           }
         },
@@ -1069,7 +1084,8 @@
             "type": "string"
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "uniqueItems": true
         }
       }
     },
