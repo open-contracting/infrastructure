@@ -82,7 +82,8 @@
       "enum": [
         "construction",
         "rehabilitation",
-        "replacement"
+        "replacement",
+        "expansion"
       ],
       "codelist": "projectType.csv",
       "openCodelist": false
