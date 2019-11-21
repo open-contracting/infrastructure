@@ -22,8 +22,10 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 OC4IDS reuses some codelists from the Open Contracting Data Standard:
 
-* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
+* [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
+* [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
+* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 
 ## Closed codelists
 
@@ -49,17 +51,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard:
 
 ```
 
-### Currency
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/currency.csv
-
-```
-
 ### GeometryType
 
 ```eval_rst
@@ -68,17 +59,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard:
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/geometryType.csv
-
-```
-
-### Method
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/method.csv
 
 ```
 
