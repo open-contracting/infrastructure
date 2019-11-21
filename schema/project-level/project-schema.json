@@ -640,10 +640,8 @@
                 "type": [
                   "number",
                   "array"
-                ],
-                "uniqueItems": true
-              },
-              "uniqueItems": true
+                ]
+              }
             }
           }
         },
