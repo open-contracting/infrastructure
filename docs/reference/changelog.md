@@ -5,13 +5,14 @@
 ### Documentation
 
 * [#96](https://github.com/open-contracting/infrastructure/issues/96) - add guidance on providing project identifiers in OCDS data.
+* [#120](https://github.com/open-contracting/infrastructure/issues/120) - add list of registered project identifier prefixes to documentation
+* [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
 * [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace 'owner' with 'publicAuthority' in mapping.
 * [#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
-* [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
-* [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
 * [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page.
+* [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
 
 ### Schema
 
