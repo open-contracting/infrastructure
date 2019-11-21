@@ -18,6 +18,7 @@
 #### Project package schema
 
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update URL in `publicationPolicy` description to reference the data user guide page.
+* [#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce minimum length on required string fields and minimum properties on required objects.
 
 #### OC4IDS project schema
 
@@ -35,6 +36,7 @@
 * [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)
 * [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
 * [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
+* [#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce unique items in arrays and minimum length on required string fields.
 
 ### Codelists
 
