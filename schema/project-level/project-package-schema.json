@@ -48,7 +48,8 @@
         "name": {
           "title": "Name",
           "description": "The name of the organization or department responsible for publishing this data.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "scheme": {
           "title": "Scheme",
@@ -78,7 +79,8 @@
       },
       "required": [
         "name"
-      ]
+      ],
+      "minProperties": 1
     },
     "license": {
       "title": "License",
