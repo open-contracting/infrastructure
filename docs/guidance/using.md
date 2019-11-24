@@ -69,7 +69,7 @@ Ideally, the procurement data source will include some sort of project or budget
 
     .. markdown::
 
-      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers.md) for more information on where to find identifiers for projects.
+      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects.
 
 ```
 
@@ -149,7 +149,7 @@ You may not be able to fill all the project-level details from the contracts, an
 
     .. markdown::
 
-      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 
 ```
 
@@ -187,6 +187,6 @@ Tools to help you with manual monitoring include:
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [OC4IDS](../projects/index.md) provides a common data structure for recording project-level information;
+* The [OC4IDS](../../projects/index) provides a common data structure for recording project-level information;
 
-* The [CoST IDS and OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.
+* The [CoST IDS and OCDS Mapping](../../cost/index) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

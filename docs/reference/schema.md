@@ -6,7 +6,7 @@
 
 # Schema reference
 
-The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser.md).
+The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser).
 
 ## Project
 
