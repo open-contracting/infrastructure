@@ -53,7 +53,7 @@ Project identifier prefixes are typically unique to each publisher. However, mul
 
     .. markdown::
 
-        To request a project identifier prefix, please e-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with the name of your organization and a brief description of your OC4IDS implementation.
+        To request a project identifier prefix, please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization and a brief description of your OC4IDS implementation.
 
 ```
 

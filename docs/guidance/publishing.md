@@ -20,7 +20,7 @@ If you also collect detailed data on contracting processes, this can be publishe
 
 ## Getting started
 
-*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
+*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 ### (1) Make a commitment
 
@@ -34,7 +34,7 @@ Refer to the [OCDS implementation journey](https://www.open-contracting.org/impl
 
 ### (2a) Map project-level data and summary contracting process data
 
-Map existing data structures to [OC4IDS](../projects/index.md).
+Map existing data structures to [OC4IDS](../../projects/index).
 
 ```eval_rst
 .. admonition:: Tip
@@ -50,14 +50,14 @@ Your mapping might identify:
 
 * **Gaps in your data** where data in OC4IDS is not currently collected or disclosed in your system. Use OC4IDS as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.
 
-* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../../../reference/#extending-the-schema) for information on including additional fields in your data.
+* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../reference/#extending-the-schema) for information on including additional fields in your data.
 
 
 ### (2b) Map detailed contracting process data
 
 If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/2) for information and resources about mapping and publishing your contracting data using OCDS.
 
-Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](../../../identifiers#project-identifiers-in-ocds).
+Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](../identifiers/#project-identifiers-in-ocds).
 
 ### (3) Build your data, systems and processes
 
@@ -69,7 +69,7 @@ Create an OC4IDS JSON file for each project your system has information on and u
 
     .. markdown::
 
-      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 
 ```
 
