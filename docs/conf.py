@@ -27,7 +27,6 @@ from pathlib import Path
 
 import standard_theme
 from ocds_babel.translate import translate
-from recommonmark.parser import CommonMarkParser
 from recommonmark.transform import AutoStructify
 from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 
@@ -41,6 +40,7 @@ from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'recommonmark',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opendataservices',
 ]
@@ -52,10 +52,6 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.md'
-source_parsers = {
-    '.md': CommonMarkParser,
-}
 
 # The master toctree document.
 master_doc = 'index'
@@ -129,7 +125,7 @@ html_theme_options = {
 }
 
 # The version of OCDS to patch.
-standard_tag = '1__1__3'
+standard_tag = '1__1__4'
 standard_version = '1.1'
 
 # Where the patched schemas will be deployed.

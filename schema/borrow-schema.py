@@ -1,17 +1,18 @@
-"""borrow-schema.py.
+"""
+This script helps keep OC4IDS aligned with OCDS. It uses OCDS for PPPs as a basis, as it includes most definitions
+and codelists needed in OC4IDS. The script copies definitions and codelists across, making modifications as required.
 
-This script takes the full PPP extension schema as a basis (as this includes
-most of the elements we need in OC for Infrastructure, and copies definitions
-across into the Infrastructure Project Transparency Schema, making
-modifications to titles or descriptions where required.
+For every release of OCDS for PPPs, this script should be run. Any changes to schemas or codelists should be reviewed,
+and the script should be updated if necessary.
 
-The goal of this is to make it easier to see where changes might be needed in
-future to keep Project Level Data Specification aligned with OCDS
-object definitions.
+Some OC4IDS-specific definitions have fields with the same names as in OCDS-specific definitions, notably:
 
-When major updates to OCDS take place, and OCDS for PPPs is updated, this script
-should be run, and the diffs compared to see if changes to the project level data
-specification should be made.
+- procurementMethod
+- procurementMethodDetails
+- tenderers
+
+The descriptions of most other such fields have diverged. As such, the script makes no effort to copy the descriptions
+of such fields, and instead leaves this up to the editor.
 """
 
 import csv

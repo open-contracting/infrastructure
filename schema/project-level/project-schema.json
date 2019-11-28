@@ -11,7 +11,8 @@
     "id": {
       "title": "Identifier or Reference",
       "description": "A unique identifier or reference number for this infrastructure project, composed of a project identifier prefix and a local project identifier. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#globally-unique-project-identifiers).",
-      "type": "string"
+      "type": "string",
+      "minLength": 1
     },
     "updated": {
       "title": "Last updated",
@@ -57,7 +58,8 @@
         "type": "string"
       },
       "codelist": "projectSector.csv",
-      "openCodelist": true
+      "openCodelist": true,
+      "uniqueItems": true
     },
     "purpose": {
       "title": "Project purpose",
@@ -80,7 +82,8 @@
       "enum": [
         "construction",
         "rehabilitation",
-        "replacement"
+        "replacement",
+        "expansion"
       ],
       "codelist": "projectType.csv",
       "openCodelist": false
@@ -91,7 +94,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/RelatedProject"
-      }
+      },
+      "uniqueItems": true
     },
     "assetLifetime": {
       "title": "Asset lifetime",
@@ -135,7 +139,8 @@
           "description": "A detailed breakdown of the budget by period and/or participating funders.",
           "items": {
             "$ref": "#/definitions/BudgetBreakdown"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -159,7 +164,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Document"
-      }
+      },
+      "uniqueItems": true
     },
     "contractingProcesses": {
       "title": "Contracting processes",
@@ -167,7 +173,8 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/ContractingProcess"
-      }
+      },
+      "uniqueItems": true
     },
     "completion": {
       "title": "Completion",
@@ -231,7 +238,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/LinkedRelease"
-          }
+          },
+          "uniqueItems": true
         }
       },
       "required": [
@@ -243,6 +251,11 @@
       "title": "Summary",
       "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and modifications may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
       "properties": {
+        "ocid": {
+          "title": "Open Contracting Identifier",
+          "description": "If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. Otherwise this field should be omitted.",
+          "type": "string"
+        },
         "externalReference": {
           "title": "External reference",
           "description": "If this contracting process is identified by some external reference number it may be recorded here.",
@@ -263,7 +276,8 @@
             ]
           },
           "codelist": "contractNature.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "uniqueItems": true
         },
         "title": {
           "title": "Title",
@@ -320,6 +334,15 @@
               "description": "The number of parties who placed a bid during this contracting process.",
               "type": "number"
             },
+            "tenderers": {
+              "title": "Tenderers",
+              "description": "All parties who submit a bid on a tender. More detailed information on bids and the bidding organization can be provided using the bid extension in a linked OCDS release.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/OrganizationReference"
+              },
+              "uniqueItems": true
+            },
             "procuringEntity": {
               "title": "Procuring entity",
               "description": "The name and identifier of the procuring entity responsible for this contracting process. The full details of the entity should be added to the project-level `parties` array with a `role` of 'procuringEntity'.",
@@ -338,7 +361,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/OrganizationReference"
-          }
+          },
+          "uniqueItems": true
         },
         "contractValue": {
           "title": "Contract value",
@@ -361,7 +385,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
-          }
+          },
+          "uniqueItems": true
         },
         "modifications": {
           "title": "Modifications",
@@ -369,7 +394,8 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Modification"
-          }
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -381,7 +407,8 @@
         "id": {
           "title": "ID",
           "description": "A unique identifier for this update of information. This should be taken from the OCDS `release.id`, if available.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "tag": {
           "title": "Release tag",
@@ -415,7 +442,9 @@
             ]
           },
           "codelist": "releaseTag.csv",
-          "openCodelist": false
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
         },
         "date": {
           "title": "Date",
@@ -655,7 +684,8 @@
                 "type": [
                   "string"
                 ]
-              }
+              },
+              "uniqueItems": true
             }
           }
         },
@@ -1055,7 +1085,8 @@
             "type": "string"
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "uniqueItems": true
         }
       }
     },

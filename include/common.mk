@@ -1,6 +1,3 @@
-# Update this file from a profile with:
-# curl -O https://raw.githubusercontent.com/open-contracting/standard_profile_template/master/include/common.mk
-
 # See https://github.com/datamade/data-making-guidelines
 
 # See http://clarkgrubb.com/makefile-style-guide#phony-target-arg
@@ -86,16 +83,12 @@ pull:
 # (Don't use clean_current_lang as a prerequisite, as then it won't run as a prerequisite later.)
 $(LANGUAGES:.%=current_lang.%): current_lang.%: FORCE
 	rm -f $(BUILD_DIR)/current_lang
-	rm -f $(BUILD_DIR)/codelists/current_lang
-	mkdir -p $(BUILD_DIR)/codelists
 	ln -s $* $(BUILD_DIR)/current_lang
-	ln -s $* $(BUILD_DIR)/codelists/current_lang
 
 # Deploy script complains if current_lang is present.
 .PHONY: clean_current_lang
 clean_current_lang:
 	rm $(BUILD_DIR)/current_lang
-	rm $(BUILD_DIR)/codelists/current_lang
 
 ### Build
 

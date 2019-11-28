@@ -1,10 +1,10 @@
 # Worked example
 
-The [OC4IDS schema](../reference/index.md) sets out the structure and format of an OC4IDS JSON file.
+The [OC4IDS schema](../../reference/index) sets out the structure and format of an OC4IDS JSON file.
 
 This worked example is a fully completed OC4IDS JSON file representing a fictional, completed infrastructure project to upgrade a motorway in the UK.
 
-The full OC4IDS JSON file for the worked example is available to download [here](../../../../_static/example.json).
+The full OC4IDS JSON file for the worked example is available to download [here](../../_static/example.json).
 
 This page contains excerpts from the example JSON file, showing how key sections of the schema ought to be populated.
 
@@ -41,7 +41,7 @@ The `license` field ought to contain a link to the license that applies to the d
 
 #### Publication policy
 
-The `publicationPolicy` field ought to contain a link to guidance for data users. For more information about what to include in a publication policy, refer to the [Guidance for data users](guidance_for_data_users.md).
+The `publicationPolicy` field ought to contain a link to a data user guide. For more information about what to include in a publication policy, refer to [Data user guide](data_user_guide).
 
 ### Project information
 
@@ -63,17 +63,17 @@ Each project object contains the following sections:
 
 This section provides contextual information about the infrastructure project, including:
 
-* `id` for the project identifier. To make the project identifier globally unique, a project identifier prefix needs to be added to a local identifier for the project. Project identifier prefixes are assigned by the OC4IDS Helpdesk. For more information on project identifiers, refer to the [project identifiers guidance](../../../../guidance/identifiers/#globally-unique-project-identifiers).
+* `id` for the project identifier. To make the project identifier globally unique, a project identifier prefix needs to be added to a local identifier for the project. Project identifier prefixes are assigned by the OC4IDS Helpdesk. For more information on project identifiers, refer to the [project identifiers guidance](../identifiers/#globally-unique-project-identifiers).
 
-* `status` from the [Project Status codelist](../../../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
+* `status` from the [Project Status codelist](../../reference/codelists/#projectstatus). In this example, the project status is 'completed'.
 
-* `type` from the [Project Type codelist](../../../../reference/codelists/#projecttype). In this example, the project type is 'expansion'.
+* `type` from the [Project Type codelist](../../reference/codelists/#projecttype). In this example, the project type is 'expansion'.
 
-* `sector` from the [Project Sector codelist](../../../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
+* `sector` from the [Project Sector codelist](../../reference/codelists/#projectsector). In this example, the sector is 'transport.road', the parent sector 'transport' is also included in the sector list, in line with the guidance in the schema.
 
-* one or more `relatedProjects`, to reference other projects that are related to the same set of infrastructure assets, as [outlined in the schema reference](../../../../reference/schema/#relatedproject). In the relatedProject example below, a reference is made to the original project that initially constructed the motorway junctions, which are now being upgraded by this project.
+* one or more `relatedProjects`, to reference other projects that are related to the same set of infrastructure assets, as [outlined in the schema reference](../../reference/schema/#relatedproject). In the relatedProject example below, a reference is made to the original project that initially constructed the motorway junctions, which are now being upgraded by this project.
 
-* one or more `locations`, which can be expressed in a variety of ways as [outlined in the schema reference](../../../../reference/schema/#location). In this example, one location is given: a motorway junction, using a point location, a gazetteer entry and an address.
+* one or more `locations`, which can be expressed in a variety of ways as [outlined in the schema reference](../../reference/schema/#location). In this example, one location is given: a motorway junction, using a point location, a gazetteer entry and an address.
 
 ```eval_rst
 
@@ -147,7 +147,7 @@ The `publicAuthority` field indicates the project owner: the unit, body or depar
 
 The `documents` array is used to provide information and links to documents and documentation relating to the infrastructure project. During different phases of the project, different document types are expected.
 
-In the document example below, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../../../reference/codelists/#documenttype).
+In the document example below, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../reference/codelists/#documenttype).
 
 ```eval_rst
 
