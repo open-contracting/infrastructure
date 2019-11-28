@@ -4,6 +4,8 @@ The regular disclosure of structured data can greatly enhance the transparency a
 
 ## What is a project?
 
+In the context of OC4IDS, the term 'project' refers to an infrastructure project, defined as the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+
 An infrastructure project may stand alone (e.g. a new hospital), or may form part of a wider programme of work (e.g. a new rail station, as part of an extension to a railway line). An infrastructure project is usually implemented through a series of contracts, and usually involves planning and coordination at the project-level.
 
 ```eval_rst
@@ -12,9 +14,13 @@ An infrastructure project may stand alone (e.g. a new hospital), or may form par
 
     .. markdown::
 
-        In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+      The term "project" is used in many contexts to mean different things, for example:
 
-        In other contexts, the term 'project' can refer to a larger programme of work – of which projects in the sense of OC4IDS would form part of – like the construction of an entire highway. The term 'project' can also refer to a public investment to which funds are allocated in a government's budget, like the electrification of a rail network.
+      * a larger programme of work, like the construction of an entire highway
+      * an investment project, like in National Public Investment Systems (SNIP) in Latin America
+      * a project code in a government's budget
+
+      However, to correctly implement and interpret OC4IDS, the above definition of an infrastructure project needs to be adhered to.
 
 ```
 
