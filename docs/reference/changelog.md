@@ -5,26 +5,24 @@
 ### Documentation
 
 * [#96](https://github.com/open-contracting/infrastructure/issues/96) - add guidance on providing project identifiers in OCDS data.
-* [#120](https://github.com/open-contracting/infrastructure/issues/120) - add list of registered project identifier prefixes to documentation
-* [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
 * [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace 'owner' with 'publicAuthority' in mapping.
 * [#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
-* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page.
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
+* [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
+* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page.
+* [#133](https://github.com/open-contracting/infrastructure/issues/133) - improve clarity of 'what is a project' in getting started section
 
 ### Schema
 
 #### Project package schema
 
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update URL in `publicationPolicy` description to reference the data user guide page.
-* [#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce minimum length on required string fields and minimum properties on required objects.
 
 #### OC4IDS project schema
 
 * [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance
-* [#130](https://github.com/open-contracting/infrastructure/issues/130) - add tenderers field to contractingProcessSummary/tender
 * [#132](https://github.com/open-contracting/infrastructure/issues/157) - add a publicAuthority organization reference field  
 * [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)
 * [#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project.
@@ -36,7 +34,7 @@
 * [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
 * [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)
 * [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
-* [#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce unique items in arrays and minimum length on required string fields.
+* [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
 
 ### Codelists
 
