@@ -12,7 +12,7 @@
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
-* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists which are shared
+* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists that are shared
 
 ### Schema
 

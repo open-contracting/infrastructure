@@ -20,7 +20,7 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 ## OCDS codelists
 
-OC4IDS reuses some codelists from the Open Contracting Data Standard and extensions:
+OC4IDS reuses some codelists from the Open Contracting Data Standard and its extensions:
 
 * [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
 * [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
