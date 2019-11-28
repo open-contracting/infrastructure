@@ -20,9 +20,11 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 ## OCDS codelists
 
-OC4IDS reuses some codelists from the Open Contracting Data Standard:
+OC4IDS reuses some codelists from the Open Contracting Data Standard and extensions:
 
 * [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
+* [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
+* [Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)
 * [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
@@ -48,17 +50,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard:
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/contractNature.csv
-
-```
-
-### GeometryType
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/geometryType.csv
 
 ```
 
@@ -96,17 +87,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
       :header-rows: 1
       :class: codelist-table
       :file: ../../build/current_lang/codelists/documentType.csv
-
-```
-
-### LocationGazetteers
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/locationGazetteers.csv
 
 ```
 
