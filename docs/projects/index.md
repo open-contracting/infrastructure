@@ -35,7 +35,7 @@ Within an infrastructure project, a procuring entity may issue contracts for its
 [CoST](http://infrastructuretransparency.org/) have developed a framework of information that should be pro-actively disclosed and kept updated at each stage. Project-level data covers:
 
 * **identification** - the decision to develop a project within the budget and programme of a project owner.
-* **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.
+* **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorization.
 * **implementation** - covers the procurement and implementation of the planning, design and works according to the procurement strategy.
 * **completion** - covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.
 
@@ -103,7 +103,7 @@ So that your project information can be compared with information from others, a
 
 The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contracting data sources, but to also work in cases where structured open contracting is not available.
 
-Some of the data structures, such as the organisation identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
+Some of the data structures, such as the organization identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
 
 ```eval_rst
 .. admonition:: Things to consider
