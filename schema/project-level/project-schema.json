@@ -129,7 +129,7 @@
         },
         "approvalDate": {
           "title": "Approval date",
-          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included amongst the project documents with the documentType set to 'budgetApproval'.",
+          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included among the project documents with the documentType set to 'budgetApproval'.",
           "type": "string",
           "format": "date-time"
         },
@@ -286,7 +286,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "The description should summarise the purpose of this contract and the initial scope of the work to be carried out under the contract.",
+          "description": "The description should summarize the purpose of this contract and the initial scope of the work to be carried out under the contract.",
           "type": "string"
         },
         "status": {

@@ -1,8 +1,8 @@
 # Publishing data from an infrastructure transparency portal
 
-OC4IDS can be used to publish standardised open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
+OC4IDS can be used to publish standardized open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
 
-Publishing standardised open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
+Publishing standardized open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
 
 If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/1.1/en/).
 
@@ -24,7 +24,7 @@ If you also collect detailed data on contracting processes, this can be publishe
 
 ### (1) Make a commitment
 
-Consider making or advocating for a public commitment to publish standardised open data using OC4IDS and OCDS.
+Consider making or advocating for a public commitment to publish standardized open data using OC4IDS and OCDS.
 
 Commitments are important to help align implementation with the goals of publishing open data and to help overcome technical, political or bureaucratic barriers to publication.
 
@@ -87,7 +87,7 @@ If you are also publishing contracting data using OCDS, publish each new release
 
 > http://{your website}/opendata/contracting/{ocid}/{release-id}.json
 
-Make sure your project-level files include links in the `contractingProcess/releases` section to each related OCDS file.
+Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 
 To make your data easier to access, consider providing:
 

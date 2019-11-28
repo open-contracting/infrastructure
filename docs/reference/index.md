@@ -27,7 +27,7 @@ The OC4IDS schema reuses many of the building blocks from the Open Contracting D
 
 OC4IDS uses a permissive schema. It does not enforce strong technical validation requirements on data, other than some structural rules and data type rules (dates, numbers and strings).
 
-The fact that data validates against the schema cannot be used to make any judgement about the quality of that data.
+The fact that data validates against the schema cannot be used to make any judgment about the quality of that data.
 
 ## Extending the schema
 
