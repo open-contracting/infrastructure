@@ -308,7 +308,7 @@
           "properties": {
             "procurementMethod": {
               "title": "Procurement method",
-              "description": "Specify tendering method using the [method](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#method) codelist (open, selective, limited, direct).",
+              "description": "Specify tendering method using the [method codelist](https://standard.open-contracting.org/1.1/en/schema/codelists/#method) (open, selective, limited, direct).",
               "type": "string",
               "enum": [
                 "open",
