@@ -28,7 +28,6 @@ from pathlib import Path
 import standard_theme
 from ocds_babel.translate import translate
 from recommonmark.transform import AutoStructify
-from sphinxcontrib.opendataservices import AutoStructifyLowPriority
 
 # -- General configuration ------------------------------------------------
 
@@ -155,7 +154,6 @@ def setup(app):
     }, True)
 
     app.add_transform(AutoStructify)
-    app.add_transform(AutoStructifyLowPriority)
 
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
