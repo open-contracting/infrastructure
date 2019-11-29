@@ -48,7 +48,7 @@ If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping 
 
 #### Contracting data
 
-Check whether the contracting data is published using OCDS (Tip: You can use the OCDS Data Review tool for this).
+Check whether the contracting data is published using OCDS.
 
 ```eval_rst
 .. admonition:: Tip
