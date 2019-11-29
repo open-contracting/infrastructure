@@ -20,7 +20,6 @@ import json
 import os
 import re
 import sys
-from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 
@@ -30,7 +29,7 @@ ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_st
 ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
-ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
+ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json()
 
 
 def csv_reader(url):
@@ -131,7 +130,7 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
 
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
-    schema = json.load(f, object_pairs_hook=OrderedDict)
+    schema = json.load(f)
 
 infra_codelists = {
     'contractingProcessStatus.csv',
