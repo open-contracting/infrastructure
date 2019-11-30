@@ -19,3 +19,5 @@ test_search_params = [
     ('en', r'found \d+ page\(s\) matching'),
     # ('es', r'encontró \d+ página\(s\) acorde'),
 ]
+
+last_path = '/support/'
