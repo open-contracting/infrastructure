@@ -15,7 +15,7 @@ LOCALE_DIR=locale
 # Directory in which to build documentation files.
 BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
-EXTRA_BUILD_FILES=docs/_static/process-level docs/_static/project-level
+EXTRA_BUILD_FILES=chromedriver* docs/_static/process-level docs/_static/project-level
 # Files that are built and distributed (you may use Bash extended globbing).
 DIST_FILES=schema/project-level/project-schema.json schema/project-level/codelists
 # Directory in which to build .pot files.

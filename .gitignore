@@ -11,7 +11,7 @@
 /chromedriver_win32.zip
 /docs/_static/patched
 
-**pycache**
 /docs/_static/process-level
 /docs/_static/project-level
+# json-schema-random
 /node_modules
