@@ -1,14 +1,12 @@
-from collections import OrderedDict
-
 languages = {
     'en': 'English',
     # 'es': 'Español',
 }
 
-test_basic_params = OrderedDict([
-    ('en', 'Toolkit'),
-    # ('es', 'Inicio'),
-])
+test_basic_params = {
+    'en': 'Toolkit',
+    # 'es': 'Inicio',
+}
 
 test_navigation_params = [
     ('en', 'Next'),
