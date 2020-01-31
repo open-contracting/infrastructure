@@ -146,7 +146,7 @@
     },
     "parties": {
       "title": "Parties",
-      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the project and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
+      "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the project and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to the entries in this list.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Organization"
@@ -189,7 +189,7 @@
         },
         "endDateDetails": {
           "title": "End date details",
-          "description": "Details related to the endDate. This may be a justification for the project's completion date being different than in the original project.",
+          "description": "Details related to the endDate. This may be a justification for the project's completion date being different from the original project.",
           "type": "string"
         },
         "finalValue": {
@@ -199,7 +199,7 @@
         },
         "finalValueDetails": {
           "title": "Final value details",
-          "description": "Details related to the final value. This may be a justification for the completed project's value being different than in the original or latest revised budget.",
+          "description": "Details related to the final value. This may be a justification for the completed project's value being different from the original or latest revised budget.",
           "type": "string"
         },
         "finalScope": {

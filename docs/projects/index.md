@@ -97,11 +97,11 @@ So that your project information can be compared with information from others, a
 
 ### If you are designing a new infrastructure transparency portal...
 
-**... OC4IDS can be used by structure your data collection.**
+**... OC4IDS can be used to structure your data collection.**
 
 **Why?**
 
-The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contracting data sources, but to also work in cases where structured open contracting is not available.
+The specification has been designed to help you collect well-structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been designed to integrate with existing open contracting data sources, but to also work in cases where structured open contracting is not available.
 
 Some of the data structures, such as the organization identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
 

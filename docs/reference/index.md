@@ -2,7 +2,7 @@
 
 The Open Contracting for Infrastructure Data Standard (OC4IDS) provides a common approach for the disclosure of structured data on infrastructure projects and their related contracting processes.
 
-OC4IDS is comprised of a schema file and codelist files, and reference documentation is available for the [schema](schema) and [codelists](codelists).
+OC4IDS is composed of a schema file and codelist files, and reference documentation is available for the [schema](schema) and [codelists](codelists).
 
 The schema can be explored using the [schema browser](browser) and can be [downloaded here](../project-schema.json). The schema is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04).
 
@@ -33,4 +33,4 @@ The fact that data validates against the schema cannot be used to make any judgm
 
 The schema does not restrict the use of additional objects or fields. As a result, publishers of data are free to add extra details to their data.
 
-No formal extensions mechanism currently exists for OC4IDS. However, the extensions mechanism from the Open Contracting Data Standard should be used as a reference model if such a mechanism is required in future.
+No formal extensions mechanism currently exists for OC4IDS. However, the extensions mechanism from the Open Contracting Data Standard should be used as a reference model if such a mechanism is required in the future.

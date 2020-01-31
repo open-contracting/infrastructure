@@ -114,7 +114,7 @@ The CoST IDS also sets out a number of data points under the heading of 'reactiv
 
 Specifically:
 
-* Details of a individuals involved at the project or contract level can be included in the ``parties`` array with a suitable role. Role is an open codelist. As individuals will not have an 'organization identifier' a locally defined identifier may be used instead.
+* Details of individuals involved at the project or contract level can be included in the ``parties`` array with a suitable role. Role is an open codelist. Since individuals will not have an 'organization identifier' a locally defined identifier may be used instead.
 
 * Plans, reports and assessments may be included in the project or contracting process level `documents` blocks, or may be published within individual OCDS releases.
 

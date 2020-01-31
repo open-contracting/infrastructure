@@ -55,7 +55,7 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
     .. markdown::
 
-      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
+      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources.
 
 ```
 
@@ -101,7 +101,7 @@ This may be possible by downloading and filtering spreadsheets of the data, or m
           data->'tender'->'value'->>'currency' as currency,
           data->'tender'->'value'->>'amount' as value
 
-              /* We us a sub-query in order to select only contracting processes where there is at least one tender/item with a particular classification */
+              /* We use a sub-query in order to select only contracting processes where there is at least one tender/item with a particular classification */
       FROM (
           SELECT DISTINCT data from data
               /* In Kingfisher, OCDS data is sorted as 'json blobs' (jsonb). The next line expands the items array into a table we can join against */
