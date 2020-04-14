@@ -130,6 +130,8 @@ def setup(app):
     project_build_dir = basedir / 'docs' / '_static' / 'project-level'
     language_dir = basedir / 'build' / language
 
+    branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
+
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
         (glob(str(project_dir / '*-schema.json')), project_build_dir, schema_domain),
@@ -137,7 +139,7 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
-    ], localedir, language, headers, version=os.environ.get('TRAVIS_BRANCH', 'latest'))
+    ], localedir, language, headers, version=branch)
 
     # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
     for filename in glob(str(basedir / 'mapping' / '*.csv')):
