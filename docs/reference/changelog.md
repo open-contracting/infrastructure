@@ -13,6 +13,7 @@
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
 * [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists that are shared
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
+* [#218](https://github.com/open-contracting/infrastructure/pull/218) - add link to CoST guidance note on OGP commitments
 
 ### Schema
 

@@ -30,7 +30,7 @@ Commitments are important to help align implementation with the goals of publish
 
 Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
 
-Refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/1) for information and resources about making commitments related to OCDS.
+Refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/1) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
 
 ### (2a) Map project-level data and summary contracting process data
 
