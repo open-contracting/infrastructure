@@ -1076,7 +1076,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the contracting process, using the open [partyRole](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole) codelist.",
+          "description": "The party's role(s) in the project, using the open [partyRole](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole) codelist.",
           "type": [
             "array"
           ],

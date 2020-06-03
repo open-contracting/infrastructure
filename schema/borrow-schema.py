@@ -18,9 +18,9 @@ of such fields, and instead leaves this up to the editor.
 import csv
 import json
 import os
-from collections import OrderedDict
 import re
 import sys
+from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 
@@ -128,6 +128,7 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
     if removed:
         sys.exit('{prefix} is missing {items}: remove from infra_{suffix} in borrow-schema.py?'.format(
             items=', '.join(removed), prefix=prefix, suffix=suffix))
+
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
     schema = json.load(f, object_pairs_hook=OrderedDict)
@@ -301,10 +302,8 @@ schema['definitions']['Location']['required'] = ['id']
 copy_def('Value')
 
 copy_def('Organization', {
-    # Refer to project instead of contracting process.
-    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project'),
-    # Link to infrastructure codelist instead of PPP codelist
-    ('properties', 'roles', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),
+    # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
+    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')
 })
 # Remove unneeded extensions and details from Organization.
 del(schema['definitions']['Organization']['properties']['shareholders'])
