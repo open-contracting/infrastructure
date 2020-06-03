@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 
@@ -29,7 +30,7 @@ ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_st
 ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
-ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json()
+ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
 
 
 def csv_reader(url):
@@ -130,7 +131,7 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
 
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
-    schema = json.load(f)
+    schema = json.load(f, object_pairs_hook=OrderedDict)
 
 infra_codelists = {
     'contractingProcessStatus.csv',
@@ -139,6 +140,8 @@ infra_codelists = {
     'projectSector.csv',
     'projectStatus.csv',
     'projectType.csv',
+    'relatedProjectScheme.csv',
+    'relatedProject.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -157,6 +160,7 @@ infra_definitions = {
     'ContractingProcessSummary',  # Similar to OCDS release, and includes direction on how to populate from OCDS data.
     'LinkedRelease',  # Similar to linked release in OCDS record package.
     'Modification',
+    'RelatedProject' # Similar to relatedProcess in OCDS
 }
 ocds_definitions = {
     'Period',
@@ -298,8 +302,8 @@ schema['definitions']['Location']['required'] = ['id']
 copy_def('Value')
 
 copy_def('Organization', {
-    # Refer to project instead of contracting process.
-    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project'),
+    # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
+    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')
 })
 # Remove unneeded extensions and details from Organization.
 del(schema['definitions']['Organization']['properties']['shareholders'])
@@ -317,7 +321,10 @@ copy_def('ContactPoint', {
 
 copy_def('BudgetBreakdown')
 
-copy_def('Document')
+copy_def('Document', {
+    # Link to infrastructure codelist instead of PPP codelist
+    ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),
+})
 # noqa: Original from standard:                                                 "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
 schema['definitions']['Document']['properties']['description']['description'] = "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. "  # noqa
 # noqa: Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type."

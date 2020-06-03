@@ -1077,7 +1077,7 @@
         },
         "roles": {
           "title": "Party roles",
-          "description": "The party's role(s) in the project, using the open [partyRole](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#partyrole) codelist.",
+          "description": "The party's role(s) in the project, using the open [partyRole](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole) codelist.",
           "type": [
             "array"
           ],
@@ -1257,7 +1257,7 @@
         },
         "documentType": {
           "title": "Document type",
-          "description": "A classification of the document described, using the open [documentType](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#documenttype) codelist.",
+          "description": "A classification of the document described, using the open [documentType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#documenttype) codelist.",
           "type": [
             "string"
           ],
