@@ -1,0 +1,141 @@
+[main]
+host = https://www.transifex.com
+
+[oc4ids-09.support]
+file_filter = locale/<lang>/LC_MESSAGES/support.po
+source_file = build/locale/support.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.infrastructureschema]
+file_filter = locale/<lang>/LC_MESSAGES/infrastructureschema.po
+source_file = build/locale/infrastructureschema.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.sphinx]
+file_filter = locale/<lang>/LC_MESSAGES/sphinx.po
+source_file = build/locale/sphinx.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.infrastructurecodelists]
+file_filter = locale/<lang>/LC_MESSAGES/infrastructurecodelists.po
+source_file = build/locale/infrastructurecodelists.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.index]
+file_filter = locale/<lang>/LC_MESSAGES/index.po
+source_file = build/locale/index.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.404]
+file_filter = locale/<lang>/LC_MESSAGES/404.po
+source_file = build/locale/404.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.about]
+file_filter = locale/<lang>/LC_MESSAGES/about.po
+source_file = build/locale/about.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.cost--index]
+file_filter = locale/<lang>/LC_MESSAGES/cost/index.po
+source_file = build/locale/cost/index.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--publishing]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/publishing.po
+source_file = build/locale/guidance/publishing.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--evaluating]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/evaluating.po
+source_file = build/locale/guidance/evaluating.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--example]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/example.po
+source_file = build/locale/guidance/example.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--using]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/using.po
+source_file = build/locale/guidance/using.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--data_user_guide]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/data_user_guide.po
+source_file = build/locale/guidance/data_user_guide.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--index]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/index.po
+source_file = build/locale/guidance/index.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.guidance--identifiers]
+file_filter = locale/<lang>/LC_MESSAGES/guidance/identifiers.po
+source_file = build/locale/guidance/identifiers.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.projects--index]
+file_filter = locale/<lang>/LC_MESSAGES/projects/index.po
+source_file = build/locale/projects/index.pot
+source_lang = en
+type = PO
+
+[oc4ids-09._static--docson--README]
+file_filter = locale/<lang>/LC_MESSAGES/_static/docson/README.po
+source_file = build/locale/_static/docson/README.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--schema]
+file_filter = locale/<lang>/LC_MESSAGES/reference/schema.po
+source_file = build/locale/reference/schema.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--browser]
+file_filter = locale/<lang>/LC_MESSAGES/reference/browser.po
+source_file = build/locale/reference/browser.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--changelog]
+file_filter = locale/<lang>/LC_MESSAGES/reference/changelog.po
+source_file = build/locale/reference/changelog.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--package]
+file_filter = locale/<lang>/LC_MESSAGES/reference/package.po
+source_file = build/locale/reference/package.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--index]
+file_filter = locale/<lang>/LC_MESSAGES/reference/index.po
+source_file = build/locale/reference/index.pot
+source_lang = en
+type = PO
+
+[oc4ids-09.reference--codelists]
+file_filter = locale/<lang>/LC_MESSAGES/reference/codelists.po
+source_file = build/locale/reference/codelists.pot
+source_lang = en
+type = PO
+
