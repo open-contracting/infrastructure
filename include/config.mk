@@ -4,7 +4,7 @@
 # Edit these variables as appropriate.
 
 # The space-separated, period-prefixed translations to build (for easier substitutions).
-TRANSLATIONS=
+TRANSLATIONS=.es
 # The source language and translations to build.
 LANGUAGES=.en $(TRANSLATIONS)
 
@@ -30,7 +30,7 @@ TRANSIFEX_PROJECT=
 # Compile PO files for codelists and schema to MO files, so that `translate` succeeds.
 .PHONY: compile
 compile:
-	# pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
-	# pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
+	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
+	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
 
 # Put local targets below.
