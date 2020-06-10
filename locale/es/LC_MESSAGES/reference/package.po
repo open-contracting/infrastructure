@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"PO-Revision-Date: 2019-03-21 15:13+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/reference/package.md:1
+msgid "Packaging data"
+msgstr "Datos del Paquete"
+
+#: ../../docs/reference/package.md:3
+msgid ""
+"OC4IDS data must be published as part of project package, which acts as a "
+"container for data on multiple projects and adds important metadata about "
+"the publication. The project package schema describes this container."
+msgstr ""
+"Los datos OC4IDS deben ser publicados como parte de un paquete de proyecto, "
+"que funciona como un contenedor de datos de múltiples proyectos y agrega "
+"metadatos importantes sobre la publicación. El esquema de paquete de "
+"proyecto describe este contenedor."
+
+#: ../../docs/reference/package.md:5
+msgid ""
+"You can view an interactive version of the project package schema below "
+"(requires JavaScript) or [download it here](../../project-package-"
+"schema.json)."
+msgstr ""
+"Puede ver una versión interactiva del esquema de paquete de proyectos más "
+"abajo (requiere JavaScript) o [descárguelo aquí](../../project-package-"
+"schema.json)."
+
+#: ../../docs/reference/package.md:7
+msgid ""
+"Click on schema elements to expand the tree, or use the '+' icon to expand "
+"all elements. Use { } to view the underlying schema for any section."
+msgstr ""
+"Haga clic en los elementos del esquema para expandir el árbol, o use el "
+"ícono '+' para expandir todos los elementos. Use {} para ver el esquema "
+"subyacente para cada sección."

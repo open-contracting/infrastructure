@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"PO-Revision-Date: 2019-03-21 15:12+0000\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/cost/index.md:6
+msgid "CoST IDS & OCDS Mapping"
+msgstr "CoST IDS & Mapeo OCDS"
+
+#: ../../docs/cost/index.md:8
+msgid ""
+"CoST – the Infrastructure Transparency Initiative (CoST) is the leading "
+"global initiative improving transparency and accountability in public "
+"infrastructure."
+msgstr ""
+"CoST – la Iniciativa para la Transparencia en Infraestructura (CoST) es la "
+"iniciativa global líder que mejora la transparencia y la rendición de "
+"cuentas en infraestructura pública."
+
+#: ../../docs/cost/index.md:10
+msgid ""
+"The [CoST approach](http://infrastructuretransparency.org/our-approach/) is "
+"based on four core features:"
+msgstr ""
+"El [enfoque de CoST](http://infrastructuretransparency.org/our-approach/) se"
+" basa en cuatro características clave:"
+
+#: ../../docs/cost/index.md:12
+msgid ""
+"**Disclosure** - where procuring entities are asked to follow the CoST "
+"Infrastructure Data Standard. This describes 40 items of data that should be"
+" proactively disclosed at key stages of an infrastructure project cycle."
+msgstr ""
+"**Divulgación** - donde se solicita a las entidades de adquisición que sigan"
+" el Estándar de Datos sobre Infraestructura de CoST. Este describe 40 "
+"elementos de datos que deberían ser divulgados proactivamente en etapas "
+"clave del ciclo de un proyecto de infraestructura. "
+
+#: ../../docs/cost/index.md:14
+msgid ""
+"**Assurance** -  an independent review of the disclosed data by assurance "
+"teams based within CoST national programmes. Teams may identify key issues "
+"of concern analyzing the data that has been disclosed, and will put "
+"technical terms into plain language to allow stakeholders to understand the "
+"issues, and hold decision makers to account."
+msgstr ""
+"**Aseguramiento** - es una revisión independiente de los datos divulgados "
+"por parte de equipos de aseguramiento establecidos en el marco de los "
+"programas nacionales de CoST. Los equipos pueden identificar motivos de "
+"preocupación clave analizando los datos que han sido divulgados, y "
+"convertirán términos técnicos en lenguaje sencillo para que las partes "
+"interesadas entiendan los problemas, y soliciten rendición de cuentas a los "
+"tomadores de decisiones."
+
+#: ../../docs/cost/index.md:16
+msgid ""
+"**Multi-stakeholder working** - each CoST national programme is managed by a"
+" stakeholder group including government, private sector and civil society."
+msgstr ""
+"**Trabajo multisectorial** - cada programa nacional o sub-nacional de CoST "
+"es administrado por un grupo multisectorial que incluye el gobierno, el "
+"sector privado y la sociedad civil."
+
+#: ../../docs/cost/index.md:18
+msgid ""
+"**Social accountability** - raising awareness of key issues arising from the"
+" assurance process, and engaging civil society and media to hold decision "
+"makers to account."
+msgstr ""
+"**Auditoría social** - concienciando sobre preocupaciones clave que surgen "
+"del proceso de aseguramiento, e involucrando a la sociedad civil y a los "
+"medios para que demanden rendición de cuentas a los encargados de los "
+"proyectos."
+
+#: ../../docs/cost/index.md:20
+msgid ""
+"The 'Infrastructure Data Standard' is a **framework for disclosure** which "
+"has been adapted by a range of CoST national programmes, who have variously "
+"prioritized different elements based on their local needs, or who have "
+"included additional elements that they wish to monitor: particularly "
+"additional kinds of documentation that should be provided for each "
+"infrastructure project."
+msgstr ""
+"El 'Estándar de Datos sobre Infraestructura' es un **marco de trabajo para "
+"divulgación** que ha sido adaptado por un rango de programas de CoST, "
+"quienes han priorizado de manera distinta diferentes elementos en base a sus"
+" necesidades locales, o quienes han incluido elementos adicionales que "
+"desean monitorear: particularmente, tipos de documentación adicionales que "
+"deberían ser proveídos por cada proyecto de infraestructura."
+
+#: ../../docs/cost/index.md:22
+msgid ""
+"You can read more about the Infrastructure Data Standard in [CoST Guidance "
+"Note 6](http://infrastructuretransparency.org/resource/guidance-"
+"note-6-designing-a-disclosure-process/)."
+msgstr ""
+"Puede leer más sobre el Estándar de Datos sobre Infraestructura en la [Nota "
+"de Orientación 6 de CoST](http://infrastructuretransparency.org/resource"
+"/guidance-note-6-designing-a-disclosure-process/)."
+
+#: ../../docs/cost/index.md:1
+msgid "Frameworks and standards"
+msgstr "Marcos y estándares"
+
+#: ../../None:1
+msgid ""
+"There is an important distinction between the Infrastructure Data Standard "
+"(IDS) and the Open Contracting Data Standard (OCDS). IDS provides a "
+"framework to identify *categories of information* that should be disclosed. "
+"OCDS describes *specific fields* and how they should be structured as data."
+msgstr ""
+"Hay una distinción importante entre el Estándar de Datos sobre "
+"Infraestructura (IDS) y el Estándar de Datos de Contrataciones Abiertas "
+"(OCDS). IDS provee un marco para identificar *categorías de información* que"
+" deberían ser publicadas. OCDS describe *campos específicos* y cómo deberían"
+" estar estructurados como datos."
+
+#: ../../None:3
+msgid ""
+"The [Open Contracting for Infrastructure Data Standard "
+"(OC4IDS)](../projects/index) documented on this site acts as a bridge "
+"between the IDS framework, and the idea of a more structured technical data "
+"standard."
+msgstr ""
+"Las [ Contrataciones Abiertas para el Estándar de Datos sobre "
+"Infraestructura (OC4IDS, por sus siglas en inglés)](../projects/index) "
+"documentadas en este sitio actúan como un puente entre el marco de trabajo "
+"IDS, y la idea de un estándar de datos técnico más estructurado."
+
+#: ../../docs/cost/index.md:36
+msgid "Mapping to IDS and from OCDS"
+msgstr "Mapeo a IDS y desde OCDS"
+
+#: ../../docs/cost/index.md:40
+msgid "The following mapping tables describe:"
+msgstr "Las siguientes tablas de mapeo describen:"
+
+#: ../../docs/cost/index.md:42
+msgid ""
+"How each element of the CoST Infrastructure Data Standard can be represented"
+" as **structured data** using the [Open Contracting for Infrastructure Data "
+"Standard](../projects/index), in the 'Mapping to OC4IDS' column."
+msgstr ""
+"Cómo cada elemento del Estándar de Datos sobre Infraestructura CoST puede "
+"ser representado como **datos estructurados** usando las [Contrataciones "
+"Abiertas para el Estándar de Datos sobre "
+"Infraestructura](../projects/index), en la columna 'Mapeo a OC4IDS'."
+
+#: ../../docs/cost/index.md:44
+msgid ""
+"How existing OCDS data can be used to populate project-level and contracting"
+" process summary data, in the 'Mapping from OCDS' column."
+msgstr ""
+"Cómo los datos OCDS existentes pueden ser usados para llenar datos a nivel "
+"de proyecto y de resumen de procesos de contratación, en la columna 'Mapeo "
+"desde OCDS'."
+
+#: ../../docs/cost/index.md:1
+msgid "Mapping from OCDS"
+msgstr "Mapeo desde OCDS"
+
+#: ../../None:1
+msgid ""
+"Some mappings use fields from [OCDS extensions](https://standard.open-"
+"contracting.org/1.1/en/extensions/). In these cases, the names of extensions"
+" are noted in parentheses; where possible, alternative mappings are provided"
+" that use only fields from the core OCDS schema."
+msgstr ""
+"Algunos mapeos usan campos de [extensiones OCDS](https://standard.open-"
+"contracting.org/1.1/es/extensions/). En estos casos, los nombres de las "
+"extensiones se muestran entre paréntesis; cuando es posible, se proveen "
+"mapeos alternativos que sólo usan campos del esquema OCDS principal."
+
+#: ../../docs/cost/index.md:56
+msgid "Project level"
+msgstr "Nivel de proyecto"
+
+#: ../../docs/cost/index.md:58
+msgid "Project identification"
+msgstr "Identificación del proyecto"
+
+#: ../../docs/cost/index.md:67
+msgid "Project preparation"
+msgstr "Preparación del proyecto"
+
+#: ../../docs/cost/index.md:76
+msgid "Project completion"
+msgstr "Finalización del proyecto"
+
+#: ../../docs/cost/index.md:85
+msgid "Process level"
+msgstr "Nivel de proceso"
+
+#: ../../docs/cost/index.md:87
+msgid "Procurement"
+msgstr "Adquisiciones"
+
+#: ../../docs/cost/index.md:96
+msgid "Implementation"
+msgstr "Implementación"
+
+#: ../../docs/cost/index.md:98
+msgid ""
+"Disclosures in the implementation section of the CoST IDS relate to changes "
+"to a contract's value, duration or scope that were made after the contract "
+"was awarded."
+msgstr ""
+"La divulgación en la sección de implementación en el IDS de CoST se "
+"relacionan a cambios en el valor, duración o alcance del contrato que fueron"
+" hechos después de que el contrato fue adjudicado."
+
+#: ../../docs/cost/index.md:100
+msgid ""
+"If OCDS data is available, these changes can be determined by comparing the "
+"most recent OCDS release to a compiled release created from all prior "
+"releases (to better understand these concepts, refer to the [OCDS "
+"documentation](https://standard.open-"
+"contracting.org/1.1/en/getting_started/releases_and_records/)). The specific"
+" fields to monitor for changes between releases are described in the mapping"
+" table below."
+msgstr ""
+"Si hay datos OCDS disponibles, estos cambios se pueden determinar comparando"
+" el release OCDS más reciente con un release compilado creado a partir de "
+"todos los releases anteriores (para entender mejor estos conceptos, vea la "
+"[documentación de OCDS](https://standard.open-"
+"contracting.org/1.1/es/getting_started/releases_and_records/)). El campo "
+"específico a observar para cambios entre releases se describen en la tabla "
+"de mapeo de abajo."
+
+#: ../../docs/cost/index.md:102
+msgid ""
+"In some cases, OCDS data may include an explanation of changes in the "
+"relevant `amendments` block. In other cases, the reason may need to be "
+"manually entered."
+msgstr ""
+"En algunos casos, los datos OCDS pueden incluir una explicación de los "
+"cambios en el bloque `amendments` correspondiente. En otros casos, la razón "
+"puede necesitar ser ingresada manualmente."
+
+#: ../../docs/cost/index.md:111
+msgid "Reactive disclosures"
+msgstr "Divulgación reactiva"
+
+#: ../../docs/cost/index.md:113
+msgid ""
+"The CoST IDS also sets out a number of data points under the heading of "
+"'reactive disclosure'. It is possible to also disclose many of these fields "
+"**pro-actively** either as **document** entries with free text or linked "
+"documents, or using structured OCDS fields and extensions."
+msgstr ""
+"El IDS de CoST establece un número de datos específicos bajo el título de "
+"'divulgación reactiva'. También es posible publicar varios de estos de "
+"campos de forma **proactiva** ya sea como entradas de **documentos** con "
+"texto libre o documentos enlazados, o usando campos OCDS estructurados y "
+"extensiones."
+
+#: ../../docs/cost/index.md:115
+msgid "Specifically:"
+msgstr "Específicamente:"
+
+#: ../../docs/cost/index.md:117
+msgid ""
+"Details of a individuals involved at the project or contract level can be "
+"included in the ``parties`` array with a suitable role. Role is an open "
+"codelist. As individuals will not have an 'organization identifier' a "
+"locally defined identifier may be used instead."
+msgstr ""
+"Los detalles de los individuos involucrados a nivel de proyecto o contrato "
+"pueden ser incluidos en la lista de ``parties`` con un rol apropiado. Rol es"
+" una lista de códigos abierta. Ya que los individuos no poseen un "
+"'identificador de organización' un identificador definido localmente puede "
+"ser usado en su lugar."
+
+#: ../../docs/cost/index.md:119
+msgid ""
+"Plans, reports and assessments may be included in the project or contracting"
+" process level `documents` blocks, or may be published within individual "
+"OCDS releases."
+msgstr ""
+"Planes, reportes y evaluaciones pueden ser incluidos en los bloques "
+"`documents` al nivel de proyecto o de proceso de contratación, o pueden ser "
+"publicados dentro de \"releases\" OCDS individuales."
+
+#: ../../docs/cost/index.md:121
+msgid ""
+"The [budget_breakdown](https://github.com/open-contracting-"
+"extensions/ocds_budget_breakdown_extension) and "
+"[budget_and_spend](https://github.com/open-contracting-"
+"extensions/ocds_budget_and_spend_extension) extensions can be used to "
+"provide guidance on modelling detailed financial information."
+msgstr ""
+"Las extensiones [budget_breakdown](https://github.com/open-contracting-"
+"extensions/ocds_budget_breakdown_extension) y "
+"[budget_and_spend](https://github.com/open-contracting-"
+"extensions/ocds_budget_and_spend_extension) pueden ser usadas para proveer "
+"orientación sobre el modelado de información financiera detallada."

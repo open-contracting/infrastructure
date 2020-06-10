@@ -1,0 +1,1997 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"PO-Revision-Date: 2019-03-21 15:13+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/reference/codelists.md:1
+msgid "Codelist reference"
+msgstr "Referencia de listas de código"
+
+#: ../../docs/reference/codelists.md:3
+msgid ""
+"Some schema fields refer to codelists, to limit and standardize the possible"
+" values of the fields, in order to promote data interoperability."
+msgstr ""
+"Algunos campos del esquema utilizan listas de códigos para limitar y "
+"estandarizar los posibles valores de los campos, con el fin de promover la "
+"interoperabilidad de los datos."
+
+#: ../../docs/reference/codelists.md:5
+msgid ""
+"Codelists can either be open or closed. **Closed codelists** are intended to"
+" be comprehensive; for example, the [currency](#currency) codelist covers "
+"all currencies in the world. **Open codelists** are intended to be "
+"representative, but not comprehensive."
+msgstr ""
+"Las listas de códigos pueden ser cerradas o abiertas. Las **listas de "
+"códigos cerradas** están pensadas para ser globales; por ejemplo, la lista "
+"de códigos de [moneda](#currency) cubre todas las monedas en el mundo. Las "
+"**listas de códigos abiertas** están pensadas para ser representativas, pero"
+" no globales."
+
+#: ../../docs/reference/codelists.md:7
+msgid ""
+"Publishers must use the codes in the codelists, unless no code is "
+"appropriate. If no code is appropriate and the codelist is **open**, then a "
+"publisher may use a new code outside those in the codelist. If no code is "
+"appropriate and the codelist is **closed**, then a publisher should instead "
+"create an issue in the [OC4IDS GitHub repository](https://github.com/open-"
+"contracting/infrastructure/issues)."
+msgstr ""
+"Los publicadores deben usar los códigos contenidos en las listas de códigos,"
+" a menos que no exista un código apropiado. Si no existe un código apropiado"
+" y la lista es **abierta**, entonces el publicador puede usar un nuevo "
+"código fuera de la lista. Si no existe un código apropiado y la lista es "
+"**cerrada**, entonces el publicador debe crear un issue en el [repositorio "
+"de OC4IDS en GitHub](https://github.com/open-"
+"contracting/infrastructure/issues)."
+
+#: ../../docs/reference/codelists.md:1
+msgid "Extending open codelists"
+msgstr "Extendiendo listas de códigos abiertas"
+
+#: ../../None:1
+msgid ""
+"If you use new codes outside those in an open codelist, please create an "
+"issue in the [OC4IDS GitHub repository](https://github.com/open-"
+"contracting/infrastructure/issues), so that the codes can be considered for "
+"inclusion in the codelist."
+msgstr ""
+"Si usas códigos nuevos fuera de una lista de códigos abierta, por favor crea"
+" un issue en el [repositorio de OC4IDS en GitHub](https://github.com/open-"
+"contracting/infrastructure/issues), para que estos códigos puedan ser "
+"considerados para su inclusión en la lista de códigos."
+
+#: ../../docs/reference/codelists.md:19
+msgid ""
+"For more information on open and closed codelists, refer to the Open "
+"Contracting Data Standard [codelists documentation](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/)."
+msgstr ""
+"Para más información sobre listas cerradas y abiertas, consultar la "
+"[documentación de listas de códigos](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/) del Estándar de Datos de "
+"Contrataciones Abiertas."
+
+#: ../../docs/reference/codelists.md:21
+msgid "OCDS codelists"
+msgstr "Listas de código OCDS"
+
+#: ../../docs/reference/codelists.md:23
+msgid ""
+"OC4IDS reuses some codelists from the Open Contracting Data Standard and its"
+" extensions:"
+msgstr ""
+"OC4IDS reutiliza algunas listas de códigos del Estándar de Datos de "
+"Contrataciones Abiertas y sus extensiones:"
+
+#: ../../docs/reference/codelists.md:25
+msgid ""
+"[Currency](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#currency)"
+msgstr ""
+"[Moneda](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#currency)"
+
+#: ../../docs/reference/codelists.md:26
+msgid ""
+"[Geometry type](https://extensions.open-"
+"contracting.org/en/extensions/location/master/codelists/#geometryType.csv)"
+msgstr ""
+"[Tipo de Geometría](https://extensions.open-"
+"contracting.org/es/extensions/location/master/codelists/#geometryType.csv)"
+
+#: ../../docs/reference/codelists.md:27
+msgid ""
+"[Location gazetteers](https://extensions.open-"
+"contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)"
+msgstr ""
+"[Diccionarios geográficos de ubicación](https://extensions.open-"
+"contracting.org/es/extensions/location/master/codelists/#locationGazetteers.csv)"
+
+#: ../../docs/reference/codelists.md:28
+msgid ""
+"[Method](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#method)"
+msgstr ""
+"[Método](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#method)"
+
+#: ../../docs/reference/codelists.md:29
+msgid ""
+"[Organization identifier scheme](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)"
+msgstr ""
+"[Esquema de identificación de organizaciones](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#organization-identifier-scheme)"
+
+#: ../../docs/reference/codelists.md:30
+msgid ""
+"[Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists"
+"/#release-tag)"
+msgstr ""
+"[Etiqueta de release](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#release-tag)"
+
+#: ../../docs/reference/codelists.md:32
+msgid "Closed codelists"
+msgstr "Listas de códigos cerradas"
+
+#: ../../docs/reference/codelists.md:34
+msgid "ContractingProcessStatus"
+msgstr "Estado del proceso de contratación"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+#: ../current_lang/codelists/contractNature.csv:1
+#: ../current_lang/codelists/projectStatus.csv:1
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/modificationType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/projectSector.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid "Code"
+msgstr "Código"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+#: ../current_lang/codelists/contractNature.csv:1
+#: ../current_lang/codelists/projectStatus.csv:1
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/modificationType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/projectSector.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid "Title"
+msgstr "Título"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+#: ../current_lang/codelists/contractNature.csv:1
+#: ../current_lang/codelists/projectStatus.csv:1
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/modificationType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/projectSector.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid "Description"
+msgstr "Descripción"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "Business Logic"
+msgstr "Lógica del Negocio"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "pre-award"
+msgstr "Pre-adjudicación"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "Pre-award"
+msgstr "Pre-adjudicación"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "No contract has yet been awarded, and the process has not ended."
+msgstr ""
+"No se ha adjudicado ningún contrato aún, y el proceso no ha terminado."
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid ""
+"tender.status is not 'cancelled', 'unsuccessful' or 'withdrawn', and one of:"
+" There are no awards or contracts; All Award.status and Contract.status are "
+"'pending'; All award dates (whether expressed as award.date or "
+"tender.awardPeriod) are in the future."
+msgstr ""
+"tender.status no es 'cancelled', 'unsuccessful' o 'withdrawn', y se cumple "
+"uno de los siguientes: No hay adjudicaciones ni contratos; Todos los "
+"award.status y contract.status son 'pending'; Todas las fechas de "
+"adjudicación (expresadas en award.date o tender.awardPeriod) son en el "
+"futuro."
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "active"
+msgstr "active"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "Active"
+msgstr "Activo"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "A contract was awarded, but not all contracts have ended."
+msgstr ""
+"Un contrato fue adjudicado, pero no todos los contratos han finalizado."
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid ""
+"One of: There is at least one Contract.status of 'active'; At least one "
+"contract period (whether expressed as Contract.period, Award.contractPeriod "
+"or tender.contractPeriod) includes the present date."
+msgstr ""
+"Se cumple uno de los siguientes criterios: Hay al menos un Contract.status "
+"con valor 'active'; Al menos un periodo de contrato (ya sea Contract.period,"
+" Award.contractPeriod o tender.contractPeriod) incluye la fecha presente."
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "closed"
+msgstr "closed"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid "Closed"
+msgstr "Cerrado"
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid ""
+"The process ended with no contract being awarded, or all contracts have "
+"ended."
+msgstr ""
+"El proceso terminó sin ningún contrato adjudicado, o todos los contratos han"
+" finalizado."
+
+#: ../current_lang/codelists/contractingProcessStatus.csv:1
+msgid ""
+"One of: tender.status is 'cancelled', 'unsuccessful' or 'withdrawn'; There "
+"is at least one award, and all Award.status are 'cancelled' or "
+"'unsuccessful'; There is at least one contract, and all Contract.status are "
+"'terminated' or 'cancelled'; The endDate of all contract periods are in the "
+"past."
+msgstr ""
+"Se cumple uno de: tender.status es 'cancelled', 'unsuccessful' o "
+"'withdrawn'; Hay al menos una adjudicación, y todos los Award.status son  "
+"'cancelled' o 'unsuccessful'; Hay al menos un contrato, y todos los "
+"Contract.status son 'terminated' o 'cancelled'; Los endDate de todos los "
+"períodos de contrato están en el pasado."
+
+#: ../../docs/reference/codelists.md:45
+msgid "ContractNature"
+msgstr "ContractNature"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid "design"
+msgstr "design"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid "Design"
+msgstr "Diseño"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid "This contracting process relates to design of the project."
+msgstr ""
+"Este proceso de contratación está relacionado con el diseño del proyecto."
+
+#: ../current_lang/codelists/contractNature.csv:1
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "construction"
+msgstr "construction"
+
+#: ../current_lang/codelists/contractNature.csv:1
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "Construction"
+msgstr "Construcción"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid ""
+"This contracting process relates to build or construction work for the "
+"project."
+msgstr ""
+"Este proceso de contratación está relacionado a trabajos de construcción "
+"para el proyecto."
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid "supervision"
+msgstr "supervision"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid "Supervision"
+msgstr "Supervisión"
+
+#: ../current_lang/codelists/contractNature.csv:1
+msgid ""
+"This contracting process relates to supervision or monitoring of the "
+"project."
+msgstr ""
+"Este proceso de contratación está relacionado a la supervisión o monitoreo "
+"del proyecto."
+
+#: ../../docs/reference/codelists.md:56
+msgid "ProjectStatus"
+msgstr "ProjectStatus"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "identification"
+msgstr "identification"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Identification"
+msgstr "Identificación"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid ""
+"Identification refers to the decision to develop a project within the budget"
+" and programme of a project owner (the public entity responsible for "
+"executing the budget)."
+msgstr ""
+"Identificación se refiere a la primera etapa de ejecución de un proyecto "
+"dentro del presupuesto y programa del dueño del proyecto (la entidad pública"
+" responsable de ejecutar el presupuesto)."
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "preparation"
+msgstr "preparation"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Preparation"
+msgstr "Preparación"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid ""
+"Preparation covers the feasibility study, environmental and social impact "
+"assessment, general scoping of the project, establishing the packaging and "
+"procurement strategy, preliminary statutory requirements on environmental "
+"and land impacts, and the resulting budget authorization."
+msgstr ""
+"La preparación cubre el estudio de factibilidad, medioambiental y la "
+"evaluación del impacto social, alcance general del proyecto, establecer el "
+"embalaje y la estrategia de adquisiciones, requerimientos legales "
+"preliminares sobre impacto medioambiental y terrenos, y la resultante "
+"actualización del presupuesto."
+
+#: ../current_lang/codelists/projectStatus.csv:1
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "implementation"
+msgstr "implementation"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid ""
+"Implementation covers the procurement and implementation of the group of "
+"works or services (such as design and supervision) to be delivered under the"
+" project, including works or services performed by the procuring entity. "
+"This differs from the definition of 'implementation' in OCDS, which covers "
+"the implementation but not the procurement."
+msgstr ""
+"La implementación cubre la adquisición e implementación del grupo de "
+"trabajos o servicios (como el diseño y la supervisión) a ser entregados bajo"
+" el proyecto, incluyendo trabajos o servicios realizados por la entidad "
+"contratante. Esto difiere de la definición de \"implementación\" en OCDS, "
+"que cubre la implementación pero no la adquisición."
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "completion"
+msgstr "completion"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Completion"
+msgstr "Finalización"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid ""
+"Completion covers the handover of the assets and close-out activities with "
+"details of the final scope, cost, and delivery time."
+msgstr ""
+"La finalización cubre la entrega de los resultados y las actividades de "
+"cierre con detalles del alcance final, costos y tiempos de entrega."
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "completed"
+msgstr "completed"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Completed"
+msgstr "Completado"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Close-out activities were completed, and this project is inactive."
+msgstr ""
+"Las actividades de cierre han sido completadas y este proyecto está "
+"inactivo."
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "cancelled"
+msgstr "cancelled"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: ../current_lang/codelists/projectStatus.csv:1
+msgid ""
+"This project was cancelled before close-out activities were completed, and "
+"is inactive. Cancellation can occur anytime after identification."
+msgstr ""
+"Este proyecto fue cancelado antes que las actividades de cierre fueran "
+"completadas y está inactivo. La cancelación puede ocurrir en cualquier "
+"momento luego de la identificación."
+
+#: ../../docs/reference/codelists.md:67
+msgid ""
+"Projects with a `status` of 'completed' may be displayed in a list of "
+"archived projects."
+msgstr ""
+"Proyectos con `estado` 'completed' pueden ser desplegados en una lista de "
+"proyectos archivados."
+
+#: ../../docs/reference/codelists.md:69
+msgid "ProjectType"
+msgstr "ProjectType"
+
+#: ../current_lang/codelists/projectType.csv:1
+msgid "The primary focus of this project is the construction of a new asset."
+msgstr ""
+"El foco principal de este proyecto es la contrucción de un nuevo activo."
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "rehabilitation"
+msgstr "rehabilitation"
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "Rehabilitation"
+msgstr "Rehabilitación"
+
+#: ../current_lang/codelists/projectType.csv:1
+msgid ""
+"The primary focus of this project is the rehabilitation of an existing "
+"asset."
+msgstr ""
+"El foco principal de este proyecto es la rehabilitación de un activo "
+"existente."
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "replacement"
+msgstr "replacement"
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "Replacement"
+msgstr "Reemplazo"
+
+#: ../current_lang/codelists/projectType.csv:1
+msgid ""
+"The primary focus of this project is the replacement of an existing asset."
+msgstr ""
+"El foco principal de este proyecto es el reemplazo de un activo existente."
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "expansion"
+msgstr "expansion"
+
+#: ../current_lang/codelists/projectType.csv:1
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid "Expansion"
+msgstr "Expansión"
+
+#: ../current_lang/codelists/projectType.csv:1
+msgid ""
+"The primary focus of this project is the expansion of an existing asset."
+msgstr ""
+"El enfoque primario de este proyecto es la expansión de un activo existente."
+
+#: ../../docs/reference/codelists.md:80
+msgid "Open codelists"
+msgstr "Listas de código abiertas"
+
+#: ../../docs/reference/codelists.md:82
+msgid "DocumentType"
+msgstr "DocumentType"
+
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Source"
+msgstr "Fuente"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "valueForMoneyAnalysis"
+msgstr "valueForMoneyAnalysis"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Value for money analysis"
+msgstr "Análisis de valor por dinero"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A summary of the value for money analysis carried out for the project, along"
+" with supporting figures, calculations and business case, based on projected"
+" or actual procurement outcomes."
+msgstr ""
+"Un resumen del análisis del valor por dinero realizado para el proyecto, "
+"junto con gráficos, cálculos y justificación económica de apoyo, basados en "
+"resultados de adquisiciones proyectadas o reales."
+
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+msgid "OCDS for PPPs"
+msgstr "OCDS para APP"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "technicalSpecifications"
+msgstr "technicalSpecifications"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Technical Specifications"
+msgstr "Especificaciones Técnicas"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Detailed technical information about goods or services to be provided."
+msgstr ""
+"Información técnica detallada sobre bienes o servicios a ser proveídos."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "serviceDescription"
+msgstr "serviceDescription"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Service descriptions"
+msgstr "Descripciones del servicio"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "A high-level description of the services"
+msgstr "Una descripción de alto nivel de los servicios"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "estimatedDemand"
+msgstr "estimatedDemand"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Estimated demand"
+msgstr "Demanda estimada"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A narrative describing the estimated demand to be served (annually) by the "
+"project."
+msgstr ""
+"Una narrativa describiendo la demanda estimada a ser cubierta (anualmente) "
+"por el proyecto."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractDraft"
+msgstr "contractDraft"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Contract draft"
+msgstr "Borrador de contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "A draft or pro-forma copy of the contract."
+msgstr "Un borrador o copia pro-forma del contrato."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractSigned"
+msgstr "contractSigned"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Signed Contract"
+msgstr "Contrato firmado"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A copy of the signed contract. Consider providing both machine-readable "
+"(e.g. original PDF, Word or Open Document format files), and a separate "
+"document entry for scanned-signed pages where this is required."
+msgstr ""
+"Una copia del contrato firmado. Considera proveer una versión legible por "
+"máquina (ej. PDF original, formatos de archivo Word o Open Document), y un "
+"documento separado para documentos escaneados cuando así se requiera."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "feasibilityStudy"
+msgstr "feasibilityStudy"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Feasibility study"
+msgstr "Estudio de viabilidad (factibilidad)"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of feasibility studies carried out for this contracting "
+"process, providing information on net benefits or costs of the proposed "
+"goods, works or services."
+msgstr ""
+"Documentación de estudios de viabilidad (factibilidad) llevados a cabo para "
+"este proyecto, que proveen información de beneficios netos o costos de los "
+"bienes, obras o servicios propuestos."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "environmentalImpact"
+msgstr "environmentalImpact"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Environmental Impact"
+msgstr "Impacto ambiental"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of assessments of the environmental impacts (e.g. impacts on "
+"flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) "
+"and mitigation measures (e.g. pollution control, low carbon solutions, "
+"sustainable timber etc.) for this contracting process or project."
+msgstr ""
+"Documentación de la evaluación del impacto ambiental (ej. impacto en flora, "
+"fauna y zonas boscosas, áreas de belleza natural, emisiones de carbono, "
+"etc.) y medidas de mitigación (ej. control de contaminación, soluciones "
+"bajas en carbono, fuentes sustentables de madera, etc.) para este proceso "
+"proyecto."
+
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "OC4IDS"
+msgstr "OC4IDS"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "finalAudit"
+msgstr "finalAudit"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Final Audit"
+msgstr "Auditoría final"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of a final audit carried out at the end of contract "
+"implementation."
+msgstr ""
+"Documentación de la auditoría final llevada a cabo al final de la "
+"implementación del proyecto o contrato(s)."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "tenderNotice"
+msgstr "tenderNotice"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Tender Notice"
+msgstr "Aviso de licitación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"The formal notice that gives details of a tender. This may be a link to a "
+"downloadable document, to a web page, or to an official gazette in which the"
+" notice is contained."
+msgstr ""
+"El aviso formal que brinda detalles de una licitación. Este puede ser un "
+"enlace a un documento descargable, a una página web, o a una gaceta oficial "
+"en la que el aviso está contenido."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "evaluationCommittee"
+msgstr "evaluationCommittee"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Evaluation Committee Details"
+msgstr "Detalles del comité de evaluación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Information on the constitution of the evaluation committee"
+msgstr "Información sobre la constitución del comité de evaluación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "requestForQualification"
+msgstr "requestForQualification"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Request for Qualification"
+msgstr "Pedido de calificación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"The set of documents issued by the procuring authority that constitute the "
+"basis of the qualification and potentially the pre-selection of candidates "
+"(the short list). Qualified (or short-listed candidates) will then be "
+"invited to submit a proposal (or to enter into a new phase prior to bid "
+"submission, such as a dialogue phase or interactive phase)."
+msgstr ""
+"El conjunto de documentos emitidos por la entidad contratante que "
+"constituyen la base de la calificación y potencialmente la pre-selección de "
+"candidatos (la lista corta). Los candidatos calificados serán invitados a "
+"presentar una propuesta (o a entrar a una nueva fase previa a la "
+"presentación de oferta, como una fase de diálogo o una fase interactiva)"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "evaluationCriteria"
+msgstr "evaluationCriteria"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Evaluation Criteria"
+msgstr "Criterios de evaluación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Documentation on how bids will be evaluated."
+msgstr "Documentación sobre cómo las ofertas serán evaluadas."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "minutes"
+msgstr "minutes"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Minutes"
+msgstr "Minutas"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Minutes of pre-bid meetings, or other relevant meetings."
+msgstr "Minutas de reuniones pre-oferta, u otras reuniones relevantes."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "shortlistedFirms"
+msgstr "shortlistedFirms"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Shortlisted Firms"
+msgstr "Firmas preseleccionadas"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation providing information on shortlisted firms. Structured "
+"versions of this information can be provided using the bids extension."
+msgstr ""
+"Documentación que provee información sobre firmas preseleccionadas. Se "
+"pueden proveer versiones estructuradas de esta información usando la "
+"extensión de ofertas (bids)."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "negotiationParameters"
+msgstr "negotiationParameters"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Negotiation Parameters"
+msgstr "Parámetros de negociación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A description of the parameters for negotiation with the preferred proponent"
+msgstr ""
+"Una descripción de los parámetros de negociación con el proponente "
+"preferido."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "evaluationReports"
+msgstr "evaluationReports"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Evaluation report"
+msgstr "Reportes de evaluación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation on the evaluation of the bids and the application of the "
+"evaluation criteria, including the justification for the award"
+msgstr ""
+"Documentación de la evaluación de ofertas y la aplicación de los criterios "
+"de evaluación, incluyendo la justificación de la adjudicación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractGuarantees"
+msgstr "contractGuarantees"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Guarantees"
+msgstr "Garantías"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of guarantees relating to a contracting process or contract."
+msgstr ""
+"Documentación de los garantías relacionadas a un proceso de contratación o "
+"proyecto."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "defaultEvents"
+msgstr "defaultEvents"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Defaults"
+msgstr "Incumplimientos"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Information on events of default"
+msgstr "Información de eventos de incumplimiento"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "termination"
+msgstr "termination"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Termination"
+msgstr "Terminación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Information on contract termination"
+msgstr "Información de la terminación del proyecto"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "performanceReport"
+msgstr "performanceReport"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Performance report"
+msgstr "Reporte de desempeño"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Performance assessment reports"
+msgstr "Reportes de evaluación de desempeño"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "plannedProcurementNotice"
+msgstr "plannedProcurementNotice"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Notice of planned procurement"
+msgstr "Aviso de compra planeada"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A notice published by the procuring entity regarding their plans for future "
+"procurement, also known as a prior information notice. The procuring entity "
+"can use the notice of planned procurement as a tender notice."
+msgstr ""
+"Un aviso publicado por la entidad contratante acerca de sus planes para una "
+"futura compra, también conocida como aviso de información previa. La entidad"
+" contratante puede usar el aviso de compra planeada como un aviso de "
+"licitación."
+
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/documentType.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "OCDS"
+msgstr "OCDS"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "awardNotice"
+msgstr "awardNotice"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Award notice"
+msgstr "Aviso de adjudicación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"The formal notice that gives details of the contract award. This can be a "
+"link to a downloadable document, to a web page, or to an official gazette in"
+" which the notice is contained."
+msgstr ""
+"El aviso formal que da detalles de la adjudicación del contrato. Esto puede "
+"ser un enlace a un documento descargable, una página web, o a una gaceta "
+"oficial en la que el aviso está contenido."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractNotice"
+msgstr "contractNotice"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Contract notice"
+msgstr "Aviso de contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"The formal notice that gives details of a contract being signed and valid to"
+" start implementation. This can be a link to a downloadable document, to a "
+"web page, or to an official gazette in which the notice is contained."
+msgstr ""
+"El aviso formal que provee detalles de un contrato siendo firmado y válido "
+"para empezar la implementación. Este puede ser un enlace a un documento "
+"descargable, una página web o a una gaceta oficial en la que el aviso está "
+"contenido."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "completionCertificate"
+msgstr "completionCertificate"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Completion certificate"
+msgstr "Certificado de completitud"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A completion certificate issued by a relevant authority providing evidence "
+"that works were completed to a certain level of quality. Completion "
+"certificates might only be relevant for particular kinds of contracting "
+"processes."
+msgstr ""
+"Un certificado de finalización expedido por la autoridad relevante que "
+"provee evidencia de que las obras fueron finalizadas hasta un cierto nivel "
+"de calidad. Los certificados de finalización podrían ser relevantes sólo "
+"para tipos particulares de procesos de contratación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "procurementPlan"
+msgstr "procurementPlan"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Procurement plan"
+msgstr "Plan de adquisiciones"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation that sets out the basis for this particular contracting "
+"process."
+msgstr ""
+"Documentación que establece las bases para este proceso de contratación en "
+"particular."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "biddingDocuments"
+msgstr "biddingDocuments"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Bidding documents"
+msgstr "Documentos de oferta"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation for potential suppliers, describing the goals of the contract "
+"(e.g. goods and services to be procured), and the bidding process."
+msgstr ""
+"Documentación para potenciales proveedores que describe los objetivos del "
+"contrato (ej. bienes y servicios a ser adquiridos) y el proceso de "
+"licitación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractArrangements"
+msgstr "contractArrangements"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Arrangements for ending contract"
+msgstr "Arreglos para la finalización del contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Documentation of the arrangements for ending the contract(s)."
+msgstr "Documentación de los arreglos para finalizar el(los) contrato(s)."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractSchedule"
+msgstr "contractSchedule"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Contract schedules"
+msgstr "Apéndices del contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Any document which contains additional terms, obligations or information "
+"related to the contract, such as a schedule, appendix, annex, attachment or "
+"addendum."
+msgstr ""
+"Cualquier documento que contenga términos adicionales, obligaciones o "
+"información relacionada al contrado, tal como un programa, apéndice, anexo, "
+"adjunto o adenda."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "physicalProgressReport"
+msgstr "physicalProgressReport"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Physical progress reports"
+msgstr "Reporte de progreso físico"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation on the status of implementation, usually against key "
+"milestones."
+msgstr ""
+"Documentación del estado de la implementación, usualmente en comparación a "
+"hitos clave."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "financialProgressReport"
+msgstr "financialProgressReport"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Financial progress reports"
+msgstr "Reportes de progreso financiero"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation providing dates and amounts of stage payments made (against "
+"total amount) and the source of those payments, including cost overruns, if "
+"any. Structured versions of this information can be provided through "
+"contract implementation transactions."
+msgstr ""
+"Documentación que provee fechas y montos de los pagos realizados (a favor "
+"del monto total) y el origen de esos pagos, incluyendo sobrecostos si los "
+"hubiere. Versiones estructuradas de esta información pueden ser proveídas a "
+"través de transacciones en la implementación del contrato."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "hearingNotice"
+msgstr "hearingNotice"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Public hearing notice"
+msgstr "Aviso de audiencia pública"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of any public hearings that took place as part of the planning"
+" for this contracting process."
+msgstr ""
+"Documentación de cualquier audencia pública que haya tomado lugar como parte"
+" de la planificación de este proceso de contratación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "marketStudies"
+msgstr "marketStudies"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Market studies"
+msgstr "Estudios de mercado"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of any market studies that took place as part of the planning "
+"for this contracting process."
+msgstr ""
+"Documentación de cualquier estudio de mercado que haya tomado lugar como "
+"parte de la planificación de este proceso de contratación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "eligibilityCriteria"
+msgstr "eligibilityCriteria"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Eligibility criteria"
+msgstr "Criterios de elegibilidad"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Detailed documents about the eligibility of bidders."
+msgstr "Documentos detallados sobre la elegibilidad de los licitantes."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "clarifications"
+msgstr "aclaraciones"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Clarifications to bidders questions"
+msgstr "Aclaraciones a las preguntas de los licitantes."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation that provides replies to issues raised in pre-bid conferences "
+"or an enquiry processes."
+msgstr ""
+"Documentación que provee respuestas a las cuestiones tratadas en audiencias "
+"pre-licitación o en un proceso de consultas."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "assetAndLiabilityAssessment"
+msgstr "assetAndLiabilityAssessment"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Assessment of government's assets and liabilities"
+msgstr "Evaluación de los activos y pasivos del gobierno"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation covering assessments of the government's assets and "
+"liabilities related to this contracting process."
+msgstr ""
+"Documentación que cubre evaluaciones de los activos y pasivos del gobierno "
+"relacionados a este proceso de contratación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "riskProvisions"
+msgstr "riskProvisions"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Provisions for management of risks and liabilities"
+msgstr "Provisiones para el manejo de riesgos y responsabilidades"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation covering how risks will be managed as part of this contracting"
+" process."
+msgstr ""
+"Documentación que cubre cómo los riesgos serán manejados como parte de este "
+"proceso de contratación."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "winningBid"
+msgstr "winningBid"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Winning bid"
+msgstr "Oferta ganadora"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of the winning bid, including, wherever applicable, a full "
+"copy of the proposal received."
+msgstr ""
+"Documentación de la oferta ganadora incluyendo, cuando sea aplicable, una "
+"copia completa de la propuesta recibida."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "complaints"
+msgstr "quejas"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Complaints and decisions"
+msgstr "Quejas y decisiones"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of any complaints received, or decisions in response to "
+"complaints."
+msgstr ""
+"Documentación de cualquier queja recibida, o decisiones en respuesta a "
+"quejas."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractAnnexe"
+msgstr "contractAnnexe"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Annexes to the contract"
+msgstr "Anexos al contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Copies of annexes and other supporting documentation related to the "
+"contract."
+msgstr ""
+"Copias de anexos y otra documentación de apoyo relacionada a este contrato."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "subContract"
+msgstr "subContract"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Subcontracts"
+msgstr "Subcontratos"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation detailing subcontracts and/or providing a copy of subcontracts"
+" themselves. Where OCDS data on the subcontracts exists, this can be "
+"declared using the relatedProcess block."
+msgstr ""
+"Documentación que detalla subcontratos y/o provee una copia de subcontratos "
+"mismos. Cuando existen datos OCDS sobre subcontratos, esto puede ser "
+"declarado usando el bloque relatedProcess."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "needsAssessment"
+msgstr "needsAssessment"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Needs assessment"
+msgstr "Evaluación de necesidades"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of the needs assessments carried out for this contracting "
+"process or project addressing demand for the project or investment from the "
+"affected communities or users."
+msgstr ""
+"Documentación de las evaluaciones de necesidades (requerimientos) llevadas a"
+" cabo para este proyecto, que abordan las motivaciones del proyecto o "
+"inversión por parte de las comunidades o usuarios afectados."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "projectPlan"
+msgstr "projectPlan"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Project plan"
+msgstr "Plan de proyecto"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of project planning for this contracting process, and, where "
+"applicable, a copy of the project plan document."
+msgstr ""
+"Documentación de la planificación del proyecto para este proceso de "
+"contratación y, cuando sea aplicable, una copia del documento del plan de "
+"proyecto."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "billOfQuantity"
+msgstr "billOfQuantity"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Bill of quantity"
+msgstr "Estimación cuantitativa"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation that provides itemized information on materials, parts and "
+"labour, and the terms and conditions for their provision, providing "
+"information that would enable bidders to price work effectively. Structured "
+"versions of item and quantity information at each of tender, award and "
+"contract stage can be provided using units within the items building block."
+msgstr ""
+"Documentación que provee información desglosada de materiales, partes y mano"
+" de obra, y los términos y condiciones para su provisión, brindando "
+"información que permitiría a los licitantes establecer efectivamente los "
+"precios. Versiones estructuradas de información de artículos y cantidades "
+"durante las fases de licitación, adjudicación y contrato pueden ser "
+"proveídas usando unidades dentro del bloque de artículos. "
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "bidders"
+msgstr "bidders"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Information on bidders"
+msgstr "Información de licitantes"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation on bidders or participants, their validation documents and any"
+" procedural exemptions for which they qualify."
+msgstr ""
+"Documentación sobre los oferentes o participantes, sus documentos de "
+"validación y cualquier excepción de procedimientos para el cual califiquen."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "conflictOfInterest"
+msgstr "conflictOfInterest"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Conflict of interest"
+msgstr "Conflicto de interés"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Documentation of conflicts of interest declared or uncovered."
+msgstr "Documentación de conflictos de interés declarados o descubiertos."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "debarments"
+msgstr "debarments"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Debarments"
+msgstr "Inhabilitaciones"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Documentation of any debarments issued."
+msgstr "Documentación de cualquier inhabilitación emitida."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "illustration"
+msgstr "illustration"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Illustrations"
+msgstr "Ilustraciones"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Images intended to provide supporting information. The URL for images should"
+" be directly to an image file that applications can display as part of a "
+"gallery of images. At the tender stage, images can be illustrations of "
+"goods, works or services needed or for sale. At the implementation stage, "
+"images can be illustrations or visual evidence of physical progress."
+msgstr ""
+"Imágenes destinadas a proveer información de soporte. La URL para imágenes "
+"debería estar dirigida directamente a un archivo de imagen que las "
+"aplicaciones puedan desplegar como parte de una galería de imágenes. En la "
+"fase de licitación, las imágenes pueden ser ilustraciones de bienes, "
+"trabajos o servicios requeridos o a la venta. En la fase de implementación, "
+"las imágenes pueden ser ilustraciones o evidencia visual de progreso físico."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "submissionDocuments"
+msgstr "submissionDocuments"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Bid submission documents"
+msgstr "Documentos de presentación de oferta"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Documentation submitted by a bidder as part of their proposal."
+msgstr "Documentación presentada por un licitante como parte de su propuesta."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "contractSummary"
+msgstr "contractSummary"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Contract summary"
+msgstr "Resumen del contrato"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation providing an overview of the key terms and sections of the "
+"contract. Commonly used for large and complex contracts."
+msgstr ""
+"Documentación que provee una vista general de los términos y secciones clave"
+" del contrato. Usado comúnmente para contratos largos y complejos."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "cancellationDetails"
+msgstr "cancellationDetails"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Cancellation details"
+msgstr "Detalles de cancelación"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Documentation of the arrangements, or reasons, for cancellation of a "
+"contracting process, award or specific contract."
+msgstr ""
+"Documentación de los acuerdos, o razones, para la cancelación de un proceso "
+"de contratación, adjudicación o contrato específico."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "projectScope"
+msgstr "projectScope"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Project scope"
+msgstr "Alcance del proyecto"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"A description of the main outputs from the project that are being taken "
+"forward into construction (including type, quantity and units)"
+msgstr ""
+"Una descripción de los principales objetos del proyecto que serán llevados a"
+" construcción (incluyendo tipo, cantidad y unidades)."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "landAndSettlementImpact"
+msgstr "landAndSettlementImpact"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Land and Settlement Impact"
+msgstr "Impacto en tierras y (re) asentamiento"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"State the amount of land and property that was acquired for the project "
+"(e.g. 25sq km land), and outline related impacts (e.g. archaeological issues"
+" (moved Saxon burial site), local/indigenous settlements (relocated 5 "
+"indigenous villages of 500 villagers each), impacts on local businesses e.g."
+" (30 business properties purchased))."
+msgstr ""
+"Indica la cantidad de tierras y propiedades que fueron adquiridas para el "
+"proyecto (ej. 25km² de tierras), y resume los impactos relacionados (ej. "
+"problemas arqueológicos (se relocalizó un cementerio sajón), asentamientos "
+"locales/indígenas (se relocalizaron 5 aldeas indígenas de 500 habitantes "
+"cada una), impactos en negocios locales (ej. se compraron 30 propiedades "
+"comerciales))."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "projectEvaluation"
+msgstr "projectEvaluation"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Project evaluation"
+msgstr "Evaluación del proyecto"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid ""
+"Generally published at the conclusion of a project, providing a technical "
+"and financial summary of delivery."
+msgstr ""
+"Generalmente publicado al término de un proyecto, provee un resumen técnico "
+"y financiero de la entrega."
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "budgetApproval"
+msgstr "budgetApproval"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Budget approval"
+msgstr "Aprobación del presupuesto"
+
+#: ../current_lang/codelists/documentType.csv:1
+msgid "Additional details about the approval of the budget."
+msgstr "Detalles adicionales sobre la aprobación del presupuesto."
+
+#: ../../docs/reference/codelists.md:93
+msgid "ModificationType"
+msgstr "ModificationType"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "duration"
+msgstr "duration"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "Duration"
+msgstr "Duración"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid ""
+"This modification describes a change to the contract duration. This may be "
+"identified based on changes in `award.contractPeriod` or `contract.period`, "
+"or updates to milestones and payments that appear to exceed the anticipated "
+"`contract.period`."
+msgstr ""
+"Esta modificación describe un cambio a la duración del contrato. Este puede "
+"ser identificado en base a los cambios en `award.contractPeriod` o "
+"`contract.period`, o actualizaciones a hitos y pagos que parezcan exceder el"
+" `contract.period` anticipado."
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "value"
+msgstr "value"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "Value"
+msgstr "Valor"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid ""
+"This modification describes a change to the contract value. This may be "
+"identified based on changes to the sum of `contract.value` (watching for "
+"cases where a contract value is varied, or an additional extension contract "
+"is signed as part of this process), or by monitoring "
+"`contracts.implementation.transactions`."
+msgstr ""
+"Esta modificación describe un cambio en el valor del contrato. Esto puede "
+"ser identificado basándose en cambios en la suma de `contract.value` "
+"(buscando casos en los que el valor de un contrato es cambiado, o un "
+"contrato adicional de extensión es firmado como parte de este proceso), o "
+"monitoreando `contracts.implementation.transactions`."
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "scope"
+msgstr "scope"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid "Scope"
+msgstr "Alcance"
+
+#: ../current_lang/codelists/modificationType.csv:1
+msgid ""
+"This modification describes a change to the contract scope. This may be "
+"identified by comparing key details from `tender`, `awards` and `contracts`,"
+" or by monitoring relevant documents."
+msgstr ""
+"Esta modificación describe un cambio al alcance del contrato. Esto puede ser"
+" identificado comparando detalles clave de `tender`, `awards`, y "
+"`contracts`, o monitoreando documentos relevantes."
+
+#: ../../docs/reference/codelists.md:104
+msgid "PartyRole"
+msgstr "PartyRole"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "buyer"
+msgstr "buyer"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Buyer"
+msgstr "Comprador"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"A buyer is an entity whose budget will be used to pay for goods, works or "
+"services related to a contract."
+msgstr ""
+"Un comprador es una entidad cuyo presupuesto será usado para pagar por "
+"bienes, obras o servicios relacionados a un contrato."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "procuringEntity"
+msgstr "procuringEntity"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Procuring entity"
+msgstr "Entidad contratante"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"The entity managing the procurement. This can be different from the buyer "
+"who pays for, or uses, the items being procured."
+msgstr ""
+"La entidad que está administrando la adquisición. Esta puede ser diferente "
+"del comprador que paga, o usa, los artículos que están siendo adquiridos."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "supplier"
+msgstr "supplier"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Supplier"
+msgstr "Proveedor"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "An entity awarded or contracted to provide goods, works or services."
+msgstr ""
+"Una entidad adjudicada o contratada para proveer bienes, obras o servicios."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "tenderer"
+msgstr "tenderer"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Tenderer"
+msgstr "Licitante"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "All entities who submit a tender."
+msgstr "Todas las entidades que presentan una oferta."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "funder"
+msgstr "funder"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Funder"
+msgstr "Financiador"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"The funder is an entity providing money or finance for this contracting "
+"process or project."
+msgstr ""
+"El financiador es una entidad que provee dinero o financiación para este "
+"proceso de contratación o proyecto."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "enquirer"
+msgstr "enquirer"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Enquirer"
+msgstr "Persona que solicita información"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"A party who has made an enquiry during the enquiry phase of a contracting "
+"process."
+msgstr ""
+"Una parte que ha realizado un pedido de información durante la fase de "
+"solicitudes de información de un proceso de contratación."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "payer"
+msgstr "payer"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Payer"
+msgstr "Pagador"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "A party making a payment from a transaction."
+msgstr "Una parte que hace un pago en una transacción."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "payee"
+msgstr "payee"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Payee"
+msgstr "Beneficiario"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "A party in receipt of a payment from a transaction."
+msgstr "Una parte que recibe un pago en una transacción."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "reviewBody"
+msgstr "reviewBody"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Review body"
+msgstr "Órgano de revisión"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"A party responsible for the review of this procurement process. This party "
+"often has a role in any challenges made to the contract award."
+msgstr ""
+"Una parte responsable de la revisión de este proceso de adquisición. Esta "
+"parte tiene a menudo un papel en cualquier cuestionamiento hecho a la "
+"adjudicación del contrato."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "interestedParty"
+msgstr "interestedParty"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Interested party"
+msgstr "Parte interesada"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"A party that has expressed an interest in the contracting process: for "
+"example, by purchasing tender documents or submitting clarification "
+"questions."
+msgstr ""
+"Una parte que ha expresado interés en el proceso de contratación: por "
+"ejemplo, comprando documentación del concurso o presentando preguntas "
+"aclaratorias."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "publicAuthority"
+msgstr "publicAuthority"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Public Authority"
+msgstr "Autoridad Pública"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid ""
+"The entity responsible for developing the infrastructure assets and/or "
+"delivering the public services in this project."
+msgstr ""
+"La entidad responsable de desarrollar los activos de infraestructura y/o de "
+"entregar los servicios públicos en este proyecto."
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "administrativeEntity"
+msgstr "administrativeEntity"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "Administrative Entity"
+msgstr "Entidad Administrativa"
+
+#: ../current_lang/codelists/partyRole.csv:1
+msgid "The entity responsible for contract administration."
+msgstr "La entidad responsable de la administración de contratos."
+
+#: ../../docs/reference/codelists.md:115
+msgid "ProjectSector"
+msgstr "ProjectSector"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "education"
+msgstr "education"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Education"
+msgstr "Educación"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Education, including schools, universities and other learning and training "
+"facilities"
+msgstr ""
+"Educación, incluyendo escuelas, universidades y otras instalaciones de "
+"aprendizaje y entrenamiento."
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "health"
+msgstr "health"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Health"
+msgstr "Salud"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Health, including hospitals, healthcare and human services"
+msgstr "Salud, incluyendo hospitales, servicios humanos y cuidado de la salud"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "energy"
+msgstr "energy"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Energy"
+msgstr "Energía"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Energy, including electric power generation, and the transmission and "
+"distribution of electricity, oil and gas, for example: power plants, power "
+"lines, gas pipelines"
+msgstr ""
+"Energía, incluyendo generación de energía eléctrica y la transmisión y "
+"distribución de electricidad, petróleo y gas, por ejemplo: plantas de "
+"energía, líneas eléctricas, gasoductos"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "communications"
+msgstr "communications"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Communications"
+msgstr "Comunicaciones"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Communications, including ICT, IT, telecommunications, postal facilities, "
+"high-speed internet, broadband"
+msgstr ""
+"Comunicaciones, incluyendo TIC, TI, telecomunicaciones, instalaciones "
+"postales, internet de alta velocidad, banda ancha"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "waterAndWaste"
+msgstr "waterAndWaste"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Water and waste"
+msgstr "Agua y residuos"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Water and waste, including sanitation and wastewater"
+msgstr "Agua y residuos, incluyendo saneamiento y aguas residuales"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "governance"
+msgstr "governance"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Governance"
+msgstr "Gobernanza"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Governance, including government accommodations, public buildings, "
+"government offices; justice, courts; emergency services / response, local "
+"security; security, prisons, corrections; defence, military"
+msgstr ""
+"Gobernanza, incluyendo instalaciones del gobierno, edificios públicos, "
+"oficinas gubernamentales; justicia, cortes; servicios de emergencia y "
+"respuesta a emergencias, seguridad local; seguridad, prisiones, "
+"correccionales; defensa, fuerzas armadas"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "economy"
+msgstr "economy"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Economy"
+msgstr "Economía"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Economy, including agribusiness, agriculture, science and environment"
+msgstr "Economía, incluyendo agronegocios, agricultura, ciencia y ambiente"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "cultureSportsAndRecreation"
+msgstr "cultureSportsAndRecreation"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Culture, sports and recreation"
+msgstr "Cultura, deportes y recreación"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Culture, sports and recreation, including tourism, parks and green areas"
+msgstr ""
+"Cultura, deportes y recreación, incluyendo turismo, parques y áreas verdes"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport"
+msgstr "transport"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Transport"
+msgstr "Transporte"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Transport. A more detailed breakdown may be provided using the "
+"transport.[mode] codes"
+msgstr ""
+"Transporte. Se puede proveer un desglose detallado usando los códigos "
+"transport.[mode]"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport.air"
+msgstr "transport.air"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Air transport"
+msgstr "Transporte aéreo"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Air transport, including airports, airways and aviation"
+msgstr "Transporte aéreo, incluyendo aeropuertos, vías aéreas y aviación"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport.water"
+msgstr "transport.water"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Water transport"
+msgstr "Transporte fluvial"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Water transport, including ports and inland waterways"
+msgstr ""
+"Transporte fluvial, incluyendo puertos y navegación en aguas interiores "
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport.rail"
+msgstr "transport.rail"
+
+#: ../current_lang/codelists/projectSector.csv:1
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Rail transport"
+msgstr "Transporte ferroviario"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport.road"
+msgstr "transport.road"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Road transport"
+msgstr "Transporte vial"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Road transport, including roads, highways, streets, tunnels and bridges"
+msgstr ""
+"Transporte vial, incluyendo carreteras, autopistas, calles, túneles y "
+"puentes"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "transport.urban"
+msgstr "transport.urban"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Urban transport"
+msgstr "Transporte urbano"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid ""
+"Urban transport, including mass transit, urban mobility, buses, cycling, "
+"walking and taxi"
+msgstr ""
+"Transporte urbano, incluyendo tránsito masivo, movilidad urbana, buses, "
+"ciclismo, vías peatonales y taxi"
+
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "socialHousing"
+msgstr "socialHousing"
+
+#: ../current_lang/codelists/projectSector.csv:1
+#: ../current_lang/codelists/projectSector.csv:1
+msgid "Social housing"
+msgstr "Vivienda social"
+
+#: ../../docs/reference/codelists.md:126
+msgid "RelatedProject"
+msgstr "RelatedProject"
+
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid ""
+"The related project is the initial construction of the set of infrastructure"
+" assets."
+msgstr ""
+"El proyecto relacionado es la construcción inicial del conjunto de activos "
+"de infraestructura."
+
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid ""
+"The related project might result in the rehabilitation of the same set of "
+"infrastructure assets."
+msgstr ""
+"El proyecto relacionado puede resultar en la rehabilitación del mismo "
+"conjunto de activos de infraestructura."
+
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid ""
+"The related project might result in the replacement of the same set of "
+"infrastructure assets."
+msgstr ""
+"El proyecto relacionado puede resultar en el reemplazo del mismo conjunto de"
+" activos de infraestructura."
+
+#: ../current_lang/codelists/relatedProject.csv:1
+msgid ""
+"The related project might result in the expansion of the same set of "
+"infrastructure assets."
+msgstr ""
+"El proyecto relacionado puede resultar en la expansión del mismo conjunto de"
+" activos de infraestructura."
+
+#: ../../docs/reference/codelists.md:137
+msgid "RelatedProjectScheme"
+msgstr "RelatedProjectScheme"
+
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid "oc4ids"
+msgstr "oc4ids"
+
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid "OC4IDS project id"
+msgstr "ID de proyecto OC4IDS"
+
+#: ../current_lang/codelists/relatedProjectScheme.csv:1
+msgid ""
+"An Open Contracting for Infrastructure Data Standards project identifier"
+msgstr ""
+"Un identificador de proyecto de los Estándares de Datos de Contrataciones "
+"Abiertas para Infraestructura"
