@@ -5,7 +5,7 @@ languages = {
 
 test_basic_params = {
     'en': 'Toolkit',
-    'es': 'Inicio',
+    'es': 'Contrataciones',
 }
 
 test_navigation_params = [
