@@ -125,6 +125,8 @@ def setup(app):
     schema_domain = '{}schema'.format(gettext_domain_prefix)
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
+    # The gettext domain for mapping translations. Should match the domain in the `pybabel compile` command.
+    mapping_domain = '{}mapping.'.format(gettext_domain_prefix)
 
     project_dir = basedir / 'schema' / 'project-level'
     project_build_dir = basedir / 'docs' / '_static' / 'project-level'
@@ -139,11 +141,14 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
+        # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
+        (glob(str(basedir / 'mapping' / '*.csv')), project_build_dir, mapping_domain),
+        (glob(str(basedir / 'mapping' / '*.csv')), language_dir, mapping_domain),
     ], localedir, language, headers, version=branch)
 
     # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
-    for filename in glob(str(basedir / 'mapping' / '*.csv')):
-        with open(filename) as f:
-            mapping_file = f.read()
-        with open(language_dir / os.path.basename(filename), 'w') as f:
-            f.write(mapping_file)
+    # for filename in glob(str(basedir / 'mapping' / '*.csv')):
+    #    with open(filename) as f:
+    #        mapping_file = f.read()
+    #    with open(language_dir / os.path.basename(filename), 'w') as f:
+    #        f.write(mapping_file)
