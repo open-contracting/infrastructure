@@ -25,13 +25,13 @@ DOMAIN_PREFIX=infrastructure
 # Directory containing assets to copy to the build directory (no trailing slash).
 ASSETS_DIR=
 # The Transifex project name.
-TRANSIFEX_PROJECT=
+TRANSIFEX_PROJECT=oc4ids-09
 
-# Compile PO files for codelists and schema to MO files, so that `translate` succeeds.
+# Compile PO files for codelists, schema and mappings to MO files, so that `translate` succeeds.
 .PHONY: compile
 compile:
 	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
 	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
-	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)mapping
+	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)mappings
 
 # Put local targets below.

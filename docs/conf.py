@@ -126,7 +126,7 @@ def setup(app):
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
     # The gettext domain for mapping translations. Should match the domain in the `pybabel compile` command.
-    mapping_domain = '{}mapping.'.format(gettext_domain_prefix)
+    mapping_domain = '{}mappings'.format(gettext_domain_prefix)
 
     project_dir = basedir / 'schema' / 'project-level'
     project_build_dir = basedir / 'docs' / '_static' / 'project-level'
