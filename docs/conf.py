@@ -120,7 +120,11 @@ def setup(app):
 
     language = app.config.overrides.get('language', 'en')
 
-    headers = ['Title', 'Description', 'Extension']
+    # Headers for columns to translate in codelist CSVs
+    codelist_headers = ['Title', 'Description', 'Extension']
+    # Headers for columns to translate in mapping CSVs
+    mapping_headers = ['Mapping to OC for Infrastructure','Mapping from OCDS']
+
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = '{}schema'.format(gettext_domain_prefix)
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
@@ -134,6 +138,7 @@ def setup(app):
 
     branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
 
+    # Translate schema and codelists
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
         (glob(str(project_dir / '*-schema.json')), project_build_dir, schema_domain),
@@ -141,10 +146,14 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
+    ], localedir, language, codelist_headers, version=branch)
+
+    # Translate mapping CSVs
+    translate([
         # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
         (glob(str(basedir / 'mapping' / '*.csv')), project_build_dir, mapping_domain),
         (glob(str(basedir / 'mapping' / '*.csv')), language_dir, mapping_domain),
-    ], localedir, language, headers, version=branch)
+    ], localedir, language, mapping_headers, version=branch)
 
     # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
     # for filename in glob(str(basedir / 'mapping' / '*.csv')):
