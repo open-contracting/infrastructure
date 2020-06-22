@@ -154,10 +154,3 @@ def setup(app):
         (glob(str(basedir / 'mapping' / '*.csv')), project_build_dir, mapping_domain),
         (glob(str(basedir / 'mapping' / '*.csv')), language_dir, mapping_domain),
     ], localedir, language, mapping_headers, version=branch)
-
-    # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
-    # for filename in glob(str(basedir / 'mapping' / '*.csv')):
-    #    with open(filename) as f:
-    #        mapping_file = f.read()
-    #    with open(language_dir / os.path.basename(filename), 'w') as f:
-    #        f.write(mapping_file)
