@@ -1,0 +1,341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"PO-Revision-Date: 2019-03-21 15:13+0000\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/reference/schema.md:7
+msgid "Schema reference"
+msgstr "Referencia del Esquema"
+
+#: ../../docs/reference/schema.md:9
+msgid ""
+"The tables below describe each of the fields and objects in OC4IDS. To see "
+"how they fit together, consult the [schema browser](browser)."
+msgstr ""
+"Las tablas de abajo describen cada uno de los campos y objetos en OC4IDS. "
+"Para ver cómo estos encajan juntos, consulte el [navegador del "
+"esquema](browser)."
+
+#: ../../docs/reference/schema.md:11
+msgid "Project"
+msgstr "Proyecto (Project)"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Title"
+msgstr "Título"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Type"
+msgstr "Tipo"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Format"
+msgstr "Formato"
+
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../sphinxcontrib-jsonschema:1
+msgid "Required"
+msgstr "Requerido"
+
+#: ../../docs/reference/schema.md:20
+msgid "ContractingProcess"
+msgstr "Proceso de Contratación (ContractingProcess)"
+
+#: ../../docs/reference/schema.md:32
+msgid "ContractingProcessSummary"
+msgstr "Resumen de Proceso de Contratación (ContractingProcessSummary)"
+
+#: ../../docs/reference/schema.md:44
+msgid "LinkedRelease"
+msgstr "Entrega Enlazada (LinkedRelease)"
+
+#: ../../docs/reference/schema.md:55
+msgid "Components"
+msgstr "Componentes"
+
+#: ../../docs/reference/schema.md:57
+msgid "Address"
+msgstr "Dirección (Address)"
+
+#: ../../docs/reference/schema.md:59
+msgid ""
+"We use properties from schema.org and vCard for address components. In the "
+"event source data cannot be broken down into these parts, data SHOULD "
+"contain at least a streetAddress value and postal code."
+msgstr ""
+"Usamos propiedades de schema.org y vCard para componentes de dirección. En "
+"el evento en que los datos fuente no puedan ser desglosados en estas partes,"
+" los datos DEBERÍAN contener al menos una calle (streetAddress) y código "
+"postal."
+
+#: ../../docs/reference/schema.md:61
+msgid ""
+"When working with data, users should be aware that addresses may not always "
+"be broken down using all the properties the specification provides."
+msgstr ""
+"Cuando se trabaja con los datos, los usuarios deben tener en cuenta que las "
+"direcciones no siempre están separadas en todas las propiedades que provee "
+"la especificación."
+
+#: ../../docs/reference/schema.md:72
+msgid "BudgetBreakdown"
+msgstr "Desglose del Presupuesto (BudgetBreakdown)"
+
+#: ../../docs/reference/schema.md:74
+msgid ""
+"A budget breakdown is provided through an array of `BudgetBreakdown` "
+"objects, each of which represents budget for a particular period, from a "
+"particular source, or a combination of the two."
+msgstr ""
+"Un desglose del presupuesto se provee por medio de una lista de objetos "
+"`BudgetBreakdown`, cada una de las cuales representa un presupuesto para un "
+"período particular, de una fuente particular, o una combinación de ambos."
+
+#: ../../docs/reference/schema.md:76
+msgid ""
+"See the [documentation of the OCDS Budget Breakdown "
+"extension](https://github.com/open-contracting-"
+"extensions/ocds_budget_breakdown_extension) for more details of this data "
+"model. BudgetBreakdown can also be extended further to include budget "
+"classifications data following the pattern described in the [OCDS Budgets "
+"and Spend extension](https://github.com/open-contracting-"
+"extensions/ocds_budget_and_spend_extension)."
+msgstr ""
+"Vea la [documentación de la extensión de OCDS 'Desglose del "
+"Presupuesto'](https://github.com/open-contracting-"
+"extensions/ocds_budget_breakdown_extension) para más detalles sobre este "
+"modelo de datos. Este modelo puede ser extendido de nuevo para agregar datos"
+" de clasificaciones del presupuesto de acuerdo al patrón descrito en la "
+"[extensión OCDS  'Presupuestos y Gasto'](https://github.com/open-"
+"contracting-extensions/ocds_budget_and_spend_extension)."
+
+#: ../../docs/reference/schema.md:87
+msgid "Classification"
+msgstr "Clasificación (Classification)"
+
+#: ../../docs/reference/schema.md:89
+msgid ""
+"A classification consists of an identifier for the codelist (the `scheme`) "
+"and a code from that codelist (the `id`), and then a human-readable label "
+"for the classification (the `description`)."
+msgstr ""
+"Una clasificación consiste en un identificador para la lista de códigos (el "
+"esquema -`scheme`- ) y un código de esa lista (el `id`), y una etiqueta de "
+"la clasificación legible por humanos (la descripción -`description`-)."
+
+#: ../../docs/reference/schema.md:100
+msgid "For example:"
+msgstr "Por ejemplo:"
+
+#: ../../docs/reference/schema.md:110
+msgid "ContactPoint"
+msgstr "Punto de Contacto (ContactPoint)"
+
+#: ../../docs/reference/schema.md:121
+msgid "Document"
+msgstr "Documento (Document)"
+
+#: ../../docs/reference/schema.md:123
+msgid ""
+"For each document the following structured information may be provided."
+msgstr ""
+"Se puede proveer la siguiente información estructurada por cada documento."
+
+#: ../../docs/reference/schema.md:134
+msgid "Identifier"
+msgstr "Identificador (Identifier)"
+
+#: ../../docs/reference/schema.md:136
+msgid ""
+"Use of stable official organization identifiers can help join up data "
+"between systems."
+msgstr ""
+"El uso de identificadores oficiales estables de la organización puede ayudar"
+" a unir los datos de diferentes sistemas."
+
+#: ../../docs/reference/schema.md:138
+msgid ""
+"Organization identifiers should be constructed by collecting an official "
+"company (or government body) registration number for the organization, and "
+"then finding the [org-id.guide list code](http://www.org-id.guide) for the "
+"list this identifier is taken from to use in the `scheme` field."
+msgstr ""
+"Los identificadores de la organización deberían ser construidos recogiendo "
+"el número de registro oficial de la compañía (o del ente gubernamental), y "
+"luego buscando el [código de lista de org-id.guide](http://www.org-id.guide)"
+" para la lista de la cual este identificador es tomado para utilizarlo en el"
+" campo `scheme`."
+
+#: ../../docs/reference/schema.md:140
+msgid ""
+"For example, if identifying a company in Colombia, look up its identifier in"
+" the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-"
+"RUE) and use the list code `CO-RUE`."
+msgstr ""
+"Por ejemplo, si se quiere identificar una empresa en Colombia, busque su "
+"identificador en el [Registro Único Empresarial y Social](http://org-"
+"id.guide/list/CO-RUE) y use el código de lista `CO-RUE`."
+
+#: ../../docs/reference/schema.md:151
+msgid "Location"
+msgstr "Ubicación (Location)"
+
+#: ../../docs/reference/schema.md:153
+msgid ""
+"A project may have one or more locations. Locations may be expressed in a "
+"number of different ways, using one or more of:"
+msgstr ""
+"Un proyecto puede tener una o más ubicaciones. Las ubicaciones pueden "
+"expresarse de diferentes maneras, usando uno o más de los siguientes:"
+
+#: ../../docs/reference/schema.md:155
+msgid ""
+"A point location or geometry (e.g. trace of a road, or polygon giving the "
+"boundary of a site);"
+msgstr ""
+"Un punto de ubicación o una forma geométrica (ej. el trazo de una ruta, o un"
+" polígono que delimita un sitio);"
+
+#: ../../docs/reference/schema.md:156
+msgid "A gazetteer entry (e.g. town name);"
+msgstr "Una entrada en un diccionario geográfico (ej. nombre de un pueblo);"
+
+#: ../../docs/reference/schema.md:157
+msgid "An address."
+msgstr "Una dirección."
+
+#: ../../docs/reference/schema.md:168
+msgid "Modification"
+msgstr "Modificación (Modification)"
+
+#: ../../docs/reference/schema.md:170
+msgid ""
+"For each modification, the following structured information may be provided."
+msgstr ""
+"Se puede proveer la siguiente información estructurada por cada "
+"modificación."
+
+#: ../../docs/reference/schema.md:181
+msgid "Organization"
+msgstr "Organización (Organization)"
+
+#: ../../docs/reference/schema.md:183
+msgid "For each organization, provide as much structured data as you can."
+msgstr "Para cada organización, provea tantos datos estructurados como pueda."
+
+#: ../../docs/reference/schema.md:193
+msgid "OrganizationReference"
+msgstr "Referencia a Organización (OrganizationReference)"
+
+#: ../../docs/reference/schema.md:204
+msgid "Period"
+msgstr "Periodo (Period)"
+
+#: ../../docs/reference/schema.md:206
+msgid ""
+"Dates MUST be expressed using a full ISO 8601 date-time including a "
+"timezone. E.g.:"
+msgstr ""
+"Fechas DEBEN ser expresadas usando el formato ISO 8601 de fecha y hora "
+"completos incluyendo una zona horaria. Ejemplo:"
+
+#: ../../docs/reference/schema.md:208
+msgid "2018-09-18T11:26:04+01:00"
+msgstr "2018-09-18T11:26:04+01:00"
+
+#: ../../docs/reference/schema.md:210
+msgid ""
+"Where the source system does not contain time information, a judgment should"
+" be made as to the relevant time to attach (e.g. start of the day; end of "
+"the working day etc.)."
+msgstr ""
+"Cuando el sistema fuente no contenga información de hora, se debe decidir la"
+" hora pertinente a añadir (ej. inicio del día, final de la jornada laboral, "
+"etc.)."
+
+#: ../../docs/reference/schema.md:221
+msgid "RelatedProject"
+msgstr "Proyecto Relacionado (RelatedProject)"
+
+#: ../../docs/reference/schema.md:223
+msgid ""
+"A reference to a project related to the same set of infrastructure assets as"
+" the current project."
+msgstr ""
+"Una referencia a un proyecto relacionado al mismo conjunto de activos de "
+"infraestructura del proyecto actual."
+
+#: ../../docs/reference/schema.md:234
+msgid "Value"
+msgstr "Valor (Value)"
+
+#: ../../docs/reference/schema.md:236
+msgid ""
+"All values should be published along with their currency using the following"
+" structure."
+msgstr ""
+"Todos los valores deberían ser publicados junto con su moneda usando la "
+"estructura que sigue."

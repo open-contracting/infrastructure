@@ -95,7 +95,7 @@ locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 
 gettext_compact = False
 
 # The `DOMAIN_PREFIX` from `config.mk`.
-gettext_domain_prefix = '{}-'.format(profile_identifier)
+gettext_domain_prefix = '{}'.format(profile_identifier)
 
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
@@ -120,11 +120,17 @@ def setup(app):
 
     language = app.config.overrides.get('language', 'en')
 
-    headers = ['Title', 'Description', 'Extension']
+    # Headers for columns to translate in codelist CSVs
+    codelist_headers = ['Title', 'Description', 'Extension']
+    # Headers for columns to translate in mapping CSVs
+    mapping_headers = ['Mapping to OC for Infrastructure','Mapping from OCDS']
+
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = '{}schema'.format(gettext_domain_prefix)
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = '{}codelists'.format(gettext_domain_prefix)
+    # The gettext domain for mapping translations. Should match the domain in the `pybabel compile` command.
+    mapping_domain = '{}mappings'.format(gettext_domain_prefix)
 
     project_dir = basedir / 'schema' / 'project-level'
     project_build_dir = basedir / 'docs' / '_static' / 'project-level'
@@ -132,6 +138,7 @@ def setup(app):
 
     branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
 
+    # Translate schema and codelists
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
         (glob(str(project_dir / '*-schema.json')), project_build_dir, schema_domain),
@@ -139,11 +146,11 @@ def setup(app):
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
         (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
         (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
-    ], localedir, language, headers, version=branch)
+    ], localedir, language, codelist_headers, version=branch)
 
-    # Copy our mapping files as well. This currently does not perform translation, which would need to be added.
-    for filename in glob(str(basedir / 'mapping' / '*.csv')):
-        with open(filename) as f:
-            mapping_file = f.read()
-        with open(language_dir / os.path.basename(filename), 'w') as f:
-            f.write(mapping_file)
+    # Translate mapping CSVs
+    translate([
+        # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
+        (glob(str(basedir / 'mapping' / '*.csv')), project_build_dir, mapping_domain),
+        (glob(str(basedir / 'mapping' / '*.csv')), language_dir, mapping_domain),
+    ], localedir, language, mapping_headers, version=branch)
