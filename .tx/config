@@ -7,15 +7,15 @@ source_file = build/locale/support.pot
 source_lang = en
 type = PO
 
-[oc4ids-09.infrastructuremappings]
-file_filter = locale/<lang>/LC_MESSAGES/infrastructuremappings.po
-source_file = build/locale/infrastructuremappings.pot
+[oc4ids-09.infrastructure-mappings]
+file_filter = locale/<lang>/LC_MESSAGES/infrastructure-mappings.po
+source_file = build/locale/infrastructure-mappings.pot
 source_lang = en
 type = PO
 
-[oc4ids-09.infrastructureschema]
-file_filter = locale/<lang>/LC_MESSAGES/infrastructureschema.po
-source_file = build/locale/infrastructureschema.pot
+[oc4ids-09.infrastructure-schema]
+file_filter = locale/<lang>/LC_MESSAGES/infrastructure-schema.po
+source_file = build/locale/infrastructure-schema.pot
 source_lang = en
 type = PO
 
@@ -25,9 +25,9 @@ source_file = build/locale/sphinx.pot
 source_lang = en
 type = PO
 
-[oc4ids-09.infrastructurecodelists]
-file_filter = locale/<lang>/LC_MESSAGES/infrastructurecodelists.po
-source_file = build/locale/infrastructurecodelists.pot
+[oc4ids-09.infrastructure-codelists]
+file_filter = locale/<lang>/LC_MESSAGES/infrastructure-codelists.po
+source_file = build/locale/infrastructure-codelists.pot
 source_lang = en
 type = PO
 

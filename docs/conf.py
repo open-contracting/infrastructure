@@ -95,7 +95,7 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 gettext_compact = False
 
 # The `DOMAIN_PREFIX` from `config.mk`.
-gettext_domain_prefix = '{}'.format(profile_identifier)
+gettext_domain_prefix = '{}-'.format(profile_identifier)
 
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
