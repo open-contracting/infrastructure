@@ -22,10 +22,10 @@ DIST_FILES=schema/project-level/project-schema.json schema/project-level/codelis
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.
 DOMAIN_PREFIX=infrastructure
-# Directory containing assets to copy to the build directory (no trailing slash).
-ASSETS_DIR=
 # The Transifex project name.
 TRANSIFEX_PROJECT=oc4ids-09
+# Any additional extract targets.
+EXTRACT_TARGETS=extract_mappings
 
 # Compile PO files for codelists, schema and mappings to MO files, so that `translate` succeeds.
 .PHONY: compile
@@ -35,3 +35,7 @@ compile:
 	 pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)mappings
 
 # Put local targets below.
+
+.PHONY: extract_mappings
+extract_mappings: $(POT_DIR)
+       pybabel extract -F babel_ocds_mapping.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)mappings.pot
