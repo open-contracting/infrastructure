@@ -5,17 +5,18 @@
 # 
 # Translators:
 # Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# James McKinney, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"POT-Creation-Date: 2020-06-24 21:31-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
+"Last-Translator: James McKinney, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -169,13 +170,13 @@ msgstr "Consejo"
 
 #: ../../None:1
 msgid ""
-"The [OC4IDS Field-Level Mapping "
-"Template](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-"
-"yEXrR_eyscga06Qo1blk/copy) can be used to document your mapping."
+"The [OC4IDS Field-Level Mapping Template](https://www.open-"
+"contracting.org/resources/oc4ids-field-level-mapping-template/) can be used "
+"to document your mapping."
 msgstr ""
-"La [plantilla de mapeo a nivel de campos "
-"OC4IDS](https://docs.google.com/spreadsheets/d/1xHLf_w193pp97zfzhLc_LI-"
-"yEXrR_eyscga06Qo1blk/copy) puede ser usada para documentar el mapeo."
+"La [Planilla de Mapeo a Nivel de Campos OC4IDS](https://www.open-"
+"contracting.org/resources/oc4ids-field-level-mapping-template/) puede usarse"
+" para documentar el mapeo."
 
 #: ../../docs/guidance/publishing.md:49
 msgid "Your mapping might identify:"

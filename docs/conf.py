@@ -21,7 +21,6 @@ import standard_theme
 from ocds_babel.translate import translate
 from recommonmark.transform import AutoStructify
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'Open Contracting for Infrastructure Data Standards Toolkit'
@@ -40,6 +39,7 @@ release = '0.9.2'
 extensions = [
     'recommonmark',
     'sphinxcontrib.jsonschema',
+    'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
 ]
 
@@ -90,12 +90,12 @@ schema_base_url = 'https://standard.open-contracting.org{}/schema/{}/'.format(
     html_theme_options['root_url'], release.replace('-', '__').replace('.', '__'))
 
 # The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
-locale_dirs = ['../locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
 
 gettext_compact = False
 
 # The `DOMAIN_PREFIX` from `config.mk`.
-gettext_domain_prefix = '{}'.format(profile_identifier)
+gettext_domain_prefix = '{}-'.format(profile_identifier)
 
 # List the extension identifiers and versions that should be part of this profile. The extensions must be available in
 # the extension registry: https://github.com/open-contracting/extension_registry/blob/master/extension_versions.csv
@@ -116,14 +116,14 @@ def setup(app):
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
     # The `LOCALE_DIR` from `config.mk`.
-    localedir = basedir / 'locale'
+    localedir = basedir / 'docs' / 'locale'
 
     language = app.config.overrides.get('language', 'en')
 
     # Headers for columns to translate in codelist CSVs
     codelist_headers = ['Title', 'Description', 'Extension']
     # Headers for columns to translate in mapping CSVs
-    mapping_headers = ['Mapping to OC for Infrastructure','Mapping from OCDS']
+    mapping_headers = ['Mapping to OC for Infrastructure', 'Mapping from OCDS']
 
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = '{}schema'.format(gettext_domain_prefix)
@@ -132,25 +132,23 @@ def setup(app):
     # The gettext domain for mapping translations. Should match the domain in the `pybabel compile` command.
     mapping_domain = '{}mappings'.format(gettext_domain_prefix)
 
-    project_dir = basedir / 'schema' / 'project-level'
-    project_build_dir = basedir / 'docs' / '_static' / 'project-level'
-    language_dir = basedir / 'build' / language
+    schema_dir = basedir / 'schema' / 'project-level'
+    static_dir = basedir / 'docs' / '_static' / 'project-level'
+    build_dir = basedir / 'build' / language
 
     branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
 
-    # Translate schema and codelists
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
-        (glob(str(project_dir / '*-schema.json')), project_build_dir, schema_domain),
-        (glob(str(project_dir / '*-schema.json')), language_dir, schema_domain),
+        (glob(str(schema_dir / '*-schema.json')), static_dir, schema_domain),
+        (glob(str(schema_dir / '*-schema.json')), build_dir, schema_domain),
         # The glob patterns in `babel_ocds_codelist.cfg` should match these.
-        (glob(str(project_dir / 'codelists' / '*.csv')), project_build_dir / 'codelists', codelists_domain),
-        (glob(str(project_dir / 'codelists' / '*.csv')), language_dir / 'codelists', codelists_domain),
+        (glob(str(schema_dir / 'codelists' / '*.csv')), static_dir / 'codelists', codelists_domain),
+        (glob(str(schema_dir / 'codelists' / '*.csv')), build_dir / 'codelists', codelists_domain),
     ], localedir, language, codelist_headers, version=branch)
 
-    # Translate mapping CSVs
     translate([
         # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
-        (glob(str(basedir / 'mapping' / '*.csv')), project_build_dir, mapping_domain),
-        (glob(str(basedir / 'mapping' / '*.csv')), language_dir, mapping_domain),
+        (glob(str(basedir / 'mapping' / '*.csv')), static_dir, mapping_domain),
+        (glob(str(basedir / 'mapping' / '*.csv')), build_dir, mapping_domain),
     ], localedir, language, mapping_headers, version=branch)

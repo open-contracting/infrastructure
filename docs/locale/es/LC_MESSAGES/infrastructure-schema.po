@@ -4,19 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Charlie Pinder <charlie.pinder@opendataservices.coop>, 2019
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# James McKinney, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-14 11:41+1200\n"
-"PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
+"POT-Creation-Date: 2020-06-24 22:01-0400\n"
+"PO-Revision-Date: 2020-06-25 01:03+0000\n"
+"Last-Translator: James McKinney, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1786,12 +1783,12 @@ msgstr "Roles de las partes"
 msgid ""
 "The party's role(s) in the project, using the open "
 "[partyRole](https://standard.open-"
-"contracting.org/profiles/ppp/latest/en/reference/codelists/#partyrole) "
-"codelist."
+"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole)"
+" codelist."
 msgstr ""
 "El rol o roles de la parte en este proyecto, usando la lista de códigos "
 "abierta [partyRole](https://standard.open-"
-"contracting.org/profiles/ppp/latest/en/reference/codelists/#partyrole)."
+"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole)."
 
 #. /definitions/OrganizationReference/properties/name/description
 #: schema/project-level/project-schema.json:1
@@ -2064,12 +2061,12 @@ msgstr "Tipo de Documento"
 msgid ""
 "A classification of the document described, using the open "
 "[documentType](https://standard.open-"
-"contracting.org/profiles/ppp/latest/en/reference/codelists/#documenttype) "
-"codelist."
+"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#documenttype)"
+" codelist."
 msgstr ""
 "Una clasificación del documento descrito, usando la lista de códigos abierta"
 " [documentType](https://standard.open-"
-"contracting.org/profiles/ppp/latest/es/reference/codelists/#documenttype)."
+"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#documenttype)."
 
 #. /definitions/Document/properties/title/description
 #: schema/project-level/project-schema.json:1

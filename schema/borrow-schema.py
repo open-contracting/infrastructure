@@ -160,7 +160,7 @@ infra_definitions = {
     'ContractingProcessSummary',  # Similar to OCDS release, and includes direction on how to populate from OCDS data.
     'LinkedRelease',  # Similar to linked release in OCDS record package.
     'Modification',
-    'RelatedProject' # Similar to relatedProcess in OCDS
+    'RelatedProject',  # Similar to relatedProcess in OCDS
 }
 ocds_definitions = {
     'Period',
@@ -179,7 +179,7 @@ compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
 
 # https://docs.google.com/spreadsheets/d/1ttXgMmmLvqBlPRi_4jAJhIobjnCiwMv13YwGfFOnoJk/edit#gid=0
-document_type_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS1VCdsV-Xwvsh6QnK2z9lcpLRyfc472dtpFTicS8C6Yul2MONPYw08lBLd8j55mnerjya9T4qCiekT/pub?gid=0&single=true&output=csv'  # noqa
+document_type_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS1VCdsV-Xwvsh6QnK2z9lcpLRyfc472dtpFTicS8C6Yul2MONPYw08lBLd8j55mnerjya9T4qCiekT/pub?gid=0&single=true&output=csv'  # noqa: E501
 
 # Copy the OCDS codelists.
 for basename in ocds_codelists:
@@ -282,7 +282,7 @@ del(schema['definitions']['Classification']['properties']['uri'])
 
 copy_def('Location')
 # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
-schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa
+schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa: E501
 # Add id to Location.
 schema['definitions']['Location']['properties']['id'] = {
     'title': 'Identifier',
@@ -303,7 +303,7 @@ copy_def('Value')
 
 copy_def('Organization', {
     # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
-    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')
+    ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')  # noqa: E501
 })
 # Remove unneeded extensions and details from Organization.
 del(schema['definitions']['Organization']['properties']['shareholders'])
@@ -323,12 +323,12 @@ copy_def('BudgetBreakdown')
 
 copy_def('Document', {
     # Link to infrastructure codelist instead of PPP codelist
-    ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),
+    ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),  # noqa: E501
 })
 # noqa: Original from standard:                                                 "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
-schema['definitions']['Document']['properties']['description']['description'] = "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. "  # noqa
+schema['definitions']['Document']['properties']['description']['description'] = "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. "  # noqa: E501
 # noqa: Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type."
-schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."  # noqa
+schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."  # noqa: E501
 
 copy_def('Identifier')
 

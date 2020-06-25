@@ -34,34 +34,25 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 ### ContractingProcessStatus
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
 ```
 
 ### ContractNature
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/contractNature.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/contractNature.csv
 ```
 
 ### ProjectStatus
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectStatus.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectStatus.csv
 ```
 
 Projects with a `status` of 'completed' may be displayed in a list of archived projects.
@@ -69,12 +60,9 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ### ProjectType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectType.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectType.csv
 ```
 
 ## Open codelists
@@ -82,65 +70,47 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ### DocumentType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/documentType.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/documentType.csv
 ```
 
 ### ModificationType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/modificationType.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/modificationType.csv
 ```
 
 ### PartyRole
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/partyRole.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
 ### ProjectSector
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectSector.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectSector.csv
 ```
 
 ### RelatedProject
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/relatedProject.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/relatedProject.csv
 ```
 
 ### RelatedProjectScheme
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 ```

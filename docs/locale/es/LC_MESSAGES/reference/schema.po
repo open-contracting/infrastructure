@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-14 11:34+1200\n"
+"POT-Creation-Date: 2020-06-24 21:38-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
@@ -39,66 +39,6 @@ msgstr ""
 #: ../../docs/reference/schema.md:11
 msgid "Project"
 msgstr "Proyecto (Project)"
-
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1
-msgid "Title"
-msgstr "Título"
-
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1
-msgid "Description"
-msgstr "Descripción"
-
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1
-msgid "Type"
-msgstr "Tipo"
-
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1
-msgid "Format"
-msgstr "Formato"
-
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1
-msgid "Required"
-msgstr "Requerido"
 
 #: ../../docs/reference/schema.md:20
 msgid "ContractingProcess"
