@@ -39,6 +39,7 @@ release = '0.9.1'
 extensions = [
     'recommonmark',
     'sphinxcontrib.jsonschema',
+    'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
 ]
 
