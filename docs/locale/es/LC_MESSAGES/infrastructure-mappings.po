@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
 # 
 # Translators:
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-17 10:46+1200\n"
-"PO-Revision-Date: 2020-06-16 22:47+0000\n"
-"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"POT-Creation-Date: 2020-06-24 22:01-0400\n"
+"PO-Revision-Date: 2020-06-25 01:03+0000\n"
+"Last-Translator: James McKinney, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
