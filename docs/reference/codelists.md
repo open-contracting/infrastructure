@@ -36,8 +36,7 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/contractingProcessStatus
+   :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
 ```
 
 ### ContractNature
@@ -45,8 +44,7 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/contractNature
+   :file: ../../build/current_lang/codelists/contractNature.csv
 ```
 
 ### ProjectStatus
@@ -54,8 +52,7 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/projectStatus
+   :file: ../../build/current_lang/codelists/projectStatus.csv
 ```
 
 Projects with a `status` of 'completed' may be displayed in a list of archived projects.
@@ -65,8 +62,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/projectType
+   :file: ../../build/current_lang/codelists/projectType.csv
 ```
 
 ## Open codelists
@@ -76,8 +72,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/documentType
+   :file: ../../build/current_lang/codelists/documentType.csv
 ```
 
 ### ModificationType
@@ -85,8 +80,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/modificationType
+   :file: ../../build/current_lang/codelists/modificationType.csv
 ```
 
 ### PartyRole
@@ -94,8 +88,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/partyRole
+   :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
 ### ProjectSector
@@ -103,8 +96,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/projectSector
+   :file: ../../build/current_lang/codelists/projectSector.csv
 ```
 
 ### RelatedProject
@@ -112,8 +104,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/relatedProject
+   :file: ../../build/current_lang/codelists/relatedProject.csv
 ```
 
 ### RelatedProjectScheme
@@ -121,6 +112,5 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```eval_rst
 .. codelisttable::
    :header-rows: 1
-   :class: codelist-table
-   :file: ../../build/current_lang/codelists/relatedProjectScheme
+   :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 ```
