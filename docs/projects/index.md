@@ -1,8 +1,10 @@
 # Getting started
 
-The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded infrastructure projects. Using a common schema to record the information that is needed to monitor projects can enable more advanced analysis, both within, and across, infrastructure projects.
+The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded construction projects. Using a common schema to record the information that is needed to monitor projects can enable more advanced analysis, both within, and across, infrastructure projects.
 
 ## What is a project?
+
+In the context of OC4IDS, the term 'project' refers to an infrastructure project, defined as the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
 
 An infrastructure project may stand alone (e.g. a new hospital), or may form part of a wider programme of work (e.g. a new rail station, as part of an extension to a railway line). An infrastructure project is usually implemented through a series of contracts, and usually involves planning and coordination at the project-level.
 
@@ -12,9 +14,13 @@ An infrastructure project may stand alone (e.g. a new hospital), or may form par
 
     .. markdown::
 
-        In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+      The term "project" is used in many contexts to mean different things, for example:
 
-        In other contexts, the term 'project' can refer to a larger programme of work – of which projects in the sense of OC4IDS would form part of – like the construction of an entire highway. The term 'project' can also refer to a public investment to which funds are allocated in a government's budget, like the electrification of a rail network.
+      * a larger programme of work, like the construction of an entire highway
+      * an investment project, like in National Public Investment Systems (SNIP) in Latin America
+      * a project code in a government's budget
+
+      However, to correctly implement and interpret OC4IDS, the above definition of an infrastructure project needs to be adhered to.
 
 ```
 
@@ -29,7 +35,7 @@ Within an infrastructure project, a procuring entity may issue contracts for its
 [CoST](http://infrastructuretransparency.org/) have developed a framework of information that should be pro-actively disclosed and kept updated at each stage. Project-level data covers:
 
 * **identification** - the decision to develop a project within the budget and programme of a project owner.
-* **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorisation.
+* **preparation** - the feasibility study, environmental and social impact assessment, general scoping of the project, establishing the packaging and procurement strategy, preliminary statutory requirements on environmental and land impacts, and the resulting budget authorization.
 * **implementation** - covers the procurement and implementation of the planning, design and works according to the procurement strategy.
 * **completion** - covers the handover of the assets and close-out activities with details of the final scope, cost, and delivery time.
 
@@ -43,7 +49,7 @@ The preparation and implementation stages may be delivered using contractors. Th
 
 Monitoring an infrastructure project may largely involve monitoring the contracts used to deliver it: particularly any primary construction contracts.
 
-It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/using.md), and to use data from contacting data systems in order to detect updates and modifications during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any modifications to these contracts.
+It may be possible to [discover and populate some data about infrastructure projects by looking at contracting data](../../guidance/using), and to use data from contracting data systems in order to detect updates and modifications during a contracting process. In other cases, it is simply necessary to record details of each contract related to an infrastructure project, and to manually monitor any modifications to these contracts.
 
 ## How is OC4IDS structured?
 
@@ -65,7 +71,7 @@ The `modifications` section should be used to record information on changes to t
 
 ### Contracting process details
 
-Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of (cached) OCDS releases, recording each update to a contracting process.
+Where OCDS data is available, the `contractingProcesses/releases` array should act as an index of OCDS releases, recording each update to a contracting process.
 
 Explanations of any modifications detected when comparing releases should be provided in the `modifications` section of the contracting process summary.
 
@@ -85,7 +91,7 @@ So that your project information can be compared with information from others, a
 
     .. markdown::
 
-      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing.md) for a step by step guide.
+      Refer to the guidance on [publishing data from an infrastructure transparency portal](../guidance/publishing) for a step by step guide.
 
 ```
 
@@ -95,9 +101,9 @@ So that your project information can be compared with information from others, a
 
 **Why?**
 
-The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contacting data sources, but to also work in cases where structured open contracting is not available.
+The specification has been designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been design to integrate with existing open contracting data sources, but to also work in cases where structured open contracting is not available.
 
-Some of the data structures, such as the organisation identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
+Some of the data structures, such as the organization identifier structure, may require additional data collection, but if populated with data, allow connections to be made between project data, company registers and beneficial ownership information.
 
 ```eval_rst
 .. admonition:: Things to consider
@@ -114,4 +120,4 @@ Some of the data structures, such as the organisation identifier structure, may 
 
 ... OC4IDS provides definitions and codelists that can be used to collect consistent data.
 
-Consult the [specification reference for definitions](../reference/index.md).
+Consult the [specification reference for definitions](../reference/index).

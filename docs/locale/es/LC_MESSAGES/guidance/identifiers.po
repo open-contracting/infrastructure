@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-24 21:31-0400\n"
+"PO-Revision-Date: 2019-03-21 15:13+0000\n"
+"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../docs/guidance/identifiers.md:1
+msgid "Project identifiers"
+msgstr "Identificadores de proyecto"
+
+#: ../../docs/guidance/identifiers.md:3
+msgid ""
+"A project identifier is a unique identifier for an infrastructure project. "
+"Every project in OC4IDS has a project identifier in the `id` field."
+msgstr ""
+"Un identificador de proyecto es un identificador único para un proyecto de "
+"infraestructura. Cada proyecto en OC4IDS tiene un identificador de proyecto "
+"en el campo `id`."
+
+#: ../../docs/guidance/identifiers.md:5
+msgid ""
+"Project identifiers can be used to join up data published at different times"
+" or from different systems; for example, including a project identifier in "
+"contracting data makes it possible to join up data on the design, "
+"construction and supervision contracts within a single infrastructure "
+"project."
+msgstr ""
+"Los identificadores de proyecto pueden usarse para unir datos publicados en "
+"momentos diferentes o por sistemas diferentes; por ejemplo, incluyendo un "
+"identificador de proyecto en los datos de contratación hace posible unir "
+"datos de los contratos de diseño, construcción y supervisión dentro de un "
+"solo proyecto de infraestructura."
+
+#: ../../docs/guidance/identifiers.md:7
+msgid "Local project identifiers in contracting data"
+msgstr "Identificadores de proyectos locales en datos de contrataciones"
+
+#: ../../docs/guidance/identifiers.md:9
+msgid ""
+"A common need is to access data about the contracting processes related to "
+"an infrastructure project. When contracting systems use consistent "
+"identifiers to refer to infrastructure projects, this becomes possible. An "
+"example use case is automatically checking which projects have related "
+"contracting data, and then manually filtering projects for further scrutiny,"
+" monitoring or data collection."
+msgstr ""
+"Una necesidad común es la de acceder a datos sobre procesos de contratación "
+"relacionados a un proyecto de infraestructura. Cuando los sistemas de "
+"contrataciones usan identificadores consistentes para referirse a proyectos "
+"de infraestructura, esto se vuelve posible. Un caso de uso de ejemplo es "
+"verificar automáticamente qué proyectos tienen datos de contrataciones "
+"relacionadas, y luego filtrar manualmente estos proyectos para análisis "
+"posteriores, monitoreo o recolección de datos."
+
+#: ../../docs/guidance/identifiers.md:11
+msgid ""
+"Project identifiers in contracting data should be locally unique; this means"
+" that across all contracting data from a particular system or country, each "
+"project identifier refers to exactly one infrastructure project."
+msgstr ""
+"Los identificadores de proyecto usados en datos de contrataciones deberían "
+"ser únicos localmente; esto quiere decir que cada identificador de proyecto "
+"se refiere exactamente a un proyecto de infraestructura mediante todos los "
+"datos de contrataciones de un sistema o país en particular."
+
+#: ../../docs/guidance/identifiers.md:13
+msgid ""
+"There are different approaches to including project identifiers in "
+"contracting data, with the best solution depending on the context of an "
+"implementation:"
+msgstr ""
+"Existen diferente enfoques para incluir identificadores de proyecto en datos"
+" de contrataciones, y la mejor solución depende del contexto de una "
+"implementación:"
+
+#: ../../docs/guidance/identifiers.md:15
+msgid ""
+"**Include a free-text field for project identifiers in procurement systems**"
+" and work with officials entering procurement information to make sure this "
+"is populated according to a defined pattern."
+msgstr ""
+"**Incluya un campo de texto libre para identificadores de proyectos en "
+"sistemas de adquisiciones** y trabaje con los funcionarios que ingresan la "
+"información de adquisiciones para asegurar que este es llenado de acuerdo a "
+"un patrón definido."
+
+#: ../../docs/guidance/identifiers.md:17
+msgid ""
+"Free-text entry of project identifiers can lead to data quality issues; for "
+"example, project identifiers can be mistyped or two groups can accidentally "
+"choose to use the same identifier for different projects."
+msgstr ""
+"La entrada de texto libre en identificadores de proyectos puede llevar a "
+"problemas de calidad de datos; por ejemplo, los identificadores de proyecto "
+"pueden ser ingresados incorrectamente o dos grupos pueden elegir, "
+"accidentalmente, usar el mismo identificador para diferentes proyectos."
+
+#: ../../docs/guidance/identifiers.md:19
+msgid ""
+"However, this approach allows some data quality checks to be run; for "
+"example, checking that all the contracting processes over a certain value "
+"from a given agency have a project identifier, and that the identifier "
+"matches a defined pattern or a local list of project identifiers."
+msgstr ""
+"Sin embargo, este enfoque permite correr algunas verificaciones de calidad "
+"de datos; por ejemplo, para verificar si todos los procesos de contratación "
+"por encima de un cierto valor y para cierta entidad tienen un identificador "
+"de proyecto, y si ese identificador coincide con un patrón determinado o con"
+" una entrada en una lista local de identificadores de proyecto."
+
+#: ../../docs/guidance/identifiers.md:21
+msgid ""
+"This approach also enables the joining up of data on multiple contracting "
+"processes relating to a single infrastructure project."
+msgstr ""
+"Este enfoque también permite unir datos de múltiples procesos de "
+"contratación relacionados a un solo proyecto de infraestructura."
+
+#: ../../docs/guidance/identifiers.md:24
+msgid ""
+"**Establish a national project register managed by a central agency and "
+"integrated into procurement systems.** In this model, officials entering "
+"procurement information would look up and use the project's identifier from "
+"the national register. If the project is not yet in the register, they would"
+" request its addition."
+msgstr ""
+"**Establecer un registro nacional de proyectos administrado por una agencia "
+"central e integrado a los sistemas de adquisiciones.** En este modelo, los "
+"funcionarios que ingresan información de adquisiciones buscarían y usarían "
+"el identificador de proyecto proveniente del registro nacional. Si el "
+"proyecto aún no está en el registro, ellos podrían solicitar su adición."
+
+#: ../../docs/guidance/identifiers.md:26
+msgid ""
+"This approach supports more comprehensive and effective data quality checks;"
+" for example, project identifiers entered into procurement systems can be "
+"immediately checked against the project register to prevent errors in data "
+"entry (\"validation at source\")."
+msgstr ""
+"Este enfoque apoya verificaciones de calidad de datos más completas y "
+"efectivas; por ejemplo, los identificadores de proyecto ingresados en "
+"sistemas de adquisiciones pueden ser verificados inmediatamente con el "
+"registro de proyectos para prevenir errores en la entrada de datos "
+"(\"validation at source\")."
+
+#: ../../docs/guidance/identifiers.md:28
+msgid ""
+"A central register can ensure that project identifiers are locally unique, "
+"and more robustly supports use cases like identifying projects lacking "
+"related contracts."
+msgstr ""
+"Un registro central puede asegurar que los identificadores de proyecto son "
+"localmente únicos, y apoyar de forma más robusta casos de uso tales como "
+"identificar proyectos que no tienen contratos relacionados."
+
+#: ../../docs/guidance/identifiers.md:30
+msgid ""
+"However, this approach requires political will and technical capacity to "
+"establish the central register and integrate it into procurement systems, "
+"and it requires an appropriate central actor to manage it."
+msgstr ""
+"Sin embargo, este enfoque requiere capacidad política y técnica para "
+"establecer el registro central e integrarlo en los sistemas de "
+"adquisiciones, y requiere un actor central apropiado para administrarlo."
+
+#: ../../docs/guidance/identifiers.md:32
+msgid "Project identifiers in OCDS"
+msgstr "Identificadores de proyecto en OCDS"
+
+#: ../../docs/guidance/identifiers.md:34
+msgid ""
+"In OCDS, the identifier for the individual infrastructure project to which a"
+" contracting process is related should be disclosed using the "
+"`planning/project/id` field, introduced in the [Budget and Projects "
+"extension](https://extensions.open-"
+"contracting.org/en/extensions/budget_project/)."
+msgstr ""
+"En OCDS, el identificador del proyecto de infraestructura individual al cual"
+" está relacionado un proceso de contratación debería ser divulgado usando el"
+" campo `planning/project/id`, presentado en la [extensión de Presupuestos y "
+"Proyectos](https://extensions.open-"
+"contracting.org/es/extensions/budget_project/)."
+
+#: ../../docs/guidance/identifiers.md:36
+msgid ""
+"The `planning/budget/projectID` field in OCDS should **not** be used to "
+"disclose the identifier for an individual infrastructure project. This field"
+" is used to disclose the identifier for a project in the national budget to "
+"which the contracting process is related. Since projects in the national "
+"budget might include many individual infrastructure projects, it is "
+"necessary to disclose these identifiers separately."
+msgstr ""
+"El campo `planning/budget/projectID` de OCDS **no** debería ser usado para "
+"divulgar el identificador de un proyecto de infraestructura individual. Este"
+" campo es usado para divulgar el identificador de un proyecto en el "
+"presupuesto nacional al cual el proceso de contratación está relacionado. Ya"
+" que los proyectos en el presupuesto nacional pueden incluir varios "
+"proyectos de infraestructura individuales, es necesario divulgar estos "
+"identificadores separadamente."
+
+#: ../../docs/guidance/identifiers.md:38
+msgid "Project identifier prefixes"
+msgstr "Prefijos de identificador de proyecto"
+
+#: ../../docs/guidance/identifiers.md:40
+msgid ""
+"Project identifiers in OC4IDS should be globally unique; this means that, "
+"across all the data of all OC4IDS publishers, each project identifier refers"
+" to exactly one infrastructure project."
+msgstr ""
+"Los identificadores de proyecto en OC4IDS deberían ser globalmente únicos; "
+"esto significa que, a través de todos los datos de todos los publicadores de"
+" OC4IDS, cada identificador de proyecto se refiere a exactamente un proyecto"
+" de infraestructura."
+
+#: ../../docs/guidance/identifiers.md:42
+msgid ""
+"If local project identifiers are available in existing systems or data, "
+"these should be re-used to create globally unique project identifiers for "
+"use in OC4IDS. Otherwise, if local project identifiers are not available, "
+"publishers may assign local identifiers to projects in the new systems used "
+"to generate OC4IDS data."
+msgstr ""
+"Si hay identificadores locales de proyecto disponibles en sistemas o datos "
+"existentes, estos deberían ser reutilizados para crear identificadores de "
+"proyecto globalmente únicos para su uso en OC4IDS. De otra forma, si no hay "
+"identificadores locales de proyecto disponibles, los publicadores pueden "
+"asignar identificadores locales a los proyectos en los nuevos sistemas "
+"usados para generar datos OC4IDS."
+
+#: ../../docs/guidance/identifiers.md:44
+msgid ""
+"To make local project identifiers globally unique for use in OC4IDS, a "
+"publisher requests a project identifier prefix from the [OC4IDS "
+"Helpdesk](mailto:data@open-contracting.org). The publisher must then use the"
+" assigned prefix in all its project identifiers, according to following "
+"structure: `[project identifier prefix]-[local project identifier]`."
+msgstr ""
+"Para hacer que los identificadores locales sean globalmente únicos para su "
+"uso en OC4IDS, un publicador solicita un prefijo de identificador de "
+"proyecto al [Helpdesk de OC4IDS](mailto:data@open-contracting.org). El "
+"publicador debe usar el prefijo asignado en todos sus identificadores de "
+"proyecto, de acuerdo a la estructura que sigue: `[prefijo de identificador "
+"de proyecto]-[identificador local de proyecto]`."
+
+#: ../../docs/guidance/identifiers.md:46
+msgid ""
+"For example: CoST Honduras requests a project identifier prefix from the "
+"OC4IDS Helpdesk. The OC4IDS Helpdesk assigns the randomly-generated prefix "
+"`oc4ids-qu8r7p`. CoST Honduras then creates globally unique project "
+"identifiers, by combining its assigned prefix with each local project "
+"identifier from its SISOCS system."
+msgstr ""
+"Por ejemplo: CoST Honduras solicita un prefijo de identificador de proyecto "
+"al Helpdesk de OC4IDS. El Helpdesk de OC4IDS le asigna el prefijo `oc4ids-"
+"qu8r7p` generado de forma aleatoria. Entonces CoST Honduras genera "
+"identificadores de proyecto globalmente únicos, combinando su prefijo "
+"asignado con cada identificador de proyecto local proveniente de su sistema "
+"SISOCS."
+
+#: ../../docs/guidance/identifiers.md:48
+msgid ""
+"Project identifier prefixes are typically unique to each publisher. However,"
+" multiple publishers in the same jurisdiction can collaboratively decide to "
+"use the same project identifier prefix: for example, if multiple agencies "
+"are independently responsible for different projects. As such, the prefix "
+"serves to identify a series of infrastructure projects (to which many "
+"publishers can contribute), rather than to identify one publisher."
+msgstr ""
+"Típicamente, los prefijos de identificador de proyecto son únicos para cada "
+"publicador. Sin embargo, múltiples publicadores en la misma jurisdicción "
+"pueden decidir colaborativamente usar el mismo prefijo de identificador de "
+"proyecto: por ejemplo, si varias agencias son independientemente "
+"responsables de diferentes proyectos. Así, el prefijo sirve para identificar"
+" una serie de proyectos de infraestructura (para la cual varios publicadores"
+" pueden contribuir) en lugar de identificar un solo publicador."
+
+#: ../../docs/guidance/identifiers.md:1
+msgid "Request a project identifier prefix"
+msgstr "Solicitar un prefijo de identificador de proyecto"
+
+#: ../../None:1
+msgid ""
+"To request a project identifier prefix, please e-mail [data@open-"
+"contracting.org](mailto:data@open-contracting.org) with the name of your "
+"organization and a brief description of your OC4IDS implementation."
+msgstr ""
+"Para solicitar un prefijo de identificador de proyecto, favor escriba un "
+"email a [data@open-contracting.org](mailto:data@open-contracting.org) con el"
+" nombre de su organización y una breve descripción de su implementación "
+"OC4IDS."
+
+#: ../../docs/guidance/identifiers.md:60
+msgid "Existing prefixes"
+msgstr "Prefijos existentes"
+
+#: ../../docs/guidance/identifiers.md:62
+msgid ""
+"The list below shows all registered prefixes. You can [download the list as "
+"CSV](https://docs.google.com/spreadsheets/d/e/2PACX-"
+"1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single=true&output=csv)."
+msgstr ""
+"La lista de abajo muestra todos los prefijos registrados. Puede [descargar "
+"la lista en formato CSV](https://docs.google.com/spreadsheets/d/e/2PACX-"
+"1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single=true&output=csv)."

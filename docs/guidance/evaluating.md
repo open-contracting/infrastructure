@@ -14,15 +14,15 @@ The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which 
 
 ## Getting started
 
-*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
+*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 ### (1) Check your data formats
 
-First, check that the disclosures you want to analyse are in the correct format. If they are not in the correct format, you will need to convert the data.
+First, check that the disclosures you want to analyze are in the correct format. If they are not in the correct format, you will need to convert the data.
 
 #### Project level data
 
-Check whether the project-level data is published using [OC4IDS](../projects/index.md)
+Check whether the project-level data is published using [OC4IDS](../../projects/index)
 
 ```eval_rst
 .. admonition:: Tip
@@ -30,7 +30,7 @@ Check whether the project-level data is published using [OC4IDS](../projects/ind
 
     .. markdown::
 
-      You can use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that whether your data is in the correct format.
+      You can use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that whether your data is in the correct format.
 
 ```
 
@@ -42,13 +42,13 @@ If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping 
 
     .. markdown::
 
-      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 
 ```
 
 #### Contracting data
 
-Check whether the contracting data is published using OCDS (Tip: You can use the OCDS Data Review tool for this).
+Check whether the contracting data is published using OCDS.
 
 ```eval_rst
 .. admonition:: Tip
@@ -56,17 +56,17 @@ Check whether the contracting data is published using OCDS (Tip: You can use the
 
     .. markdown::
 
-      You can use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check that whether your data is published in OCDS format.
+      You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check that whether your data is published in OCDS format.
 
 ```
 
-If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](using.md).
+If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](using).
 
-If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the [contracting processes](../../../../reference/schema/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
+If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the [contracting processes](../../reference/schema/#contractingprocess) section of OC4IDS and add the data to the OC4IDS JSON file for each project.
 
 ### (2) Check which elements of IDS are disclosed
 
-Use the [CoST IDS Mapping](../cost/index.md) to construct queries to determine which elements of the IDS are provided in the data.
+Use the [CoST IDS Mapping](../../cost/index) to construct queries to determine which elements of the IDS are provided in the data.
 
 For example, the CoST IDS mapping describes how the project name element of the IDS should be disclosed:
 
@@ -74,7 +74,7 @@ For example, the CoST IDS mapping describes how the project name element of the 
 
 Based on this description, the following pseudo code checks a folder containing OC4IDS JSON files to count the number of  projects in which the project name is disclosed:
 
-```
+```none
 for each json file in folder
   load json
   if top-level "title" field exists in json and its value is not an empty string

@@ -1,10 +1,10 @@
 # Publishing data from an infrastructure transparency portal
 
-OC4IDS can be used to publish standardised open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
+OC4IDS can be used to publish standardized open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations.
 
-Publishing standardised open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
+Publishing standardized open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects.
 
-If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](http://standard.open-contracting.org/latest/en/).
+If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/1.1/en/).
 
 ```eval_rst
 .. admonition:: Linking to related information
@@ -20,21 +20,21 @@ If you also collect detailed data on contracting processes, this can be publishe
 
 ## Getting started
 
-*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk (<a href="mailto:data@open-contracting.org">data@open-contracting.org</a>) for guidance.*
+*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 ### (1) Make a commitment
 
-Consider making or advocating for a public commitment to publish standardised open data using OC4IDS and OCDS.
+Consider making or advocating for a public commitment to publish standardized open data using OC4IDS and OCDS.
 
 Commitments are important to help align implementation with the goals of publishing open data and to help overcome technical, political or bureaucratic barriers to publication.
 
 Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
 
-Refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/1) for information and resources about making commitments related to OCDS.
+Refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/1) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
 
 ### (2a) Map project-level data and summary contracting process data
 
-Map existing data structures to [OC4IDS](../projects/index.md).
+Map existing data structures to [OC4IDS](../../projects/index).
 
 ```eval_rst
 .. admonition:: Tip
@@ -50,16 +50,18 @@ Your mapping might identify:
 
 * **Gaps in your data** where data in OC4IDS is not currently collected or disclosed in your system. Use OC4IDS as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information.
 
-* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../../../reference/#extending-the-schema) for information on including additional fields in your data.
+* **Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../../reference/#extending-the-schema) for information on including additional fields in your data.
 
 
 ### (2b) Map detailed contracting process data
 
 If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/2) for information and resources about mapping and publishing your contracting data using OCDS.
 
+Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](../identifiers/#project-identifiers-in-ocds).
+
 ### (3) Build your data, systems and processes
 
-Create an OC4IDS JSON file for each project your system has information on and use a [JSON schema validator](https://json-schema.org/implementations.html#validators) to check that the files are structurally correct against OC4IDS.
+Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that the files are structurally correct against OC4IDS.
 
 ```eval_rst
 .. admonition:: Tip
@@ -67,11 +69,11 @@ Create an OC4IDS JSON file for each project your system has information on and u
 
     .. markdown::
 
-      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 
 ```
 
-If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check your OCDS releases.
+If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
 
@@ -85,7 +87,7 @@ If you are also publishing contracting data using OCDS, publish each new release
 
 > http://{your website}/opendata/contracting/{ocid}/{release-id}.json
 
-Make sure your project-level files include links in the `contractingProcess/releases` section to each related OCDS file.
+Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 
 To make your data easier to access, consider providing:
 
@@ -103,4 +105,4 @@ To make your data easier to access, consider providing:
 
 ```
 
-Refer to the [OCDS documentation](http://standard.open-contracting.org/latest/en/implementation/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
+Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/implementation/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.

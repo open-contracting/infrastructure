@@ -1,12 +1,13 @@
 Code,Title,Description,Source
 buyer,Buyer,"A buyer is an entity whose budget will be used to pay for goods, works or services related to a contract.",OCDS
-procuringEntity,Procuring Entity,"The entity managing the procurement, which may be different from the buyer who is paying / using the items being procured.",OCDS
-supplier,Supplier,"The entity awarded or contracted to provide supplies, works or services.",OCDS
-tenderer,Tenderer,All entities who submit a tender,OCDS
+procuringEntity,Procuring entity,"The entity managing the procurement. This can be different from the buyer who pays for, or uses, the items being procured.",OCDS
+supplier,Supplier,"An entity awarded or contracted to provide goods, works or services.",OCDS
+tenderer,Tenderer,All entities who submit a tender.,OCDS
 funder,Funder,The funder is an entity providing money or finance for this contracting process or project.,OC4IDS
 enquirer,Enquirer,A party who has made an enquiry during the enquiry phase of a contracting process.,OCDS
-payer,Payer,A party making a payment from a transaction,OCDS
-payee,Payee,A party in receipt of a payment from a transaction,OCDS
-reviewBody,Review Body,A party responsible for the review of this procurement process. This party often has a role in any challenges made to the contract award.,OCDS
-publicAuthority,Public Authority,The unit/body/department within a government that is tendering and contracting the project.,OC4IDS
+payer,Payer,A party making a payment from a transaction.,OCDS
+payee,Payee,A party in receipt of a payment from a transaction.,OCDS
+reviewBody,Review body,A party responsible for the review of this procurement process. This party often has a role in any challenges made to the contract award.,OCDS
+interestedParty,Interested party,"A party that has expressed an interest in the contracting process: for example, by purchasing tender documents or submitting clarification questions.",OCDS
+publicAuthority,Public Authority,The entity responsible for developing the infrastructure assets and/or delivering the public services in this project.,OC4IDS
 administrativeEntity,Administrative Entity,The entity responsible for contract administration.,OC4IDS

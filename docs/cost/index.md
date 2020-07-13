@@ -9,15 +9,15 @@ CoST – the Infrastructure Transparency Initiative (CoST) is the leading global
 
 The [CoST approach](http://infrastructuretransparency.org/our-approach/) is based on four core features:
 
-* **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be disclosed at key stages of an infrastructure project cycle.
+* **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be proactively disclosed at key stages of an infrastructure project cycle.
 
-* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST member programmes. Teams may identify key issues of concern from the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
+* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
 
 * **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
 * **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account.
 
-The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST member programmes, who have variously prioritised different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
+The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritized different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
 
 You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/).
 
@@ -29,7 +29,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
         There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
 
-        The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index.md) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
+        The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
 
 ```
 
@@ -39,7 +39,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 The following mapping tables describe:
 
-* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Open Contracting for Infrastructure Data Standard](../projects/index.md), in the 'Mapping to OC4IDS' column.
+* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Open Contracting for Infrastructure Data Standard](../projects/index), in the 'Mapping to OC4IDS' column.
 
 * How existing OCDS data can be used to populate project-level and contracting process summary data, in the 'Mapping from OCDS' column.
 
@@ -49,7 +49,7 @@ The following mapping tables describe:
 
     .. markdown::
 
-        Some mappings use fields from [OCDS extensions](http://standard.open-contracting.org/latest/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
+        Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/1.1/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
 
 ```
 
@@ -97,7 +97,7 @@ The following mapping tables describe:
 
 Disclosures in the implementation section of the CoST IDS relate to changes to a contract's value, duration or scope that were made after the contract was awarded.
 
-If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](http://standard.open-contracting.org/latest/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below.
+If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below.
 
 In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
 

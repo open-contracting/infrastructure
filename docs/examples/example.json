@@ -1,7 +1,7 @@
 {
-  "uri": "https://standard.open-contracting.org/infrastructure/0.9/en/_static/example.json",
-  "publishedDate": "2019-03-14T09:54:00Z",
   "version": "0.9",
+  "uri": "https://standard.open-contracting.org/infrastructure/0.9/en/_static/example.json",
+  "publishedDate": "2018-12-10T15:53:00Z",
   "publisher": {
     "name": "Open Data Services Co-operative Limited",
     "scheme": "GB-COH",
@@ -9,10 +9,10 @@
     "uri": "http://data.companieshouse.gov.uk/doc/company/09506232"
   },
   "license": "http://opendatacommons.org/licenses/pddl/1.0/",
-  "publicationPolicy": "http://standard.open-contracting.org/latest/en/implementation/publication_policy/",
+  "publicationPolicy": "https://standard.open-contracting.org/1.1/en/implementation/publication_policy/",
   "projects": [
     {
-      "id": "m75-junctions-4-to-5-smart-motorway",
+      "id": "oc4ids-bu3kcz-m75-junctions-4-to-5-smart-motorway",
       "updated": "2018-12-10T15:53:00Z",
       "title": "M75 Junctions 4 to 5 upgrade smart motorway",
       "description": "Upgrading the 5km stretch of the M75 near Birmingham Airport, between junction 4 near Patcham and junction 5 at Windlesham, to an all-lane running smart motorway.",
@@ -20,19 +20,25 @@
       "period": {
         "startDate": "2016-01-01T00:00:00Z",
         "endDate": "2018-12-10T00:00:00Z",
-        "maxExtentDate": "2019-12-10T00:00:00Z",
         "durationInDays": 1074
       },
       "sector": [
         "transport",
         "transport.road"
       ],
-      "purpose": "Motorway upgrades to reduce travel times and increase road transport capacity",
-      "type": "construction",
+      "type": "expansion",
+      "relatedProjects": [
+        {
+          "id": "1",
+          "scheme": "oc4ids",
+          "identifier": "oc4ids-bu3kcz-m75-junctions-4-to-5-construction",
+          "relationship": "construction",
+          "title": "Original construction of M75 J4-5"
+        }
+      ],
       "assetLifetime": {
         "startDate": "2018-07-01T00:00:00Z",
         "endDate": "2040-07-01T00:00:00Z",
-        "maxExtentDate": "2045-07-01T00:00:00Z",
         "durationInDays": 8027
       },
       "locations": [
@@ -90,6 +96,7 @@
           "amount": 40000000,
           "currency": "GBP"
         },
+        "requestDate": "2015-05-30T00:00:00Z",
         "approvalDate": "2015-06-24T00:00:00Z",
         "budgetBreakdown": [
           {
@@ -99,12 +106,9 @@
               "amount": 10000000,
               "currency": "GBP"
             },
-            "uri": "http://motorways.uk/budgets/xx1234/2019/1",
             "period": {
               "startDate": "2016-01-01T00:00:00Z",
-              "endDate": "2016-12-31T00:00:00Z",
-              "maxExtentDate": "2017-12-31T00:00:00Z",
-              "durationInDays": 365
+              "endDate": "2016-12-31T00:00:00Z"
             },
             "sourceParty": {
               "name": "Motorways UK",
@@ -155,14 +159,6 @@
             "id": "XX1234",
             "uri": "https://government-organisation.register.gov.uk/records/XX1234"
           },
-          "additionalIdentifiers": [
-            {
-              "scheme": "XR-EUCB",
-              "legalName": "Motorways UK",
-              "id": "543-210",
-              "uri": "https://xr-eucb/543-210"
-            }
-          ],
           "address": {
             "postalCode": "LL55 4NY",
             "countryName": "UK",
@@ -179,7 +175,8 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity"
+            "administrativeEntity",
+            "publicAuthority"
           ]
         },
         {
@@ -205,7 +202,28 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
+          ]
+        },
+        {
+          "name": "Motorway Design Services PLC",
+          "id": "GB-COH-12345678",
+          "identifier": {
+            "scheme": "GB-COH",
+            "id": "12345678",
+            "legalName": "Motorway Design Services PLC",
+            "uri": "https://beta.companieshouse.gov.uk/company/22222222"
+          },
+          "address": {
+            "streetAddress": "567 High Street",
+            "locality": "Mareham",
+            "region": "Eastshire",
+            "postalCode": "ES22 3TW",
+            "countryName": "UK"
+          },
+          "roles": [
+            "tenderer"
           ]
         },
         {
@@ -232,7 +250,8 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
           ]
         },
         {
@@ -240,7 +259,7 @@
           "id": "GB-COH-33333333",
           "identifier": {
             "scheme": "GB-COH",
-            "id": "GB-COH-33333333",
+            "id": "33333333",
             "legalName": "Concrete Motorways Construction Ltd",
             "uri": "https://beta.companieshouse.gov.uk/company/33333333"
           },
@@ -259,10 +278,15 @@
             "url": "https://www.example.com"
           },
           "roles": [
-            "supplier"
+            "supplier",
+            "tenderer"
           ]
         }
       ],
+      "publicAuthority": {
+        "name": "Motorways UK",
+        "id": "GB-GOR-XX1234"
+      },
       "documents": [
         {
           "id": "consultation-1234",
@@ -321,7 +345,17 @@
                 "amount": 2000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 3,
+              "numberOfTenderers": 2,
+              "tenderers": [
+                {
+                  "name": "A1 Expert Smart Moto Design",
+                  "id": "GB-COH-11111111"
+                },
+                {
+                  "name": "Motorway Design Services PLC",
+                  "id": "GB-COH-12345678"
+                }
+              ],
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
@@ -354,9 +388,6 @@
                 "url": "https://example.com/Published/a1b1c1-design-001.html",
                 "datePublished": "2018-12-10T16:45:00Z",
                 "format": "text/html",
-                "language": "en",
-                "pageStart": "1",
-                "pageEnd": "5",
                 "author": "Motorways UK"
               }
             ]
@@ -365,13 +396,17 @@
             {
               "id": "ocds-cdf-pc10008",
               "date": "2016-04-01T00:00:00Z",
-              "tag": "tender",
+              "tag": [
+                "tender"
+              ],
               "url": "https://www.example.com/releases/ocds-cdf-pc10008.json"
             },
             {
               "id": "ocds-cdf-pc10009",
               "date": "2016-06-01T15:49:19Z",
-              "tag": "award",
+              "tag": [
+                "award"
+              ],
               "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
             }
           ]
@@ -394,8 +429,18 @@
                 "amount": 5000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 5,
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Expert Motorway Supervisors",
+                  "id": "GB-COH-22222222"
+                }
+              ],
               "procuringEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
               }
@@ -434,25 +479,33 @@
             {
               "id": "ocds-a1b1c1-spats-2-033e",
               "date": "2017-03-02T17:14:37Z",
-              "tag": "tender",
+              "tag": [
+                "tender"
+              ],
               "url": "https://example.com/releases/ex-a1b1c1--033e.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033f",
               "date": "2017-05-02T17:14:37Z",
-              "tag": "award",
+              "tag": [
+                "award"
+              ],
               "url": "https://example.com/releases/ex-a1b1c1--033f.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033g",
               "date": "2017-07-02T17:14:37Z",
-              "tag": "implementation",
+              "tag": [
+                "implementation"
+              ],
               "url": "https://example.com/Published/releases/ex-a1b1c1--033g.json"
             },
             {
               "id": "ocds-a1b1c1-spats-2-033h",
               "date": "2018-12-10T14:45:00Z",
-              "tag": "contractTermination",
+              "tag": [
+                "contractTermination"
+              ],
               "url": "https://example.com/releases/ex-a1b1c1--033h.json"
             }
           ]
@@ -475,7 +528,13 @@
                 "amount": 33000000,
                 "currency": "GBP"
               },
-              "numberOfTenderers": 4,
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Concrete Motorways Construction",
+                  "id": "GB-COH-33333333"
+                }
+              ],
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
@@ -510,8 +569,6 @@
                 "dateModified": "2018-02-11T00:00:00Z",
                 "format": "text/html",
                 "language": "en",
-                "pageStart": "25",
-                "pageEnd": "30",
                 "accessDetails": "Register for document access.",
                 "author": "Motorways UK"
               },
@@ -538,9 +595,7 @@
                 "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b005",
                 "oldContractPeriod": {
                   "startDate": "2017-07-07T00:00:00Z",
-                  "endDate": "2018-07-01T00:00:00Z",
-                  "maxExtentDate": "2018-12-31T00:00:00Z",
-                  "durationInDays": 360
+                  "endDate": "2018-07-01T00:00:00Z"
                 },
                 "newContractPeriod": {
                   "startDate": "2017-07-07T00:00:00Z",
@@ -577,37 +632,49 @@
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0011",
               "date": "2015-09-16T15:12:32Z",
-              "tag": "tender",
+              "tag": [
+                "tender"
+              ],
               "url": "https://example.com/Published/releases/5553-b55.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0012",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "award",
+              "tag": [
+                "award"
+              ],
               "url": "https://example.com/Published/releases/5553-b56.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0013",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "contract",
+              "tag": [
+                "contract"
+              ],
               "url": "https://example.com/Published/releases/5553-b57.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0014",
               "date": "2015-12-16T15:15:00Z",
-              "tag": "implementation",
+              "tag": [
+                "implementation"
+              ],
               "url": "https://example.com/Published/releases/5553-b58.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
               "date": "2018-04-01T15:15:00Z",
-              "tag": "implementationUpdate",
+              "tag": [
+                "implementationUpdate"
+              ],
               "url": "https://example.com/Published/releases/5553-b59.json"
             },
             {
               "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0016",
               "date": "2018-12-10T09:15:00Z",
-              "tag": "contractTermination",
+              "tag": [
+                "contractTermination"
+              ],
               "url": "https://example.com/Published/releases/5553-b60.json"
             }
           ]
