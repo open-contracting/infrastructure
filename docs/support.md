@@ -1,6 +1,6 @@
 # Support
 
-If you are planning to publish or use data using the OC4IDS then the OC4IDS helpdesk team are on hand to offer advice and input.
+If you are planning to publish or use data using the OC4IDS then the OC4IDS Helpdesk team are on hand to offer advice and input.
 
 We can:
 
@@ -11,7 +11,7 @@ We can:
 
 Through funding from the Open Contracting Partnership and CoST - the Infrastructure Transparency Initiative, this support is provided free of charge.
 
-E-mail <a href="mailto:data@open-contracting.org">data@open-contracting.org</a> with your questions, and a member of the helpdesk team will be in touch with you soon.
+E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OC4IDS Helpdesk will be in touch with you soon.
 
 <div class="example hint" markdown=1>
 

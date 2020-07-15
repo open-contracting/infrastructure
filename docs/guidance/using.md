@@ -20,7 +20,7 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 #### (1) Evaluate the Open Contracting Data
 
-Check that the data you plan to analyse is in OCDS format
+Check that the data you plan to analyze is in OCDS format
 
 ```eval_rst
 .. admonition:: Tip
@@ -28,7 +28,7 @@ Check that the data you plan to analyse is in OCDS format
 
     .. markdown::
 
-      You can use the [OCDS Data Review Tool](http://standard.open-contracting.org/review/) to check whether your data is in the correct format
+      You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
 
 ```
 
@@ -46,13 +46,32 @@ Some OCDS publishers provide an API that can be used to query data. Others provi
 
     .. markdown::
 
-      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostGres database. It includes scrapers for many known OCDS data sources
+      If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users.
+```
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
 
 ```
 
 #### (3) Develop a search strategy to discover infrastructure projects
 
 Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.
+
+```eval_rst
+.. admonition:: Tip
+    :class: Tip
+
+    .. markdown::
+
+      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects.
+
+```
 
 However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
 
@@ -130,7 +149,7 @@ You may not be able to fill all the project-level details from the contracts, an
 
     .. markdown::
 
-      You can use a [blank example OC4IDS JSON file](../../../_static/blank.json) to get started.
+      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 
 ```
 
@@ -163,11 +182,11 @@ You can use OCDS data as part of a manual monitoring process, or you can integra
 Tools to help you with manual monitoring include:
 
 * [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) - a framework for regularly fetching, storing and querying OCDS data.
-* [OCDS Merge](https://github.com/open-contracting/ocds-merge) - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedReleased).
+* [OCDS Merge](https://github.com/open-contracting/ocds-merge) - a library to combine multiple releases of OCDS data into a summary (compiledRelease), and to identify changes over time (versionedRelease).
 * [OCDS Show](https://github.com/open-contracting/ocds-show) - a flexible framework for presenting templated views of OCDS data. Given a merged OCDS record, OCDS Show can highlight change over time.
 
 When building an integrated tool that integrates OCDS data into infrastructure project monitoring:
 
-* The [OC4IDS](../projects/index.md) provides a common data structure for recording project-level information;
+* The [OC4IDS](../../projects/index) provides a common data structure for recording project-level information;
 
-* The [CoST IDS and OCDS Mapping](../cost/index.md) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.
+* The [CoST IDS and OCDS Mapping](../../cost/index) provides guidance on how to use OCDS data to populate project-level and contracting process summary data.

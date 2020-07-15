@@ -8,95 +8,101 @@
     "startDate": "string",
     "endDate": "string",
     "maxExtentDate": "string",
-    "durationInDays": "integer",
-    "": ""
+    "durationInDays": "integer"
   },
-  "sector": "",
+  "sector": [],
+  "purpose": "",
   "additionalClassifications": [
     {
       "scheme": "string",
-      "id": "string",
-      "description": "string",
-      "": ""
+      "id": "",
+      "description": "string"
     }
   ],
   "type": "string from projectType codelist",
+  "relatedProjects": [
+    {
+      "id": "",
+      "scheme": "",
+      "identifier": "",
+      "relationship": "",
+      "title": "",
+      "uri": ""
+    }
+  ],
   "assetLifetime": {
     "startDate": "string",
     "endDate": "string",
     "maxExtentDate": "string",
-    "durationInDays": "integer",
-    "": ""
+    "durationInDays": "integer"
   },
   "locations": [
     {
+      "id": "",
       "description": "string",
-      "geometry": "object",
-      "gazetteer": "object",
+      "geometry": {
+        "type": "string from geometryType codelist",
+        "coordinates": "array"
+      },
+      "gazetteer": {
+        "scheme": "string",
+        "identifiers": "array"
+      },
       "uri": "string",
       "address": {
         "streetAddress": "string",
         "locality": "string",
         "region": "string",
         "postalCode": "string",
-        "countryName": "string",
-        "": ""
-      },
-      "": ""
+        "countryName": "string"
+      }
     }
   ],
   "budget": {
     "amount": {
       "amount": "number",
-      "currency": "string from currency codelist",
-      "": ""
+      "currency": "string from currency codelist"
     },
+    "requestDate": "",
     "approvalDate": "",
     "budgetBreakdown": [
       {
-        "id": "string",
+        "id": "",
         "description": "string",
         "amount": {
           "amount": "number",
-          "currency": "string from currency codelist",
-          "": ""
+          "currency": "string from currency codelist"
         },
         "uri": "string",
         "period": {
           "startDate": "string",
           "endDate": "string",
           "maxExtentDate": "string",
-          "durationInDays": "integer",
-          "": ""
+          "durationInDays": "integer"
         },
         "sourceParty": {
           "name": "string",
-          "id": "string",
-          "": ""
-        },
-        "": ""
+          "id": ""
+        }
       }
-    ],
-    "": ""
+    ]
   },
   "parties": [
     {
       "name": "string",
-      "id": "string",
+      "id": "",
       "identifier": {
         "scheme": "string",
-        "id": "string",
+        "id": "",
         "legalName": "string",
-        "uri": "string",
-        "": ""
+        "uri": "string"
       },
       "additionalIdentifiers": [
         {
           "scheme": "string",
-          "id": "string",
+          "id": "",
           "legalName": "string",
-          "uri": "string",
-          "": ""
+          "uri": "string"
         }
       ],
       "address": {
@@ -104,24 +110,25 @@
         "locality": "string",
         "region": "string",
         "postalCode": "string",
-        "countryName": "string",
-        "": ""
+        "countryName": "string"
       },
       "contactPoint": {
         "name": "string",
         "email": "string",
         "telephone": "string",
         "faxNumber": "string",
-        "url": "string",
-        "": ""
+        "url": "string"
       },
-      "roles": "array",
-      "": ""
+      "roles": "array"
     }
   ],
+  "publicAuthority": {
+    "name": "string",
+    "id": ""
+  },
   "documents": [
     {
-      "id": "string",
+      "id": "",
       "documentType": "string",
       "title": "string",
       "description": "string",
@@ -133,12 +140,12 @@
       "pageStart": "string",
       "pageEnd": "string",
       "accessDetails": "string",
-      "author": "string",
-      "": ""
+      "author": "string"
     }
   ],
   "contractingProcesses": [
     {
+      "id": "",
       "summary": {
         "ocid": "",
         "externalReference": "",
@@ -151,49 +158,47 @@
           "procurementMethodDetails": "",
           "costEstimate": {
             "amount": "number",
-            "currency": "string from currency codelist",
-            "": ""
+            "currency": "string from currency codelist"
           },
           "numberOfTenderers": 0,
+          "tenderers": [
+            {
+              "name": "string",
+              "id": ""
+            }
+          ],
           "procuringEntity": {
             "name": "string",
-            "id": "string",
-            "": ""
+            "id": ""
           },
           "administrativeEntity": {
             "name": "string",
-            "id": "string",
-            "": ""
-          },
-          "": ""
+            "id": ""
+          }
         },
         "suppliers": [
           {
             "name": "string",
-            "id": "string",
-            "": ""
+            "id": ""
           }
         ],
         "contractValue": {
           "amount": "number",
-          "currency": "string from currency codelist",
-          "": ""
+          "currency": "string from currency codelist"
         },
         "contractPeriod": {
           "startDate": "string",
           "endDate": "string",
           "maxExtentDate": "string",
-          "durationInDays": "integer",
-          "": ""
+          "durationInDays": "integer"
         },
         "finalValue": {
           "amount": "number",
-          "currency": "string from currency codelist",
-          "": ""
+          "currency": "string from currency codelist"
         },
         "documents": [
           {
-            "id": "string",
+            "id": "",
             "documentType": "string",
             "title": "string",
             "description": "string",
@@ -205,13 +210,12 @@
             "pageStart": "string",
             "pageEnd": "string",
             "accessDetails": "string",
-            "author": "string",
-            "": ""
+            "author": "string"
           }
         ],
-        "variations": [
+        "modifications": [
           {
-            "id": "string",
+            "id": "",
             "date": "string",
             "description": "string",
             "rationale": "string",
@@ -219,43 +223,35 @@
             "releaseID": "string",
             "oldContractValue": {
               "amount": "number",
-              "currency": "string from currency codelist",
-              "": ""
+              "currency": "string from currency codelist"
             },
             "newContractValue": {
               "amount": "number",
-              "currency": "string from currency codelist",
-              "": ""
+              "currency": "string from currency codelist"
             },
             "oldContractPeriod": {
               "startDate": "string",
               "endDate": "string",
               "maxExtentDate": "string",
-              "durationInDays": "integer",
-              "": ""
+              "durationInDays": "integer"
             },
             "newContractPeriod": {
               "startDate": "string",
               "endDate": "string",
               "maxExtentDate": "string",
-              "durationInDays": "integer",
-              "": ""
-            },
-            "": ""
+              "durationInDays": "integer"
+            }
           }
-        ],
-        "": ""
+        ]
       },
       "releases": [
         {
           "id": "",
-          "tag": "string from releaseTag codelist",
+          "tag": [],
           "date": "",
-          "url": "",
-          "": ""
+          "url": ""
         }
-      ],
-      "": ""
+      ]
     }
   ],
   "completion": {
@@ -263,13 +259,10 @@
     "endDateDetails": "",
     "finalValue": {
       "amount": "number",
-      "currency": "string from currency codelist",
-      "": ""
+      "currency": "string from currency codelist"
     },
     "finalValueDetails": "",
     "finalScope": "",
-    "finalScopeDetails": "",
-    "": ""
-  },
-  "": ""
+    "finalScopeDetails": ""
+  }
 }

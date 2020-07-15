@@ -6,7 +6,7 @@
 
 # Schema reference
 
-The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser.md).
+The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser).
 
 ## Project
 
@@ -14,7 +14,7 @@ The tables below describe each of the fields and objects in OC4IDS. To see how t
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :include:
-    :collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses
+    :collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses,relatedProjects
 ```
 
 ## ContractingProcess
@@ -73,7 +73,7 @@ When working with data, users should be aware that addresses may not always be b
 
 A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
 
-See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to included budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
+See the [documentation of the OCDS Budget Breakdown extension](https://github.com/open-contracting-extensions/ocds_budget_breakdown_extension) for more details of this data model. BudgetBreakdown can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://github.com/open-contracting-extensions/ocds_budget_and_spend_extension).
 
 ```eval_rst
 
@@ -133,9 +133,9 @@ For each document the following structured information may be provided.
 
 ### Identifier
 
-Use of stable official organisation identifiers can help join up data between systems.
+Use of stable official organization identifiers can help join up data between systems.
 
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organisation, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
+Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
 
 For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
 
@@ -207,12 +207,25 @@ Dates MUST be expressed using a full ISO 8601 date-time including a timezone. E.
 
 > 2018-09-18T11:26:04+01:00
 
-Where the source system does not contain time information, a judgement should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
+Where the source system does not contain time information, a judgment should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
 
 ```eval_rst
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/Period
+    :include:
+    :collapse:
+
+```
+
+### RelatedProject
+
+A reference to a project related to the same set of infrastructure assets as the current project.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/RelatedProject
     :include:
     :collapse:
 

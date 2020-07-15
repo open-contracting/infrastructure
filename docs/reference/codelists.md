@@ -16,74 +16,43 @@ Publishers must use the codes in the codelists, unless no code is appropriate. I
 
 ```
 
-For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](http://standard.open-contracting.org/latest/en/schema/codelists/).
+For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](https://standard.open-contracting.org/1.1/en/schema/codelists/).
+
+## OCDS codelists
+
+OC4IDS reuses some codelists from the Open Contracting Data Standard and its extensions:
+
+* [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
+* [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
+* [Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)
+* [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
+* [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
+* [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 
 ## Closed codelists
 
 ### ContractingProcessStatus
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
 ```
 
 ### ContractNature
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/contractNature.csv
-
-```
-
-### Currency
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/currency.csv
-
-```
-
-### GeometryType
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/geometryType.csv
-
-```
-
-### Method
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/method.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/contractNature.csv
 ```
 
 ### ProjectStatus
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectStatus.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectStatus.csv
 ```
 
 Projects with a `status` of 'completed' may be displayed in a list of archived projects.
@@ -91,12 +60,9 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ### ProjectType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectType.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectType.csv
 ```
 
 ## Open codelists
@@ -104,61 +70,47 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ### DocumentType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/documentType.csv
-
-```
-
-### LocationGazetteers
-
-```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/locationGazetteers.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/documentType.csv
 ```
 
 ### ModificationType
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/modificationType.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/modificationType.csv
 ```
 
 ### PartyRole
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/partyRole.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
 ### ProjectSector
 
 ```eval_rst
-
-   .. csv-table::
-      :header-rows: 1
-      :class: codelist-table
-      :file: ../../build/current_lang/codelists/projectSector.csv
-
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/projectSector.csv
 ```
 
-## OCDS codelists
+### RelatedProject
 
-OC4IDS also reuses some codelists from the Open Contracting Data Standard:
+```eval_rst
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/relatedProject.csv
+```
 
-* [Release tag](http://standard.open-contracting.org/latest/en/schema/codelists/#release-tag)
-* [Organization identifier scheme](http://standard.open-contracting.org/latest/en/schema/codelists/#organization-identifier-scheme)
+### RelatedProjectScheme
+
+```eval_rst
+.. codelisttable::
+   :header-rows: 1
+   :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
+```
