@@ -16,3 +16,4 @@
 /docs/_static/project-level
 # json-schema-random
 /node_modules
+/package-lock.json

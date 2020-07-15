@@ -11,16 +11,28 @@
     "durationInDays": "integer",
     "": ""
   },
-  "sector": "",
+  "sector": [],
+  "purpose": "",
   "additionalClassifications": [
     {
       "scheme": "string",
-      "id": "string",
+      "id": "",
       "description": "string",
       "": ""
     }
   ],
   "type": "string from projectType codelist",
+  "relatedProjects": [
+    {
+      "id": "",
+      "scheme": "",
+      "identifier": "",
+      "relationship": "",
+      "title": "",
+      "uri": "",
+      "": ""
+    }
+  ],
   "assetLifetime": {
     "startDate": "string",
     "endDate": "string",
@@ -30,9 +42,18 @@
   },
   "locations": [
     {
+      "id": "",
       "description": "string",
-      "geometry": "object",
-      "gazetteer": "object",
+      "geometry": {
+        "type": "string from geometryType codelist",
+        "coordinates": "array",
+        "": ""
+      },
+      "gazetteer": {
+        "scheme": "string",
+        "identifiers": "array",
+        "": ""
+      },
       "uri": "string",
       "address": {
         "streetAddress": "string",
@@ -51,10 +72,11 @@
       "currency": "string from currency codelist",
       "": ""
     },
+    "requestDate": "",
     "approvalDate": "",
     "budgetBreakdown": [
       {
-        "id": "string",
+        "id": "",
         "description": "string",
         "amount": {
           "amount": "number",
@@ -71,7 +93,7 @@
         },
         "sourceParty": {
           "name": "string",
-          "id": "string",
+          "id": "",
           "": ""
         },
         "": ""
@@ -82,10 +104,10 @@
   "parties": [
     {
       "name": "string",
-      "id": "string",
+      "id": "",
       "identifier": {
         "scheme": "string",
-        "id": "string",
+        "id": "",
         "legalName": "string",
         "uri": "string",
         "": ""
@@ -93,7 +115,7 @@
       "additionalIdentifiers": [
         {
           "scheme": "string",
-          "id": "string",
+          "id": "",
           "legalName": "string",
           "uri": "string",
           "": ""
@@ -119,9 +141,14 @@
       "": ""
     }
   ],
+  "publicAuthority": {
+    "name": "string",
+    "id": "",
+    "": ""
+  },
   "documents": [
     {
-      "id": "string",
+      "id": "",
       "documentType": "string",
       "title": "string",
       "description": "string",
@@ -139,6 +166,7 @@
   ],
   "contractingProcesses": [
     {
+      "id": "",
       "summary": {
         "ocid": "",
         "externalReference": "",
@@ -155,14 +183,21 @@
             "": ""
           },
           "numberOfTenderers": 0,
+          "tenderers": [
+            {
+              "name": "string",
+              "id": "",
+              "": ""
+            }
+          ],
           "procuringEntity": {
             "name": "string",
-            "id": "string",
+            "id": "",
             "": ""
           },
           "administrativeEntity": {
             "name": "string",
-            "id": "string",
+            "id": "",
             "": ""
           },
           "": ""
@@ -170,7 +205,7 @@
         "suppliers": [
           {
             "name": "string",
-            "id": "string",
+            "id": "",
             "": ""
           }
         ],
@@ -193,7 +228,7 @@
         },
         "documents": [
           {
-            "id": "string",
+            "id": "",
             "documentType": "string",
             "title": "string",
             "description": "string",
@@ -209,9 +244,9 @@
             "": ""
           }
         ],
-        "variations": [
+        "modifications": [
           {
-            "id": "string",
+            "id": "",
             "date": "string",
             "description": "string",
             "rationale": "string",
@@ -249,7 +284,7 @@
       "releases": [
         {
           "id": "",
-          "tag": "string from releaseTag codelist",
+          "tag": [],
           "date": "",
           "url": "",
           "": ""
