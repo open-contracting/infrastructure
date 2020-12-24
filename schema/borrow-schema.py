@@ -336,5 +336,5 @@ remove_null_and_pattern_properties(schema)
 remove_integer_identifier_types(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
-    json.dump(schema, f, ensure_ascii=False, indent=2, separators=(',', ': '))
+    json.dump(schema, f, ensure_ascii=False, indent=2)
     f.write('\n')
