@@ -20,7 +20,7 @@ Within an infrastructure project, a procuring entity can initiate multiple contr
 
     .. markdown::
 
-      The term “project” is used in many contexts to mean different things. In OC4IDS, the term ‘project’ only refers to an ‘infrastructure project’ and should not be applied to an investment project, investment program, or budget code.
+      The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code.
 
 ```
 ## What is the scope of OC4IDS?
