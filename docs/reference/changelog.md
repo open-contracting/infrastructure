@@ -8,6 +8,7 @@
 * [#263](https://github.com/open-contracting/infrastructure/issues/263) add 'resettlementPlan' code to documentType codelist
 * [#265](https://github.com/open-contracting/infrastructure/issues/265) add 'financialAgreement' code to documentType codelist
 * [#266](https://github.com/open-contracting/infrastructure/issues/266) add 'budgetAmendmentApproval' code to documentType codelist
+* [#267](https://github.com/open-contracting/infrastructure/issues/267) amend 'completionCertificate' code description to include project 
 
 ## [0.9.2] - 2020-06-29
 
