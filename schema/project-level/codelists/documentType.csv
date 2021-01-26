@@ -7,7 +7,6 @@ contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for
 contractSigned,Signed Contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs
 feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs
 environmentalImpact,Environmental Impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
-finalAudit,Final Audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs
 tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
 evaluationCommittee,Evaluation Committee Details,Information on the constitution of the evaluation committee,OCDS for PPPs
 requestForQualification,Request for Qualification,"The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase).",OCDS for PPPs
@@ -57,3 +56,5 @@ projectEvaluation,Project evaluation,"Generally published at the conclusion of a
 budgetApproval,Budget approval,Additional details about the approval of the budget.,OC4IDS
 budgetAmendmentApproval,Budget amendment approval,Document accrediting the approval of budget expansion or extension for this project.,OC4IDS
 financialAgreement,Financial agreement,Loan or donation agreement with financing conditions.,OC4IDS
+financialAuditReport,Financial audit report,Documentation of checks that a project's financial statements are correct and complete.,OC4IDS
+technicalAuditReport,Technical audit report,Documentation of checks that construction work has been undertaken as specified.,OC4IDS

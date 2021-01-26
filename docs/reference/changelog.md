@@ -1,6 +1,10 @@
 # Changelog
 
-## CoST IDS reactive disclosures  
+## CoST IDS reactive disclosures
+ 
+### Documentation
+
+* [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping
 
 ### Codelists
 
@@ -8,7 +12,9 @@
 * [#263](https://github.com/open-contracting/infrastructure/issues/263) add 'resettlementPlan' code to documentType codelist
 * [#265](https://github.com/open-contracting/infrastructure/issues/265) add 'financialAgreement' code to documentType codelist
 * [#266](https://github.com/open-contracting/infrastructure/issues/266) add 'budgetAmendmentApproval' code to documentType codelist
-* [#267](https://github.com/open-contracting/infrastructure/issues/267) amend 'completionCertificate' code description to include project 
+* [#267](https://github.com/open-contracting/infrastructure/issues/267) amend 'completionCertificate' code description to include project
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) add 'technicalAuditReport' code to documentType codelist, remove 'finalAudit'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) add 'financialAuditReport' code to documentType codelist
 
 ## [0.9.2] - 2020-06-29
 
