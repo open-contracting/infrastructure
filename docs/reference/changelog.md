@@ -16,6 +16,7 @@
 * [#268](https://github.com/open-contracting/infrastructure/issues/268) add 'technicalAuditReport' code to documentType codelist, remove 'finalAudit'
 * [#269](https://github.com/open-contracting/infrastructure/issues/269) add 'financialAuditReport' code to documentType codelist
 * [#272](https://github.com/open-contracting/infrastructure/issues/272) add 'qualityAssuranceReport' code to documentType codelist
+* [#274](https://github.com/open-contracting/infrastructure/issues/274) add 'incorporationCertificate' code to documentType codelist
 
 ## [0.9.2] - 2020-06-29
 
