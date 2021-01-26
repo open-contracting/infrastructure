@@ -5,6 +5,7 @@
 ### Codelists
 
 * [#261](https://github.com/open-contracting/infrastructure/issues/261) update description of 'feasibilityStudy' code in documentType codelist to include project
+* [#263](https://github.com/open-contracting/infrastructure/issues/263) add 'resettlementPlan' code to documentType codelist
 
 
 ## [0.9.2] - 2020-06-29
