@@ -1,5 +1,12 @@
 # Changelog
 
+## CoST IDS reactive disclosures  
+
+### Codelists
+
+* [#261](https://github.com/open-contracting/infrastructure/issues/261) update description of 'feasibilityStudy' code in documentType codelist to include project
+
+
 ## [0.9.2] - 2020-06-29
 
 ### Documentation
