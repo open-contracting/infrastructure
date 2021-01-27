@@ -144,6 +144,15 @@
         }
       }
     },
+    "forecasts": {
+      "title": "Forecasts",
+      "description": "Forecast metrics for this project, such as planned physical or financial progress over time.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Metric"
+      },
+      "uniqueItems": true
+    },
     "parties": {
       "title": "Parties",
       "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the project and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
@@ -173,6 +182,15 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/ContractingProcess"
+      },
+      "uniqueItems": true
+    },
+    "metrics": {
+      "title": "Metrics",
+      "description": "Actual metrics for this project, such as the actual physical or financial progress over time.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Metric"
       },
       "uniqueItems": true
     },
