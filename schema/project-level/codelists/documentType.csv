@@ -5,7 +5,7 @@ serviceDescription,Service descriptions,A high-level description of the services
 estimatedDemand,Estimated demand,A narrative describing the estimated demand to be served (annually) by the project.,OCDS for PPPs
 contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for PPPs
 contractSigned,Signed Contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs
-feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs
+feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",OC4IDS
 environmentalImpact,Environmental Impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
 tenderNotice,Tender Notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
 evaluationCommittee,Evaluation Committee Details,Information on the constitution of the evaluation committee,OCDS for PPPs
@@ -22,7 +22,7 @@ performanceReport,Performance report,Performance assessment reports,OCDS for PPP
 plannedProcurementNotice,Notice of planned procurement,"A notice published by the procuring entity regarding their plans for future procurement, also known as a prior information notice. The procuring entity can use the notice of planned procurement as a tender notice.",OCDS
 awardNotice,Award notice,"The formal notice that gives details of the contract award. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
 contractNotice,Contract notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
-completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes or projects.,OCDS
+completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes or projects.,OC4IDS
 procurementPlan,Procurement plan,Documentation that sets out the basis for this particular contracting process.,OCDS
 biddingDocuments,Bidding documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",OCDS
 contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).,OCDS
