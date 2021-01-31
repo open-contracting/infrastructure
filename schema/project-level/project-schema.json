@@ -1443,7 +1443,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "A local identifier for this person within the people array.",
+          "description": "A local identifier for this person.",
           "type": "string",
           "minLength": 1
         },
