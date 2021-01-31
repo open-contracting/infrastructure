@@ -1449,7 +1449,7 @@
         },
         "name": {
           "title": "Name",
-          "description": "The full name of this person.",
+          "description": "The full name of the person.",
           "type": "string"
         },
         "jobTitle": {
