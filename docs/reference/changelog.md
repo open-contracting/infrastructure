@@ -5,6 +5,7 @@
 ### Documentation
 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
+* [#210](https://github.com/open-contracting/infrastructure/issues/210) - update project identification mapping for sector. 
 
 ## [0.9.2] - 2020-06-29
 
