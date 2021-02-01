@@ -1,6 +1,6 @@
 # Changelog
 
-## [X.X.X] - XXXX-XX-XX
+## [X.X.X] - YYYY-MM-DD
 
 ### Schema
 
@@ -10,6 +10,10 @@
 ### Codelists
 
 * [#282](https://github.com/open-contracting/infrastructure/pull/282) - update shared codes to OCDS for PPPs 1.0.0-beta2 / OCDS 1.1.4.
+
+### Documentation
+
+* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
 
 ## [0.9.2] - 2020-06-29
 
