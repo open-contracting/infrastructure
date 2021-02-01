@@ -702,8 +702,7 @@
                 "type": [
                   "string"
                 ]
-              },
-              "uniqueItems": true
+              }
             }
           }
         },
@@ -1103,8 +1102,7 @@
             "type": "string"
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true,
-          "uniqueItems": true
+          "openCodelist": true
         }
       }
     },
@@ -1232,7 +1230,8 @@
           "description": "A short free text description of this budget entry.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "amount": {
           "title": "Amount",
@@ -1255,9 +1254,10 @@
         "sourceParty": {
           "$ref": "#/definitions/OrganizationReference",
           "title": "Source party",
-          "description": "The organization or other party related to this budget entry. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party."
+          "description": "An organization reference, linking to the entry in the `parties` section describing the organization providing the funds for this part of the budget. The party must have the 'funder' role. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party."
         }
-      }
+      },
+      "minProperties": 1
     },
     "Document": {
       "type": "object",
@@ -1339,28 +1339,32 @@
           "description": "When the information referenced exists within a large document, indicate the first page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "pageEnd": {
           "title": "Page end",
           "description": "When the information referenced exists within a large document, indicate the last page on which it can be found. This should refer to the printed page number, not the page number reported by software applications.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "accessDetails": {
           "title": "Access details",
-          "description": "A description of any special arrangements required to access this document. This may include a requirement to register for document access, a fee to be paid, or the location where documents can be inspected.",
+          "description": "A description of any special arrangements needed to access this document, for example: registering for access, paying a fee, or visiting a location to inspect the document.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "author": {
           "title": "Author",
-          "description": "The name of the author of these documents. Include the name of individuals and/or organizations responsible. For example, when a technical specification was written by a consultant, include the name and organization of the consultant.",
+          "description": "The names of the authors of the document.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         }
       }
     },
@@ -1444,6 +1448,141 @@
       "required": [
         "id"
       ]
+    },
+    "Metric": {
+      "type": "object",
+      "title": "Metric",
+      "description": "Metrics are used to set out forecast and actual metrics targets for a project, for example planned and actual physical and financial progress over time.",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "An identifier for this metric. In some cases this may be drawn from a codelist of metrics required for this type of contracting process or project, or in other instances may be an arbitrary identifier.",
+          "type": "string",
+          "minLength": 1,
+          "codelist": "metricID.csv",
+          "openCodelist": true
+        },
+        "title": {
+          "title": "Title",
+          "description": "The title of this metric",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the metric. This may include short details of measurement methods.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "observations": {
+          "type": "array",
+          "title": "Observations",
+          "description": "An array of target or actual values for this metric.",
+          "items": {
+            "$ref": "#/definitions/Observation"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Observation": {
+      "type": "object",
+      "title": "Observation",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics).",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifier for this specific observation. This may be an arbitrary identifier, or could be a composite of the metric identifier, and the date and other dimensions of this observation.",
+          "type": "string",
+          "minLength": 1
+        },
+        "period": {
+          "title": "Period",
+          "description": "The period over which this observation is measured.",
+          "$ref": "#/definitions/Period"
+        },
+        "value": {
+          "title": "Value",
+          "description": "For financial metrics, the value of this forecast, target or actual observation.",
+          "$ref": "#/definitions/Value"
+        },
+        "measure": {
+          "title": "Measure",
+          "description": "For non-financial metrics, the measure of this forecast, target or actual observation. Measures may be provided as free text or numerical values.",
+          "type": [
+            "string",
+            "number"
+          ],
+          "minLength": 1
+        },
+        "unit": {
+          "type": "object",
+          "title": "Unit",
+          "description": "Unit",
+          "properties": {
+            "name": {
+              "type": [
+                "string"
+              ],
+              "title": "Unit name",
+              "description": "The name of the unit.",
+              "minLength": 1
+            },
+            "scheme": {
+              "title": "Scheme",
+              "description": "The list from which units of measure identifiers are taken. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of \"Codes for Units of Measure Used in International Trade\" is recommended.",
+              "type": [
+                "string"
+              ],
+              "codelist": "unitClassificationScheme.csv",
+              "openCodelist": true,
+              "minLength": 1
+            },
+            "id": {
+              "title": "ID",
+              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
+              "type": "string",
+              "minLength": 1
+            },
+            "uri": {
+              "title": "URI",
+              "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.",
+              "type": [
+                "string"
+              ],
+              "format": "uri"
+            }
+          },
+          "minProperties": 1
+        },
+        "dimensions": {
+          "type": "object",
+          "title": "Dimensions",
+          "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "minProperties": 1
+        },
+        "notes": {
+          "title": "Notes",
+          "description": "Any notes on this observation. This may include clarifying information.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
     }
   }
 }
