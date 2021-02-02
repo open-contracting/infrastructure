@@ -1102,7 +1102,17 @@
             "type": "string"
           },
           "codelist": "partyRole.csv",
-          "openCodelist": true
+          "openCodelist": true,
+          "uniqueItems": true
+        },
+        "people": {
+          "title": "People",
+          "description": "People associated with, representing, or working on behalf of this organization in respect of this project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "uniqueItems": true
         }
       }
     },
@@ -1583,6 +1593,32 @@
         }
       },
       "minProperties": 1
+    },
+    "Person": {
+      "title": "Person",
+      "description": "A natural person.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Identifier",
+          "description": "A local identifier for this person.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "The full name of the person.",
+          "type": "string"
+        },
+        "jobTitle": {
+          "title": "Job title",
+          "description": "The job title of the person (for example, Financial Manager).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ]
     }
   }
 }

@@ -188,6 +188,7 @@ infra_definitions = {
     'LinkedRelease',  # Similar to linked release in OCDS record package.
     'Modification',
     'RelatedProject',  # Similar to relatedProcess in OCDS
+    'Person'
 }
 ocds_definitions = {
     'Period',
