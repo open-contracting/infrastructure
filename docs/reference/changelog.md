@@ -6,6 +6,12 @@
 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
 
+### Schema
+
+#### OC4IDS project schema
+
+* [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
+
 ## [0.9.2] - 2020-06-29
 
 ### Documentation

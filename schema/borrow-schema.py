@@ -277,8 +277,6 @@ copy_def('Classification', {
 # Remove the `itemClassificationScheme.csv` codelist.
 del(schema['definitions']['Classification']['properties']['scheme']['codelist'])
 del(schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
-# Remove the "uri" field, which is poorly used in OCDS implementations.
-del(schema['definitions']['Classification']['properties']['uri'])
 
 copy_def('Location')
 # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
