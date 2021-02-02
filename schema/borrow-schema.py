@@ -177,6 +177,7 @@ ocds_codelists = {
     'method.csv',
     'partyRole.csv',
     'releaseTag.csv',
+    'unitClassificationScheme.csv'
 }
 compare(os.listdir(codelists_dir), infra_codelists, ocds_codelists,
         'schema/project-level/codelists', 'codelists')
