@@ -8,8 +8,8 @@
 
 ### Codelists
 
-* [#271](https://github.com/open-contracting/infrastructure/issues/271) - add 'escalationApproval' code to documentType codelist  
-* [#262](https://github.com/open-contracting/infrastructure/issues/262) - add 'socialImpact' code to documentType codelist
+* [#271](https://github.com/open-contracting/infrastructure/issues/271) - add 'escalationApproval' code to `documentType` codelist  
+* [#262](https://github.com/open-contracting/infrastructure/issues/262) - add 'socialImpact' code to `documentType` codelist
 
 ## [0.9.2] - 2020-06-29
 
