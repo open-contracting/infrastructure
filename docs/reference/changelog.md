@@ -6,6 +6,10 @@
 
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 
+### Documentation
+
+* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
+
 ## [0.9.2] - 2020-06-29
 
 ### Documentation
