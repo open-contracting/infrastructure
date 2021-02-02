@@ -6,6 +6,10 @@
 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
 
+### Codelists
+
+* [#271](https://github.com/open-contracting/infrastructure/issues/271) add 'escalationApproval' code to documentType codelist  
+
 ## [0.9.2] - 2020-06-29
 
 ### Documentation

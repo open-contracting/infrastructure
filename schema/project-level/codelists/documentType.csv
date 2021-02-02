@@ -54,3 +54,4 @@ projectScope,Project scope,"A description of the main outputs from the project t
 landAndSettlementImpact,Land and Settlement Impact,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved Saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC4IDS
 projectEvaluation,Project evaluation,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery.",OC4IDS
 budgetApproval,Budget approval,Additional details about the approval of the budget.,OC4IDS
+escalationApproval,Escalation approval ,Documentation of one or more approved escalations of the contract price during the project lifecycle.,
