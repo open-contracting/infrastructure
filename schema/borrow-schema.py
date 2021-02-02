@@ -88,7 +88,8 @@ def traverse(schema_action=None, object_action=None):
                     object_action(value['items'])
 
                     # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
-                    if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
+                    if ('object' in items_type or 'array' in items_type
+                            and new_pointer != '/Location/geometry/coordinates'):
                         raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
         else:
             warnings.warn("Missing properties key in " + schema['title'])
@@ -360,9 +361,9 @@ schema['definitions']['Document']['properties']['url']['description'] = "This sh
 copy_def('Identifier')
 
 copy_def('Metric', {
-('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}), # noqa: E501
+    ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
 
-schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project, for example planned and actual physical and financial progress over time." # noqa: E501
+schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project, for example planned and actual physical and financial progress over time."  # noqa: E501
 # noqa: Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs."
 
 copy_def('Observation')
