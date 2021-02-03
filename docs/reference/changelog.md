@@ -8,16 +8,28 @@
 
 ### Codelists
 
-* [#261](https://github.com/open-contracting/infrastructure/issues/261) update description of 'feasibilityStudy' code in documentType codelist to include project
-* [#263](https://github.com/open-contracting/infrastructure/issues/263) add 'resettlementPlan' code to documentType codelist
-* [#265](https://github.com/open-contracting/infrastructure/issues/265) add 'financialAgreement' code to documentType codelist
-* [#266](https://github.com/open-contracting/infrastructure/issues/266) add 'budgetAmendmentApproval' code to documentType codelist
-* [#267](https://github.com/open-contracting/infrastructure/issues/267) amend 'completionCertificate' code description to include project
-* [#268](https://github.com/open-contracting/infrastructure/issues/268) add 'technicalAuditReport' code to documentType codelist, remove 'finalAudit'
-* [#269](https://github.com/open-contracting/infrastructure/issues/269) add 'financialAuditReport' code to documentType codelist
-* [#272](https://github.com/open-contracting/infrastructure/issues/272) add 'qualityAssuranceReport' code to documentType codelist
-* [#274](https://github.com/open-contracting/infrastructure/issues/274) add 'incorporationCertificate' code to documentType codelist
-* [#275](https://github.com/open-contracting/infrastructure/issues/275) add 'contractAmendment' code to documentType codelist
+
+#### documentType codelist
+
+Changed:
+
+* [#261](https://github.com/open-contracting/infrastructure/issues/261) Update description of 'feasibilityStudy' code to include "project"
+* [#267](https://github.com/open-contracting/infrastructure/issues/267) Update description of 'completionCertificate' code to include "project"
+
+Added:
+
+* [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'
+* [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'
+* [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'
+* [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
+* [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
+* [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
+
+Removed:
+
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'finalAudit'
 
 ## [0.9.2] - 2020-06-29
 
