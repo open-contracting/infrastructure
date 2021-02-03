@@ -2,6 +2,10 @@
 
 ## [X.X.X] - YYYY-MM-DD
 
+### Schema
+
+* [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
+
 ### Documentation
 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
