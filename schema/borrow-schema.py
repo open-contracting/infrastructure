@@ -329,6 +329,9 @@ schema['definitions']['Location']['properties']['address'] = {
 schema['definitions']['Location']['properties'].move_to_end('id', last=False)
 schema['definitions']['Location']['required'] = ['id']
 
+# Set stricter validation on gazetteer identifiers
+schema['definitions']['Location']['properties']['gazetteer']['properties']['identifiers']['uniqueItems'] = True
+
 copy_def('Value')
 
 copy_def('Organization', {
@@ -339,6 +342,20 @@ copy_def('Organization', {
 del(schema['definitions']['Organization']['properties']['shareholders'])
 del(schema['definitions']['Organization']['properties']['beneficialOwnership'])
 del(schema['definitions']['Organization']['properties']['details'])
+
+# Set stricter validation on party roles
+schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
+
+# Add `people` property to OrganizationReference
+schema['definitions']['Organization']['properties']['people'] = {
+    "title": "People",
+    "description": "People associated with, representing, or working on behalf of this organization in respect of this project.",  # noqa: E501
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Person"
+    },
+    "uniqueItems": True
+}
 
 copy_def('OrganizationReference')
 

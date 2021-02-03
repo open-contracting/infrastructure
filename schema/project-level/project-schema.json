@@ -1463,7 +1463,7 @@
     "Metric": {
       "type": "object",
       "title": "Metric",
-      "description": "Metrics are used to set out forecast and actual metrics targets for a project, for example planned and actual physical and financial progress over time.",
+      "description": "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time.",
       "required": [
         "id"
       ],
