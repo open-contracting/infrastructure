@@ -1,13 +1,17 @@
 # Changelog
 
-## CoST IDS reactive disclosures
+## [X.X.X] - YYYY-MM-DD
 
 ### Documentation
 
+* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping
 
-### Codelists
+### Schema
 
+* [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
+
+### Codelists
 
 #### documentType codelist
 
