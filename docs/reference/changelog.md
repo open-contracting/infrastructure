@@ -5,7 +5,7 @@
 ### Schema
 
 * [#277](https://github.com/open-contracting/infrastructure/issues/277) - add `forecasts` and `metrics` which can be used to publish implementation progress reports
-* [#282](https://github.com/open-contracting/infrastructure/pull/282) - update shared properties to OCDS for PPPs 1.0.0-beta2 / OCDS 1.1.4.
+* [#282](https://github.com/open-contracting/infrastructure/pull/282) - update fields shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
 
 ### Codelists
 
