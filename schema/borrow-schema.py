@@ -365,7 +365,7 @@ copy_def('Identifier')
 copy_def('Metric', {
     ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
 
-schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project, for example planned and actual physical and financial progress over time."  # noqa: E501
+schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
 # noqa: Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs."
 
 copy_def('Observation')
