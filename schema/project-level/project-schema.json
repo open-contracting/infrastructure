@@ -702,7 +702,8 @@
                 "type": [
                   "string"
                 ]
-              }
+              },
+              "uniqueItems": true
             }
           }
         },
