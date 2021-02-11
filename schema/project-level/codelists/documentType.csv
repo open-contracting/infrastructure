@@ -4,11 +4,10 @@ technicalSpecifications,Technical specifications,Detailed technical information 
 serviceDescription,Service descriptions,A high-level description of the services,OCDS for PPPs
 estimatedDemand,Estimated demand,A narrative describing the estimated demand to be served (annually) by the project.,OCDS for PPPs
 contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for PPPs
-contractSigned,Signed contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is needed.",OCDS for PPPs
-feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs
-environmentalImpact,Environmental Impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
-finalAudit,Final audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs
-tenderNotice,Tender notice,"The formal notice that gives details of a tender. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
+contractSigned,Signed contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs
+feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",OC4IDS
+environmentalImpact,Environmental impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
+tenderNotice,Tender notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
 evaluationCommittee,Evaluation committee details,Information on the constitution of the evaluation committee,OCDS for PPPs
 requestForQualification,Request for qualification,"The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase).",OCDS for PPPs
 evaluationCriteria,Evaluation criteria,Documentation on how bids will be evaluated.,OCDS for PPPs
@@ -23,7 +22,7 @@ performanceReport,Performance report,Performance assessment reports,OCDS for PPP
 plannedProcurementNotice,Notice of planned procurement,"A notice published by the procuring entity regarding their plans for future procurement, also known as a prior information notice. The procuring entity can use the notice of planned procurement as a tender notice.",OCDS
 awardNotice,Award notice,"The formal notice that gives details of the contract award. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
 contractNotice,Contract notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
-completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes.,OCDS
+completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes or projects.,OC4IDS
 procurementPlan,Procurement plan,Documentation that sets out the basis for this particular contracting process.,OCDS
 biddingDocuments,Bidding documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",OCDS
 contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).,OCDS
@@ -52,5 +51,13 @@ contractSummary,Contract summary,Documentation providing an overview of the key 
 cancellationDetails,Cancellation details,"Documentation of the arrangements, or reasons, for cancellation of a contracting process, award or specific contract.",OCDS
 projectScope,Project scope,"A description of the main outputs from the project that are being taken forward into construction (including type, quantity and units)",OC4IDS
 landAndSettlementImpact,Land and Settlement Impact,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved Saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC4IDS
+resettlementPlan,Resettlement and compensation plan,"Documentation of the procedures and actions to mitigate adverse effects, compensate losses, and provide development benefits to people and communities affected by the contracting process or project.",OC4IDS
 projectEvaluation,Project evaluation,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery.",OC4IDS
 budgetApproval,Budget approval,Additional details about the approval of the budget.,OC4IDS
+budgetAmendmentApproval,Budget amendment approval,Document accrediting the approval of budget expansion or extension for this project.,OC4IDS
+financialAgreement,Financial agreement,Loan or donation agreement with financing conditions.,OC4IDS
+financialAuditReport,Financial audit report,Documentation of checks that a project's financial statements are correct and complete.,OC4IDS
+technicalAuditReport,Technical audit report,Documentation of checks that construction work has been undertaken as specified.,OC4IDS
+qualityAssuranceReport,Quality assurance report,"Documentation identifying deficiencies in designs, specifications, standards, methods, procedures and practices, and identifying best practices.",OC4IDS
+incorporationCertificate,Certificate of incorporation,A document issued by the relevant government registry as confirmation of the due incorporation and valid existence of the organization.,OC4IDS
+contractAmendment,Contract amendment,A legal document that changes or adds to the terms of an existing contract.,OC4IDS

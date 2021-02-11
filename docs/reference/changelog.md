@@ -2,6 +2,11 @@
 
 ## [X.X.X] - YYYY-MM-DD
 
+### Documentation
+
+* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
+* [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping
+
 ### Schema
 
 * [#277](https://github.com/open-contracting/infrastructure/issues/277) - add `forecasts` and `metrics` which can be used to publish implementation progress reports
@@ -12,9 +17,27 @@
 * [#282](https://github.com/open-contracting/infrastructure/pull/282) - update codes shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 
-### Documentation
+#### documentType codelist
 
-* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation
+Changed:
+
+* [#261](https://github.com/open-contracting/infrastructure/issues/261) Update description of 'feasibilityStudy' code to include "project"
+* [#267](https://github.com/open-contracting/infrastructure/issues/267) Update description of 'completionCertificate' code to include "project"
+
+Added:
+
+* [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'
+* [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'
+* [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'
+* [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
+* [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
+* [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
+
+Removed:
+
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'finalAudit'
 
 ## [0.9.2] - 2020-06-29
 
