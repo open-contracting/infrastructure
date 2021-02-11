@@ -34,6 +34,7 @@ Added:
 * [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
 * [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
 * [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
+* [#270](https://github.com/open-contracting/infrastructure/issues/270) 'designReport'
 
 Removed:
 
