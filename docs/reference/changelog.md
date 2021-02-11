@@ -17,7 +17,6 @@
 
 * [#282](https://github.com/open-contracting/infrastructure/pull/282) - update codes shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
-* [#273](https://github.com/open-contracting/infrastructure/issues/273) - add 'paymentCertificate' code to documentType codelist.
 
 #### documentType codelist
 
@@ -36,6 +35,7 @@ Added:
 * [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'.
 * [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'.
 * [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'.
+* [#273](https://github.com/open-contracting/infrastructure/issues/273) 'paymentCertificate'.
 
 Removed:
 
