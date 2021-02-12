@@ -244,6 +244,19 @@ A reference to a project related to the same set of infrastructure assets as the
 
 ```
 
+### Transaction
+
+A spending transaction related to a contracting process.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Transaction
+    :include:
+    :collapse:
+
+```
+
 ### Value
 
 All values should be published along with their currency using the following structure.

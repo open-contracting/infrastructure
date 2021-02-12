@@ -203,7 +203,9 @@ ocds_definitions = {
     'Document',
     'Identifier',
     'Metric',
-    'Observation'
+    'Observation',
+    'Transaction'
+
 }
 compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -388,6 +390,10 @@ schema['definitions']['Metric']['description'] = "Metrics are used to set out fo
 copy_def('Observation')
 # Remove the `relatedImplementationMilestone` property
 del(schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
+
+copy_def('Transaction')
+# Remove the `relatedImplementationMilestone` property
+del(schema['definitions']['Transaction']['properties']['relatedImplementationMilestone'])
 
 remove_null_and_pattern_properties(schema)
 remove_integer_identifier_types(schema)
