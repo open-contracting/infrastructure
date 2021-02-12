@@ -417,7 +417,7 @@
         },
         "transactions": {
           "title": "Transactions",
-          "description": "A list of the spending transactions made against this contracting process.",
+          "description": "The spending transactions made against this contracting process.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Transaction"
