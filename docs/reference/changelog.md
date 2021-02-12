@@ -27,19 +27,19 @@ Changed:
 
 Added:
 
-* [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'.
-* [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'.
-* [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'.
-* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'.
-* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'.
-* [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'.
-* [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'.
-* [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'.
-* [#273](https://github.com/open-contracting/infrastructure/issues/273) 'paymentCertificate'.
+* [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'
+* [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'
+* [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'
+* [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
+* [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
+* [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
+* [#273](https://github.com/open-contracting/infrastructure/issues/273) 'paymentCertificate'
 
 Removed:
 
-* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'finalAudit'.
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'finalAudit'
 
 ## [0.9.2] - 2020-06-29
 
@@ -68,7 +68,7 @@ Removed:
 #### OC4IDS project schema
 
 * [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance.
-* [#132](https://github.com/open-contracting/infrastructure/issues/132) - add a publicAuthority organization reference field  .
+* [#132](https://github.com/open-contracting/infrastructure/issues/132) - add a publicAuthority organization reference field.
 * [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1).
 * [#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project.
 * [#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work.
