@@ -28,6 +28,7 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 * [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
+* [Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)
 
 ## Closed codelists
 
