@@ -27,11 +27,13 @@ Changed:
 
 Added:
 
+* [#262](https://github.com/open-contracting/infrastructure/issues/262) 'socialImpact'
 * [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'
 * [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'
 * [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'
 * [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'
 * [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'
+* [#271](https://github.com/open-contracting/infrastructure/issues/271) 'escalationApproval'
 * [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
 * [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
 * [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
