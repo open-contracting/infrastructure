@@ -46,5 +46,5 @@ jobs:
         PATH_PREFIX: infrastructure/
       run: |
         if [ $GITHUB_REPOSITORY != 'open-contracting/standard_profile_template' ]; then
-          curl -sS https://raw.githubusercontent.com/open-contracting/deploy/master/deploy-docs.sh | bash -
+          curl -sS https://raw.githubusercontent.com/open-contracting/deploy/main/deploy-docs.sh | bash -
         fi
