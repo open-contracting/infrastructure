@@ -1,15 +1,12 @@
 name: Lint
 on: [push, pull_request]
 env:
-  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/master
+  BASEDIR: https://raw.githubusercontent.com/open-contracting/standard-maintenance-scripts/main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
     - uses: actions/setup-python@v1
       with:
         python-version: 3.6
@@ -21,7 +18,5 @@ jobs:
           ${{ runner.os }}-pip-
     - run: curl -s -S --retry 3 $BASEDIR/tests/install.sh | bash -
     - run: sudo apt-get install shellcheck
-    - run: npm install --global standard
     - run: curl -s -S --retry 3 $BASEDIR/tests/script.sh | bash -
     - run: shellcheck script/*
-    - run: standard docs/_static/json-example-format.js

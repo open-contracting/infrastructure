@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import warnings
 from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
@@ -73,21 +74,25 @@ def traverse(schema_action=None, object_action=None):
     def method(schema, pointer=''):
         schema_action(schema)
 
-        for key, value in schema['properties'].items():
-            new_pointer = '{}/{}'.format(pointer, key)
+        if 'properties' in schema:
+            for key, value in schema['properties'].items():
+                new_pointer = '{}/{}'.format(pointer, key)
 
-            prop_type = coerce_to_list(value, 'type')
-            object_action(value)
+                prop_type = coerce_to_list(value, 'type')
+                object_action(value)
 
-            if 'object' in prop_type:
-                method(value, pointer=new_pointer)
-            elif 'array' in prop_type:
-                items_type = coerce_to_list(value['items'], 'type')
-                object_action(value['items'])
+                if 'object' in prop_type:
+                    method(value, pointer=new_pointer)
+                elif 'array' in prop_type:
+                    items_type = coerce_to_list(value['items'], 'type')
+                    object_action(value['items'])
 
-                # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
-                if 'object' in items_type or 'array' in items_type and new_pointer != '/Location/geometry/coordinates':
-                    raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
+                    # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
+                    if ('object' in items_type or 'array' in items_type
+                            and new_pointer != '/Location/geometry/coordinates'):
+                        raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
+        else:
+            warnings.warn("Missing properties key in " + schema['title'])
 
         for key, value in schema.get('definitions', {}).items():
             method(value, pointer='{}/{}'.format(pointer, key))
@@ -103,13 +108,33 @@ def remove_null_and_pattern_properties(*args):
     traverse(schema_action, remove_null)(*args)
 
 
+def remove_deprecated(*args):
+    """
+    Removes deprecated properties.
+    """
+
+    def schema_action(schema):
+        if 'properties' in schema:
+            for key, value in list(schema['properties'].items()):
+                if 'deprecated' in value:
+                    del schema['properties'][key]
+        else:
+            warnings.warn("Missing properties key in " + schema['title'])
+
+    traverse(schema_action)(*args)
+
+
 def remove_integer_identifier_types(*args):
     """
     Sets all `id` fields to allow only strings, not integers.
     """
     def schema_action(schema):
-        if 'id' in schema['properties']:
-            schema['properties']['id']['type'] = 'string'
+
+        if 'properties' in schema:
+            if 'id' in schema['properties']:
+                schema['properties']['id']['type'] = 'string'
+        else:
+            warnings.warn("Missing properties key in " + schema['title'])
 
     traverse(schema_action)(*args)
 
@@ -141,7 +166,8 @@ infra_codelists = {
     'projectStatus.csv',
     'projectType.csv',
     'relatedProjectScheme.csv',
-    'relatedProject.csv'
+    'relatedProject.csv',
+    'metricID.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -151,6 +177,7 @@ ocds_codelists = {
     'method.csv',
     'partyRole.csv',
     'releaseTag.csv',
+    'unitClassificationScheme.csv'
 }
 compare(os.listdir(codelists_dir), infra_codelists, ocds_codelists,
         'schema/project-level/codelists', 'codelists')
@@ -175,6 +202,10 @@ ocds_definitions = {
     'BudgetBreakdown',
     'Document',
     'Identifier',
+    'Metric',
+    'Observation',
+    'Transaction'
+
 }
 compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -221,7 +252,7 @@ for basename in ocds_codelists:
                         row['Source'] = 'OCDS for PPPs'
                     writer.writerow(row)
 
-            # Add codes from CODS.
+            # Add codes from OCDS.
             reader = csv_reader(ocds_base_url + 'codelists/documentType.csv')
             for row in reader:
                 if row['Code'] not in seen:
@@ -243,7 +274,7 @@ for basename in ocds_codelists:
             writer.writeheader()
             seen = []
 
-            # Add codes from CODS.
+            # Add codes from OCDS.
             reader = csv_reader(ocds_base_url + 'codelists/partyRole.csv')
             for row in reader:
                 if row['Code'] not in seen:
@@ -300,6 +331,9 @@ schema['definitions']['Location']['properties']['address'] = {
 schema['definitions']['Location']['properties'].move_to_end('id', last=False)
 schema['definitions']['Location']['required'] = ['id']
 
+# Set stricter validation on gazetteer identifiers
+schema['definitions']['Location']['properties']['gazetteer']['properties']['identifiers']['uniqueItems'] = True
+
 copy_def('Value')
 
 copy_def('Organization', {
@@ -310,6 +344,20 @@ copy_def('Organization', {
 del(schema['definitions']['Organization']['properties']['shareholders'])
 del(schema['definitions']['Organization']['properties']['beneficialOwnership'])
 del(schema['definitions']['Organization']['properties']['details'])
+
+# Set stricter validation on party roles
+schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
+
+# Add `people` property to OrganizationReference
+schema['definitions']['Organization']['properties']['people'] = {
+    "title": "People",
+    "description": "People associated with, representing, or working on behalf of this organization in respect of this project.",  # noqa: E501
+    "type": "array",
+    "items": {
+        "$ref": "#/definitions/Person"
+    },
+    "uniqueItems": True
+}
 
 copy_def('OrganizationReference')
 
@@ -333,8 +381,23 @@ schema['definitions']['Document']['properties']['url']['description'] = "This sh
 
 copy_def('Identifier')
 
+copy_def('Metric', {
+    ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
+
+schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
+# noqa: Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs."
+
+copy_def('Observation')
+# Remove the `relatedImplementationMilestone` property
+del(schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
+
+copy_def('Transaction')
+# Remove the `relatedImplementationMilestone` property
+del(schema['definitions']['Transaction']['properties']['relatedImplementationMilestone'])
+
 remove_null_and_pattern_properties(schema)
 remove_integer_identifier_types(schema)
+remove_deprecated(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
     json.dump(schema, f, ensure_ascii=False, indent=2)
