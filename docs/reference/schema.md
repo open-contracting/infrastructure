@@ -218,6 +218,19 @@ Where the source system does not contain time information, a judgment should be 
 
 ```
 
+### Person
+
+Use this object when you need to disclose the details of people associated with, representing or working on behalf of an organization involved in the project.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Person
+    :include:
+    :collapse:
+
+```
+
 ### RelatedProject
 
 A reference to a project related to the same set of infrastructure assets as the current project.
@@ -226,6 +239,19 @@ A reference to a project related to the same set of infrastructure assets as the
 
 .. jsonschema:: ../../build/current_lang/project-schema.json
     :pointer: /definitions/RelatedProject
+    :include:
+    :collapse:
+
+```
+
+### Transaction
+
+A spending transaction related to a contracting process.
+
+```eval_rst
+
+.. jsonschema:: ../../build/current_lang/project-schema.json
+    :pointer: /definitions/Transaction
     :include:
     :collapse:
 
