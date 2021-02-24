@@ -4,6 +4,7 @@
 
 ### Documentation
 
+* [#210](https://github.com/open-contracting/infrastructure/issues/210) - update project identification mapping for sector. 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
 
