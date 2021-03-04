@@ -33,43 +33,34 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 ```
 
-## Mapping to IDS and from OCDS
-
 <!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
 
-The following mapping tables describe:
+The following tables document two mappings:
 
-* How each element of the CoST Infrastructure Data Standard can be represented as **structured data** using the [Open Contracting for Infrastructure Data Standard](../projects/index), in the 'Mapping to OC4IDS' column.
+* The **CoST IDS to OC4IDS** mapping describes how to represent each element of the CoST IDS as structured data using OC4IDS. Use this mapping mapping if you already collect data according to the CoST IDS and you want to publish your data using OC4IDS, or if you want to make sure that your OC4IDS publication conforms to the CoST IDS.
+* The **OCDS to OC4IDS** mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure projects and you want to create a summary in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers.
 
-* How existing OCDS data can be used to populate project-level and contracting process summary data, in the 'Mapping from OCDS' column.
+The organization of the mapping tables reflects the structure of the CoST IDS, which is described in [Getting Started](../projects/index).
 
-```eval_rst
-.. admonition:: Mapping from OCDS
-    :class: Note
-
-    .. markdown::
-
-        Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/1.1/en/extensions/). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
-
-```
+## CoST IDS to OC4IDS Mapping
 
 ### Project level
 
-#### Project identification
+#### Identification
 
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30
+   :widths: 20 20 20 30
    :file: ../../build/current_lang/project-level-identification.csv
 ```
 
-#### Project preparation
+#### Preparation
 
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30
+   :widths: 20 20 20 30
    :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -78,7 +69,7 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30
+   :widths: 20 20 20 30
    :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -89,11 +80,111 @@ The following mapping tables describe:
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30
+   :widths: 20 20 20 30
    :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
 #### Implementation
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 20 30
+   :file: ../../build/current_lang/process-level-implementation.csv
+```
+
+## OCDS to OC4IDS Mapping
+
+### Guidance
+
+#### Command-line tool and reference implementation
+
+OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command  is a command-line tool and reference implementation for converting OCDS data to OC4IDS format.
+
+`convert-to-oc4ids` covers most mappings in the following categories:
+
+* project-level identification
+* project-level preparation
+* process-level procurement
+
+However, `convert-to-oc4ids` does not cover all mappings. Mappings which `convert-to-oc4ids` does not cover are shown in *italics*.
+
+#### Mapping codelists
+
+Mappings that depend the specific classifications or codelists used in the OCDS data are not documented in detail, as they may differ by publisher. For example, mapping to the OC4IDS projectSector codelist.
+
+#### Alternative mappings
+
+Some mappings offer optional alternatives in case the primary mapping isn't available. For example, for OCDS data in which `planning.project.title` isn't available, you can optionally set the project `title` based on the `tender.title`.
+
+In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema.
+
+#### OCDS Extensions
+
+Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/latest/en/guidance/map/extensions/#extensions). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
+
+#### Handling conflicts and duplicates
+
+Implementations of the mapping should give consideration to:
+
+* OCDS data that contains fields that differ between contracting processes but map to single field in OC4IDS. For example, where `planning.project.title` differs for two contracting processes that relate to the same project but OC4IDS has a single `title` field at the project level.
+* OCDS data that contains multiple `Organizations` with the same `.role` that map to a single field in OC4IDS. For example, for where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level.
+* Checking for duplicates when copying objects from OCDS. For example, checking whether an `Organization` object has already been copied before copying it again.
+* Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same identifier.
+
+Read the `convert-to-oc4ids` [transformation notes](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#transformation-notes) to learn about how OCDS Kit handles the above scenarios.
+
+#### Handling multiple currencies
+
+Some mappings involve converting values in OCDS, which may be in different currencies, to a base currency.
+
+Implementations which include multiple currencies should give consideration to [value dating](https://en.wikipedia.org/wiki/Value_date). One approach is to use the compiled release's `date`.
+
+### Mapping
+
+#### Project level
+
+##### Identification
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 20 30
+   :file: ../../build/current_lang/project-level-identification.csv
+```
+
+##### Preparation
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 20 30
+   :file: ../../build/current_lang/project-level-preparation.csv
+```
+
+##### Project completion
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 20 30
+   :file: ../../build/current_lang/project-level-completion.csv
+```
+
+#### Process level
+
+The mappings in this section relate to the `contractingProcesses` section of the OC4IDS schema, unless otherwise specified.
+
+##### Procurement
+
+```eval_rst
+.. csv-table-no-translate::
+   :header-rows: 1
+   :widths: 20 20 20 30
+   :file: ../../build/current_lang/process-level-procurement.csv
+```
+
+##### Implementation
 
 Disclosures in the implementation section of the CoST IDS relate to changes to a contract's value, duration or scope that were made after the contract was awarded.
 
@@ -104,7 +195,7 @@ In some cases, OCDS data may include an explanation of changes in the relevant `
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 30 30
+   :widths: 20 20 20 30
    :file: ../../build/current_lang/process-level-implementation.csv
 ```
 
