@@ -38,7 +38,7 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 The following tables document two mappings:
 
 * The **CoST IDS to OC4IDS** mapping describes how to represent each element of the CoST IDS as structured data using OC4IDS. Use this mapping mapping if you already collect data according to the CoST IDS and you want to publish your data using OC4IDS, or if you want to make sure that your OC4IDS publication conforms to the CoST IDS.
-* The **OCDS to OC4IDS** mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure projects and you want to create a summary in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers.
+* The **OCDS to OC4IDS** mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure contracting processes and you want to create a summary by project in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers.
 
 The organization of the mapping tables reflects the structure of the CoST IDS, which is described in [Getting Started](../projects/index).
 
@@ -107,7 +107,7 @@ OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds
 * project-level preparation
 * process-level procurement
 
-However, `convert-to-oc4ids` does not cover all mappings. Mappings which `convert-to-oc4ids` does not cover are shown in *italics*.
+However, `convert-to-oc4ids` does not cover all mappings, nor does it perform currency conversions. Mappings which `convert-to-oc4ids` does not cover are shown in *italics*.
 
 #### Mapping codelists
 
@@ -117,7 +117,7 @@ Mappings that depend the specific classifications or codelists used in the OCDS 
 
 Some mappings offer optional alternatives in case the primary mapping isn't available. For example, for OCDS data in which `planning.project.title` isn't available, you can optionally set the project `title` based on the `tender.title`.
 
-In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema.
+In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema. You should remove these fields if you plan to publish your OC4IDS data.
 
 #### OCDS Extensions
 
@@ -128,9 +128,9 @@ Some mappings use fields from [OCDS extensions](https://standard.open-contractin
 Implementations of the mapping should give consideration to:
 
 * OCDS data that contains fields that differ between contracting processes but map to single field in OC4IDS. For example, where `planning.project.title` differs for two contracting processes that relate to the same project but OC4IDS has a single `title` field at the project level.
-* OCDS data that contains multiple `Organizations` with the same `.role` that map to a single field in OC4IDS. For example, for where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level.
+* OCDS data that contains multiple `Organization` objects with the same `.role` that map to a single field in OC4IDS. For example, for where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level.
 * Checking for duplicates when copying objects from OCDS. For example, checking whether an `Organization` object has already been copied before copying it again.
-* Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same identifier.
+* Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same `.id`.
 
 Read the `convert-to-oc4ids` [transformation notes](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#transformation-notes) to learn about how OCDS Kit handles the above scenarios.
 
