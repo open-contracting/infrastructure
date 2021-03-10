@@ -100,7 +100,7 @@
         "approvalDate": "2015-06-24T00:00:00Z",
         "budgetBreakdown": [
           {
-            "id": "1",
+            "id": "2016",
             "description": "2016 budget allocation",
             "amount": {
               "amount": 10000000,
@@ -116,7 +116,7 @@
             }
           },
           {
-            "id": "2",
+            "id": "2017",
             "description": "2017 budget allocation",
             "amount": {
               "amount": 20000000,
@@ -132,7 +132,7 @@
             }
           },
           {
-            "id": "3",
+            "id": "2018",
             "description": "2018 budget allocation",
             "amount": {
               "amount": 10000000,
@@ -177,7 +177,14 @@
             "buyer",
             "administrativeEntity",
             "publicAuthority"
-          ]
+          ],
+          "people":[
+            {
+            "id": "1",
+            "name": "Jane Bloggs",
+            "jobTitle": "Chair"
+          }
+        ]
         },
         {
           "name": "A1 Expert Smart Moto Design",
@@ -324,7 +331,15 @@
           "pageStart": "55",
           "pageEnd": "60",
           "accessDetails": "Documents can be inspected in the Motoways UK Example Archive or users can register for free to access."
-        }
+        },
+        {"id": "feasibility-study-8976",
+        "documentType": "feasibilityStudy",
+      "title": "Feasibility Study for Smart Motorway project: benefits and costs",
+    "description": "A report commissioned by Motorways UK to carry out initial investigations and site visits to esablish the suitability of upgrading the existing motorway junctions M75 J4-5 to Smart Motorways.\n\nThe survey recorded existing motorway infrastructures and concluded that upgrading to Smart Motorways is feasible. \n\nAdditional design issues are noted in the report.",
+    "datePublished": "2015-10-10T00:00:00Z" ,
+    "format": "application/pdf",
+    "author": "Feasibility Consultants Example Limited",
+  "pageStart": "55"}
       ],
       "contractingProcesses": [
         {
