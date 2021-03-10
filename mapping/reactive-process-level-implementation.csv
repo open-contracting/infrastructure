@@ -1,0 +1,19 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+"List of variations, changes, amendments","Details of changes to the duration, price, scope or other significant features of the contracting process","For each variation, change or amendment, publish an entry with a ``.date`` and ``.description`` in ``.summary.modifications``.
+
+Set ``.type`` based on the type of change and provide the relevant before/after values in ``.oldContractPeriod``, ``.oldContractValue``, ``.newContractPeriod and ``.newContractValue``.",
+List of escalation approvals,Documentation of one or more approved escalations of the contract price during the project lifecycle.,".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'escalationApprovals'.",
+Quality assurance reports,"Documentation identifying deficiencies in designs, specifications, standards, methods, procedures and practices, and identifying best practices.",".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'qualityAssuranceReport'.",
+Disbursement records or payment certificates,A list of the spending transactions made against this contract and/or a document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved,".. markdown::
+
+  **Data:**
+
+  For each disbursement, add a ``Transaction`` to ``.summary.transactions`` and set its fields according to the schema definitions.
+
+  **Documents:**
+
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'paymentCertificate'.",
+Contract amendments,A legal document that changes or adds to the terms of an existing contract.,".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'contractAmendment'.",

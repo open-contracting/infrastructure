@@ -1,0 +1,22 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Contract officials and roles,Name and position of the public official in charge of administration of the contract(s).,"From the ``parties`` array, get the ``Organization`` object in the whose role is 'administrativeEntity'. If none exists yet:
+
+* Add an ``Organization`` object to the ``parties`` array.
+
+* Set its ``.name`` to the name of the administrative entity
+
+* Set its ``.role`` to 'administrativeEntity'
+
+Add a ``Person`` object to the organization's ``.people`` array and:
+
+* Set its ``.id`` incrementally
+
+* Set its ``.name`` to the contract official's name
+
+* Set its ``.jobTitle`` to the contract official's job title",
+Procurement method,"Specify tendering method using the method codelist (open, selective, limited, direct).",Set ``.summary.tender.procurementMethod`` to a value from the Method codelist.,
+Tender documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'biddingDocuments'",
+Tender evaluation results,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award.",".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'evaluationReport'",
+Project design report,"A record of the justification for the design approach adopted in the project, typically issued before the works start, by the consultant or firm that will supervise the works.",[Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'projectDesignReport',

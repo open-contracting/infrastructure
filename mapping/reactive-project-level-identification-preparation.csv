@@ -1,0 +1,46 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Multi-year programme & Budget,A detailed breakdown of the budget by period and/or participating funders.,"For each year, add a ``BudgetBreakdown`` object to the ``budget.BudgetBreakdown`` array and set its fields as follows:
+
+* Set its ``id`` to the year, e.g. ‘2020’
+
+* Set its ``.amount.amount`` to the amount of the budget allocated to the year and set ``.amount.currency`` to the currency of the budget
+
+* Set its ``.period.startDate`` to the first day of the year, e.g. ‘2020-01-01T00:00:00Z’
+
+* Set its ``.period.endDate`` to the last day of the year, e.g ‘2020-12-31T23:59:59Z",
+Project brief or Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents``and set ``.documentType`` to 'feasibilityStudy'.",
+Environmental and social impact assessment,"**Environmental impact assessment**
+Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.
+
+**Social impact assessment**
+Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people’s way of life, culture, community, health and wellbeing etc.).",".. markdown::
+
+  Environmental impact assessment: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘environmentalImpact’.
+
+  Social impact assessment: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘environmentalImpact’ or ‘socialImpact’.
+
+  If the environmental and social impact assessment is a single document, add two documents to ``documents`` and set the first document’s ``.documentType`` to ‘environmentalImpact’ and the second document’s ``.documentType`` to ‘socialImpact’.",
+Resettlement and compensation plan,"Documentation of the procedures and actions to mitigate adverse effects, compensate losses, and provide development benefits to people and communities affected by the contracting process or project.",".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘resettlementPlan’",
+Project officials and roles,Name and position of the highest authority in the procuring entity where the budget for this project is allocated (project owner),"From the ``parties`` array, get the ``Organization`` object in the whose role is ‘publicAuthority’. If none exists yet:
+
+* Add a party
+
+* Set its ``.name`` to the name of the procuring entity
+
+* Set its ``.role`` to ‘procuringEntity’
+
+Add a ``Person`` object to the organization’s ``.people`` array and:
+
+* Set its ``.id`` incrementally
+
+* Set its ``.name`` to the project official’s name
+
+* Set its ``.jobTitle`` to the project official’s job title",
+Financial agreement,Loan or donation agreement with financing conditions.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘financialAgreement’",
+Procurement plan,Documentation that sets out the basis for this particular contracting process.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘procurementPlan’.",
+Project approval decision,Additional details about the approval of the budget.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘budgetApproval’",

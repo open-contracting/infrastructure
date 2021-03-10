@@ -1,0 +1,18 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Contract agreement and conditions,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'contractSigned'.",
+Registration and ownership of firms,A document issued by the relevant government registry as confirmation of the due incorporation and valid existence of the organization.,".. markdown::
+  **Document:**
+
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'incorporationCertificate'.
+
+  **Data:**
+
+  Add an ``Organization`` object to the ``parties`` array and:
+
+  * set its ``.role`` to 'supplier'
+  * set its ``.identifier.id`` to the registration number
+  * set its ``.identifier.scheme`` to the code from http://org-id.guide/ for the register the identifier is drawn from
+  * set its ``.id``",
+Specifications and drawings,Detailed technical information about goods or services to be provided.,".. markdown::
+  [Add a contracting process document](#add-a-contracting-process-document) to ``.summary.documents`` and set ``.documentType`` to 'technicalSpecifications'.",

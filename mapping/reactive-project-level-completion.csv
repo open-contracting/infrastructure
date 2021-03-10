@@ -1,0 +1,22 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Implementation progress reports,Planned and actual physical and financial progress over time.,".. markdown::
+
+  **Documents**
+
+  Physical progress reports: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'physicalProgressReport'
+
+  Financial progress reports: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'financialProgressReport'
+
+  **Data**
+
+  See [implementation progress reports](#implementation-progress-reports).",
+Budget amendment decision,Document accrediting the approval of budget expansion or extension for this project.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'budgetAmendmentApproval``",
+Project completion report,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes or projects.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'projectCompletionReport'",
+Project evaluation report,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery",".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'projectEvaluation'",
+Technical audit reports,Documentation of checks that construction work has been undertaken as specified.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'technicalAuditReport'",
+Financial audit reports,Documentation of checks that a project's financial statements are correct and complete.,".. markdown::
+  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to 'financialAuditReport'",
