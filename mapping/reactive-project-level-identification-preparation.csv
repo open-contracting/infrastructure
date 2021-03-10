@@ -7,23 +7,23 @@ Multi-year programme & Budget,A detailed breakdown of the budget by period and/o
 
 * Set its ``.period.startDate`` to the first day of the year, e.g. ‘2020-01-01T00:00:00Z’
 
-* Set its ``.period.endDate`` to the last day of the year, e.g ‘2020-12-31T23:59:59Z",
+* Set its ``.period.endDate`` to the last day of the year, e.g ‘2020-12-31T23:59:59Z",*Copy the contents of* ``/planning/budget/budgetBreakdown`` *in each contracting process to* ``budget.BudgetBreakdown``.
 Project brief or Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",".. markdown::
-  [Add a project document](#add-a-project-document) to ``documents``and set ``.documentType`` to 'feasibilityStudy'.",
+  [Add a project document](#add-a-project-document)and set ``.documentType`` to 'feasibilityStudy'.",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘feasibilityStudy’ *and copy each object to the* ``documents`` *array.*
 Environmental and social impact assessment,"**Environmental impact assessment**
 Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.
 
 **Social impact assessment**
 Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people’s way of life, culture, community, health and wellbeing etc.).",".. markdown::
 
-  Environmental impact assessment: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘environmentalImpact’.
+  Environmental impact assessment: [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘environmentalImpact’.
 
-  Social impact assessment: [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘environmentalImpact’ or ‘socialImpact’.
+  Social impact assessment: [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘environmentalImpact’ or ‘socialImpact’.
 
-  If the environmental and social impact assessment is a single document, add two documents to ``documents`` and set the first document’s ``.documentType`` to ‘environmentalImpact’ and the second document’s ``.documentType`` to ‘socialImpact’.",
+  If a single document covers both the environmental and social impact assessment, add two documents to ``documents`` and set the first document’s ``.documentType`` to ‘environmentalImpact’ and the second document’s ``.documentType`` to ‘socialImpact’.",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘environmentalImpact’ *or* ‘socialImpact’ *and copy each object to the* ``documents`` *array.*
 Resettlement and compensation plan,"Documentation of the procedures and actions to mitigate adverse effects, compensate losses, and provide development benefits to people and communities affected by the contracting process or project.",".. markdown::
-  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘resettlementPlan’",
-Project officials and roles,Name and position of the highest authority in the procuring entity where the budget for this project is allocated (project owner),"From the ``parties`` array, get the ``Organization`` object in the whose role is ‘publicAuthority’. If none exists yet:
+  [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘resettlementPlan’",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘resettlementPlan’ *and copy each object to the* ``documents`` *array.*
+Project officials and roles,Name and position of the highest authority in the procuring entity where the budget for this project is allocated (project owner),"From the ``parties`` array, get the ``Organization`` object whose role is ‘publicAuthority’. If none exists yet:
 
 * Add a party
 
@@ -37,10 +37,10 @@ Add a ``Person`` object to the organization’s ``.people`` array and:
 
 * Set its ``.name`` to the project official’s name
 
-* Set its ``.jobTitle`` to the project official’s job title",
+* Set its ``.jobTitle`` to the project official’s job title","Check the ``/parties`` array for ``Organization`` objects with 'procuringEntity' in ``/roles``. Copy each object to the ``parties`` array in OC4IDS. If there is more than one procuring entity, do not set ``.summary.tender.procuringEntity.name`` and ``.summary.tender.procuringEntity.id``; otherwise, set them to the procuring entity's ``.name`` and ``.id``."
 Financial agreement,Loan or donation agreement with financing conditions.,".. markdown::
-  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘financialAgreement’",
+  [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘financialAgreement’",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘financialAgreement’ *and copy each object to the* ``documents`` *array.*
 Procurement plan,Documentation that sets out the basis for this particular contracting process.,".. markdown::
-  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘procurementPlan’.",
+  [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘procurementPlan’.",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘procurementPlan’ *and copy each object to the* ``documents`` *array.*
 Project approval decision,Additional details about the approval of the budget.,".. markdown::
-  [Add a project document](#add-a-project-document) to ``documents`` and set ``.documentType`` to ‘budgetApproval’",
+  [Add a project document](#add-a-project-document) and set ``.documentType`` to ‘budgetApproval’",*Check the* ``/planning/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘budgetApproval’ *and copy each object to the* ``documents`` *array.*
