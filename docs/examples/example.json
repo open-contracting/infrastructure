@@ -27,6 +27,7 @@
         "transport.road"
       ],
       "type": "expansion",
+      "purpose": "To help support local economic growth and maintain mobility.",
       "relatedProjects": [
         {
           "id": "1",
@@ -178,13 +179,18 @@
             "administrativeEntity",
             "publicAuthority"
           ],
-          "people":[
+          "people": [
             {
-            "id": "1",
-            "name": "Jane Bloggs",
-            "jobTitle": "Chair"
-          }
-        ]
+              "id": "1",
+              "name": "Jane Bloggs",
+              "jobTitle": "Chair"
+            },
+            {
+              "id": "2",
+              "name": "Elstra Lovelace",
+              "jobTitle": "Commercial Contract Officer"
+            }
+          ]
         },
         {
           "name": "A1 Expert Smart Moto Design",
@@ -332,14 +338,110 @@
           "pageEnd": "60",
           "accessDetails": "Documents can be inspected in the Motoways UK Example Archive or users can register for free to access."
         },
-        {"id": "feasibility-study-8976",
-        "documentType": "feasibilityStudy",
-      "title": "Feasibility Study for Smart Motorway project: benefits and costs",
-    "description": "A report commissioned by Motorways UK to carry out initial investigations and site visits to esablish the suitability of upgrading the existing motorway junctions M75 J4-5 to Smart Motorways.\n\nThe survey recorded existing motorway infrastructures and concluded that upgrading to Smart Motorways is feasible. \n\nAdditional design issues are noted in the report.",
-    "datePublished": "2015-10-10T00:00:00Z" ,
-    "format": "application/pdf",
-    "author": "Feasibility Consultants Example Limited",
-  "pageStart": "55"}
+        {
+          "id": "feasibility-study-8976",
+          "documentType": "feasibilityStudy",
+          "title": "Feasibility Study for Smart Motorway project: benefits and costs",
+          "description": "A report commissioned by Motorways UK to carry out initial investigations and site visits to esablish the suitability of upgrading the existing motorway junctions M75 J4-5 to Smart Motorways.\n\nThe survey recorded existing motorway infrastructures and concluded that upgrading to Smart Motorways is feasible. \n\nAdditional design issues are noted in the report.",
+          "datePublished": "2015-10-10T00:00:00Z",
+          "format": "application/pdf",
+          "author": "Feasibility Consultants Example Limited",
+          "pageStart": "55"
+        }
+      ],
+      "metrics": [
+        {
+          "id": "physicalProgress",
+          "title": "Physical progress",
+          "observations": [
+            {
+              "id": "1",
+              "measure": "4.04",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-03-31T23:59:59Z",
+                "endDate": "2017-03-31T23:59:59Z"
+              }
+            },
+            {
+              "id": "2",
+              "measure": "7.98",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-04-30T23:59:59Z",
+                "endDate": "2017-04-30T23:59:59Z"
+              }
+            },
+            {
+              "id": "3",
+              "measure": "8.38",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-05-31T23:59:59Z",
+                "endDate": "2017-05-31T23:59:59Z"
+              }
+            }
+          ]
+        }
+      ],
+      "forecasts": [
+        {
+          "id": "physicalProgress",
+          "title": "Physical progress",
+          "observations": [
+            {
+              "id": "1",
+              "measure": "4.04",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-03-31T23:59:59Z",
+                "endDate": "2017-03-31T23:59:59Z"
+              }
+            },
+            {
+              "id": "2",
+              "measure": "7.98",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-04-30T23:59:59Z",
+                "endDate": "2017-04-30T23:59:59Z"
+              }
+            },
+            {
+              "id": "3",
+              "measure": "8.38",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2017-05-31T23:59:59Z",
+                "endDate": "2017-05-31T23:59:59Z"
+              }
+            }
+          ]
+        }
       ],
       "contractingProcesses": [
         {
@@ -394,6 +496,25 @@
               "amount": 1950000,
               "currency": "GBP"
             },
+            "transactions": [
+              {
+                "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b-00001-1",
+                "source": "https://openspending.org/motorways-uk-spending/",
+                "date": "2017-08-07T00:00:00Z",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                },
+                "payer": {
+                  "id": "GB-GOR-XX1234",
+                  "name": "Motorways UK"
+                },
+                "payee": {
+                  "id": "GB-COH-11111111",
+                  "name": "A1 Expert Smart Moto Design"
+                },
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+              }],
             "documents": [
               {
                 "id": "a1b1c1-tender-doc-001",
@@ -401,7 +522,7 @@
                 "title": "M72 improvements at J4-5: Tender Notice",
                 "description": "A tender notice for the design of improvements to M75 J4-5",
                 "url": "https://example.com/Published/a1b1c1-design-001.html",
-                "datePublished": "2018-12-10T16:45:00Z",
+                "datePublished": "2015-12-10T16:45:00Z",
                 "format": "text/html",
                 "author": "Motorways UK"
               }
@@ -423,6 +544,14 @@
                 "award"
               ],
               "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
+            },
+            {
+              "id": "ocds-cdf-pc10010",
+              "date": "2017-08-17T00:00:00Z",
+              "tag": [
+                "implementation",
+                "contractTermination"
+              ]
             }
           ]
         },
