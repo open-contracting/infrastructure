@@ -28,6 +28,6 @@ Disbursement records or payment certificates,A list of the spending transactions
 
   [Add a contracting process document](#add-a-contracting-process-document) and set ``.documentType`` to 'paymentCertificate'.","*Copy the contents of the* ``/contracts/implementation/transactions`` *array to* ``.summary.transactions``.
 
-*Check the* ``/contracts/implementation/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘qualityAssuranceReport’ *and copy each object to the* ``.summary.documents`` *array.*"
+*Check the* ``/contracts/implementation/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘paymentCertificate’ *and copy each object to the* ``.summary.documents`` *array.*"
 Contract amendments,A legal document that changes or adds to the terms of an existing contract.,".. markdown::
   [Add a contracting process document](#add-a-contracting-process-document) and set ``.documentType`` to 'contractAmendment'.",*Check the* ``/contracts/documents`` *array for* ``Document`` *objects with* ``.type`` *set to* ‘contractAmendment’ *and copy each object to the* ``.summary.documents`` *array.*

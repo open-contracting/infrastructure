@@ -12,7 +12,7 @@ Registration and ownership of firms,A document issued by the relevant government
 
   * set its ``.role`` to 'supplier'
   * set its ``.identifier.id`` to the registration number
-  * set its ``.identifier.scheme`` to the code from http://org-id.guide/ for the register the identifier is drawn from
+  * set its ``.identifier.scheme`` to the code from [org-id.guide](http://org-id.guide/) for the register the identifier is drawn from
   * set its ``.id``","*Check the* ``/contracts/documents`` *array for* ``Document`` *objects with* ``/type`` *set to* ‘incorporationCertificate’ *and copy each object to the* ``.summary.documents`` *array*.
 
 Check the ``/parties`` array for ``Organization`` objects with 'supplier' in ``/roles``. For each such object, copy it to the ``parties`` array in OC4IDS, add an ``OrganizationReference`` object to ``.summary.suppliers`` and set the ``OrganizationReference``'s ``.name`` and ``.id`` to the ``Organization``'s ``.name`` and ``.id``."

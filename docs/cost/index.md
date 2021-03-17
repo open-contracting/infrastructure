@@ -37,12 +37,14 @@ You can read more about the Infrastructure Data Standard in [CoST Guidance Note 
 
 The following tables document two mappings:
 
-* The **CoST IDS to OC4IDS** mapping describes how to represent each element of the CoST IDS as structured data using OC4IDS. Use this mapping mapping if you already collect data according to the CoST IDS and you want to publish your data using OC4IDS, or if you want to make sure that your OC4IDS publication conforms to the CoST IDS.
-* The **OCDS to OC4IDS** mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure contracting processes and you want to create a summary by project in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers.
+* The [**CoST IDS to OC4IDS**](#cost-ids-to-oc4ids-mapping) mapping describes how to represent each element of the CoST IDS as structured data using OC4IDS. Use this mapping if you already collect data according to the CoST IDS and you want to publish your data using OC4IDS, or if you want to make sure that your OC4IDS publication conforms to the CoST IDS.
+* The [**OCDS to OC4IDS**](#ocds-to-oc4ids-mapping) mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure contracting processes and you want to create a summary by project in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers.
 
 The organization of the mapping tables reflects the structure of the CoST IDS, which is described in [Getting Started](../projects/index).
 
-The CoST IDS also sets out a number of disclosure requirements under the heading of 'information for disclosure upon request', also known as 'reactive disclosure'. You can disclose these elements proactively using OC4IDS.
+The mapping tables use `/` notation to reference fields in OCDS data, e.g. `/tender/status`, and `.` notation to reference fields in the OC4IDS schema, e.g. `.budget.approvalDate`.
+
+The CoST IDS also sets out a number of disclosure requirements under the heading of 'information for disclosure upon request', also known as 'reactive disclosure'. You can disclose these elements proactively using OC4IDS. Separate tables are provided for reactive disclosures in each mapping.
 
 ## Common operations
 
