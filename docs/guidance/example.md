@@ -160,7 +160,7 @@ In the document example below, an environmental impact assessment is provided. T
 
 #### Contracting processes
 
-The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of modifications and a list of OCDS releases.
+The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of `modifications` and a list of OCDS `releases`.
 
 In the contractingProcess example below, information is given about a contracting process for the design of the motorway upgrade, with one related document in the `documents` array (a tender notice) and two related OCDS `releases` (one for the tender and one for the contract award).
 
