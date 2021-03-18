@@ -127,7 +127,7 @@ Some mappings use fields from [OCDS extensions](https://standard.open-contractin
 
 Implementations of the mapping should give consideration to:
 
-* OCDS data that contains fields that differ between contracting processes but map to single field in OC4IDS. For example, where `planning.project.title` differs for two contracting processes that relate to the same project but OC4IDS has a single `title` field at the project level.
+* OCDS data that contains fields that differ between contracting processes but map to a single field in OC4IDS: for example, where `planning.project.title` differs for two contracting processes that relate to the same project, but OC4IDS has a single `title` field at the project level.
 * OCDS data that contains multiple `Organization` objects with the same `.role` that map to a single field in OC4IDS. For example, for where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level.
 * Checking for duplicates when copying objects from OCDS. For example, checking whether an `Organization` object has already been copied before copying it again.
 * Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same `.id`.
