@@ -14,6 +14,7 @@
 * [#282](https://github.com/open-contracting/infrastructure/pull/282) - update fields shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 * [#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records.
+* [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
 
 ### Codelists
 

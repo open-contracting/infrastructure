@@ -629,6 +629,14 @@
           "type": [
             "string"
           ]
+        },
+        "uri": {
+          "title": "URI",
+          "description": "A URI to uniquely identify the classification code.",
+          "type": [
+            "string"
+          ],
+          "format": "uri"
         }
       }
     },
