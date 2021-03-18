@@ -111,7 +111,7 @@ However, `convert-to-oc4ids` does not cover all mappings, nor does it perform cu
 
 #### Mapping codelists
 
-Mappings that depend the specific classifications or codelists used in the OCDS data are not documented in detail, as they may differ by publisher. For example, mapping to the OC4IDS projectSector codelist.
+Mappings that depend on the specific classification or codelist used in the OCDS data are not documented in detail, as they may differ by publisher. For example, mapping to the OC4IDS projectSector codelist.
 
 #### Alternative mappings
 
