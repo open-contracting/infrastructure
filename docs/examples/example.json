@@ -26,6 +26,13 @@
         "transport",
         "transport.road"
       ],
+      "additionalClassifications": [
+        {
+          "scheme": "COFOG",
+          "id": "04.5.1",
+          "description": "Road transport (CS)"
+        }
+      ],
       "type": "expansion",
       "relatedProjects": [
         {
@@ -574,7 +581,7 @@
               },
               {
                 "id": "a1b1c1-construction-completion",
-                "documentType": "comletionCertificate",
+                "documentType": "completionCertificate",
                 "title": "Completion certificate for construction at M75 J4-5 upgrade",
                 "description": "Completion certificate for the construction upgrading motorway M75 Junctions 4-5.",
                 "url": "https://example.com/Published/a1b1c1-construction-completion.html",
