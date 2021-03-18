@@ -177,7 +177,8 @@
             "procuringEntity",
             "buyer",
             "administrativeEntity",
-            "publicAuthority"
+            "publicAuthority",
+            "funder"
           ],
           "people": [
             {
@@ -476,6 +477,10 @@
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
               }
             },
             "suppliers": [
@@ -514,7 +519,8 @@
                   "name": "A1 Expert Smart Moto Design"
                 },
                 "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
-              }],
+              }
+            ],
             "documents": [
               {
                 "id": "a1b1c1-tender-doc-001",
@@ -682,6 +688,10 @@
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
               }
             },
             "suppliers": [
@@ -718,7 +728,7 @@
               },
               {
                 "id": "a1b1c1-construction-completion",
-                "documentType": "comletionCertificate",
+                "documentType": "completionCertificate",
                 "title": "Completion certificate for construction at M75 J4-5 upgrade",
                 "description": "Completion certificate for the construction upgrading motorway M75 Junctions 4-5.",
                 "url": "https://example.com/Published/a1b1c1-construction-completion.html",
