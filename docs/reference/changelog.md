@@ -22,6 +22,7 @@
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 * [#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records.
 * [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
+* [#223](https://github.com/open-contracting/infrastructure/issues/223) - add stricter validation rules to catch empty arrays, objects and strings.
 
 ### Codelists
 
