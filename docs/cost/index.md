@@ -119,7 +119,7 @@ Some mappings offer optional alternatives in case the primary mapping isn't avai
 
 In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema. You should remove these fields if you plan to publish your OC4IDS data.
 
-#### OCDS Extensions
+#### OCDS extensions
 
 Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/latest/en/guidance/map/extensions/#extensions). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema.
 
