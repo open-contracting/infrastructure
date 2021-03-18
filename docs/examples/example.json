@@ -64,7 +64,7 @@
             "locality": "Patcham",
             "region": "Westshire",
             "postalCode": "WS20 5TV",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "uri": "https://www.openstreetmap.org/node/202995"
         },
@@ -79,15 +79,17 @@
             ]
           },
           "gazetteer": {
-            "scheme": "osm",
-            "identifiers": []
+            "scheme": "OSMN",
+            "identifiers": [
+              "https://www.openstreetmap.org/node/26571091"
+            ]
           },
           "address": {
             "streetAddress": "Windlesham Interchange, Old Road",
             "locality": "Windlesham",
             "region": "Westshire",
             "postalCode": "WS21 6RZ",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "uri": "https://www.openstreetmap.org/node/1638915385"
         }
@@ -162,7 +164,7 @@
           },
           "address": {
             "postalCode": "LL55 4NY",
-            "countryName": "UK",
+            "countryName": "United Kingdom",
             "streetAddress": "8 Mountain Walk",
             "region": "Westshire",
             "locality": "Patcham"
@@ -176,7 +178,6 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity",
             "publicAuthority",
             "funder"
           ],
@@ -185,11 +186,6 @@
               "id": "1",
               "name": "Jane Bloggs",
               "jobTitle": "Chair"
-            },
-            {
-              "id": "2",
-              "name": "Elstra Lovelace",
-              "jobTitle": "Commercial Contract Officer"
             }
           ]
         },
@@ -207,7 +203,7 @@
             "locality": "Patcham",
             "region": "Westshire",
             "postalCode": "WS18 5BW",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Kim Designer",
@@ -234,7 +230,7 @@
             "locality": "Mareham",
             "region": "Eastshire",
             "postalCode": "ES22 3TW",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "roles": [
             "tenderer"
@@ -254,7 +250,7 @@
             "locality": "London",
             "region": "London",
             "postalCode": "SE1 1EZ",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Supervisor Manager",
@@ -282,7 +278,7 @@
             "locality": "London",
             "region": "London",
             "postalCode": "SW1A 1AA",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Construction Manager",
@@ -295,6 +291,38 @@
             "supplier",
             "tenderer"
           ]
+        },
+        {
+          "name": "Motorways Administrator UK",
+          "id": "GB-GOR-XX9876",
+          "identifier": {
+            "scheme": "GB-GOR",
+            "legalName": "Motorways Administrator UK",
+            "id": "XX9876",
+            "uri": "https://government-organisation.register.gov.uk/records/XX9876"
+          },
+          "address": {
+            "postalCode": "BN18 9AB",
+            "countryName": "United Kingdom",
+            "streetAddress": "High Street, Arundel",
+            "region": "West Sussex"
+          },
+          "contactPoint": {
+            "name": "Motorways Administrator",
+            "email": "EX6789@motorways-administration-uk.gov.uk",
+            "telephone": "+44 0678 456 7890",
+            "faxNumber": "+44 0678 456 7891"
+          },
+          "roles": [
+            "administrativeEntity"
+          ],
+          "people": [
+            {
+              "id": "1",
+              "name": "Elstra Lovelace",
+              "jobTitle": "Commercial Contract Officer"
+            }
+          ]
         }
       ],
       "publicAuthority": {
@@ -303,11 +331,11 @@
       },
       "documents": [
         {
-          "id": "consultation-1234",
-          "documentType": "x_consultationResponses",
-          "title": "M75 Junction 4 to 5 Smart Motorway. Summary of Statutory Instrument consultation responses",
-          "description": "Summary of Statutory Instrument consultation responses",
-          "url": "https://example.com/he/M75-junctions-4-to-5-smart-motorway/results/M75J4-5responsereportforstatutoryinstrument-pbamendsjune18.pdf",
+          "id": "plan-1234",
+          "documentType": "procurementPlan",
+          "title": "M75 Junction 4 to 5 Smart Motorway procurement plan.",
+          "description": "Procurement plan for the M75 Junction 4 to 5 Smart Motorway covering the full life-cycle of the Smart Motorway junction upgrade.",
+          "url": "https://example.com/he/M75-junctions-4-to-5-smart-motorway/results/M75J4-5+procurement+plan.pdf",
           "datePublished": "2016-05-01T00:00:00Z",
           "dateModified": "2016-05-11T00:00:00Z",
           "format": "application/pdf",
@@ -479,8 +507,8 @@
                 "id": "GB-GOR-XX1234"
               },
               "administrativeEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
@@ -557,7 +585,8 @@
               "tag": [
                 "implementation",
                 "contractTermination"
-              ]
+              ],
+              "url": "https://www.example.com/releases/ocds-cdf-pc10010.json"
             }
           ]
         },
@@ -591,8 +620,8 @@
                 "id": "GB-GOR-XX1234"
               },
               "administrativeEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
@@ -690,8 +719,8 @@
                 "id": "GB-GOR-XX1234"
               },
               "administrativeEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
