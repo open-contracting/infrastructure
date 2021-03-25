@@ -26,6 +26,13 @@
         "transport",
         "transport.road"
       ],
+      "additionalClassifications": [
+        {
+          "scheme": "COFOG",
+          "id": "04.5.1",
+          "description": "Road transport (CS)"
+        }
+      ],
       "type": "expansion",
       "purpose": "To help support local economic growth and maintain mobility.",
       "relatedProjects": [

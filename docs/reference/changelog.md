@@ -4,8 +4,16 @@
 
 ### Documentation
 
+* [#210](https://github.com/open-contracting/infrastructure/issues/210):
+  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids)
+  * remove references to the PPP profile, reference individual extensions instead.
+  * update project identification mapping for sector
+  * replace reference to Budget and projects extension with Projects extension
+  * remove reference to 'publicAuthority' code from OCDS mapping
+* [#216](https://github.com/open-contracting/infrastructure/issues/216) - update CoST IDS & OCDS mapping documentation to separate the OC4IDS to CoST IDS mapping and the OCDS to OC4IDS mapping.
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
-* [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) - replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
+* [#220](https://github.com/open-contracting/infrastructure/issues/220) - add reactive disclosure elements to CoST IDS & OCDS mapping documentation.
+* [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
 * [#278](https://github.com/open-contracting/infrastructure/issues/278) - Add reactive disclosures to worked example.
 
 ### Schema
@@ -14,6 +22,8 @@
 * [#282](https://github.com/open-contracting/infrastructure/pull/282) - update fields shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 * [#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records.
+* [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
+* [#223](https://github.com/open-contracting/infrastructure/issues/223) - add stricter validation rules to catch empty arrays, objects and strings.
 
 ### Codelists
 
