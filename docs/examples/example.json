@@ -385,41 +385,41 @@
           "observations": [
             {
               "id": "1",
-              "measure": "4.04",
+              "measure": "50",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-03-31T23:59:59Z",
-                "endDate": "2017-03-31T23:59:59Z"
+                "startDate": "2018-01-07T00:00:00Z",
+                "endDate": "2018-01-07T00:00:00Z"
               }
             },
             {
               "id": "2",
-              "measure": "7.98",
+              "measure": "75",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-04-30T23:59:59Z",
-                "endDate": "2017-04-30T23:59:59Z"
+                "startDate": "2018-08-07T00:00:00Z",
+                "endDate": "2018-08-07T00:00:00Z"
               }
             },
             {
               "id": "3",
-              "measure": "8.38",
+              "measure": "100",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-05-31T23:59:59Z",
-                "endDate": "2017-05-31T23:59:59Z"
+                "startDate": "2018-12-01T00:00:00Z",
+                "endDate": "2018-12-01T00:00:00Z"
               }
             }
           ]
@@ -432,41 +432,41 @@
           "observations": [
             {
               "id": "1",
-              "measure": "4.04",
+              "measure": "50",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-03-31T23:59:59Z",
-                "endDate": "2017-03-31T23:59:59Z"
+                "startDate": "2018-01-07T00:00:00Z",
+                "endDate": "2018-01-07T00:00:00Z"
               }
             },
             {
               "id": "2",
-              "measure": "7.98",
+              "measure": "75",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-04-30T23:59:59Z",
-                "endDate": "2017-04-30T23:59:59Z"
+                "startDate": "2018-04-07T00:00:00Z",
+                "endDate": "2018-04-07T00:00:00Z"
               }
             },
             {
               "id": "3",
-              "measure": "8.38",
+              "measure": "100",
               "unit": {
                 "name": "percent",
                 "id": "P1",
                 "scheme": "UNCEFACT"
               },
               "period": {
-                "startDate": "2017-05-31T23:59:59Z",
-                "endDate": "2017-05-31T23:59:59Z"
+                "startDate": "2018-07-01T00:00:00Z",
+                "endDate": "2018-07-01T00:00:00Z"
               }
             }
           ]
