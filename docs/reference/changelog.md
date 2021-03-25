@@ -6,7 +6,7 @@
 
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) - replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
-* [#278](https://github.com/open-contracting/infrastructure/issues/278) - update worked example with schema changes: update `id` fields in multi-year `budget/budgetBreakdown`; add `document` with `.documentType` of 'feasibilityStudy';  add `person` as the highest authority in the procuring entity `party`; add `document` with `.documentType` of 'technicalAuditReport', add `document` with `.documentType` of 'financialAuditReport'
+* [#278](https://github.com/open-contracting/infrastructure/issues/278) - Add reactive disclosures to worked example.
 
 ### Schema
 
