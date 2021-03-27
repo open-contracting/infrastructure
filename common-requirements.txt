@@ -50,7 +50,7 @@ json-merge-patch==0.2
     # via ocdsextensionregistry
 jsonref==0.2
     # via ocdsextensionregistry
-lxml==4.6.2
+lxml==4.6.3
     # via ocdsindex
 markupsafe==1.1.1
     # via jinja2
