@@ -70,7 +70,7 @@ pluggy==0.13.1
     # via pytest
 py==1.8.1
     # via pytest
-pygments==2.5.2
+pygments==2.8.1
     # via sphinx
 pyparsing==2.4.6
     # via packaging
