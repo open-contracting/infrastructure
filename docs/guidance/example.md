@@ -162,7 +162,7 @@ In the document example below, an environmental impact assessment is provided. T
 
 Publish structured data on planned and actual physical and financial progress using `Metric` objects in the `forecasts` (planned progress) and `metrics` (actual progress) arrays. Refer to the [implementation progress reports documentation](../../cost/#implementation-progress-reports) for further detail.
 
-In the example below, you can compare the planned `forecast/observation` for 75% for physical progress completed with the actual `metric/observation` for 75% of phyiscal progress completed (note the difference in `period`).
+In the example below, you can compare the planned `forecasts/observations` for 75% of physical progress completed with the actual `metrics/observations` for 75% of physical progress completed (note the difference in `period`).
 
 ```eval_rst
 
