@@ -1,7 +1,8 @@
 <style>
 .wy-nav-content {
-max-width: 1200px;
-}</style>
+  max-width: 1200px;
+}
+</style>
 
 # CoST IDS & OCDS Mapping
 
@@ -75,7 +76,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-identification.csv
 ```
 
@@ -84,7 +85,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -93,7 +94,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -104,7 +105,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
 
@@ -113,7 +114,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/reactive-project-level-completion.csv
 ```
 
@@ -296,7 +297,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
@@ -305,7 +306,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/process-level-implementation.csv
 ```
 
@@ -316,7 +317,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/reactive-process-level-procurement.csv
 ```
 
@@ -325,7 +326,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/reactive-process-level-contract.csv
 ```
 
@@ -334,7 +335,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
 
@@ -394,7 +395,7 @@ Implementations which include multiple currencies should give consideration to [
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-identification.csv
 ```
 
@@ -403,7 +404,7 @@ Implementations which include multiple currencies should give consideration to [
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -412,7 +413,7 @@ Implementations which include multiple currencies should give consideration to [
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -425,7 +426,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
@@ -440,6 +441,6 @@ In some cases, OCDS data may include an explanation of changes in the relevant `
 ```eval_rst
 .. csv-table-no-translate::
    :header-rows: 1
-   :widths: 20 20 20 30
+   :widths: auto
    :file: ../../build/current_lang/process-level-implementation.csv
 ```
