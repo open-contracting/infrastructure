@@ -28,7 +28,7 @@ By linking existing open contracting disclosure (and ensuring key fields and doc
 
 This project, running from June 2018 through to March 2019, has the following theory of change.
 
-![Theory of Change](../_static/images/OC-CoST-TheoryOfChange-June2018.png)
+![Theory of Change](_static/images/OC-CoST-TheoryOfChange-June2018.png)
 
 The technical development work plan consists of the following four components:
 

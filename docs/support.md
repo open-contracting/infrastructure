@@ -14,7 +14,7 @@ Through funding from the Open Contracting Partnership and CoST - the Infrastruct
 E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OC4IDS Helpdesk will be in touch with you soon.
 
 ```{admonition} Contributing
-:class:hint
+:class: hint
 
 Developers, or those wishing to provide technical input to OC4IDS, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure).
 ```

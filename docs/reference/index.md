@@ -4,7 +4,7 @@ The Open Contracting for Infrastructure Data Standard (OC4IDS) provides a common
 
 OC4IDS is comprised of a schema file and codelist files, and reference documentation is available for the [schema](schema) and [codelists](codelists).
 
-The schema can be explored using the [schema browser](browser) and can be [downloaded here](../project-schema.json). The schema is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04).
+The schema can be explored using the [schema browser](browser) and can be {download}`downloaded here <../../build/current_lang/project-schema.json>`. The schema is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04).
 
 OC4IDS data must be published as part of a [project package](package), which serves as a container for data on multiple projects and adds important metadata about the data publication.
 

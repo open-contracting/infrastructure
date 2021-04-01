@@ -14,11 +14,11 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 * Track these contracting processes, including changes to tenders, details of suppliers selected, and, in some cases, details of contract modifications.
 
-### Getting started
+## Getting started
 
 *The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
-#### (1) Evaluate the Open Contracting Data
+### (1) Evaluate the Open Contracting Data
 
 Check that the data you plan to analyze is in OCDS format
 
@@ -30,7 +30,7 @@ Check which stages of the contracting process the data covers.
 
 Check whether the publisher keeps a change history (multiple releases for each contracting process), or whether as a user of the data you will need to keep the change history.
 
-#### (2) Identify how you will query the data
+### (2) Identify how you will query the data
 
 Some OCDS publishers provide an API that can be used to query data. Others provide access to bulk data that you can download into your own tools for querying.
 
@@ -42,7 +42,7 @@ If you are working with OCDS data from an unreliable source, consider caching a 
 [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
 ```
 
-#### (3) Develop a search strategy to discover infrastructure projects
+### (3) Develop a search strategy to discover infrastructure projects
 
 Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.
 
@@ -54,44 +54,41 @@ However, where this is not the case, it may be possible to search for tenders wi
 
 This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.
 
-```{admonition} Worked example
+````{admonition} Worked example
 :class: Tip
 
 Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
+
 ```sql
-      /* The following query runs against a filtered set of data in Kingfisher */
-      SELECT
-          data,
-              /* The 'data' field contains the JSON representation of a contracting process. The data -> 'object' ->> 'value' syntax
-                 is used to navigate this structure and select values.
-
-                 data -> 'tender' -> 'tenderPeriod' ->> 'endDate' for example is analogous to the json path tender/tenderPeriod/endDate
-              */
-          data->'buyer'->>'name' as buyer,
-          data->'tender'->'tenderPeriod'->>'endDate' as tenderEndDate,
-          EXTRACT(YEAR from cast(data->'tender'->'tenderPeriod'->>'endDate' as timestamp)) as tenderYear,
-          data->'tender'->>'title' as title,
-          data->'tender'->'value'->>'currency' as currency,
-          data->'tender'->'value'->>'amount' as value
-
-              /* We us a sub-query in order to select only contracting processes where there is at least one tender/item with a particular classification */
-      FROM (
-          SELECT DISTINCT data from data
-              /* In Kingfisher, OCDS data is sorted as 'json blobs' (jsonb). The next line expands the items array into a table we can join against */
-          LEFT JOIN LATERAL jsonb_array_elements(data->'tender'->'items') items on TRUE
-              /* All 'Architectural, construction, engineering and inspection services' have CPV codes starting with 71 */
-          WHERE items->'classification'->>'id' LIKE '71%'  
-       ) data
-
-          /* We sort by value (highest first). We cast values from the JSON before sorting. */
-      ORDER BY cast(data -> 'tender' -> 'value' ->> 'amount' as float) DESC
-      ```
-
-      This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring.
-
+-- The following query runs against a filtered set of data in Kingfisher.
+SELECT
+    -- The 'data' field contains the JSON representation of a contracting process. The data -> 'object' ->> 'value'
+    -- syntax is used to navigate this structure and select values. data -> 'tender' -> 'tenderPeriod' ->> 'endDate'
+    -- for example is analogous to the JSON path tender/tenderPeriod/endDate
+    data,
+    data->'buyer'->>'name' as buyer,
+    data->'tender'->'tenderPeriod'->>'endDate' as tenderEndDate,
+    EXTRACT(YEAR from cast(data->'tender'->'tenderPeriod'->>'endDate' as timestamp)) as tenderYear,
+    data->'tender'->>'title' as title,
+    data->'tender'->'value'->>'currency' as currency,
+    data->'tender'->'value'->>'amount' as value
+-- We use a sub-query in order to select only contracting processes where there is at least one tender/item with a
+-- particular classification.
+FROM (
+    SELECT DISTINCT data from data
+    -- Kingfisher stores data as JSON blobs (jsonb). This expands the items array into a table we can join against.
+    LEFT JOIN LATERAL jsonb_array_elements(data->'tender'->'items') items on TRUE
+    -- All 'Architectural, construction, engineering and inspection services' have CPV codes starting with 71
+    WHERE items->'classification'->>'id' LIKE '71%'  
+ ) data
+-- We sort by value (highest first). We cast values from the JSON before sorting.
+ORDER BY cast(data -> 'tender' -> 'value' ->> 'amount' as float) DESC;
 ```
 
-#### (4) Populate project-level data
+This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring.
+````
+
+### (4) Populate project-level data
 
 If your analysis of OCDS data reveals infrastructure projects to monitor, you can:
 
@@ -111,10 +108,10 @@ You may not be able to fill all the project-level details from the contracts, an
 * Any environmental impact or land and settlement impact studies that have been undertaken
 
 ```{tip}
-You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
+You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started.
 ```
 
-#### (5) Monitoring contracting process updates
+### (5) Monitoring contracting process updates
 
 When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same `ocid`, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.
 
@@ -128,7 +125,7 @@ check whether an adequate explanation has been given for these.
 
 You can use OC4IDS to record each time a change is detected, and the reasons that are given for the change.
 
-#### (6) Add project completion data
+### (6) Add project completion data
 
 When there is evidence that a project has reached completion, it is important to further update the **project-level disclosure**.
 
@@ -136,7 +133,7 @@ If the OCDS data includes implementation data, including transactions or final s
 
 In other cases, you may need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.
 
-### Tools and platform
+## Tools and platform
 
 You can use OCDS data as part of a manual monitoring process, or you can integrate OCDS into a comprehensive transparency portal.
 
