@@ -10,17 +10,15 @@ OC4IDS data must be published as part of a [project package](package), which ser
 
 The OC4IDS schema reuses many of the building blocks from the Open Contracting Data Standard; these are introduced in the [Getting Started section of the OCDS documentation](https://standard.open-contracting.org/1.1/en/getting_started/).
 
-```eval_rst
-.. toctree::
-   :maxdepth: 1
-   :glob:
+```{toctree}
+:maxdepth: 1
+:glob:
 
-   browser
-   schema
-   codelists
-   package
-   changelog
-
+browser
+schema
+codelists
+package
+changelog
 ```
 
 ## Data validation

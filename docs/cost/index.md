@@ -22,16 +22,12 @@ The 'Infrastructure Data Standard' is a **framework for disclosure** which has b
 
 You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/).
 
-```eval_rst
-.. admonition:: Frameworks and standards
-    :class: Note
+```{admonition} Frameworks and standards
+:class: note
 
-    .. markdown::
+There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
 
-        There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
-
-        The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
-
+The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
 ```
 
 <!-- Note - mappings come from https://docs.google.com/spreadsheets/d/1tpXKCrNY1vUEPo6O1j-GPhxgSna7CZ5uwz_eTNLEOr8/edit#gid=2054628701 -->
@@ -73,49 +69,44 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 #### Identification
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-identification.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-identification.csv
 ```
 
 #### Preparation
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-preparation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-preparation.csv
 ```
 
 #### Project completion
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-completion.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-completion.csv
 ```
 
 #### Reactive disclosures
 
 ##### Identification and preparation
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
 
 ##### Completion
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/reactive-project-level-completion.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/reactive-project-level-completion.csv
 ```
 
 ###### Implementation progress reports
@@ -294,49 +285,44 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 #### Procurement
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/process-level-procurement.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/process-level-procurement.csv
 ```
 
 #### Implementation
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/process-level-implementation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/process-level-implementation.csv
 ```
 
 #### Reactive disclosures
 
 ##### Procurement
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/reactive-process-level-procurement.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/reactive-process-level-procurement.csv
 ```
 
 ##### Contract
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/reactive-process-level-contract.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/reactive-process-level-contract.csv
 ```
 
 ##### Implementation
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/reactive-process-level-implementation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
 
 ## OCDS to OC4IDS Mapping
@@ -392,29 +378,26 @@ Implementations which include multiple currencies should give consideration to [
 
 ##### Identification
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-identification.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-identification.csv
 ```
 
 ##### Preparation
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-preparation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-preparation.csv
 ```
 
 ##### Project completion
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/project-level-completion.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/project-level-completion.csv
 ```
 
 #### Process level
@@ -423,11 +406,10 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ##### Procurement
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/process-level-procurement.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/process-level-procurement.csv
 ```
 
 ##### Implementation
@@ -438,9 +420,8 @@ If OCDS data is available, these changes can be determined by comparing the most
 
 In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
 
-```eval_rst
-.. csv-table-no-translate::
-   :header-rows: 1
-   :widths: auto
-   :file: ../../build/current_lang/process-level-implementation.csv
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:file: ../../build/current_lang/process-level-implementation.csv
 ```

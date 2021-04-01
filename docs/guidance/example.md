@@ -27,13 +27,10 @@ An OC4IDS document is made up of a number of sections. These include:
 
 The project package serves as a container for the data of multiple projects, through its `projects` array. It also provides metadata concerning all the data it contains, including the publisher, schema version, data license and publication policy.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer:
-   :expand: publisher
-   :title: package
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer:
+:expand: publisher
+:title: package
 ```
 #### License
 
@@ -47,14 +44,11 @@ The `publicationPolicy` field ought to contain a link to a data user guide. For 
 
 A project package can contain information about multiple infrastructure projects. Each infrastructure project is represented as an entry in the `projects` array. The example contains information about one infrastructure project.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer:
-   :expand: projects
-   :exclude: version, uri, publishedDate, publisher, license, publicationPolicy
-   :title: projects
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer:
+:expand: projects
+:exclude: version, uri, publishedDate, publisher, license, publicationPolicy
+:title: projects
 ```
 
 Each project object contains the following sections:
@@ -75,21 +69,15 @@ This section provides contextual information about the infrastructure project, i
 
 * one or more `locations`, which can be expressed in a variety of ways as [outlined in the schema reference](../../reference/schema/#location). In this example, one location is given: a motorway junction, using a point location, a gazetteer entry and an address.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/relatedProjects
-   :title: relatedProject
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/relatedProjects
+:title: relatedProject
 ```
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/locations
-   :expand:  geometry, gazetteer, address
-   :title: location
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/locations
+:expand:  geometry, gazetteer, address
+:title: location
 ```
 
 #### Budget and budget breakdown
@@ -98,23 +86,17 @@ The `budget` section can be used to provide the overall budget for the project, 
 
 In the budget example below, the overall budget for the infrastructure project covers 3 years and is broken down into amounts per year, with £10,000,000 allocated in 2016 – as highlighted in the budgetBreakdown example.
 
-  ```eval_rst
+  ```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/budget
+:expand: amount
+:title: budget
+```
 
-  .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /projects/0/budget
-     :expand: amount
-     :title: budget
-
-  ```
-
-  ```eval_rst
-
-  .. jsoninclude:: ../examples/example.json
-     :jsonpointer: /projects/0/budget/budgetBreakdown/0
-     :expand: amount, period, sourceParty
-     :title: budgetBreakdown
-
-  ```
+  ```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdown/0
+:expand: amount, period, sourceParty
+:title: budgetBreakdown
+```
 
 #### Parties (organizations)
 
@@ -122,25 +104,19 @@ The `parties` array is used to provide details about organizations involved in t
 
 In the party example below, details are given about the fictional Motorways UK entity, which is referred to from the `sourceParty` section in the `budgetBreakdown` example above, using the `name` and `id` from the entry in the `parties` array.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/parties/0
-   :expand: address, contactPoint, roles
-   :title: party
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/parties/0
+:expand: address, contactPoint, roles
+:title: party
 ```
 
 #### Public authority
 
 The `publicAuthority` field indicates the project owner: the unit, body or department within a government that is tendering and contracting the project. It refers to an entry in the `parties` array, as described above.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/publicAuthority
-   :title: publicAuthority
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/publicAuthority
+:title: publicAuthority
 ```
 
 #### Documents
@@ -149,13 +125,10 @@ The `documents` array is used to provide information and links to documents and 
 
 In the document example below, an environmental impact assessment is provided. The `documentType` field is used to categorize the document against the [Document Type codelist](../../reference/codelists/#documenttype).
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/documents/1
-   :expand: address, contactPoint, roles
-   :title: document
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/documents/1
+:expand: address, contactPoint, roles
+:title: document
 ```
 
 #### Forecasts and metrics
@@ -164,23 +137,16 @@ Publish structured data on planned and actual physical and financial progress us
 
 In the example below, you can compare the planned `forecasts/observations` for 75% of physical progress completed with the actual `metrics/observations` for 75% of physical progress completed (note the difference in `period`).
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/forecasts/0/observations/1
-   :expand: unit, period
-   :title: forecast_observation
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/forecasts/0/observations/1
+:expand: unit, period
+:title: forecast_observation
 ```
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/metrics/0/observations/1
-   :expand: unit, period
-   :title: metric_observation
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/metrics/0/observations/1
+:expand: unit, period
+:title: metric_observation
 ```
-
 
 #### Contracting processes
 
@@ -188,13 +154,10 @@ The `contractingProcesses` array is used to provide information about each contr
 
 In the contractingProcess example below, information is given about a contracting process for the design of the motorway upgrade, with one related document in the `documents` array (a tender notice) and two related OCDS `releases` (one for the tender and one for the contract award).
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/contractingProcesses/0
-   :expand: summary, documents, releases
-   :title: contractingProcess
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0
+:expand: summary, documents, releases
+:title: contractingProcess
 ```
 
 ##### Modifications
@@ -203,13 +166,10 @@ Each contracting process includes a `modifications` array which is used to list 
 
 In the modification example below, a change in duration is shown, using the `oldContractPeriod` and `newContractPeriod` fields.
 
-```eval_rst
-
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
-   :expand: oldContractPeriod, newContractPeriod
-   :title: modification
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
+:expand: oldContractPeriod, newContractPeriod
+:title: modification
 ```
 
 #### Completion
@@ -218,10 +178,8 @@ The `completion` section provides final details of the scope, duration and cost 
 
 Since in this example there were variations to related contracting processes, the `finalValue` of the project exceeds its original planned budget.
 
-```eval_rst
-.. jsoninclude:: ../examples/example.json
-   :jsonpointer: /projects/0/completion
-   :expand:  finalValue
-   :title: Completion
-
+```{jsoninclude} ../examples/example.json
+:jsonpointer: /projects/0/completion
+:expand:  finalValue
+:title: Completion
 ```

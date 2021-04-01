@@ -14,14 +14,8 @@ Within an infrastructure project, a procuring entity can initiate multiple contr
 
 ![Projects typically involve multiple contracts](../../_static/images/diagram-project-contracting-process.png)
 
-```eval_rst
-.. admonition:: Tip
-    :class: tip
-
-    .. markdown::
-
-      The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code.
-
+```{tip}
+The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code.
 ```
 ## What is the scope of OC4IDS?
 
@@ -79,14 +73,10 @@ OCDS is used to disclose detailed data on contracting processes for goods, works
 
 OCDS data can be used to identify and monitor infrastructure projects. It can also be used to produce OC4IDS data. Converting OCDS data to OC4IDS data can reduce the amount of manual data entry required for infrastructure project monitoring.
 
-```eval_rst
-.. admonition:: Tool
-    :class: tip
+```{admonition} Tool
+:class: tip
 
-    .. markdown::
-
-      OCDSKit’s [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
-
+OCDSKit’s [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
 ```
 
 ## How do PPPs fit in?
@@ -139,12 +129,8 @@ OC4IDS can be used in the following scenarios:
 
 > Review the [CoST IDS mapping](https://standard.open-contracting.org/infrastructure/latest/en/cost/) to learn how to publish each element of the CoST IDS using OC4IDS.
 
-```eval_rst
-.. admonition:: Are you ready to start using OC4IDS?
-    :class: Tip
+```{admonition} Are you ready to start using OC4IDS?
+:class: Tip
 
-    .. markdown::
-
-      Complete the [OC4IDS scoping template](https://www.open-contracting.org/resources/oc4ids-scoping-template/) and share it with the [OC4IDS helpdesk](mailto:data@open-contracting.org).
-
+Complete the [OC4IDS scoping template](https://www.open-contracting.org/resources/oc4ids-scoping-template/) and share it with the [OC4IDS helpdesk](mailto:data@open-contracting.org).
 ```

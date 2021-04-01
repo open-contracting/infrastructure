@@ -22,14 +22,8 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 Check that the data you plan to analyze is in OCDS format
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
-
+```{tip}
+You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
 ```
 
 Check which stages of the contracting process the data covers.
@@ -40,52 +34,31 @@ Check whether the publisher keeps a change history (multiple releases for each c
 
 Some OCDS publishers provide an API that can be used to query data. Others provide access to bulk data that you can download into your own tools for querying.
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users.
+```{tip}
+If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users.
 ```
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
-
+```{tip}
+[OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources
 ```
 
 #### (3) Develop a search strategy to discover infrastructure projects
 
 Ideally, the procurement data source will include some sort of project or budget identifier fields that relate to a register of infrastructure projects.
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects.
-
+```{tip}
+If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects.
 ```
 
 However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
 
 This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.
 
-```eval_rst
-.. admonition:: Worked example
-    :class: Tip
+```{admonition} Worked example
+:class: Tip
 
-    .. markdown::
-
-      Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
-
-      ```sql
+Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
+```sql
       /* The following query runs against a filtered set of data in Kingfisher */
       SELECT
           data,
@@ -126,14 +99,8 @@ If your analysis of OCDS data reveals infrastructure projects to monitor, you ca
 
 * Search for **related contracts** in order to link any other design, construction or monitoring contracts to this project;
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities.
-
+```{tip}
+When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities.
 ```
 
 You may not be able to fill all the project-level details from the contracts, and may need to undertake additional research to find:
@@ -143,14 +110,8 @@ You may not be able to fill all the project-level details from the contracts, an
 * The total project budget and cost estimates
 * Any environmental impact or land and settlement impact studies that have been undertaken
 
-```eval_rst
-.. admonition:: Tip
-    :class: Tip
-
-    .. markdown::
-
-      You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
-
+```{tip}
+You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to get started.
 ```
 
 #### (5) Monitoring contracting process updates
