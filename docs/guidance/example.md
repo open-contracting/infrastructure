@@ -158,9 +158,33 @@ In the document example below, an environmental impact assessment is provided. T
 
 ```
 
+#### Forecasts and metrics
+
+Publish structured data on planned and actual physical and financial progress using `Metric` objects in the `forecasts` (planned progress) and `metrics` (actual progress) arrays. Refer to the [implementation progress reports documentation](../../cost/#implementation-progress-reports) for further detail.
+
+In the example below, you can compare the planned `forecasts/observations` for 75% of physical progress completed with the actual `metrics/observations` for 75% of physical progress completed (note the difference in `period`).
+
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer: /projects/0/forecasts/0/observations/1
+   :expand: unit, period
+   :title: forecast_observation
+
+```
+```eval_rst
+
+.. jsoninclude:: ../examples/example.json
+   :jsonpointer: /projects/0/metrics/0/observations/1
+   :expand: unit, period
+   :title: metric_observation
+
+```
+
+
 #### Contracting processes
 
-The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of modifications and a list of OCDS releases.
+The `contractingProcesses` array is used to provide information about each contracting process associated with the project, including summary information, a list of `modifications` and a list of OCDS `releases`.
 
 In the contractingProcess example below, information is given about a contracting process for the design of the motorway upgrade, with one related document in the `documents` array (a tender notice) and two related OCDS `releases` (one for the tender and one for the contract award).
 

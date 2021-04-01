@@ -14,6 +14,7 @@
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
 * [#220](https://github.com/open-contracting/infrastructure/issues/220) - add reactive disclosure elements to CoST IDS & OCDS mapping documentation.
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
+* [#278](https://github.com/open-contracting/infrastructure/issues/278) - Add reactive disclosures to worked example.
 * [#304](https://github.com/open-contracting/infrastructure/issues/304) update blank OC4IDS file with schema changes, and add project package. 
 
 ### Schema
