@@ -19,8 +19,6 @@ from pathlib import Path
 
 import standard_theme
 from ocds_babel.translate import translate
-from recommonmark.transform import AutoStructify
-
 
 # -- Project information -----------------------------------------------------
 
@@ -38,7 +36,7 @@ release = '0.9.2'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
+    'myst_parser',
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
@@ -103,17 +101,14 @@ gettext_domain_prefix = '{}-'.format(profile_identifier)
 extension_versions = {
     # 'extension_id_in_registry': 'version',
 }
+ 
+# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
+# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
+myst_enable_extensions = []
+myst_heading_anchors = 6
 
 
 def setup(app):
-    app.add_config_value('extension_versions', extension_versions, True)
-    app.add_config_value('recommonmark_config', {
-        'auto_toc_tree_section': 'Contents',
-        'enable_eval_rst': True
-    }, True)
-
-    app.add_transform(AutoStructify)
-
     # The root of the repository.
     basedir = Path(os.path.realpath(__file__)).parents[1]
     # The `LOCALE_DIR` from `config.mk`.
