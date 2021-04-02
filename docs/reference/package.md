@@ -6,4 +6,4 @@ You can view an interactive version of the project package schema below (require
 
 Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section.
 
-<script src="../../_static/docson/widget.js" data-schema="../../_static/project-level/project-package-schema.json"></script>
+<script src="../../_static/docson/public/js/widget.js" data-schema="../../../project-package-schema.json"></script>
