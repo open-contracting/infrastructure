@@ -9,16 +9,16 @@ Set `.type` based on the type of change and provide the relevant before/after va
 * `/contracts/items`
 * `/contracts/implementation/milestones`
 
-*Copy* `/contracts/amendments/description` *to* `summary.modifications.description` *and* `/date` *to* `.summary.modifications.date`."
-List of escalation approvals,Documentation of one or more approved escalations of the contract price during the project lifecycle.,[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'escalationApprovals'.,*Check the* `/contracts/documents` and `/contracts/implementation/documents` *arrays for* `Document` *objects with* `.type` *set to* ‘escalationApprovals’ *and copy each object to the* `.summary.documents` *array.*
-Quality assurance reports,"Documentation identifying deficiencies in designs, specifications, standards, methods, procedures and practices, and identifying best practices.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'qualityAssuranceReport'.,*Check the* `/contracts/documents` and `/contracts/implementation/documents` *arrays for* `Document` *objects with* `.type` *set to* ‘qualityAssuranceReport’ *and copy each object to the* `.summary.documents` *array.*
+*Copy `/contracts/amendments/description` to `summary.modifications.description` and `/date` to `.summary.modifications.date`.*"
+List of escalation approvals,Documentation of one or more approved escalations of the contract price during the project lifecycle.,[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'escalationApprovals'.,*Check the `/contracts/documents` and `/contracts/implementation/documents` arrays for `Document` objects with `.type` set to ‘escalationApprovals’ and copy each object to the `.summary.documents` array.*
+Quality assurance reports,"Documentation identifying deficiencies in designs, specifications, standards, methods, procedures and practices, and identifying best practices.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'qualityAssuranceReport'.,*Check the `/contracts/documents` and `/contracts/implementation/documents` arrays for `Document` objects with `.type` set to ‘qualityAssuranceReport’ and copy each object to the `.summary.documents` array.*
 Disbursement records or payment certificates,A list of the spending transactions made against this contract and/or a document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved,"**Data:**
 
 For each disbursement, add a `Transaction` to `.summary.transactions` and set its fields according to the schema definitions.
 
 **Documents:**
 
-[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'paymentCertificate'.","*Copy the contents of the* `/contracts/implementation/transactions` *array to* `.summary.transactions`.
+[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'paymentCertificate'.","*Copy the contents of the `/contracts/implementation/transactions` array to `.summary.transactions`.*
 
-*Check the* `/contracts/implementation/documents` *array for* `Document` *objects with* `.type` *set to* ‘paymentCertificate’ *and copy each object to the* `.summary.documents` *array.*"
-Contract amendments,A legal document that changes or adds to the terms of an existing contract.,[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'contractAmendment'.,*Check the* `/contracts/documents` *array for* `Document` *objects with* `.type` *set to* ‘contractAmendment’ *and copy each object to the* `.summary.documents` *array.*
+*Check the `/contracts/implementation/documents` array for `Document` objects with `.type` set to ‘paymentCertificate’ and copy each object to the `.summary.documents` array.*"
+Contract amendments,A legal document that changes or adds to the terms of an existing contract.,[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'contractAmendment'.,*Check the `/contracts/documents` array for `Document` objects with `.type` set to ‘contractAmendment’ and copy each object to the `.summary.documents` array.*
