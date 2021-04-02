@@ -72,6 +72,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-identification.csv
 ```
 
@@ -80,6 +81,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -88,6 +90,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -98,6 +101,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
 
@@ -106,6 +110,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-project-level-completion.csv
 ```
 
@@ -288,6 +293,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
@@ -296,6 +302,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/process-level-implementation.csv
 ```
 
@@ -306,6 +313,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-procurement.csv
 ```
 
@@ -314,6 +322,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-contract.csv
 ```
 
@@ -322,6 +331,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
 
@@ -381,6 +391,7 @@ Implementations which include multiple currencies should give consideration to [
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-identification.csv
 ```
 
@@ -389,6 +400,7 @@ Implementations which include multiple currencies should give consideration to [
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-preparation.csv
 ```
 
@@ -397,6 +409,7 @@ Implementations which include multiple currencies should give consideration to [
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-completion.csv
 ```
 
@@ -409,6 +422,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,3
 :file: ../../build/current_lang/process-level-procurement.csv
 ```
 
@@ -423,5 +437,6 @@ In some cases, OCDS data may include an explanation of changes in the relevant `
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
+:included_cols: 0,1,3
 :file: ../../build/current_lang/process-level-implementation.csv
 ```
