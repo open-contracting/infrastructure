@@ -10,6 +10,7 @@
   * update project identification mapping for sector
   * replace reference to Budget and projects extension with Projects extension
   * remove reference to 'publicAuthority' code from OCDS mapping
+* [#213](https://github.com/open-contracting/infrastructure/issues/213) - fix link for `releaseTag` codelist to point to extended codelist from OCDS for PPPs
 * [#216](https://github.com/open-contracting/infrastructure/issues/216) - update CoST IDS & OCDS mapping documentation to separate the OC4IDS to CoST IDS mapping and the OCDS to OC4IDS mapping.
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
 * [#220](https://github.com/open-contracting/infrastructure/issues/220) - add reactive disclosure elements to CoST IDS & OCDS mapping documentation.
