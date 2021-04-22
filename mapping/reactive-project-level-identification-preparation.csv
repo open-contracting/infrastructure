@@ -10,7 +10,7 @@ Environmental and social impact assessment,"**Environmental impact assessment**
 Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.
 
 **Social impact assessment**
-Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people’s way of life, culture, community, health and wellbeing etc.).","Environmental impact assessment: [Add a project document](#add-a-project-document) and set `.documentType` to ‘environmentalImpact’.
+Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people’s way of life, culture, community, health and well-being etc.).","Environmental impact assessment: [Add a project document](#add-a-project-document) and set `.documentType` to ‘environmentalImpact’.
 
 Social impact assessment: [Add a project document](#add-a-project-document) and set `.documentType` to ‘environmentalImpact’ or ‘socialImpact’.
 

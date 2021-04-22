@@ -48,7 +48,7 @@ For example, the CoST IDS mapping describes how the project name element of the 
 
 > Project-Level: Publish as `title`
 
-Based on this description, the following pseudo code checks a folder containing OC4IDS JSON files to count the number of  projects in which the project name is disclosed:
+Based on this description, the following pseudo code checks a folder containing OC4IDS JSON files to count the number of projects in which the project name is disclosed:
 
 ```none
 for each json file in folder

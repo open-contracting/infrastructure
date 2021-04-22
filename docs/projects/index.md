@@ -75,8 +75,7 @@ OCDS data can be used to identify and monitor infrastructure projects. It can al
 
 ```{admonition} Tool
 :class: tip
-
-OCDSKit’s [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
+OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
 ```
 
 ## How do PPPs fit in?
@@ -91,14 +90,14 @@ Where data on PPP projects is published using OCDS for PPPs, the `contractingPro
 
 Publishing your data using OC4IDS means that it can be compared with data from other publishers and supports the development of reusable tools for analysis of infrastructure project data. OC4IDS data can also  be linked with other critical documents such as project pipelines and public sector budgets to allow for the tracking of the project from its identification to completion across different government institutions.
 
-OC4IDS is designed to help you collect well structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been designed to integrate with existing open contracting data sources, but also to work in cases where structured open contracting data is not available.
+OC4IDS is designed to help you collect well-structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been designed to integrate with existing open contracting data sources, but also to work in cases where structured open contracting data is not available.
 
 ## When can I use OC4IDS?
 OC4IDS can be used in the following scenarios:
 
 > **Publishing structured data from an infrastructure transparency portal**
 
-> OC4IDS describes a standardised format for publishing structured data on infrastructure projects.
+> OC4IDS describes a standardized format for publishing structured data on infrastructure projects.
 
 > Read the guidance on [publishing data from an infrastructure transparency portal](https://standard.open-contracting.org/infrastructure/latest/en/guidance/publishing/).
 
@@ -106,7 +105,7 @@ OC4IDS can be used in the following scenarios:
 
 > OC4IDS describes the best practice information you ought to collect and disclose to support infrastructure project monitoring.
 
-> **Using OCDS data for whole lifecycle infrastructure project monitoring**
+> **Using OCDS data for whole life-cycle infrastructure project monitoring**
 
 > OC4IDS can be used to:
 > * Join up OCDS data published about contracts related to an infrastructure project

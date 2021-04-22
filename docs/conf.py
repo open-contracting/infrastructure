@@ -72,6 +72,7 @@ profile_identifier = 'infrastructure'
 repository_url = 'https://github.com/open-contracting/infrastructure'
 
 html_theme_options = {
+    'analytics_id': 'YEWDOOEQ',
     'display_version': True,
     'root_url': '/{}'.format(profile_identifier),
     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),

@@ -12,7 +12,7 @@ The [CoST approach](http://infrastructuretransparency.org/our-approach/) is base
 
 * **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be proactively disclosed at key stages of an infrastructure project cycle.
 
-* **Assurance** -  an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
+* **Assurance** - an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
 
 * **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
