@@ -413,6 +413,26 @@ Implementations which include multiple currencies should give consideration to [
 :file: ../../build/current_lang/project-level-completion.csv
 ```
 
+##### Reactive disclosures
+
+###### Identification and preparation
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:included_cols: 0,1,3
+:file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
+```
+
+###### Completion
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:included_cols: 0,1,3
+:file: ../../build/current_lang/reactive-project-level-completion.csv
+```
+
 #### Process level
 
 The mappings in this section relate to the `contractingProcesses` section of the OC4IDS schema, unless otherwise specified.
@@ -439,4 +459,33 @@ In some cases, OCDS data may include an explanation of changes in the relevant `
 :widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/process-level-implementation.csv
+```
+
+##### Reactive disclosures
+
+###### Procurement
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:included_cols: 0,1,3
+:file: ../../build/current_lang/reactive-process-level-procurement.csv
+```
+
+###### Contract
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:included_cols: 0,1,3
+:file: ../../build/current_lang/reactive-process-level-contract.csv
+```
+
+###### Implementation
+
+```{csv-table-no-translate}
+:header-rows: 1
+:widths: auto
+:included_cols: 0,1,3
+:file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
