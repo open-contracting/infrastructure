@@ -85,7 +85,7 @@ OCDS data can be used to identify and monitor infrastructure projects. It can al
 
     .. markdown::
 
-      OCDSKit’s [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
+      OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project.
 
 ```
 
@@ -116,7 +116,7 @@ OC4IDS can be used in the following scenarios:
 
 > OC4IDS describes the best practice information you ought to collect and disclose to support infrastructure project monitoring.
 
-> **Using OCDS data for whole lifecycle infrastructure project monitoring**
+> **Using OCDS data for whole life-cycle infrastructure project monitoring**
 
 > OC4IDS can be used to:
 > * Join up OCDS data published about contracts related to an infrastructure project
