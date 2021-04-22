@@ -1,6 +1,5 @@
 # About
 
-
 The [Open Contracting Partnership](http://www.open-contracting.org), [CoST](http://www.constructiontransparency.org/) - the Infrastructure Transparency Initiative - and [Open Data Services Co-operative](http://www.opendataservices.coop) are working together to document how the [Open Contracting Data Standard](https://standard.open-contracting.org), and additional standardized data models, can be used to represent, share and analyze all the information required under the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf).
 
 You can get involved via the [issue tracker](https://github.com/open-contracting/infrastructure), or for more information about this work, contact [Bernadine Fernz](mailto:bfernz@open-contracting.org), Head of Infrastructure at the Open Contracting Partnership and/or [Evelyn Hernandez](mailto:e.hernandez@constructiontransparency.org), Head of Members and Affiliate Programmes at CoST.
@@ -29,7 +28,7 @@ By linking existing open contracting disclosure (and ensuring key fields and doc
 
 This project, running from June 2018 through to March 2019, has the following theory of change.
 
-![Theory of Change](../_static/images/OC-CoST-TheoryOfChange-June2018.png)
+![Theory of Change](_static/images/OC-CoST-TheoryOfChange-June2018.png)
 
 The technical development work plan consists of the following four components:
 

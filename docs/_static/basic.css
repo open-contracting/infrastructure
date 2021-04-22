@@ -1,11 +1,11 @@
 .wy-nav-side {
-    background: #37999b;
+  background: #37999b;
 }
 .oc-switchers {
-    background: #37999b;
+  background: #37999b;
 }
 .wy-menu-vertical a:hover {
-    background: #70babe;
+  background: #70babe;
 }
 .wy-nav-content a {
   color: #807f7f;
@@ -18,5 +18,5 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend, .wy-men
 }
 
 .wy-menu-vertical a {
-    font-size: 95%
+  font-size: 95%
 }
