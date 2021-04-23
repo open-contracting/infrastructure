@@ -42,6 +42,7 @@ ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
 
+
 def csv_reader(url):
     return csv.DictReader(StringIO(requests.get(url).text))
 
@@ -153,12 +154,12 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
     # An editor might have added an infrastructure codelist, or copied an OCDS codelist, without updating this script.
     added = actual - infra_list - ocds_list
     if added:
-        sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix} in borrow-schema.py?')
+        sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
 
     # An editor might have removed an infrastructure codelist, without updating this script.
     removed = infra_list - actual
     if removed:
-        sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix} in borrow-schema.py?')
+        sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
 
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
