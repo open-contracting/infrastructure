@@ -1,56 +1,57 @@
 Code,Title,Description,Source
+plannedProcurementNotice,Notice of planned procurement,"A notice published by the procuring entity regarding their plans for future procurement, also known as a prior information notice. The procuring entity can use the notice of planned procurement as a tender notice.",OCDS for PPPs
+tenderNotice,Tender notice,"The notice published by the procuring entity inviting interested suppliers to submit a request for participation, a bid, or both. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
+awardNotice,Award notice,"The formal notice that gives details of the contract award. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
+contractNotice,Contract notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
+completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes.,OCDS for PPPs
+procurementPlan,Procurement plan,Documentation that sets out the basis for this particular contracting process.,OCDS for PPPs
+biddingDocuments,Bidding documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",OCDS for PPPs
+technicalSpecifications,Technical specifications,"Tendering requirements that: lay down the characteristics of goods or services to be procured, including quality, performance, safety and dimensions, or the processes and methods for their production or provision; or address terminology, symbols, packaging, marking or labelling requirements, as they apply to a good or service.",OCDS for PPPs
+evaluationCriteria,Evaluation criteria,Documentation on how bids will be evaluated.,OCDS for PPPs
+evaluationReports,Evaluation report,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award.",OCDS for PPPs
+contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for PPPs
+contractSigned,Signed contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is needed.",OCDS for PPPs
+contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).,OCDS for PPPs
+physicalProgressReport,Physical progress reports,"Documentation on the status of implementation, usually against key milestones.",OCDS for PPPs
+financialProgressReport,Financial progress reports,"Documentation providing dates and amounts of stage payments made (against total amount) and the source of those payments, including cost overruns, if any. Structured versions of this information can be provided through contract implementation transactions.",OCDS for PPPs
+finalAudit,Final audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs
+hearingNotice,Public hearing notice,Documentation of any public hearings that took place as part of the planning for this contracting process.,OCDS for PPPs
+marketStudies,Market studies,Documentation of any market studies that took place as part of the planning for this contracting process.,OCDS for PPPs
+eligibilityCriteria,Eligibility criteria,Detailed documents about the eligibility of bidders.,OCDS for PPPs
+clarifications,Clarifications to bidders questions,Documentation that provides replies to issues raised in pre-bid conferences or an enquiry processes.,OCDS for PPPs
+shortlistedFirms,Shortlisted firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.,OCDS for PPPs
+environmentalImpact,Environmental impact assessment,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
+assetAndLiabilityAssessment,Assessment of government's assets and liabilities,Documentation covering assessments of the government's assets and liabilities related to this contracting process.,OCDS for PPPs
+winningBid,Winning bid,"Documentation of the winning bid, including, wherever applicable, a full copy of the proposal received.",OCDS for PPPs
+complaints,Complaints and decisions,"Documentation of any complaints received, or decisions in response to complaints.",OCDS for PPPs
+contractAnnexe,Annexes to the contract,Copies of annexes and other supporting documentation related to the contract.,OCDS for PPPs
+contractGuarantees,Guarantees,Documentation of guarantees relating to a contracting process or contract.,OCDS for PPPs
+subContract,Subcontracts,"Documentation detailing subcontracts and/or providing a copy of subcontracts themselves. Where OCDS data on the subcontracts exists, this can be declared using the relatedProcess block.",OCDS for PPPs
+feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process, providing information on net benefits or costs of the proposed goods, works or services.",OCDS for PPPs
+projectPlan,Project plan,"Documentation of project planning for this contracting process, and, where applicable, a copy of the project plan document.",OCDS for PPPs
+billOfQuantity,Bill of quantity,"Documentation that provides itemized information on materials, parts and labour, and the terms and conditions for their provision, providing information that would enable bidders to price work effectively. Structured versions of item and quantity information at each of tender, award and contract stage can be provided using units within the items building block.",OCDS for PPPs
+bidders,Information on bidders,"Documentation on bidders or participants, their validation documents and any procedural exemptions for which they qualify.",OCDS for PPPs
+conflictOfInterest,Conflict of interest,Documentation of conflicts of interest declared or uncovered.,OCDS for PPPs
+debarments,Debarments,Documentation of any debarments issued.,OCDS for PPPs
+illustration,Illustrations,"Images intended to provide supporting information. The URL for images should be directly to an image file that applications can display as part of a gallery of images. At the tender stage, images can be illustrations of goods, works or services needed or for sale. At the implementation stage, images can be illustrations or visual evidence of physical progress.",OCDS for PPPs
+submissionDocuments,Bid submission documents,Documentation submitted by a bidder as part of their proposal.,OCDS for PPPs
+contractSummary,Contract summary,Documentation providing an overview of the key terms and sections of the contract. Commonly used for large and complex contracts.,OCDS for PPPs
+cancellationDetails,Cancellation details,"Documentation of the arrangements, or reasons, for cancellation of a contracting process, award or specific contract.",OCDS for PPPs
 valueForMoneyAnalysis,Value for money analysis,"A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes.",OCDS for PPPs
-technicalSpecifications,Technical specifications,Detailed technical information about goods or services to be provided.,OCDS for PPPs
 serviceDescription,Service descriptions,A high-level description of the services,OCDS for PPPs
 estimatedDemand,Estimated demand,A narrative describing the estimated demand to be served (annually) by the project.,OCDS for PPPs
-contractDraft,Contract draft,A draft or pro-forma copy of the contract.,OCDS for PPPs
-contractSigned,Signed contract,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",OCDS for PPPs
-feasibilityStudy,Feasibility study,"Documentation of feasibility studies carried out for this contracting process or project, providing information on net benefits or costs of the proposed goods, works or services.",OC4IDS
-environmentalImpact,Environmental impact assessment,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
-socialImpact,Social impact assessment,"Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people's way of life, culture, community, health and well-being etc.).",OC4IDS
-landAndSettlementImpact,Land and settlement impact assessment,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved Saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC4IDS
-tenderNotice,Tender notice,"The formal notice that gives details of a tender. This may be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS for PPPs
 evaluationCommittee,Evaluation committee details,Information on the constitution of the evaluation committee,OCDS for PPPs
 requestForQualification,Request for qualification,"The set of documents issued by the procuring authority that constitute the basis of the qualification and potentially the pre-selection of candidates (the short list). Qualified (or short-listed candidates) will then be invited to submit a proposal (or to enter into a new phase prior to bid submission, such as a dialogue phase or interactive phase).",OCDS for PPPs
-evaluationCriteria,Evaluation criteria,Documentation on how bids will be evaluated.,OCDS for PPPs
 minutes,Minutes,"Minutes of pre-bid meetings, or other relevant meetings.",OCDS for PPPs
-shortlistedFirms,Shortlisted firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.,OCDS for PPPs
 negotiationParameters,Negotiation parameters,A description of the parameters for negotiation with the preferred proponent,OCDS for PPPs
-evaluationReports,Evaluation report,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award",OCDS for PPPs
-contractGuarantees,Guarantees,Documentation of guarantees relating to a contracting process or contract.,OCDS for PPPs
 defaultEvents,Defaults,Information on events of default,OCDS for PPPs
 termination,Termination,Information on contract termination,OCDS for PPPs
 performanceReport,Performance report,Performance assessment reports,OCDS for PPPs
-plannedProcurementNotice,Notice of planned procurement,"A notice published by the procuring entity regarding their plans for future procurement, also known as a prior information notice. The procuring entity can use the notice of planned procurement as a tender notice.",OCDS
-awardNotice,Award notice,"The formal notice that gives details of the contract award. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
-contractNotice,Contract notice,"The formal notice that gives details of a contract being signed and valid to start implementation. This can be a link to a downloadable document, to a web page, or to an official gazette in which the notice is contained.",OCDS
-completionCertificate,Completion certificate,A completion certificate issued by a relevant authority providing evidence that works were completed to a certain level of quality. Completion certificates might only be relevant for particular kinds of contracting processes or projects.,OC4IDS
-procurementPlan,Procurement plan,Documentation that sets out the basis for this particular contracting process.,OCDS
-biddingDocuments,Bidding documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",OCDS
-contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).,OCDS
 contractSchedule,Contract schedules,"Any document which contains additional terms, obligations or information related to the contract, such as a schedule, appendix, annex, attachment or addendum.",OCDS
-physicalProgressReport,Physical progress reports,"Documentation on the status of implementation, usually against key milestones.",OCDS
-financialProgressReport,Financial progress reports,"Documentation providing dates and amounts of stage payments made (against total amount) and the source of those payments, including cost overruns, if any. Structured versions of this information can be provided through contract implementation transactions.",OCDS
-hearingNotice,Public hearing notice,Documentation of any public hearings that took place as part of the planning for this contracting process.,OCDS
-marketStudies,Market studies,Documentation of any market studies that took place as part of the planning for this contracting process.,OCDS
-eligibilityCriteria,Eligibility criteria,Detailed documents about the eligibility of bidders.,OCDS
-clarifications,Clarifications to bidders questions,Documentation that provides replies to issues raised in pre-bid conferences or an enquiry processes.,OCDS
-assetAndLiabilityAssessment,Assessment of government's assets and liabilities,Documentation covering assessments of the government's assets and liabilities related to this contracting process.,OCDS
 riskProvisions,Provisions for management of risks and liabilities,Documentation covering how risks will be managed as part of this contracting process.,OCDS
-winningBid,Winning bid,"Documentation of the winning bid, including, wherever applicable, a full copy of the proposal received.",OCDS
-complaints,Complaints and decisions,"Documentation of any complaints received, or decisions in response to complaints.",OCDS
-contractAnnexe,Annexes to the contract,Copies of annexes and other supporting documentation related to the contract.,OCDS
-subContract,Subcontracts,"Documentation detailing subcontracts and/or providing a copy of subcontracts themselves. Where OCDS data on the subcontracts exists, this can be declared using the relatedProcess block.",OCDS
 needsAssessment,Needs assessment,Documentation of the needs assessments carried out for this contracting process or project addressing demand for the project or investment from the affected communities or users.,OC4IDS
-projectPlan,Project plan,"Documentation of project planning for this contracting process, and, where applicable, a copy of the project plan document.",OCDS
-billOfQuantity,Bill of quantity,"Documentation that provides itemized information on materials, parts and labour, and the terms and conditions for their provision, providing information that would enable bidders to price work effectively. Structured versions of item and quantity information at each of tender, award and contract stage can be provided using units within the items building block.",OCDS
-bidders,Information on bidders,"Documentation on bidders or participants, their validation documents and any procedural exemptions for which they qualify.",OCDS
-conflictOfInterest,Conflict of interest,Documentation of conflicts of interest declared or uncovered.,OCDS
-debarments,Debarments,Documentation of any debarments issued.,OCDS
-illustration,Illustrations,"Images intended to provide supporting information. The URL for images should be directly to an image file that applications can display as part of a gallery of images. At the tender stage, images can be illustrations of goods, works or services needed or for sale. At the implementation stage, images can be illustrations or visual evidence of physical progress.",OCDS
-submissionDocuments,Bid submission documents,Documentation submitted by a bidder as part of their proposal.,OCDS
-contractSummary,Contract summary,Documentation providing an overview of the key terms and sections of the contract. Commonly used for large and complex contracts.,OCDS
-cancellationDetails,Cancellation details,"Documentation of the arrangements, or reasons, for cancellation of a contracting process, award or specific contract.",OCDS
+socialImpact,Social impact assessment,"Documentation of assessments of the intended and unintended social consequences of this project, and documentation of mitigation measures for those social consequences. Social impacts are changes that affect people, directly or indirectly (e.g. changes to people's way of life, culture, community, health and well-being etc.).",OC4IDS
+landAndSettlementImpact,Land and settlement impact assessment,"State the amount of land and property that was acquired for the project (e.g. 25sq km land), and outline related impacts (e.g. archaeological issues (moved Saxon burial site), local/indigenous settlements (relocated 5 indigenous villages of 500 villagers each), impacts on local businesses e.g. (30 business properties purchased)).",OC4IDS
 projectScope,Project scope,"A description of the main outputs from the project that are being taken forward into construction (including type, quantity and units)",OC4IDS
 resettlementPlan,Resettlement and compensation plan,"Documentation of the procedures and actions to mitigate adverse effects, compensate losses, and provide development benefits to people and communities affected by the contracting process or project.",OC4IDS
 projectEvaluation,Project evaluation,"Generally published at the conclusion of a project, providing a technical and financial summary of delivery.",OC4IDS

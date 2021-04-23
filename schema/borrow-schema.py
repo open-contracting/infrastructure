@@ -26,13 +26,21 @@ from copy import deepcopy
 from io import StringIO
 
 import requests
+from ocdsextensionregistry import ProfileBuilder
 
-ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
+if len(sys.argv) > 1:
+    ppp_base_url = sys.argv[1]
+else:
+    ppp_base_url = 'https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/'
+
 ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
+
+builder = ProfileBuilder('1__1__5', {'budget': 'master'})
+ppp_schema = requests.get(f'{ppp_base_url}release-schema.json').json(object_pairs_hook=OrderedDict)
+ppp_schema = builder.patched_release_schema(schema=ppp_schema)
+
 schema_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'project-level')
 codelists_dir = os.path.join(schema_dir, 'codelists')
-ppp_schema = requests.get(ppp_base_url + 'release-schema.json').json(object_pairs_hook=OrderedDict)
-
 
 def csv_reader(url):
     return csv.DictReader(StringIO(requests.get(url).text))
@@ -72,11 +80,11 @@ def traverse(schema_action=None, object_action=None):
             pass
 
     def method(schema, pointer=''):
-        schema_action(schema)
+        schema_action(schema, pointer)
 
         if 'properties' in schema:
             for key, value in schema['properties'].items():
-                new_pointer = '{}/{}'.format(pointer, key)
+                new_pointer = f'{pointer}/{key}'
 
                 prop_type = coerce_to_list(value, 'type')
                 object_action(value)
@@ -90,19 +98,19 @@ def traverse(schema_action=None, object_action=None):
                     # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
                     if ('object' in items_type or 'array' in items_type
                             and new_pointer != '/Location/geometry/coordinates'):
-                        raise NotImplementedError('{}/items has unexpected type {}'.format(new_pointer, items_type))
-        else:
-            warnings.warn("Missing properties key in " + schema['title'])
+                        raise NotImplementedError(f'{new_pointer}/items has unexpected type {items_type}')
+        elif pointer != '/Observation/dimensions':
+            warnings.warn(f'Missing "properties" key at {pointer}')
 
         for key, value in schema.get('definitions', {}).items():
-            method(value, pointer='{}/{}'.format(pointer, key))
+            method(value, pointer=f'{pointer}/{key}')
 
     return method
 
 
 # Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
 def remove_null_and_pattern_properties(*args):
-    def schema_action(schema):
+    def schema_action(schema, pointer):
         schema.pop('patternProperties', None)
 
     traverse(schema_action, remove_null)(*args)
@@ -113,13 +121,13 @@ def remove_deprecated(*args):
     Removes deprecated properties.
     """
 
-    def schema_action(schema):
+    def schema_action(schema, pointer):
         if 'properties' in schema:
             for key, value in list(schema['properties'].items()):
                 if 'deprecated' in value:
                     del schema['properties'][key]
-        else:
-            warnings.warn("Missing properties key in " + schema['title'])
+        elif pointer != '/Observation/dimensions':
+            warnings.warn(f'Missing "properties" key at {pointer}')
 
     traverse(schema_action)(*args)
 
@@ -128,13 +136,13 @@ def remove_integer_identifier_types(*args):
     """
     Sets all `id` fields to allow only strings, not integers.
     """
-    def schema_action(schema):
+    def schema_action(schema, pointer):
 
         if 'properties' in schema:
             if 'id' in schema['properties']:
                 schema['properties']['id']['type'] = 'string'
-        else:
-            warnings.warn("Missing properties key in " + schema['title'])
+        elif pointer != '/Observation/dimensions':
+            warnings.warn(f'Missing "properties" key at {pointer}')
 
     traverse(schema_action)(*args)
 
@@ -145,14 +153,12 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
     # An editor might have added an infrastructure codelist, or copied an OCDS codelist, without updating this script.
     added = actual - infra_list - ocds_list
     if added:
-        sys.exit('{prefix} has unexpected {items}: add to infra_{suffix} or ocds_{suffix} in borrow-schema.py?'.format(
-            items=', '.join(added), prefix=prefix, suffix=suffix))
+        sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix} in borrow-schema.py?')
 
     # An editor might have removed an infrastructure codelist, without updating this script.
     removed = infra_list - actual
     if removed:
-        sys.exit('{prefix} is missing {items}: remove from infra_{suffix} in borrow-schema.py?'.format(
-            items=', '.join(removed), prefix=prefix, suffix=suffix))
+        sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix} in borrow-schema.py?')
 
 
 with open(os.path.join(schema_dir, 'project-schema.json')) as f:
@@ -242,7 +248,7 @@ for basename in ocds_codelists:
             ignore.append('contractSchedule')
 
             # Add codes from OCDS for PPPs.
-            reader = csv_reader(ppp_base_url + 'codelists/' + basename)
+            reader = csv_reader(f'{ppp_base_url}codelists/{basename}')
             for row in reader:
                 if row['Code'] not in ignore:
                     seen.append(row['Code'])
@@ -253,7 +259,7 @@ for basename in ocds_codelists:
                     writer.writerow(row)
 
             # Add codes from OCDS.
-            reader = csv_reader(ocds_base_url + 'codelists/documentType.csv')
+            reader = csv_reader(f'{ocds_base_url}codelists/documentType.csv')
             for row in reader:
                 if row['Code'] not in seen:
                     seen.append(row['Code'])
@@ -275,7 +281,7 @@ for basename in ocds_codelists:
             seen = []
 
             # Add codes from OCDS.
-            reader = csv_reader(ocds_base_url + 'codelists/partyRole.csv')
+            reader = csv_reader(f'{ocds_base_url}codelists/partyRole.csv')
             for row in reader:
                 if row['Code'] not in seen:
                     seen.append(row['Code'])
@@ -291,7 +297,7 @@ for basename in ocds_codelists:
 
             text = io.getvalue()
         else:
-            text = requests.get(ppp_base_url + 'codelists/' + basename).text
+            text = requests.get(f'{ppp_base_url}codelists/{basename}').text
 
         f.write(text)
 
@@ -390,8 +396,6 @@ copy_def('Observation')
 del(schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
 
 copy_def('Transaction')
-# Remove the `relatedImplementationMilestone` property
-del(schema['definitions']['Transaction']['properties']['relatedImplementationMilestone'])
 
 remove_null_and_pattern_properties(schema)
 remove_integer_identifier_types(schema)
