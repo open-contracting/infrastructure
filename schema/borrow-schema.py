@@ -27,6 +27,7 @@ from io import StringIO
 
 import requests
 from ocdsextensionregistry import ProfileBuilder
+from ocdskit.schema import add_validation_properties
 
 if len(sys.argv) > 1:
     ppp_base_url = sys.argv[1]
@@ -59,6 +60,16 @@ def remove_null(value):
         value['type'].remove('null')
     if 'enum' in value and None in value['enum']:
         value['enum'].remove(None)
+
+
+def edit_code(row, oc4ids_codes, source):
+    if row['Code'] in oc4ids_codes:
+        row['Description'] = re.sub(r'(?<=contracting process\b)', ' or project', row['Description'])
+        row['Description'] = re.sub(r'(?<=contracting processes\b)', ' or projects', row['Description'])
+        row['Source'] = 'OC4IDS'
+    else:
+        row['Source'] = source
+    return row
 
 
 def copy_def(definition, replacements=None):
@@ -168,13 +179,13 @@ with open(os.path.join(schema_dir, 'project-schema.json')) as f:
 infra_codelists = {
     'contractingProcessStatus.csv',
     'contractNature.csv',
+    'metricID.csv',
     'modificationType.csv',
     'projectSector.csv',
     'projectStatus.csv',
     'projectType.csv',
     'relatedProjectScheme.csv',
     'relatedProject.csv',
-    'metricID.csv'
 }
 ocds_codelists = {
     'currency.csv',
@@ -184,7 +195,7 @@ ocds_codelists = {
     'method.csv',
     'partyRole.csv',
     'releaseTag.csv',
-    'unitClassificationScheme.csv'
+    'unitClassificationScheme.csv',
 }
 compare(os.listdir(codelists_dir), infra_codelists, ocds_codelists,
         'schema/project-level/codelists', 'codelists')
@@ -195,7 +206,7 @@ infra_definitions = {
     'LinkedRelease',  # Similar to linked release in OCDS record package.
     'Modification',
     'RelatedProject',  # Similar to relatedProcess in OCDS
-    'Person'
+    'Person',
 }
 ocds_definitions = {
     'Period',
@@ -211,8 +222,7 @@ ocds_definitions = {
     'Identifier',
     'Metric',
     'Observation',
-    'Transaction'
-
+    'Transaction',
 }
 compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -253,10 +263,11 @@ for basename in ocds_codelists:
             for row in reader:
                 if row['Code'] not in ignore:
                     seen.append(row['Code'])
-                    if row['Code'] == 'environmentalImpact':  # environmentalImpact has an entirely new description.
+                    # These codes' descriptions are entirely new.
+                    if row['Code'] in ('environmentalImpact',):
                         row = next(oc4ids_row for oc4ids_row in oc4ids_rows if oc4ids_row['Code'] == row['Code'])
                     else:
-                        row['Source'] = 'OCDS for PPPs'
+                        edit_code(row, oc4ids_codes, 'OCDS for PPPs')
                     writer.writerow(row)
 
             # Add codes from OCDS.
@@ -264,11 +275,7 @@ for basename in ocds_codelists:
             for row in reader:
                 if row['Code'] not in seen:
                     seen.append(row['Code'])
-                    if row['Code'] in oc4ids_codes:
-                        row['Description'] = re.sub(r'(?<=contracting process)', ' or project', row['Description'])
-                        row['Source'] = 'OC4IDS'
-                    else:
-                        row['Source'] = 'OCDS'
+                    edit_code(row, oc4ids_codes, 'OCDS')
                     writer.writerow(row)
 
             # Add pre-existing codes from OC4IDS.
@@ -286,11 +293,7 @@ for basename in ocds_codelists:
             for row in reader:
                 if row['Code'] not in seen:
                     seen.append(row['Code'])
-                    if row['Code'] in oc4ids_codes:
-                        row['Description'] = re.sub(r'(?<=contracting process)', ' or project', row['Description'])
-                        row['Source'] = 'OC4IDS'
-                    else:
-                        row['Source'] = 'OCDS'
+                    edit_code(row, oc4ids_codes, 'OCDS')
                     writer.writerow(row)
 
             # Add pre-existing codes from OC4IDS.
@@ -401,6 +404,7 @@ copy_def('Transaction')
 remove_null_and_pattern_properties(schema)
 remove_integer_identifier_types(schema)
 remove_deprecated(schema)
+add_validation_properties(schema)
 
 with open(os.path.join(schema_dir, 'project-schema.json'), 'w') as f:
     json.dump(schema, f, ensure_ascii=False, indent=2)
