@@ -494,13 +494,7 @@
               "implementation",
               "implementationUpdate",
               "contractTermination",
-              "compiled",
-              "qualification",
-              "qualificationUpdate",
-              "qualificationAmendment",
-              "qualificationCancellation",
-              "shortlist",
-              "shortlistUpdate"
+              "compiled"
             ]
           },
           "codelist": "releaseTag.csv",
