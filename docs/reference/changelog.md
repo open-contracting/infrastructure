@@ -17,6 +17,7 @@
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
 * [#278](https://github.com/open-contracting/infrastructure/issues/278) - Add reactive disclosures to worked example.
 * [#304](https://github.com/open-contracting/infrastructure/issues/304) update blank OC4IDS file with schema changes, and add project package. 
+* [#316](https://github.com/open-contracting/infrastructure/issues/316) update wording around worked example file, add link to blank.json.
 
 ### Schema
 
