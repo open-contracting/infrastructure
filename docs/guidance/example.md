@@ -2,9 +2,13 @@
 
 The [OC4IDS schema](../../reference/index) sets out the structure and format of an OC4IDS JSON file.
 
-This worked example is a fully completed OC4IDS JSON file representing a fictional, completed infrastructure project to upgrade a motorway in the UK.
+This worked example is a filled-in example OC4IDS JSON file representing a fictional, completed infrastructure project to upgrade a motorway in the UK.
 
 The full OC4IDS JSON file for the worked example is {download}`available to download <../examples/example.json>`.
+
+```{tip}
+You can also download a {download}`blank example OC4IDS JSON file <../examples/blank.json>` as a starting point for your implementation.
+```
 
 This page contains excerpts from the example JSON file, showing how key sections of the schema ought to be populated.
 
