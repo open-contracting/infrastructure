@@ -14,7 +14,6 @@ contractSigned,Signed contract,"A copy of the signed contract. Consider providin
 contractArrangements,Arrangements for ending contract,Documentation of the arrangements for ending the contract(s).,OCDS for PPPs
 physicalProgressReport,Physical progress reports,"Documentation on the status of implementation, usually against key milestones.",OCDS for PPPs
 financialProgressReport,Financial progress reports,"Documentation providing dates and amounts of stage payments made (against total amount) and the source of those payments, including cost overruns, if any. Structured versions of this information can be provided through contract implementation transactions.",OCDS for PPPs
-finalAudit,Final audit,Documentation of a final audit carried out at the end of contract implementation.,OCDS for PPPs
 hearingNotice,Public hearing notice,Documentation of any public hearings that took place as part of the planning for this contracting process.,OCDS for PPPs
 marketStudies,Market studies,Documentation of any market studies that took place as part of the planning for this contracting process.,OCDS for PPPs
 eligibilityCriteria,Eligibility criteria,Detailed documents about the eligibility of bidders.,OCDS for PPPs

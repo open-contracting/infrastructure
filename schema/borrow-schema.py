@@ -257,6 +257,7 @@ for basename in ocds_codelists:
             reader = csv_reader(document_type_csv_url)
             ignore = [row['Code'] for row in reader if row['PPP specific?']]
             ignore.append('contractSchedule')
+            ignore.append('finalAudit')
 
             # Add codes from OCDS for PPPs.
             reader = csv_reader(f'{ppp_base_url}codelists/{basename}')
@@ -273,7 +274,7 @@ for basename in ocds_codelists:
             # Add codes from OCDS.
             reader = csv_reader(f'{ocds_base_url}codelists/documentType.csv')
             for row in reader:
-                if row['Code'] not in seen:
+                if row['Code'] not in seen and row['Code'] != 'finalAudit':
                     seen.append(row['Code'])
                     edit_code(row, oc4ids_codes, 'OCDS')
                     writer.writerow(row)
