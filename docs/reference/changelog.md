@@ -1,28 +1,29 @@
 # Changelog
 
-## [X.X.X] - YYYY-MM-DD
+## [0.9.3] - 2021-04-30
 
 ### Documentation
 
 * [#210](https://github.com/open-contracting/infrastructure/issues/210):
-  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids)
+  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids).
   * remove references to the PPP profile, reference individual extensions instead.
-  * update project identification mapping for sector
-  * replace reference to Budget and projects extension with Projects extension
-  * remove reference to 'publicAuthority' code from OCDS mapping
+  * update project identification mapping for sector.
+  * replace reference to Budget and projects extension with Projects extension.
+  * remove reference to 'publicAuthority' code from OCDS mapping.
 * [#216](https://github.com/open-contracting/infrastructure/issues/216) - update CoST IDS & OCDS mapping documentation to separate the OC4IDS to CoST IDS mapping and the OCDS to OC4IDS mapping.
 * [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
 * [#220](https://github.com/open-contracting/infrastructure/issues/220) - add reactive disclosure elements to CoST IDS & OCDS mapping documentation.
-* [#246](https://github.com/open-contracting/infrastructure/issues/246) - correct link and wording to Project extension in project identifiers guidance
+* [#246](https://github.com/open-contracting/infrastructure/issues/246) - correct link and wording to Project extension in project identifiers guidance.
 * [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
-* [#278](https://github.com/open-contracting/infrastructure/issues/278) - Add reactive disclosures to worked example.
-* [#304](https://github.com/open-contracting/infrastructure/issues/304) update blank OC4IDS file with schema changes, and add project package. 
-* [#316](https://github.com/open-contracting/infrastructure/issues/316) update wording around worked example file, add link to blank.json.
+* [#278](https://github.com/open-contracting/infrastructure/issues/278) - add reactive disclosures to worked example.
+* [#304](https://github.com/open-contracting/infrastructure/issues/304) - update blank OC4IDS file with schema changes, and add project package.
+* [#316](https://github.com/open-contracting/infrastructure/issues/316) - update wording around worked example file, add link to blank.json.
+* [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
 
 ### Schema
 
 * [#277](https://github.com/open-contracting/infrastructure/issues/277) - add `forecasts` and `metrics`, which can be used to publish implementation progress reports.
-* [#282](https://github.com/open-contracting/infrastructure/pull/282) - update fields shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
+* [#317](https://github.com/open-contracting/infrastructure/pull/317) - update fields shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5.
 * [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
 * [#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records.
 * [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
@@ -30,7 +31,7 @@
 
 ### Codelists
 
-* [#282](https://github.com/open-contracting/infrastructure/pull/282) - update codes shared with OCDS for PPPs 1.0.0-beta2 and OCDS 1.1.4.
+* [#317](https://github.com/open-contracting/infrastructure/pull/317) - update codes shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5.
 
 #### documentType codelist
 
@@ -56,7 +57,7 @@ Added:
 
 Removed:
 
-* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'finalAudit'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'finalAudit'
 
 ## [0.9.2] - 2020-06-29
 
