@@ -228,7 +228,36 @@ compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
 
 # https://docs.google.com/spreadsheets/d/1ttXgMmmLvqBlPRi_4jAJhIobjnCiwMv13YwGfFOnoJk/edit#gid=0
-document_type_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS1VCdsV-Xwvsh6QnK2z9lcpLRyfc472dtpFTicS8C6Yul2MONPYw08lBLd8j55mnerjya9T4qCiekT/pub?gid=0&single=true&output=csv'  # noqa: E501
+ignore = {
+    # https://github.com/open-contracting/infrastructure/issues/269
+    'finalAudit',
+    # https://github.com/open-contracting/standard/issues/870
+    'contractSchedule',
+    # PPP-specific
+    'needsAssessment',
+    'projectAdditionality',
+    'financeAdditionality',
+    'pppModeRationale',
+    'contractSchedule',
+    'riskProvisions',
+    'riskComparison',
+    'discountRate',
+    'equityTransferCaps',
+    'financeArrangements',
+    'guaranteeReports',
+    'grants',
+    'servicePayments',
+    'landTransfer',
+    'assetTransfer',
+    'revenueShare',
+    'otherGovernmentSupport',
+    'tariffMethod',
+    'tariffReview',
+    'tariffs',
+    'tariffIllustration',
+    'handover',
+    'financialStatement',
+}
 
 # Copy the OCDS codelists.
 for basename in ocds_codelists:
@@ -252,12 +281,6 @@ for basename in ocds_codelists:
             writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
             writer.writeheader()
             seen = []
-
-            # Find which codes from OCDS for PPPs to ignore.
-            reader = csv_reader(document_type_csv_url)
-            ignore = [row['Code'] for row in reader if row['PPP specific?']]
-            ignore.append('contractSchedule')
-            ignore.append('finalAudit')
 
             # Add codes from OCDS for PPPs.
             reader = csv_reader(f'{ppp_base_url}codelists/{basename}')
