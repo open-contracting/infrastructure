@@ -233,13 +233,11 @@ ignore = {
     'finalAudit',
     # https://github.com/open-contracting/standard/issues/870
     'contractSchedule',
-    # PPP-specific
+    # PPP-specific code or description
     'needsAssessment',
     'projectAdditionality',
     'financeAdditionality',
     'pppModeRationale',
-    'contractSchedule',
-    'riskProvisions',
     'riskComparison',
     'discountRate',
     'equityTransferCaps',
@@ -297,7 +295,7 @@ for basename in ocds_codelists:
             # Add codes from OCDS.
             reader = csv_reader(f'{ocds_base_url}codelists/documentType.csv')
             for row in reader:
-                if row['Code'] not in seen and row['Code'] != 'finalAudit':
+                if row['Code'] not in seen and row['Code'] not in ignore:
                     seen.append(row['Code'])
                     edit_code(row, oc4ids_codes, 'OCDS')
                     writer.writerow(row)
