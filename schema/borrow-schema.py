@@ -228,7 +228,34 @@ compare(schema['definitions'], infra_definitions, ocds_definitions,
         'schema/project-level/project-schema.json#/definitions', 'definitions')
 
 # https://docs.google.com/spreadsheets/d/1ttXgMmmLvqBlPRi_4jAJhIobjnCiwMv13YwGfFOnoJk/edit#gid=0
-document_type_csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS1VCdsV-Xwvsh6QnK2z9lcpLRyfc472dtpFTicS8C6Yul2MONPYw08lBLd8j55mnerjya9T4qCiekT/pub?gid=0&single=true&output=csv'  # noqa: E501
+ignore = {
+    # https://github.com/open-contracting/infrastructure/issues/269
+    'finalAudit',
+    # https://github.com/open-contracting/standard/issues/870
+    'contractSchedule',
+    # PPP-specific code or description
+    'needsAssessment',
+    'projectAdditionality',
+    'financeAdditionality',
+    'pppModeRationale',
+    'riskComparison',
+    'discountRate',
+    'equityTransferCaps',
+    'financeArrangements',
+    'guaranteeReports',
+    'grants',
+    'servicePayments',
+    'landTransfer',
+    'assetTransfer',
+    'revenueShare',
+    'otherGovernmentSupport',
+    'tariffMethod',
+    'tariffReview',
+    'tariffs',
+    'tariffIllustration',
+    'handover',
+    'financialStatement',
+}
 
 # Copy the OCDS codelists.
 for basename in ocds_codelists:
@@ -253,11 +280,6 @@ for basename in ocds_codelists:
             writer.writeheader()
             seen = []
 
-            # Find which codes from OCDS for PPPs to ignore.
-            reader = csv_reader(document_type_csv_url)
-            ignore = [row['Code'] for row in reader if row['PPP specific?']]
-            ignore.append('contractSchedule')
-
             # Add codes from OCDS for PPPs.
             reader = csv_reader(f'{ppp_base_url}codelists/{basename}')
             for row in reader:
@@ -273,7 +295,7 @@ for basename in ocds_codelists:
             # Add codes from OCDS.
             reader = csv_reader(f'{ocds_base_url}codelists/documentType.csv')
             for row in reader:
-                if row['Code'] not in seen:
+                if row['Code'] not in seen and row['Code'] not in ignore:
                     seen.append(row['Code'])
                     edit_code(row, oc4ids_codes, 'OCDS')
                     writer.writerow(row)
