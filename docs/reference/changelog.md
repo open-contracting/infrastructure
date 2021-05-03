@@ -57,7 +57,8 @@ Added:
 
 Removed:
 
-* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'finalAudit'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'finalAudit' (use 'technicalAuditReport' or 'financialAuditReport')
+* [#321](https://github.com/open-contracting/infrastructure/issues/269) 'contractSchedule' (use 'contractAnnexe')
 
 ## [0.9.2] - 2020-06-29
 
