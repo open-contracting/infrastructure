@@ -147,7 +147,7 @@ msgstr ""
 msgid "If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects."
 msgstr ""
 "Si los datos de compras públicas con los cuales trabaja están en formato "
-"OCDS, revise la guía de [identificadores de proyecto en OCDS)[identifiers] "
+"OCDS, revise la guía de [identificadores de proyecto en OCDS](identifiers) "
 "para más información sobre dónde encontrar identificadores de proyecto."
 
 #: ../../docs/guidance/using.md:53
