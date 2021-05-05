@@ -2,38 +2,26 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
-# James McKinney, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
-"PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: James McKinney, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/guidance/publishing.md:1
 msgid "Publishing data from an infrastructure transparency portal"
 msgstr "Publicando datos desde un portal de transparencia en infraestructura"
 
 #: ../../docs/guidance/publishing.md:3
-msgid ""
-"OC4IDS can be used to publish standardized open data on infrastructure "
-"projects where information is already collected and disclosed through "
-"infrastructure transparency portals, whether by CoST Multi-Stakeholder "
-"Groups, government agencies or civil society organizations."
+msgid "OC4IDS can be used to publish standardized open data on infrastructure projects where information is already collected and disclosed through infrastructure transparency portals, whether by CoST Multi-Stakeholder Groups, government agencies or civil society organizations."
 msgstr ""
 "OC4IDS puede ser usado para publicar datos abiertos estandarizados sobre "
 "proyectos de infraestructura donde la información ya es recolectada y "
@@ -42,150 +30,102 @@ msgstr ""
 "de la sociedad civil."
 
 #: ../../docs/guidance/publishing.md:5
-msgid ""
-"Publishing standardized open data reduces barriers to use of data and "
-"supports the development of reusable tools and methodologies for working "
-"with data on infrastructure projects."
+msgid "Publishing standardized open data reduces barriers to use of data and supports the development of reusable tools and methodologies for working with data on infrastructure projects."
 msgstr ""
-"Publicar datos abiertos estandarizados reduce las barreras de uso de datos y"
-" apoya el desarrollo de herramientas y metodologías reutilizables para "
+"Publicar datos abiertos estandarizados reduce las barreras de uso de datos y "
+"apoya el desarrollo de herramientas y metodologías reutilizables para "
 "trabajar con datos de proyectos de infraestructura."
 
 #: ../../docs/guidance/publishing.md:7
-msgid ""
-"If you also collect detailed data on contracting processes, this can be "
-"published using the [Open Contracting Data Standard (OCDS)](https://standard"
-".open-contracting.org/1.1/en/)."
+msgid "If you also collect detailed data on contracting processes, this can be published using the [Open Contracting Data Standard (OCDS)](https://standard.open-contracting.org/1.1/en/)."
 msgstr ""
 "Si usted también recolecta datos detallados sobre procesos de contratación, "
 "estos pueden ser publicados usando el [Estándar de Datos de Contrataciones "
-"Abiertas (OCDS, por sus siglas en inglés)](https://standard.open-"
-"contracting.org/1.1/es/)."
+"Abiertas (OCDS, por sus siglas en inglés)](https://standard.open-contracting."
+"org/1.1/en/)."
 
-#: ../../docs/guidance/publishing.md:1
+#: ../../docs/guidance/publishing.md:9
 msgid "Linking to related information"
 msgstr "Enlaces a información relacionada"
 
-#: ../../None:1
-msgid ""
-"Infrastructure transparency portal creators should consider what other types"
-" of information might be important to citizens, in addition to the in depth "
-"scrutiny related information in OC4IDS."
+#: ../../docs/guidance/publishing.md:9
+msgid "Infrastructure transparency portal creators should consider what other types of information might be important to citizens, in addition to the in depth scrutiny related information in OC4IDS."
 msgstr ""
 "Los creadores de portales de transparencia en infraestructura deberían "
 "considerar qué otros tipos de información podrían ser importantes para los "
 "ciudadanos, además de la información detallada en OC4IDS que permite un "
 "escrutinio profundo."
 
-#: ../../None:3
-msgid ""
-"For example, [Highways England](https://highwaysengland.co.uk/roads/) "
-"provides links to congestion and traffic restriction information alongside "
-"information on roads projects."
+#: ../../docs/guidance/publishing.md:11
+msgid "For example, [Highways England](https://highwaysengland.co.uk/roads/) provides links to congestion and traffic restriction information alongside information on roads projects."
 msgstr ""
-"Por ejemplo, [Highways England](https://highwaysengland.co.uk/roads/) provee"
-" información sobre congestiones y restricciones en el tráfico además de "
+"Por ejemplo, [Highways England](https://highwaysengland.co.uk/roads/) provee "
+"información sobre congestiones y restricciones en el tráfico además de "
 "información sobre proyectos de rutas."
 
-#: ../../docs/guidance/publishing.md:21
+#: ../../docs/guidance/publishing.md:17
 msgid "Getting started"
 msgstr "Para empezar"
 
-#: ../../docs/guidance/publishing.md:23
-msgid ""
-"*Some of the following steps may require support from a technical expert. "
-"You can also contact the OC4IDS Helpdesk ([data@open-"
-"contracting.org](mailto:data@open-contracting.org)) for guidance.*"
+#: ../../docs/guidance/publishing.md:19
+msgid "*Some of the following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*"
 msgstr ""
 "*Algunos de los pasos siguientes pueden requerir la ayuda de un experto "
-"técnico. Usted también puede contactar con el Helpdesk de OC4IDS ([data"
-"@open-contracting.org](mailto:data@open-contracting.org)) para orientación.*"
+"técnico. Usted también puede contactar con el Helpdesk de OC4IDS ([data@open-"
+"contracting.org](mailto:data@open-contracting.org)) para orientación.*"
 
-#: ../../docs/guidance/publishing.md:25
+#: ../../docs/guidance/publishing.md:21
 msgid "(1) Make a commitment"
 msgstr "(1) Hacer un compromiso"
 
-#: ../../docs/guidance/publishing.md:27
-msgid ""
-"Consider making or advocating for a public commitment to publish "
-"standardized open data using OC4IDS and OCDS."
+#: ../../docs/guidance/publishing.md:23
+msgid "Consider making or advocating for a public commitment to publish standardized open data using OC4IDS and OCDS."
 msgstr ""
 "Considere hacer o abogar por un compromiso público para publicar datos "
 "abiertos estandarizados usando OC4IDS u OCDS."
 
-#: ../../docs/guidance/publishing.md:29
-msgid ""
-"Commitments are important to help align implementation with the goals of "
-"publishing open data and to help overcome technical, political or "
-"bureaucratic barriers to publication."
+#: ../../docs/guidance/publishing.md:25
+msgid "Commitments are important to help align implementation with the goals of publishing open data and to help overcome technical, political or bureaucratic barriers to publication."
 msgstr ""
 "Los compromisos son importantes para ayudar a alinear la implementación con "
 "los objetivos de la publicación de datos abiertos y para ayudar a superar "
 "barreras técnicas, políticas o burocráticas a la publicación."
 
+#: ../../docs/guidance/publishing.md:27
+msgid "Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start."
+msgstr ""
+"Las solicitudes para adherirse a [CoST](http://infrastructuretransparency."
+"org/) pueden usarse para realizar un compromiso, o si su país es un miembro "
+"de la [Open Government Partnership](https://www.opengovpartnership.org/), su "
+"Plan de Acción Nacional es otro buen lugar para empezar."
+
+#: ../../docs/guidance/publishing.md:29
+msgid "Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST."
+msgstr ""
+
 #: ../../docs/guidance/publishing.md:31
-msgid ""
-"Applications to join [CoST](http://infrastructuretransparency.org/) can be "
-"used to make a commitment or if your country is a member of the [Open "
-"Government Partnership](https://www.opengovpartnership.org/), your National "
-"Action Plan is another great place to start."
-msgstr ""
-"Las solicitudes para adherirse a "
-"[CoST](http://infrastructuretransparency.org/) pueden usarse para realizar "
-"un compromiso, o si su país es un miembro de la [Open Government "
-"Partnership](https://www.opengovpartnership.org/), su Plan de Acción "
-"Nacional es otro buen lugar para empezar."
-
-#: ../../docs/guidance/publishing.md:33
-msgid ""
-"Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making "
-"commitments related to OCDS. Refer to the [CoST and OGP guidance "
-"note](http://infrastructuretransparency.org/wp-content/uploads/2018/07"
-"/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments "
-"related to CoST."
-msgstr ""
-"Vea el [recorrido de implementación OCDS](https://standard.open-contracting.org/latest/es/guidance/design/) para información y recursos sobre cómo hacer "
-"compromisos relacionados a OCDS. Consulte la [nota de guía de CoST y "
-"OGP](http://infrastructuretransparency.org/wp-content/uploads/2018/07/GN-"
-"Spanish-CoSTOGP-WebV2.pdf) para orientación sobre cómo hacer compromisos OGP"
-" relacionados a CoST."
-
-#: ../../docs/guidance/publishing.md:35
 msgid "(2a) Map project-level data and summary contracting process data"
 msgstr ""
 "(2a) Mapear datos a nivel de proyecto y datos de resumen de procesos de "
 "contratación"
 
-#: ../../docs/guidance/publishing.md:37
+#: ../../docs/guidance/publishing.md:33
 msgid "Map existing data structures to [OC4IDS](../../projects/index)."
+msgstr "Mapee estructuras de datos existentes a [OC4IDS](../../projects/index)."
+
+#: ../../docs/guidance/publishing.md:35
+msgid "The [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) can be used to document your mapping."
 msgstr ""
-"Mapee estructuras de datos existentes a [OC4IDS](../../projects/index)."
+"La [Planilla de Mapeo a Nivel de Campos OC4IDS](https://www.open-contracting."
+"org/resources/oc4ids-field-level-mapping-template/) puede usarse para "
+"documentar el mapeo."
 
-#: ../../docs/guidance/publishing.md:1 ../../docs/guidance/publishing.md:1
-#: ../../docs/guidance/publishing.md:1
-msgid "Tip"
-msgstr "Consejo"
-
-#: ../../None:1
-msgid ""
-"The [OC4IDS Field-Level Mapping Template](https://www.open-"
-"contracting.org/resources/oc4ids-field-level-mapping-template/) can be used "
-"to document your mapping."
-msgstr ""
-"La [Planilla de Mapeo a Nivel de Campos OC4IDS](https://www.open-"
-"contracting.org/resources/oc4ids-field-level-mapping-template/) puede usarse"
-" para documentar el mapeo."
-
-#: ../../docs/guidance/publishing.md:49
+#: ../../docs/guidance/publishing.md:39
 msgid "Your mapping might identify:"
 msgstr "Su mapeo puede identificar:"
 
-#: ../../docs/guidance/publishing.md:51
-msgid ""
-"**Gaps in your data** where data in OC4IDS is not currently collected or "
-"disclosed in your system. Use OC4IDS as a guide to the information that is "
-"important to users and consider whether your system and business processes "
-"could be updated to collect and publish additional information."
+#: ../../docs/guidance/publishing.md:41
+msgid "**Gaps in your data** where data in OC4IDS is not currently collected or disclosed in your system. Use OC4IDS as a guide to the information that is important to users and consider whether your system and business processes could be updated to collect and publish additional information."
 msgstr ""
 "**Faltantes en sus datos** donde datos en OC4IDS no están siendo "
 "recolectados o publicados en su sistema. Use OC4IDS como una guía a la "
@@ -193,56 +133,28 @@ msgstr ""
 "procesos de negocio pueden ser actualizados para recolectar y publicar "
 "información adicional."
 
-#: ../../docs/guidance/publishing.md:53
-msgid ""
-"**Gaps in OC4IDS** where data is collected by your system but doesn't map to"
-" OC4IDS. Rather than being excluded from your publication, such information "
-"should be included as additional fields in your data. Refer to [extending "
-"the schema](../reference/index.md#extending-the-schema) for information on "
-"including additional fields in your data."
+#: ../../docs/guidance/publishing.md:43
+msgid "**Gaps in OC4IDS** where data is collected by your system but doesn't map to OC4IDS. Rather than being excluded from your publication, such information should be included as additional fields in your data. Refer to [extending the schema](../reference/index.md#extending-the-schema) for information on including additional fields in your data."
 msgstr ""
-"**Brechas en OC4IDS** donde los datos son recoletados por su sistema pero no"
-" tienen un mapeo a OC4IDS. En lugar de excluirlos de su publicación, esa "
-"información debería ser incluida como campos adicionales en sus datos. Vea "
-"la sección de [extendiendo el esquema](../reference/index.md#extending-the-"
-"schema) para información sobre cómo incluir campos adicionales en sus datos."
 
-#: ../../docs/guidance/publishing.md:56
+#: ../../docs/guidance/publishing.md:45
 msgid "(2b) Map detailed contracting process data"
 msgstr "(2b) Mapear datos detallados de procesos de contratación"
 
-#: ../../docs/guidance/publishing.md:58
-msgid ""
-"If you collect detailed data on contracting processes, refer to the [OCDS "
-"implementation journey](https://standard.open-contracting.org/latest/en/guidance/map/) for "
-"information and resources about mapping and publishing your contracting data"
-" using OCDS."
+#: ../../docs/guidance/publishing.md:47
+msgid "If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/map/) for information and resources about mapping and publishing your contracting data using OCDS."
 msgstr ""
-"Si usted recolecta datos detallados sobre procesos de contratación, vea el "
-"[viaje de implementación OCDS](https://standard.open-contracting.org/latest/es/guidance/map/) para información y recursos sobre cómo mapear"
-" y publicar sus datos de contrataciones usando OCDS."
 
-#: ../../docs/guidance/publishing.md:60
-msgid ""
-"Include an identifier for the infrastructure project that each contracting "
-"process relates to in your OCDS data, following the guidance on [project "
-"identifiers in OCDS](identifiers.md#project-identifiers-in-ocds)."
+#: ../../docs/guidance/publishing.md:49
+msgid "Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](identifiers.md#project-identifiers-in-ocds)."
 msgstr ""
-"Incluya un identificador para el proyecto de infraestructura al cual se "
-"relaciona cada proceso de contratación en sus datos OCDS, siguiendo la guía "
-"en [identificadores de proyecto en OCDS](identifiers.md#project-"
-"identifiers-in-ocds)."
 
-#: ../../docs/guidance/publishing.md:62
+#: ../../docs/guidance/publishing.md:51
 msgid "(3) Build your data, systems and processes"
 msgstr "(3) Construir sus datos, sistemas y procesos"
 
-#: ../../docs/guidance/publishing.md:64
-msgid ""
-"Create an OC4IDS JSON file for each project your system has information on "
-"and use the [OC4IDS Data Review Tool](https://standard.open-"
-"contracting.org/infrastructure/review/) to check that the files are "
-"structurally correct against OC4IDS."
+#: ../../docs/guidance/publishing.md:53
+msgid "Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that the files are structurally correct against OC4IDS."
 msgstr ""
 "Cree un archivo OC4IDS JSON por cada proyecto del cual su sistema tenga "
 "información y use la [Herramienta de revisión de datos "
@@ -250,107 +162,81 @@ msgstr ""
 "comprobar que los archivos son estructuralmente correctos de acuerdo a "
 "OC4IDS."
 
-#: ../../None:1
-msgid ""
-"You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to "
-"get started."
+#: ../../docs/guidance/publishing.md:55
+msgid "You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started."
 msgstr ""
-"Puede usar un [archivo de ejemplo OC4IDS JSON en "
-"blanco](../../_static/blank.json) para empezar."
 
-#: ../../docs/guidance/publishing.md:76
-msgid ""
-"If you are also publishing contracting data using OCDS, create an OCDS "
-"release each time the data about a contracting process changes and use the "
-"[OCDS Data Review Tool](https://standard.open-contracting.org/review/) to "
-"check your OCDS releases."
+#: ../../docs/guidance/publishing.md:59
+msgid "If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check your OCDS releases."
 msgstr ""
 "Si también está publicando datos de contrataciones usando OCDS, cree un "
-"release OCDS cada vez que los datos sobre el proceso de contratación cambien"
-" y use la [Herramienta de revisión de datos OCDS](https://standard.open-"
+"release OCDS cada vez que los datos sobre el proceso de contratación cambien "
+"y use la [Herramienta de revisión de datos OCDS](https://standard.open-"
 "contracting.org/review/) para verificar sus releases OCDS."
 
-#: ../../docs/guidance/publishing.md:78
-msgid ""
-"Make sure you have systems and/or business processes in place to keep the "
-"data you produce up to date."
+#: ../../docs/guidance/publishing.md:61
+msgid "Make sure you have systems and/or business processes in place to keep the data you produce up to date."
 msgstr ""
 "Asegúrese de que existen los sistemas y/o procesos de negocio necesarios "
 "para mantener actualizados los datos que produce."
 
-#: ../../docs/guidance/publishing.md:80
+#: ../../docs/guidance/publishing.md:63
 msgid "(4) Publish your data"
 msgstr "(4) Publicar sus datos"
 
-#: ../../docs/guidance/publishing.md:82
-msgid ""
-"Publish your OC4IDS JSON fields (as either static files or via an API) at a "
-"stable URL, such as:"
+#: ../../docs/guidance/publishing.md:65
+msgid "Publish your OC4IDS JSON fields (as either static files or via an API) at a stable URL, such as:"
 msgstr ""
 "Publique sus campos JSON OC4IDS (ya sea como archivos estáticos o a través "
 "de una API) en una URL estable, tal como:"
 
-#: ../../docs/guidance/publishing.md:84
+#: ../../docs/guidance/publishing.md:67
 msgid "http://{your website}/opendata/projects/{project-id}.json"
 msgstr "http://{su sitio}/opendata/projects/{project-id}.json"
 
-#: ../../docs/guidance/publishing.md:86
-msgid ""
-"If you are also publishing contracting data using OCDS, publish each new "
-"release of data as a JSON file at a stable URL such as:"
+#: ../../docs/guidance/publishing.md:69
+msgid "If you are also publishing contracting data using OCDS, publish each new release of data as a JSON file at a stable URL such as:"
 msgstr ""
 "Si también está publicando datos de contrataciones usando OCDS, publique "
 "cada \"release\" nuevo de datos como un archivo JSON en una URL estable tal "
 "como:"
 
-#: ../../docs/guidance/publishing.md:88
+#: ../../docs/guidance/publishing.md:71
 msgid "http://{your website}/opendata/contracting/{ocid}/{release-id}.json"
 msgstr "http://{your website}/opendata/contracting/{ocid}/{release-id}.json"
 
-#: ../../docs/guidance/publishing.md:90
-msgid ""
-"Make sure your project-level files include links in the "
-"`contractingProcesses/releases` section to each related OCDS file."
+#: ../../docs/guidance/publishing.md:73
+msgid "Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file."
 msgstr ""
 "Asegúrese de que sus archivos a nivel de proyecto incluyan enlaces a los "
 "archivos OCDS relacionados en la sección `contractingProcesses/releases`."
 
-#: ../../docs/guidance/publishing.md:92
+#: ../../docs/guidance/publishing.md:75
 msgid "To make your data easier to access, consider providing:"
 msgstr ""
 "Para hacer que sus datos sean más fáciles de acceder, considere proveer:"
 
-#: ../../docs/guidance/publishing.md:94
+#: ../../docs/guidance/publishing.md:77
 msgid "A regularly updated bulk file of all your data for download"
 msgstr ""
-"Un archivo masivo actualizado regularmente con todos sus datos para "
-"descargar"
+"Un archivo masivo actualizado regularmente con todos sus datos para descargar"
 
-#: ../../docs/guidance/publishing.md:95
+#: ../../docs/guidance/publishing.md:78
 msgid "Flattened (spreadsheet or CSV) representations of your data"
 msgstr "Representaciones serializadas de sus datos (hojas de cálculo o CSV)"
 
-#: ../../docs/guidance/publishing.md:96
+#: ../../docs/guidance/publishing.md:79
 msgid "A page on your website with details of how users can access your data"
 msgstr ""
 "Una página en su sitio Web con detalles sobre cómo los usuarios pueden "
 "acceder a los datos."
 
-#: ../../None:1
-msgid ""
-"[Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used "
-"to convert between JSON and spreadsheet/CSV format data."
+#: ../../docs/guidance/publishing.md:81
+msgid "[Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used to convert between JSON and spreadsheet/CSV format data."
 msgstr ""
 "El [flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) puede ser "
 "usado para conversiones entre los formatos JSON y hojas de cálculo/CSV."
 
-#: ../../docs/guidance/publishing.md:108
-msgid ""
-"Refer to the [OCDS documentation](https://standard.open-"
-"contracting.org/1.1/en/guidance/build/hosting/#data-files-apis-and-"
-"discovery) for more information on providing data in multiple formats."
+#: ../../docs/guidance/publishing.md:85
+msgid "Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats."
 msgstr ""
-"Consulte la [documentación de OCDS](https://standard.open-"
-"contracting.org/1.1/es/guidance/build/hosting/#data-files-apis-and-"
-"discovery) para más información sobre cómo proveer datos en múltiples "
-"formatos."

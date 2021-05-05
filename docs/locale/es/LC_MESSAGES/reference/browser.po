@@ -2,41 +2,32 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Romina Fernandez <rfernandez@cds.com.py>, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
-"PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2019\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/reference/browser.md:1
 msgid "Schema browser"
-msgstr "Navegador del Esquema"
+msgstr "Navegador de esquema"
 
 #: ../../docs/reference/browser.md:3
 msgid "The OC4IDS schema can be explored using the browser below."
-msgstr ""
-"Puede explorar el esquema OC4IDS usando el navegador ubicado más abajo."
+msgstr "Puede explorar el esquema OC4IDS usando el navegador ubicado más abajo."
 
 #: ../../docs/reference/browser.md:5
-msgid ""
-"Click on schema elements to expand the tree, or use the '+' icon to expand "
-"all elements. Use { } to view the underlying schema for any section. "
-"Required fields are indicated in **bold**."
+msgid "Click on schema elements to expand the tree, or use the '+' icon to expand all elements. Use { } to view the underlying schema for any section. Required fields are indicated in **bold**."
 msgstr ""
-"Haga clic en los elementos del esquema para expandir el árbol, o use el "
-"ícono '+' para expandir todos los elementos. Use {} para visualizar el "
-"esquema subyacente para cada sección. Los campos requeridos están resaltados"
-" en **negrita**."
+"Haga click en los elementos del esquema para expandir el árbol, o usa el "
+"ícono de '+' para expandir todos los elementos. Usa { } para ver el esquema "
+"subyacente para cada sección. Los campos requeridos están indicados en "
+"**bold**."

@@ -1,26 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
+# Copyright (C) 2021 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-# 
-# Translators:
-# James McKinney, 2020
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-24 22:01-0400\n"
-"PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: James McKinney, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"POT-Creation-Date: 2021-05-04 21:10-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: schema/project-level/codelists/contractNature.csv
 #: schema/project-level/codelists/contractingProcessStatus.csv
@@ -29,6 +24,7 @@ msgstr ""
 #: schema/project-level/codelists/geometryType.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
+#: schema/project-level/codelists/metricID.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
 #: schema/project-level/codelists/projectSector.csv
@@ -37,6 +33,7 @@ msgstr ""
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Code"
 msgstr "Código"
 
@@ -47,6 +44,7 @@ msgstr "Código"
 #: schema/project-level/codelists/geometryType.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
+#: schema/project-level/codelists/metricID.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
 #: schema/project-level/codelists/projectSector.csv
@@ -55,6 +53,7 @@ msgstr "Código"
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Title"
 msgstr "Título"
 
@@ -64,6 +63,7 @@ msgstr "Título"
 #: schema/project-level/codelists/geometryType.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
+#: schema/project-level/codelists/metricID.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
 #: schema/project-level/codelists/projectSector.csv
@@ -72,6 +72,7 @@ msgstr "Título"
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Description"
 msgstr "Descripción"
 
@@ -98,8 +99,8 @@ msgid ""
 "This contracting process relates to build or construction work for the "
 "project."
 msgstr ""
-"Este proceso de contratación está relacionado a trabajos de construcción del"
-" proyecto."
+"Este proceso de contratación está relacionado a trabajos de construcción del "
+"proyecto."
 
 #. Title
 #: schema/project-level/codelists/contractNature.csv:3
@@ -137,8 +138,7 @@ msgstr "Activo"
 #. Description
 #: schema/project-level/codelists/contractingProcessStatus.csv:2
 msgid "A contract was awarded, but not all contracts have ended."
-msgstr ""
-"Un contrato fue adjudicado, pero no todos los contratos han terminado."
+msgstr "Un contrato fue adjudicado, pero no todos los contratos han terminado."
 
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:3
@@ -159,6 +159,7 @@ msgstr ""
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Extension"
 msgstr "Extensión"
 
@@ -169,204 +170,289 @@ msgstr "Fuente"
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:1
-msgid "Value for money analysis"
-msgstr "Análisis de valor por dinero"
+msgid "Notice of planned procurement"
+msgstr "Aviso de compra planeada"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:1
 msgid ""
-"A summary of the value for money analysis carried out for the project, along"
-" with supporting figures, calculations and business case, based on projected"
-" or actual procurement outcomes."
+"A notice published by the procuring entity regarding their plans for "
+"future procurement, also known as a prior information notice. The "
+"procuring entity can use the notice of planned procurement as a tender "
+"notice."
 msgstr ""
-"Un resumen del análisis del valor por dinero llevado a cabo para el "
-"proyecto, junto con figuras de apoyo, cálculos y casos de negocio, basados "
-"en resultados de adquisiciones proyectadas o reales."
+"Un aviso publicado por la entidad procuradora sobre los planes para las "
+"compras futuras, también conocidos como un aviso de información previa. La "
+"entidad procuradora puede usar el aviso de compra planeada como un aviso de "
+"licitación."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:2
-msgid "Technical Specifications"
-msgstr "Especificaciones Técnicas"
+msgid "Tender notice"
+msgstr "Aviso de licitación"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:2
-msgid "Detailed technical information about goods or services to be provided."
-msgstr "Información técnica detallada sobre los bienes o servicios a proveer."
+msgid ""
+"The notice published by the procuring entity inviting interested "
+"suppliers to submit a request for participation, a bid, or both. This can"
+" be a link to a downloadable document, to a web page, or to an official "
+"gazette in which the notice is contained."
+msgstr ""
+"El aviso publicado por la entidad procuradora invitando a proveedores "
+"interesados a presentar una solicitud para participar, una oferta o ambas. "
+"Esto puede ser un link a un documento descargable, una página web, o una "
+"gaceta oficial en donde se encuentra el aviso. "
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:3
-msgid "Service descriptions"
-msgstr "Descripciones de servicios"
+msgid "Award notice"
+msgstr "Aviso de adjudicación"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:3
-msgid "A high-level description of the services"
-msgstr "Una descripción de alto nivel de los servicios"
+msgid ""
+"The formal notice that gives details of the contract award. This can be a"
+" link to a downloadable document, to a web page, or to an official "
+"gazette in which the notice is contained."
+msgstr ""
+"El aviso formal que da detalles sobre la adjudicación del contrato. Esto "
+"puede ser un link a un documento descargable, una página web, o una gaceta "
+"oficial en donde se encuentra el aviso. "
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:4
-msgid "Estimated demand"
-msgstr "Demanda estimada"
+msgid "Contract notice"
+msgstr "Aviso de contrato"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:4
 msgid ""
-"A narrative describing the estimated demand to be served (annually) by the "
-"project."
+"The formal notice that gives details of a contract being signed and valid"
+" to start implementation. This can be a link to a downloadable document, "
+"to a web page, or to an official gazette in which the notice is "
+"contained."
 msgstr ""
-"Una narrativa que describe la demanda estimada a ser servida (anualmente) "
-"por el proyecto."
+"El aviso formal que da detalles sobre un contrato ya firmado y válido para "
+"empezar la implementación. Esto puede ser un link a un documento "
+"descargable, una página web, o una gaceta oficial en donde se encuentra el "
+"aviso. "
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:5
-msgid "Contract draft"
-msgstr "Borrador de contrato"
+msgid "Completion certificate"
+msgstr "Certificado de terminación"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:5
-msgid "A draft or pro-forma copy of the contract."
-msgstr "Un borrador o copia pro-forma del contrato."
+msgid ""
+"A completion certificate issued by a relevant authority providing "
+"evidence that works were completed to a certain level of quality. "
+"Completion certificates might only be relevant for particular kinds of "
+"contracting processes or projects."
+msgstr ""
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:6
-msgid "Signed Contract"
-msgstr "Contrato Firmado"
+msgid "Procurement plan"
+msgstr "Plan de adquisiciones"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:6
 msgid ""
-"A copy of the signed contract. Consider providing both machine-readable "
-"(e.g. original PDF, Word or Open Document format files), and a separate "
-"document entry for scanned-signed pages where this is required."
+"Documentation that sets out the basis for this particular contracting "
+"process."
 msgstr ""
-"Una copia del contrato firmado. Considere proveer tanto un documento legible"
-" por computadora (p.ej. PDF original, o formato de Word u Open Document) "
-"como un documento separado para páginas firmadas digitalizadas donde sea "
-"requerido."
+"Documentación que establece las bases para este proceso de contratación en "
+"particular."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:7
-msgid "Feasibility study"
-msgstr "Estudio de factibilidad"
+msgid "Bidding documents"
+msgstr "Documentos de ofertas"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:7
 msgid ""
-"Documentation of feasibility studies carried out for this contracting "
-"process, providing information on net benefits or costs of the proposed "
-"goods, works or services."
+"Documentation for potential suppliers, describing the goals of the "
+"contract (e.g. goods and services to be procured), and the bidding "
+"process."
 msgstr ""
-"Documentación de la evaluación de factibilidad llevada a cabo para este "
-"proceso de contratación, proveyendo información sobre los beneficios o "
-"costos netos de los bienes, obras o servicios propuestos."
+"Documentación para proveedores potenciales, describiendo las metas del "
+"contrato (p.ej. bienes y servicios a contratar) y el proceso de envío de "
+"propuestas."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:8
-msgid "Environmental Impact"
-msgstr "Impacto Ambiental"
+msgid "Technical specifications"
+msgstr "Especificaciones técnicas"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:8
 msgid ""
-"Documentation of assessments of the environmental impacts (e.g. impacts on "
-"flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) "
-"and mitigation measures (e.g. pollution control, low carbon solutions, "
-"sustainable timber etc.) for this contracting process or project."
+"Tendering requirements that: lay down the characteristics of goods or "
+"services to be procured, including quality, performance, safety and "
+"dimensions, or the processes and methods for their production or "
+"provision; or address terminology, symbols, packaging, marking or "
+"labelling requirements, as they apply to a good or service."
 msgstr ""
-"Documentación de las evaluaciones de impacto ambiental (ej. impacto en "
-"flora, fauna y bosques, áreas naturales, emisiones de carbono, etc.) y "
-"medidas de mitigación (ej. control de contaminación, soluciones bajas en "
-"carbono, madera sustentable, etc.) para este proceso de contratación o "
-"proyecto."
+"Requisitos de oferta que:  expliquen las características de los bienes o "
+"servicios por comprar, incluyendo calidad, rendimiento, seguridad, "
+"dimensiones, o procesos y métodos para su producción o abastecimiento; o que "
+"refieran a requisitos de terminología, símbolos, empaque, marcado o "
+"etiquetado, según se apliquen a un bien o servicio."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:9
-msgid "Final Audit"
-msgstr "Auditoría Final"
+msgid "Evaluation criteria"
+msgstr "Criterios de evaluación"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:9
-msgid ""
-"Documentation of a final audit carried out at the end of contract "
-"implementation."
-msgstr ""
-"Documentación de una auditoría final llevada a cabo al final de la "
-"implementación de un contrato."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:10
-msgid "Tender Notice"
-msgstr "Aviso de Licitación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:10
-msgid ""
-"The formal notice that gives details of a tender. This may be a link to a "
-"downloadable document, to a web page, or to an official gazette in which the"
-" notice is contained."
-msgstr ""
-"El aviso formal que da los detalles de una licitación. Este puede ser un "
-"enlace a un documento descargable, a un sitio web o a una gaceta oficial en "
-"la cual se contiene el aviso. "
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:11
-msgid "Evaluation Committee Details"
-msgstr "Detalles de comité de evaluación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:11
-msgid "Information on the constitution of the evaluation committee"
-msgstr "Información de la constitución del comité de evaluación"
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:12
-msgid "Request for Qualification"
-msgstr "Pedido de Calificación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:12
-msgid ""
-"The set of documents issued by the procuring authority that constitute the "
-"basis of the qualification and potentially the pre-selection of candidates "
-"(the short list). Qualified (or short-listed candidates) will then be "
-"invited to submit a proposal (or to enter into a new phase prior to bid "
-"submission, such as a dialogue phase or interactive phase)."
-msgstr ""
-"El conjunto de documentos emitidos por la entidad compradora que constituye "
-"la base de la calificación y potencialmente la pre-selección de candidatos. "
-"Los candidatos calificados serán invitados luego a enviar una propuesta (o a"
-" entrar a una nueva fase previa a la presentación de ofertas, tales como una"
-" fase de diálogo o una fase interactiva)."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:13
-msgid "Evaluation Criteria"
-msgstr "Criterios de Evaluación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:13
 msgid "Documentation on how bids will be evaluated."
 msgstr "Documentación sobre cómo se evaluarán las ofertas."
 
 #. Title
+#: schema/project-level/codelists/documentType.csv:10
+msgid "Evaluation report"
+msgstr "Reporte de evaluación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:10
+msgid ""
+"Documentation on the evaluation of the bids and the application of the "
+"evaluation criteria, including the justification for the award."
+msgstr ""
+"Documentación en la evaluación de ofertas y la aplicación de criterios de "
+"evaluación, incluyendo la justificación sobre la adjudicación."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:11
+msgid "Contract draft"
+msgstr "Borrador de contrato"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:11
+msgid "A draft or pro-forma copy of the contract."
+msgstr "Un borrador o copia pro-forma del contrato."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:12
+msgid "Signed contract"
+msgstr "Contrato firmado"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:12
+msgid ""
+"A copy of the signed contract. Consider providing both machine-readable "
+"(e.g. original PDF, Word or Open Document format files), and a separate "
+"document entry for scanned-signed pages where this is needed."
+msgstr ""
+"Una copia firmada del contrato. Considere dar una versión leíble por máquina "
+"(PDF original, Word o documentos en formato Open Document), y un documento "
+"separado para poner páginas firmadas y escaneadas cuando sea necesario."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:13
+msgid "Arrangements for ending contract"
+msgstr "Arreglos para finalizar un contrato"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:13
+msgid "Documentation of the arrangements for ending the contract(s)."
+msgstr "Documentación de los arreglos para terminar el contrato(s)."
+
+#. Title
 #: schema/project-level/codelists/documentType.csv:14
-msgid "Minutes"
-msgstr "Minutas"
+msgid "Physical progress reports"
+msgstr "Reportes de progreso físico"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:14
-msgid "Minutes of pre-bid meetings, or other relevant meetings."
+msgid ""
+"Documentation on the status of implementation, usually against key "
+"milestones."
 msgstr ""
-"Minutas de reuniones previas a las ofertas, u otras reuniones relevantes."
+"Documentación sobre el estado de la implementación, usualmente comparado con "
+"hitos clave."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:15
-msgid "Shortlisted Firms"
-msgstr "Firmas Preseleccionadas"
+msgid "Financial progress reports"
+msgstr "Reportes de progreso financiero"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:15
+msgid ""
+"Documentation providing dates and amounts of stage payments made (against"
+" total amount) and the source of those payments, including cost overruns,"
+" if any. Structured versions of this information can be provided through "
+"contract implementation transactions."
+msgstr ""
+"Documentación que provee fechas y montos de pagos realizados (contra el "
+"monto total) y el origen de esos pagos, incluyendo excesos de costos, si los "
+"hay. Se pueden proveer versiones estructuradas de esta información a través "
+"de las transacciones de implementación del contrato. "
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:16
+msgid "Public hearing notice"
+msgstr "Aviso de audiencia pública"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:16
+msgid ""
+"Documentation of any public hearings that took place as part of the "
+"planning for this contracting process."
+msgstr ""
+"Documentación de cualquier audiencia que ocurrió como parte de la planeación "
+"de este proceso de contratación."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:17
+msgid "Market studies"
+msgstr "Estudios de mercado"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:17
+msgid ""
+"Documentation of any market studies that took place as part of the "
+"planning for this contracting process."
+msgstr ""
+"Documentación de cualquier estudio de mercado que haya ocurrido como parte "
+"de la planeación de este proceso de contrato."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:18
+msgid "Eligibility criteria"
+msgstr "Criterios de elegibilidad"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:18
+msgid "Detailed documents about the eligibility of bidders."
+msgstr "Documentos detallados sobre la elegibilidad de los licitantes."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:19
+msgid "Clarifications to bidders questions"
+msgstr "Aclaraciones a las preguntas de los licitantes"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:19
+msgid ""
+"Documentation that provides replies to issues raised in pre-bid "
+"conferences or an enquiry processes."
+msgstr ""
+"Documentación que provee las respuestas a las cuestiones apuntadas en "
+"reuniones pre-ofertas o procesos de preguntas."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:20
+msgid "Shortlisted firms"
+msgstr "Empresas preseleccionadas"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:20
 msgid ""
 "Documentation providing information on shortlisted firms. Structured "
 "versions of this information can be provided using the bids extension."
@@ -376,289 +462,32 @@ msgstr ""
 "extensión de ofertas."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:16
-msgid "Negotiation Parameters"
-msgstr "Parámetros de negociación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:16
-msgid ""
-"A description of the parameters for negotiation with the preferred proponent"
-msgstr ""
-"Una descripción de los parámetros para la negociación con el proponente "
-"preferido."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:17
-msgid "Evaluation report"
-msgstr "Reporte de evaluación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:17
-msgid ""
-"Documentation on the evaluation of the bids and the application of the "
-"evaluation criteria, including the justification for the award"
-msgstr ""
-"Documentación sobre la evaluación de las ofertas y la aplicación de los "
-"criterios de evaluación, incluyendo la justificación para la adjudicación"
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:18
-msgid "Guarantees"
-msgstr "Garantías"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:18
-msgid ""
-"Documentation of guarantees relating to a contracting process or contract."
-msgstr ""
-"Documentación de garantías relacionadas con el proceso de contratación o el "
-"contrato."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:19
-msgid "Defaults"
-msgstr "Faltas"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:19
-msgid "Information on events of default"
-msgstr "Información de los eventos relacionados con faltas"
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:20
-msgid "Termination"
-msgstr "Terminación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:20
-msgid "Information on contract termination"
-msgstr "Información sobre terminación del contrato"
-
-#. Title
 #: schema/project-level/codelists/documentType.csv:21
-msgid "Performance report"
-msgstr "Reporte (informe) de desempeño"
+msgid "Environmental impact assessment"
+msgstr ""
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:21
-msgid "Performance assessment reports"
-msgstr "Reportes (informes) de evaluación de desempeño"
+msgid ""
+"Documentation of assessments of the environmental impacts (e.g. impacts "
+"on flora, fauna & woodlands, areas of natural beauty, carbon emissions "
+"etc.) and mitigation measures (e.g. pollution control, low carbon "
+"solutions, sustainable timber etc.) for this contracting process or "
+"project."
+msgstr ""
+"Documentación de las evaluaciones de impacto ambiental (ej. impacto en "
+"flora, fauna y bosques, áreas naturales, emisiones de carbono, etc.) y "
+"medidas de mitigación (ej. control de contaminación, soluciones bajas en "
+"carbono, madera sustentable, etc.) para este proceso de contratación o "
+"proyecto."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:22
-msgid "Notice of planned procurement"
-msgstr "Aviso de adquisición planeada"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:22
-msgid ""
-"A notice published by the procuring entity regarding their plans for future "
-"procurement, also known as a prior information notice. The procuring entity "
-"can use the notice of planned procurement as a tender notice."
-msgstr ""
-"Un aviso publicado por la entidad de adquisición acerca de sus planes para "
-"una futura compra, también conocida como aviso de información previa. La "
-"entidad de adquisición puede usar el aviso de adquisición planeada como un "
-"aviso de licitación."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:23
-msgid "Award notice"
-msgstr "Aviso de adjudicación"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:23
-msgid ""
-"The formal notice that gives details of the contract award. This can be a "
-"link to a downloadable document, to a web page, or to an official gazette in"
-" which the notice is contained."
-msgstr ""
-"El aviso formal que da detalles de la adjudicación del contrato. Esto puede "
-"ser un enlace a un documento descargable, una página web, o a una gaceta "
-"oficial en la que el aviso está contenido."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:24
-msgid "Contract notice"
-msgstr "Aviso de contrato"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:24
-msgid ""
-"The formal notice that gives details of a contract being signed and valid to"
-" start implementation. This can be a link to a downloadable document, to a "
-"web page, or to an official gazette in which the notice is contained."
-msgstr ""
-"El aviso formal que provee detalles de un contrato siendo firmado y válido "
-"para empezar la implementación. Este puede ser un enlace a un documento "
-"descargable, una página web o a una gaceta oficial en la que el aviso está "
-"contenido."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:25
-msgid "Completion certificate"
-msgstr "Certificado de finalización"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:25
-msgid ""
-"A completion certificate issued by a relevant authority providing evidence "
-"that works were completed to a certain level of quality. Completion "
-"certificates might only be relevant for particular kinds of contracting "
-"processes."
-msgstr ""
-"Un certificado de finalización expedido por la autoridad relevante que "
-"provee evidencia de que las obras fueron finalizadas hasta un cierto nivel "
-"de calidad. Los certificados de finalización podrían ser relevantes sólo "
-"para tipos particulares de procesos de contratación."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:26
-msgid "Procurement plan"
-msgstr "Plan de adquisiciones"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:26
-msgid ""
-"Documentation that sets out the basis for this particular contracting "
-"process."
-msgstr ""
-"Documentación que establece las bases para este proceso de contratación en "
-"particular."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:27
-msgid "Bidding documents"
-msgstr "Documentos de oferta"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:27
-msgid ""
-"Documentation for potential suppliers, describing the goals of the contract "
-"(e.g. goods and services to be procured), and the bidding process."
-msgstr ""
-"Documentación para proveedores potenciales, describiendo las metas del "
-"contrato (p.ej. bienes y servicios a contratar) y el proceso de envío de "
-"propuestas."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:28
-msgid "Arrangements for ending contract"
-msgstr "Arreglos para finalizar un contrato"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:28
-msgid "Documentation of the arrangements for ending the contract(s)."
-msgstr "Documentación de los arreglos para terminar el contrato(s)."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:29
-msgid "Contract schedules"
-msgstr "Calendario del contrato"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:29
-msgid ""
-"Any document which contains additional terms, obligations or information "
-"related to the contract, such as a schedule, appendix, annex, attachment or "
-"addendum."
-msgstr ""
-"Cualquier documento que contenga términos adicionales, obligaciones o "
-"información relacionada con el contrato, tal como un calendario, apéndice, "
-"anexo, adenda o adición."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:30
-msgid "Physical progress reports"
-msgstr "Reportes de progreso físico"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:30
-msgid ""
-"Documentation on the status of implementation, usually against key "
-"milestones."
-msgstr ""
-"Documentación sobre el estado de la implementación, usualmente comparado con"
-" hitos clave."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:31
-msgid "Financial progress reports"
-msgstr "Reportes de progreso financiero"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:31
-msgid ""
-"Documentation providing dates and amounts of stage payments made (against "
-"total amount) and the source of those payments, including cost overruns, if "
-"any. Structured versions of this information can be provided through "
-"contract implementation transactions."
-msgstr ""
-"Documentación que provee fechas y montos de pagos realizados (contra el "
-"monto total) y el origen de esos pagos, incluyendo excesos de costos, si los"
-" hay. Se pueden proveer versiones estructuradas de esta información a través"
-" de las transacciones de implementación del contrato. "
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:32
-msgid "Public hearing notice"
-msgstr "Aviso de audiencia pública"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:32
-msgid ""
-"Documentation of any public hearings that took place as part of the planning"
-" for this contracting process."
-msgstr ""
-"Documentación de cualquier audiencia que ocurrió como parte de la planeación"
-" de este proceso de contratación."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:33
-msgid "Market studies"
-msgstr "Estudios de mercado"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:33
-msgid ""
-"Documentation of any market studies that took place as part of the planning "
-"for this contracting process."
-msgstr ""
-"Documentación de cualquier estudio de mercado que haya ocurrido como parte "
-"de la planeación de este proceso de contrato."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:34
-msgid "Eligibility criteria"
-msgstr "Criterios de elegibilidad"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:34
-msgid "Detailed documents about the eligibility of bidders."
-msgstr "Documentos detallados sobre la elegibilidad de los licitantes."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:35
-msgid "Clarifications to bidders questions"
-msgstr "Aclaraciones a las preguntas de los licitantes"
-
-#. Description
-#: schema/project-level/codelists/documentType.csv:35
-msgid ""
-"Documentation that provides replies to issues raised in pre-bid conferences "
-"or an enquiry processes."
-msgstr ""
-"Documentación que provee las respuestas a las cuestiones apuntadas en "
-"reuniones pre-ofertas o procesos de preguntas."
-
-#. Title
-#: schema/project-level/codelists/documentType.csv:36
 msgid "Assessment of government's assets and liabilities"
 msgstr "Evaluación de los activos y responsabilidades del gobierno"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:36
+#: schema/project-level/codelists/documentType.csv:22
 msgid ""
 "Documentation covering assessments of the government's assets and "
 "liabilities related to this contracting process."
@@ -667,26 +496,26 @@ msgstr ""
 "del gobierno relacionados con este proceso de contratación."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:37
+#: schema/project-level/codelists/documentType.csv:23
 msgid "Provisions for management of risks and liabilities"
 msgstr "Cláusulas para el manejo de riesgos y responsabilidades"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:37
+#: schema/project-level/codelists/documentType.csv:23
 msgid ""
-"Documentation covering how risks will be managed as part of this contracting"
-" process."
+"Documentation covering how risks will be managed as part of this "
+"contracting process."
 msgstr ""
 "Documentación que cubre cómo se manejarán los riesgos como parte de este "
 "proceso de contratación."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:38
+#: schema/project-level/codelists/documentType.csv:24
 msgid "Winning bid"
 msgstr "Oferta ganadora"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:38
+#: schema/project-level/codelists/documentType.csv:24
 msgid ""
 "Documentation of the winning bid, including, wherever applicable, a full "
 "copy of the proposal received."
@@ -695,26 +524,26 @@ msgstr ""
 "completa de la oferta recibida."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:39
+#: schema/project-level/codelists/documentType.csv:25
 msgid "Complaints and decisions"
 msgstr "Quejas y decisiones"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:39
+#: schema/project-level/codelists/documentType.csv:25
 msgid ""
 "Documentation of any complaints received, or decisions in response to "
 "complaints."
 msgstr ""
-"Documentación de cualquier queja recibida o decisiones en respuesta a dichas"
-" quejas."
+"Documentación de cualquier queja recibida o decisiones en respuesta a dichas "
+"quejas."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:40
+#: schema/project-level/codelists/documentType.csv:26
 msgid "Annexes to the contract"
 msgstr "Anexos al contrato"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:40
+#: schema/project-level/codelists/documentType.csv:26
 msgid ""
 "Copies of annexes and other supporting documentation related to the "
 "contract."
@@ -723,144 +552,155 @@ msgstr ""
 "contrato."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:41
+#: schema/project-level/codelists/documentType.csv:27
+msgid "Guarantees"
+msgstr "Garantías"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:27
+msgid "Documentation of guarantees relating to a contracting process or contract."
+msgstr ""
+"Documentación de garantías relacionadas con el proceso de contratación o el "
+"contrato."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:28
 msgid "Subcontracts"
 msgstr "Subcontratos"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:41
+#: schema/project-level/codelists/documentType.csv:28
 msgid ""
-"Documentation detailing subcontracts and/or providing a copy of subcontracts"
-" themselves. Where OCDS data on the subcontracts exists, this can be "
-"declared using the relatedProcess block."
+"Documentation detailing subcontracts and/or providing a copy of "
+"subcontracts themselves. Where OCDS data on the subcontracts exists, this"
+" can be declared using the relatedProcess block."
 msgstr ""
 "Documentación que detalla los subcontratos y/o provee una copia de los "
 "subcontratos. Donde haya datos de OCDS sobre los subcontratos, puede "
 "declararse usando el bloque de relatedProcess."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:42
-msgid "Needs assessment"
-msgstr "Evaluación de necesidades"
+#: schema/project-level/codelists/documentType.csv:29
+msgid "Feasibility study"
+msgstr "Estudio de factibilidad"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:42
+#: schema/project-level/codelists/documentType.csv:29
 msgid ""
-"Documentation of the needs assessments carried out for this contracting "
-"process or project addressing demand for the project or investment from the "
-"affected communities or users."
+"Documentation of feasibility studies carried out for this contracting "
+"process or project, providing information on net benefits or costs of the"
+" proposed goods, works or services."
 msgstr ""
-"Documentación de la evaluación de necesidades llevada a cabo para este "
-"proceso de contratación o proyecto, aborda la demanda para el proyecto o "
-"inversión para las comunidades afectadas o usuarios."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:43
+#: schema/project-level/codelists/documentType.csv:30
 msgid "Project plan"
 msgstr "Plan de proyecto"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:43
+#: schema/project-level/codelists/documentType.csv:30
 msgid ""
-"Documentation of project planning for this contracting process, and, where "
-"applicable, a copy of the project plan document."
+"Documentation of project planning for this contracting process, and, "
+"where applicable, a copy of the project plan document."
 msgstr ""
-"Documentación de la planeación de proyecto para este proceso de contratación"
-" y, donde aplique, una copia del documento del plan de proyecto"
+"Documentación de la planeación de proyecto para este proceso de contratación "
+"y, donde aplique, una copia del documento del plan de proyecto"
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:44
+#: schema/project-level/codelists/documentType.csv:31
 msgid "Bill of quantity"
-msgstr "Estimación cuantitativa"
+msgstr "Factura de cantidad"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:44
+#: schema/project-level/codelists/documentType.csv:31
 msgid ""
 "Documentation that provides itemized information on materials, parts and "
 "labour, and the terms and conditions for their provision, providing "
-"information that would enable bidders to price work effectively. Structured "
-"versions of item and quantity information at each of tender, award and "
-"contract stage can be provided using units within the items building block."
+"information that would enable bidders to price work effectively. "
+"Structured versions of item and quantity information at each of tender, "
+"award and contract stage can be provided using units within the items "
+"building block."
 msgstr ""
 "Documentación que provee la información desglosada de materiales, partes y "
 "mano de obra y los términos y condiciones para su provisión, dando "
 "información que permitirá a los licitadores dar efectivamente un precio. Se "
-"pueden proveer versiones estructuradas de artículos y cantidades en la etapa"
-" de licitación, adjudicación y contrato usando las unidades dentro del "
-"bloque de artículos."
+"pueden proveer versiones estructuradas de artículos y cantidades en la etapa "
+"de licitación, adjudicación y contrato usando las unidades dentro del bloque "
+"de artículos."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:45
+#: schema/project-level/codelists/documentType.csv:32
 msgid "Information on bidders"
 msgstr "Información de Licitante"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:45
+#: schema/project-level/codelists/documentType.csv:32
 msgid ""
-"Documentation on bidders or participants, their validation documents and any"
-" procedural exemptions for which they qualify."
+"Documentation on bidders or participants, their validation documents and "
+"any procedural exemptions for which they qualify."
 msgstr ""
-"Documentación sobre los oferentes o participantes, sus documentos de "
-"validación y cualquier excepción de procedimientos para el cual califiquen."
+"Documentación sobre ofertantes o participantes, sus documentos de validación "
+"y cualquier excepción al procedimiento para el que estén calificados."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:46
+#: schema/project-level/codelists/documentType.csv:33
 msgid "Conflict of interest"
 msgstr "Conflicto de interés"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:46
+#: schema/project-level/codelists/documentType.csv:33
 msgid "Documentation of conflicts of interest declared or uncovered."
-msgstr "Documentación de conflictos de interés declarados o descubiertos."
+msgstr "Documentación de conflictos de interés declarado o descubierto."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:47
+#: schema/project-level/codelists/documentType.csv:34
 msgid "Debarments"
 msgstr "Inhabilitaciones"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:47
+#: schema/project-level/codelists/documentType.csv:34
 msgid "Documentation of any debarments issued."
 msgstr "Documentación de cualquier inhabilitación efectuada."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:48
+#: schema/project-level/codelists/documentType.csv:35
 msgid "Illustrations"
 msgstr "Ilustraciones"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:48
+#: schema/project-level/codelists/documentType.csv:35
 msgid ""
-"Images intended to provide supporting information. The URL for images should"
-" be directly to an image file that applications can display as part of a "
-"gallery of images. At the tender stage, images can be illustrations of "
-"goods, works or services needed or for sale. At the implementation stage, "
-"images can be illustrations or visual evidence of physical progress."
+"Images intended to provide supporting information. The URL for images "
+"should be directly to an image file that applications can display as part"
+" of a gallery of images. At the tender stage, images can be illustrations"
+" of goods, works or services needed or for sale. At the implementation "
+"stage, images can be illustrations or visual evidence of physical "
+"progress."
 msgstr ""
-"Imágenes destinadas a proveer información de soporte. La URL para imágenes "
-"debería estar dirigida directamente a un archivo de imagen que las "
-"aplicaciones puedan desplegar como parte de una galería de imágenes. En la "
-"fase de licitación, las imágenes pueden ser ilustraciones de bienes, "
-"trabajos o servicios requeridos o a la venta. En la fase de implementación, "
-"las imágenes pueden ser ilustraciones o evidencia visual de progreso físico."
+"Imágenes con la intención de dar información adicional. La URL de las "
+"imágenes deben de ser directas a un archivo de imagen que las aplicaciones "
+"muestren como parte de una galería de imágenes. En la etapa de licitación, "
+"las imágenes pueden ser ilustraciones de bienes, trabajos o servicios que se "
+"necesiten o estén en venta. En la etapa de implementación, las imágenes "
+"pueden ser ilustraciones o evidencia visual del progreso físico."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:49
+#: schema/project-level/codelists/documentType.csv:36
 msgid "Bid submission documents"
 msgstr "Documentos de presentación de oferta"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:49
+#: schema/project-level/codelists/documentType.csv:36
 msgid "Documentation submitted by a bidder as part of their proposal."
 msgstr "Documentación enviada por un licitante como parte de su oferta"
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:50
+#: schema/project-level/codelists/documentType.csv:37
 msgid "Contract summary"
-msgstr "Resumen del contrato"
+msgstr "Resúmen del contrato"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:50
+#: schema/project-level/codelists/documentType.csv:37
 msgid ""
 "Documentation providing an overview of the key terms and sections of the "
 "contract. Commonly used for large and complex contracts."
@@ -869,18 +709,197 @@ msgstr ""
 "del contrato. Comúnmente usado para contratos largos y complejos."
 
 #. Title
-#: schema/project-level/codelists/documentType.csv:51
+#: schema/project-level/codelists/documentType.csv:38
 msgid "Cancellation details"
 msgstr "Detalles de cancelación"
 
 #. Description
-#: schema/project-level/codelists/documentType.csv:51
+#: schema/project-level/codelists/documentType.csv:38
 msgid ""
 "Documentation of the arrangements, or reasons, for cancellation of a "
 "contracting process, award or specific contract."
 msgstr ""
-"Documentación de los acuerdos, o razones, para la cancelación de un proceso "
-"de contratación, adjudicación o contrato específico."
+"Documentación de los arreglos, o razones para la cancelación de un proceso "
+"de contrataciones, adjudicación o contrato específico."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:39
+msgid "Value for money analysis"
+msgstr "Análisis de valor por dinero"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:39
+msgid ""
+"A summary of the value for money analysis carried out for the project, "
+"along with supporting figures, calculations and business case, based on "
+"projected or actual procurement outcomes."
+msgstr ""
+"Un resumen del análisis de la relación de valor por dinero para el proyecto, "
+"junto con las cifras de soporte, cálculos y modelo de negocios, basados ​​en "
+"los resultados proyectados o reales de la adquisición."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:40
+msgid "Service descriptions"
+msgstr "Descripciones del servicio"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:40
+msgid "A high-level description of the services"
+msgstr "Una descripción de general de los servicios"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:41
+msgid "Estimated demand"
+msgstr "Demanda estimada"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:41
+msgid ""
+"A narrative describing the estimated demand to be served (annually) by "
+"the project."
+msgstr ""
+"Una narrativa que describa la demanda estimada que se cubrirá (anualmente) "
+"por el proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:42
+msgid "Evaluation committee details"
+msgstr "Detalles del comité de evaluación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:42
+msgid "Information on the constitution of the evaluation committee"
+msgstr "Información sobre la constitución del comité de evaluación"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:43
+msgid "Request for qualification"
+msgstr "Solicitud de calificación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:43
+msgid ""
+"The set of documents issued by the procuring authority that constitute "
+"the basis of the qualification and potentially the pre-selection of "
+"candidates (the short list). Qualified (or short-listed candidates) will "
+"then be invited to submit a proposal (or to enter into a new phase prior "
+"to bid submission, such as a dialogue phase or interactive phase)."
+msgstr ""
+"El conjunto de documentos emitidos por la autoridad contratante que "
+"constituyen la base de la calificación y potencialmente la preselección de "
+"candidatos (o candidatos preseleccionados). A continuación, se invitará a "
+"los candidatos calificados (o candidatos preseleccionados) a presentar una "
+"propuesta (o entrar en una nueva fase antes de la presentación de la oferta, "
+"como una fase de diálogo o una fase interactiva)."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:44
+msgid "Minutes"
+msgstr "Minutas"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:44
+msgid "Minutes of pre-bid meetings, or other relevant meetings."
+msgstr ""
+"Minutas de las reuniones previas a la licitación u otras reuniones "
+"pertinentes."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:45
+msgid "Negotiation parameters"
+msgstr "Parámetros de negociación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:45
+msgid ""
+"A description of the parameters for negotiation with the preferred "
+"proponent"
+msgstr ""
+"Una descripción de los parámetros para la negociación con el proponente "
+"preferido"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:46
+msgid "Defaults"
+msgstr "Incumplimientos"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:46
+msgid "Information on events of default"
+msgstr "Información sobre eventos de incumplimiento"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:47
+msgid "Termination"
+msgstr "Terminación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:47
+msgid "Information on contract termination"
+msgstr "Información sobre la terminación del contrato"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:48
+msgid "Performance report"
+msgstr "Reporte de desempeño"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:48
+msgid "Performance assessment reports"
+msgstr "Informes de evaluación de rendimiento"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:49
+msgid "Needs assessment"
+msgstr "Evaluación de necesidades"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:49
+msgid ""
+"Documentation of the needs assessments carried out for this contracting "
+"process or project addressing demand for the project or investment from "
+"the affected communities or users."
+msgstr ""
+"Documentación de la evaluación de necesidades llevada a cabo para este "
+"proceso de contratación o proyecto, aborda la demanda para el proyecto o "
+"inversión para las comunidades afectadas o usuarios."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:50
+msgid "Social impact assessment"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:50
+msgid ""
+"Documentation of assessments of the intended and unintended social "
+"consequences of this project, and documentation of mitigation measures "
+"for those social consequences. Social impacts are changes that affect "
+"people, directly or indirectly (e.g. changes to people's way of life, "
+"culture, community, health and well-being etc.)."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:51
+msgid "Land and settlement impact assessment"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:51
+msgid ""
+"State the amount of land and property that was acquired for the project "
+"(e.g. 25sq km land), and outline related impacts (e.g. archaeological "
+"issues (moved Saxon burial site), local/indigenous settlements (relocated"
+" 5 indigenous villages of 500 villagers each), impacts on local "
+"businesses e.g. (30 business properties purchased))."
+msgstr ""
+"Indica la cantidad de tierras y propiedades que fueron adquiridas para el "
+"proyecto (ej. 25km² de tierras), y resume los impactos relacionados (ej. "
+"problemas arqueológicos (se relocalizó un cementerio sajón), asentamientos "
+"locales/indígenas (se relocalizaron 5 aldeas indígenas de 500 habitantes "
+"cada una), impactos en negocios locales (ej. se compraron 30 propiedades "
+"comerciales))."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:52
@@ -898,24 +917,16 @@ msgstr ""
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:53
-msgid "Land and Settlement Impact"
-msgstr "Impacto en tierras y reasentamientos"
+msgid "Resettlement and compensation plan"
+msgstr ""
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:53
 msgid ""
-"State the amount of land and property that was acquired for the project "
-"(e.g. 25sq km land), and outline related impacts (e.g. archaeological issues"
-" (moved Saxon burial site), local/indigenous settlements (relocated 5 "
-"indigenous villages of 500 villagers each), impacts on local businesses e.g."
-" (30 business properties purchased))."
+"Documentation of the procedures and actions to mitigate adverse effects, "
+"compensate losses, and provide development benefits to people and "
+"communities affected by the contracting process or project."
 msgstr ""
-"Indica la cantidad de tierras y propiedades que fueron adquiridas para el "
-"proyecto (ej. 25km² de tierras), y resume los impactos relacionados (ej. "
-"problemas arqueológicos (se relocalizó un cementerio sajón), asentamientos "
-"locales/indígenas (se relocalizaron 5 aldeas indígenas de 500 habitantes "
-"cada una), impactos en negocios locales (ej. se compraron 30 propiedades "
-"comerciales))."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:54
@@ -925,8 +936,8 @@ msgstr "Evaluación del proyecto"
 #. Description
 #: schema/project-level/codelists/documentType.csv:54
 msgid ""
-"Generally published at the conclusion of a project, providing a technical "
-"and financial summary of delivery."
+"Generally published at the conclusion of a project, providing a technical"
+" and financial summary of delivery."
 msgstr ""
 "Generalmente publicado al terminar un proyecto, provee un resumen técnico y "
 "financiero de la entrega."
@@ -942,6 +953,127 @@ msgid "Additional details about the approval of the budget."
 msgstr "Detalles adicionales sobre la aprobación del presupuesto."
 
 #. Title
+#: schema/project-level/codelists/documentType.csv:56
+msgid "Budget amendment approval"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:56
+msgid ""
+"Document accrediting the approval of budget expansion or extension for "
+"this project."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:57
+msgid "Financial agreement"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:57
+msgid "Loan or donation agreement with financing conditions."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:58
+msgid "Financial audit report"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:58
+msgid ""
+"Documentation of checks that a project's financial statements are correct"
+" and complete."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:59
+msgid "Technical audit report"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:59
+msgid ""
+"Documentation of checks that construction work has been undertaken as "
+"specified."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:60
+msgid "Quality assurance report"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:60
+msgid ""
+"Documentation identifying deficiencies in designs, specifications, "
+"standards, methods, procedures and practices, and identifying best "
+"practices."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:61
+msgid "Certificate of incorporation"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:61
+msgid ""
+"A document issued by the relevant government registry as confirmation of "
+"the due incorporation and valid existence of the organization."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:62
+#: schema/project-level/codelists/releaseTag.csv:12
+msgid "Contract amendment"
+msgstr "Enmiendas al contrato"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:62
+msgid ""
+"A legal document that changes or adds to the terms of an existing "
+"contract."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:63
+msgid "Project design report"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:63
+msgid ""
+"A record of the justification for the design approach adopted in the "
+"project, typically issued before the works start, by the consultant or "
+"firm that will supervise the works."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:64
+msgid "Payment certificate"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:64
+msgid ""
+"A document certifying that the work specified on a supplier's estimate or"
+" invoice is complete and that payment to the supplier is approved."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:65
+msgid "Escalation approval"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:65
+msgid ""
+"Documentation of one or more approved escalations of the contract price "
+"during the project life-cycle."
+msgstr ""
+
+#. Title
 #: schema/project-level/codelists/geometryType.csv:1
 msgid "Point"
 msgstr "Punto"
@@ -949,7 +1081,8 @@ msgstr "Punto"
 #. Description
 #: schema/project-level/codelists/geometryType.csv:1
 msgid "For type 'Point', the 'coordinates' member is a single position."
-msgstr "Para el tipo 'Point', el miembro 'coordinates' es una sola posición."
+msgstr ""
+"Para el tipo \"Point\", el miembro 'coordinates' es una posición simple."
 
 #. Extension
 #: schema/project-level/codelists/geometryType.csv:1
@@ -970,34 +1103,33 @@ msgstr "Ubicación"
 #. Title
 #: schema/project-level/codelists/geometryType.csv:2
 msgid "MultiPoint"
-msgstr "Multipunto"
+msgstr "MultiPoint"
 
 #. Description
 #: schema/project-level/codelists/geometryType.csv:2
-msgid ""
-"For type 'MultiPoint', the 'coordinates' member is an array of positions."
+msgid "For type 'MultiPoint', the 'coordinates' member is an array of positions."
 msgstr ""
-"Para el tipo 'MultiPoint', el miembro 'coordinates' es una lista de "
+"Para el tipo \"MultiPoint\", el miembro 'coordinates' es una lista de "
 "posiciones."
 
 #. Title
 #: schema/project-level/codelists/geometryType.csv:3
 msgid "LineString"
-msgstr "Línea"
+msgstr "LineString"
 
 #. Description
 #: schema/project-level/codelists/geometryType.csv:3
 msgid ""
-"For type 'LineString', the 'coordinates' member is an array of two or more "
-"positions."
+"For type 'LineString', the 'coordinates' member is an array of two or "
+"more positions."
 msgstr ""
-"Para el tipo 'LineString', el miembro 'coordinates' es una lista de una o "
+"Para el tipo \"LineString\", el miembro 'coordinates' es una lista de dos o "
 "más posiciones."
 
 #. Title
 #: schema/project-level/codelists/geometryType.csv:4
 msgid "MultiLineString"
-msgstr "Multilínea"
+msgstr "MultiLineString"
 
 #. Description
 #: schema/project-level/codelists/geometryType.csv:4
@@ -1005,27 +1137,25 @@ msgid ""
 "For type 'MultiLineString', the 'coordinates' member is an array of "
 "LineString coordinate arrays."
 msgstr ""
-"Para el tipo 'MultiLineString', el miembro 'coordinates' es una lista de "
-"listas de coordenadas tipo LineString."
+"Para el tipo \"MultiLineString\", el miembro 'coordinates' es un array de "
+"coordenadas 'LineString'."
 
 #. Title
 #: schema/project-level/codelists/geometryType.csv:5
 msgid "Polygon"
-msgstr "Polígono"
+msgstr "Polygon"
 
 #. Description
 #: schema/project-level/codelists/geometryType.csv:5
 msgid ""
-"For type 'Polygon', the 'coordinates' member MUST be an array of linear ring"
-" coordinate arrays."
+"For type 'Polygon', the 'coordinates' member must be an array of linear "
+"ring coordinate arrays."
 msgstr ""
-"Para el tipo 'Polygon', el miembro 'coordinates' DEBE ser una lista de "
-"listas de coordenadas tipo linear ring."
 
 #. Title
 #: schema/project-level/codelists/geometryType.csv:6
 msgid "MultiPolygon"
-msgstr "Multipolígono"
+msgstr "MultiPolygon"
 
 #. Description
 #: schema/project-level/codelists/geometryType.csv:6
@@ -1033,25 +1163,26 @@ msgid ""
 "For type 'MultiPolygon', the 'coordinates' member is an array of Polygon "
 "coordinate arrays."
 msgstr ""
-"Para el tipo 'MultiPolygon', el miembro 'coordinates' es una lista de listas"
-" de coordenadas tipo Polygon."
+"Para el tipo 'MultiPolygon' el miembro 'coordinates' es una lista de "
+"coordendas 'Polygon'"
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:1
 msgid "EU Nomenclature of Territorial Units for Statistics"
-msgstr "Nomenclatura de Unidades Territoriales para Estadísticas de la UE"
+msgstr "Nomenclatura de las Unidades Territoriales Estadísticas de la UE"
 
 #. Description
 #: schema/project-level/codelists/locationGazetteers.csv:1
 msgid ""
-"The Nomenclature of Territorial Units for Statistics (NUTS) was established "
-"by Eurostat in order to provide a single uniform breakdown of territorial "
-"units for the production of regional statistics for the European Union."
+"The Nomenclature of Territorial Units for Statistics (NUTS) was "
+"established by Eurostat in order to provide a single uniform breakdown of"
+" territorial units for the production of regional statistics for the "
+"European Union."
 msgstr ""
-"La Nomenclatura de Unidades Territoriales para Estadísticas (NUTS) fue "
-"establecida por Eurostat con el fin de proveer un desglose único y uniforme "
-"de unidades territoriales, para la producción de estadísticas regionales "
-"para la Unión Europea."
+"Nomenclatura de las Unidades Territoriales Estadísticas (NUTS) fue "
+"establecida por Eurostat con el fin de proporcionar un único desglose "
+"uniforme de las unidades territoriales para la producción de estadísticas "
+"regionales para la Unión Europea."
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:2
@@ -1061,7 +1192,7 @@ msgstr "Códigos de Países ISO (3166-1 alpha-2)"
 #. Description
 #: schema/project-level/codelists/locationGazetteers.csv:2
 msgid "ISO 2-Digit Country Codes"
-msgstr "Códigos de Países de 2 Dígitos ISO"
+msgstr "Códigos de País de 2 dígitos ISO"
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:3
@@ -1071,30 +1202,28 @@ msgstr "GeoNames"
 #. Description
 #: schema/project-level/codelists/locationGazetteers.csv:3
 msgid ""
-"GeoNames provides numerical identifiers for many points of interest around "
-"the world, including administrative divisions, populated centres and other "
-"locations, embedded within a structured tree of geographic relations."
+"GeoNames provides numerical identifiers for many points of interest "
+"around the world, including administrative divisions, populated centres "
+"and other locations, embedded within a structured tree of geographic "
+"relations."
 msgstr ""
-"GeoNames provee identificadores numéricos para muchos puntos de interés "
-"alrededor del mundo, incluyendo divisiones administrativas, centros poblados"
-" y otras localizaciones, embebidos dentro de un árbol estructurado de "
-"relaciones geográficas."
+"GeoNames proporciona identificadores numéricos para muchos puntos de interés "
+"en todo el mundo, incluyendo divisiones administrativas, centros poblados y "
+"otros lugares, incrustados dentro de un árbol estructurado de relaciones "
+"geográficas."
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:4
 msgid "OpenStreetMap Node"
-msgstr "Nodo de OpenStreetMap"
+msgstr "Nodo de Open Street Map"
 
 #. Description
 #: schema/project-level/codelists/locationGazetteers.csv:4
 msgid ""
 "OpenStreetMap Nodes consist of a single point in space defined by a "
-"latitude, longitude and node ID. Nodes may have tags to indicate the "
+"latitude, longitude and node ID. Nodes might have tags to indicate the "
 "particular geographic feature they represent."
 msgstr ""
-"Los nodos de OpenStreetMap consisten en un solo punto en el espacio definido"
-" por una latitud, longitud y ID de nodo. Los nodos pueden tener etiquetas "
-"para indicar la característica geográfica en particular que representan."
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:5
@@ -1105,27 +1234,25 @@ msgstr "Relación de OpenStreetMap"
 #: schema/project-level/codelists/locationGazetteers.csv:5
 msgid ""
 "Relations are used to model logical (and usually local) or geographic "
-"relationships between objects. In practice, boundaries of geographic areas "
-"are available as Relations in OpenStreetMap."
+"relationships between objects. In practice, boundaries of geographic "
+"areas are available as Relations in OpenStreetMap."
 msgstr ""
-"Las relaciones son usadas para modelar relaciones lógicas (y usualmente "
+"Las relaciones se usan para modelar relaciones lógicas (y generalmente "
 "locales) o geográficas entre objetos. En la práctica, los límites de áreas "
-"geográficas están disponibles como relaciones en OpenStreetMap."
+"geográficas están disponibles como Relaciones de Open Street Map."
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:6
 msgid "OpenStreetMap Way"
-msgstr "Ruta de OpenStreetMap"
+msgstr "Vía de Open Street Map"
 
 #. Description
 #: schema/project-level/codelists/locationGazetteers.csv:6
 msgid ""
-"An OpenStreetMap Way is an ordered list of OpenStreetMap nodes. May be used "
-"to describe fragments of roads or local boundaries and bounding boxes."
+"An OpenStreetMap Way is an ordered list of OpenStreetMap nodes. It can be"
+" used to describe fragments of roads or local boundaries and bounding "
+"boxes."
 msgstr ""
-"Una ruta de OpenStreetMap es una lista ordenada de nodos de OpenStreetMap. "
-"Puede ser usado para describir fragmentos de carreteras o límites locales y "
-"puntos delimitadores."
 
 #. Title
 #: schema/project-level/codelists/method.csv:1
@@ -1135,7 +1262,7 @@ msgstr "Abierta"
 #. Description
 #: schema/project-level/codelists/method.csv:1
 msgid "All interested suppliers can submit a tender."
-msgstr "Todos los proveedores interesados pueden presentar una oferta."
+msgstr "Todos los proveedores interesados pueden hacer una oferta."
 
 #. Extension
 #: schema/project-level/codelists/method.csv:1
@@ -1158,8 +1285,10 @@ msgstr "Todos los proveedores interesados pueden presentar una oferta."
 #: schema/project-level/codelists/releaseTag.csv:14
 #: schema/project-level/codelists/releaseTag.csv:15
 #: schema/project-level/codelists/releaseTag.csv:16
+#: schema/project-level/codelists/unitClassificationScheme.csv:1
+#: schema/project-level/codelists/unitClassificationScheme.csv:2
 msgid "OCDS Core"
-msgstr "OCDS Base"
+msgstr "OCDS Central"
 
 #. Title
 #: schema/project-level/codelists/method.csv:2
@@ -1169,8 +1298,7 @@ msgstr "Selectiva"
 #. Description
 #: schema/project-level/codelists/method.csv:2
 msgid "Only qualified suppliers are invited to submit a tender."
-msgstr ""
-"Sólo los proveedores calificados son invitados a enviar una propuesta."
+msgstr "Sólo los proveedores calificados son invitados a enviar una propuesta."
 
 #. Title
 #: schema/project-level/codelists/method.csv:3
@@ -1194,6 +1322,30 @@ msgid "The contract is awarded to a single supplier without competition."
 msgstr "El contrato se otorga a un solo proveedor sin competencia."
 
 #. Title
+#: schema/project-level/codelists/metricID.csv:1
+msgid "Financial progress"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/metricID.csv:1
+msgid ""
+"The planned or actual financial progress for the project. For example, "
+"the percentage of spend against the project budget."
+msgstr ""
+
+#. Title
+#: schema/project-level/codelists/metricID.csv:2
+msgid "Physical progress"
+msgstr ""
+
+#. Description
+#: schema/project-level/codelists/metricID.csv:2
+msgid ""
+"The planned or actual physical progress for a project. For example, the "
+"percentage of completion of the physical works."
+msgstr ""
+
+#. Title
 #: schema/project-level/codelists/modificationType.csv:1
 msgid "Duration"
 msgstr "Duración"
@@ -1201,15 +1353,15 @@ msgstr "Duración"
 #. Description
 #: schema/project-level/codelists/modificationType.csv:1
 msgid ""
-"This modification describes a change to the contract duration. This may be "
-"identified based on changes in `award.contractPeriod` or `contract.period`, "
-"or updates to milestones and payments that appear to exceed the anticipated "
-"`contract.period`."
+"This modification describes a change to the contract duration. This may "
+"be identified based on changes in `award.contractPeriod` or "
+"`contract.period`, or updates to milestones and payments that appear to "
+"exceed the anticipated `contract.period`."
 msgstr ""
 "Esta modificación describe un cambio a la duración del contrato. Este puede "
 "ser identificado en base a los cambios en `award.contractPeriod` o "
-"`contract.period`, o actualizaciones a hitos y pagos que parezcan exceder el"
-" `contract.period` anticipado."
+"`contract.period`, o actualizaciones a hitos y pagos que parezcan exceder el "
+"`contract.period` anticipado."
 
 #. Title
 #: schema/project-level/codelists/modificationType.csv:2
@@ -1221,15 +1373,15 @@ msgstr "Valor"
 msgid ""
 "This modification describes a change to the contract value. This may be "
 "identified based on changes to the sum of `contract.value` (watching for "
-"cases where a contract value is varied, or an additional extension contract "
-"is signed as part of this process), or by monitoring "
+"cases where a contract value is varied, or an additional extension "
+"contract is signed as part of this process), or by monitoring "
 "`contracts.implementation.transactions`."
 msgstr ""
 "Esta modificación describe un cambio en el valor del contrato. Esto puede "
-"ser identificado en base a cambios en la suma de `contract.value` "
-"(observando los casos en los que el valor de un contrato varía, o se firma "
-"un contrato de extensión adicional como parte de este proceso), o "
-"monitoreando `contract.implementation.transactions`."
+"ser identificado en base a cambios en la suma de `contract.value` ("
+"observando los casos en los que el valor de un contrato varía, o se firma un "
+"contrato de extensión adicional como parte de este proceso), o monitoreando "
+"`contract.implementation.transactions`."
 
 #. Title
 #: schema/project-level/codelists/modificationType.csv:3
@@ -1240,12 +1392,12 @@ msgstr "Alcance"
 #: schema/project-level/codelists/modificationType.csv:3
 msgid ""
 "This modification describes a change to the contract scope. This may be "
-"identified by comparing key details from `tender`, `awards` and `contracts`,"
-" or by monitoring relevant documents."
+"identified by comparing key details from `tender`, `awards` and "
+"`contracts`, or by monitoring relevant documents."
 msgstr ""
-"Esta modificación describe un cambio al alcance del contrato. Esto puede ser"
-" identificado comparando detalles clave de `tender`, `awards` y `contracts` "
-"o monitoreando documentos relevantes."
+"Esta modificación describe un cambio al alcance del contrato. Esto puede ser "
+"identificado comparando detalles clave de `tender`, `awards` y `contracts` o "
+"monitoreando documentos relevantes."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:1
@@ -1255,25 +1407,25 @@ msgstr "Comprador"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:1
 msgid ""
-"A buyer is an entity whose budget will be used to pay for goods, works or "
-"services related to a contract."
+"A buyer is an entity whose budget will be used to pay for goods, works or"
+" services related to a contract."
 msgstr ""
-"Un comprador es una entidad cuyo presupuesto se utilizará para pagar bienes,"
-" obras o servicios relacionados con un contrato."
+"Un comprador es una entidad cuyo presupuesto se utilizará para pagar bienes, "
+"obras o servicios relacionados con un contrato."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:2
 msgid "Procuring entity"
-msgstr "Entidad de adquisición"
+msgstr "Entidad contratante"
 
 #. Description
 #: schema/project-level/codelists/partyRole.csv:2
 msgid ""
-"The entity managing the procurement. This can be different from the buyer "
-"who pays for, or uses, the items being procured."
+"The entity managing the procurement. This can be different from the buyer"
+" who pays for, or uses, the items being procured."
 msgstr ""
-"La entidad que está administrando la adquisición. Esta puede ser diferente "
-"del comprador que paga, o usa, los artículos que están siendo adquiridos."
+"La entidad administrando la compra. Esto puede ser diferente del comprador "
+"que paga, o usa, los artículos que se están comprando."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:3
@@ -1284,7 +1436,7 @@ msgstr "Proveedor"
 #: schema/project-level/codelists/partyRole.csv:3
 msgid "An entity awarded or contracted to provide goods, works or services."
 msgstr ""
-"Una entidad adjudicada o contratada para proveer bienes, obras o servicios."
+"Una entidad adjudicada o contratada para dar bienes, trabajos o servicios. "
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:4
@@ -1294,7 +1446,7 @@ msgstr "Licitante"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:4
 msgid "All entities who submit a tender."
-msgstr "Todas las entidades que presentan una oferta."
+msgstr "Todas las entidades que hacen una oferta."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:5
@@ -1318,8 +1470,8 @@ msgstr "Persona que solicita información"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:6
 msgid ""
-"A party who has made an enquiry during the enquiry phase of a contracting "
-"process."
+"A party who has made an enquiry during the enquiry phase of a contracting"
+" process."
 msgstr ""
 "Una parte que ha realizado un pedido de información durante la fase de "
 "solicitudes de información de un proceso de contratación."
@@ -1332,7 +1484,7 @@ msgstr "Pagador"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:7
 msgid "A party making a payment from a transaction."
-msgstr "Una parte que hace un pago en una transacción."
+msgstr "Una parte hace un pago de una transacción."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:8
@@ -1342,7 +1494,7 @@ msgstr "Beneficiario"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:8
 msgid "A party in receipt of a payment from a transaction."
-msgstr "Una parte que recibe un pago en una transacción."
+msgstr "Una parte en recepción del pago de una transacción."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:9
@@ -1352,8 +1504,8 @@ msgstr "Órgano de revisión"
 #. Description
 #: schema/project-level/codelists/partyRole.csv:9
 msgid ""
-"A party responsible for the review of this procurement process. This party "
-"often has a role in any challenges made to the contract award."
+"A party responsible for the review of this procurement process. This "
+"party often has a role in any challenges made to the contract award."
 msgstr ""
 "Una parte responsable de la revisión de este proceso de adquisición. Esta "
 "parte tiene a menudo un papel en cualquier cuestionamiento hecho a la "
@@ -1371,9 +1523,9 @@ msgid ""
 "example, by purchasing tender documents or submitting clarification "
 "questions."
 msgstr ""
-"Una parte que ha expresado interés en el proceso de contratación: por "
-"ejemplo, comprando documentación del concurso o presentando preguntas "
-"aclaratorias."
+"Una parte que ha expresado interés en el proceso de contrataciones, por "
+"ejemplo, al comprar documentos de oferta o presentar preguntas de "
+"clarificación."
 
 #. Title
 #: schema/project-level/codelists/partyRole.csv:11
@@ -1407,8 +1559,8 @@ msgstr "Educación"
 #. Description
 #: schema/project-level/codelists/projectSector.csv:1
 msgid ""
-"Education, including schools, universities and other learning and training "
-"facilities"
+"Education, including schools, universities and other learning and "
+"training facilities"
 msgstr ""
 "Educación, incluyendo escuelas, universidades y otras instalaciones de "
 "aprendizaje y entrenamiento."
@@ -1432,8 +1584,8 @@ msgstr "Energía"
 #: schema/project-level/codelists/projectSector.csv:3
 msgid ""
 "Energy, including electric power generation, and the transmission and "
-"distribution of electricity, oil and gas, for example: power plants, power "
-"lines, gas pipelines"
+"distribution of electricity, oil and gas, for example: power plants, "
+"power lines, gas pipelines"
 msgstr ""
 "Energía, incluyendo generación de energía eléctrica, y la transmisión y "
 "distribución de la electricidad, combustible y gas, por ejemplo: plantas de "
@@ -1447,8 +1599,8 @@ msgstr "Comunicaciones"
 #. Description
 #: schema/project-level/codelists/projectSector.csv:4
 msgid ""
-"Communications, including ICT, IT, telecommunications, postal facilities, "
-"high-speed internet, broadband"
+"Communications, including ICT, IT, telecommunications, postal facilities,"
+" high-speed internet, broadband"
 msgstr ""
 "Comunicaciones, incluyendo ICT, IT, telecomunicaciones, instalaciones "
 "postales, internet de alta velocidad, ancho de banda"
@@ -1472,8 +1624,8 @@ msgstr "Gobernanza"
 #: schema/project-level/codelists/projectSector.csv:6
 msgid ""
 "Governance, including government accommodations, public buildings, "
-"government offices; justice, courts; emergency services / response, local "
-"security; security, prisons, corrections; defence, military"
+"government offices; justice, courts; emergency services / response, local"
+" security; security, prisons, corrections; defence, military"
 msgstr ""
 "Gobernanza, incluyendo instalaciones del gobierno, edificios públicos, "
 "oficinas gubernamentales; justicia, cortes; servicios de emergencia y "
@@ -1497,8 +1649,7 @@ msgstr "Cultura, deportes y recreación"
 
 #. Description
 #: schema/project-level/codelists/projectSector.csv:8
-msgid ""
-"Culture, sports and recreation, including tourism, parks and green areas"
+msgid "Culture, sports and recreation, including tourism, parks and green areas"
 msgstr ""
 "Cultura, deportes y recreación, incluyendo turismo, parques y áreas verdes"
 
@@ -1549,11 +1700,9 @@ msgstr "Transporte terrestre"
 
 #. Description
 #: schema/project-level/codelists/projectSector.csv:13
-msgid ""
-"Road transport, including roads, highways, streets, tunnels and bridges"
+msgid "Road transport, including roads, highways, streets, tunnels and bridges"
 msgstr ""
-"Transporte terrestre, incluyendo rutas, carreteras, calles, túneles y "
-"puentes"
+"Transporte terrestre, incluyendo rutas, carreteras, calles, túneles y puentes"
 
 #. Title
 #: schema/project-level/codelists/projectSector.csv:14
@@ -1583,9 +1732,9 @@ msgstr "Identificación"
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:1
 msgid ""
-"Identification refers to the decision to develop a project within the budget"
-" and programme of a project owner (the public entity responsible for "
-"executing the budget)."
+"Identification refers to the decision to develop a project within the "
+"budget and programme of a project owner (the public entity responsible "
+"for executing the budget)."
 msgstr ""
 "Identificación se refiere a la decisión de desarrollar un proyecto dentro "
 "del presupuesto y programa de un dueño del proyecto (la entidad pública "
@@ -1599,10 +1748,10 @@ msgstr "Preparación"
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:2
 msgid ""
-"Preparation covers the feasibility study, environmental and social impact "
-"assessment, general scoping of the project, establishing the packaging and "
-"procurement strategy, preliminary statutory requirements on environmental "
-"and land impacts, and the resulting budget authorization."
+"Preparation covers the feasibility study, environmental and social impact"
+" assessment, general scoping of the project, establishing the packaging "
+"and procurement strategy, preliminary statutory requirements on "
+"environmental and land impacts, and the resulting budget authorization."
 msgstr ""
 "La preparación cubre el estudio de factibilidad, la evaluación del impacto "
 "medioambiental y social, el alcance general del proyecto, el marco y la "
@@ -1613,16 +1762,16 @@ msgstr ""
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:3
 msgid "implementation"
-msgstr "Implementación"
+msgstr "implementation"
 
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:3
 msgid ""
 "Implementation covers the procurement and implementation of the group of "
-"works or services (such as design and supervision) to be delivered under the"
-" project, including works or services performed by the procuring entity. "
-"This differs from the definition of 'implementation' in OCDS, which covers "
-"the implementation but not the procurement."
+"works or services (such as design and supervision) to be delivered under "
+"the project, including works or services performed by the procuring "
+"entity. This differs from the definition of 'implementation' in OCDS, "
+"which covers the implementation but not the procurement."
 msgstr ""
 "La implementación cubre las adquisiciones y la implementación del conjunto "
 "de trabajos o servicios (tales como diseño y supervisión) a ser entregados "
@@ -1638,11 +1787,11 @@ msgstr "Finalización"
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:4
 msgid ""
-"Completion covers the handover of the assets and close-out activities with "
-"details of the final scope, cost, and delivery time."
+"Completion covers the handover of the assets and close-out activities "
+"with details of the final scope, cost, and delivery time."
 msgstr ""
-"La finalización cubre el traspaso de los activos y las actividades de cierre"
-" con detalles del alcance, costo y fecha de entrega finales."
+"La finalización cubre el traspaso de los activos y las actividades de cierre "
+"con detalles del alcance, costo y fecha de entrega finales."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:5
@@ -1663,8 +1812,8 @@ msgstr "Cancelado"
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:6
 msgid ""
-"This project was cancelled before close-out activities were completed, and "
-"is inactive. Cancellation can occur anytime after identification."
+"This project was cancelled before close-out activities were completed, "
+"and is inactive. Cancellation can occur anytime after identification."
 msgstr ""
 "Este proyecto fue cancelado antes de que las actividades de cierre fueran "
 "completadas, y está inactivo. La cancelación puede ocurrir en cualquier "
@@ -1699,8 +1848,7 @@ msgstr "Reemplazo"
 
 #. Description
 #: schema/project-level/codelists/projectType.csv:3
-msgid ""
-"The primary focus of this project is the replacement of an existing asset."
+msgid "The primary focus of this project is the replacement of an existing asset."
 msgstr ""
 "El foco principal de este proyecto es el reemplazo de un activo existente."
 
@@ -1712,16 +1860,15 @@ msgstr "Expansión"
 
 #. Description
 #: schema/project-level/codelists/projectType.csv:4
-msgid ""
-"The primary focus of this project is the expansion of an existing asset."
+msgid "The primary focus of this project is the expansion of an existing asset."
 msgstr ""
 "El enfoque primario de este proyecto es la expansión de un activo existente."
 
 #. Description
 #: schema/project-level/codelists/relatedProject.csv:1
 msgid ""
-"The related project is the initial construction of the set of infrastructure"
-" assets."
+"The related project is the initial construction of the set of "
+"infrastructure assets."
 msgstr ""
 "El proyecto relacionado es la construcción inicial del conjunto de activos "
 "de infraestructura."
@@ -1729,8 +1876,8 @@ msgstr ""
 #. Description
 #: schema/project-level/codelists/relatedProject.csv:2
 msgid ""
-"The related project might result in the rehabilitation of the same set of "
-"infrastructure assets."
+"The related project might result in the rehabilitation of the same set of"
+" infrastructure assets."
 msgstr ""
 "El proyecto relacionado puede resultar en la rehabilitación del mismo "
 "conjunto de activos de infraestructura."
@@ -1741,8 +1888,8 @@ msgid ""
 "The related project might result in the replacement of the same set of "
 "infrastructure assets."
 msgstr ""
-"El proyecto relacionado puede resultar en el reemplazo del mismo conjunto de"
-" activos de infraestructura."
+"El proyecto relacionado puede resultar en el reemplazo del mismo conjunto de "
+"activos de infraestructura."
 
 #. Description
 #: schema/project-level/codelists/relatedProject.csv:4
@@ -1750,8 +1897,8 @@ msgid ""
 "The related project might result in the expansion of the same set of "
 "infrastructure assets."
 msgstr ""
-"El proyecto relacionado puede resultar en la expansión del mismo conjunto de"
-" activos de infraestructura."
+"El proyecto relacionado puede resultar en la expansión del mismo conjunto de "
+"activos de infraestructura."
 
 #. Title
 #: schema/project-level/codelists/relatedProjectScheme.csv:1
@@ -1760,11 +1907,10 @@ msgstr "ID de proyecto OC4IDS"
 
 #. Description
 #: schema/project-level/codelists/relatedProjectScheme.csv:1
-msgid ""
-"An Open Contracting for Infrastructure Data Standards project identifier"
+msgid "An Open Contracting for Infrastructure Data Standards project identifier"
 msgstr ""
-"Un identificador de proyecto de las Contrataciones Abiertas para el Estándar"
-" de Datos sobre Infraestructura."
+"Un identificador de proyecto de las Contrataciones Abiertas para el Estándar "
+"de Datos sobre Infraestructura."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:1
@@ -1775,35 +1921,34 @@ msgstr "Planeación"
 #: schema/project-level/codelists/releaseTag.csv:1
 msgid ""
 "A contracting process is proposed or planned. Information in the tender "
-"section describes the proposed process. The tender.status field should be "
-"used to identify whether the planning is at an early pipeline stage, or "
+"section describes the proposed process. The tender.status field should be"
+" used to identify whether the planning is at an early pipeline stage, or "
 "whether there are detailed plans for a tender developed."
 msgstr ""
-"Se propone o planea un proceso de contratación. La información en la sección"
-" de licitación describe el proceso propuesto. El campo tender.status debe de"
-" usarse para identificar si la planeación está en una etapa temprana o si "
-"hay planes detallados para una licitación. "
+"Se propone o planea un proceso de contratación. La información en la sección "
+"de licitación describe el proceso propuesto. El campo tender.status debe de "
+"usarse para identificar si la planeación está en una etapa temprana o si hay "
+"planes detallados para una licitación. "
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:2
 msgid "Planning update"
-msgstr "Actualización de la planificación"
+msgstr "Actualización de planeación"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:2
 msgid ""
-"Details of a proposed or planned contracting process are being updated. This"
-" might include addition of information and documents from consultation "
-"engagement activities, revised details or timelines for a proposed "
-"contracting process, or a tender.status update to indicate that a pipeline "
-"proposal has been withdrawn."
+"Details of a proposed or planned contracting process are being updated. "
+"This might include addition of information and documents from "
+"consultation engagement activities, revised details or timelines for a "
+"proposed contracting process, or a tender.status update to indicate that "
+"a pipeline proposal has been withdrawn."
 msgstr ""
-"Los detalles del proceso de contratación propuesto o planeado están siendo "
-"actualizados. Esto puede incluir la adición de información y documentos a "
-"partir de actividades de participación y consulta, detalles o líneas de "
-"tiempo revisados para un proceso de contratación propuesto, o una "
-"actualización en `tender.status` para indicar que una propuesta ha sido "
-"retirada."
+"Los detalles de un plan de contrataciones propuesto o planeado se están "
+"actualizando. Esto puede incluir la adición de información y documentos de "
+"actividades relacionadas a la consulta, detalles o líneas del tiempo "
+"modificados para un proceso de contrataciones propuesto, o una actualización "
+"a tender.status para indicar que una propuesta ha sido retirada."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:3
@@ -1814,7 +1959,8 @@ msgstr "Licitación"
 #: schema/project-level/codelists/releaseTag.csv:3
 msgid ""
 "Providing information about a new tender (call for proposals) process. "
-"Tender release should contain details of the goods or services being sought."
+"Tender release should contain details of the goods or services being "
+"sought."
 msgstr ""
 "Provee información sobre una nueva licitación (llamado a propuestas). La "
 "entrega de licitación debe contener detalles de los bienes o servicios que "
@@ -1823,59 +1969,58 @@ msgstr ""
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:4
 msgid "Tender amendment"
-msgstr "Enmienda a licitación"
+msgstr "Enmiendas a ofertas"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:4
 msgid ""
 "An amendment to an existing tender release. There should be at least one "
 "tender release with the same ocid, but an earlier release date, before a "
-"tenderAmendment is published. The term amendment has legal meaning in many "
-"jurisdictions."
+"tenderAmendment is published. The term amendment has legal meaning in "
+"many jurisdictions."
 msgstr ""
-"Una enmienda a un release de licitación (tender) existente. Debería existir "
-"al menos un release de licitación con el mismo ocid, pero con una fecha de "
-"release anterior, antes de publicar un tenderAmendment. El término enmienda "
-"tiene un significado legal en muchas jurisdicciones."
+"Una enmienda a una entrega de licitación (tender) existente. Debe haber al "
+"menos una entrega de licitación con el mismo ocid, pero con una fecha de "
+"entrega anterior, antes de que se publique un tenderAmendment. El término "
+"enmienda tiene una definición legal en muchas jurisdicciones."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:5
 msgid "Tender update"
-msgstr "Actualización de licitación"
+msgstr "Actualización de oferta"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:5
 msgid ""
-"An update to an existing tender release. There should be at least one tender"
-" release with the same ocid, but an earlier release date, before a "
+"An update to an existing tender release. There should be at least one "
+"tender release with the same ocid, but an earlier release date, before a "
 "tenderUpdate is published. An update may add new information or make "
-"corrections to prior published information. It should not be used for formal"
-" legal amendments to a tender, for which the tenderAmendment tag should be "
-"used."
+"corrections to prior published information. It should not be used for "
+"formal legal amendments to a tender, for which the tenderAmendment tag "
+"should be used."
 msgstr ""
-"Una actualización a un release de licitación (tender) existente. Debería "
-"existir al menos un release de licitación con el mismo ocid, pero con una "
-"fecha de release anterior, antes de publicar un tenderUpdate. Una "
-"actualización puede agregar nueva información o hacer correcciones a "
-"información publicada previamente. Este no debería ser utilizado para "
-"enmiendas legales a una licitación, para las cuales la etiqueta "
-"tenderAmendment debería ser utilizada."
+"Una actualización a una entrega de licitación (tender) existente. Debe haber "
+"al menos una entrega de licitación con el mismo ocid, pero con una fecha de "
+"entrega anterior, antes de publicar un tenderUpdate. Una actualización puede "
+"añadir nueva información o hacer correcciones a información publicada "
+"previamente. No debe ser utilizada para enmiendas legales a una oferta, para "
+"lo cual se debe usar la etiqueta tenderAmendment. "
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:6
 msgid "Tender cancellation"
-msgstr "Cancelación de la licitación"
+msgstr "Cancelación de oferta"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:6
 msgid ""
-"The cancellation of an existing tender. There should be at least one release"
-" with the same ocid, but an earlier release date, which provides details of "
-"the tender being cancelled."
+"The cancellation of an existing tender. There should be at least one "
+"release with the same ocid, but an earlier release date, which provides "
+"details of the tender being cancelled."
 msgstr ""
-"La cancelación de una licitación existente. Debería haber al menos un "
-"release con el mismo ocid, pero con una fecha de release anterior, que "
-"provea los detalles de la licitación que está siendo cancelada."
+"La cancelación de una licitación existente. Debe haber al menos una entrega "
+"con el mismo ocid, pero con una fecha de entrega anterior, que da los "
+"detalles de la licitación que está siendo cancelada."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:7
@@ -1889,32 +2034,32 @@ msgid ""
 "sections will be present, and the tender section might be populated with "
 "details of the process leading up to the award."
 msgstr ""
-"Se provee información sobre la adjudicación de un contrato. Una o más "
-"secciones de award deben estar presentes, y la sección de tender puede ser "
-"llenada con detalles del proceso que llevó a la adjudicación."
+"Da información sobre la adjudicación de un contrato. Estarán presentes una o "
+"más secciones de adjudicación, y la sección de licitación puede estar "
+"poblada con detalles del proceso que llevó a la adjudicación."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:8
 msgid "Award update"
-msgstr "Actualización de la adjudicación"
+msgstr "Actualización de adjudicación"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:8
 msgid ""
-"An update to an existing award release. There should be at least one award "
-"release with the same ocid, but an earlier release date before an "
+"An update to an existing award release. There should be at least one "
+"award release with the same ocid, but an earlier release date before an "
 "awardUpdate is published. An update may add new information or make "
 "corrections."
 msgstr ""
-"Una actualización a un release de adjudicación (award) existente. Debería "
-"existir al menos un release de adjudicación con el mismo ocid, pero con una "
-"fecha de release anterior, antes de publicar un awardUpdate. Una "
-"actualización puede añadir nueva información o hacer correcciones."
+"Una actualización a una entrega de adjudicación existente. Debe haber al "
+"menos una entrega de adjudicación con el mismo ocid, pero con una fecha de "
+"entrega anterior, antes de publicar un awardUpdate. Una actualización puede "
+"añadir nueva información o hacer correcciones."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:9
 msgid "Award cancellation"
-msgstr "Cancelación de la adjudicación"
+msgstr "Cancelación de adjudicación"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:9
@@ -1929,15 +2074,16 @@ msgstr "Contrato"
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:10
 msgid ""
-"Providing information about the details of a contract that has been, or will"
-" be, entered into. The tender section might be populated with details of the"
-" process leading up to the contract, and the award section might contain "
-"details of the award on the basis of which this contract will be signed."
+"Providing information about the details of a contract that has been, or "
+"will be, entered into. The tender section might be populated with details"
+" of the process leading up to the contract, and the award section might "
+"contain details of the award on the basis of which this contract will be "
+"signed."
 msgstr ""
-"Se provee información sobre los detalles de un contrato que ha entrado, o "
-"entrará, en vigencia. La sección de tender puede ser llenada con detalles "
-"del proceso que lleva al contrato, y la sección de award puede contener "
-"detalles de la adjudicación en base a la cual este contrato será firmado."
+"Da información sobre los detalles de un contrato que ha entrado, o entrará, "
+"en vigencia. La sección de licitación puede ser poblada con detalles del "
+"proceso que lleva al contrato, y la sección de adjudicación puede tener "
+"detalles sobre la adjudicación sobre la cual este contrato será firmado."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:11
@@ -1947,38 +2093,32 @@ msgstr "Actualización de contrato"
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:11
 msgid ""
-"Providing information about updates to a contract. There should be at least "
-"one contract release with the same ocid, but an earlier release date, before"
-" a contractUpdate is published. An update may add new information or make "
-"corrections to prior published information. It should not be used for formal"
-" legal amendments to a contract, for which the contractAmendment tag should "
-"be used."
+"Providing information about updates to a contract. There should be at "
+"least one contract release with the same ocid, but an earlier release "
+"date, before a contractUpdate is published. An update may add new "
+"information or make corrections to prior published information. It should"
+" not be used for formal legal amendments to a contract, for which the "
+"contractAmendment tag should be used."
 msgstr ""
-"Se provee información sobre actualizaciones a un contrato. Debería existir "
-"al menos un release de contrato (contract) con el mismo ocid, pero con una "
-"fecha de release anterior, antes de publicar un contractUpdate. Una "
-"actualización puede agregar nueva información o hacer correcciones a "
-"información publicada previamente. No debería ser utilizado para enmiendas "
-"legales a un contrato, para las cuales se debería usar la etiqueta "
-"contractAmendment."
-
-#. Title
-#: schema/project-level/codelists/releaseTag.csv:12
-msgid "Contract amendment"
-msgstr "Enmienda al contrato"
+"Da información sobre actualizaciones a un contrato. Debe haber al menos una "
+"entrega de contrato con el mismo ocid, pero con una fecha de entrega "
+"anterior, antes de publicar un contractUpdate. Una actualización puede "
+"añadir nueva información o hacer correcciones a información previamente "
+"publicada. No debe de utilizarse para enmiendas legales al contrato, para lo "
+"cual se debería usar la etiqueta contractAmendment."
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:12
 msgid ""
-"An amendment to an existing contract release. There should be at least one "
-"contract release with the same ocid, but an earlier release date, before a "
-"contractAmendment is published. The term amendment has legal meaning in many"
-" jurisdictions."
+"An amendment to an existing contract release. There should be at least "
+"one contract release with the same ocid, but an earlier release date, "
+"before a contractAmendment is published. The term amendment has legal "
+"meaning in many jurisdictions."
 msgstr ""
-"Una enmienda a un release de contrato existente. Debería existir al menos un"
-" release de contrato con el mismo ocid, pero con una fecha de release "
+"Una enmienda a una entrega de contrato existente. Debe haber al menos una "
+"entrega de contrato con el mismo ocid, pero con una fecha de entrega "
 "anterior, antes de publicar un contractAmendment. El término enmienda tiene "
-"un significado legal en varias jurisdicciones."
+"un significado legal en muchas jurisdicciones."
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:13
@@ -1987,8 +2127,7 @@ msgstr "Implementación"
 
 #. Description
 #: schema/project-level/codelists/releaseTag.csv:13
-msgid ""
-"Providing new information on the implementation of a contracting process."
+msgid "Providing new information on the implementation of a contracting process."
 msgstr ""
 "Provee información nueva sobre la implementación de un proceso de "
 "contratación"
@@ -2026,126 +2165,38 @@ msgstr "Registro Compilado"
 #: schema/project-level/codelists/releaseTag.csv:16
 msgid ""
 "This tag is used only in compiled records, which have merged together "
-"multiple releases to provide a snapshot view of the contract, and a version "
-"history."
+"multiple releases to provide a snapshot view of the contract, and a "
+"version history."
 msgstr ""
-"Esta etiqueta se usa sólo en registros compilados, que han reunido múltiples"
-" entregas para proveer una captura del contrato y un historial de versiones."
+"Esta etiqueta se usa sólo en registros compilados, que han reunido múltiples "
+"entregas para proveer una captura del contrato y un historial de versiones."
 
 #. Title
-#: schema/project-level/codelists/releaseTag.csv:17
-msgid "Qualification"
-msgstr "Calificación"
+#: schema/project-level/codelists/unitClassificationScheme.csv:1
+msgid "UN/CEFACT Recommendation 20"
+msgstr "UN/CEFACT Recommendation 20"
 
 #. Description
-#: schema/project-level/codelists/releaseTag.csv:17
+#: schema/project-level/codelists/unitClassificationScheme.csv:1
 msgid ""
-"Providing information about a new pre-qualification process (to qualify or "
-"pre-select bidders for a tender process)."
+"Use the common code from the latest version of the UN/CEFACT "
+"Recommendation 20 list of 'Codes for Units of Measure Used in "
+"International Trade'."
 msgstr ""
-"Provee información sobre un nuevo proceso de pre-calificación (para "
-"calificar o preseleccionar oferentes para un proceso de licitación)."
-
-#. Extension
-#: schema/project-level/codelists/releaseTag.csv:17
-#: schema/project-level/codelists/releaseTag.csv:18
-#: schema/project-level/codelists/releaseTag.csv:19
-#: schema/project-level/codelists/releaseTag.csv:20
-#: schema/project-level/codelists/releaseTag.csv:21
-#: schema/project-level/codelists/releaseTag.csv:22
-msgid "OCDS for PPPs Extension"
-msgstr "Extensiones OCDS para APP"
+"Utilize el código común de la última versión lista de 20 Recomendaciones UN/"
+"CEFACT 'Códigos para unidades de medida utilizados en el comercio "
+"internacional'."
 
 #. Title
-#: schema/project-level/codelists/releaseTag.csv:18
-msgid "Qualification Update"
-msgstr "Actualización de Calificación"
+#: schema/project-level/codelists/unitClassificationScheme.csv:2
+msgid "Quantities, Units, Dimensions and Data Types Ontologies"
+msgstr "Ontologías de Cantidades, Unidades, Dimensiones y Tipos de Datos"
 
 #. Description
-#: schema/project-level/codelists/releaseTag.csv:18
+#: schema/project-level/codelists/unitClassificationScheme.csv:2
 msgid ""
-"An update to an existing qualification release. There should be at least one"
-" qualification release with the same ocid, but an earlier releaseDate, "
-"before a qualificationUpdate is published. An update may add new information"
-" or make corrections to prior published information. It should not be used "
-"for formal legal amendments to a pre-qualification process, for which the "
-"qualificationAmendment tag should be used."
+"Use the [QUDT "
+"Code](http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html) value."
 msgstr ""
-"Una actualización a una entrega de calificación existente. Debería existir "
-"al menos una entrega de clasificación con el mismo ocid, pero con una fecha "
-"de entrega (releaseDate) más antigua, antes de publicar un "
-"qualificationUpdate. Una actualización puede agregar nueva información o "
-"hacer correcciones sobre información publicada previamente. Este no debería "
-"ser usado para enmiendas legales a un proceso de pre-calificación, para lo "
-"que debería usarse la etiqueta qualificationAmendment."
-
-#. Title
-#: schema/project-level/codelists/releaseTag.csv:19
-msgid "Qualification Amendment"
-msgstr "Enmienda de Calificación"
-
-#. Description
-#: schema/project-level/codelists/releaseTag.csv:19
-msgid ""
-"An amendment to an existing qualification release. There should be at least "
-"one qualification release with the same ocid, but an earlier releaseDate, "
-"before a qualificationAmendment is published. The term amendment has legal "
-"meaning in many jurisdictions."
-msgstr ""
-"Una enmienda a un release de calificación existente. Debería haber al menos "
-"un release de clasificación con el mismo ocid, pero con una fecha de entrega"
-" (releaseDate) anterior, antes de publicar un qualificationAmendment. El "
-"término enmienda tiene un significado legal en muchas jurisdicciones."
-
-#. Title
-#: schema/project-level/codelists/releaseTag.csv:20
-msgid "Qualification Cancellation"
-msgstr "Cancelación de Calificación"
-
-#. Description
-#: schema/project-level/codelists/releaseTag.csv:20
-msgid ""
-"The cancellation of an existing pre-qualification process. There should be "
-"at least one release with the same ocid, but an earlier releaseDate, which "
-"provides details of the pre-qualification process being cancelled."
-msgstr ""
-"La cancelación de un proceso de pre-calificación existente. Debería haber al"
-" menos un release con el mismo ocid, pero con una fecha de entrega "
-"(releaseDate) anterior, que provea detalles del proceso de pre-calificación "
-"que está siendo cancelado."
-
-#. Title
-#: schema/project-level/codelists/releaseTag.csv:21
-msgid "Shortlist"
-msgstr "Preselección (lista corta)"
-
-#. Description
-#: schema/project-level/codelists/releaseTag.csv:21
-msgid ""
-"Providing information about the qualification or pre-selection of bidders. "
-"The preQualification section may be populated with details of the process "
-"leading up to the shortlist, and details of qualified or shortlisted bidders"
-" will be provided in the parties section."
-msgstr ""
-"Provee información acerca de la calificación o preselección de ofertantes. "
-"La sección preQualification puede ser llenada con detalles del proceso que "
-"lleva a la preselección, y los detalles de los ofertantes calificados o "
-"preseleccionados serán proveídos en la sección de parties."
-
-#. Title
-#: schema/project-level/codelists/releaseTag.csv:22
-msgid "Shortlist Update"
-msgstr "Actualización de preselección (lista corta)"
-
-#. Description
-#: schema/project-level/codelists/releaseTag.csv:22
-msgid ""
-"An update to an existing shortlist release. There should be at least one "
-"shortlist release with the same ocid, but an earlier releaseDate before an "
-"shortlistUpdate is published. An update may add new information or make "
-"corrections."
-msgstr ""
-"Una actualización a una entrega de preselección existente. Debería haber al "
-"menos una entrega de preselección con el mismo ocid, pero con una fecha de "
-"entrega (releaseDate) anterior, para publicar un shortlistUpdate. Una "
-"actualización puede agregar nueva información o hacer correcciones."
+"Usa el valor del [QUDT Code](http://www.qudt.org/qudt/owl/1.0.0/unit/"
+"Instances.html)."

@@ -2,25 +2,19 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
-"PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/index.md:1
 msgid "Open Contracting for Infrastructure Data Standards Toolkit"
@@ -29,27 +23,18 @@ msgstr ""
 "Infraestructura"
 
 #: ../../docs/index.md:3
-msgid ""
-"The Open Contracting Data Standard (OCDS) is already used to describe "
-"millions of procurement processes around the world relating to goods, "
-"services and public works. The CoST Infrastructure Data Standard (CoST IDS) "
-"has been used to guide what data and information should be disclosed at each"
-" stage of the project cycle on over 25,000 infrastructure projects."
+msgid "The Open Contracting Data Standard (OCDS) is already used to describe millions of procurement processes around the world relating to goods, services and public works. The CoST Infrastructure Data Standard (CoST IDS) has been used to guide what data and information should be disclosed at each stage of the project cycle on over 25,000 infrastructure projects."
 msgstr ""
 "El Estándar de Datos de Contrataciones Abiertas (OCDS, por sus siglas en "
 "inglés) es usado actualmente para describir millones de procesos de "
 "contratación alrededor del mundo relacionados a bienes, servicios y obras "
-"públicas. El Estándar de Datos sobre Infraestructura CoST (CoST IDS, por sus"
-" siglas en inglés) ha sido usado para establecer qué datos e información "
+"públicas. El Estándar de Datos sobre Infraestructura CoST (CoST IDS, por sus "
+"siglas en inglés) ha sido usado para establecer qué datos e información "
 "deberían ser divulgados en cada etapa del ciclo de un proyecto para más de "
 "25.000 proyectos de infraestructura."
 
 #: ../../docs/index.md:5
-msgid ""
-"This site describes how to combine **contract level disclosures using OCDS**"
-" with **project-level disclosure based on the CoST IDS**, in order to "
-"support scalable disclosure and monitoring of infrastructure project "
-"identification, preparation, implementation and delivery."
+msgid "This site describes how to combine **contract level disclosures using OCDS** with **project-level disclosure based on the CoST IDS**, in order to support scalable disclosure and monitoring of infrastructure project identification, preparation, implementation and delivery."
 msgstr ""
 "Este sitio describe cómo combinar la **divulgación de datos a nivel de "
 "contrataciones usando OCDS** con la **divulgación de datos a nivel de "
@@ -58,48 +43,35 @@ msgstr ""
 "entrega de proyectos de infraestructura."
 
 #: ../../docs/index.md:7
-msgid ""
-"Trillions of dollars are spent every year on infrastructure and estimates "
-"suggest between 10 and 30% of infrastructure investment is lost through "
-"inefficiency, mismanagement and corruption. Access to better and more joined"
-" up data is essential to drive better quality, more affordable and more "
-"accessible infrastructure for government, citizens and business."
+msgid "Trillions of dollars are spent every year on infrastructure and estimates suggest between 10 and 30% of infrastructure investment is lost through inefficiency, mismanagement and corruption. Access to better and more joined up data is essential to drive better quality, more affordable and more accessible infrastructure for government, citizens and business."
 msgstr ""
-"Billones de dólares son gastados cada año en infraestructura, y estimaciones"
-" sugieren que entre el 10 y 30% de inversiones en infraestructura se pierden"
-" debido a ineficiencias, malas gestiones y corrupción. El acceso a datos "
+"Billones de dólares son gastados cada año en infraestructura, y estimaciones "
+"sugieren que entre el 10 y 30% de inversiones en infraestructura se pierden "
+"debido a ineficiencias, malas gestiones y corrupción. El acceso a datos "
 "mejores y más consolidados es esencial para impulsar infraestructuras de "
 "mejor calidad, menos costosas y más accesibles para el gobierno, los "
 "ciudadanos y las empresas."
 
 #: ../../docs/index.md:9
-msgid ""
-"This Open Contracting for Infrastructure Data Standards (OC4IDS) Toolkit "
-"will show you how to:"
+msgid "This Open Contracting for Infrastructure Data Standards (OC4IDS) Toolkit will show you how to:"
 msgstr ""
 "Este Manual de Contrataciones Abiertas para el Estándar de Datos sobre "
 "Infraestructura (OC4IDS) te mostrará cómo:"
 
 #: ../../docs/index.md:11
-msgid ""
-"[Publish standardized data](guidance/publishing) on infrastructure projects "
-"and contracts using the CoST IDS and OCDS."
+msgid "[Publish standardized data](guidance/publishing) on infrastructure projects and contracts using the CoST IDS and OCDS."
 msgstr ""
 "[Publicar datos estandarizados](guidance/publishing) de proyectos de "
 "infraestructura y contratos usando CoST IDS y OCDS."
 
 #: ../../docs/index.md:13
-msgid ""
-"Extract [infrastructure contracting data from existing procurement "
-"portals](guidance/using)."
+msgid "Extract [infrastructure contracting data from existing procurement portals](guidance/using)."
 msgstr ""
 "Extraer [datos de contrataciones en infraestructura desde portales de "
 "compras públicas existentes](guidance/using)."
 
 #: ../../docs/index.md:15
-msgid ""
-"Connect contract and project-level information [using "
-"OC4IDS](projects/index)."
+msgid "Connect contract and project-level information [using OC4IDS](projects/index)."
 msgstr ""
 "Conectar información de contratos e información a nivel de proyecto [usando "
 "OC4IDS](projects/index)."
@@ -114,4 +86,4 @@ msgstr "Usar datos al monitorear proyectos de infraestructura."
 
 #: ../../docs/index.md:21
 msgid "Contents"
-msgstr "Contenido"
+msgstr "Contenidos"
