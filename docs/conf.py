@@ -18,7 +18,9 @@ from glob import glob
 from pathlib import Path
 
 import standard_theme
+from docutils.nodes import make_id
 from ocds_babel.translate import translate
+from sphinx.locale import get_translation
 
 # -- Project information -----------------------------------------------------
 
@@ -56,7 +58,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'standard_theme'
+html_theme = 'standard_theme'  # 'pydata_sphinx_theme'
 html_theme_path = [standard_theme.get_html_theme_path()]
 html_favicon = '_static/favicon-16x16.ico'
 
@@ -68,9 +70,31 @@ html_static_path = ['_static', 'examples']
 
 # -- Local configuration -----------------------------------------------------
 
+_ = get_translation('theme')
+
 profile_identifier = 'infrastructure'
 repository_url = 'https://github.com/open-contracting/infrastructure'
 
+# Internationalization.
+gettext_compact = False
+gettext_domain_prefix = '{}-'.format(profile_identifier)  # `DOMAIN_PREFIX` from `config.mk`
+locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
+# We use single quotes for codes, which docutils will change to double quotes.
+# https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/utils/smartquotes.py
+smartquotes = False
+
+# MyST configuration.
+# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
+# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
+myst_enable_extensions = ['linkify']
+myst_heading_anchors = 6
+myst_heading_slug_func = make_id
+
+# Theme customization.
+navigation_with_keys = False  # restore the Sphinx default
+html_context = {
+    'analytics_id': 'YEWDOOEQ',
+}
 html_theme_options = {
     'analytics_id': 'YEWDOOEQ',
     'display_version': True,
@@ -82,37 +106,10 @@ html_theme_options = {
     'repository_url': repository_url,
 }
 
-# The version of OCDS to patch.
-standard_tag = '1__1__4'
-standard_version = '1.1'
-
-# Where the patched schemas will be deployed.
-schema_base_url = 'https://standard.open-contracting.org{}/schema/{}/'.format(
-    html_theme_options['root_url'], release.replace('-', '__').replace('.', '__'))
-
-# The `LOCALE_DIR` from `config.mk`, plus the theme's locale.
-locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'locale')]
-
-gettext_compact = False
-
-# The `DOMAIN_PREFIX` from `config.mk`.
-gettext_domain_prefix = '{}-'.format(profile_identifier)
-
-# List the extension identifiers and versions that should be part of this profile. The extensions must be available in
-# the extension registry: https://github.com/open-contracting/extension_registry/blob/main/extension_versions.csv
-extension_versions = {
-    # 'extension_id_in_registry': 'version',
-}
-
-# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
-# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
-myst_enable_extensions = []
-myst_heading_anchors = 6
-
 
 def setup(app):
     # The root of the repository.
-    basedir = Path(os.path.realpath(__file__)).parents[1]
+    basedir = Path(__file__).resolve().parents[1]
     # The `LOCALE_DIR` from `config.mk`.
     localedir = basedir / 'docs' / 'locale'
 
@@ -134,7 +131,7 @@ def setup(app):
     static_dir = basedir / 'docs' / '_static' / 'project-level'
     build_dir = basedir / 'build' / language
 
-    branch = os.getenv('TRAVIS_BRANCH', os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1])
+    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
