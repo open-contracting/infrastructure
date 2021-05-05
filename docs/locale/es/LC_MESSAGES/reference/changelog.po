@@ -179,7 +179,7 @@ msgid ""
 msgstr ""
 "[#139](https://github.com/open-contracting/infrastructure/issues/139) - "
 "actualizar las propiedades de campos en común con OCDS a la versión "
-"[1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)"
+"[1.1.4](https://standard.open-contracting.org/1.1/es/schema/changelog/#id1)"
 
 #: ../../docs/reference/changelog.md:30
 msgid ""
@@ -289,7 +289,7 @@ msgid ""
 msgstr ""
 "[#139](https://github.com/open-contracting/infrastructure/issues/139) - "
 "actualizar listas de código en común con OCDS a la versión "
-"[1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)"
+"[1.1.4](https://standard.open-contracting.org/1.1/es/schema/changelog/#id1)"
 
 #: ../../docs/reference/changelog.md:44
 msgid ""
@@ -374,7 +374,7 @@ msgid ""
 "must be published as part of a project package."
 msgstr ""
 "Añadir el [esquema de paquete de proyectos](https://standard.open-"
-"contracting.org/infrastructure/latest/en/reference/package/). Los datos "
+"contracting.org/infrastructure/latest/es/reference/package/). Los datos "
 "OC4IDS deben ser publicados como parte de un paquete de proyectos."
 
 #: ../../docs/reference/changelog.md:71
