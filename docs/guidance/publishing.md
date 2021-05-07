@@ -26,7 +26,7 @@ Commitments are important to help align implementation with the goals of publish
 
 Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
 
-Refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/1) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
+Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
 
 ### (2a) Map project-level data and summary contracting process data
 
@@ -44,7 +44,7 @@ Your mapping might identify:
 
 ### (2b) Map detailed contracting process data
 
-If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://www.open-contracting.org/implement/#/2) for information and resources about mapping and publishing your contracting data using OCDS.
+If you collect detailed data on contracting processes, refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/map/) for information and resources about mapping and publishing your contracting data using OCDS.
 
 Include an identifier for the infrastructure project that each contracting process relates to in your OCDS data, following the guidance on [project identifiers in OCDS](identifiers.md#project-identifiers-in-ocds).
 
@@ -82,4 +82,4 @@ To make your data easier to access, consider providing:
 [Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used to convert between JSON and spreadsheet/CSV format data.
 ```
 
-Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/implementation/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
+Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
