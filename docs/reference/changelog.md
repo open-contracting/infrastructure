@@ -19,6 +19,7 @@
 * [#304](https://github.com/open-contracting/infrastructure/issues/304) - update blank OC4IDS file with schema changes, and add project package.
 * [#316](https://github.com/open-contracting/infrastructure/issues/316) - update wording around worked example file, add link to blank.json.
 * [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
+* [#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping.
 
 ### Schema
 
