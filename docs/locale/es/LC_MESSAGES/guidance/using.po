@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,8 +71,8 @@ msgstr "Para empezar"
 msgid "*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*"
 msgstr ""
 "*Los siguientes pasos pueden requerir la ayuda de un experto técnico. Usted "
-"también puede contactar con el Helpdesk de OC4IDS ([data@open-"
-"contracting.org](mailto:data@open-contracting.org)) para orientación.*"
+"también puede contactar con el Helpdesk de OC4IDS ([data@open-contracting."
+"org](mailto:data@open-contracting.org)) para orientación.*"
 
 #: ../../docs/guidance/using.md:21
 msgid "(1) Evaluate the Open Contracting Data"
@@ -82,7 +82,7 @@ msgstr "(1) Evaluar los datos de Contrataciones Abiertas"
 msgid "Check that the data you plan to analyze is in OCDS format"
 msgstr "Verifique que los datos que planea analizar están en formato OCDS"
 
-#: ../../docs/guidance/using.md:25
+#: ../../docs/guidance/using.md:1
 msgid "You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format"
 msgstr ""
 "Puede usar la [Herramienta de revisión de datos OCDS](https://standard.open-"
@@ -113,7 +113,7 @@ msgstr ""
 "consultar los datos. Otros proveen acceso a datos en masa que puede "
 "descargar y utilizar con sus herramientas de consulta propias."
 
-#: ../../docs/guidance/using.md:37
+#: ../../docs/guidance/using.md:1
 msgid "If you are working with OCDS data from an unreliable source, consider caching a copy of the OCDS releases that relate to the infrastructure projects you are monitoring, and consider linking to the copies from your OC4IDS data in order to ensure they are available to users."
 msgstr ""
 "Si está trabajando con datos OCDS de una fuente poco fiable, considere "
@@ -122,7 +122,7 @@ msgstr ""
 "OC4IDS a las copias para asegurar que los releases OCDS estén disponibles "
 "para los usuarios."
 
-#: ../../docs/guidance/using.md:41
+#: ../../docs/guidance/using.md:1
 msgid "[OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an open source tool that can load OCDS data into a PostgreSQL database. It includes scrapers for many known OCDS data sources"
 msgstr ""
 "[OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) es una "
@@ -143,7 +143,7 @@ msgstr ""
 "campo identificador de proyecto o de presupuesto que esté relacionado a un "
 "registro de proyectos de infraestructura."
 
-#: ../../docs/guidance/using.md:49
+#: ../../docs/guidance/using.md:1
 msgid "If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects."
 msgstr ""
 "Si los datos de compras públicas con los cuales trabaja están en formato "
@@ -168,7 +168,7 @@ msgstr ""
 msgid "Worked example"
 msgstr "Ejemplo práctico"
 
-#: ../../docs/guidance/using.md:57
+#: ../../docs/guidance/using.md:1
 msgid "Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary."
 msgstr ""
 "Usando el conjunto de datos en formato OCDS de UK Contracts Finder y [OCDS "
@@ -178,7 +178,7 @@ msgstr ""
 "inspección'](http://cpv.data.ac.uk/code-71000000.html) del Vocabulario Común "
 "de Adquisiciones de la UE (CPV, por sus siglas en inglés)."
 
-#: ../../docs/guidance/using.md:85
+#: ../../docs/guidance/using.md:29
 msgid "This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring."
 msgstr ""
 "Esto retorna más de 11.000 procesos de adquisición relacionados a "
@@ -209,7 +209,7 @@ msgstr ""
 "Buscar **contratos relacionados** para enlazar cualquier otro contrato de "
 "diseño, construcción o supervisión a este proyecto;"
 
-#: ../../docs/guidance/using.md:99
+#: ../../docs/guidance/using.md:1
 msgid "When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities."
 msgstr ""
 "Cuando busque contratos relacionados, podría enfocarse en contratos con el "
@@ -240,7 +240,7 @@ msgstr ""
 "Cualquier estudio de impacto ambiental o a tierras y reasentamientos que se "
 "ha realizado"
 
-#: ../../docs/guidance/using.md:110
+#: ../../docs/guidance/using.md:1
 msgid "You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started."
 msgstr ""
 

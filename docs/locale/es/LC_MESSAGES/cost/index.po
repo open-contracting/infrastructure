@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,7 @@ msgstr ""
 msgid "Frameworks and standards"
 msgstr "Marcos y estándares"
 
-#: ../../docs/cost/index.md:25
+#: ../../docs/cost/index.md:1
 msgid "There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data."
 msgstr ""
 "Hay una distinción importante entre el Estándar de Datos sobre "
@@ -90,7 +90,7 @@ msgstr ""
 "deberían ser publicadas. OCDS describe *campos específicos* y cómo deberían "
 "estar estructurados como datos."
 
-#: ../../docs/cost/index.md:27
+#: ../../docs/cost/index.md:3
 msgid "The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard."
 msgstr ""
 "Las [ Contrataciones Abiertas para el Estándar de Datos sobre "
@@ -124,7 +124,7 @@ msgstr ""
 
 #: ../../docs/cost/index.md:46
 msgid "Common operations"
-msgstr ""
+msgstr "Operaciones comunes"
 
 #: ../../docs/cost/index.md:48
 msgid "To avoid repetition in the mapping, we refer and link to the following common operations."
@@ -324,7 +324,7 @@ msgstr ""
 
 #: ../../docs/cost/index.md:340
 msgid "Guidance"
-msgstr ""
+msgstr "Guía"
 
 #: ../../docs/cost/index.md:342
 msgid "Command-line tool and reference implementation"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-04 21:10-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -401,7 +401,7 @@ msgstr "Descripción"
 #: mapping/reactive-process-level-contract.csv:1
 msgid ""
 "*Check the `/contracts/documents` array for `Document` objects with "
-"`.type` set to ‘contractSigned’ and copy each object to the "
+"`.documentType` set to ‘contractSigned’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr ""
 msgid ""
 "*Check the `/contracts/documents` and "
 "`/contracts/implementation/documents` arrays for `Document` objects with "
-"`.type` set to ‘escalationApprovals’ and copy each object to the "
+"`.documentType` set to ‘escalationApprovals’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
@@ -457,8 +457,8 @@ msgstr ""
 msgid ""
 "*Check the `/contracts/documents` and "
 "`/contracts/implementation/documents` arrays for `Document` objects with "
-"`.type` set to ‘qualityAssuranceReport’ and copy each object to the "
-"`.summary.documents` array.*"
+"`.documentType` set to ‘qualityAssuranceReport’ and copy each object to "
+"the `.summary.documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
@@ -468,15 +468,15 @@ msgid ""
 "to `.summary.transactions`.*\n"
 "\n"
 "*Check the `/contracts/implementation/documents` array for `Document` "
-"objects with `.type` set to ‘paymentCertificate’ and copy each object to "
-"the `.summary.documents` array.*"
+"objects with `.documentType` set to ‘paymentCertificate’ and copy each "
+"object to the `.summary.documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-implementation.csv:5
 msgid ""
 "*Check the `/contracts/documents` array for `Document` objects with "
-"`.type` set to ‘contractAmendment’ and copy each object to the "
+"`.documentType` set to ‘contractAmendment’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
@@ -501,16 +501,16 @@ msgstr ""
 #. Mapping from OCDS
 #: mapping/reactive-process-level-procurement.csv:3
 msgid ""
-"*Check the `/tender/documents` array for `Document` objects with `.type` "
-"set to ‘biddingDocuments’ and copy each object to the "
+"*Check the `/tender/documents` array for `Document` objects with "
+"`.documentType` set to ‘biddingDocuments’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-procurement.csv:4
 msgid ""
-"*Check the `/tender/documents` array for `Document` objects with `.type` "
-"set to ‘evaluationReports’ and copy each object to the "
+"*Check the `/tender/documents` array for `Document` objects with "
+"`.documentType` set to ‘evaluationReports’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
@@ -518,7 +518,7 @@ msgstr ""
 #: mapping/reactive-process-level-procurement.csv:5
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘projectDesignReport’ and copy each object to the "
+"`.documentType` set to ‘projectDesignReport’ and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
 
@@ -526,7 +526,7 @@ msgstr ""
 #: mapping/reactive-project-level-completion.csv:1
 msgid ""
 "*Optionally, check the `/contracts/implementation` array for `Document` "
-"objects with `.type` set to ‘physicalProgressReport’ or "
+"objects with `.documentType` set to ‘physicalProgressReport’ or "
 "‘financialProgressReport and copy each object to the `.summary.documents`"
 " array.*\n"
 "\n"
@@ -539,23 +539,23 @@ msgstr ""
 #: mapping/reactive-project-level-completion.csv:2
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘budgetAmendmentApproval’ and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to ‘budgetAmendmentApproval’ and copy each object to "
+"the `documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:3
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.type` set to ‘projectCompletionReport’ and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to ‘projectCompletionReport’ and copy each object to "
+"the `documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:4
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.type` set to ‘projectEvaluation’ and copy each object to the "
+"`.documentType` set to ‘projectEvaluation’ and copy each object to the "
 "`documents` array.*"
 msgstr ""
 
@@ -563,16 +563,16 @@ msgstr ""
 #: mapping/reactive-project-level-completion.csv:5
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.type` set to ‘technicalAuditReport’ and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to ‘technicalAuditReport’ and copy each object to the"
+" `documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:6
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.type` set to ‘financialAuditReport’ and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to ‘financialAuditReport’ and copy each object to the"
+" `documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
@@ -586,31 +586,31 @@ msgstr ""
 #: mapping/reactive-project-level-identification-preparation.csv:2
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘feasibilityStudy’ and copy each object to the `documents`"
-" array.*"
+"`.documentType` set to ‘feasibilityStudy’ and copy each object to the "
+"`documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:3
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘environmentalImpact’ or ‘socialImpact’ and copy each "
-"object to the `documents` array.*"
+"`.documentType` set to ‘environmentalImpact’ or ‘socialImpact’ and copy "
+"each object to the `documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:4
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘resettlementPlan’ and copy each object to the `documents`"
-" array.*"
+"`.documentType` set to ‘resettlementPlan’ and copy each object to the "
+"`documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:6
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘financialAgreement’ and copy each object to the "
+"`.documentType` set to ‘financialAgreement’ and copy each object to the "
 "`documents` array.*"
 msgstr ""
 
@@ -618,14 +618,14 @@ msgstr ""
 #: mapping/reactive-project-level-identification-preparation.csv:7
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘procurementPlan’ and copy each object to the `documents` "
-"array.*"
+"`.documentType` set to ‘procurementPlan’ and copy each object to the "
+"`documents` array.*"
 msgstr ""
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:8
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.type` set to ‘budgetApproval’ and copy each object to the `documents` "
-"array.*"
+"`.documentType` set to ‘budgetApproval’ and copy each object to the "
+"`documents` array.*"
 msgstr ""

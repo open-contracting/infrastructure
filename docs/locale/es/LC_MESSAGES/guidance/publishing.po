@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "Linking to related information"
 msgstr "Enlaces a información relacionada"
 
-#: ../../docs/guidance/publishing.md:9
+#: ../../docs/guidance/publishing.md:1
 msgid "Infrastructure transparency portal creators should consider what other types of information might be important to citizens, in addition to the in depth scrutiny related information in OC4IDS."
 msgstr ""
 "Los creadores de portales de transparencia en infraestructura deberían "
@@ -56,7 +56,7 @@ msgstr ""
 "ciudadanos, además de la información detallada en OC4IDS que permite un "
 "escrutinio profundo."
 
-#: ../../docs/guidance/publishing.md:11
+#: ../../docs/guidance/publishing.md:3
 msgid "For example, [Highways England](https://highwaysengland.co.uk/roads/) provides links to congestion and traffic restriction information alongside information on roads projects."
 msgstr ""
 "Por ejemplo, [Highways England](https://highwaysengland.co.uk/roads/) provee "
@@ -113,7 +113,7 @@ msgstr ""
 msgid "Map existing data structures to [OC4IDS](../../projects/index)."
 msgstr "Mapee estructuras de datos existentes a [OC4IDS](../../projects/index)."
 
-#: ../../docs/guidance/publishing.md:35
+#: ../../docs/guidance/publishing.md:1
 msgid "The [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) can be used to document your mapping."
 msgstr ""
 "La [Planilla de Mapeo a Nivel de Campos OC4IDS](https://www.open-contracting."
@@ -162,7 +162,7 @@ msgstr ""
 "comprobar que los archivos son estructuralmente correctos de acuerdo a "
 "OC4IDS."
 
-#: ../../docs/guidance/publishing.md:55
+#: ../../docs/guidance/publishing.md:1
 msgid "You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started."
 msgstr ""
 
@@ -231,7 +231,7 @@ msgstr ""
 "Una página en su sitio Web con detalles sobre cómo los usuarios pueden "
 "acceder a los datos."
 
-#: ../../docs/guidance/publishing.md:81
+#: ../../docs/guidance/publishing.md:1
 msgid "[Flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) can be used to convert between JSON and spreadsheet/CSV format data."
 msgstr ""
 "El [flatten-tool](https://flatten-tool.readthedocs.io/en/latest/) puede ser "

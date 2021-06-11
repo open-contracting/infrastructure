@@ -215,7 +215,7 @@ msgstr "Por ejemplo:"
 
 #: ../../docs/reference/schema.md:87
 msgid "ContactPoint"
-msgstr "Punto de Contacto (ContactPoint)"
+msgstr "Punto de Contacto"
 
 #: ../../docs/reference/schema.md:95
 msgid "Document"
@@ -295,7 +295,7 @@ msgstr "Para cada organización, provea tantos datos estructurados como pueda."
 
 #: ../../docs/reference/schema.md:152
 msgid "OrganizationReference"
-msgstr "Referencia a Organización (OrganizationReference)"
+msgstr "OrganizationReference"
 
 #: ../../docs/reference/schema.md:160
 msgid "Period"
@@ -338,7 +338,7 @@ msgstr ""
 
 #: ../../docs/reference/schema.md:194
 msgid "Transaction"
-msgstr ""
+msgstr "Transacción"
 
 #: ../../docs/reference/schema.md:196
 msgid "A spending transaction related to a contracting process."

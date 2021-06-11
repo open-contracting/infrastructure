@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-04 21:10-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,13 +343,13 @@ msgid ""
 "[sector].[subsector]. Where subsector codes are used the parent code "
 "should also be included, e.g. `['transport', 'transport.air']`"
 msgstr ""
-"Uno o más valores de la [lista de códigos projectSector](https://standard"
-".open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/"
-"codelists/#projectsector) representando el sector o sectores que se "
-"relacionan con este proyecto. Se puede proveer información de sector más "
-"desglosada usando el patrón [sector].[subsector]. Cuando los códigos de "
-"subsector son usados el código padre debería ser incluido también, por "
-"ejemplo `['transport', 'transport.air']`"
+"Uno o más valores de la [lista de códigos projectSector](https://standard."
+"open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/"
+"#projectsector) representando el sector o sectores que se relacionan con "
+"este proyecto. Se puede proveer información de sector más desglosada usando "
+"el patrón [sector].[subsector]. Cuando los códigos de subsector son usados "
+"el código padre debería ser incluido también, por ejemplo `['transport', "
+"'transport.air']`"
 
 #. /properties/purpose/title
 #: schema/project-level/project-schema.json:1
@@ -1172,10 +1172,10 @@ msgid ""
 "documentation."
 msgstr ""
 "Esto debería proveerse cuando el proceso de contratación esté completo. "
-"Puede ser derivado de la suma de de los valores en "
-"`contract.implementation.transactions` en los datos OCDS enlazados cuando "
-"estos estén disponibles. En otro caso, puede ser necesario identificar e "
-"ingresar manualmente el valor en base a otra documentación del proyecto."
+"Puede ser derivado de la suma de de los valores en `contract.implementation."
+"transactions` en los datos OCDS enlazados cuando estos estén disponibles. En "
+"otro caso, puede ser necesario identificar e ingresar manualmente el valor "
+"en base a otra documentación del proyecto."
 
 #. /definitions/ContractingProcessSummary/properties/documents/description
 #: schema/project-level/project-schema.json:1
@@ -1590,6 +1590,9 @@ msgid ""
 " the location(s), or might provide a human-readable description of the "
 "location to be covered."
 msgstr ""
+"Un nombre o descripción para esta ubicación. Esto puede incluir el(los) "
+"nombre(s) de la ubicación (o ubicaciones), o puede incluir una descripción "
+"legible de la ubicación a ser cubierta."
 
 #. /definitions/Location/properties/geometry/title
 #: schema/project-level/project-schema.json:1
@@ -1608,6 +1611,14 @@ msgid ""
 "location which is not contained in a known gazetteer, polygon and multi-"
 "polygon can be used."
 msgstr ""
+"Seguimos el [estándar GeoJSON] (http://geojson.org/) para expresar "
+"información básica de ubicación, usando los valores de longitud, latitud y "
+"opcionalmente elevación en la proyección [WGS84] (https://en.wikipedia.org/"
+"wiki/World_Geodetic_System) (EPSG: 4326). Un punto de ubicación se puede "
+"identificar geocodificando una dirección de entrega. Para licencias de "
+"concesión, u otros contratos que cubran una ubicación en polígono que no "
+"esté contenida en un diccionario geográfico conocido, se pueden usar "
+"polígonos y polígonos múltiples."
 
 #. /definitions/Location/properties/geometry/properties/type/description
 #: schema/project-level/project-schema.json:1
@@ -1618,6 +1629,11 @@ msgid ""
 "[longitude, latitude] or [longitude, latitude, elevation] as the value of"
 " the coordinates field: e.g. [-122.085, 37.42]."
 msgstr ""
+"El tipo de [Objeto Geométrico GeoJSON] (http://geojson.org/geojson-spec.html"
+"#geometry-objects) que se proporciona. Para proporcionar longitud, latitud y "
+"opcionalmente elevación, use 'Point', e ingrese una lista de [longitud, "
+"latitud] o [longitud, latitud, elevación] como el valor del campo de "
+"coordenadas: por ejemplo, [-122.085, 37.42]."
 
 #. /definitions/Location/properties/geometry/properties/coordinates/title
 #: schema/project-level/project-schema.json:1
@@ -1632,6 +1648,10 @@ msgid ""
 "geometry being described. The longitude and latitude must be expressed in"
 " decimal degrees in the WGS84 (EPSG:4326) projection."
 msgstr ""
+"La lista de puntos, ej. [longitud, latitud] o [longitud, latitud, elevación]"
+", o una matriz anidada de puntos, para el objeto geométrico GeoJSON que está "
+"siendo descrito. La longitud y latitud deben ser expresadas en grados "
+"decimales en la proyección WGS84 (EPSG:4326)."
 
 #. /definitions/Location/properties/gazetteer/title
 #: schema/project-level/project-schema.json:1
@@ -1644,6 +1664,8 @@ msgid ""
 "Identifiers from a gazetteer (a geographical index or directory) for the "
 "location."
 msgstr ""
+"Identificadores de un diccionario geográfico (un índice o directorio "
+"geográfico) para la ubicación. "
 
 #. /definitions/Location/properties/gazetteer/properties/scheme/title
 #: schema/project-level/project-schema.json:1
@@ -1657,6 +1679,10 @@ msgid ""
 "provides details of services, where available, that can resolve a "
 "gazetteer entry to provide location names."
 msgstr ""
+"El identificador del diccionario geográfico. La lista de códigos "
+"`locationGazetteers.csv` provee detalles de servicios, si están disponibles, "
+"que pueden resolver una entrada del diccionario geográfico para proveer "
+"nombres de ubicación."
 
 #. /definitions/Location/properties/gazetteer/properties/identifiers/title
 #: schema/project-level/project-schema.json:1
@@ -1669,6 +1695,8 @@ msgid ""
 "An array of one or more codes drawn from the gazetteer indicated by the "
 "`scheme` field."
 msgstr ""
+"Una lista de uno o más códigos tomados del diccionario geográfico indicado "
+"en el campo `scheme`."
 
 #. /definitions/Location/properties/uri/description
 #: schema/project-level/project-schema.json:1
@@ -1677,6 +1705,9 @@ msgid ""
 "human-readable document with information on the location, or a machine-"
 "readable description of the location."
 msgstr ""
+"Un URI a una descripción más detallada de la ubicación de la actividad. Esto "
+"puede ser un documento legible por el usuario con información sobre la "
+"ubicación o una descripción legible por computadora de la ubicación."
 
 #. /definitions/Location/properties/address/title
 #. /definitions/Organization/properties/address/title
@@ -2299,6 +2330,9 @@ msgid ""
 " for example: registering for access, paying a fee, or visiting a "
 "location to inspect the document."
 msgstr ""
+"Una descripción de los arreglos especiales necesarios para acceder a este "
+"documento, por ejemplo: registrarse para el acceso, pagar una cuota o "
+"visitar un lugar para inspeccionar el documento."
 
 #. /definitions/Document/properties/author/title
 #: schema/project-level/project-schema.json:1
@@ -2308,7 +2342,7 @@ msgstr "Autor"
 #. /definitions/Document/properties/author/description
 #: schema/project-level/project-schema.json:1
 msgid "The names of the authors of the document."
-msgstr ""
+msgstr "Los nombres de los autores del documento."
 
 #. /definitions/Identifier/description
 #: schema/project-level/project-schema.json:1
@@ -2576,6 +2610,10 @@ msgid ""
 "scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of \"Codes for"
 " Units of Measure Used in International Trade\" is recommended."
 msgstr ""
+"La lista de la que se toman los identificadores de las unidades de medida. "
+"Se recomienda el uso del esquema 'UNCEFACT' para la lista Recomendación 20 "
+"de CEFACT/ONU de \"Códigos de unidades de medida utilizados en el comercio "
+"internacional\"."
 
 #. /definitions/Observation/properties/unit/properties/id/description
 #: schema/project-level/project-schema.json:1
@@ -2586,8 +2624,8 @@ msgid ""
 " symbol for this unit of measure."
 msgstr ""
 "El identificador de la lista de códigos se hace referencia en la propiedad "
-"de esquema. Por ejemplo, con UNCEFACT, este es el valor de la columna \""
-"Common Code\". A partir de este identificador, las aplicaciones pueden "
+"de esquema. Por ejemplo, con UNCEFACT, este es el valor de la columna "
+"\"Common Code\". A partir de este identificador, las aplicaciones pueden "
 "buscar el nombre o símbolo legible para humanos  para esta unidad de medida."
 
 #. /definitions/Observation/properties/unit/properties/uri/description

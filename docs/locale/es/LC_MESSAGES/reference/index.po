@@ -48,8 +48,8 @@ msgid "The OC4IDS schema reuses many of the building blocks from the Open Contra
 msgstr ""
 "El esquema OC4IDS reutiliza mucho de los bloques del Estándar de Datos de "
 "Contrataciones Abiertas; estos son presentados en la [sección de 'Para "
-"empezar' de la documentación de OCDS](https://standard.open-contracting.org/"
-"1.1/es/getting_started/)."
+"empezar' de la documentación de OCDS](https://standard.open-contracting.org/1"
+".1/es/getting_started/)."
 
 #: ../../docs/reference/index.md:24
 msgid "Data validation"

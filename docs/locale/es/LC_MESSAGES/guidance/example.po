@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "The full OC4IDS JSON file for the worked example is {download}`available to download <../examples/example.json>`."
 msgstr ""
 
-#: ../../docs/guidance/example.md:9
+#: ../../docs/guidance/example.md:1
 msgid "You can also download a {download}`blank example OC4IDS JSON file <../examples/blank.json>` as a starting point for your implementation."
 msgstr ""
 

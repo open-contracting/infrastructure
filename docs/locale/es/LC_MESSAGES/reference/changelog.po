@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,7 +25,7 @@ msgid "[0.9.3] - 2021-04-30"
 msgstr ""
 
 #: ../../docs/reference/changelog.md:5
-#: ../../docs/reference/changelog.md:65
+#: ../../docs/reference/changelog.md:66
 msgid "Documentation"
 msgstr "Documentación"
 
@@ -89,161 +89,165 @@ msgstr ""
 msgid "[#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:23
-#: ../../docs/reference/changelog.md:80
+#: ../../docs/reference/changelog.md:22
+msgid "[#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping."
+msgstr ""
+
+#: ../../docs/reference/changelog.md:24
+#: ../../docs/reference/changelog.md:81
 msgid "Schema"
 msgstr "Esquema"
 
-#: ../../docs/reference/changelog.md:25
+#: ../../docs/reference/changelog.md:26
 msgid "[#277](https://github.com/open-contracting/infrastructure/issues/277) - add `forecasts` and `metrics`, which can be used to publish implementation progress reports."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:26
+#: ../../docs/reference/changelog.md:27
 msgid "[#317](https://github.com/open-contracting/infrastructure/pull/317) - update fields shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:27
+#: ../../docs/reference/changelog.md:28
 msgid "[#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:28
+#: ../../docs/reference/changelog.md:29
 msgid "[#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:29
+#: ../../docs/reference/changelog.md:30
 msgid "[#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:30
+#: ../../docs/reference/changelog.md:31
 msgid "[#223](https://github.com/open-contracting/infrastructure/issues/223) - add stricter validation rules to catch empty arrays, objects and strings."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:32
-#: ../../docs/reference/changelog.md:104
+#: ../../docs/reference/changelog.md:33
+#: ../../docs/reference/changelog.md:105
 msgid "Codelists"
 msgstr "Listas de códigos"
 
-#: ../../docs/reference/changelog.md:34
+#: ../../docs/reference/changelog.md:35
 msgid "[#317](https://github.com/open-contracting/infrastructure/pull/317) - update codes shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:36
+#: ../../docs/reference/changelog.md:37
 msgid "documentType codelist"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:38
+#: ../../docs/reference/changelog.md:39
 msgid "Changed:"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:40
+#: ../../docs/reference/changelog.md:41
 msgid "[#261](https://github.com/open-contracting/infrastructure/issues/261) Update description of 'feasibilityStudy' code to include \"project\"."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:41
+#: ../../docs/reference/changelog.md:42
 msgid "[#267](https://github.com/open-contracting/infrastructure/issues/267) Update description of 'completionCertificate' code to include \"project\"."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:43
+#: ../../docs/reference/changelog.md:44
 msgid "Added:"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:45
+#: ../../docs/reference/changelog.md:46
 msgid "[#262](https://github.com/open-contracting/infrastructure/issues/262) 'socialImpact'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:46
+#: ../../docs/reference/changelog.md:47
 msgid "[#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:47
+#: ../../docs/reference/changelog.md:48
 msgid "[#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:48
+#: ../../docs/reference/changelog.md:49
 msgid "[#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:49
+#: ../../docs/reference/changelog.md:50
 msgid "[#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:50
+#: ../../docs/reference/changelog.md:51
 msgid "[#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:51
+#: ../../docs/reference/changelog.md:52
 msgid "[#271](https://github.com/open-contracting/infrastructure/issues/271) 'escalationApproval'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:52
+#: ../../docs/reference/changelog.md:53
 msgid "[#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:53
+#: ../../docs/reference/changelog.md:54
 msgid "[#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:54
+#: ../../docs/reference/changelog.md:55
 msgid "[#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:55
+#: ../../docs/reference/changelog.md:56
 msgid "[#270](https://github.com/open-contracting/infrastructure/issues/270) 'designReport'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:56
+#: ../../docs/reference/changelog.md:57
 msgid "[#273](https://github.com/open-contracting/infrastructure/issues/273) 'paymentCertificate'"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:58
+#: ../../docs/reference/changelog.md:59
 msgid "Removed:"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:60
+#: ../../docs/reference/changelog.md:61
 msgid "[#269](https://github.com/open-contracting/infrastructure/issues/269) 'finalAudit' (use 'technicalAuditReport' or 'financialAuditReport')"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:61
+#: ../../docs/reference/changelog.md:62
 msgid "[#321](https://github.com/open-contracting/infrastructure/issues/269) 'contractSchedule' (use 'contractAnnexe')"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:63
+#: ../../docs/reference/changelog.md:64
 msgid "[0.9.2] - 2020-06-29"
 msgstr ""
 
-#: ../../docs/reference/changelog.md:67
+#: ../../docs/reference/changelog.md:68
 msgid "[#96](https://github.com/open-contracting/infrastructure/issues/96) - add guidance on providing project identifiers in OCDS data."
 msgstr ""
 "[#96](https://github.com/open-contracting/infrastructure/issues/96) - añadir "
 "orientación sobre cómo proveer identificadores de proyecto en datos OCDS."
 
-#: ../../docs/reference/changelog.md:68
+#: ../../docs/reference/changelog.md:69
 msgid "[#120](https://github.com/open-contracting/infrastructure/issues/120) - add list of registered project identifier prefixes to documentation."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:69
+#: ../../docs/reference/changelog.md:70
 msgid "[#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes."
 msgstr ""
 "[#124](https://github.com/open-contracting/infrastructure/issues/124) - "
 "aclarar orientación sobre prefijos de identificadores de proyecto."
 
-#: ../../docs/reference/changelog.md:70
+#: ../../docs/reference/changelog.md:71
 msgid "[#131](https://github.com/open-contracting/infrastructure/issues/131) - replace 'owner' with 'publicAuthority' in mapping."
 msgstr ""
 "[#131](https://github.com/open-contracting/infrastructure/issues/131) - "
 "reemplazar 'owner' con 'publicAuthority' en mapeo."
 
-#: ../../docs/reference/changelog.md:71
+#: ../../docs/reference/changelog.md:72
 msgid "[#133](https://github.com/open-contracting/infrastructure/issues/133) - improve clarity of 'what is a project' in getting started section."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:72
+#: ../../docs/reference/changelog.md:73
 msgid "[#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file."
 msgstr ""
 "[#136](https://github.com/open-contracting/infrastructure/issues/136) - "
 "añadir prefijo de identificador de proyecto en archivo de ejemplo."
 
-#: ../../docs/reference/changelog.md:73
+#: ../../docs/reference/changelog.md:74
 msgid "[#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity."
 msgstr ""
 "[#143](https://github.com/open-contracting/infrastructure/issues/143) - "
@@ -251,62 +255,62 @@ msgstr ""
 "proyectos, usar palabras clave no normativas, y ediciones para mayor "
 "claridad."
 
-#: ../../docs/reference/changelog.md:74
+#: ../../docs/reference/changelog.md:75
 msgid "[#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page."
 msgstr ""
 "[#143](https://github.com/open-contracting/infrastructure/issues/143) - "
 "añadir página de orientación para usuarios de datos."
 
-#: ../../docs/reference/changelog.md:75
+#: ../../docs/reference/changelog.md:76
 msgid "[#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists that are shared."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:76
+#: ../../docs/reference/changelog.md:77
 msgid "[#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file."
 msgstr ""
 "[#146](https://github.com/open-contracting/infrastructure/issues/146) - "
 "añadir el rol de 'publicAuthority' a archivo de ejemplo."
 
-#: ../../docs/reference/changelog.md:77
+#: ../../docs/reference/changelog.md:78
 msgid "[#218](https://github.com/open-contracting/infrastructure/pull/218) - add link to CoST guidance note on OGP commitments."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:78
+#: ../../docs/reference/changelog.md:79
 msgid "[#211](https://github.com/open-contracting/infrastructure/issues/211) - update description of 'publicAuthority' role."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:82
+#: ../../docs/reference/changelog.md:83
 msgid "Project package schema"
 msgstr "Esquema de paquete de proyectos"
 
-#: ../../docs/reference/changelog.md:84
+#: ../../docs/reference/changelog.md:85
 msgid "[#143](https://github.com/open-contracting/infrastructure/issues/143) - update URL in `publicationPolicy` description to reference the data user guide page."
 msgstr ""
 "[#143](https://github.com/open-contracting/infrastructure/issues/143) - "
 "actualizar la URL en la descripción de `publicationPolicy` para referenciar "
 "a la página de orientación para usuarios de datos."
 
-#: ../../docs/reference/changelog.md:85
+#: ../../docs/reference/changelog.md:86
 msgid "[#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce minimum length on required string fields and minimum properties on required objects."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:87
+#: ../../docs/reference/changelog.md:88
 msgid "OC4IDS project schema"
 msgstr "Esquema de proyecto OC4IDS"
 
-#: ../../docs/reference/changelog.md:89
+#: ../../docs/reference/changelog.md:90
 msgid "[#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:90
+#: ../../docs/reference/changelog.md:91
 msgid "[#132](https://github.com/open-contracting/infrastructure/issues/132) - add a publicAuthority organization reference field."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:91
+#: ../../docs/reference/changelog.md:92
 msgid "[#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:92
+#: ../../docs/reference/changelog.md:93
 msgid "[#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project."
 msgstr ""
 "[#140](https://github.com/open-contracting/infrastructure/issues/140) - "
@@ -315,446 +319,446 @@ msgstr ""
 "la etapa de preparación, para su comparación con la fecha de finalización "
 "real del proyecto."
 
-#: ../../docs/reference/changelog.md:93
+#: ../../docs/reference/changelog.md:94
 msgid "[#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:94
+#: ../../docs/reference/changelog.md:95
 msgid "[#141](https://github.com/open-contracting/infrastructure/issues/141) - remove incorrect guidance about other fields from `contractingProcesses/summary/modifications`."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:95
+#: ../../docs/reference/changelog.md:96
 msgid "[#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:96
+#: ../../docs/reference/changelog.md:97
 msgid "[#154](https://github.com/open-contracting/infrastructure/issues/154) - add `.requestDate` field to `project/budget` to record the date of the budget request for the project."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:97
+#: ../../docs/reference/changelog.md:98
 msgid "[#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:98
+#: ../../docs/reference/changelog.md:99
 msgid "[#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:99
+#: ../../docs/reference/changelog.md:100
 msgid "[#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:100
+#: ../../docs/reference/changelog.md:101
 msgid "[#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:101
+#: ../../docs/reference/changelog.md:102
 msgid "[#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:102
+#: ../../docs/reference/changelog.md:103
 msgid "[#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce unique items in arrays and minimum length on required string fields."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:106
+#: ../../docs/reference/changelog.md:107
 msgid "[#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:107
+#: ../../docs/reference/changelog.md:108
 msgid "[#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist."
 msgstr ""
 "[#152](https://github.com/open-contracting/infrastructure/issues/152) - "
 "agregar el código 'expansion' a la lista de códigos projectType."
 
-#: ../../docs/reference/changelog.md:109
+#: ../../docs/reference/changelog.md:110
 msgid "[0.9.1] - 2019-06-17"
 msgstr "[0.9.1] - 2019-06-17"
 
-#: ../../docs/reference/changelog.md:111
+#: ../../docs/reference/changelog.md:112
 msgid "Changed"
 msgstr "Cambiado"
 
-#: ../../docs/reference/changelog.md:113
-msgid "Add changelog."
-msgstr "Añadir el registro de cambios."
-
 #: ../../docs/reference/changelog.md:114
+msgid "Add changelog."
+msgstr "Agregar el registro de cambios."
+
+#: ../../docs/reference/changelog.md:115
 msgid "Update ocds-babel to 0.1.0."
 msgstr "Actualizar ocds-babel a 0.1.0."
 
-#: ../../docs/reference/changelog.md:116
+#: ../../docs/reference/changelog.md:117
 msgid "Fixed"
 msgstr "Corregido"
 
-#: ../../docs/reference/changelog.md:118
+#: ../../docs/reference/changelog.md:119
 msgid "Correct schema URLs in schema files."
 msgstr "Corregir URLs de esquema en los archivos de esquema."
 
-#: ../../docs/reference/changelog.md:120
+#: ../../docs/reference/changelog.md:121
 msgid "[0.9.0-beta] - 2019-03-19"
 msgstr "[0.9.0-beta] - 2019-03-19"
 
-#: ../../docs/reference/changelog.md:122
+#: ../../docs/reference/changelog.md:123
 msgid "This changelog entry indicates notable changes since the alpha-2 development release of OC4IDS, it is not intended to be a complete list of changes."
 msgstr ""
 "Esta entrada en el registro de cambios indica cambios notables desde el "
 "lanzamiento de desarrollo alfa-2 de OC4IDS, no pretende ser una lista de "
 "cambios completa."
 
-#: ../../docs/reference/changelog.md:124
+#: ../../docs/reference/changelog.md:125
 msgid "In addition to the specific changes to schema and codelists noted below:"
 msgstr ""
 "En adición a los cambios específicos al esquema y listas de códigos "
 "mencionados abajo:"
 
-#: ../../docs/reference/changelog.md:126
+#: ../../docs/reference/changelog.md:127
 msgid "Various refinements and clarifications were made to schema and codelist descriptions."
 msgstr ""
 "Refinamientos y clarificaciones varias fueron hechas a las descripciones del "
 "esquema y listas de códigos."
 
-#: ../../docs/reference/changelog.md:127
+#: ../../docs/reference/changelog.md:128
 msgid "Guidance on mapping values from OCDS was moved from the schema to the IDS and OCDS mapping section of the documentation."
 msgstr ""
 "La orientación sobre mapear valores desde OCDS fue movida del esquema a la "
 "sección de mapeo  de IDS y OCDS en la documentación."
 
-#: ../../docs/reference/changelog.md:128
+#: ../../docs/reference/changelog.md:129
 msgid "Documentation was expanded and restructured."
 msgstr "La documentación fue expandida y reestructurada."
 
-#: ../../docs/reference/changelog.md:130
+#: ../../docs/reference/changelog.md:131
 msgid "Packaging"
 msgstr "Empaquetado"
 
-#: ../../docs/reference/changelog.md:132
+#: ../../docs/reference/changelog.md:133
 msgid "Add [project package schema](https://standard.open-contracting.org/infrastructure/latest/en/reference/package/). OC4IDS data must be published as part of a project package."
 msgstr ""
-"Añadir el [esquema de paquete de proyectos](https://standard.open-"
-"contracting.org/infrastructure/latest/en/reference/package/). Los datos "
-"OC4IDS deben ser publicados como parte de un paquete de proyectos."
+"Añadir el [esquema de paquete de proyectos](https://standard.open-contracting"
+".org/infrastructure/latest/en/reference/package/). Los datos OC4IDS deben "
+"ser publicados como parte de un paquete de proyectos."
 
-#: ../../docs/reference/changelog.md:134
+#: ../../docs/reference/changelog.md:135
 msgid "Schema updates"
 msgstr "Actualizaciones al esquema"
 
-#: ../../docs/reference/changelog.md:136
+#: ../../docs/reference/changelog.md:137
 msgid "`sector` - use projectSector open codelist."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:137
+#: ../../docs/reference/changelog.md:138
 msgid "`ContractingProcess` - add required `id` field."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:138
+#: ../../docs/reference/changelog.md:139
 msgid "`LinkedRelease` - make `id` required."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:139
+#: ../../docs/reference/changelog.md:140
 msgid "`variations` - rename to `modifications`."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:140
+#: ../../docs/reference/changelog.md:141
 msgid "`Location` - add required `id` field."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:142
+#: ../../docs/reference/changelog.md:143
 msgid "New codelists"
 msgstr "Nuevas listas de códigos"
 
-#: ../../docs/reference/changelog.md:144
+#: ../../docs/reference/changelog.md:145
 msgid "`projectSector` codelist - add codelist for project sector."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:146
+#: ../../docs/reference/changelog.md:147
 msgid "Codelist updates"
 msgstr "Actualizaciones en listas de códigos"
 
-#: ../../docs/reference/changelog.md:148
+#: ../../docs/reference/changelog.md:149
 msgid "projectStatus codelist - replace 'construction' with 'implementation'."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:149
+#: ../../docs/reference/changelog.md:150
 msgid "variationType codelist - rename to modificationType."
 msgstr ""
 
-#: ../../docs/reference/changelog.md:150
+#: ../../docs/reference/changelog.md:151
 msgid "partyRole codelist - add OC4IDS codes mentioned in schema and mapping:"
 msgstr ""
 "Lista de códigos partyRole- añadir códigos OC4IDS mencionados en el esquema "
 "y mapeo:"
 
-#: ../../docs/reference/changelog.md:151
+#: ../../docs/reference/changelog.md:152
 msgid "funder"
 msgstr "funder"
 
-#: ../../docs/reference/changelog.md:152
+#: ../../docs/reference/changelog.md:153
 msgid "administrativeEntity"
 msgstr "administrativeEntity"
 
-#: ../../docs/reference/changelog.md:153
+#: ../../docs/reference/changelog.md:154
 msgid "partyRole codelist - add codes from OCDS partyRole codelist:"
 msgstr ""
 "Lista de códigos partyRole - añadir códigos de la lista de códigos OCDS "
 "partyRole:"
 
-#: ../../docs/reference/changelog.md:154
+#: ../../docs/reference/changelog.md:155
 msgid "buyer"
 msgstr "buyer"
 
-#: ../../docs/reference/changelog.md:155
+#: ../../docs/reference/changelog.md:156
 msgid "procuringEntity"
 msgstr "procuringEntity"
 
-#: ../../docs/reference/changelog.md:156
+#: ../../docs/reference/changelog.md:157
 msgid "supplier"
 msgstr "supplier"
 
-#: ../../docs/reference/changelog.md:157
+#: ../../docs/reference/changelog.md:158
 msgid "tenderer"
 msgstr "tenderer"
 
-#: ../../docs/reference/changelog.md:158
+#: ../../docs/reference/changelog.md:159
 msgid "partyRole codelist - remove PPP-specific codes:"
 msgstr "Lista de códigos partyRole - eliminar códigos específicos de PPP:"
 
-#: ../../docs/reference/changelog.md:159
+#: ../../docs/reference/changelog.md:160
 msgid "bidder"
 msgstr "bidder"
 
-#: ../../docs/reference/changelog.md:160
+#: ../../docs/reference/changelog.md:161
 msgid "qualifiedBidder"
 msgstr "qualifiedBidder"
 
-#: ../../docs/reference/changelog.md:161
+#: ../../docs/reference/changelog.md:162
 msgid "preferredBidder"
 msgstr "preferredBidder"
 
-#: ../../docs/reference/changelog.md:162
+#: ../../docs/reference/changelog.md:163
 msgid "privateParty"
 msgstr "privateParty"
 
-#: ../../docs/reference/changelog.md:163
+#: ../../docs/reference/changelog.md:164
 msgid "leadBank"
 msgstr "leadBank"
 
-#: ../../docs/reference/changelog.md:164
+#: ../../docs/reference/changelog.md:165
 msgid "lender"
 msgstr "lender"
 
-#: ../../docs/reference/changelog.md:165
+#: ../../docs/reference/changelog.md:166
 msgid "equityInvestor"
 msgstr "equityInvestor"
 
-#: ../../docs/reference/changelog.md:166
+#: ../../docs/reference/changelog.md:167
 msgid "consortiaMember"
 msgstr "consortiaMember"
 
-#: ../../docs/reference/changelog.md:167
+#: ../../docs/reference/changelog.md:168
 msgid "interestedParty"
 msgstr "interestedParty"
 
-#: ../../docs/reference/changelog.md:168
+#: ../../docs/reference/changelog.md:169
 msgid "grantor"
 msgstr "grantor"
 
-#: ../../docs/reference/changelog.md:169
+#: ../../docs/reference/changelog.md:170
 msgid "disqualifiedBidder"
 msgstr "disqualifiedBidder"
 
-#: ../../docs/reference/changelog.md:170
+#: ../../docs/reference/changelog.md:171
 msgid "socialWitness"
 msgstr "socialWitness"
 
-#: ../../docs/reference/changelog.md:171
+#: ../../docs/reference/changelog.md:172
 msgid "otherWitness"
 msgstr "otherWitness"
 
-#: ../../docs/reference/changelog.md:172
+#: ../../docs/reference/changelog.md:173
 msgid "notary"
 msgstr "notary"
 
-#: ../../docs/reference/changelog.md:173
+#: ../../docs/reference/changelog.md:174
 msgid "documentType codelist - remove PPP-specific codes:"
 msgstr "Lista de códigos documentType - eliminar códigos específicos de PPP:"
 
-#: ../../docs/reference/changelog.md:174
+#: ../../docs/reference/changelog.md:175
 msgid "financeAdditionality"
 msgstr "financeAdditionality"
 
-#: ../../docs/reference/changelog.md:175
+#: ../../docs/reference/changelog.md:176
 msgid "pppModeRationale"
 msgstr "pppModeRationale"
 
-#: ../../docs/reference/changelog.md:176
+#: ../../docs/reference/changelog.md:177
 msgid "riskComparison"
 msgstr "riskComparison"
 
-#: ../../docs/reference/changelog.md:177
+#: ../../docs/reference/changelog.md:178
 msgid "discountRate"
 msgstr "discountRate"
 
-#: ../../docs/reference/changelog.md:178
+#: ../../docs/reference/changelog.md:179
 msgid "equityTransferCaps"
 msgstr "equityTransferCaps"
 
-#: ../../docs/reference/changelog.md:179
+#: ../../docs/reference/changelog.md:180
 msgid "financeArrangements"
 msgstr "financeArrangements"
 
-#: ../../docs/reference/changelog.md:180
+#: ../../docs/reference/changelog.md:181
 msgid "guaranteeReports"
 msgstr "guaranteeReports"
 
-#: ../../docs/reference/changelog.md:181
+#: ../../docs/reference/changelog.md:182
 msgid "grants"
 msgstr "grants"
 
-#: ../../docs/reference/changelog.md:182
+#: ../../docs/reference/changelog.md:183
 msgid "servicePayments"
 msgstr "servicePayments"
 
-#: ../../docs/reference/changelog.md:183
+#: ../../docs/reference/changelog.md:184
 msgid "landTransfer"
 msgstr "landTransfer"
 
-#: ../../docs/reference/changelog.md:184
+#: ../../docs/reference/changelog.md:185
 msgid "assetTransfer"
 msgstr "assetTransfer"
 
-#: ../../docs/reference/changelog.md:185
+#: ../../docs/reference/changelog.md:186
 msgid "revenueShare"
 msgstr "revenueShare"
 
-#: ../../docs/reference/changelog.md:186
+#: ../../docs/reference/changelog.md:187
 msgid "otherGovernmentSupport"
 msgstr "otherGovernmentSupport"
 
-#: ../../docs/reference/changelog.md:187
+#: ../../docs/reference/changelog.md:188
 msgid "tariffMethod"
 msgstr "tariffMethod"
 
-#: ../../docs/reference/changelog.md:188
+#: ../../docs/reference/changelog.md:189
 msgid "tariffReview"
 msgstr "tariffReview"
 
-#: ../../docs/reference/changelog.md:189
+#: ../../docs/reference/changelog.md:190
 msgid "tariffs"
 msgstr "tariffs"
 
-#: ../../docs/reference/changelog.md:190
+#: ../../docs/reference/changelog.md:191
 msgid "tariffIllustration"
 msgstr "tariffIllustration"
 
-#: ../../docs/reference/changelog.md:191
+#: ../../docs/reference/changelog.md:192
 msgid "handover"
 msgstr "handover"
 
-#: ../../docs/reference/changelog.md:192
+#: ../../docs/reference/changelog.md:193
 msgid "financialStatement"
 msgstr "financialStatement"
 
-#: ../../docs/reference/changelog.md:193
+#: ../../docs/reference/changelog.md:194
 msgid "documentType codelist - add codes from OCDS documentType codelist:"
 msgstr ""
 "Lista de códigos documentType - añadir códigos de la lista de códigos OCDS "
 "documentType:"
 
-#: ../../docs/reference/changelog.md:194
+#: ../../docs/reference/changelog.md:195
 msgid "contractNotice"
 msgstr "contractNotice"
 
-#: ../../docs/reference/changelog.md:195
+#: ../../docs/reference/changelog.md:196
 msgid "completionCertificate"
 msgstr "completionCertificate"
 
-#: ../../docs/reference/changelog.md:196
+#: ../../docs/reference/changelog.md:197
 msgid "procurementPlan"
 msgstr "procurementPlan"
 
-#: ../../docs/reference/changelog.md:197
+#: ../../docs/reference/changelog.md:198
 msgid "biddingDocuments"
 msgstr "biddingDocuments"
 
-#: ../../docs/reference/changelog.md:198
+#: ../../docs/reference/changelog.md:199
 msgid "contractArrangements"
 msgstr "contractArrangements"
 
-#: ../../docs/reference/changelog.md:199
+#: ../../docs/reference/changelog.md:200
 msgid "physicalProgressReport"
 msgstr "physicalProgressReport"
 
-#: ../../docs/reference/changelog.md:200
+#: ../../docs/reference/changelog.md:201
 msgid "financialProgressReport"
 msgstr "financialProgressReport"
 
-#: ../../docs/reference/changelog.md:201
+#: ../../docs/reference/changelog.md:202
 msgid "hearingNotice"
 msgstr "hearingNotice"
 
-#: ../../docs/reference/changelog.md:202
+#: ../../docs/reference/changelog.md:203
 msgid "marketStudies"
 msgstr "marketStudies"
 
-#: ../../docs/reference/changelog.md:203
+#: ../../docs/reference/changelog.md:204
 msgid "eligibilityCriteria"
 msgstr "eligibilityCriteria"
 
-#: ../../docs/reference/changelog.md:204
+#: ../../docs/reference/changelog.md:205
 msgid "clarifications"
 msgstr "clarifications"
 
-#: ../../docs/reference/changelog.md:205
+#: ../../docs/reference/changelog.md:206
 msgid "assetAndLiabilityAssessment"
 msgstr "assetAndLiabilityAssessment"
 
-#: ../../docs/reference/changelog.md:206
+#: ../../docs/reference/changelog.md:207
 msgid "winningBid"
 msgstr "winningBid"
 
-#: ../../docs/reference/changelog.md:207
+#: ../../docs/reference/changelog.md:208
 msgid "complaints"
 msgstr "complaints"
 
-#: ../../docs/reference/changelog.md:208
+#: ../../docs/reference/changelog.md:209
 msgid "contractAnnexe"
 msgstr "contractAnnexe"
 
-#: ../../docs/reference/changelog.md:209
+#: ../../docs/reference/changelog.md:210
 msgid "subContract"
 msgstr "subContract"
 
-#: ../../docs/reference/changelog.md:210
+#: ../../docs/reference/changelog.md:211
 msgid "projectPlan"
 msgstr "projectPlan"
 
-#: ../../docs/reference/changelog.md:211
+#: ../../docs/reference/changelog.md:212
 msgid "billOfQuantity"
 msgstr "billOfQuantity"
 
-#: ../../docs/reference/changelog.md:212
+#: ../../docs/reference/changelog.md:213
 msgid "bidders"
 msgstr "bidders"
 
-#: ../../docs/reference/changelog.md:213
+#: ../../docs/reference/changelog.md:214
 msgid "conflictOfInterest"
 msgstr "conflictOfInterest"
 
-#: ../../docs/reference/changelog.md:214
+#: ../../docs/reference/changelog.md:215
 msgid "debarments"
 msgstr "debarments"
 
-#: ../../docs/reference/changelog.md:215
+#: ../../docs/reference/changelog.md:216
 msgid "illustration"
 msgstr "illustration"
 
-#: ../../docs/reference/changelog.md:216
+#: ../../docs/reference/changelog.md:217
 msgid "submissionDocuments"
 msgstr "submissionDocuments"
 
-#: ../../docs/reference/changelog.md:217
+#: ../../docs/reference/changelog.md:218
 msgid "contractSummary"
 msgstr "contractSummary"
 
-#: ../../docs/reference/changelog.md:218
+#: ../../docs/reference/changelog.md:219
 msgid "cancellationDetails"
 msgstr "cancellationDetails"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,15 +62,15 @@ msgstr ""
 #: ../../docs/support.md:14
 msgid "E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OC4IDS Helpdesk will be in touch with you soon."
 msgstr ""
-"Escriba un correo a [data@open-contracting.org](mailto:data@open-"
-"contracting.org) con sus preguntas, y un miembro del Helpdesk de OC4IDS se "
-"pondrá en contacto con usted."
+"Escriba un correo a [data@open-contracting.org](mailto:data@open-contracting."
+"org) con sus preguntas, y un miembro del Helpdesk de OC4IDS se pondrá en "
+"contacto con usted."
 
 #: ../../docs/support.md:16
 msgid "Contributing"
 msgstr ""
 
-#: ../../docs/support.md:16
+#: ../../docs/support.md:1
 msgid "Developers, or those wishing to provide technical input to OC4IDS, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure)."
 msgstr ""
 "Los desarrolladores, u otros interesados en brindar aporte técnico a OC4IDS, "

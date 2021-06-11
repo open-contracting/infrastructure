@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,7 +48,7 @@ msgstr ""
 msgid "![Projects typically involve multiple contracts](../_static/images/diagram-project-contracting-process.png)"
 msgstr ""
 
-#: ../../docs/projects/index.md:17
+#: ../../docs/projects/index.md:1
 msgid "The term \"project\" is used in many contexts to mean different things. In OC4IDS, the term \"project\" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code."
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Tool"
 msgstr ""
 
-#: ../../docs/projects/index.md:76
+#: ../../docs/projects/index.md:1
 msgid "OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command can be used to generate an OC4IDS file from OCDS data about the contracting processes related to an infrastructure project."
 msgstr ""
 
@@ -289,6 +289,6 @@ msgstr ""
 msgid "Are you ready to start using OC4IDS?"
 msgstr ""
 
-#: ../../docs/projects/index.md:132
+#: ../../docs/projects/index.md:1
 msgid "Complete the [OC4IDS scoping template](https://www.open-contracting.org/resources/oc4ids-scoping-template/) and share it with the [OC4IDS helpdesk](mailto:data@open-contracting.org)."
 msgstr ""

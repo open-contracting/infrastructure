@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-04 21:10-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1109,7 +1109,7 @@ msgstr "MultiPoint"
 #: schema/project-level/codelists/geometryType.csv:2
 msgid "For type 'MultiPoint', the 'coordinates' member is an array of positions."
 msgstr ""
-"Para el tipo \"MultiPoint\", el miembro 'coordinates' es una lista de "
+"Para el tipo \"MultiPoint\", el miembro 'coordinates' es una matriz de "
 "posiciones."
 
 #. Title
@@ -1123,7 +1123,7 @@ msgid ""
 "For type 'LineString', the 'coordinates' member is an array of two or "
 "more positions."
 msgstr ""
-"Para el tipo \"LineString\", el miembro 'coordinates' es una lista de dos o "
+"Para el tipo \"LineString\", el miembro 'coordinates' es una matriz de dos o "
 "más posiciones."
 
 #. Title
@@ -1137,7 +1137,7 @@ msgid ""
 "For type 'MultiLineString', the 'coordinates' member is an array of "
 "LineString coordinate arrays."
 msgstr ""
-"Para el tipo \"MultiLineString\", el miembro 'coordinates' es un array de "
+"Para el tipo \"MultiLineString\", el miembro 'coordinates' es una matriz de "
 "coordenadas 'LineString'."
 
 #. Title
@@ -1151,6 +1151,8 @@ msgid ""
 "For type 'Polygon', the 'coordinates' member must be an array of linear "
 "ring coordinate arrays."
 msgstr ""
+"Para el tipo 'Polygon', el miembro 'coordinates' debe ser una matriz de "
+"coordenadas anulares lineales."
 
 #. Title
 #: schema/project-level/codelists/geometryType.csv:6
@@ -1163,8 +1165,8 @@ msgid ""
 "For type 'MultiPolygon', the 'coordinates' member is an array of Polygon "
 "coordinate arrays."
 msgstr ""
-"Para el tipo 'MultiPolygon' el miembro 'coordinates' es una lista de "
-"coordendas 'Polygon'"
+"Para el tipo 'MultiPolygon' el miembro 'coordinates' es una matriz de "
+"coordenadas 'Polygon'"
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:1
@@ -1224,6 +1226,10 @@ msgid ""
 "latitude, longitude and node ID. Nodes might have tags to indicate the "
 "particular geographic feature they represent."
 msgstr ""
+"Los nodos de OpenStreetMap consisten en un único punto en el espacio "
+"definido por una latitud, una longitud y un ID de nodo. Los nodos pueden "
+"tener etiquetas para indicar el accidente geográfico concreto que "
+"representan."
 
 #. Title
 #: schema/project-level/codelists/locationGazetteers.csv:5
@@ -1253,6 +1259,9 @@ msgid ""
 " used to describe fragments of roads or local boundaries and bounding "
 "boxes."
 msgstr ""
+"Un camino de OpenStreetMap es una lista ordenada de nodos de OpenStreetMap. "
+"Puede utilizarse para describir fragmentos de caminos o límites locales y "
+"cuadros delimitadores."
 
 #. Title
 #: schema/project-level/codelists/method.csv:1
@@ -1359,9 +1368,9 @@ msgid ""
 "exceed the anticipated `contract.period`."
 msgstr ""
 "Esta modificación describe un cambio a la duración del contrato. Este puede "
-"ser identificado en base a los cambios en `award.contractPeriod` o "
-"`contract.period`, o actualizaciones a hitos y pagos que parezcan exceder el "
-"`contract.period` anticipado."
+"ser identificado en base a los cambios en `award.contractPeriod` o `contract."
+"period`, o actualizaciones a hitos y pagos que parezcan exceder el `contract."
+"period` anticipado."
 
 #. Title
 #: schema/project-level/codelists/modificationType.csv:2
