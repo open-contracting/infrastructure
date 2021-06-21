@@ -17,25 +17,37 @@ from ocdskit.schema import add_validation_properties
 basedir = Path(__file__).resolve().parent
 
 
+def get(url):
+    """
+    GETs a URL and returns the response. Raises an exception if the status code is not successful.
+    """
+    response = requests.get(url)
+    response.raise_for_status()
+    return response
+
+
 def csv_reader(url):
-    return csv.DictReader(StringIO(requests.get(url).text))
+    """
+    Reads a CSV from a URL and returns a ``csv.DictReader`` object.
+    """
+    return csv.DictReader(StringIO(get(url).text))
 
 
 def coerce_to_list(data, key):
+    """
+    Returns the value of the ``key`` key in the ``data`` mapping. If the value is a string, wraps it in an array.
+    """
     item = data.get(key, [])
     if isinstance(item, str):
         return [item]
     return item
 
 
-def remove_null(value):
-    if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
-        value['type'].remove('null')
-    if 'enum' in value and None in value['enum']:
-        value['enum'].remove(None)
-
-
 def edit_code(row, oc4ids_codes, source):
+    """
+    If the row's "Code" is in the ``oc4ids_codes`` list, adds " or project" after "contracting process" in the row's
+    "Description" and sets the row's "Source" to ``"OC4IDS"``. Otherwise, sets the row's "Source" to ``source``.
+    """
     if row['Code'] in oc4ids_codes:
         row['Description'] = re.sub(r'(?<=contracting process\b)', ' or project', row['Description'])
         row['Description'] = re.sub(r'(?<=contracting processes\b)', ' or projects', row['Description'])
@@ -84,21 +96,31 @@ def traverse(schema_action=None, object_action=None):
 
 # Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
 def remove_null_and_pattern_properties(*args):
+    """
+    Removes the "patternProperties" key, ``"null"`` from the "type" key, and ``None`` from the "enum" key.
+    """
+
     def schema_action(schema, pointer):
         schema.pop('patternProperties', None)
 
-    traverse(schema_action, remove_null)(*args)
+    def object_action(value):
+        if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
+            value['type'].remove('null')
+        if 'enum' in value and None in value['enum']:
+            value['enum'].remove(None)
+
+    traverse(schema_action, object_action)(*args)
 
 
-def remove_deprecated(*args):
+def remove_deprecated_properties(*args):
     """
-    Removes deprecated properties.
+    Removes "deprecated" properties.
     """
 
     def schema_action(schema, pointer):
         if 'properties' in schema:
-            for key, value in list(schema['properties'].items()):
-                if 'deprecated' in value:
+            for key in list(schema['properties']):
+                if 'deprecated' in schema['properties'][key]:
                     del schema['properties'][key]
         elif pointer != '/Observation/dimensions':
             warnings.warn(f'Missing "properties" key at {pointer}')
@@ -108,10 +130,10 @@ def remove_deprecated(*args):
 
 def remove_integer_identifier_types(*args):
     """
-    Sets all `id` fields to allow only strings, not integers.
+    Sets all ``id`` fields to allow only strings, not integers.
     """
-    def schema_action(schema, pointer):
 
+    def schema_action(schema, pointer):
         if 'properties' in schema:
             if 'id' in schema['properties']:
                 schema['properties']['id']['type'] = 'string'
@@ -122,6 +144,11 @@ def remove_integer_identifier_types(*args):
 
 
 def compare(actual, infra_list, ocds_list, prefix, suffix):
+    """
+    Aborts if ``infra_list`` contains values not in ``actual``, or if ``actual`` contains values not in ``infra_list``
+    or ``ocds_list``. This ensures an editor updates this script when codelists or definitions are added to OC4IDS.
+    """
+
     actual = set(actual)
 
     # An editor might have added an infrastructure codelist, or copied an OCDS codelist, without updating this script.
@@ -145,11 +172,11 @@ def cli():
               default='https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/')
 def update(ppp_base_url):
     """
-    This command helps keep OC4IDS aligned with OCDS. It uses OCDS for PPPs as a basis, as it includes most definitions
-    and codelists needed in OC4IDS. It copies definitions and codelists across, making modifications as required.
+    Aligns OC4IDS with OCDS. It uses OCDS for PPPs as a basis, as it includes most definitions and codelists needed in
+    OC4IDS. It copies definitions and codelists across, making modifications as required.
 
-    For every release of OCDS for PPPs, this command should be run. Any changes to schemas or codelists should be
-    reviewed, and the command should be updated as needed.
+    Run this command for every release of OCDS for PPPs, review any changes to schemas or codelists, and update the
+    command as needed.
 
     Some OC4IDS-specific definitions have fields with the same names as in OCDS-specific definitions, notably:
 
@@ -174,7 +201,7 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5', {'budget': 'master'})
-    ppp_schema = requests.get(f'{ppp_base_url}release-schema.json').json(object_pairs_hook=OrderedDict)
+    ppp_schema = get(f'{ppp_base_url}release-schema.json').json(object_pairs_hook=OrderedDict)
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
     schema_dir = basedir / 'schema' / 'project-level'
@@ -330,7 +357,7 @@ def update(ppp_base_url):
 
                 text = io.getvalue()
             else:
-                text = requests.get(f'{ppp_base_url}codelists/{basename}').text
+                text = get(f'{ppp_base_url}codelists/{basename}').text
 
             f.write(text)
 
@@ -432,7 +459,7 @@ def update(ppp_base_url):
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)
-    remove_deprecated(schema)
+    remove_deprecated_properties(schema)
     add_validation_properties(schema)
 
     with (schema_dir / 'project-schema.json').open('w') as f:
