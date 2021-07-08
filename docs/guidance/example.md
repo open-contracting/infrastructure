@@ -36,6 +36,7 @@ The project package serves as a container for the data of multiple projects, thr
 :expand: publisher
 :title: package
 ```
+
 #### License
 
 The `license` field ought to contain a link to the license that applies to the data in the package. Further information about licensing can be found in the [OCDS licensing guidance](https://standard.open-contracting.org/1.1/en/implementation/licensing/).
@@ -146,6 +147,7 @@ In the example below, you can compare the planned `forecasts/observations` for 7
 :expand: unit, period
 :title: forecast_observation
 ```
+
 ```{jsoninclude} ../examples/example.json
 :jsonpointer: /projects/0/metrics/0/observations/1
 :expand: unit, period

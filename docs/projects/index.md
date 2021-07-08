@@ -17,6 +17,7 @@ Within an infrastructure project, a procuring entity can initiate multiple contr
 ```{tip}
 The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code.
 ```
+
 ## What is the scope of OC4IDS?
 
 OC4IDS describes how to structure and format the disclosures recommended in the CoST IDS.
@@ -94,40 +95,42 @@ Publishing your data using OC4IDS means that it can be compared with data from o
 OC4IDS is designed to help you collect well-structured data, comparable across contexts, and with all the fields needed to make sure the data is clear and unambiguous. It has been designed to integrate with existing open contracting data sources, but also to work in cases where structured open contracting data is not available.
 
 ## When can I use OC4IDS?
+
 OC4IDS can be used in the following scenarios:
 
-> **Publishing structured data from an infrastructure transparency portal**
+**Publishing structured data from an infrastructure transparency portal**
 
-> OC4IDS describes a standardized format for publishing structured data on infrastructure projects.
+OC4IDS describes a standardized format for publishing structured data on infrastructure projects.
 
-> Read the guidance on [publishing data from an infrastructure transparency portal](https://standard.open-contracting.org/infrastructure/latest/en/guidance/publishing/).
+Read the guidance on [publishing data from an infrastructure transparency portal](https://standard.open-contracting.org/infrastructure/latest/en/guidance/publishing/).
 
-> **Designing a new infrastructure transparency portal**
+**Designing a new infrastructure transparency portal**
 
-> OC4IDS describes the best practice information you ought to collect and disclose to support infrastructure project monitoring.
+OC4IDS describes the best practice information you ought to collect and disclose to support infrastructure project monitoring.
 
-> **Using OCDS data for whole life-cycle infrastructure project monitoring**
+**Using OCDS data for whole life-cycle infrastructure project monitoring**
 
-> OC4IDS can be used to:
-> * Join up OCDS data published about contracts related to an infrastructure project
-> * Capture and record data about the project a contract relates to
-> * Record a list of changes to a contracting process and reasons for those changes
+OC4IDS can be used to:
 
-> Read the guidance on [using data from procurement systems for infrastructure project monitoring](https://standard.open-contracting.org/infrastructure/latest/en/guidance/using/).
+* Join up OCDS data published about contracts related to an infrastructure project
+* Capture and record data about the project a contract relates to
+* Record a list of changes to a contracting process and reasons for those changes
 
-> **Collecting data on infrastructure projects using a spreadsheet**
+Read the guidance on [using data from procurement systems for infrastructure project monitoring](https://standard.open-contracting.org/infrastructure/latest/en/guidance/using/).
 
-> The OC4IDS schema can be used to generate a spreadsheet template for collecting data.
+**Collecting data on infrastructure projects using a spreadsheet**
 
-> **Designing other data collection tools**
+The OC4IDS schema can be used to generate a spreadsheet template for collecting data.
 
-> OC4IDS provides definitions for fields and codelists which can be used to collect consistent data.
+**Designing other data collection tools**
 
-> **Publishing data that complies with the CoST IDS**
+OC4IDS provides definitions for fields and codelists which can be used to collect consistent data.
 
-> OC4IDS describes how to structure and format the disclosures recommended in the CoST IDS.
+**Publishing data that complies with the CoST IDS**
 
-> Review the [CoST IDS mapping](https://standard.open-contracting.org/infrastructure/latest/en/cost/) to learn how to publish each element of the CoST IDS using OC4IDS.
+OC4IDS describes how to structure and format the disclosures recommended in the CoST IDS.
+
+Review the [CoST IDS mapping](https://standard.open-contracting.org/infrastructure/latest/en/cost/) to learn how to publish each element of the CoST IDS using OC4IDS.
 
 ```{admonition} Are you ready to start using OC4IDS?
 :class: Tip

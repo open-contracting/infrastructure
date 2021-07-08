@@ -64,11 +64,11 @@ Make sure you have systems and/or business processes in place to keep the data y
 
 Publish your OC4IDS JSON fields (as either static files or via an API) at a stable URL, such as:
 
-> http://{your website}/opendata/projects/{project-id}.json
+> `http://{your-website}/opendata/projects/{project-id}.json`
 
 If you are also publishing contracting data using OCDS, publish each new release of data as a JSON file at a stable URL such as:
 
-> http://{your website}/opendata/contracting/{ocid}/{release-id}.json
+> `http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`
 
 Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 

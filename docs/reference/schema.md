@@ -1,10 +1,10 @@
+# Schema reference
+
 <style>
 .wy-nav-content {
   max-width: 1200px;
 }
 </style>
-
-# Schema reference
 
 The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser).
 

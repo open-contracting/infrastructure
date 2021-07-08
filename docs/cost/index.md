@@ -1,10 +1,10 @@
+# CoST IDS & OCDS Mapping
+
 <style>
 .wy-nav-content {
   max-width: 1200px;
 }
 </style>
-
-# CoST IDS & OCDS Mapping
 
 CoST – the Infrastructure Transparency Initiative (CoST) is the leading global initiative improving transparency and accountability in public infrastructure.
 
