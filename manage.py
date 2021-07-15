@@ -231,7 +231,7 @@ def update(ppp_base_url):
         'releaseTag.csv',
         'unitClassificationScheme.csv',
     }
-    compare(map(lambda path: path.name, codelists_dir.iterdir()), infra_codelists, ocds_codelists,
+    compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
 
     infra_definitions = {
