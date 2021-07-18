@@ -20,7 +20,7 @@ The [CoST approach](http://infrastructuretransparency.org/our-approach/) is base
 
 The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritized different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
 
-You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/).
+You can read more about the Infrastructure Data Standard on the [CoST website](https://infrastructuretransparency.org/our-approach/disclosure/).
 
 ```{admonition} Frameworks and standards
 :class: note
