@@ -2,117 +2,170 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Andres Aguilera <aaguilera@cds.com.py>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-11 11:14-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-03-21 15:13+0000\n"
+"Last-Translator: Andres Aguilera <aaguilera@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/reference/codelists.md:1
 msgid "Codelist reference"
 msgstr "Referencia de listas de código"
 
 #: ../../docs/reference/codelists.md:3
-msgid "Some schema fields refer to codelists, to limit and standardize the possible values of the fields, in order to promote data interoperability."
+msgid ""
+"Some schema fields refer to codelists, to limit and standardize the possible"
+" values of the fields, in order to promote data interoperability."
 msgstr ""
-"Algunos campos de esquema hacen referencia a listas de códigos, para limitar "
-"y estandarizar los posibles valores de los campos, con el fin de promover la "
-"interoperabilidad de los datos."
+"Algunos campos de esquema hacen referencia a listas de códigos, para limitar"
+" y estandarizar los posibles valores de los campos, con el fin de promover "
+"la interoperabilidad de los datos."
 
 #: ../../docs/reference/codelists.md:5
-msgid "Codelists can either be open or closed. **Closed codelists** are intended to be comprehensive; for example, the currency codelist covers all currencies in the world. **Open codelists** are intended to be representative, but not comprehensive."
+msgid ""
+"Codelists can either be open or closed. **Closed codelists** are intended to"
+" be comprehensive; for example, the currency codelist covers all currencies "
+"in the world. **Open codelists** are intended to be representative, but not "
+"comprehensive."
 msgstr ""
+"Las listas de códigos pueden ser cerradas o abiertas. Las **listas de "
+"códigos cerradas** están pensadas para ser globales; por ejemplo, la lista "
+"de códigos de moneda cubre todas las monedas en el mundo. Las **listas de "
+"códigos abiertas** están pensadas para ser representativas, pero no "
+"globales."
 
 #: ../../docs/reference/codelists.md:7
-msgid "Publishers must use the codes in the codelists, unless no code is appropriate. If no code is appropriate and the codelist is **open**, then a publisher may use a new code outside those in the codelist. If no code is appropriate and the codelist is **closed**, then a publisher should instead create an issue in the [OC4IDS GitHub repository](https://github.com/open-contracting/infrastructure/issues)."
+msgid ""
+"Publishers must use the codes in the codelists, unless no code is "
+"appropriate. If no code is appropriate and the codelist is **open**, then a "
+"publisher may use a new code outside those in the codelist. If no code is "
+"appropriate and the codelist is **closed**, then a publisher should instead "
+"create an issue in the [OC4IDS GitHub repository](https://github.com/open-"
+"contracting/infrastructure/issues)."
 msgstr ""
-"Los publicadores deben usar los códigos contenidos en las listas de códigos, "
-"a menos que no exista un código apropiado. Si no existe un código apropiado "
-"y la lista es **abierta**, entonces el publicador puede usar un nuevo código "
-"fuera de la lista. Si no existe un código apropiado y la lista es **cerrada**"
-", entonces el publicador debe crear un issue en el [repositorio de OC4IDS en "
-"GitHub](https://github.com/open-contracting/infrastructure/issues)."
+"Los publicadores deben usar los códigos contenidos en las listas de códigos,"
+" a menos que no exista un código apropiado. Si no existe un código apropiado"
+" y la lista es **abierta**, entonces el publicador puede usar un nuevo "
+"código fuera de la lista. Si no existe un código apropiado y la lista es "
+"**cerrada**, entonces el publicador debe crear un issue en el [repositorio "
+"de OC4IDS en GitHub](https://github.com/open-"
+"contracting/infrastructure/issues)."
 
 #: ../../docs/reference/codelists.md:9
 msgid "Extending open codelists"
 msgstr "Extendiendo las listas de código abiertas"
 
 #: ../../docs/reference/codelists.md:1
-msgid "If you use new codes outside those in an open codelist, please create an issue in the [OC4IDS GitHub repository](https://github.com/open-contracting/infrastructure/issues), so that the codes can be considered for inclusion in the codelist."
+msgid ""
+"If you use new codes outside those in an open codelist, please create an "
+"issue in the [OC4IDS GitHub repository](https://github.com/open-"
+"contracting/infrastructure/issues), so that the codes can be considered for "
+"inclusion in the codelist."
 msgstr ""
-"Si usas códigos nuevos fuera de una lista de códigos abierta, por favor crea "
-"un issue en el [repositorio de OC4IDS en GitHub](https://github.com/"
-"open-contracting/infrastructure/issues), para que estos códigos puedan ser "
+"Si usas códigos nuevos fuera de una lista de códigos abierta, por favor crea"
+" un issue en el [repositorio de OC4IDS en GitHub](https://github.com/open-"
+"contracting/infrastructure/issues), para que estos códigos puedan ser "
 "considerados para su inclusión en la lista de códigos."
 
 #: ../../docs/reference/codelists.md:15
-msgid "For more information on open and closed codelists, refer to the Open Contracting Data Standard [codelists documentation](https://standard.open-contracting.org/1.1/en/schema/codelists/)."
+msgid ""
+"For more information on open and closed codelists, refer to the Open "
+"Contracting Data Standard [codelists documentation](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/)."
 msgstr ""
-"Para más información sobre listas cerradas y abiertas, consultar la ["
-"documentación de listas de códigos](https://standard.open-contracting.org/1."
-"1/es/schema/codelists/) del Estándar de Datos de Contrataciones Abiertas."
+"Para más información sobre listas cerradas y abiertas, consultar la "
+"[documentación de listas de códigos](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/) del Estándar de Datos de "
+"Contrataciones Abiertas."
 
 #: ../../docs/reference/codelists.md:17
 msgid "OCDS codelists"
 msgstr "Listas de código OCDS"
 
 #: ../../docs/reference/codelists.md:19
-msgid "OC4IDS reuses some codelists from the Open Contracting Data Standard and its extensions:"
+msgid ""
+"OC4IDS reuses some codelists from the Open Contracting Data Standard and its"
+" extensions:"
 msgstr ""
 "OC4IDS reutiliza algunas listas de códigos del Estándar de Datos de "
 "Contrataciones Abiertas y sus extensiones:"
 
 #: ../../docs/reference/codelists.md:21
-msgid "[Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)"
+msgid ""
+"[Currency](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#currency)"
 msgstr ""
-"[Moneda](https://standard.open-contracting.org/1.1/es/schema/codelists/"
-"#currency)"
+"[Moneda](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#currency)"
 
 #: ../../docs/reference/codelists.md:22
-msgid "[Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)"
+msgid ""
+"[Geometry type](https://extensions.open-"
+"contracting.org/en/extensions/location/master/codelists/#geometryType.csv)"
 msgstr ""
-"[Tipo de Geometría](https://extensions.open-contracting.org/es/extensions/"
-"location/master/codelists/#geometryType.csv)"
+"[Tipo de Geometría](https://extensions.open-"
+"contracting.org/es/extensions/location/master/codelists/#geometryType.csv)"
 
 #: ../../docs/reference/codelists.md:23
-msgid "[Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)"
+msgid ""
+"[Location gazetteers](https://extensions.open-"
+"contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)"
 msgstr ""
-"[Diccionarios geográficos de ubicación](https://extensions.open-contracting."
-"org/es/extensions/location/master/codelists/#locationGazetteers.csv)"
+"[Diccionarios geográficos de ubicación](https://extensions.open-"
+"contracting.org/es/extensions/location/master/codelists/#locationGazetteers.csv)"
 
 #: ../../docs/reference/codelists.md:24
-msgid "[Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)"
+msgid ""
+"[Method](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#method)"
 msgstr ""
-"[Método](https://standard.open-contracting.org/1.1/es/schema/codelists/"
-"#method)"
+"[Método](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#method)"
 
 #: ../../docs/reference/codelists.md:25
-msgid "[Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)"
+msgid ""
+"[Organization identifier scheme](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)"
 msgstr ""
 "[Esquema de identificación de organizaciones](https://standard.open-"
 "contracting.org/1.1/es/schema/codelists/#organization-identifier-scheme)"
 
 #: ../../docs/reference/codelists.md:26
-msgid "[Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)"
+msgid ""
+"[Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists"
+"/#release-tag)"
 msgstr ""
-"[Etiqueta de release](https://standard.open-contracting.org/1.1/es/schema/"
-"codelists/#release-tag)"
+"[Etiqueta de release](https://standard.open-"
+"contracting.org/1.1/es/schema/codelists/#release-tag)"
 
 #: ../../docs/reference/codelists.md:27
-msgid "[Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)"
+msgid ""
+"[Unit classification scheme](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)"
 msgstr ""
+"[Esquema de identificación de organizaciones](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)"
 
 #: ../../docs/reference/codelists.md:29
 msgid "Closed codelists"
-msgstr "Listas de Códigos Cerradas"
+msgstr "Listas de códigos cerradas"
 
 #: ../../docs/reference/codelists.md:31
 msgid "ContractingProcessStatus"
@@ -127,7 +180,9 @@ msgid "ProjectStatus"
 msgstr "ProjectStatus"
 
 #: ../../docs/reference/codelists.md:55
-msgid "Projects with a `status` of 'completed' may be displayed in a list of archived projects."
+msgid ""
+"Projects with a `status` of 'completed' may be displayed in a list of "
+"archived projects."
 msgstr ""
 "Proyectos con `estado` 'completed' pueden ser desplegados en una lista de "
 "proyectos archivados."

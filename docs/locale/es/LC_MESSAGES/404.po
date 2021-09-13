@@ -2,30 +2,43 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Charlie Pinder <charlie.pinder@opendataservices.coop>, 2019
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Juan Pane <juanpane@idatosabiertos.org>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-04 21:08-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-03-21 15:12+0000\n"
+"Last-Translator: Juan Pane <juanpane@idatosabiertos.org>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/404.md:5
 msgid "404 Not found"
-msgstr "404 Not found"
+msgstr "404 No encontrado"
 
 #: ../../docs/404.md:7
-msgid "We couldn't find the page you were looking for in this version of the documentation."
+msgid ""
+"We couldn't find the page you were looking for in this version of the "
+"documentation."
 msgstr ""
 "No pudimos encontrar la página que buscabas en esta versión de la "
 "documentación"
 
 #: ../../docs/404.md:9
-msgid "Try looking from the [home page](index), or use the search or navigation on the left-hand side of the page."
+msgid ""
+"Try looking from the [home page](index), or use the search or navigation on "
+"the left-hand side of the page."
 msgstr ""
+"Intente buscar desde la [página de inicio](index), o use la búsqueda o "
+"navegación en el lado izquierdo de la página."
