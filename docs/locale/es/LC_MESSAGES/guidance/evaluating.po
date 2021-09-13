@@ -8,6 +8,7 @@
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Andres Aguilera <aaguilera@cds.com.py>, 2021\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -170,7 +171,7 @@ msgstr ""
 "Si los datos no son publicados utilizando OCDS, usar la [plantilla de mapeo "
 "a nivel de campos OC4IDS](https://www.open-contracting.org/resources/oc4ids-"
 "field-level-mapping-template/) para mapear los datos a la sección de "
-"[procesos de contratación](../../reference/schema/#contractingprocess) de "
+"[procesos de contratación](../reference/schema.md#contractingprocess) de "
 "OC4IDS y agregar los datos al archivo OC4IDS JSON para cada proyecto."
 
 #: ../../docs/guidance/evaluating.md:43

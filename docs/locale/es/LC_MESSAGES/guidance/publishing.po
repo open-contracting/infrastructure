@@ -5,10 +5,11 @@
 # 
 # Translators:
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2019
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -202,7 +203,7 @@ msgstr ""
 "**Brechas en OC4IDS** donde los datos son recolectados por su sistema pero "
 "no tienen un mapeo a OC4IDS. En lugar de excluirlos de su publicación, esa "
 "información debería ser incluida como campos adicionales en sus datos. Vea "
-"la sección de [extendiendo el esquema](../../reference/#extending-the-"
+"la sección de [extendiendo el esquema](../reference/index.md#extending-the-"
 "schema) para información sobre cómo incluir campos adicionales en sus datos."
 
 #: ../../docs/guidance/publishing.md:45
@@ -229,8 +230,8 @@ msgid ""
 msgstr ""
 "Incluir un identificador para el proyecto de infraestructura al cual se "
 "relaciona cada proceso de contratación en sus datos OCDS, siguiendo la guía "
-"en [identificadores de proyecto en OCDS](../identifiers/#project-"
-"identifiers-in-ocds)."
+"en [identificadores de proyecto en OCDS](identifiers.md#project-identifiers-"
+"in-ocds)."
 
 #: ../../docs/guidance/publishing.md:51
 msgid "(3) Build your data, systems and processes"
@@ -254,7 +255,7 @@ msgid ""
 "You can use a {download}`blank example OC4IDS JSON file "
 "<../examples/blank.json>` to get started."
 msgstr ""
-"Puede usar {descargar}` un archivo JSON OC4IDS de ejemplo, en blanco "
+"Puede usar {download}` un archivo JSON OC4IDS de ejemplo, en blanco "
 "<../examples/blank.json>` para empezar."
 
 #: ../../docs/guidance/publishing.md:59
