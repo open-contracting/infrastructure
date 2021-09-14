@@ -115,7 +115,7 @@ def setup(app):
 
     language = app.config.overrides.get('language', 'en')
 
-    # Headers for columns to translate in codelist CSVs
+    # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
     codelist_headers = ['Title', 'Description', 'Extension']
     # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
     mapping_headers = ['Mapping to OC4IDS', 'Mapping from OCDS']
