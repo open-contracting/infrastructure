@@ -92,7 +92,7 @@ msgid ""
 "project-contracting-process.png)"
 msgstr ""
 "![Los proyectos normalmente involucran múltiples "
-"contratos](../_static/images/diagram-project-contracting-process.png)"
+"contratos](../_static/images/es/diagram-project-contracting-process.png)"
 
 #: ../../docs/projects/index.md:1
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 "![OC4IDS is structured in three parts](../_static/images/diagram-toplevel-"
 "summary.png)"
 msgstr ""
-"![OC4IDS está estructurado en tres partes](../_static/images/diagram-"
+"![OC4IDS está estructurado en tres partes](../_static/images/es/diagram-"
 "toplevel-summary.png)"
 
 #: ../../docs/projects/index.md:54
@@ -348,7 +348,7 @@ msgid ""
 "![Project-level data three stages](../_static/images/diagram-project-level-"
 "data-spec-update.png)"
 msgstr ""
-"![Los datos a nivel de proyecto cubren tres etapas](../_static/images"
+"![Los datos a nivel de proyecto cubren tres etapas](../_static/images/es"
 "/diagram-project-level-data-spec-update.png)"
 
 #: ../../docs/projects/index.md:74
@@ -405,7 +405,7 @@ msgstr ""
 
 #: ../../docs/projects/index.md:88
 msgid "![What about PPPs](../_static/images/diagram-ppp.png)"
-msgstr "![Qué ocurre con las APP](../_static/images/diagram-ppp.png)"
+msgstr "![Qué ocurre con las APP](../_static/images/es/diagram-ppp.png)"
 
 #: ../../docs/projects/index.md:90
 msgid "Why use OC4IDS?"

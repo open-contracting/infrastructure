@@ -178,7 +178,7 @@ msgstr ""
 msgid ""
 "![Theory of Change](_static/images/OC-CoST-TheoryOfChange-June2018.png)"
 msgstr ""
-"![Teoría de Cambio](_static/images/OC-CoST-TheoryOfChange-June2018.png)"
+"![Teoría de Cambio](_static/images/es/OC-CoST-TheoryOfChange-June2018.png)"
 
 #: ../../docs/about.md:33
 msgid ""
