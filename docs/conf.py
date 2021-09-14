@@ -117,7 +117,7 @@ def setup(app):
 
     # Headers for columns to translate in codelist CSVs
     codelist_headers = ['Title', 'Description', 'Extension']
-    # Headers for columns to translate in mapping CSVs
+    # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg  should match these
     mapping_headers = ['Mapping to OC4IDS', 'Mapping from OCDS']
 
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
