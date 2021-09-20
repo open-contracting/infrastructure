@@ -4,21 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Maria Esther Cervantes <mcervantes@cds.com.py>, 2019
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
+# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 11:14-0400\n"
+"POT-Creation-Date: 2021-09-14 21:10-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
+"Last-Translator: Cecilia Casco <ceciliacasco@cds.com.py>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -291,8 +290,8 @@ msgstr ""
 "de una API) en una URL estable, tal como:"
 
 #: ../../docs/guidance/publishing.md:67
-msgid "http://{your website}/opendata/projects/{project-id}.json"
-msgstr "http://{su sitio}/opendata/projects/{project-id}.json"
+msgid "`http://{your-website}/opendata/projects/{project-id}.json`"
+msgstr "`http://{your-website}/opendata/projects/{project-id}.json`"
 
 #: ../../docs/guidance/publishing.md:69
 msgid ""
@@ -304,8 +303,8 @@ msgstr ""
 "como:"
 
 #: ../../docs/guidance/publishing.md:71
-msgid "http://{your website}/opendata/contracting/{ocid}/{release-id}.json"
-msgstr "http://{your website}/opendata/contracting/{ocid}/{release-id}.json"
+msgid "`http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
+msgstr "`http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
 
 #: ../../docs/guidance/publishing.md:73
 msgid ""
