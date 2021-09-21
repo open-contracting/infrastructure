@@ -2,33 +2,45 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-04 21:08-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-05-13 23:48+0000\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../../docs/guidance/data_user_guide.md:1
 msgid "Data user guide"
 msgstr "Guía para el usuario de datos"
 
 #: ../../docs/guidance/data_user_guide.md:3
-msgid "Publishing OC4IDS involves making choices about what projects, data and documents to include and/or exclude, and how to map existing data elements to the fields in OC4IDS."
+msgid ""
+"Publishing OC4IDS involves making choices about what projects, data and "
+"documents to include and/or exclude, and how to map existing data elements "
+"to the fields in OC4IDS."
 msgstr ""
 "Publicar en OC4IDS involucra elegir qué proyectos, datos y documentos se "
 "incluyen o excluyen, y cómo mapear elementos de datos existentes a los "
 "campos en OC4IDS."
 
 #: ../../docs/guidance/data_user_guide.md:5
-msgid "In order for users to interpret data correctly and make effective use of it, it's important for publishers to describe these local decisions and to provide guidance to data users that includes:"
+msgid ""
+"In order for users to interpret data correctly and make effective use of it,"
+" it's important for publishers to describe these local decisions and to "
+"provide guidance to data users that includes:"
 msgstr ""
 "Para que los usuarios puedan interpretar los datos correctamente y hacer un "
 "uso efectivo de ellos, es importante que los publicadores describan estas "
@@ -56,17 +68,26 @@ msgid "how the publisher can be contacted"
 msgstr "cómo se puede contactar con el publicador"
 
 #: ../../docs/guidance/data_user_guide.md:13
-msgid "Publishers should link to this data user guide from the project package's `publicationPolicy` field."
+msgid ""
+"Publishers should link to this data user guide from the project package's "
+"`publicationPolicy` field."
 msgstr ""
-"Los publicadores deberían incluir un enlace a esta guía de usuarios de datos "
-"en el campo `publicationPolicy` del paquete de proyectos."
+"Los publicadores deberían incluir un enlace a esta guía de usuarios de datos"
+" en el campo `publicationPolicy` del paquete de proyectos."
 
 #: ../../docs/guidance/data_user_guide.md:15
-msgid "For more information, please refer to the [OCDS publication policy guidance](https://standard.open-contracting.org/1.1/en/implementation/publication_policy/). For assistance in drafting a data user guide, please refer to the [OCDS publication policy template](https://www.open-contracting.org/resources/ocds-1-1-publication-policy-template/)."
+msgid ""
+"For more information, please refer to the [OCDS publication policy "
+"guidance](https://standard.open-"
+"contracting.org/1.1/en/implementation/publication_policy/). For assistance "
+"in drafting a data user guide, please refer to the [OCDS publication policy "
+"template](https://www.open-contracting.org/resources/ocds-1-1-publication-"
+"policy-template/)."
 msgstr ""
-"Para más información, favor consulte la [guía de políticas de publicación de "
-"OCDS](https://standard.open-contracting.org/1.1/es/implementation/"
-"publication_policy/). Para asistencia en redactar una guía para el usuario "
-"de datos, favor consulte la [plantilla de política de publicación "
-"OCDS](https://www.open-contracting.org/resources/"
-"ocds-1-1-plantilla-de-politica-de-publicacion-es/)."
+"Para más información, favor consulte la [guía de políticas de publicación de"
+" OCDS](https://standard.open-"
+"contracting.org/1.1/es/implementation/publication_policy/). Para asistencia "
+"en redactar una guía para el usuario de datos, favor consulte la [plantilla "
+"de política de publicación OCDS](https://www.open-"
+"contracting.org/resources/ocds-1-1-plantilla-de-politica-de-publicacion-"
+"es/)."

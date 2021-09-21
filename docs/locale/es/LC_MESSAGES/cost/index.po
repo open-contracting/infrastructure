@@ -2,325 +2,473 @@
 # Copyright (C) Open Contracting Partnership
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# James McKinney, 2021
+# Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 11:14-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-09-14 21:10-0400\n"
+"PO-Revision-Date: 2019-03-21 15:12+0000\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/cost/index.md:7
+#: ../../docs/cost/index.md:1
 msgid "CoST IDS & OCDS Mapping"
-msgstr "CoST IDS & Mapeo OCDS"
+msgstr "IDS de CoST & Mapeo OCDS"
 
 #: ../../docs/cost/index.md:9
-msgid "CoST – the Infrastructure Transparency Initiative (CoST) is the leading global initiative improving transparency and accountability in public infrastructure."
+msgid ""
+"CoST – the Infrastructure Transparency Initiative (CoST) is the leading "
+"global initiative improving transparency and accountability in public "
+"infrastructure."
 msgstr ""
-"CoST – la Iniciativa para la Transparencia en Infraestructura (CoST) es la "
-"iniciativa global líder que mejora la transparencia y la rendición de "
-"cuentas en infraestructura pública."
+"CoST – la Iniciativa de Transparencia en Infraestructura (CoST) es la "
+"iniciativa líder a nivel global que busca mejorar la transparencia y la "
+"rendición de cuentas en infraestructura pública."
 
 #: ../../docs/cost/index.md:11
-msgid "The [CoST approach](http://infrastructuretransparency.org/our-approach/) is based on four core features:"
+msgid ""
+"The [CoST approach](http://infrastructuretransparency.org/our-approach/) is "
+"based on four core features:"
 msgstr ""
-"El [enfoque de CoST](http://infrastructuretransparency.org/our-approach/) se "
-"basa en cuatro características clave:"
+"El [enfoque de CoST](http://infrastructuretransparency.org/our-approach/) se"
+" basa en cuatro características clave:"
 
 #: ../../docs/cost/index.md:13
-msgid "**Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be proactively disclosed at key stages of an infrastructure project cycle."
+msgid ""
+"**Disclosure** - where procuring entities are asked to follow the CoST "
+"Infrastructure Data Standard. This describes 40 items of data that should be"
+" proactively disclosed at key stages of an infrastructure project cycle."
 msgstr ""
-"**Divulgación** - donde se solicita a las entidades de adquisición que sigan "
-"el Estándar de Datos sobre Infraestructura de CoST. Este describe 40 "
+"**Divulgación** - en la cual se solicita a las entidades de adquisición que "
+"sigan el Estándar de Datos sobre Infraestructura de CoST. Este describe 40 "
 "elementos de datos que deberían ser divulgados proactivamente en etapas "
 "clave del ciclo de un proyecto de infraestructura. "
 
 #: ../../docs/cost/index.md:15
-msgid "**Assurance** - an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account."
+msgid ""
+"**Assurance** - an independent review of the disclosed data by assurance "
+"teams based within CoST national programmes. Teams may identify key issues "
+"of concern analyzing the data that has been disclosed, and will put "
+"technical terms into plain language to allow stakeholders to understand the "
+"issues, and hold decision makers to account."
 msgstr ""
+"**Aseguramiento** - una revisión independiente de los datos divulgados por "
+"parte de equipos de aseguramiento establecidos en el marco de los programas "
+"de CoST. Los equipos pueden identificar motivos de preocupación clave "
+"analizando los datos que han sido divulgados, y convertirán términos "
+"técnicos en lenguaje sencillo para que las partes interesadas entiendan los "
+"problemas, pedir rendición de cuentas a los que están a cargo de la toma de "
+"decisiones."
 
 #: ../../docs/cost/index.md:17
-msgid "**Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society."
+msgid ""
+"**Multi-stakeholder working** - each CoST national programme is managed by a"
+" stakeholder group including government, private sector and civil society."
 msgstr ""
 "**Trabajo multisectorial** - cada programa nacional o sub-nacional de CoST "
 "es administrado por un grupo multisectorial que incluye el gobierno, el "
 "sector privado y la sociedad civil."
 
 #: ../../docs/cost/index.md:19
-msgid "**Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account."
+msgid ""
+"**Social accountability** - raising awareness of key issues arising from the"
+" assurance process, and engaging civil society and media to hold decision "
+"makers to account."
 msgstr ""
-"**Auditoría social** - concienciando sobre preocupaciones clave que surgen "
-"del proceso de aseguramiento, e involucrando a la sociedad civil y a los "
-"medios para que demanden rendición de cuentas a los encargados de los "
-"proyectos."
+"**Auditoría social** - es la concientización sobre preocupaciones clave que "
+"surgen del proceso de aseguramiento, e involucra a la sociedad civil y a los"
+" medios de comunicación para que demanden rendición de cuentas a los "
+"encargados de los proyectos."
 
 #: ../../docs/cost/index.md:21
-msgid "The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritized different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project."
+msgid ""
+"The 'Infrastructure Data Standard' is a **framework for disclosure** which "
+"has been adapted by a range of CoST national programmes, who have variously "
+"prioritized different elements based on their local needs, or who have "
+"included additional elements that they wish to monitor: particularly "
+"additional kinds of documentation that should be provided for each "
+"infrastructure project."
 msgstr ""
-"El 'Estándar de Datos sobre Infraestructura' es un **marco de trabajo para "
+"El 'Infrastructure Data Standard' es un **marco de trabajo para la "
 "divulgación** que ha sido adaptado por un rango de programas de CoST, "
-"quienes han priorizado de manera distinta diferentes elementos en base a sus "
-"necesidades locales, o quienes han incluido elementos adicionales que desean "
-"monitorear: particularmente, tipos de documentación adicionales que deberían "
-"ser proveídos por cada proyecto de infraestructura."
+"quienes han priorizado de manera distinta diferentes elementos en base a sus"
+" necesidades locales, o quienes han incluido elementos adicionales que "
+"desean monitorear: particularmente, tipos de documentación adicionales que "
+"deberían ser proveídos por cada proyecto de infraestructura."
 
 #: ../../docs/cost/index.md:23
-msgid "You can read more about the Infrastructure Data Standard in [CoST Guidance Note 6](http://infrastructuretransparency.org/resource/guidance-note-6-designing-a-disclosure-process/)."
+msgid ""
+"You can read more about the Infrastructure Data Standard on the [CoST "
+"website](https://infrastructuretransparency.org/our-approach/disclosure/)."
 msgstr ""
-"Puede leer más sobre el Estándar de Datos sobre Infraestructura en la [Nota "
-"de Orientación 6 de CoST](http://infrastructuretransparency.org/resource/"
-"guidance-note-6-designing-a-disclosure-process/)."
+"Puede leer más sobre el Estándar de Datos sobre Infraestructura en el [sitio"
+" web de CoST](https://infrastructuretransparency.org/our-"
+"approach/disclosure/)."
 
 #: ../../docs/cost/index.md:25
 msgid "Frameworks and standards"
 msgstr "Marcos y estándares"
 
 #: ../../docs/cost/index.md:1
-msgid "There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data."
+msgid ""
+"There is an important distinction between the Infrastructure Data Standard "
+"(IDS) and the Open Contracting Data Standard (OCDS). IDS provides a "
+"framework to identify *categories of information* that should be disclosed. "
+"OCDS describes *specific fields* and how they should be structured as data."
 msgstr ""
 "Hay una distinción importante entre el Estándar de Datos sobre "
 "Infraestructura (IDS) y el Estándar de Datos de Contrataciones Abiertas "
-"(OCDS). IDS provee un marco para identificar *categorías de información* que "
-"deberían ser publicadas. OCDS describe *campos específicos* y cómo deberían "
-"estar estructurados como datos."
+"(OCDS). El IDS provee un marco para identificar *categorías de información* "
+"que deberían ser publicadas. OCDS describe *campos específicos* y cómo "
+"deberían estar estructurados como datos."
 
 #: ../../docs/cost/index.md:3
-msgid "The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard."
+msgid ""
+"The [Open Contracting for Infrastructure Data Standard "
+"(OC4IDS)](../projects/index) documented on this site acts as a bridge "
+"between the IDS framework, and the idea of a more structured technical data "
+"standard."
 msgstr ""
-"Las [ Contrataciones Abiertas para el Estándar de Datos sobre "
-"Infraestructura (OC4IDS, por sus siglas en inglés)](../projects/index) "
-"documentadas en este sitio actúan como un puente entre el marco de trabajo "
-"IDS, y la idea de un estándar de datos técnico más estructurado."
+"Las [Contrataciones Abiertas para el Estándar de Datos sobre Infraestructura"
+" (OC4IDS, por sus siglas en inglés)](../projects/index) documentadas en este"
+" sitio actúan como un puente entre el marco de trabajo del IDS, y la idea de"
+" un estándar de datos técnico más estructurado."
 
 #: ../../docs/cost/index.md:35
 msgid "The following tables document two mappings:"
-msgstr ""
+msgstr "Las siguientes dos tablas de mapeo describen:"
 
 #: ../../docs/cost/index.md:37
-msgid "The [**CoST IDS to OC4IDS**](#cost-ids-to-oc4ids-mapping) mapping describes how to represent each element of the CoST IDS as structured data using OC4IDS. Use this mapping if you already collect data according to the CoST IDS and you want to publish your data using OC4IDS, or if you want to make sure that your OC4IDS publication conforms to the CoST IDS."
+msgid ""
+"The [**CoST IDS to OC4IDS**](#cost-ids-to-oc4ids-mapping) mapping describes "
+"how to represent each element of the CoST IDS as structured data using "
+"OC4IDS. Use this mapping if you already collect data according to the CoST "
+"IDS and you want to publish your data using OC4IDS, or if you want to make "
+"sure that your OC4IDS publication conforms to the CoST IDS."
 msgstr ""
+"El mapeo [**IDS de CoST a OC4IDS**](#cost-ids-to-oc4ids-mapping) describe "
+"cómo representar cada elemento del IDS de CoST como datos estructurados "
+"utilizando OC4IDS. Utilice este mapeo si usted ya recopila datos de acuerdo "
+"con el IDS de CoST y desea publicar sus datos utilizando OC4IDS, o si desea "
+"asegurarse de que su publicación de OC4IDS se ajuste al IDS de CoST."
 
 #: ../../docs/cost/index.md:38
-msgid "The [**OCDS to OC4IDS**](#ocds-to-oc4ids-mapping) mapping describes how to use OCDS data to populate the sections of an OC4IDS file which relate to the CoST IDS. Use this mapping if you have access to OCDS data on infrastructure contracting processes and you want to create a summary by project in OC4IDS format, or if you want to check which CoST IDS elements your OCDS data covers."
+msgid ""
+"The [**OCDS to OC4IDS**](#ocds-to-oc4ids-mapping) mapping describes how to "
+"use OCDS data to populate the sections of an OC4IDS file which relate to the"
+" CoST IDS. Use this mapping if you have access to OCDS data on "
+"infrastructure contracting processes and you want to create a summary by "
+"project in OC4IDS format, or if you want to check which CoST IDS elements "
+"your OCDS data covers."
 msgstr ""
+"El mapeo [**OCDS a OC4IDS**](#ocds-to-oc4ids-mapping) describe cómo usar "
+"datos OCDS para completar las secciones de un archivo OC4IDS que se "
+"relacionan con el IDS de CoST. Utilice este mapeo si tiene acceso a datos "
+"OCDS sobre procesos de contratación de infraestructura y desea crear un "
+"resumen por proyecto en formato OC4IDS, o si desea verificar qué elementos "
+"del IDS de CoST cubren sus datos OCDS."
 
 #: ../../docs/cost/index.md:40
-msgid "The organization of the mapping tables reflects the structure of the CoST IDS, which is described in [Getting Started](../projects/index)."
+msgid ""
+"The organization of the mapping tables reflects the structure of the CoST "
+"IDS, which is described in [Getting Started](../projects/index)."
 msgstr ""
+"La organización de las tablas de mapeo refleja la estructura del IDS de "
+"CoST, que se describe en [Para comenzar](../projects/index)."
 
 #: ../../docs/cost/index.md:42
-msgid "The mapping tables use `/` notation to reference fields in OCDS data, e.g. `/tender/status`, and `.` notation to reference fields in the OC4IDS schema, e.g. `.budget.approvalDate`."
+msgid ""
+"The mapping tables use `/` notation to reference fields in OCDS data, e.g. "
+"`/tender/status`, and `.` notation to reference fields in the OC4IDS schema,"
+" e.g. `.budget.approvalDate`."
 msgstr ""
+"Las tablas de mapeo utilizan la notación `/` para referirse a los campos de "
+"datos en OCDS, por ejemplo `/tender/status`, y la notación `.` se refiere a "
+"los campos en el esquema OC4IDS, por ejemplo `.budget.approvalDate`."
 
 #: ../../docs/cost/index.md:44
-msgid "The CoST IDS also sets out a number of disclosure requirements under the heading of 'information for disclosure upon request', also known as 'reactive disclosure'. You can disclose these elements proactively using OC4IDS. Separate tables are provided for reactive disclosures in each mapping."
+msgid ""
+"The CoST IDS also sets out a number of disclosure requirements under the "
+"heading of 'information for disclosure upon request', also known as "
+"'reactive disclosure'. You can disclose these elements proactively using "
+"OC4IDS. Separate tables are provided for reactive disclosures in each "
+"mapping."
 msgstr ""
+"El IDS de CoST también establece una serie de requisitos de divulgación bajo"
+" el título de 'information for disclosure upon request', también conocida "
+"como 'reactive disclosure'. Puede divulgar estos elementos de forma "
+"proactiva utilizando el OC4IDS. Se proporcionan tablas separadas para "
+"divulgaciones reactivas en cada mapeo."
 
 #: ../../docs/cost/index.md:46
 msgid "Common operations"
 msgstr "Operaciones comunes"
 
 #: ../../docs/cost/index.md:48
-msgid "To avoid repetition in the mapping, we refer and link to the following common operations."
+msgid ""
+"To avoid repetition in the mapping, we refer and link to the following "
+"common operations."
 msgstr ""
+"Para evitar la repetición en el mapeo, nos referimos y vinculamos a las "
+"siguientes operaciones comunes."
 
 #: ../../docs/cost/index.md:50
 msgid "Add a project document"
-msgstr ""
+msgstr "Agregar un documento de proyecto"
 
 #: ../../docs/cost/index.md:52
-msgid "Add a `Document` object to the `documents` array and set its fields as follows:"
+msgid ""
+"Add a `Document` object to the `documents` array and set its fields as "
+"follows:"
 msgstr ""
+"Agregar un objeto `Document` a la lista `documents` y establecer sus campos "
+"como sigue:"
 
-#: ../../docs/cost/index.md:54
-#: ../../docs/cost/index.md:62
-#: ../../docs/cost/index.md:129
-#: ../../docs/cost/index.md:228
+#: ../../docs/cost/index.md:54 ../../docs/cost/index.md:62
+#: ../../docs/cost/index.md:129 ../../docs/cost/index.md:228
 msgid "Set its `.id` incrementally"
-msgstr ""
+msgstr "Establecer `.id` incrementalmente"
 
-#: ../../docs/cost/index.md:55
-#: ../../docs/cost/index.md:63
+#: ../../docs/cost/index.md:55 ../../docs/cost/index.md:63
 msgid "Set its `.url` to a direct link to the document"
-msgstr ""
+msgstr "Establecer `.url` a un enlace directo al documento"
 
-#: ../../docs/cost/index.md:56
-#: ../../docs/cost/index.md:64
+#: ../../docs/cost/index.md:56 ../../docs/cost/index.md:64
 msgid "Set its `.title` to the title of the document"
-msgstr ""
+msgstr "Establecer `.title` a un título del documento"
 
 #: ../../docs/cost/index.md:58
 msgid "Add a contracting process document"
-msgstr ""
+msgstr "Agregar un documento de proceso de contratación"
 
 #: ../../docs/cost/index.md:60
-msgid "Add a `Document` object to the `contractingProcesses.summary.documents` array and set its fields as follows:"
+msgid ""
+"Add a `Document` object to the `contractingProcesses.summary.documents` "
+"array and set its fields as follows:"
 msgstr ""
+"Agregar un objeto `Document` a la lista  "
+"`contractingProcesses.summary.documents` y establecer sus campos como sigue:"
 
 #: ../../docs/cost/index.md:66
 msgid "CoST IDS to OC4IDS Mapping"
-msgstr ""
+msgstr "Del IDS de CoST al Mapeo OC4IDS "
 
-#: ../../docs/cost/index.md:68
-#: ../../docs/cost/index.md:387
+#: ../../docs/cost/index.md:68 ../../docs/cost/index.md:387
 msgid "Project level"
 msgstr "Nivel de proyecto"
 
-#: ../../docs/cost/index.md:70
-#: ../../docs/cost/index.md:389
+#: ../../docs/cost/index.md:70 ../../docs/cost/index.md:389
 msgid "Identification"
 msgstr "Identificación"
 
-#: ../../docs/cost/index.md:79
-#: ../../docs/cost/index.md:398
+#: ../../docs/cost/index.md:79 ../../docs/cost/index.md:398
 msgid "Preparation"
 msgstr "Preparación"
 
-#: ../../docs/cost/index.md:88
-#: ../../docs/cost/index.md:407
+#: ../../docs/cost/index.md:88 ../../docs/cost/index.md:407
 msgid "Project completion"
 msgstr "Finalización del proyecto"
 
-#: ../../docs/cost/index.md:97
-#: ../../docs/cost/index.md:309
-#: ../../docs/cost/index.md:416
-#: ../../docs/cost/index.md:464
+#: ../../docs/cost/index.md:97 ../../docs/cost/index.md:309
+#: ../../docs/cost/index.md:416 ../../docs/cost/index.md:464
 msgid "Reactive disclosures"
 msgstr "Divulgación reactiva"
 
-#: ../../docs/cost/index.md:99
-#: ../../docs/cost/index.md:418
+#: ../../docs/cost/index.md:99 ../../docs/cost/index.md:418
 msgid "Identification and preparation"
-msgstr ""
+msgstr "Identificación y preparación"
 
-#: ../../docs/cost/index.md:108
-#: ../../docs/cost/index.md:427
+#: ../../docs/cost/index.md:108 ../../docs/cost/index.md:427
 msgid "Completion"
 msgstr "Finalización"
 
 #: ../../docs/cost/index.md:117
 msgid "Implementation progress reports"
-msgstr ""
+msgstr "Informes de progreso de implementación"
 
 #: ../../docs/cost/index.md:119
-msgid "In addition to the documents listed in the mapping table, you can use OC4IDS to publish structured data on planned and actual physical and financial progress."
+msgid ""
+"In addition to the documents listed in the mapping table, you can use OC4IDS"
+" to publish structured data on planned and actual physical and financial "
+"progress."
 msgstr ""
+"Además de los documentos enumerados en la tabla de mapeo, puede utilizar el "
+"OC4IDS para publicar datos estructurados sobre el progreso físico y "
+"financiero planificado y real."
 
 #: ../../docs/cost/index.md:121
-msgid "Choose from the following options, depending on the data you collect and the data required by your use cases."
+msgid ""
+"Choose from the following options, depending on the data you collect and the"
+" data required by your use cases."
 msgstr ""
+"Elegir entre las siguientes opciones, según los datos recopilados y "
+"requeridos de acuerdo con sus casos de uso."
 
 #: ../../docs/cost/index.md:123
 msgid "**Actual progress over time**"
-msgstr ""
+msgstr "**Progreso real a lo largo del tiempo**"
 
 #: ../../docs/cost/index.md:125
 msgid "Add a `Metric` object to the `metrics` array and:"
-msgstr ""
+msgstr "Agregar un objeto `Document` a la lista `metrics` y:"
 
-#: ../../docs/cost/index.md:126
-#: ../../docs/cost/index.md:225
-msgid "For financial progress, set its `id` to 'financialProgress' and set its title to 'Financial progress', or the equivalent in the language of your publication."
+#: ../../docs/cost/index.md:126 ../../docs/cost/index.md:225
+msgid ""
+"For financial progress, set its `id` to 'financialProgress' and set its "
+"title to 'Financial progress', or the equivalent in the language of your "
+"publication."
 msgstr ""
+"Para el progreso financiero, establecer `id` en 'financialProgress' y "
+"establecer el título a 'Progreso financiero', o el equivalente en el idioma "
+"de su publicación."
 
-#: ../../docs/cost/index.md:127
-#: ../../docs/cost/index.md:226
-msgid "For physical progress, set its `id` to 'physicalProgress' and set its title to 'Physical progress', or the equivalent in the language of your publication."
+#: ../../docs/cost/index.md:127 ../../docs/cost/index.md:226
+msgid ""
+"For physical progress, set its `id` to 'physicalProgress' and set its title "
+"to 'Physical progress', or the equivalent in the language of your "
+"publication."
 msgstr ""
+"Para el progreso físico, establecer `id` a 'physicalProgress' y establecer "
+"el título a 'Physical progress', o el equivalente en el idioma de su "
+"publicación."
 
 #: ../../docs/cost/index.md:128
-msgid "For each progress update, add an `Observation` object to the `Metric` object's `.observations` array and:"
+msgid ""
+"For each progress update, add an `Observation` object to the `Metric` "
+"object's `.observations` array and:"
 msgstr ""
+"Para cada actualización de progreso, agregar un objeto `Observation` a la "
+"lista `.observations` del objeto `Metric` y:"
 
 #: ../../docs/cost/index.md:130
-msgid "Set its `.measure` to the financial progress of the project. For example, for a project that is 75% complete, set `.measure` to `75`"
+msgid ""
+"Set its `.measure` to the financial progress of the project. For example, "
+"for a project that is 75% complete, set `.measure` to `75`"
 msgstr ""
+"Establecer `.measure` al progreso financiero del proyecto. Por ejemplo, para"
+" un proyecto que está completo en un 75%, establecer `.measure` en `75`"
 
-#: ../../docs/cost/index.md:131
-#: ../../docs/cost/index.md:230
-msgid "Set its `.unit.name` to 'percent', set its `unit.id` to 'P1' and set its `unit.scheme` to 'UNCEFACT'"
+#: ../../docs/cost/index.md:131 ../../docs/cost/index.md:230
+msgid ""
+"Set its `.unit.name` to 'percent', set its `unit.id` to 'P1' and set its "
+"`unit.scheme` to 'UNCEFACT'"
 msgstr ""
+"Establecer `.unit.name` en 'percent', establecer `unit.id` a 'P1' y "
+"establecer su `unit.scheme` en 'UNCEFACT'"
 
 #: ../../docs/cost/index.md:132
-msgid "Set its `period.startDate` and `period.endDate` to the date on which the financial progress was measured"
+msgid ""
+"Set its `period.startDate` and `period.endDate` to the date on which the "
+"financial progress was measured"
 msgstr ""
+"Establecer `period.startDate` y `period.endDate` en la fecha en la que se "
+"midió el progreso financiero"
 
-#: ../../docs/cost/index.md:134
-#: ../../docs/cost/index.md:192
+#: ../../docs/cost/index.md:134 ../../docs/cost/index.md:192
 #: ../../docs/cost/index.md:233
 msgid "*Example:*"
-msgstr ""
+msgstr "*Ejemplo:*"
 
 #: ../../docs/cost/index.md:188
 msgid "**A single progress figure**"
-msgstr ""
+msgstr "**Una sola figura de progreso**"
 
 #: ../../docs/cost/index.md:190
-msgid "If your implementation does not store a change history, you can publish a single `Observation` object for each `Metric` and update the `Observation` object's `.measure` each time there is a progress update."
+msgid ""
+"If your implementation does not store a change history, you can publish a "
+"single `Observation` object for each `Metric` and update the `Observation` "
+"object's `.measure` each time there is a progress update."
 msgstr ""
+"Si su implementación no almacena un historial de cambios, puede publicar un "
+"objeto `Observation` para cada `Metric` y actualizar `.measure` en el objeto"
+" `Observation` cada vez que hay una actualización de progreso."
 
 #: ../../docs/cost/index.md:220
 msgid "**Planned progress over time**"
-msgstr ""
+msgstr "**Progreso planificado a lo largo del tiempo**"
 
 #: ../../docs/cost/index.md:222
-msgid "You can use the `forecasts` array to publish progress forecasts for different points in time."
+msgid ""
+"You can use the `forecasts` array to publish progress forecasts for "
+"different points in time."
 msgstr ""
+"Puede utilizar la lista `forecasts` para publicar previsiones de progreso "
+"para diferentes puntos en el tiempo."
 
 #: ../../docs/cost/index.md:224
 msgid "Add a `Metric` object to the `forecasts` array and:"
-msgstr ""
+msgstr "Agregar un objeto `Metric` a la lista `forecasts` y:"
 
 #: ../../docs/cost/index.md:227
-msgid "For each forecast, add an `Observation` object to the `Metric` object's `.observations` array and:"
+msgid ""
+"For each forecast, add an `Observation` object to the `Metric` object's "
+"`.observations` array and:"
 msgstr ""
+"Para cada pronóstico, agregar un objeto `Observation` a la lista "
+"`.observations` del objeto `Metric` y:"
 
 #: ../../docs/cost/index.md:229
-msgid "Set its `.measure` to the forecast progress of the project. For example, to forecast when the project is expected to be complete, set `.measure` to `100`."
+msgid ""
+"Set its `.measure` to the forecast progress of the project. For example, to "
+"forecast when the project is expected to be complete, set `.measure` to "
+"`100`."
 msgstr ""
+"Establecer `.measure` para el progreso previsto del proyecto. Por ejemplo, "
+"para pronosticar cuándo se espera que el proyecto esté completo, establecer "
+"`.measure` en` 100`."
 
 #: ../../docs/cost/index.md:231
-msgid "Set its `period.startDate` and `period.endDate` to the date on which you expect the progress to be achieved"
+msgid ""
+"Set its `period.startDate` and `period.endDate` to the date on which you "
+"expect the progress to be achieved"
 msgstr ""
+"Establecer `period.startDate` y `period.endDate` hasta la fecha en la que "
+"espera que se alcance el progreso"
 
-#: ../../docs/cost/index.md:287
-#: ../../docs/cost/index.md:436
+#: ../../docs/cost/index.md:287 ../../docs/cost/index.md:436
 msgid "Process level"
 msgstr "Nivel de proceso"
 
-#: ../../docs/cost/index.md:289
-#: ../../docs/cost/index.md:438
-msgid "The mappings in this section relate to the `contractingProcesses` section of the OC4IDS schema, unless otherwise specified."
+#: ../../docs/cost/index.md:289 ../../docs/cost/index.md:438
+msgid ""
+"The mappings in this section relate to the `contractingProcesses` section of"
+" the OC4IDS schema, unless otherwise specified."
 msgstr ""
+"Los mapeos de esta sección se relacionan con la de `contractingProcesses` "
+"del esquema OC4IDS, a menos que se especifique lo contrario."
 
-#: ../../docs/cost/index.md:291
-#: ../../docs/cost/index.md:311
-#: ../../docs/cost/index.md:440
-#: ../../docs/cost/index.md:466
+#: ../../docs/cost/index.md:291 ../../docs/cost/index.md:311
+#: ../../docs/cost/index.md:440 ../../docs/cost/index.md:466
 msgid "Procurement"
 msgstr "Contratación"
 
-#: ../../docs/cost/index.md:300
-#: ../../docs/cost/index.md:329
-#: ../../docs/cost/index.md:449
-#: ../../docs/cost/index.md:484
+#: ../../docs/cost/index.md:300 ../../docs/cost/index.md:329
+#: ../../docs/cost/index.md:449 ../../docs/cost/index.md:484
 msgid "Implementation"
 msgstr "Implementación"
 
-#: ../../docs/cost/index.md:320
-#: ../../docs/cost/index.md:475
+#: ../../docs/cost/index.md:320 ../../docs/cost/index.md:475
 msgid "Contract"
 msgstr "Contrato"
 
 #: ../../docs/cost/index.md:338
 msgid "OCDS to OC4IDS Mapping"
-msgstr ""
+msgstr "Mapeo OCDS a OC4IDS"
 
 #: ../../docs/cost/index.md:340
 msgid "Guidance"
@@ -328,123 +476,233 @@ msgstr "Guía"
 
 #: ../../docs/cost/index.md:342
 msgid "Command-line tool and reference implementation"
-msgstr ""
+msgstr "Implementación de referencia y herramienta de línea de comandos"
 
 #: ../../docs/cost/index.md:344
-msgid "OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command  is a command-line tool and reference implementation for converting OCDS data to OC4IDS format."
+msgid ""
+"OCDS Kit's [convert-to-"
+"oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-"
+"oc4ids) command  is a command-line tool and reference implementation for "
+"converting OCDS data to OC4IDS format."
 msgstr ""
+"OCDS Kit [convert-to-"
+"oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-"
+"oc4ids) es una herramienta de línea de comandos y una implementación de "
+"referencia para convertir datos OCDS al formato OC4IDS."
 
 #: ../../docs/cost/index.md:346
 msgid "`convert-to-oc4ids` covers most mappings in the following categories:"
 msgstr ""
+"`convert-to-oc4ids` cubre la mayoría de los mapeos en las siguientes "
+"categorías:"
 
 #: ../../docs/cost/index.md:348
 msgid "project-level identification"
-msgstr ""
+msgstr "Identificación a nivel de proyecto"
 
 #: ../../docs/cost/index.md:349
 msgid "project-level preparation"
-msgstr ""
+msgstr "Preparación a nivel de proyecto"
 
 #: ../../docs/cost/index.md:350
 msgid "process-level procurement"
-msgstr ""
+msgstr "Contratación a nivel de proceso"
 
 #: ../../docs/cost/index.md:352
-msgid "However, `convert-to-oc4ids` does not cover all mappings, nor does it perform currency conversions. Mappings which `convert-to-oc4ids` does not cover are shown in *italics*."
+msgid ""
+"However, `convert-to-oc4ids` does not cover all mappings, nor does it "
+"perform currency conversions. Mappings which `convert-to-oc4ids` does not "
+"cover are shown in *italics*."
 msgstr ""
+"Sin embargo, `convert-to-oc4ids` no cubre todos los mapeos, ni realiza "
+"conversiones de moneda. Los mapeos que no cubren `convert-to-oc4ids` se "
+"muestran en *cursiva *."
 
 #: ../../docs/cost/index.md:354
 msgid "Mapping codelists"
-msgstr ""
+msgstr "Mapeo de listas de códigos"
 
 #: ../../docs/cost/index.md:356
-msgid "Mappings that depend on the specific classification or codelist used in the OCDS data are not documented in detail, as they may differ by publisher. For example, mapping to the OC4IDS projectSector codelist."
+msgid ""
+"Mappings that depend on the specific classification or codelist used in the "
+"OCDS data are not documented in detail, as they may differ by publisher. For"
+" example, mapping to the OC4IDS projectSector codelist."
 msgstr ""
+"Los mapeos que dependen de la clasificación o lista de códigos específica "
+"utilizada en los datos de OCDS no se documentan en detalle, ya que pueden "
+"diferir según el publicador. Por ejemplo, el mapeo a la lista de códigos de "
+"projectSector del OC4IDS."
 
 #: ../../docs/cost/index.md:358
 msgid "Alternative mappings"
-msgstr ""
+msgstr "Mapeos alternativos"
 
 #: ../../docs/cost/index.md:360
-msgid "Some mappings offer optional alternatives in case the primary mapping isn't available. For example, for OCDS data in which `planning.project.title` isn't available, you can optionally set the project `title` based on the `tender.title`."
+msgid ""
+"Some mappings offer optional alternatives in case the primary mapping isn't "
+"available. For example, for OCDS data in which `planning.project.title` "
+"isn't available, you can optionally set the project `title` based on the "
+"`tender.title`."
 msgstr ""
+"Algunos mapeos ofrecen alternativas opcionales en caso de que el mapeo "
+"principal no esté disponible. Por ejemplo, para datos OCDS en los que "
+"`planning.project.title` no esta disponible, puede opcionalmente establecer "
+"el `title` del proyecto basado en el `tender.title`."
 
 #: ../../docs/cost/index.md:362
-msgid "In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema. You should remove these fields if you plan to publish your OC4IDS data."
+msgid ""
+"In order to provide analysts with additional context, alternative mappings "
+"may copy additional fields which don't appear in OC4IDS schema. You should "
+"remove these fields if you plan to publish your OC4IDS data."
 msgstr ""
+"Para proporcionar a los analistas un contexto adicional, los mapeos "
+"alternativos pueden copiar campos adicionales que no aparecen en el esquema "
+"OC4IDS. Debe eliminar estos campos si planea publicar sus datos OC4IDS."
 
 #: ../../docs/cost/index.md:364
 msgid "OCDS extensions"
 msgstr "Extensiones OCDS"
 
 #: ../../docs/cost/index.md:366
-msgid "Some mappings use fields from [OCDS extensions](https://standard.open-contracting.org/latest/en/guidance/map/extensions/#extensions). In these cases, the names of extensions are noted in parentheses; where possible, alternative mappings are provided that use only fields from the core OCDS schema."
+msgid ""
+"Some mappings use fields from [OCDS extensions](https://standard.open-"
+"contracting.org/latest/en/guidance/map/extensions/#extensions). In these "
+"cases, the names of extensions are noted in parentheses; where possible, "
+"alternative mappings are provided that use only fields from the core OCDS "
+"schema."
 msgstr ""
+"Algunos mapeos utilizan campos de [Extensión OCDS](https://standard.open-"
+"contracting.org/latest/en/guidance/map/extensions/#extensions). En estos "
+"casos, los nombres de las extensiones se indican entre paréntesis; siempre "
+"que sea posible, se proporcionan mapeos alternativos que utilizan solo "
+"campos del esquema principal de OCDS."
 
 #: ../../docs/cost/index.md:368
 msgid "Handling conflicts and duplicates"
-msgstr ""
+msgstr "Manejo de conflictos y duplicados"
 
 #: ../../docs/cost/index.md:370
 msgid "Implementations of the mapping should give consideration to:"
-msgstr ""
+msgstr "Las implementaciones del mapeo deben considerar:"
 
 #: ../../docs/cost/index.md:372
-msgid "OCDS data that contains fields that differ between contracting processes but map to a single field in OC4IDS: for example, where `planning.project.title` differs for two contracting processes that relate to the same project, but OC4IDS has a single `title` field at the project level."
+msgid ""
+"OCDS data that contains fields that differ between contracting processes but"
+" map to a single field in OC4IDS: for example, where "
+"`planning.project.title` differs for two contracting processes that relate "
+"to the same project, but OC4IDS has a single `title` field at the project "
+"level."
 msgstr ""
+"Datos OCDS que contienen campos que difieren entre los procesos de "
+"contratación pero que se asignan a un solo campo en OC4IDS: por ejemplo, "
+"donde `planning.project.title` difiere para dos procesos de contratación que"
+" se relacionan con el mismo proyecto, pero OC4IDS tiene un solo campo "
+"`title` a nivel de proyecto."
 
 #: ../../docs/cost/index.md:373
-msgid "OCDS data that contains multiple `Organization` objects with the same `.role` that map to a single field in OC4IDS: for example, where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level."
+msgid ""
+"OCDS data that contains multiple `Organization` objects with the same "
+"`.role` that map to a single field in OC4IDS: for example, where a "
+"contracting process has two `Organization`s with the 'procuringEntity' role,"
+" but OC4IDS has a single `.summary.tender.procuringEntity` field at the "
+"contract level."
 msgstr ""
+"Datos de OCDS que contienen varios objetos `Organization` con el mismo "
+"`.role` que se asignan a un solo campo en OC4IDS: por ejemplo, donde un "
+"proceso de contratación tiene dos `Organization` con el rol "
+"'procuringEntity', pero OC4IDS tiene un solo campo "
+"`.summary.tender.procuringEntity` a nivel de contrato."
 
 #: ../../docs/cost/index.md:374
-msgid "Checking for duplicates when copying objects from OCDS. For example, checking whether an `Organization` object has already been copied before copying it again."
+msgid ""
+"Checking for duplicates when copying objects from OCDS. For example, "
+"checking whether an `Organization` object has already been copied before "
+"copying it again."
 msgstr ""
+"Comprobación de duplicados al copiar objetos de OCDS. Por ejemplo, comprobar"
+" si un objeto `Organization` ya se ha copiado antes de volver a copiarlo."
 
 #: ../../docs/cost/index.md:375
-msgid "Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same `.id`."
+msgid ""
+"Handling identifier conflicts when copying objects from OCDS. For example, "
+"where two contracting processes both contain a ``Document`` with the same "
+"`.id`."
 msgstr ""
+"Manejo de conflictos de identificadores al copiar objetos de OCDS. Por "
+"ejemplo, cuando dos procesos de contratación contienen un ``Documento`` con "
+"el mismo `.id`."
 
 #: ../../docs/cost/index.md:377
-msgid "Read the `convert-to-oc4ids` [transformation notes](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#transformation-notes) to learn about how OCDS Kit handles the above scenarios."
+msgid ""
+"Read the `convert-to-oc4ids` [transformation "
+"notes](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html"
+"#transformation-notes) to learn about how OCDS Kit handles the above "
+"scenarios."
 msgstr ""
+"Leer las [notas de "
+"transformación](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html"
+"#transformation-notes) del `convert-to-oc4ids` para aprender acerca de cómo "
+"OCDS Kit maneja los escenarios anteriores."
 
 #: ../../docs/cost/index.md:379
 msgid "Handling multiple currencies"
-msgstr ""
+msgstr "Manejo de múltiples monedas"
 
 #: ../../docs/cost/index.md:381
-msgid "Some mappings involve converting values in OCDS, which may be in different currencies, to a base currency."
+msgid ""
+"Some mappings involve converting values in OCDS, which may be in different "
+"currencies, to a base currency."
 msgstr ""
+"Algunos mapeos implican convertir valores en OCDS, que pueden estar en "
+"diferentes monedas, a una moneda base."
 
 #: ../../docs/cost/index.md:383
-msgid "Implementations which include multiple currencies should give consideration to [value dating](https://en.wikipedia.org/wiki/Value_date). One approach is to use the compiled release's `date`."
+msgid ""
+"Implementations which include multiple currencies should give consideration "
+"to [value dating](https://en.wikipedia.org/wiki/Value_date). One approach is"
+" to use the compiled release's `date`."
 msgstr ""
+"Implementaciones que incluyan múltiples monedas deben considerar [value "
+"dating](https://en.wikipedia.org/wiki/Value_date). Un enfoque es utilizar "
+"`date` de la entrega compilada."
 
 #: ../../docs/cost/index.md:385
 msgid "Mapping"
-msgstr ""
+msgstr "Mapeo"
 
 #: ../../docs/cost/index.md:451
-msgid "Disclosures in the implementation section of the CoST IDS relate to changes to a contract's value, duration or scope that were made after the contract was awarded."
+msgid ""
+"Disclosures in the implementation section of the CoST IDS relate to changes "
+"to a contract's value, duration or scope that were made after the contract "
+"was awarded."
 msgstr ""
 "La divulgación en la sección de implementación en el IDS de CoST se "
-"relacionan a cambios en el valor, duración o alcance del contrato que fueron "
-"hechos después de que el contrato fue adjudicado."
+"relacionan a cambios en el valor, duración o alcance del contrato que fueron"
+" hechos después de que el contrato fue adjudicado."
 
 #: ../../docs/cost/index.md:453
-msgid "If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below."
+msgid ""
+"If OCDS data is available, these changes can be determined by comparing the "
+"most recent OCDS release to a compiled release created from all prior "
+"releases (to better understand these concepts, refer to the [OCDS "
+"documentation](https://standard.open-"
+"contracting.org/1.1/en/getting_started/releases_and_records/)). The specific"
+" fields to monitor for changes between releases are described in the mapping"
+" table below."
 msgstr ""
-"Si hay datos OCDS disponibles, estos cambios se pueden determinar comparando "
-"el release OCDS más reciente con un release compilado creado a partir de "
-"todos los releases anteriores (para entender mejor estos conceptos, vea la ["
-"documentación de OCDS](https://standard.open-contracting.org/1.1/es/"
-"getting_started/releases_and_records/)). El campo específico a observar para "
-"cambios entre releases se describen en la tabla de mapeo de abajo."
+"Si hay datos OCDS disponibles, estos cambios se pueden determinar comparando"
+" el release OCDS más reciente con un release compilado creado a partir de "
+"todos los releases anteriores (para entender mejor estos conceptos, vea la "
+"[documentación de OCDS](https://standard.open-"
+"contracting.org/1.1/es/getting_started/releases_and_records/)). El campo "
+"específico a observar para cambios entre releases se describen en la tabla "
+"de mapeo de abajo."
 
 #: ../../docs/cost/index.md:455
-msgid "In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered."
+msgid ""
+"In some cases, OCDS data may include an explanation of changes in the "
+"relevant `amendments` block. In other cases, the reason may need to be "
+"manually entered."
 msgstr ""
 "En algunos casos, los datos OCDS pueden incluir una explicación de los "
 "cambios en el bloque `amendments` correspondiente. En otros casos, la razón "
