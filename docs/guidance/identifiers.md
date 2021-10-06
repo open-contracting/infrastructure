@@ -20,7 +20,6 @@ There are different approaches to including project identifiers in contracting d
 
   This approach also enables the joining up of data on multiple contracting processes relating to a single infrastructure project.
 
-
 * **Establish a national project register managed by a central agency and integrated into procurement systems.** In this model, officials entering procurement information would look up and use the project's identifier from the national register. If the project is not yet in the register, they would request its addition.
 
   This approach supports more comprehensive and effective data quality checks; for example, project identifiers entered into procurement systems can be immediately checked against the project register to prevent errors in data entry ("validation at source").
@@ -31,7 +30,7 @@ There are different approaches to including project identifiers in contracting d
 
 ### Project identifiers in OCDS
 
-In OCDS, the identifier for the individual infrastructure project to which a contracting process is related should be disclosed using the `planning/project/id` field, introduced in the [Budget and Projects extension](https://extensions.open-contracting.org/en/extensions/budget_project/).
+In OCDS, the identifier for the individual infrastructure project to which a contracting process is related should be disclosed using the `planning/project/id` field, introduced in the [Project extension](https://extensions.open-contracting.org/en/extensions/project/).
 
 The `planning/budget/projectID` field in OCDS should **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier for a project in the national budget to which the contracting process is related. Since projects in the national budget might include many individual infrastructure projects, it is necessary to disclose these identifiers separately.
 
@@ -47,14 +46,10 @@ For example: CoST Honduras requests a project identifier prefix from the OC4IDS 
 
 Project identifier prefixes are typically unique to each publisher. However, multiple publishers in the same jurisdiction can collaboratively decide to use the same project identifier prefix: for example, if multiple agencies are independently responsible for different projects. As such, the prefix serves to identify a series of infrastructure projects (to which many publishers can contribute), rather than to identify one publisher.
 
-```eval_rst
-.. admonition:: Request a project identifier prefix
-    :class: tip
+```{admonition} Request a project identifier prefix
+:class: tip
 
-    .. markdown::
-
-        To request a project identifier prefix, please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization and a brief description of your OC4IDS implementation.
-
+To request a project identifier prefix, please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization and a brief description of your OC4IDS implementation.
 ```
 
 ### Existing prefixes

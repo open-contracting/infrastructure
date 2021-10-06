@@ -1,0 +1,16 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Contract officials and roles,Name and position of the public official in charge of administration of the contract(s).,"From the `parties` array, get the `Organization` object whose role is 'administrativeEntity'. If none exists yet:
+
+* Add an `Organization` object to the `parties` array
+* Set its `.name` to the name of the administrative entity
+* Set its `.role` to 'administrativeEntity'
+
+Add a `Person` object to the organization's `.people` array and:
+
+* Set its `.id` incrementally
+* Set its `.name` to the contract official's name
+* Set its `.jobTitle` to the contract official's job title","*Check the `/parties` array for `Organization` objects with 'administrativeEntity' in `/roles`. Copy each object to the `parties` array in OC4IDS. If there is more than one procuring entity, do not set `.summary.tender.procuringEntity.name` and `.summary.tender.procuringEntity.id`; otherwise, set them to the procuring entity's `.name` and `.id`.*"
+Procurement method,"Specify tendering method using the method codelist (open, selective, limited, direct).",Set `.summary.tender.procurementMethod` to a value from the Method codelist.,Set `.summary.tender.procurementMethod` to the value of `/tender/procurementMethod`.
+Tender documents,"Documentation for potential suppliers, describing the goals of the contract (e.g. goods and services to be procured), and the bidding process.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'biddingDocuments'.,*Check the `/tender/documents` array for `Document` objects with `.documentType` set to ‘biddingDocuments’ and copy each object to the `.summary.documents` array.*
+Tender evaluation results,"Documentation on the evaluation of the bids and the application of the evaluation criteria, including the justification for the award.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'evaluationReports'.,*Check the `/tender/documents` array for `Document` objects with `.documentType` set to ‘evaluationReports’ and copy each object to the `.summary.documents` array.*
+Project design report,"A record of the justification for the design approach adopted in the project, typically issued before the works start, by the consultant or firm that will supervise the works.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'projectDesignReport'.,*Check the `/planning/documents` array for `Document` objects with `.documentType` set to ‘projectDesignReport’ and copy each object to the `.summary.documents` array.*

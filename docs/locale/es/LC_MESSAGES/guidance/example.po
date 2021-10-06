@@ -6,16 +6,19 @@
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
+"POT-Creation-Date: 2021-09-14 21:10-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,7 +39,7 @@ msgstr ""
 
 #: ../../docs/guidance/example.md:5
 msgid ""
-"This worked example is a fully completed OC4IDS JSON file representing a "
+"This worked example is a filled-in example OC4IDS JSON file representing a "
 "fictional, completed infrastructure project to upgrade a motorway in the UK."
 msgstr ""
 "Este ejemplo práctico es un archivo JSON OC4IDS completo que representa un "
@@ -45,13 +48,21 @@ msgstr ""
 
 #: ../../docs/guidance/example.md:7
 msgid ""
-"The full OC4IDS JSON file for the worked example is available to download "
-"[here](../../_static/example.json)."
+"The full OC4IDS JSON file for the worked example is {download}`available to "
+"download <../examples/example.json>`."
 msgstr ""
 "El archivo OC4IDS JSON completo para el ejemplo práctico está disponible "
-"para su descarga [aquí](../../_static/example.json)."
+"{aquí}`para su descarga <../examples/example.json>`."
 
-#: ../../docs/guidance/example.md:9
+#: ../../docs/guidance/example.md:1
+msgid ""
+"You can also download a {download}`blank example OC4IDS JSON file "
+"<../examples/blank.json>` as a starting point for your implementation."
+msgstr ""
+"También puede descargar un {download}`blank example OC4IDS JSON file "
+"<../examples/blank.json>`  como punto de partida para su implementación. "
+
+#: ../../docs/guidance/example.md:13
 msgid ""
 "This page contains excerpts from the example JSON file, showing how key "
 "sections of the schema ought to be populated."
@@ -59,16 +70,16 @@ msgstr ""
 "Esta página contiene extractos del archivo de ejemplo JSON, mostrando cómo "
 "deberían ser llenadas las secciones clave del esquema."
 
-#: ../../docs/guidance/example.md:11
+#: ../../docs/guidance/example.md:15
 msgid "Overview"
 msgstr "Resumen"
 
-#: ../../docs/guidance/example.md:13
+#: ../../docs/guidance/example.md:17
 msgid "An OC4IDS document is made up of a number of sections. These include:"
 msgstr ""
 "Un documento OC4IDS está hecho de un número de secciones. Estos incluyen:"
 
-#: ../../docs/guidance/example.md:15
+#: ../../docs/guidance/example.md:19
 msgid ""
 "**Project package** - a container for the data of multiple projects, as well"
 " as metadata about the publication."
@@ -76,11 +87,11 @@ msgstr ""
 "**Paquete de proyectos** - un contenedor para los datos de múltiples "
 "proyectos, así como metadatos sobre la publicación."
 
-#: ../../docs/guidance/example.md:16
+#: ../../docs/guidance/example.md:20
 msgid "**Project data** - for each project including:"
 msgstr "**Datos de proyecto** - para cada proyecto incluyendo:"
 
-#: ../../docs/guidance/example.md:17
+#: ../../docs/guidance/example.md:21
 msgid ""
 "**Project metadata** - contextual information about the project such as "
 "title, description, location and status."
@@ -88,7 +99,7 @@ msgstr ""
 "**Metadatos de proyecto** - información contextual acerca del proyecto como "
 "el título, descripción, ubicación y estado."
 
-#: ../../docs/guidance/example.md:18
+#: ../../docs/guidance/example.md:22
 msgid ""
 "**Budget** - information about the projected costs or allocated budget for "
 "the project."
@@ -96,7 +107,7 @@ msgstr ""
 "**Presupuesto** - información sobre los costos previstos o presupuesto "
 "asignado para el proyecto."
 
-#: ../../docs/guidance/example.md:19
+#: ../../docs/guidance/example.md:23
 msgid ""
 "**Parties** - information about the organizations and other participants "
 "involved in the project."
@@ -104,12 +115,12 @@ msgstr ""
 "**Partes** - información sobre las organizaciones y otros participantes "
 "involucrados en el proyecto."
 
-#: ../../docs/guidance/example.md:20
+#: ../../docs/guidance/example.md:24
 msgid "**Documents** - documents and documentation relating to the project."
 msgstr ""
 "**Documentos** - documentos y documentación relacionada con el proyecto."
 
-#: ../../docs/guidance/example.md:21
+#: ../../docs/guidance/example.md:25
 msgid ""
 "**Contracting processes** - information about related contracting processes "
 "for different aspects of the project."
@@ -117,7 +128,7 @@ msgstr ""
 "**Procesos de contratación** - información sobre los procesos de "
 "contratación relacionados para diferentes aspectos del proyecto."
 
-#: ../../docs/guidance/example.md:22
+#: ../../docs/guidance/example.md:26
 msgid ""
 "**Completion** - information on the final scope, duration and costs for the "
 "project."
@@ -125,15 +136,15 @@ msgstr ""
 "**Finalización** - información del alcance, duración y costos finales para "
 "el proyecto."
 
-#: ../../docs/guidance/example.md:24
+#: ../../docs/guidance/example.md:28
 msgid "Sections"
 msgstr "Secciones"
 
-#: ../../docs/guidance/example.md:26
+#: ../../docs/guidance/example.md:30
 msgid "Project package"
 msgstr "Paquete de proyectos"
 
-#: ../../docs/guidance/example.md:28
+#: ../../docs/guidance/example.md:32
 msgid ""
 "The project package serves as a container for the data of multiple projects,"
 " through its `projects` array. It also provides metadata concerning all the "
@@ -145,11 +156,11 @@ msgstr ""
 "todos los datos que contiene, incluyendo el publicador, versión del esquema,"
 " licencia de datos y política de publicación."
 
-#: ../../docs/guidance/example.md:38
+#: ../../docs/guidance/example.md:40
 msgid "License"
 msgstr "Licencia"
 
-#: ../../docs/guidance/example.md:40
+#: ../../docs/guidance/example.md:42
 msgid ""
 "The `license` field ought to contain a link to the license that applies to "
 "the data in the package. Further information about licensing can be found in"
@@ -161,11 +172,11 @@ msgstr ""
 "la [orientación de licencias de OCDS](https://standard.open-"
 "contracting.org/1.1/es/implementation/licensing/)."
 
-#: ../../docs/guidance/example.md:42
+#: ../../docs/guidance/example.md:44
 msgid "Publication policy"
 msgstr "Política de publicación"
 
-#: ../../docs/guidance/example.md:44
+#: ../../docs/guidance/example.md:46
 msgid ""
 "The `publicationPolicy` field ought to contain a link to a data user guide. "
 "For more information about what to include in a publication policy, refer to"
@@ -175,11 +186,11 @@ msgstr ""
 "usuarios de datos. Para más información sobre qué incluir en una política de"
 " publicación, consultar la [guía de usuarios de datos](data_user_guide)."
 
-#: ../../docs/guidance/example.md:46
+#: ../../docs/guidance/example.md:48
 msgid "Project information"
 msgstr "Información de proyecto"
 
-#: ../../docs/guidance/example.md:48
+#: ../../docs/guidance/example.md:50
 msgid ""
 "A project package can contain information about multiple infrastructure "
 "projects. Each infrastructure project is represented as an entry in the "
@@ -191,15 +202,15 @@ msgstr ""
 "una entrada en el array de `projects`. El ejemplo contiene información sobre"
 " un solo proyecto de infraestructura."
 
-#: ../../docs/guidance/example.md:60
+#: ../../docs/guidance/example.md:59
 msgid "Each project object contains the following sections:"
 msgstr "Cada objeto de proyecto contiene las siguientes secciones:"
 
-#: ../../docs/guidance/example.md:62
+#: ../../docs/guidance/example.md:61
 msgid "Project metadata"
 msgstr "Metadatos del proyecto"
 
-#: ../../docs/guidance/example.md:64
+#: ../../docs/guidance/example.md:63
 msgid ""
 "This section provides contextual information about the infrastructure "
 "project, including:"
@@ -207,89 +218,89 @@ msgstr ""
 "Esta sección provee información contextual sobre el proyecto de "
 "infraestructura, incluyendo:"
 
-#: ../../docs/guidance/example.md:66
+#: ../../docs/guidance/example.md:65
 msgid ""
 "`id` for the project identifier. To make the project identifier globally "
 "unique, a project identifier prefix needs to be added to a local identifier "
 "for the project. Project identifier prefixes are assigned by the OC4IDS "
 "Helpdesk. For more information on project identifiers, refer to the [project"
-" identifiers guidance](../identifiers/#globally-unique-project-identifiers)."
+" identifiers guidance](identifiers.md#project-identifier-prefixes)."
 msgstr ""
 "`id` para el identificador de proyecto. Para hacer que el identificador de "
 "proyecto sea globalmente único, se necesita añadir un prefijo de "
 "identificador de proyecto a un identificador local para el proyecto. Los "
-"prefijos de identificador de proyecto son asignados por el Helpdesk de "
+"prefijos de identificador de proyecto son asignados por la Mesa de Ayuda de "
 "OC4IDS. Para más información sobre los identificadores de proyecto, consulte"
-" la [guía de identificadores de proyecto](../identifiers/#globally-unique-"
-"project-identifiers)."
+" la [guía de identificadores de proyecto](identifiers.md#project-identifier-"
+"prefixes)."
 
-#: ../../docs/guidance/example.md:68
+#: ../../docs/guidance/example.md:67
 msgid ""
 "`status` from the [Project Status "
-"codelist](../../reference/codelists/#projectstatus). In this example, the "
+"codelist](../reference/codelists.md#projectstatus). In this example, the "
 "project status is 'completed'."
 msgstr ""
-"`status` (estatus) de la [lista de códigos de Estado de "
-"Proyecto](../../reference/codelists/#projectstatus). En este ejemplo, el "
-"estado del proyecto es 'completed' (finalizado)."
+"`status` de la [Lista de códigos de Estado de "
+"Proyecto](../reference/codelists.md#projectstatus). En este ejemplo, el "
+"estado del proyecto es 'completed'."
 
-#: ../../docs/guidance/example.md:70
+#: ../../docs/guidance/example.md:69
 msgid ""
 "`type` from the [Project Type "
-"codelist](../../reference/codelists/#projecttype). In this example, the "
+"codelist](../reference/codelists.md#projecttype). In this example, the "
 "project type is 'expansion'."
 msgstr ""
-"`type` (tipo) de la [lista de códigos de Tipo de "
-"Proyecto](../../reference/codelists/#projecttype). En este ejemplo, el tipo "
-"de proyecto es 'expansion' (expansión)."
+"`type` de la [lista de códigos de Tipo de "
+"Proyecto](../reference/codelists.md#projecttype). En este ejemplo, el tipo "
+"de proyecto es 'expansion'."
 
-#: ../../docs/guidance/example.md:72
+#: ../../docs/guidance/example.md:71
 msgid ""
 "`sector` from the [Project Sector "
-"codelist](../../reference/codelists/#projectsector). In this example, the "
+"codelist](../reference/codelists.md#projectsector). In this example, the "
 "sector is 'transport.road', the parent sector 'transport' is also included "
 "in the sector list, in line with the guidance in the schema."
 msgstr ""
-"`sector` de la [lista de códigos de Sector de "
-"Proyecto](../../reference/codelists/#projectsector). En este ejemplo, el "
+"`sector` de la [Lista de códigos de Sector del "
+"Proyecto](../reference/codelists.md#projectsector). En este ejemplo, el "
 "sector es `transport.road`, el sector padre `transport` también está "
 "incluido en la lista de sectores, tal como lo indica la guía en el esquema."
 
-#: ../../docs/guidance/example.md:74
+#: ../../docs/guidance/example.md:73
 msgid ""
 "one or more `relatedProjects`, to reference other projects that are related "
 "to the same set of infrastructure assets, as [outlined in the schema "
-"reference](../../reference/schema/#relatedproject). In the relatedProject "
+"reference](../reference/schema.md#relatedproject). In the relatedProject "
 "example below, a reference is made to the original project that initially "
 "constructed the motorway junctions, which are now being upgraded by this "
 "project."
 msgstr ""
-"uno o más `relatedProjects` (proyectos relacionados), para referenciar otros"
-" proyectos que están relacionados al mismo conjunto de activos de "
-"infraestructura, como está [resumido en la referencia del "
-"esquema](../../reference/schema/#relatedproject). En el ejemplo de "
+"uno o más `relatedProjects`, para referenciar otros proyectos que están "
+"relacionados al mismo conjunto de activos de infraestructura, como está "
+"[resumido en la referencia del "
+"esquema](../reference/schema.md#relatedproject). En el ejemplo de "
 "relatedProject abajo, se hace referencia al proyecto original que construyó "
 "inicialmente el cruce de autopistas, que ahora está siendo mejorado por este"
 " proyecto."
 
-#: ../../docs/guidance/example.md:76
+#: ../../docs/guidance/example.md:75
 msgid ""
 "one or more `locations`, which can be expressed in a variety of ways as "
-"[outlined in the schema reference](../../reference/schema/#location). In "
-"this example, one location is given: a motorway junction, using a point "
+"[outlined in the schema reference](../reference/schema.md#location). In this"
+" example, one location is given: a motorway junction, using a point "
 "location, a gazetteer entry and an address."
 msgstr ""
-"uno o más `locations` (ubicaciones), que pueden ser expresadas de diferentes"
-" maneras como se [indica en la referencia del "
-"esquema](../../reference/schema/#location). En este ejemplo, se proporciona "
-"una ubicación: un cruce de autopistas, usando un punto de ubicación, una "
-"entrada de un diccionario geográfico y una dirección."
+"uno o más `locations`, que pueden ser expresadas de diferentes maneras como "
+"se [indica en la referencia del esquema](../reference/schema.md#location). "
+"En este ejemplo, se proporciona una ubicación: un cruce de autopistas, "
+"usando un punto de ubicación, una entrada de un diccionario geográfico y una"
+" dirección."
 
-#: ../../docs/guidance/example.md:95
+#: ../../docs/guidance/example.md:88
 msgid "Budget and budget breakdown"
 msgstr "Presupuesto y desglose del presupuesto"
 
-#: ../../docs/guidance/example.md:97
+#: ../../docs/guidance/example.md:90
 msgid ""
 "The `budget` section can be used to provide the overall budget for the "
 "project, and its `budgetBreakdown` array can be used to provide a breakdown "
@@ -300,7 +311,7 @@ msgstr ""
 "del presupuesto) puede ser usado para proveer un desglose del presupuesto "
 "por periodo y/o fuente de financiamiento. "
 
-#: ../../docs/guidance/example.md:99
+#: ../../docs/guidance/example.md:92
 msgid ""
 "In the budget example below, the overall budget for the infrastructure "
 "project covers 3 years and is broken down into amounts per year, with "
@@ -312,11 +323,11 @@ msgstr ""
 "con £10,000,000 asignados en el 2016 – como está resaltado en el ejemplo de "
 "budgetBreakdown."
 
-#: ../../docs/guidance/example.md:119
+#: ../../docs/guidance/example.md:106
 msgid "Parties (organizations)"
 msgstr "Partes (organizaciones, instituciones)"
 
-#: ../../docs/guidance/example.md:121
+#: ../../docs/guidance/example.md:108
 msgid ""
 "The `parties` array is used to provide details about organizations involved "
 "in the infrastructure project and their roles. Organization references "
@@ -327,7 +338,7 @@ msgstr ""
 "Las referencias de organización en otros lugares de los datos hacen "
 "referencia a las entradas en esta sección."
 
-#: ../../docs/guidance/example.md:123
+#: ../../docs/guidance/example.md:110
 msgid ""
 "In the party example below, details are given about the fictional Motorways "
 "UK entity, which is referred to from the `sourceParty` section in the "
@@ -339,11 +350,11 @@ msgstr ""
 "`sourceParty` en el ejemplo de `budgetBreakdown` arriba, usando el `name` "
 "(nombre) y `id` de la entrada en el array de `parties`."
 
-#: ../../docs/guidance/example.md:134
+#: ../../docs/guidance/example.md:118
 msgid "Public authority"
 msgstr "Autoridad pública"
 
-#: ../../docs/guidance/example.md:136
+#: ../../docs/guidance/example.md:120
 msgid ""
 "The `publicAuthority` field indicates the project owner: the unit, body or "
 "department within a government that is tendering and contracting the "
@@ -354,11 +365,11 @@ msgstr ""
 "licitando y contratando el proyecto. Hace referencia  a una entrada en el "
 "array de `parties`, como se describe arriba."
 
-#: ../../docs/guidance/example.md:146
+#: ../../docs/guidance/example.md:127
 msgid "Documents"
 msgstr "Documentos"
 
-#: ../../docs/guidance/example.md:148
+#: ../../docs/guidance/example.md:129
 msgid ""
 "The `documents` array is used to provide information and links to documents "
 "and documentation relating to the infrastructure project. During different "
@@ -369,33 +380,63 @@ msgstr ""
 "infraestructura. Durante diferentes fases del proyecto, se esperan "
 "diferentes tipos de documento."
 
-#: ../../docs/guidance/example.md:150
+#: ../../docs/guidance/example.md:131
 msgid ""
 "In the document example below, an environmental impact assessment is "
 "provided. The `documentType` field is used to categorize the document "
 "against the [Document Type "
-"codelist](../../reference/codelists/#documenttype)."
+"codelist](../reference/codelists.md#documenttype)."
 msgstr ""
-"En el ejemplo de documento de abajo, se provee una evaluación de impacto "
-"ambiental. El campo `documentType` (tipo de documento) se usa para "
-"categorizar el documento de acuerdo a la [lista de códigos de Tipo de "
-"Documento](../../reference/codelists/#documenttype)."
+"En el siguiente documento de ejemplo, se provee una evaluación de impacto "
+"ambiental. El campo `documentType` se usa para categorizar el documento de "
+"acuerdo a la [lista de códigos del Tipo de "
+"Documento](../reference/codelists.md#documenttype)."
 
-#: ../../docs/guidance/example.md:161
+#: ../../docs/guidance/example.md:139
+msgid "Forecasts and metrics"
+msgstr "Pronósticos y métricas"
+
+#: ../../docs/guidance/example.md:141
+msgid ""
+"Publish structured data on planned and actual physical and financial "
+"progress using `Metric` objects in the `forecasts` (planned progress) and "
+"`metrics` (actual progress) arrays. Refer to the [implementation progress "
+"reports documentation](../cost/index.md#implementation-progress-reports) for"
+" further detail."
+msgstr ""
+"Publicar datos estructurados sobre el progreso físico y financiero "
+"planificado y real utilizando objetos `Metric` en las listas `forecasts` "
+"(Progreso Planeado) y `metrics` (Progreso real). Consultar a [implementation"
+" progress reports documentation](../cost/index.md#implementation-progress-"
+"reports) para mayores detalles."
+
+#: ../../docs/guidance/example.md:143
+msgid ""
+"In the example below, you can compare the planned `forecasts/observations` "
+"for 75% of physical progress completed with the actual "
+"`metrics/observations` for 75% of physical progress completed (note the "
+"difference in `period`)."
+msgstr ""
+"En el siguiente ejemplo, puede comparar los `forecasts/observations` "
+"planificados para el 75% del progreso físico completado con las "
+"`metrics/observations` reales para el 75% del progreso físico completado "
+"(observe la diferencia en el `period`)."
+
+#: ../../docs/guidance/example.md:157
 msgid "Contracting processes"
 msgstr "Procesos de contratación"
 
-#: ../../docs/guidance/example.md:163
+#: ../../docs/guidance/example.md:159
 msgid ""
 "The `contractingProcesses` array is used to provide information about each "
 "contracting process associated with the project, including summary "
-"information, a list of modifications and a list of OCDS releases."
+"information, a list of `modifications` and a list of OCDS `releases`."
 msgstr ""
 "La lista `contractingProcesses` se usa para proveer información sobre cada "
 "proceso de contratación asociado con el proyecto, incluyendo información de "
-"resumen, una lista de modificaciones y una lista de \"releases\" OCDS."
+"resumen, una lista de  `modifications`  y una lista de `releases` OCDS."
 
-#: ../../docs/guidance/example.md:165
+#: ../../docs/guidance/example.md:161
 msgid ""
 "In the contractingProcess example below, information is given about a "
 "contracting process for the design of the motorway upgrade, with one related"
@@ -408,11 +449,11 @@ msgstr ""
 "aviso de licitación) y dos releases OCDS relacionados (uno para la "
 "licitación y otro para la adjudicación del contrato)."
 
-#: ../../docs/guidance/example.md:176
+#: ../../docs/guidance/example.md:169
 msgid "Modifications"
 msgstr "Modificaciones"
 
-#: ../../docs/guidance/example.md:178
+#: ../../docs/guidance/example.md:171
 msgid ""
 "Each contracting process includes a `modifications` array which is used to "
 "list any changes to the duration, price, scope or other significant aspect "
@@ -422,7 +463,7 @@ msgstr ""
 "(modificaciones) que es usada para detallar los cambios a la duración, "
 "precio, alcance u otro aspecto significativo del proceso de contratación."
 
-#: ../../docs/guidance/example.md:180
+#: ../../docs/guidance/example.md:173
 msgid ""
 "In the modification example below, a change in duration is shown, using the "
 "`oldContractPeriod` and `newContractPeriod` fields."
@@ -430,11 +471,11 @@ msgstr ""
 "En el ejemplo de modificación de abajo, se muestra un cambio en la duración,"
 " usando los campos `oldContractPeriod` y `newContractPeriod`."
 
-#: ../../docs/guidance/example.md:191
+#: ../../docs/guidance/example.md:181
 msgid "Completion"
 msgstr "Finalización"
 
-#: ../../docs/guidance/example.md:193
+#: ../../docs/guidance/example.md:183
 msgid ""
 "The `completion` section provides final details of the scope, duration and "
 "cost for the project."
@@ -442,7 +483,7 @@ msgstr ""
 "La sección `completion` (finalización) provee los detalles finales del "
 "alcance, duración y costo para el proyecto."
 
-#: ../../docs/guidance/example.md:195
+#: ../../docs/guidance/example.md:185
 msgid ""
 "Since in this example there were variations to related contracting "
 "processes, the `finalValue` of the project exceeds its original planned "

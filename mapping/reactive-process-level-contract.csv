@@ -1,0 +1,17 @@
+CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS
+Contract agreement and conditions,"A copy of the signed contract. Consider providing both machine-readable (e.g. original PDF, Word or Open Document format files), and a separate document entry for scanned-signed pages where this is required.",[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'contractSigned'.,*Check the `/contracts/documents` array for `Document` objects with `.documentType` set to ‘contractSigned’ and copy each object to the `.summary.documents` array.*
+Registration and ownership of firms,A document issued by the relevant government registry as confirmation of the due incorporation and valid existence of the organization.,"**Document:**
+
+[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'incorporationCertificate'.
+
+**Data:**
+
+Add an `Organization` object to the `parties` array and:
+
+* Set its `.role` to 'supplier'
+* Set its `.identifier.id` to the registration number
+* Set its `.identifier.scheme` to the code from [org-id.guide](http://org-id.guide/) for the register the identifier is drawn from
+* Set its `.id`","*Check the `/contracts/documents` array for `Document` objects with `/type` set to ‘incorporationCertificate’ and copy each object to the `.summary.documents` array.*
+
+Check the `/parties` array for `Organization` objects with 'supplier' in `/roles`. For each such object, copy it to the `parties` array in OC4IDS, add an `OrganizationReference` object to `.summary.suppliers` and set the `OrganizationReference`'s `.name` and `.id` to the `Organization`'s `.name` and `.id`."
+Specifications and drawings,Detailed technical information about goods or services to be provided.,[Add a contracting process document](#add-a-contracting-process-document) and set `.documentType` to 'technicalSpecifications'.,*Check the `/contracts/documents` array for `Document` objects with `/type` set to ‘technicalSpecifications’ and copy each object to the `.summary.documents` array.*

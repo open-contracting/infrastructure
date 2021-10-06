@@ -1,24 +1,29 @@
 # Translations template for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
+# Copyright (C) 2021 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 # 
 # Translators:
-# James McKinney, 2020
+# James McKinney, 2021
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Juan Pane <juanpane@idatosabiertos.org>, 2021
+# Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-24 22:01-0400\n"
+"POT-Creation-Date: 2021-09-14 21:10-0400\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: James McKinney, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.9.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
@@ -48,9 +53,9 @@ msgid ""
 "Recommended practice is to use a dereferenceable URI, where a persistent "
 "copy of this package is available."
 msgstr ""
-"La URI de este paquete, que lo identifica como único en el mundo. Una "
-"práctica recomendada es usar una URI diferenciable donde esté disponible una"
-" copia constante de este paquete."
+"El URI de este paquete, que lo identifica como único en el mundo. Una "
+"práctica recomendada es usar un URI de referencia, donde esté disponible una"
+" copia persistente de este paquete."
 
 #. /properties/publishedDate/title
 #: schema/project-level/project-package-schema.json:1
@@ -64,7 +69,7 @@ msgid ""
 "demand', this date should reflect the date of the last change to the "
 "underlying contents of the package."
 msgstr ""
-"La fecha en que se publicó este paquete. Si se generó 'bajo demanda', esta "
+"La fecha en que se publicó este paquete. Si se generó 'on demand', esta "
 "fecha debe de reflejar la fecha del último cambio y los contenidos "
 "subyacentes del paquete."
 
@@ -90,7 +95,8 @@ msgstr "Proyectos"
 #. /properties/projects/description
 #: schema/project-level/project-package-schema.json:1
 msgid "A list of projects included in this package, in OC4IDS format."
-msgstr "Una lista de proyectos incluidos en este paquete, en formato OC4IDS."
+msgstr ""
+"Una lista de los proyectos incluidos en este paquete, en formato OC4IDS."
 
 #. /properties/publisher/title
 #: schema/project-level/project-package-schema.json:1
@@ -105,6 +111,7 @@ msgstr ""
 
 #. /properties/publisher/properties/name/title
 #. /definitions/ContactPoint/properties/name/title
+#. /definitions/Person/properties/name/title
 #: schema/project-level/project-package-schema.json:1
 #: schema/project-level/project-schema.json:1
 msgid "Name"
@@ -123,6 +130,7 @@ msgstr ""
 #. /definitions/Classification/properties/scheme/title
 #. /definitions/Identifier/properties/scheme/title
 #. /definitions/RelatedProject/properties/scheme/title
+#. /definitions/Observation/properties/unit/properties/scheme/title
 #: schema/project-level/project-package-schema.json:1
 #: schema/project-level/project-schema.json:1
 msgid "Scheme"
@@ -145,13 +153,13 @@ msgstr "uid"
 #. /properties/publisher/properties/uid/description
 #: schema/project-level/project-package-schema.json:1
 msgid "The unique ID for this entity under the given ID scheme."
-msgstr ""
-"El ID único para esta entidad bajo el esquema de identificadores "
-"proporcionado."
+msgstr "El ID único para esta entidad en el esquema de identificadores dado."
 
 #. /properties/publisher/properties/uri/title
+#. /definitions/Classification/properties/uri/title
 #. /definitions/Location/properties/uri/title
 #. /definitions/Identifier/properties/uri/title
+#. /definitions/Observation/properties/unit/properties/uri/title
 #: schema/project-level/project-package-schema.json:1
 #: schema/project-level/project-schema.json:1
 msgid "URI"
@@ -219,7 +227,7 @@ msgid ""
 "of a single procuring entity and budget authority: for example, a highway "
 "overpass or a university campus."
 msgstr ""
-"El Esquema del Contrataciones Abiertas para el Estándar de Datos sobre "
+"El esquema de Contrataciones Abiertas para el Estándar de Datos sobre "
 "Infraestructura (OC4IDs, por sus siglas en inglés) establece una estructura "
 "de datos para capturar e intercambiar información sobre proyectos de "
 "infraestructura, en línea con los requerimientos de publicación del "
@@ -228,7 +236,7 @@ msgstr ""
 "de OC4IDS, el término 'proyecto' se refiere al desarrollo de una serie de "
 "activos de infraestructura en una localización específica, generalmente bajo"
 " la responsabilidad de una sola entidad contratante y  autoridad "
-"presupuestaria: por ejemplo, un puente de autopista o un campus para una "
+"presupuestaria: por ejemplo, un paso a desnivel o un campus para una "
 "universidad."
 
 #. /properties/id/title
@@ -244,14 +252,14 @@ msgid ""
 "more information, see the [project identifier guidance](https://standard"
 ".open-"
 "contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers"
-"/#globally-unique-project-identifiers)."
+"/#project-identifier-prefixes)."
 msgstr ""
 "Un identificador único o número de referencia para este proyecto de "
 "infraestructura, compuesto de un prefijo de identificador de proyecto y un "
-"identificador local de proyecto. Para más información vea la  [guía de "
+"identificador local de proyecto. Para más información, vea la [guía de "
 "identificadores de proyecto](https://standard.open-"
 "contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers"
-"/#globally-unique-project-identifiers)."
+"/#project-identifier-prefixes)."
 
 #. /properties/updated/title
 #: schema/project-level/project-schema.json:1
@@ -330,7 +338,7 @@ msgid ""
 " can be compared with the actual completion date in `completion.endDate`"
 msgstr ""
 "El periodo sobre el cual se planea que este proyecto correrá. Este puede ser"
-" actualizado durante la fase de preparación a medida que la información está"
+" actualizado durante la fase de preparación a medida que la información esté"
 " disponible para especificar con más precisión las fechas de inicio y "
 "finalización anticipadas, pero no debería ser actualizado durante las fases "
 "de implementación y finalización. La fecha planificada de finalización "
@@ -356,7 +364,7 @@ msgstr ""
 ".open-"
 "contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectsector)"
 " representando el sector o sectores que se relacionan con este proyecto. Se "
-"puede proveer información de sector más desglosada usando el patrón "
+"puede proveer información más desglosada de sector usando el patrón "
 "[sector].[subsector]. Cuando los códigos de subsector son usados el código "
 "padre debería ser incluido también, por ejemplo `['transport', "
 "'transport.air']`"
@@ -457,7 +465,7 @@ msgstr ""
 "Información sobre la ubicación en la cual el proyecto toma lugar. Pueden "
 "proveerse una o más ubicaciones, y la ubicación puede describirse de "
 "diferentes maneras, tales como un punto que describe la localización central"
-" de construcción y una entrada en un diccionario geográfico para describir "
+" de construcción, y una entrada en un diccionario geográfico para describir "
 "la región en la cual el proyecto toma lugar."
 
 #. /properties/budget/title
@@ -531,7 +539,7 @@ msgstr ""
 #. /properties/budget/properties/budgetBreakdown/title
 #: schema/project-level/project-schema.json:1
 msgid "Budget breakdown"
-msgstr "Desglose de presupuesto"
+msgstr "Desglose del presupuesto"
 
 #. /properties/budget/properties/budgetBreakdown/description
 #: schema/project-level/project-schema.json:1
@@ -540,6 +548,20 @@ msgid ""
 msgstr ""
 "Un desglose detallado del presupuesto por periodo y/o financiadores "
 "participantes."
+
+#. /properties/forecasts/title
+#: schema/project-level/project-schema.json:1
+msgid "Forecasts"
+msgstr "Pronósticos"
+
+#. /properties/forecasts/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Forecast metrics for this project, such as planned physical or financial "
+"progress over time."
+msgstr ""
+"Métricas de predicción para este proyecto, como el progreso físico o "
+"financiero planificado a lo largo del tiempo."
 
 #. /properties/parties/title
 #: schema/project-level/project-schema.json:1
@@ -618,14 +640,28 @@ msgstr ""
 "\n"
 "(b) la última información resumida acerca de ellos;\n"
 "\n"
-"(c) un historial de cambios con explicaciones sobre cualquier modificación significativa a duraciones de contrato, precio o alcance.\n"
+"(c) un historial de cambios con explicaciones sobre cualquier modificación significativa a duraciones del contrato, precio o alcance.\n"
 "\n"
 "Cuando se publican datos OCDS sobre cada proceso de contratación, se debería proveer un enlace a cada entrega disponible de datos OCDS (por ejemplo, a cada aviso o aviso actualizado), y estos datos OCDS podrían ser usados para poblar la información resumida de manera automática."
+
+#. /properties/metrics/title
+#: schema/project-level/project-schema.json:1
+msgid "Metrics"
+msgstr "Métricas"
+
+#. /properties/metrics/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Actual metrics for this project, such as the actual physical or financial "
+"progress over time."
+msgstr ""
+"Métricas reales para este proyecto, como el progreso físico o financiero "
+"real a lo largo del tiempo."
 
 #. /properties/completion/title
 #: schema/project-level/project-schema.json:1
 msgid "Completion"
-msgstr "Terminación o finalización"
+msgstr "Finalización"
 
 #. /properties/completion/description
 #: schema/project-level/project-schema.json:1
@@ -636,9 +672,9 @@ msgid ""
 "should be detailed."
 msgstr ""
 "Esta información se provee a la finalización del proyecto, y refleja los "
-"tiempos y valores finales relacionados al mismo. La razón para cualquier "
-"variación (que no haya sido explicada aún) entre el alcance, periodo y valor"
-" anticipados debería ser detallada."
+"tiempos y valores finales relacionados al mismo. Debe detallarse la razón de"
+" cualquier variación (que no haya sido explicada aún) entre el alcance, el "
+"periodo y el valor previstos del proyecto."
 
 #. /properties/completion/properties/endDate/title
 #. /definitions/Period/properties/endDate/title
@@ -681,7 +717,7 @@ msgstr "Valor final"
 msgid ""
 "The total cost of this project at completion (compare with project budget)."
 msgstr ""
-"El costo total del proyecto a la terminación (comparado con el presupuesto "
+"El costo total del proyecto a la finalización (comparado con el presupuesto "
 "del proyecto)."
 
 #. /properties/completion/properties/finalValueDetails/title
@@ -726,8 +762,8 @@ msgid ""
 "describe and differences between the planned and completed scope of work."
 msgstr ""
 "Una razón, explicación o justificación para cualquier variación entre el "
-"alcance anticipado (comparado con el documento de projectScope) y el alcance"
-" final a la terminación. Si es apropiado, se pueden incluir detalles "
+"alcance previsto (comparado con el documento de projectScope) y el alcance "
+"final a la terminación. Si es apropiado, se pueden incluir detalles "
 "adicionales en la sección de documentos, con un título indicando que estos "
 "documentos describirán diferencias entre el alcance planeado y el alcance "
 "completo del trabajo."
@@ -745,8 +781,8 @@ msgid ""
 "generated through linked OCDS releases."
 msgstr ""
 "Dentro de OC4IDS, un proceso de contratación provee información resumida y "
-"un log de campos en el tiempo, ya sea elaborados manualmente o generados "
-"automáticamente a través de entregas OCDS enlazadas."
+"un historial de cambios en el tiempo, ya sea elaborados manualmente o "
+"generados automáticamente a través de entregas OCDS enlazadas."
 
 #. /definitions/ContractingProcess/properties/id/title
 #. /definitions/Modification/properties/id/title
@@ -754,6 +790,9 @@ msgstr ""
 #. /definitions/BudgetBreakdown/properties/id/title
 #. /definitions/Identifier/title
 #. /definitions/RelatedProject/properties/identifier/title
+#. /definitions/Metric/properties/id/title
+#. /definitions/Observation/properties/id/title
+#. /definitions/Person/properties/id/title
 #: schema/project-level/project-schema.json:1
 msgid "Identifier"
 msgstr "Identificador"
@@ -810,7 +849,7 @@ msgid ""
 msgstr ""
 "La información conocida sobre un proceso de contratación cambia con el tiempo, a medida que nueva información está disponible y a medida que se realizan cambios (como las enmiendas al alcance y valor). En el OCDS, cada nueva actualización de información se conoce como un 'release'.\n"
 "\n"
-"Esta sección provee espacio para registrar un enlace a cada release disponible."
+"Esta sección provee espacio para registrar un enlace a cada entrega (release) disponible."
 
 #. /definitions/ContractingProcessSummary/description
 #: schema/project-level/project-schema.json:1
@@ -825,7 +864,7 @@ msgstr ""
 "\n"
 "La información resumida puede ser ingresada manualmente, y la lista de modificaciones (`modifications`) puede usarse para registrar manualmente un historial de cambios, con la fecha y los detalles de cada modificación.\n"
 "\n"
-"Cuando hay datos OCDS disponibles, la mayoría de los campos de resumen pueden derivarse de releases OCDS, aunque el método exacto para derivar los datos puede variar entre implementaciones; y las modificaciones pueden ser identificadas comparando un release nuevo con releases previos para  buscar cambios relevantes, y registrando los identificadores de release en `modifications`."
+"Cuando hay datos OCDS disponibles, la mayoría de los campos de resumen pueden derivarse de releases OCDS, aunque el método exacto para derivar los datos puede variar entre implementaciones; y las modificaciones pueden ser identificadas comparando una entrega nueva o con entregas previas para  buscar cambios relevantes, y registrando los identificadores de entregas en `modifications`."
 
 #. /definitions/ContractingProcessSummary/properties/ocid/title
 #: schema/project-level/project-schema.json:1
@@ -856,7 +895,7 @@ msgid ""
 "it may be recorded here."
 msgstr ""
 "Si este proceso de contratación está identificado por algún número de "
-"referencia externa, puede ser registrado aquí."
+"referencia externo, puede ser registrado aquí."
 
 #. /definitions/ContractingProcessSummary/properties/nature/title
 #: schema/project-level/project-schema.json:1
@@ -881,6 +920,7 @@ msgstr ""
 
 #. /definitions/ContractingProcessSummary/properties/title/title
 #. /definitions/Document/properties/title/title
+#. /definitions/Metric/properties/title/title
 #: schema/project-level/project-schema.json:1
 msgid "Title"
 msgstr "Título"
@@ -891,8 +931,8 @@ msgid ""
 "The formal name of this contracting process. Once set, this should not "
 "normally by changed."
 msgstr ""
-"El nombre formal de este proceso de contratación. Una vez establecido, esto"
-"  normalmente no debería ser cambiado."
+"El nombre formal de este proceso de contratación. Una vez establecido, esto "
+"normalmente no debería ser cambiado."
 
 #. /definitions/ContractingProcessSummary/properties/description/title
 #. /definitions/Modification/properties/description/title
@@ -900,6 +940,7 @@ msgstr ""
 #. /definitions/Location/properties/description/title
 #. /definitions/BudgetBreakdown/properties/description/title
 #. /definitions/Document/properties/description/title
+#. /definitions/Metric/properties/description/title
 #: schema/project-level/project-schema.json:1
 msgid "Description"
 msgstr "Descripción"
@@ -927,7 +968,7 @@ msgstr ""
 #. /definitions/ContractingProcessSummary/properties/tender/title
 #: schema/project-level/project-schema.json:1
 msgid "Tender"
-msgstr "Licitación o concurso"
+msgstr "Licitación"
 
 #. /definitions/ContractingProcessSummary/properties/tender/description
 #: schema/project-level/project-schema.json:1
@@ -937,7 +978,7 @@ msgstr "Las actividades llevadas a cabo para celebrar un contrato."
 #. /definitions/ContractingProcessSummary/properties/tender/properties/procurementMethod/title
 #: schema/project-level/project-schema.json:1
 msgid "Procurement method"
-msgstr "Método de adquisición"
+msgstr "Método de contratación"
 
 #. /definitions/ContractingProcessSummary/properties/tender/properties/procurementMethod/description
 #: schema/project-level/project-schema.json:1
@@ -947,7 +988,7 @@ msgid ""
 "direct)."
 msgstr ""
 "Especifica el método de licitación usando la [lista de códigos de "
-"método](https://standard.open-"
+"method](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#method) (open, selective, limited, "
 "direct)."
 
@@ -990,7 +1031,7 @@ msgstr "Número de licitantes"
 msgid ""
 "The number of parties who placed a bid during this contracting process."
 msgstr ""
-"El número de partes que presenta una oferta dutante este proceso de "
+"El número de partes que presenta una oferta durante este proceso de "
 "contratación."
 
 #. /definitions/ContractingProcessSummary/properties/tender/properties/tenderers/title
@@ -1007,12 +1048,12 @@ msgid ""
 msgstr ""
 "Todas las partes que presentan una oferta en una licitación. Se puede "
 "proveer información más detallada sobre ofertas y la organización licitante "
-"usando la extensión de Ofertas en un release OCDS enlazado."
+"usando la extensión de Ofertas en una entrega OCDS relacionada."
 
 #. /definitions/ContractingProcessSummary/properties/tender/properties/procuringEntity/title
 #: schema/project-level/project-schema.json:1
 msgid "Procuring entity"
-msgstr "Entidad de adquisiciones "
+msgstr "Entidad contratante"
 
 #. /definitions/ContractingProcessSummary/properties/tender/properties/procuringEntity/description
 #: schema/project-level/project-schema.json:1
@@ -1115,8 +1156,8 @@ msgstr ""
 "Se puede proveer documentación adicional acerca de este proceso de "
 "contratación aquí, incluyendo reportes y evaluaciones producidas durante un "
 "proceso de monitoreo, o enlaces a páginas web donde se puede encontrar más "
-"información sobre este proceso. Cuando hay releases OCDS publicados, más "
-"documentos pueden ser encontrados mirando los releases publicados."
+"información sobre este proceso. Cuando hay entregas OCDS publicadas, más "
+"documentos pueden ser encontrados mirando las entregas publicadas."
 
 #. /definitions/ContractingProcessSummary/properties/modifications/title
 #: schema/project-level/project-schema.json:1
@@ -1133,6 +1174,17 @@ msgstr ""
 "características significativas del procesos de contratación deberían ser "
 "registrados aquí."
 
+#. /definitions/ContractingProcessSummary/properties/transactions/title
+#: schema/project-level/project-schema.json:1
+msgid "Transactions"
+msgstr "Transacciones"
+
+#. /definitions/ContractingProcessSummary/properties/transactions/description
+#: schema/project-level/project-schema.json:1
+msgid "The spending transactions made against this contracting process."
+msgstr ""
+"Las transacciones de gastos realizadas en este proceso de contratación."
+
 #. /definitions/LinkedRelease/title
 #: schema/project-level/project-schema.json:1
 msgid "Release"
@@ -1145,12 +1197,14 @@ msgid ""
 "particular point in time."
 msgstr ""
 "Una entrega de datos (release) representa la información conocida o "
-"actualizada en un punto particular en el tiempo."
+"actualizada en un momento particular en el tiempo."
 
 #. /definitions/LinkedRelease/properties/id/title
 #. /definitions/Classification/properties/id/title
 #. /definitions/Document/properties/id/title
 #. /definitions/Identifier/properties/id/title
+#. /definitions/Observation/properties/unit/properties/id/title
+#. /definitions/Transaction/properties/id/title
 #: schema/project-level/project-schema.json:1
 msgid "ID"
 msgstr "ID"
@@ -1186,6 +1240,7 @@ msgstr ""
 
 #. /definitions/LinkedRelease/properties/date/title
 #. /definitions/Modification/properties/date/title
+#. /definitions/Transaction/properties/date/title
 #: schema/project-level/project-schema.json:1
 msgid "Date"
 msgstr "Fecha"
@@ -1212,7 +1267,7 @@ msgid ""
 "A URL (web link) to a release package containing the OCDS release, if "
 "available."
 msgstr ""
-"Una URL (enlace Web) a un paquete de releases que contiene el release OCDS, "
+"Una URL (enlace Web) a un paquete de entregas que contiene la entrega OCDS, "
 "si está disponible."
 
 #. /definitions/Modification/title
@@ -1332,7 +1387,7 @@ msgid ""
 "Contract period before the modification, taking into account any prior "
 "modifications."
 msgstr ""
-"Período del contrato antes de la modificación, teniendo en cuenta todas las "
+"Periodo del contrato antes de la modificación, teniendo en cuenta las "
 "modificaciones anteriores."
 
 #. /definitions/Modification/properties/newContractPeriod/title
@@ -1346,9 +1401,10 @@ msgid "Contract period after the modification."
 msgstr "Período del contrato después de la modificación."
 
 #. /definitions/Period/title
+#. /definitions/Observation/properties/period/title
 #: schema/project-level/project-schema.json:1
 msgid "Period"
-msgstr "Período"
+msgstr "Periodo"
 
 #. /definitions/Period/description
 #: schema/project-level/project-schema.json:1
@@ -1358,10 +1414,10 @@ msgid ""
 "extend to). In some cases, not all of these fields will have known or "
 "relevant values."
 msgstr ""
-"Los eventos clave durante un proyecto o proceso de contratación pueden tener"
-" una fecha de inicio o fin, duración o extensión máxima (la fecha más tardía"
-" a la cual se puede extender el periodo) conocidas. En algunos casos, no "
-"todos estos campos tendrán valores conocidos o relevantes."
+"Los eventos claves durante un proyecto o proceso de contratación pueden "
+"tener una fecha de inicio o fin, duración o extensión máxima (la fecha más "
+"tardía a la cual se puede extender el periodo) conocidas. En algunos casos, "
+"no todos estos campos tendrán valores conocidos o relevantes."
 
 #. /definitions/Period/properties/startDate/title
 #: schema/project-level/project-schema.json:1
@@ -1374,8 +1430,8 @@ msgid ""
 "The start date for the period. When known, a precise start date must be "
 "provided."
 msgstr ""
-"La fecha de inicio para el periodo. Cuando se conoce, una fecha precisa de "
-"inicio debe ser proveída."
+"La fecha de inicio del período. Cuando se sabe, se debe dar una fecha de "
+"inicio precisa."
 
 #. /definitions/Period/properties/endDate/description
 #: schema/project-level/project-schema.json:1
@@ -1383,8 +1439,8 @@ msgid ""
 "The end date for the period. When known, a precise end date must be "
 "provided."
 msgstr ""
-"La fecha de finalización para el periodo. Cuando se conoce, una fecha de "
-"finalización precisa debe ser proveída."
+"La fecha de conclusión del período. Cuando se sabe, se debe dar una fecha de"
+" conclusión precisa."
 
 #. /definitions/Period/properties/maxExtentDate/description
 #: schema/project-level/project-schema.json:1
@@ -1392,9 +1448,9 @@ msgid ""
 "The period cannot be extended beyond this date. This field can be used to "
 "express the maximum available date for extension or renewal of this period."
 msgstr ""
-"El periodo no se puede extender más allá de esta fecha. Este campo puede "
-"usarse para expresar la fecha máxima disponible para la extensión o "
-"renovación de este periodo."
+"El período no puede extenderse después de esta fecha. Este campo debe usarse"
+" para expresar la fecha máxima disponible para la extensión o renovación de "
+"este período."
 
 #. /definitions/Period/properties/maxExtentDate/title
 #: schema/project-level/project-schema.json:1
@@ -1412,15 +1468,14 @@ msgid ""
 "if a startDate and maxExtentDate are set, this field, if used, should be "
 "equal to the difference between startDate and maxExtentDate."
 msgstr ""
-"La duración máxima de este periodo en días. Una interfaz de usuario puede "
-"recolectar o desplegar esta información en meses o años según sea apropiado,"
-" y luego convertirlo en días al almacenar este campo. Este campo puede ser "
-"usado cuando no se conocen las fechas exactas. Si una fecha de inicio "
-"(startDate) y una fecha de finalización (endDate) están establecidas, este "
-"campo, si es usado, debería ser igual a la diferencia entre startDate y "
-"endDate. De otra manera, si una fecha de inicio y una fecha máxima de "
-"extensión (maxExtentDate) están establecidas, este campo, si es usado, debe "
-"ser igual a la diferencia entre startDate y maxExtentDate."
+"El nivel máximo de duración de este período en días. Una interfaz de usuario"
+" puede recolectar o mostrar estos datos en meses o años (como sea "
+"apropiado), y luego convertirlo a días cuando se guarda este campo. Este "
+"campo puede usarse cuando no se sabe las fechas exactas. Si ya se fijaron "
+"los startDate y endDate, este campo, si se utiliza, debe de ser igual a la "
+"diferencia entre startDate y endDate. De otra manera, si se fija startDate y"
+" maxExtentDate, este campo, si se utiliza, debe ser igual a la diferencia "
+"entre startDate y maxExtentDate."
 
 #. /definitions/Period/properties/durationInDays/title
 #: schema/project-level/project-schema.json:1
@@ -1440,11 +1495,11 @@ msgid ""
 "category from that list being applied. It is useful to also publish a text "
 "label and/or URI that users can draw on to interpret the classification."
 msgstr ""
-"Una clasificación consiste en al menos dos partes: un identificador para la "
-"lista (esquema o *scheme*) de la cual se toma la clasificación, y un "
-"identificador para la categoría de esa lista que se está aplicando. Es útil "
-"también publicar una etiqueta y/o URI que los usuadios puedan usar para "
-"interpretar la clasificación."
+"Una clasificación consiste de al menos dos partes: un identificador para la "
+"lista (esquema) del cual se obtiene la clasificación, y un identificador "
+"para la categoría de la lista que se está aplicando. Es útil también "
+"publicar una etiqueta de texto y/o una URI de la cual os usuarios pueden "
+"basarse para interpretar la clasificación."
 
 #. /definitions/Classification/properties/scheme/description
 #: schema/project-level/project-schema.json:1
@@ -1455,17 +1510,22 @@ msgstr ""
 #. /definitions/Classification/properties/id/description
 #: schema/project-level/project-schema.json:1
 msgid "The classification code taken from the scheme."
-msgstr "El código de clasificación tomado del esquema."
+msgstr "El código de clasificación que se obtiene del esquema."
 
 #. /definitions/Classification/properties/description/description
 #: schema/project-level/project-schema.json:1
 msgid "A textual description or title for the classification code."
-msgstr "Una descripción textual o título para el código de clasificación."
+msgstr "Una descripción textual o título del código de clasificación."
+
+#. /definitions/Classification/properties/uri/description
+#: schema/project-level/project-schema.json:1
+msgid "A URI to uniquely identify the classification code."
+msgstr "Una URI para identificar únicamente el código de clasificación."
 
 #. /definitions/Location/title
 #: schema/project-level/project-schema.json:1
 msgid "Delivery Location"
-msgstr "Ubicación de entrega"
+msgstr "Ubicación de Entrega"
 
 #. /definitions/Location/description
 #: schema/project-level/project-schema.json:1
@@ -1475,10 +1535,10 @@ msgid ""
 "location, line or polygon), a gazetteer entry, an address, or a combination "
 "of these."
 msgstr ""
-"La ubicación en la cual la actividad relacionada a este proyecto tomará "
-"lugar. Una ubicación puede describirse usando geometría (punto de "
-"localización, línea o polígono), una entrada en un diccionario geográfico, "
-"una dirección, o una combinación de las anteriores."
+"La ubicación en la cual se entregará la actividad relacionada a este "
+"proyecto, o en la que tendrá lugar Una ubicación puede describirse usando "
+"geometría (punto de localización, línea o polígono), una entrada en un "
+"diccionario geográfico, una dirección, o una combinación de las anteriores."
 
 #. /definitions/Location/properties/id/description
 #: schema/project-level/project-schema.json:1
@@ -1493,13 +1553,12 @@ msgstr ""
 #: schema/project-level/project-schema.json:1
 msgid ""
 "A name or description of this location. This might include the name(s) of "
-"the location(s), or might provide a human readable description of the "
-"location to be covered. This description may be used in a user-interface."
+"the location(s), or might provide a human-readable description of the "
+"location to be covered."
 msgstr ""
-"Un nombre o descripción de esta ubicación. Esto puede incluir el nombre (o "
-"nombres) de la ubicación, o puede proveer una descripción legible por "
-"humanos de la ubicación que está siendo cubierta. Esta descripción puede ser"
-" usada en una interfaz de usuario."
+"Un nombre o descripción para esta ubicación. Esto puede incluir el(los) "
+"nombre(s) de la ubicación (o ubicaciones), o puede incluir una descripción "
+"legible de la ubicación a ser cubierta."
 
 #. /definitions/Location/properties/geometry/title
 #: schema/project-level/project-schema.json:1
@@ -1510,38 +1569,36 @@ msgstr "Geometría"
 #: schema/project-level/project-schema.json:1
 msgid ""
 "We follow the [GeoJSON standard](http://geojson.org/) to express basic "
-"location information, using longitude, latitude, and (optionally) elevation "
+"location information, using longitude, latitude, and optional elevation "
 "values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) "
 "(EPSG:4326) projection. A point location can be identified by geocoding a "
 "delivery address. For concession licenses, or other contracts covering a "
 "polygon location which is not contained in a known gazetteer, polygon and "
 "multi-polygon can be used."
 msgstr ""
-"Seguimos el [estándar GeoJSON](http://geojson.org/) para expresar "
-"información básica de localización, usando valores de longitud, latitud y "
-"(opcionalmente) elevación en la proyección "
-"[WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326). Un"
-" punto de localización puede ser identificado geocodificando una dirección "
-"de entrega. Para licencias de concesión, u otros contratos que cubren una "
-"localización en polígono que no está contenida en un diccionario geográfico "
-"conocido, polígonos y multi-polígonos pueden ser usados."
+"Seguimos el [estándar GeoJSON] (http://geojson.org/) para expresar "
+"información básica de ubicación, usando los valores de longitud, latitud y "
+"opcionalmente elevación en la proyección [WGS84] "
+"(https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG: 4326). Un punto"
+" de ubicación se puede identificar geocodificando una dirección de entrega. "
+"Para licencias de concesión, u otros contratos que cubran una ubicación en "
+"polígono que no esté contenida en un diccionario geográfico conocido, se "
+"pueden usar polígonos y polígonos múltiples."
 
 #. /definitions/Location/properties/geometry/properties/type/description
 #: schema/project-level/project-schema.json:1
 msgid ""
 "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html"
 "#geometry-objects) being provided. To provide longitude, latitude, and "
-"(optionally) elevation, use 'Point', and enter an array of [longitude, "
-"latitude] or [longitude, latitude, elevation] as the value of the "
-"coordinates field: e.g. [-122.085, 37.42]. Note the capitalization of type "
-"values, in order to maintain compatibility with GeoJSON."
+"optional elevation, use 'Point', and enter an array of [longitude, latitude]"
+" or [longitude, latitude, elevation] as the value of the coordinates field: "
+"e.g. [-122.085, 37.42]."
 msgstr ""
-"El tipo de [Objeto Geométrico GeoJSON](http://geojson.org/geojson-spec.html"
-"#geometry-objects) siendo proveído. Para proveer longitud, latitud, y "
-"(opcionalmente) elevación, use el tipo 'Point', e ingrese un array de "
-"[longitud, latitud] o [longitud, latitud, elevación] como el valor del campo"
-" coordinates: ej. [-122.085, 37.42]. Note la capitalización de los valores "
-"de tipo, con el fin de mantener la compatibilidad con GeoJSON."
+"El tipo de [Objeto Geométrico GeoJSON] (http://geojson.org/geojson-spec.html"
+"#geometry-objects) que se proporciona. Para proporcionar longitud, latitud y"
+" opcionalmente elevación, use 'Point', e ingrese una lista de [longitud, "
+"latitud] o [longitud, latitud, elevación] como el valor del campo de "
+"coordenadas: por ejemplo, [-122.085, 37.42]."
 
 #. /definitions/Location/properties/geometry/properties/coordinates/title
 #: schema/project-level/project-schema.json:1
@@ -1553,29 +1610,27 @@ msgstr "Coordenadas"
 msgid ""
 "The relevant array of points, e.g. [longitude, latitude] or [longitude, "
 "latitude, elevation], or a nested array of points, for the GeoJSON geometry "
-"being described. The longitude and latitude MUST be expressed in decimal "
+"being described. The longitude and latitude must be expressed in decimal "
 "degrees in the WGS84 (EPSG:4326) projection."
 msgstr ""
-"La lista relevante de puntos, ej. [latitud, longitud] o [latitud, longitud, "
-"elevación], o una lista anidada de puntos, para la geometría GeoJSON siendo "
-"descrita. La longitud y latitud DEBEN ser expresadas en grados decimales en "
-"la proyección WGS84 (EPSG:4326)."
+"La lista de puntos, ej. [longitud, latitud] o [longitud, latitud, "
+"elevación], o una lista anidada de puntos, para el objeto geométrico GeoJSON"
+" que está siendo descrito. La longitud y latitud deben ser expresadas en "
+"grados decimales en la proyección WGS84 (EPSG:4326)."
 
 #. /definitions/Location/properties/gazetteer/title
 #: schema/project-level/project-schema.json:1
 msgid "Gazetteer"
-msgstr "Diccionario geográfico"
+msgstr "Diccionario Geográfico"
 
 #. /definitions/Location/properties/gazetteer/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"A gazetteer is a geographical index or directory. The specific gazetteer "
-"used should be specified in scheme, and one or more codes from that "
-"gazetteer used in identifier."
+"Identifiers from a gazetteer (a geographical index or directory) for the "
+"location."
 msgstr ""
-"Un diccionario geográfico es un índice o directorio geográfico. El "
-"diccionario específico usado debería ser especificado en 'scheme', y debería"
-" usarse uno o más códigos de ese diccionario en 'identifiers'."
+"Identificadores de un diccionario geográfico (un índice o directorio "
+"geográfico) para la ubicación. "
 
 #. /definitions/Location/properties/gazetteer/properties/scheme/title
 #: schema/project-level/project-schema.json:1
@@ -1585,14 +1640,14 @@ msgstr "Esquema de diccionario geográfico"
 #. /definitions/Location/properties/gazetteer/properties/scheme/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"The entry of the selected gazetteer in the gazetteers codelist. The codelist"
-" provides details of services, where available, that can resolve a gazetteer"
-" entry to provide location names."
+"The identifier of the gazetteer. The `locationGazetteers.csv` codelist "
+"provides details of services, where available, that can resolve a gazetteer "
+"entry to provide location names."
 msgstr ""
-"La entrada del diccionario geográfico seleccionado en la lista de códigos de"
-" diccionarios geográficos. La lista de códigos provee detalles de servicios,"
-" cuando estén disponibles, que pueden recibir una entrada en el diccionario "
-"y proveer nombres de ubicación."
+"El identificador del diccionario geográfico. La lista de códigos "
+"`locationGazetteers.csv` provee detalles de servicios, si están disponibles,"
+" que pueden resolver una entrada del diccionario geográfico para proveer "
+"nombres de ubicación."
 
 #. /definitions/Location/properties/gazetteer/properties/identifiers/title
 #: schema/project-level/project-schema.json:1
@@ -1602,21 +1657,22 @@ msgstr "Identificadores"
 #. /definitions/Location/properties/gazetteer/properties/identifiers/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"An array of one or more codes drawn from the gazetteer indicated in scheme."
+"An array of one or more codes drawn from the gazetteer indicated by the "
+"`scheme` field."
 msgstr ""
-"Una lista de uno o más códigos extraídos del diccionario geográfico indicado"
-" en el campo scheme."
+"Una lista de uno o más códigos tomados del diccionario geográfico indicado "
+"en el campo `scheme`."
 
 #. /definitions/Location/properties/uri/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"A URI to a further description of the activity location. This may be a human"
-" readable document with information on the location, or a machine-readable "
-"description of the location."
+"A URI to a further description of the activity location. This might be a "
+"human-readable document with information on the location, or a machine-"
+"readable description of the location."
 msgstr ""
 "Una URI a una descripción más detallada de la ubicación de la actividad. "
-"Esto puede ser un documento legible por humanos con información de esta "
-"ubicación, o una descripción legible por máquina de la ubicación."
+"Esto puede ser un documento legible por el usuario con información sobre la "
+"ubicación o una descripción legible por computadora de la ubicación."
 
 #. /definitions/Location/properties/address/title
 #. /definitions/Organization/properties/address/title
@@ -1633,6 +1689,8 @@ msgstr ""
 "proyecto."
 
 #. /definitions/Value/title
+#. /definitions/Observation/properties/value/title
+#. /definitions/Transaction/properties/value/title
 #: schema/project-level/project-schema.json:1
 msgid "Value"
 msgstr "Valor"
@@ -1640,8 +1698,7 @@ msgstr "Valor"
 #. /definitions/Value/description
 #: schema/project-level/project-schema.json:1
 msgid "Financial values should be published with a currency attached."
-msgstr ""
-"Los valores financieros deberían ser publicados con una moneda adjunta."
+msgstr "Los valores financieros deben publicarse con una moneda adjunta."
 
 #. /definitions/Value/properties/amount/description
 #: schema/project-level/project-schema.json:1
@@ -1688,11 +1745,11 @@ msgid ""
 "details of the department or sub-unit involved in this contracting process."
 msgstr ""
 "Un nombre común para esta organización u otro participante en el proceso de "
-"contratación. El objeto identifier provee un espacio para el nombre legal, y"
-" por lo tanto este puede repetir ese valor, o puede proveer el nombre común "
-"por el cual esta organización o entidad es conocida. Este campo también "
-"puede incluir detalles del departamento o sub-unidad involucrado en este "
-"proceso de contratación."
+"contrataciones. El objeto identificador da un espacio para un nombre legal "
+"formal, y esto podría repetir el valor o dar un nombre común por el cual se "
+"conoce a la organización o entidad. Este campo también pude incluir detalles"
+" del departamento o sub-unidad involucrada en este proceso de "
+"contrataciones. "
 
 #. /definitions/Organization/properties/id/description
 #: schema/project-level/project-schema.json:1
@@ -1790,6 +1847,20 @@ msgstr ""
 "abierta [partyRole](https://standard.open-"
 "contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#partyrole)."
 
+#. /definitions/Organization/properties/people/title
+#: schema/project-level/project-schema.json:1
+msgid "People"
+msgstr "Personas"
+
+#. /definitions/Organization/properties/people/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"People associated with, representing, or working on behalf of this "
+"organization in respect of this project."
+msgstr ""
+"Personas asociadas, que representan o trabajan en nombre de esta "
+"organización con respecto a este proyecto."
+
 #. /definitions/OrganizationReference/properties/name/description
 #: schema/project-level/project-schema.json:1
 msgid ""
@@ -1840,7 +1911,7 @@ msgstr "Una dirección."
 #. /definitions/Address/properties/streetAddress/title
 #: schema/project-level/project-schema.json:1
 msgid "Street address"
-msgstr "Dirección de la calle"
+msgstr "Dirección"
 
 #. /definitions/Address/properties/streetAddress/description
 #: schema/project-level/project-schema.json:1
@@ -1893,8 +1964,8 @@ msgid ""
 "A person, contact point or department to contact in relation to this "
 "contracting process."
 msgstr ""
-"Una persona, punto de contacto o departamento a contactar en relación a este"
-" proceso de contratación."
+"Una persona, punto de contacto o departamento para contactar relacionado a "
+"este proceso de contrataciones."
 
 #. /definitions/ContactPoint/properties/name/description
 #: schema/project-level/project-schema.json:1
@@ -1927,7 +1998,7 @@ msgid ""
 "international dialing code."
 msgstr ""
 "El número de teléfono del punto o persona de contacto. Este debe de incluir "
-"el código de marcación internacional."
+"el código de prefijo internacional."
 
 #. /definitions/ContactPoint/properties/faxNumber/title
 #: schema/project-level/project-schema.json:1
@@ -1941,7 +2012,7 @@ msgid ""
 "international dialing code."
 msgstr ""
 "El número de fax del punto o persona de contacto. Este debe de incluir el "
-"código de marcación internacional."
+"código de prefijo internacional."
 
 #. /definitions/ContactPoint/properties/url/description
 #: schema/project-level/project-schema.json:1
@@ -2010,15 +2081,19 @@ msgstr "Parte fuente"
 #. /definitions/BudgetBreakdown/properties/sourceParty/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"The organization or other party related to this budget entry. If the budget "
-"amount is positive, this indicates a flow of resources from the party to the"
-" contracting process. If the budget amount is negative, it indicates a "
-"payment from the contracting process to this party."
+"An organization reference, linking to the entry in the `parties` section "
+"describing the organization providing the funds for this part of the budget."
+" The party must have the 'funder' role. If the budget amount is positive, "
+"this indicates a flow of resources from the party to the contracting "
+"process. If the budget amount is negative, it indicates a payment from the "
+"contracting process to this party."
 msgstr ""
-"La organización u otra parte relacionada a esta entrada de presupuesto. Si "
-"el monto del presupuesto es positivo, esto indica un flujo de recursos desde"
-" la parte para este proceso de contratación. Si el monto es negativo, indica"
-" un pago del proceso de contratación a esta parte."
+"Una referencia de la organización, vinculada a la entrada en la sección  "
+"`parties`  que describe la organización que proporciona los fondos para esta"
+" parte del presupuesto. La parte debe tener el rol de 'funder'. Si el monto "
+"del presupuesto es positivo, esto indica un flujo de recursos de la parte al"
+" proceso de contratación. Si el monto del presupuesto es negativo, indica un"
+" pago del proceso de contratación a esta parte."
 
 #. /definitions/Document/title
 #: schema/project-level/project-schema.json:1
@@ -2033,11 +2108,10 @@ msgid ""
 "formal notices, downloadable forms, or any other kind of resource that ought"
 " to be made public as part of full open contracting."
 msgstr ""
-"Enlaces a, o descripciones de, documentos externos pueden adjuntarse en "
-"varias ubicaciones dentro del estándar. Los documentos pueden ser "
-"información de soporte, anuncios formales, formularios descargables, o "
-"cualquier otro tipo de recurso que debe ser hecho público como parte de las "
-"contrataciones abiertas completas."
+"Se pueden adjuntar enlaces o descripciones de documentos externos en varios "
+"lugares del estándar. Los documentos pueden ser información de respaldo, "
+"avisos formales, formas descargables o cualquier otro tipo de recurso que "
+"deba de hacerse público como parte de contrataciones completamente abiertas."
 
 #. /definitions/Document/properties/id/description
 #: schema/project-level/project-schema.json:1
@@ -2132,11 +2206,11 @@ msgid ""
 "described document is published offline. For example, web pages have a "
 "format of 'text/html'."
 msgstr ""
-"El formato del documento, usando la lista de códigos abierta [IANA Media "
-"Types](http://www.iana.org/assignments/media-types/) (vea los valores en la "
-"columna 'Template'), o usando el código 'offline/print' si el documento "
-"descrito está publicado fuera de línea. Por ejemplo, las páginas web tienen "
-"un formato de 'text/html'."
+"El formato del documento, utilizando la lista de códigos abierta [IANA Media"
+" Types](http://www.iana.org/assignments/media-types/) (vea los valores en la"
+" columna 'Template'), o utilizando el código 'offline/print' si el documento"
+" descrito se publica offline. Por ejemplo, las páginas web tienen el formato"
+" 'text/html'."
 
 #. /definitions/Document/properties/language/title
 #: schema/project-level/project-schema.json:1
@@ -2154,19 +2228,18 @@ msgid ""
 "recommended unless there is a clear user need for distinguishing the "
 "language subtype."
 msgstr ""
-"El lenguaje del documento enlazado usando el "
-"[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) de dos "
-"letras, o las [etiquetas de lenguaje "
-"BCP47](http://www.w3.org/International/articles/language-tags/) extendidas. "
-"El uso de códigos de dos letras en minúsculas del "
+"El lenguaje del documento enlazado utilizando ya sea dos letras "
+"[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), o "
+"[etiquetas de lenguage BCP47](http://www.w3.org/International/articles"
+"/language-tags/) extendidas. El uso de de códigos de dos letras de "
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) es "
-"recomendado a menos que haya un caso de uso claro que requiera distinguir el"
-" subtipo del lenguaje."
+"recomendado a menos de que haya una necesidad de usuario clara para "
+"distinguir sobre el sub-tipo de lenguaje."
 
 #. /definitions/Document/properties/pageStart/title
 #: schema/project-level/project-schema.json:1
 msgid "Page start"
-msgstr "Página de inicio"
+msgstr "Inicio de página"
 
 #. /definitions/Document/properties/pageStart/description
 #: schema/project-level/project-schema.json:1
@@ -2175,15 +2248,15 @@ msgid ""
 " first page on which it can be found. This should refer to the printed page "
 "number, not the page number reported by software applications."
 msgstr ""
-"Cuando la información referenciada existe contenida en un documento largo, "
-"indica la primera página en la cual la misma puede ser encontrada. Esto "
-"debería referirse al número de página impresa, no el número de página "
-"reportado por aplicaciones software."
+"Cuando la información mencionada exista dentro de un documento grande, se "
+"debe indicar la primera página en la que se puede encontrar. Esto debe de "
+"referirse al número de página impreso, no al número de página reportado por "
+"software."
 
 #. /definitions/Document/properties/pageEnd/title
 #: schema/project-level/project-schema.json:1
 msgid "Page end"
-msgstr "Página final"
+msgstr "Fin de página"
 
 #. /definitions/Document/properties/pageEnd/description
 #: schema/project-level/project-schema.json:1
@@ -2192,10 +2265,10 @@ msgid ""
 " last page on which it can be found. This should refer to the printed page "
 "number, not the page number reported by software applications."
 msgstr ""
-"Cuando la información referenciada existe contenida en un documento largo, "
-"indica la última página en la cual la misma puede ser encontrada. Esto "
-"debería referise al número de página impresa, no al número de página "
-"reportado por aplicaciones software."
+"Cuando la información mencionada existe dentro de un documento grande, se "
+"debe indicar la última página en la que se puede encontrar. Esto debe de "
+"referirse al número de página impreso, no al número de página reportado por "
+"software."
 
 #. /definitions/Document/properties/accessDetails/title
 #: schema/project-level/project-schema.json:1
@@ -2205,14 +2278,13 @@ msgstr "Detalles de acceso"
 #. /definitions/Document/properties/accessDetails/description
 #: schema/project-level/project-schema.json:1
 msgid ""
-"A description of any special arrangements required to access this document. "
-"This may include a requirement to register for document access, a fee to be "
-"paid, or the location where documents can be inspected."
+"A description of any special arrangements needed to access this document, "
+"for example: registering for access, paying a fee, or visiting a location to"
+" inspect the document."
 msgstr ""
-"Una descripción de cualquier arreglo especial necesario para acceder a este "
-"documento. Esto puede incluir un requerimiento de registrarse para acceder "
-"al documento, un pago necesario o la ubicación donde los documentos pueden "
-"ser revisados."
+"Una descripción de los arreglos especiales necesarios para acceder a este "
+"documento, por ejemplo: registrarse para el acceso, pagar una cuota o "
+"visitar un lugar para inspeccionar el documento."
 
 #. /definitions/Document/properties/author/title
 #: schema/project-level/project-schema.json:1
@@ -2221,16 +2293,8 @@ msgstr "Autor"
 
 #. /definitions/Document/properties/author/description
 #: schema/project-level/project-schema.json:1
-msgid ""
-"The name of the author of these documents. Include the name of individuals "
-"and/or organizations responsible. For example, when a technical "
-"specification was written by a consultant, include the name and organization"
-" of the consultant."
-msgstr ""
-"El nombre del autor de estos documentos. Incluye el nombre de individuos y/o"
-" organizaciones responsables. Por ejemplo, cuando una especificación técnica"
-" fue escrita por un consultor, incluye el nombre y organización del "
-"consultor."
+msgid "The names of the authors of the document."
+msgstr "Los nombres de los autores del documento."
 
 #. /definitions/Identifier/description
 #: schema/project-level/project-schema.json:1
@@ -2308,7 +2372,7 @@ msgstr "ID de relación"
 #: schema/project-level/project-schema.json:1
 msgid "A local identifier for this relationship, unique within this array."
 msgstr ""
-"Un identificador local para esta relación, único dentro de este array."
+"Un identificador local para esta relación, único dentro de esta lista."
 
 #. /definitions/RelatedProject/properties/scheme/description
 #: schema/project-level/project-schema.json:1
@@ -2375,3 +2439,324 @@ msgid ""
 msgstr ""
 "Una URI apuntando a un documento legible por máquina o un paquete de "
 "proyectos que contiene el proyecto relacionado identificado."
+
+#. /definitions/Metric/title
+#: schema/project-level/project-schema.json:1
+msgid "Metric"
+msgstr "Métrica"
+
+#. /definitions/Metric/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Metrics are used to set out forecast and actual metrics targets for a "
+"project: for example, planned and actual physical and financial progress "
+"over time."
+msgstr ""
+"Las métricas se utilizan para establecer los objetivos esperados y reales "
+"para un proyecto: por ejemplo, el progreso físico y financiero planificado y"
+" real a lo largo del tiempo."
+
+#. /definitions/Metric/properties/id/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"An identifier for this metric. In some cases this may be drawn from a "
+"codelist of metrics required for this type of contracting process or "
+"project, or in other instances may be an arbitrary identifier."
+msgstr ""
+"Un identificador para esta métrica. En algunos casos, esto puede obtenerse "
+"de una lista de códigos de métricas requeridas para este tipo de proceso o "
+"proyecto de contratación, o en otros casos puede ser un identificador "
+"arbitrario."
+
+#. /definitions/Metric/properties/title/description
+#: schema/project-level/project-schema.json:1
+msgid "The title of this metric"
+msgstr "El título de esta métrica"
+
+#. /definitions/Metric/properties/description/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"A short description of the metric. This may include short details of "
+"measurement methods."
+msgstr ""
+"Una breve descripción de la métrica. Esto puede incluir pequeños detalles de"
+" los métodos de medición."
+
+#. /definitions/Metric/properties/observations/title
+#: schema/project-level/project-schema.json:1
+msgid "Observations"
+msgstr "Observaciones"
+
+#. /definitions/Metric/properties/observations/description
+#: schema/project-level/project-schema.json:1
+msgid "An array of target or actual values for this metric."
+msgstr "Una lista de valores objetivo o reales para esta métrica."
+
+#. /definitions/Observation/title
+#: schema/project-level/project-schema.json:1
+msgid "Observation"
+msgstr "Observación"
+
+#. /definitions/Observation/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"An actual or target observation. Observations should include either a value "
+"(for financial metrics) or measure (for other metrics)."
+msgstr ""
+"Una observación real u objetiva. Las observaciones deben incluir un valor "
+"(para métricas financieras) o una medida (para otras métricas)."
+
+#. /definitions/Observation/properties/id/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"A local identifier for this specific observation. This may be an arbitrary "
+"identifier, or could be a composite of the metric identifier, and the date "
+"and other dimensions of this observation."
+msgstr ""
+"Un identificador local para esta observación específica. Esto puede ser un "
+"identificador arbitrario, o podría ser un compuesto del identificador de "
+"métrica, y la fecha y otras dimensiones de esta observación."
+
+#. /definitions/Observation/properties/period/description
+#: schema/project-level/project-schema.json:1
+msgid "The period over which this observation is measured."
+msgstr "El período en que esta observación se mide."
+
+#. /definitions/Observation/properties/value/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"For financial metrics, the value of this forecast, target or actual "
+"observation."
+msgstr ""
+"Para métricas financieras, el valor de este pronóstico, objetivo u "
+"observación real."
+
+#. /definitions/Observation/properties/measure/title
+#: schema/project-level/project-schema.json:1
+msgid "Measure"
+msgstr "Medida"
+
+#. /definitions/Observation/properties/measure/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"For non-financial metrics, the measure of this forecast, target or actual "
+"observation. Measures may be provided as free text or numerical values."
+msgstr ""
+"Para las métricas no financieras, la medida de este pronóstico, objetivo o "
+"observación real. Las medidas pueden proporcionarse como texto libre o "
+"valores numéricos."
+
+#. /definitions/Observation/properties/unit/title
+#. /definitions/Observation/properties/unit/description
+#: schema/project-level/project-schema.json:1
+msgid "Unit"
+msgstr "Unidad"
+
+#. /definitions/Observation/properties/unit/properties/name/title
+#: schema/project-level/project-schema.json:1
+msgid "Unit name"
+msgstr "Nombre de la unidad"
+
+#. /definitions/Observation/properties/unit/properties/name/description
+#: schema/project-level/project-schema.json:1
+msgid "The name of the unit."
+msgstr "El nombre de la unidad."
+
+#. /definitions/Observation/properties/unit/properties/scheme/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"The list from which units of measure identifiers are taken. Use of the "
+"scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of \"Codes for "
+"Units of Measure Used in International Trade\" is recommended."
+msgstr ""
+"La lista de la que se toman los identificadores de las unidades de medida. "
+"Se recomienda el uso del esquema 'UNCEFACT' para la lista Recomendación 20 "
+"de CEFACT/ONU de \"Códigos de Unidades de Medida Utilizados en el Comercio "
+"Internacional\"."
+
+#. /definitions/Observation/properties/unit/properties/id/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"The identifier from the codelist referenced in the schema property. For "
+"example, with UNCEFACT, this is the value of the 'Common Code' column. From "
+"this identifier, applications can look-up the human readable name or symbol "
+"for this unit of measure."
+msgstr ""
+"El identificador de la lista de códigos se hace referencia en la propiedad "
+"de esquema. Por ejemplo, con UNCEFACT, este es el valor de la columna "
+"\"Common Code\". A partir de este identificador, las aplicaciones pueden "
+"buscar el nombre o símbolo legible para humanos para esta unidad de medida."
+
+#. /definitions/Observation/properties/unit/properties/uri/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"If the scheme used provide a machine-readable URI for this unit of measure, "
+"this can be given."
+msgstr ""
+"Si el esquema utilizado provee una URI legible por computadora para esta "
+"unidad de medición, ésta puede proporcionarse."
+
+#. /definitions/Observation/properties/dimensions/title
+#: schema/project-level/project-schema.json:1
+msgid "Dimensions"
+msgstr "Dimensiones"
+
+#. /definitions/Observation/properties/dimensions/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Any number of dimensions can be recorded within this object. Dimensions "
+"names should follow the camelCase conventions of OCDS."
+msgstr ""
+"Cualquier número de dimensiones se puede registrar dentro de este objeto. "
+"Los nombres de dimensiones deben seguir las convenciones de OCDS de "
+"camelCase."
+
+#. /definitions/Observation/properties/notes/title
+#: schema/project-level/project-schema.json:1
+msgid "Notes"
+msgstr "Notas"
+
+#. /definitions/Observation/properties/notes/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Any notes on this observation. This may include clarifying information."
+msgstr ""
+"Cualquier nota sobre esta observación. Esto puede incluir información para "
+"aclaración."
+
+#. /definitions/Person/title
+#: schema/project-level/project-schema.json:1
+msgid "Person"
+msgstr "Persona"
+
+#. /definitions/Person/description
+#: schema/project-level/project-schema.json:1
+msgid "A natural person."
+msgstr "Una persona física"
+
+#. /definitions/Person/properties/id/description
+#: schema/project-level/project-schema.json:1
+msgid "A local identifier for this person."
+msgstr "Un identificador local para esta persona."
+
+#. /definitions/Person/properties/name/description
+#: schema/project-level/project-schema.json:1
+msgid "The full name of the person."
+msgstr "El nombre completo de la persona."
+
+#. /definitions/Person/properties/jobTitle/title
+#: schema/project-level/project-schema.json:1
+msgid "Job title"
+msgstr "Puesto de trabajo"
+
+#. /definitions/Person/properties/jobTitle/description
+#: schema/project-level/project-schema.json:1
+msgid "The job title of the person (for example, Financial Manager)."
+msgstr "El puesto de trabajo de la persona (por ejemplo, gerente financiero)."
+
+#. /definitions/Transaction/title
+#: schema/project-level/project-schema.json:1
+msgid "Transaction information"
+msgstr "Información de Transacción"
+
+#. /definitions/Transaction/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"A spending transaction related to the contracting process. Draws upon the "
+"data models of the [Fiscal Data Package](https://frictionlessdata.io/specs"
+"/fiscal-data-package/) and the [International Aid Transparency "
+"Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-"
+"activity/transaction/) and should be used to cross-reference to more "
+"detailed information held using a Fiscal Data Package, IATI file, or to "
+"provide enough information to allow a user to manually or automatically "
+"cross-reference with some other published source of transactional spending "
+"data."
+msgstr ""
+"Una transacción de gasto relacionada al proceso de contrataciones. Se "
+"obtiene de los modelos de datos del [Fiscal Data "
+"Package](https://frictionlessdata.io/specs/fiscal-data-package/) y del "
+"[International Aid Transparency Initiative](http://iatistandard.org"
+"/activity-standard/iati-activities/iati-activity/transaction/) y debe usarse"
+" para hacer referencias cruzadas hacia información más detallada contenida "
+"en un Paquete de Datos Fiscales, archivo IATI o dar suficiente información "
+"para permitir al usuario hacer una referencia cruzada manual o automática "
+"con otra fuente de información que publique datos transaccionales de gasto."
+
+#. /definitions/Transaction/properties/id/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"A unique identifier for this transaction. This identifier should be possible"
+" to cross-reference against the provided data source. For IATI this is the "
+"transaction reference."
+msgstr ""
+"Un identificador único para esta transacción de pago. Este identificador "
+"debe de permitir referenciar contra la fuente de datos provista. Para IATI "
+"esta es la referencia de transacción."
+
+#. /definitions/Transaction/properties/source/title
+#: schema/project-level/project-schema.json:1
+msgid "Data source"
+msgstr "Fuente de los Datos"
+
+#. /definitions/Transaction/properties/source/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"Used to point either to a corresponding Fiscal Data Package, IATI file, or "
+"machine or human-readable source where users can find further information on"
+" the budget line item identifiers, or project identifiers, provided here."
+msgstr ""
+"Usado para apuntar a un Fiscal Data Package, un archivo IATI o una fuente "
+"legible por computadora o por un humano donde los usuarios puedan obtener "
+"más información sobre los identificadores de partida presupuestaria o "
+"identificadores de proyectos, provistos aquí. "
+
+#. /definitions/Transaction/properties/date/description
+#: schema/project-level/project-schema.json:1
+msgid "The date of the transaction"
+msgstr "La fecha de la transacción"
+
+#. /definitions/Transaction/properties/value/description
+#: schema/project-level/project-schema.json:1
+msgid "The value of the transaction."
+msgstr "El monto o valor de la transacción."
+
+#. /definitions/Transaction/properties/payer/title
+#: schema/project-level/project-schema.json:1
+msgid "Payer"
+msgstr "Pagador"
+
+#. /definitions/Transaction/properties/payer/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"An organization reference for the organization from which the funds in this "
+"transaction originate."
+msgstr ""
+"Una referencia a la organización que provee los fondos para esta transacción"
+" de pago."
+
+#. /definitions/Transaction/properties/payee/title
+#: schema/project-level/project-schema.json:1
+msgid "Payee"
+msgstr "Beneficiario"
+
+#. /definitions/Transaction/properties/payee/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"An organization reference for the organization which receives the funds in "
+"this transaction."
+msgstr ""
+"Una referencia a la organización que recibe los fondos en esta transacción."
+
+#. /definitions/Transaction/properties/uri/title
+#: schema/project-level/project-schema.json:1
+msgid "Linked spending information"
+msgstr "Información de gasto vinculado"
+
+#. /definitions/Transaction/properties/uri/description
+#: schema/project-level/project-schema.json:1
+msgid ""
+"A URI pointing directly to a machine-readable record about this spending "
+"transaction."
+msgstr ""
+"Una URI apuntando directamente al registro legible por computadora sobre "
+"esta transacción."

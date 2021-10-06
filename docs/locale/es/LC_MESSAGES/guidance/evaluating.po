@@ -6,16 +6,19 @@
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,10 +47,6 @@ msgstr ""
 "algunos."
 
 #: ../../docs/guidance/evaluating.md:1
-msgid "Note"
-msgstr "Nota"
-
-#: ../../None:1
 msgid ""
 "It is not possible to fully automate checks of whether disclosures from a "
 "particular publisher, or disclosures about a particular project, meet the "
@@ -61,11 +60,11 @@ msgstr ""
 "puede necesitar una verificación manual para determinar si los documentos "
 "enlazados a los datos contienen la información requerida."
 
-#: ../../docs/guidance/evaluating.md:15
+#: ../../docs/guidance/evaluating.md:9
 msgid "Getting started"
 msgstr "Para empezar"
 
-#: ../../docs/guidance/evaluating.md:17
+#: ../../docs/guidance/evaluating.md:11
 msgid ""
 "*The following steps may require support from a technical expert. You can "
 "also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data"
@@ -75,11 +74,11 @@ msgstr ""
 "también puede contactar con el Helpdesk de OC4IDS ([data@open-"
 "contracting.org](mailto:data@open-contracting.org)) para orientación.*"
 
-#: ../../docs/guidance/evaluating.md:19
+#: ../../docs/guidance/evaluating.md:13
 msgid "(1) Check your data formats"
 msgstr "(1) Verifique el formato de sus datos"
 
-#: ../../docs/guidance/evaluating.md:21
+#: ../../docs/guidance/evaluating.md:15
 msgid ""
 "First, check that the disclosures you want to analyze are in the correct "
 "format. If they are not in the correct format, you will need to convert the "
@@ -89,11 +88,11 @@ msgstr ""
 "formato correcto. Si no están en el formato correcto, necesitará convertir "
 "los datos."
 
-#: ../../docs/guidance/evaluating.md:23
+#: ../../docs/guidance/evaluating.md:17
 msgid "Project level data"
 msgstr "Datos a nivel de proyecto"
 
-#: ../../docs/guidance/evaluating.md:25
+#: ../../docs/guidance/evaluating.md:19
 msgid ""
 "Check whether the project-level data is published using "
 "[OC4IDS](../../projects/index)"
@@ -101,12 +100,7 @@ msgstr ""
 "Verifique si los datos a nivel de proyecto son publicados usando "
 "[OC4IDS](../../projects/index)"
 
-#: ../../docs/guidance/evaluating.md:1 ../../docs/guidance/evaluating.md:1
 #: ../../docs/guidance/evaluating.md:1
-msgid "Tip"
-msgstr "Consejo"
-
-#: ../../None:1
 msgid ""
 "You can use the [OC4IDS Data Review Tool](https://standard.open-"
 "contracting.org/infrastructure/review/) to check that whether your data is "
@@ -116,7 +110,7 @@ msgstr ""
 ".open-contracting.org/infrastructure/review/) para verificar si sus datos "
 "están en el formato correcto."
 
-#: ../../docs/guidance/evaluating.md:37
+#: ../../docs/guidance/evaluating.md:25
 msgid ""
 "If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level "
 "Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-"
@@ -128,23 +122,23 @@ msgstr ""
 "field-level-mapping-template/) para mapear los datos a la especificación y "
 "crear un archivo JSON OC4IDS para cada proyecto."
 
-#: ../../None:1
+#: ../../docs/guidance/evaluating.md:1
 msgid ""
-"You can use a [blank example OC4IDS JSON file](../../_static/blank.json) to "
-"get started."
+"You can use a {download}`blank example OC4IDS JSON file "
+"<../examples/blank.json>` to get started."
 msgstr ""
-"Puede usar un [archivo de ejemplo OC4IDS JSON en "
-"blanco](../../_static/blank.json) para empezar."
+"Puede usar un {archivo de ejemplo}`OC4IDS JSON en blanco "
+"<../examples/blank.json>` para empezar."
 
-#: ../../docs/guidance/evaluating.md:49
+#: ../../docs/guidance/evaluating.md:31
 msgid "Contracting data"
 msgstr "Datos de contrataciones"
 
-#: ../../docs/guidance/evaluating.md:51
+#: ../../docs/guidance/evaluating.md:33
 msgid "Check whether the contracting data is published using OCDS."
 msgstr "Verifique si los datos de contratación son publicados usando OCDS."
 
-#: ../../None:1
+#: ../../docs/guidance/evaluating.md:1
 msgid ""
 "You can use the [OCDS Data Review Tool](https://standard.open-"
 "contracting.org/review/) to check that whether your data is published in "
@@ -154,7 +148,7 @@ msgstr ""
 "contracting.org/review/) para verificar si sus datos están publicados en "
 "formato OCDS."
 
-#: ../../docs/guidance/evaluating.md:63
+#: ../../docs/guidance/evaluating.md:39
 msgid ""
 "If the contracting data is published using OCDS then use it to populate the "
 "contracting processes section of the project-level data, following the "
@@ -166,25 +160,25 @@ msgstr ""
 "siguiendo la guía sobre [usar datos de contratación para entender los "
 "proyectos de infraestructura](using)."
 
-#: ../../docs/guidance/evaluating.md:65
+#: ../../docs/guidance/evaluating.md:41
 msgid ""
 "If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping "
 "Template](https://www.open-contracting.org/resources/oc4ids-field-level-"
 "mapping-template/) to map the data to the [contracting "
-"processes](../../reference/schema/#contractingprocess) section of OC4IDS and"
-" add the data to the OC4IDS JSON file for each project."
+"processes](../reference/schema.md#contractingprocess) section of OC4IDS and "
+"add the data to the OC4IDS JSON file for each project."
 msgstr ""
-"Si los datos no son publicados usando OCDS, use la [plantilla de mapeo a "
-"nivel de campos OC4IDS](https://www.open-contracting.org/resources/oc4ids-"
+"Si los datos no son publicados utilizando OCDS, usar la [plantilla de mapeo "
+"a nivel de campos OC4IDS](https://www.open-contracting.org/resources/oc4ids-"
 "field-level-mapping-template/) para mapear los datos a la sección de "
-"[procesos de contratación](../../reference/schema/#contractingprocess) de "
-"OC4IDS y agregue los datos al archivo OC4IDS JSON para cada proyecto."
+"[procesos de contratación](../reference/schema.md#contractingprocess) de "
+"OC4IDS y agregar los datos al archivo OC4IDS JSON para cada proyecto."
 
-#: ../../docs/guidance/evaluating.md:67
+#: ../../docs/guidance/evaluating.md:43
 msgid "(2) Check which elements of IDS are disclosed"
 msgstr "(2) Verifique qué elementos del IDS son publicados"
 
-#: ../../docs/guidance/evaluating.md:69
+#: ../../docs/guidance/evaluating.md:45
 msgid ""
 "Use the [CoST IDS Mapping](../../cost/index) to construct queries to "
 "determine which elements of the IDS are provided in the data."
@@ -192,7 +186,7 @@ msgstr ""
 "Use el [Mapeo de CoST IDS](../../cost/index) para preparar consultas y "
 "determinar qué elementos del IDS se proveen en los datos."
 
-#: ../../docs/guidance/evaluating.md:71
+#: ../../docs/guidance/evaluating.md:47
 msgid ""
 "For example, the CoST IDS mapping describes how the project name element of "
 "the IDS should be disclosed:"
@@ -200,14 +194,14 @@ msgstr ""
 "Por ejemplo, el mapeo del IDS de CoST describe cómo el elemento de nombre "
 "del proyecto de IDS debería ser publicado:"
 
-#: ../../docs/guidance/evaluating.md:73
+#: ../../docs/guidance/evaluating.md:49
 msgid "Project-Level: Publish as `title`"
 msgstr "Nivel de Proyecto: Publicar como `title`"
 
-#: ../../docs/guidance/evaluating.md:75
+#: ../../docs/guidance/evaluating.md:51
 msgid ""
 "Based on this description, the following pseudo code checks a folder "
-"containing OC4IDS JSON files to count the number of  projects in which the "
+"containing OC4IDS JSON files to count the number of projects in which the "
 "project name is disclosed:"
 msgstr ""
 "Basado en esta descripción, el siguiente pseudo código verifica una carpeta "

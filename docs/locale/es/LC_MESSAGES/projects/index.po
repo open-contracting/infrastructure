@@ -4,19 +4,22 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Maria Esther Cervantes <mariaesther@idatosabiertos.org>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2019
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
+# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Juan Pane <juanpane@idatosabiertos.org>, 2021
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
+"POT-Creation-Date: 2021-09-14 21:10-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,424 +33,556 @@ msgstr "Para empezar"
 #: ../../docs/projects/index.md:3
 msgid ""
 "The regular disclosure of structured data can greatly enhance the "
-"transparency and accountability of publicly funded construction projects. "
-"Using a common schema to record the information that is needed to monitor "
-"projects can enable more advanced analysis, both within, and across, "
-"infrastructure projects."
+"transparency and accountability of publicly funded infrastructure projects."
 msgstr ""
-"La divulgación regular de datos estructurados puede mejorar en gran medida "
-"la transparencia y la rendición de cuentas en proyectos de construcción "
-"financiados con fondos públicos. Usar un esquema común para registrar la "
-"información necesaria para monitorear proyectos puede permitir análisis más "
-"avanzados, tanto en el ámbito de un solo proyecto como mediante varios "
-"proyectos de infraestructura."
+"La divulgación periódica de datos estructurados puede mejorar en gran medida"
+" la transparencia y la rendición de cuentas en proyectos de infraestructura "
+"financiados con fondos públicos. "
 
 #: ../../docs/projects/index.md:5
+msgid ""
+"Publishing standardized data makes using data easier, for example to compare"
+" data across projects. It also supports the development of reusable tools "
+"and methodologies."
+msgstr ""
+"Publicar datos abiertos estandarizados facilita el uso de datos, por "
+"ejemplo, para comparar datos entre proyectos. También apoya el desarrollo de"
+" herramientas y metodologías reutilizables."
+
+#: ../../docs/projects/index.md:7
 msgid "What is a project?"
 msgstr "¿Qué es un proyecto?"
 
-#: ../../docs/projects/index.md:7
+#: ../../docs/projects/index.md:9
 msgid ""
-"In the context of OC4IDS, the term 'project' refers to an infrastructure "
+"In the context of OC4IDS, the term ‘project’ refers to an infrastructure "
 "project, defined as the development of a set of infrastructure assets in a "
 "specified location, generally the responsibility of a single procuring "
 "entity and budget authority: for example, a highway overpass or a university"
 " campus."
 msgstr ""
-"En el contexto de OC4IDS, el término 'proyecto' se refiere a un proyecto de "
+"En el contexto de OC4IDS, el término ‘project’ se refiere a un proyecto de "
 "infraestructura, definido como el desarrollo de un conjunto de activos de "
 "infraestructura en una ubicación específica, generalmente bajo la "
 "responsabilidad de una sola entidad contratante y autoridad presupuestaria: "
-"por ejemplo, un puente de autopista o un campus universitario."
+"por ejemplo, un paso a desnivel o un campus universitario."
 
-#: ../../docs/projects/index.md:9
+#: ../../docs/projects/index.md:11
 msgid ""
-"An infrastructure project may stand alone (e.g. a new hospital), or may form"
-" part of a wider programme of work (e.g. a new rail station, as part of an "
-"extension to a railway line). An infrastructure project is usually "
-"implemented through a series of contracts, and usually involves planning and"
-" coordination at the project-level."
+"An infrastructure project can stand alone (e.g. a new hospital), or can form"
+" part of a wider investment project or programme of work (e.g. a new rail "
+"station, as part of an extension to a railway line)."
 msgstr ""
 "Un proyecto de infraestructura puede ser independiente (por ejemplo, un "
-"nuevo hospital), o puede formar parte de un programa de trabajo más amplio "
-"(por ejemplo, una estación de trenes, como parte de la extensión de una "
-"línea ferroviaria). Usualmente un proyecto de infraestructura es "
-"implementado mediante una serie de contratos, e involucra planeamiento y "
-"coordinación a nivel de proyecto."
+"nuevo hospital), o puede formar parte de un proyecto de inversión o programa"
+" de trabajo más amplio (por ejemplo, una nueva estación de trenes, como "
+"parte de la extensión de una línea ferroviaria). "
+
+#: ../../docs/projects/index.md:13
+msgid ""
+"Within an infrastructure project, a procuring entity can initiate multiple "
+"contracting processes for the project design, construction or supervision."
+msgstr ""
+"Dentro de un proyecto de infraestructura, una entidad de adquisiciones puede"
+" emitir múltiples contratos para el diseño, construcción o supervisión. "
+
+#: ../../docs/projects/index.md:15
+msgid ""
+"![Projects typically involve multiple contracts](../_static/images/diagram-"
+"project-contracting-process.png)"
+msgstr ""
+"![Los proyectos normalmente involucran múltiples "
+"contratos](../_static/images/es/diagram-project-contracting-process.png)"
 
 #: ../../docs/projects/index.md:1
-msgid "Tip"
-msgstr "Consejo"
-
-#: ../../None:1
 msgid ""
-"The term \"project\" is used in many contexts to mean different things, for "
-"example:"
+"The term \"project\" is used in many contexts to mean different things. In "
+"OC4IDS, the term \"project\" only refers to an infrastructure project and "
+"should not be applied to an investment project, investment program, or "
+"budget code."
 msgstr ""
-"El término \"proyecto\" es usado en muchos contextos para expresar "
-"diferentes cosas, por ejemplo:"
+"El término \"proyecto\" se utiliza en muchos contextos con diferentes "
+"significados. En OC4IDS, el término \"proyecto\" solo se refiere a un "
+"proyecto de infraestructura y no debe aplicarse a un proyecto de inversión, "
+"o código presupuestario."
 
-#: ../../None:3
-msgid "a larger programme of work, like the construction of an entire highway"
-msgstr ""
-"un programa de trabajo grande, como la construcción de una autopista "
-"completa"
+#: ../../docs/projects/index.md:21
+msgid "What is the scope of OC4IDS?"
+msgstr "¿Cuál es el alcance de OC4IDS?"
 
-#: ../../None:4
+#: ../../docs/projects/index.md:23 ../../docs/projects/index.md:131
 msgid ""
-"an investment project, like in National Public Investment Systems (SNIP) in "
-"Latin America"
+"OC4IDS describes how to structure and format the disclosures recommended in "
+"the CoST IDS."
 msgstr ""
-"un proyecto de inversión, como en los Sistemas Nacionales de Inversión "
-"Pública (SNIP) en Latinoamérica"
+"OC4IDS describe cómo estructurar y formatear las divulgaciones recomendadas "
+"en el IDS de CoST."
 
-#: ../../None:5
-msgid "a project code in a government's budget"
-msgstr "un código de proyecto en el presupuesto de un gobierno"
-
-#: ../../None:7
+#: ../../docs/projects/index.md:25
 msgid ""
-"However, to correctly implement and interpret OC4IDS, the above definition "
-"of an infrastructure project needs to be adhered to."
+"The CoST IDS is a best practice framework for disclosure on infrastructure "
+"projects. It describes what information to disclose to support monitoring of"
+" infrastructure projects."
 msgstr ""
-"Sin embargo, para implementar e interpretar OC4IDS correctamente, uno se "
-"debe adherir a la definición de arriba de un proyecto de infraestructura."
+"El IDS de CoST es un marco de mejores prácticas para la divulgación de "
+"información sobre proyectos de infraestructura. Describe qué información "
+"debe divulgarse para apoyar el monitoreo de proyectos de infraestructura."
 
 #: ../../docs/projects/index.md:27
 msgid ""
-"![Projects typically involve multiple contracts](../../_static/images"
-"/diagram-project-contracting-process.png)"
+"The CoST IDS and OC4IDS cover project-level data and summary contracting "
+"process data."
 msgstr ""
-"![Los proyectos normalmente involucran múltiples "
-"contratos](../../_static/images/es/diagram-project-contracting-process.png)"
+"El IDS de CoST y OC4IDS cubren datos a nivel de proyecto y datos resumidos "
+"del proceso de contratación"
 
 #: ../../docs/projects/index.md:29
-msgid ""
-"Within an infrastructure project, a procuring entity may issue contracts for"
-" its design, construction or supervision. Budgets, plans and impact "
-"assessments are likely to cut across these."
-msgstr ""
-"Dentro de un proyecto de infraestructura, una entidad contratante puede "
-"emitir contratos para el diseño, construcción o supervisión. Presupuestos, "
-"planes y evaluaciones de impacto se aplican frecuentemente a estos."
-
-#: ../../docs/projects/index.md:31
 msgid "What is project-level data?"
 msgstr "¿Qué son los datos a nivel de proyecto?"
 
-#: ../../docs/projects/index.md:33
+#: ../../docs/projects/index.md:31
 msgid ""
-"![Project-level data covers a number of stages](../../_static/images"
-"/diagram-project-phases.png)"
+"![Project-level data covers a number of stages](../_static/images/diagram-"
+"project-phases.png)"
 msgstr ""
 "![Los datos a nivel de proyecto cubren un número de "
-"etapas](../../_static/images/es/diagram-project-phases.png)"
+"etapas](../_static/images/es/diagram-project-phases.png)"
+
+#: ../../docs/projects/index.md:33
+msgid ""
+"Project-level data relates to the project as a whole and covers the "
+"following stages:"
+msgstr ""
+"Los datos a nivel de proyecto se relacionan con el proyecto en su conjunto y"
+" cubren las siguientes etapas:"
 
 #: ../../docs/projects/index.md:35
 msgid ""
-"[CoST](http://infrastructuretransparency.org/) have developed a framework of"
-" information that should be pro-actively disclosed and kept updated at each "
-"stage. Project-level data covers:"
-msgstr ""
-"[CoST](http://infrastructuretransparency.org/) desarrolló un marco de "
-"información que debería ser publicada y actualizada proactiva y "
-"reactivamente en cada etapa . Los datos a nivel de proyecto cubren:"
-
-#: ../../docs/projects/index.md:37
-msgid ""
-"**identification** - the decision to develop a project within the budget and"
+"**Identification** - the decision to develop a project within the budget and"
 " programme of a project owner."
 msgstr ""
-"**identificación** - la decisión de desarrollar un proyecto dentro del "
-"presupuesto y programa del dueño del mismo."
+"**Identificación** - la decisión de desarrollar un proyecto dentro del "
+"presupuesto y el programa del propietario del mismo."
 
-#: ../../docs/projects/index.md:38
+#: ../../docs/projects/index.md:36
 msgid ""
-"**preparation** - the feasibility study, environmental and social impact "
+"**Preparation** - the feasibility study, environmental and social impact "
 "assessment, general scoping of the project, establishing the packaging and "
 "procurement strategy, preliminary statutory requirements on environmental "
 "and land impacts, and the resulting budget authorization."
 msgstr ""
-"**preparación** - el estudio de factibilidad, la evaluación del impacto "
-"medioambiental y social, el alcance general del proyecto, establecer el "
-"marco y la estrategia de adquisición, requerimientos legales preliminares "
-"sobre impactos medioambientales y al terreno, y la resultante autorización "
-"del presupuesto."
+"**Preparación** - el estudio de factibilidad, la evaluación del impacto "
+"medioambiental y social, el alcance general del proyecto, establecimiento "
+"del agrupamiento y estrategia de adquisición, requerimientos legales "
+"preliminares sobre impactos medioambientales y del suelo, y la consiguiente "
+"autorización presupuestaria."
 
-#: ../../docs/projects/index.md:39
+#: ../../docs/projects/index.md:37
 msgid ""
-"**implementation** - covers the procurement and implementation of the "
+"**Implementation** - covers the procurement and implementation of the "
 "planning, design and works according to the procurement strategy."
 msgstr ""
-"**implementación** - cubre las adquisiciones y la implementación de la "
-"planeación, diseño y trabajos de acuerdo a la estrategia de adquisiciones."
+"**Implementación** - cubre las adquisiciones y la implementación de la "
+"planeación, diseño y trabajos de construcción de acuerdo a la estrategia de "
+"adquisiciones."
 
-#: ../../docs/projects/index.md:40
+#: ../../docs/projects/index.md:38
 msgid ""
-"**completion** - covers the handover of the assets and close-out activities "
+"**Completion** - covers the handover of the assets and close-out activities "
 "with details of the final scope, cost, and delivery time."
 msgstr ""
-"**finalización** - cubre el traspaso de los activos y las actividades de "
+"**Finalización** - cubre el traspaso de los activos y las actividades de "
 "cierre con detalles del alcance final, costos y tiempos de entrega."
 
+#: ../../docs/projects/index.md:40
+msgid "What is summary contracting process data?"
+msgstr "¿Qué son los datos resumidos del proceso de contratación?"
+
 #: ../../docs/projects/index.md:42
-msgid "This framework has been used as the basis for OC4IDS."
-msgstr "Este marco se ha utilizado como la base de OC4IDS."
+msgid ""
+"![Design, build and supervision activities may be delivered using "
+"contracts](../_static/images/diagram-project-contract-summary.png)"
+msgstr ""
+"![Las actividades de diseño, construcción y supervisión pueden ser "
+"entregadas usando contratos](../_static/images/es/diagram-project-contract-"
+"summary.png)"
 
 #: ../../docs/projects/index.md:44
-msgid "How does contracting data fit in?"
-msgstr "¿Cómo encajan los datos de contrataciones?"
+msgid ""
+"Summary contracting process data relates to the contracts used to deliver "
+"the project and covers the following stages:"
+msgstr ""
+"Los datos resumidos del proceso de contratación se relacionan con los "
+"contratos utilizados para entregar el proyecto y cubren las siguientes "
+"etapas:"
 
 #: ../../docs/projects/index.md:46
 msgid ""
-"![Design, build and supervision activities may be delivered using "
-"contracts](../../_static/images/diagram-project-contract-phases.png)"
+"**Procurement** - the procuring entity and process; contract type and "
+"status; number of bidders; cost estimate and contract price; suppliers; "
+"scope of work and start date and duration of the contract."
 msgstr ""
-"![Las actividades de diseño, construcción y supervisión pueden ser "
-"entregadas usando contratos](../../_static/images/es/diagram-project-"
-"contract-phases.png)"
+"**Contratación** - la entidad de adquisiciones y el proceso; tipo y estado "
+"del contrato; número de oferentes; estimación de costos y precio del "
+"contrato; proveedores; alcance del trabajo y fecha de inicio y duración del "
+"contrato."
 
-#: ../../docs/projects/index.md:48
+#: ../../docs/projects/index.md:47
 msgid ""
-"The preparation and implementation stages may be delivered using "
-"contractors. This will lead to one or more contracting processes, each with "
-"their own planning, tender, award, contract and implementation stages."
+"**Implementation** - variations to contract price, duration and scope, and "
+"reasons for these changes."
 msgstr ""
-"Las etapas de preparación e implementación pueden ser entregadas usando "
-"contratistas. Esto llevará a uno o más procesos de contratación, cada uno "
-"con su propias etapas de planificación, licitación, adjudicación, contrato e"
-" implementación."
+"**Implementación** - variaciones del precio, duración y alcance del "
+"contrato, y las razones de estos cambios."
 
-#: ../../docs/projects/index.md:50
+#: ../../docs/projects/index.md:49
 msgid ""
-"Monitoring an infrastructure project may largely involve monitoring the "
-"contracts used to deliver it: particularly any primary construction "
-"contracts."
+"CoST recommends disclosing data on contracts for the design, construction "
+"and supervision of a project and any other significant contract outsourced "
+"by the procuring entity."
 msgstr ""
-"El monitoreo de un proyecto de infraestructura puede involucrar en gran "
-"medida el monitoreo de los contratos usados para entregar el proyecto: "
-"particularmente cualquier contrato primario de construcción."
+"CoST recomienda la divulgación de datos sobre contratos para el diseño, "
+"construcción y supervisión de un proyecto y cualquier otro contrato "
+"importante subcontratado por la entidad contratante."
 
-#: ../../docs/projects/index.md:52
-msgid ""
-"It may be possible to [discover and populate some data about infrastructure "
-"projects by looking at contracting data](../../guidance/using), and to use "
-"data from contracting data systems in order to detect updates and "
-"modifications during a contracting process. In other cases, it is simply "
-"necessary to record details of each contract related to an infrastructure "
-"project, and to manually monitor any modifications to these contracts."
-msgstr ""
-"Podría ser posible [descubrir y llenar algunos datos sobre proyectos de "
-"infraestructura mirando los datos de contratación](../../guidance/using), y "
-"usar datos de sistemas de datos de contrataciones para detectar "
-"actualizaciones y modificaciones durante un proceso de contratación. En "
-"otros casos, es simplemente necesario registrar detalles de cada contrato "
-"relacionado a un proyecto de infraestructura, y monitorear manualmente "
-"cualquier modificación a estos contratos."
-
-#: ../../docs/projects/index.md:54
+#: ../../docs/projects/index.md:51
 msgid "How is OC4IDS structured?"
 msgstr "¿Cómo está estructurado OC4IDS?"
 
-#: ../../docs/projects/index.md:56
+#: ../../docs/projects/index.md:53
 msgid ""
-"![OC4IDS is structured in three parts](../../_static/images/diagram-project-"
-"level-data-spec.png)"
+"![OC4IDS is structured in three parts](../_static/images/diagram-toplevel-"
+"summary.png)"
 msgstr ""
-"![OC4IDS está estructurado en tres partes](../../_static/images/es/diagram-"
-"project-level-data-spec.png)"
+"![OC4IDS está estructurado en tres partes](../_static/images/es/diagram-"
+"toplevel-summary.png)"
 
-#: ../../docs/projects/index.md:58
-msgid "OC4IDS is structured in three parts:"
-msgstr "OC4IDS está estructurado en tres partes:"
-
-#: ../../docs/projects/index.md:60
-msgid "Project-Level Data"
-msgstr "Datos a nivel de proyecto"
-
-#: ../../docs/projects/index.md:62
+#: ../../docs/projects/index.md:55
 msgid ""
-"Project-level data includes summary information on project identification, "
-"preparation and completion."
+"The top-level of the OC4IDS data model is used for project-level data, "
+"covering the identification, preparation and completion stages of a project."
 msgstr ""
-"Los datos a nivel de proyecto incluyen información resumida sobre la "
-"identificación, preparación y finalización del proyecto."
+"El nivel superior del modelo de datos OC4IDS se utiliza para datos a nivel "
+"de proyecto, cubriendo las etapas de identificación, preparación y "
+"finalización de un proyecto."
 
-#: ../../docs/projects/index.md:64
-msgid "Contracting process summaries"
-msgstr "Resumen de procesos de contratación"
+#: ../../docs/projects/index.md:57
+msgid "Each project in OC4IDS can have many related contracting processes."
+msgstr ""
+"Cada proyecto en OC4IDS puede tener varios procesos de contratación "
+"relacionados."
 
-#: ../../docs/projects/index.md:66
+#: ../../docs/projects/index.md:59
 msgid ""
-"The `contractingProcesses` array may be used to provide a summary of each of"
-" the contracting processes that is used to support preparation and "
-"implementation in the `summary` section."
+"The `contractingProcesses` array can be used to provide a summary of the "
+"procurement and implementation of each contracting process related to the "
+"project."
 msgstr ""
 "La lista `contractingProcesses` puede ser usada para proveer un resumen de "
-"cada uno de los procesos de contratación que es usado para apoyar la "
-"preparación e implementación en la sección `summary`."
+"la adquisición e implementación de cada proceso de contratación relacionado "
+"con el proyecto."
 
-#: ../../docs/projects/index.md:68
+#: ../../docs/projects/index.md:61
 msgid ""
-"Information on these processes may be manually entered, or, where OCDS data "
-"is available, may be automatically populated from OCDS data via a push or "
-"pull mechanism."
+"The `contractingProcesses/modifications` section can be used to record "
+"information on changes to each contracting process."
 msgstr ""
-"La información sobre estos procesos puede ser ingresada manualmente o, si "
-"hay datos OCDS disponibles, puede ser llenado automáticamente desde los "
-"datos OCDS mediante un mecanismo \"push\" o \"pull\"."
+"La sección `contractingProcesses/modifications` puede ser utilizada para "
+"registrar información sobre cambios en cada proceso de contratación."
 
-#: ../../docs/projects/index.md:70
+#: ../../docs/projects/index.md:63
+msgid "How does detailed contracting data fit in?"
+msgstr "¿Cómo encajan los datos detallados de contratación?"
+
+#: ../../docs/projects/index.md:65
 msgid ""
-"The `modifications` section should be used to record information on changes "
-"to the contracting process, either linked to OCDS releases or recorded "
-"manually."
+"Alongside project-level data and documents, monitoring an infrastructure "
+"project can largely involve monitoring the contracts used to deliver it, "
+"particularly any primary construction contracts."
 msgstr ""
-"La sección `modifications` debería ser usada para registrar información de "
-"los cambios al proceso de contratación, ya sea enlazando a \"releases\" OCDS"
-" o registrando manualmente."
+"Además de los datos y documentos del proyecto, el seguimiento de un proyecto"
+" de infraestructura puede implicar en gran medida el seguimiento de los "
+"contratos utilizados para su realización, especialmente los contratos de "
+"construcción principales."
 
-#: ../../docs/projects/index.md:72
-msgid "Contracting process details"
-msgstr "Detalles de porcesos de contratación"
-
-#: ../../docs/projects/index.md:74
+#: ../../docs/projects/index.md:67
 msgid ""
-"Where OCDS data is available, the `contractingProcesses/releases` array "
-"should act as an index of OCDS releases, recording each update to a "
-"contracting process."
+"It is possible to use contracting data to identify infrastructure projects "
+"for monitoring. It can also be used to monitor projects for changes to "
+"costs, timescales and scope. Each change you identify can be recorded in the"
+" summary contracting process data section of OC4IDS, along with an "
+"explanation."
 msgstr ""
-"Cuando datos OCDS están disponibles, el array "
-"`contractingProcesses/releases` debería actuar como un índice de releases "
-"OCDS, registrando cada actualización a un proceso de contratación."
+"Es posible utilizar datos de contratación para identificar proyectos de "
+"infraestructura a monitorear. También se puede utilizar para monitorear "
+"cambios en los costos, plazos y alcance del proyecto. Cada cambio que "
+"identifique se puede registrar en la sección de resumen de datos del proceso"
+" de contratación de OC4IDS, junto con una explicación."
 
-#: ../../docs/projects/index.md:76
+#: ../../docs/projects/index.md:69
 msgid ""
-"Explanations of any modifications detected when comparing releases should be"
-" provided in the `modifications` section of the contracting process summary."
+"Where detailed contracting data is published using the [Open Contracting "
+"Data Standard](http://standard.open-contracting.org), the "
+"`contractingProcesses/releases` array in OC4IDS can be used to link to OCDS "
+"releases, recording each update to a contracting process."
 msgstr ""
-"Las explicaciones a cualquier modificación detectada al comparar "
-"\"releases\" deberían proveerse en la sección `modifications` del resumen "
-"del proceso de contratación"
+"En el caso que se publiquen datos detallados de contratación utilizando el "
+"[Estándar de datos para las contrataciones abiertas] (http://standard.open-"
+"contracting.org), la lista en OC4IDS `contractingProcesses/releases` se "
+"puede utilizar para vincular a las entregas de OCDS, registrando cada "
+"actualización del proceso de contratación."
 
-#: ../../docs/projects/index.md:78
-msgid "How can I use OC4IDS?"
-msgstr "¿Cómo puedo usar OC4IDS?"
-
-#: ../../docs/projects/index.md:80
-msgid "If you have an existing infrastructure transparency portal..."
-msgstr "Si tiene un portal de transparencia en infraestructura existente..."
-
-#: ../../docs/projects/index.md:82
-msgid "**... you can add an OC4IDS export option to your system.**"
-msgstr "**... puede añadir una opción de exportación OC4IDS a su sistema.**"
-
-#: ../../docs/projects/index.md:84 ../../docs/projects/index.md:102
-msgid "**Why?**"
-msgstr "**¿Por qué?**"
-
-#: ../../docs/projects/index.md:86
+#: ../../docs/projects/index.md:71
 msgid ""
-"So that your project information can be compared with information from "
-"others, and to support the development of common tools for analysis of "
-"infrastructure project information. There are already many tools that work "
-"with contracting process data in OCDS format."
+"OCDS is used to disclose detailed data on contracting processes for goods, "
+"works and services. It covers all stages of a contracting process: planning,"
+" initiation, award, contract and implementation."
 msgstr ""
-"Para que su información de proyecto pueda ser comparada con información de "
-"otros, y para apoyar el desarrollo de herramientas comunes para el análisis "
-"de información de proyectos de infraestructura. Ya existen varias "
-"herramientas que trabajan con datos de procesos de contratación en formato "
-"OCDS."
+"OCDS se utiliza para divulgar datos detallados sobre los procesos de "
+"contratación de bienes, obras y servicios. Cubre todas las etapas de un "
+"proceso de contratación: planificación, iniciación, adjudicación, contrato e"
+" implementación."
+
+#: ../../docs/projects/index.md:73
+msgid ""
+"![Project-level data three stages](../_static/images/diagram-project-level-"
+"data-spec-update.png)"
+msgstr ""
+"![Los datos a nivel de proyecto cubren tres etapas](../_static/images/es"
+"/diagram-project-level-data-spec-update.png)"
+
+#: ../../docs/projects/index.md:75
+msgid ""
+"OCDS data can be used to identify and monitor infrastructure projects. It "
+"can also be used to produce OC4IDS data. Converting OCDS data to OC4IDS data"
+" can reduce the amount of manual data entry required for infrastructure "
+"project monitoring."
+msgstr ""
+"Los datos de OCDS se pueden utilizar para identificar y monitorear proyectos"
+" de infraestructura. También se puede utilizar para producir datos OC4IDS. "
+"La conversión de datos OCDS en datos OC4IDS puede reducir la cantidad datos "
+"cargados manualmente requerida para el monitoreo de proyectos de "
+"infraestructura."
+
+#: ../../docs/projects/index.md:77
+msgid "Tool"
+msgstr "Herramienta"
 
 #: ../../docs/projects/index.md:1
-msgid "Step by step"
-msgstr "Paso a paso"
-
-#: ../../None:1
 msgid ""
-"Refer to the guidance on [publishing data from an infrastructure "
-"transparency portal](../guidance/publishing) for a step by step guide."
+"OCDS Kit's [convert-to-"
+"oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-"
+"oc4ids) command can be used to generate an OC4IDS file from OCDS data about "
+"the contracting processes related to an infrastructure project."
 msgstr ""
-"Consulte la orientación de [publicando datos desde un portal de "
-"transparencia en infraestructura](../guidance/publishing) para una guía paso"
-" a paso."
+"El comando de OCDS Kit "
+"[convertir-a-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html"
+"#convert-to-oc4ids) puede utilizarse para generar un archivo OC4IDS a partir"
+" de los datos de OCDS sobre los procesos de contratación relacionados con un"
+" proyecto de infraestructura."
 
-#: ../../docs/projects/index.md:98
-msgid "If you are designing a new infrastructure transparency portal..."
-msgstr ""
-"Si está diseñando un nuevo portal de transparencia en infraestructura..."
+#: ../../docs/projects/index.md:83
+msgid "How do PPPs fit in?"
+msgstr "¿Cómo encajan las APP?"
 
-#: ../../docs/projects/index.md:100
-msgid "**... OC4IDS can be used by structure your data collection.**"
-msgstr "**... OC4IDS puede usarse para estructurar su recolección de datos.**"
-
-#: ../../docs/projects/index.md:104
+#: ../../docs/projects/index.md:85
 msgid ""
-"The specification has been designed to help you collect well structured "
-"data, comparable across contexts, and with all the fields needed to make "
-"sure the data is clear and unambiguous. It has been design to integrate with"
-" existing open contracting data sources, but to also work in cases where "
-"structured open contracting is not available."
+"Infrastructure projects can be procured in different ways, including through"
+" Public-Private Partnerships."
 msgstr ""
-"La especificación ha sido diseñada para ayudarte a recolectar datos bien "
-"estructurados, comparables a través de distintos contextos, y con todos los "
-"campos necesarios para asegurar que los datos son claros e inequívocos. Ha "
-"sido diseñada para integrarse con fuentes de datos de contrataciones "
-"abiertas existentes, pero también para trabajar en casos donde datos "
-"estructurados de contrataciones abiertas no están disponibles."
+"Los proyectos de infraestructura pueden ser adquiridos de diferentes "
+"maneras, incluyendo mediante  Asociaciones Público-Privadas. "
 
-#: ../../docs/projects/index.md:106
+#: ../../docs/projects/index.md:87
 msgid ""
-"Some of the data structures, such as the organization identifier structure, "
-"may require additional data collection, but if populated with data, allow "
-"connections to be made between project data, company registers and "
-"beneficial ownership information."
+"Where data on PPP projects is published using OCDS for PPPs, the "
+"`contractingProcesses/releases` array in OC4IDS can be used to link to OCDS "
+"for PPPs releases."
 msgstr ""
-"Algunas de las estructuras de datos, tales como la estructura de "
-"identificador de organización, puede requerir la recolección de datos "
-"adicionales, pero cuando son llenados, permite hacer conexiones entre datos "
-"de proyecto, registros de compañías e información de beneficiarios finales."
+"Cuando los datos sobre proyectos de APP se publican utilizando OCDS para "
+"APP, la lista `contractingProcesses/releases` en OC4IDS puede ser utilizada "
+"para vincular a OCDS en entregas APP."
 
-#: ../../docs/projects/index.md:1
-msgid "Things to consider"
-msgstr "Puntos a considerar"
+#: ../../docs/projects/index.md:89
+msgid "![What about PPPs](../_static/images/diagram-ppp.png)"
+msgstr "![Qué ocurre con las APP](../_static/images/es/diagram-ppp.png)"
 
-#: ../../None:1
+#: ../../docs/projects/index.md:91
+msgid "Why use OC4IDS?"
+msgstr "¿Por qué utilizar OC4IDS?"
+
+#: ../../docs/projects/index.md:93
 msgid ""
-"Whilst the schema can be used directly to build a data entry form, user "
-"interfaces should always be designed around user needs."
+"Publishing your data using OC4IDS means that it can be compared with data "
+"from other publishers and supports the development of reusable tools for "
+"analysis of infrastructure project data. OC4IDS data can also  be linked "
+"with other critical documents such as project pipelines and public sector "
+"budgets to allow for the tracking of the project from its identification to "
+"completion across different government institutions."
 msgstr ""
-"Aunque el esquema puede ser usado directamente para construir un formulario "
-"de entrada de datos, las interfaces de usuario deberían siempre ser "
-"diseñadas alrededor de las necesidades del usuario."
+"La publicación de datos utilizando OC4IDS permite que los mismos sean "
+"comparados con datos de otros publicadores y respalda el desarrollo de "
+"herramientas reutilizables para el análisis de datos de proyectos de "
+"infraestructura. Los datos del OC4IDS también pueden ser vinculados con "
+"otros documentos esenciales como ser los flujos de proyectos en curso y los "
+"presupuestos del sector público, para permitir el seguimiento del proyecto "
+"desde su identificación hasta su finalización en diferentes instituciones "
+"gubernamentales."
 
-#: ../../None:3
+#: ../../docs/projects/index.md:95
 msgid ""
-"Data can be stored directly in the JSON structure described by the schema of"
-" the specification **or** it can be stored in custom data structures, and "
-"only converted to the specification's structure when importing or exporting "
-"data."
+"OC4IDS is designed to help you collect well-structured data, comparable "
+"across contexts, and with all the fields needed to make sure the data is "
+"clear and unambiguous. It has been designed to integrate with existing open "
+"contracting data sources, but also to work in cases where structured open "
+"contracting data is not available."
 msgstr ""
-"Los datos pueden ser almacenados directamente en la estructura JSON descrita"
-" por la especificación del esquema **o** puede ser almacenados en "
-"estructuras de datos personalizadas, y convertidas a la estructura de la "
-"especificación sólo cuando se importan o exportan datos."
+"OC4IDS está diseñado para ayudar a recolectar datos estructurados "
+"correctamente, comparables a través de distintos contextos, y con todos los "
+"campos necesarios para asegurar que los datos sean claros y sin "
+"ambigüedades. Ha sido diseñado para integrarse con fuentes de datos de "
+"contrataciones abiertas existentes, pero también para trabajar en casos "
+"donde datos estructurados de contrataciones abiertas no están disponibles."
+
+#: ../../docs/projects/index.md:97
+msgid "When can I use OC4IDS?"
+msgstr "¿Cuándo se puede utilizar OC4IDS?"
+
+#: ../../docs/projects/index.md:99
+msgid "OC4IDS can be used in the following scenarios:"
+msgstr "OC4IDS puede ser utilizado en los siguientes escenarios:"
+
+#: ../../docs/projects/index.md:101
+msgid ""
+"**Publishing structured data from an infrastructure transparency portal**"
+msgstr ""
+"**Publicar datos estructurados desde un portal de transparencia de "
+"infraestructura**"
+
+#: ../../docs/projects/index.md:103
+msgid ""
+"OC4IDS describes a standardized format for publishing structured data on "
+"infrastructure projects."
+msgstr ""
+"OC4IDS describe un formato estandarizado para publicar datos estructurados "
+"sobre proyectos de infraestructura."
+
+#: ../../docs/projects/index.md:105
+msgid ""
+"Read the guidance on [publishing data from an infrastructure transparency "
+"portal](https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/publishing/)."
+msgstr ""
+"Leer la guía sobre [publicar datos desde un portal de transparencia de "
+"infraestructura] (https://standard.open-"
+"contracting.org/infrastructure/latest/es/guidance/publishing/)."
+
+#: ../../docs/projects/index.md:107
+msgid "**Designing a new infrastructure transparency portal**"
+msgstr "**Diseñar un nuevo portal de transparencia de infraestructura**"
+
+#: ../../docs/projects/index.md:109
+msgid ""
+"OC4IDS describes the best practice information you ought to collect and "
+"disclose to support infrastructure project monitoring."
+msgstr ""
+"OC4IDS describe las mejores prácticas sobre la información que se debe "
+"recopilar y divulgar para respaldar el monitoreo de proyectos de "
+"infraestructura."
+
+#: ../../docs/projects/index.md:111
+msgid ""
+"**Using OCDS data for whole life-cycle infrastructure project monitoring**"
+msgstr ""
+"**Utilizar datos OCDS para el monitoreo del ciclo de vida completo de "
+"proyectos de infraestructura**"
+
+#: ../../docs/projects/index.md:113
+msgid "OC4IDS can be used to:"
+msgstr "OC4IDS puede ser utilizado para:"
+
+#: ../../docs/projects/index.md:115
+msgid ""
+"Join up OCDS data published about contracts related to an infrastructure "
+"project"
+msgstr ""
+"Integrar los datos OCDS publicados sobre contratos relacionados con un "
+"proyecto de infraestructura"
+
+#: ../../docs/projects/index.md:116
+msgid "Capture and record data about the project a contract relates to"
+msgstr ""
+"Capturar y registrar datos sobre el proyecto con el que se relaciona un "
+"contrato"
+
+#: ../../docs/projects/index.md:117
+msgid ""
+"Record a list of changes to a contracting process and reasons for those "
+"changes"
+msgstr ""
+"Registrar una lista de cambios en un proceso de contratación y los motivos "
+"de esos cambios"
 
 #: ../../docs/projects/index.md:119
-msgid "If you are designing other data collection tools..."
-msgstr "Si está diseñando otras herramientas de recolección de datos..."
+msgid ""
+"Read the guidance on [using data from procurement systems for infrastructure"
+" project monitoring](https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/using/)."
+msgstr ""
+"Leer la guía sobre [usar datos de sistemas de adquisiciones para monitoreo "
+"de proyectos de infraestructura] (https://standard.open-"
+"contracting.org/infrastructure/latest/es/guidance/using/)."
 
 #: ../../docs/projects/index.md:121
-msgid ""
-"... OC4IDS provides definitions and codelists that can be used to collect "
-"consistent data."
+msgid "**Collecting data on infrastructure projects using a spreadsheet**"
 msgstr ""
-"... OC4IDS provee definiciones y listas de códigos que pueden ser usados "
-"para recolectar datos consistentes."
+"**Recopilar datos sobre proyectos de infraestructura utilizando hojas de "
+"cálculo o CSV**"
 
 #: ../../docs/projects/index.md:123
 msgid ""
-"Consult the [specification reference for definitions](../reference/index)."
+"The OC4IDS schema can be used to generate a spreadsheet template for "
+"collecting data."
 msgstr ""
-"Consulte la [referencia de especificación para "
-"definiciones](../reference/index)."
+"El esquema OC4IDS puede ser utilizado para generar una plantilla de hoja de "
+"cálculo para recolectar datos."
+
+#: ../../docs/projects/index.md:125
+msgid "**Designing other data collection tools**"
+msgstr "**Diseño de otras herramientas de recolección de datos**"
+
+#: ../../docs/projects/index.md:127
+msgid ""
+"OC4IDS provides definitions for fields and codelists which can be used to "
+"collect consistent data."
+msgstr ""
+"OC4IDS provee definiciones para campos y lista de códigos que pueden ser "
+"utilizados para recolectar datos consistentes."
+
+#: ../../docs/projects/index.md:129
+msgid "**Publishing data that complies with the CoST IDS**"
+msgstr "**Publicar datos que cumplan con el IDS de CoST**"
+
+#: ../../docs/projects/index.md:133
+msgid ""
+"Review the [CoST IDS mapping](https://standard.open-"
+"contracting.org/infrastructure/latest/en/cost/) to learn how to publish each"
+" element of the CoST IDS using OC4IDS."
+msgstr ""
+"Revisar el [Mapeo IDS de CoST] (https://standard.open-"
+"contracting.org/infrastructure/latest/en/cost/) para aprender a publicar "
+"cada elemento del IDS de CoST utilizando OC4IDS."
+
+#: ../../docs/projects/index.md:135
+msgid "Are you ready to start using OC4IDS?"
+msgstr "¿Estás listo/a para comenzar a usar OC4IDS?"
+
+#: ../../docs/projects/index.md:1
+msgid ""
+"Complete the [OC4IDS scoping template](https://www.open-"
+"contracting.org/resources/oc4ids-scoping-template/) and share it with the "
+"[OC4IDS helpdesk](mailto:data@open-contracting.org)."
+msgstr ""
+"Completar la [Plantilla de alcance OC4IDS](https://www.open-"
+"contracting.org/resources/oc4ids-scoping-template/) y comparta con la [Mesa "
+"de Ayuda de OC4IDS](mailto:data@open-contracting.org)."

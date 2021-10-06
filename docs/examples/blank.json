@@ -16,7 +16,8 @@
     {
       "scheme": "string",
       "id": "",
-      "description": "string"
+      "description": "string",
+      "uri": "string"
     }
   ],
   "type": "string from projectType codelist",
@@ -87,6 +88,37 @@
       }
     ]
   },
+  "forecasts": [
+    {
+      "id": "",
+      "title": "string",
+      "description": "string",
+      "observations": [
+        {
+          "id": "",
+          "period": {
+            "startDate": "string",
+            "endDate": "string",
+            "maxExtentDate": "string",
+            "durationInDays": "integer"
+          },
+          "value": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "measure": "string",
+          "unit": {
+            "name": "string",
+            "scheme": "string",
+            "id": "",
+            "uri": "string"
+          },
+          "dimensions": {},
+          "notes": "string"
+        }
+      ]
+    }
+  ],
   "parties": [
     {
       "name": "string",
@@ -119,7 +151,14 @@
         "faxNumber": "string",
         "url": "string"
       },
-      "roles": "array"
+      "roles": "array",
+      "people": [
+        {
+          "id": "",
+          "name": "",
+          "jobTitle": ""
+        }
+      ]
     }
   ],
   "publicAuthority": {
@@ -242,6 +281,26 @@
               "durationInDays": "integer"
             }
           }
+        ],
+        "transactions": [
+          {
+            "id": "",
+            "source": "string",
+            "date": "string",
+            "value": {
+              "amount": "number",
+              "currency": "string from currency codelist"
+            },
+            "payer": {
+              "name": "string",
+              "id": ""
+            },
+            "payee": {
+              "name": "string",
+              "id": ""
+            },
+            "uri": "string"
+          }
         ]
       },
       "releases": [
@@ -250,6 +309,37 @@
           "tag": [],
           "date": "",
           "url": ""
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "id": "",
+      "title": "string",
+      "description": "string",
+      "observations": [
+        {
+          "id": "",
+          "period": {
+            "startDate": "string",
+            "endDate": "string",
+            "maxExtentDate": "string",
+            "durationInDays": "integer"
+          },
+          "value": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "measure": "string",
+          "unit": {
+            "name": "string",
+            "scheme": "string",
+            "id": "",
+            "uri": "string"
+          },
+          "dimensions": {},
+          "notes": "string"
         }
       ]
     }

@@ -1,6 +1,3 @@
-# Compare this file to:
-# https://github.com/open-contracting/standard_profile_template/blob/master/include/config.mk
-
 # Edit these variables as appropriate.
 
 # The space-separated, period-prefixed translations to build (for easier substitutions).
@@ -17,7 +14,7 @@ BUILD_DIR=build
 # Extra build files or directories. (These should match paths in .gitignore.)
 EXTRA_BUILD_FILES=chromedriver* docs/_static/process-level docs/_static/project-level
 # Files that are built and distributed (you may use Bash extended globbing).
-DIST_FILES=schema/project-level/project-schema.json schema/project-level/codelists
+DIST_FILES=
 # Directory in which to build .pot files.
 POT_DIR=$(BUILD_DIR)/locale
 # The prefix, if any, to the schema and codelists domains.

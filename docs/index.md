@@ -20,15 +20,14 @@ This Open Contracting for Infrastructure Data Standards (OC4IDS) Toolkit will sh
 
 ## Contents
 
-```eval_rst
-.. toctree::
-   :maxdepth: 2
-   :glob:
+```{toctree}
+:maxdepth: 2
+:glob:
 
-   about
-   projects/index
-   reference/index
-   guidance/index
-   cost/index
-   support
+about
+projects/index
+reference/index
+guidance/index
+cost/index
+support
 ```

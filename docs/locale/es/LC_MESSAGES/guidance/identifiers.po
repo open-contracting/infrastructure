@@ -6,16 +6,17 @@
 # Translators:
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-24 21:31-0400\n"
+"POT-Creation-Date: 2021-06-11 11:14-0400\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Romina Fernandez <rfernandez@cds.com.py>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/OpenDataServices/teams/97433/es/)\n"
+"Last-Translator: Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021\n"
+"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -134,7 +135,7 @@ msgstr ""
 "Este enfoque también permite unir datos de múltiples procesos de "
 "contratación relacionados a un solo proyecto de infraestructura."
 
-#: ../../docs/guidance/identifiers.md:24
+#: ../../docs/guidance/identifiers.md:23
 msgid ""
 "**Establish a national project register managed by a central agency and "
 "integrated into procurement systems.** In this model, officials entering "
@@ -148,7 +149,7 @@ msgstr ""
 "el identificador de proyecto proveniente del registro nacional. Si el "
 "proyecto aún no está en el registro, ellos podrían solicitar su adición."
 
-#: ../../docs/guidance/identifiers.md:26
+#: ../../docs/guidance/identifiers.md:25
 msgid ""
 "This approach supports more comprehensive and effective data quality checks;"
 " for example, project identifiers entered into procurement systems can be "
@@ -161,7 +162,7 @@ msgstr ""
 "registro de proyectos para prevenir errores en la entrada de datos "
 "(\"validation at source\")."
 
-#: ../../docs/guidance/identifiers.md:28
+#: ../../docs/guidance/identifiers.md:27
 msgid ""
 "A central register can ensure that project identifiers are locally unique, "
 "and more robustly supports use cases like identifying projects lacking "
@@ -171,7 +172,7 @@ msgstr ""
 "localmente únicos, y apoyar de forma más robusta casos de uso tales como "
 "identificar proyectos que no tienen contratos relacionados."
 
-#: ../../docs/guidance/identifiers.md:30
+#: ../../docs/guidance/identifiers.md:29
 msgid ""
 "However, this approach requires political will and technical capacity to "
 "establish the central register and integrate it into procurement systems, "
@@ -181,25 +182,23 @@ msgstr ""
 "establecer el registro central e integrarlo en los sistemas de "
 "adquisiciones, y requiere un actor central apropiado para administrarlo."
 
-#: ../../docs/guidance/identifiers.md:32
+#: ../../docs/guidance/identifiers.md:31
 msgid "Project identifiers in OCDS"
 msgstr "Identificadores de proyecto en OCDS"
 
-#: ../../docs/guidance/identifiers.md:34
+#: ../../docs/guidance/identifiers.md:33
 msgid ""
 "In OCDS, the identifier for the individual infrastructure project to which a"
 " contracting process is related should be disclosed using the "
-"`planning/project/id` field, introduced in the [Budget and Projects "
-"extension](https://extensions.open-"
-"contracting.org/en/extensions/budget_project/)."
+"`planning/project/id` field, introduced in the [Project "
+"extension](https://extensions.open-contracting.org/en/extensions/project/)."
 msgstr ""
 "En OCDS, el identificador del proyecto de infraestructura individual al cual"
 " está relacionado un proceso de contratación debería ser divulgado usando el"
 " campo `planning/project/id`, presentado en la [extensión de Presupuestos y "
-"Proyectos](https://extensions.open-"
-"contracting.org/es/extensions/budget_project/)."
+"Proyectos](https://extensions.open-contracting.org/en/extensions/project/)."
 
-#: ../../docs/guidance/identifiers.md:36
+#: ../../docs/guidance/identifiers.md:35
 msgid ""
 "The `planning/budget/projectID` field in OCDS should **not** be used to "
 "disclose the identifier for an individual infrastructure project. This field"
@@ -216,11 +215,11 @@ msgstr ""
 "proyectos de infraestructura individuales, es necesario divulgar estos "
 "identificadores separadamente."
 
-#: ../../docs/guidance/identifiers.md:38
+#: ../../docs/guidance/identifiers.md:37
 msgid "Project identifier prefixes"
 msgstr "Prefijos de identificador de proyecto"
 
-#: ../../docs/guidance/identifiers.md:40
+#: ../../docs/guidance/identifiers.md:39
 msgid ""
 "Project identifiers in OC4IDS should be globally unique; this means that, "
 "across all the data of all OC4IDS publishers, each project identifier refers"
@@ -231,7 +230,7 @@ msgstr ""
 " OC4IDS, cada identificador de proyecto se refiere a exactamente un proyecto"
 " de infraestructura."
 
-#: ../../docs/guidance/identifiers.md:42
+#: ../../docs/guidance/identifiers.md:41
 msgid ""
 "If local project identifiers are available in existing systems or data, "
 "these should be re-used to create globally unique project identifiers for "
@@ -246,7 +245,7 @@ msgstr ""
 "asignar identificadores locales a los proyectos en los nuevos sistemas "
 "usados para generar datos OC4IDS."
 
-#: ../../docs/guidance/identifiers.md:44
+#: ../../docs/guidance/identifiers.md:43
 msgid ""
 "To make local project identifiers globally unique for use in OC4IDS, a "
 "publisher requests a project identifier prefix from the [OC4IDS "
@@ -261,7 +260,7 @@ msgstr ""
 "proyecto, de acuerdo a la estructura que sigue: `[prefijo de identificador "
 "de proyecto]-[identificador local de proyecto]`."
 
-#: ../../docs/guidance/identifiers.md:46
+#: ../../docs/guidance/identifiers.md:45
 msgid ""
 "For example: CoST Honduras requests a project identifier prefix from the "
 "OC4IDS Helpdesk. The OC4IDS Helpdesk assigns the randomly-generated prefix "
@@ -276,7 +275,7 @@ msgstr ""
 "asignado con cada identificador de proyecto local proveniente de su sistema "
 "SISOCS."
 
-#: ../../docs/guidance/identifiers.md:48
+#: ../../docs/guidance/identifiers.md:47
 msgid ""
 "Project identifier prefixes are typically unique to each publisher. However,"
 " multiple publishers in the same jurisdiction can collaboratively decide to "
@@ -293,11 +292,11 @@ msgstr ""
 " una serie de proyectos de infraestructura (para la cual varios publicadores"
 " pueden contribuir) en lugar de identificar un solo publicador."
 
-#: ../../docs/guidance/identifiers.md:1
+#: ../../docs/guidance/identifiers.md:49
 msgid "Request a project identifier prefix"
 msgstr "Solicitar un prefijo de identificador de proyecto"
 
-#: ../../None:1
+#: ../../docs/guidance/identifiers.md:1
 msgid ""
 "To request a project identifier prefix, please e-mail [data@open-"
 "contracting.org](mailto:data@open-contracting.org) with the name of your "
@@ -308,11 +307,11 @@ msgstr ""
 " nombre de su organización y una breve descripción de su implementación "
 "OC4IDS."
 
-#: ../../docs/guidance/identifiers.md:60
+#: ../../docs/guidance/identifiers.md:55
 msgid "Existing prefixes"
 msgstr "Prefijos existentes"
 
-#: ../../docs/guidance/identifiers.md:62
+#: ../../docs/guidance/identifiers.md:57
 msgid ""
 "The list below shows all registered prefixes. You can [download the list as "
 "CSV](https://docs.google.com/spreadsheets/d/e/2PACX-"

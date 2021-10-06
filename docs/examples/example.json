@@ -26,7 +26,15 @@
         "transport",
         "transport.road"
       ],
+      "additionalClassifications": [
+        {
+          "scheme": "COFOG",
+          "id": "04.5.1",
+          "description": "Road transport (CS)"
+        }
+      ],
       "type": "expansion",
+      "purpose": "To help support local economic growth and maintain mobility.",
       "relatedProjects": [
         {
           "id": "1",
@@ -63,7 +71,7 @@
             "locality": "Patcham",
             "region": "Westshire",
             "postalCode": "WS20 5TV",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "uri": "https://www.openstreetmap.org/node/202995"
         },
@@ -78,15 +86,17 @@
             ]
           },
           "gazetteer": {
-            "scheme": "osm",
-            "identifiers": []
+            "scheme": "OSMN",
+            "identifiers": [
+              "https://www.openstreetmap.org/node/26571091"
+            ]
           },
           "address": {
             "streetAddress": "Windlesham Interchange, Old Road",
             "locality": "Windlesham",
             "region": "Westshire",
             "postalCode": "WS21 6RZ",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "uri": "https://www.openstreetmap.org/node/1638915385"
         }
@@ -100,7 +110,7 @@
         "approvalDate": "2015-06-24T00:00:00Z",
         "budgetBreakdown": [
           {
-            "id": "1",
+            "id": "2016",
             "description": "2016 budget allocation",
             "amount": {
               "amount": 10000000,
@@ -116,7 +126,7 @@
             }
           },
           {
-            "id": "2",
+            "id": "2017",
             "description": "2017 budget allocation",
             "amount": {
               "amount": 20000000,
@@ -132,7 +142,7 @@
             }
           },
           {
-            "id": "3",
+            "id": "2018",
             "description": "2018 budget allocation",
             "amount": {
               "amount": 10000000,
@@ -161,7 +171,7 @@
           },
           "address": {
             "postalCode": "LL55 4NY",
-            "countryName": "UK",
+            "countryName": "United Kingdom",
             "streetAddress": "8 Mountain Walk",
             "region": "Westshire",
             "locality": "Patcham"
@@ -175,8 +185,15 @@
           "roles": [
             "procuringEntity",
             "buyer",
-            "administrativeEntity",
-            "publicAuthority"
+            "publicAuthority",
+            "funder"
+          ],
+          "people": [
+            {
+              "id": "1",
+              "name": "Jane Bloggs",
+              "jobTitle": "Chair"
+            }
           ]
         },
         {
@@ -193,7 +210,7 @@
             "locality": "Patcham",
             "region": "Westshire",
             "postalCode": "WS18 5BW",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Kim Designer",
@@ -220,7 +237,7 @@
             "locality": "Mareham",
             "region": "Eastshire",
             "postalCode": "ES22 3TW",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "roles": [
             "tenderer"
@@ -240,7 +257,7 @@
             "locality": "London",
             "region": "London",
             "postalCode": "SE1 1EZ",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Supervisor Manager",
@@ -268,7 +285,7 @@
             "locality": "London",
             "region": "London",
             "postalCode": "SW1A 1AA",
-            "countryName": "UK"
+            "countryName": "United Kingdom"
           },
           "contactPoint": {
             "name": "Construction Manager",
@@ -281,6 +298,38 @@
             "supplier",
             "tenderer"
           ]
+        },
+        {
+          "name": "Motorways Administrator UK",
+          "id": "GB-GOR-XX9876",
+          "identifier": {
+            "scheme": "GB-GOR",
+            "legalName": "Motorways Administrator UK",
+            "id": "XX9876",
+            "uri": "https://government-organisation.register.gov.uk/records/XX9876"
+          },
+          "address": {
+            "postalCode": "BN18 9AB",
+            "countryName": "United Kingdom",
+            "streetAddress": "High Street, Arundel",
+            "region": "West Sussex"
+          },
+          "contactPoint": {
+            "name": "Motorways Administrator",
+            "email": "EX6789@motorways-administration-uk.gov.uk",
+            "telephone": "+44 0678 456 7890",
+            "faxNumber": "+44 0678 456 7891"
+          },
+          "roles": [
+            "administrativeEntity"
+          ],
+          "people": [
+            {
+              "id": "1",
+              "name": "Elstra Lovelace",
+              "jobTitle": "Commercial Contract Officer"
+            }
+          ]
         }
       ],
       "publicAuthority": {
@@ -289,11 +338,11 @@
       },
       "documents": [
         {
-          "id": "consultation-1234",
-          "documentType": "x_consultationResponses",
-          "title": "M75 Junction 4 to 5 Smart Motorway. Summary of Statutory Instrument consultation responses",
-          "description": "Summary of Statutory Instrument consultation responses",
-          "url": "https://example.com/he/M75-junctions-4-to-5-smart-motorway/results/M75J4-5responsereportforstatutoryinstrument-pbamendsjune18.pdf",
+          "id": "plan-1234",
+          "documentType": "procurementPlan",
+          "title": "M75 Junction 4 to 5 Smart Motorway procurement plan.",
+          "description": "Procurement plan for the M75 Junction 4 to 5 Smart Motorway covering the full life-cycle of the Smart Motorway junction upgrade.",
+          "url": "https://example.com/he/M75-junctions-4-to-5-smart-motorway/results/M75J4-5+procurement+plan.pdf",
           "datePublished": "2016-05-01T00:00:00Z",
           "dateModified": "2016-05-11T00:00:00Z",
           "format": "application/pdf",
@@ -324,6 +373,110 @@
           "pageStart": "55",
           "pageEnd": "60",
           "accessDetails": "Documents can be inspected in the Motoways UK Example Archive or users can register for free to access."
+        },
+        {
+          "id": "feasibility-study-8976",
+          "documentType": "feasibilityStudy",
+          "title": "Feasibility Study for Smart Motorway project: benefits and costs",
+          "description": "A report commissioned by Motorways UK to carry out initial investigations and site visits to esablish the suitability of upgrading the existing motorway junctions M75 J4-5 to Smart Motorways.\n\nThe survey recorded existing motorway infrastructures and concluded that upgrading to Smart Motorways is feasible. \n\nAdditional design issues are noted in the report.",
+          "datePublished": "2015-10-10T00:00:00Z",
+          "format": "application/pdf",
+          "author": "Feasibility Consultants Example Limited",
+          "pageStart": "55"
+        }
+      ],
+      "forecasts": [
+        {
+          "id": "physicalProgress",
+          "title": "Physical progress",
+          "observations": [
+            {
+              "id": "1",
+              "measure": "50",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-01-07T00:00:00Z",
+                "endDate": "2018-01-07T00:00:00Z"
+              }
+            },
+            {
+              "id": "2",
+              "measure": "75",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-04-07T00:00:00Z",
+                "endDate": "2018-04-07T00:00:00Z"
+              }
+            },
+            {
+              "id": "3",
+              "measure": "100",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-07-01T00:00:00Z",
+                "endDate": "2018-07-01T00:00:00Z"
+              }
+            }
+          ]
+        }
+      ],
+      "metrics": [
+        {
+          "id": "physicalProgress",
+          "title": "Physical progress",
+          "observations": [
+            {
+              "id": "1",
+              "measure": "50",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-01-07T00:00:00Z",
+                "endDate": "2018-01-07T00:00:00Z"
+              }
+            },
+            {
+              "id": "2",
+              "measure": "75",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-08-07T00:00:00Z",
+                "endDate": "2018-08-07T00:00:00Z"
+              }
+            },
+            {
+              "id": "3",
+              "measure": "100",
+              "unit": {
+                "name": "percent",
+                "id": "P1",
+                "scheme": "UNCEFACT"
+              },
+              "period": {
+                "startDate": "2018-12-01T00:00:00Z",
+                "endDate": "2018-12-01T00:00:00Z"
+              }
+            }
+          ]
         }
       ],
       "contractingProcesses": [
@@ -359,6 +512,10 @@
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
@@ -379,6 +536,26 @@
               "amount": 1950000,
               "currency": "GBP"
             },
+            "transactions": [
+              {
+                "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b-00001-1",
+                "source": "https://openspending.org/motorways-uk-spending/",
+                "date": "2017-08-07T00:00:00Z",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                },
+                "payer": {
+                  "id": "GB-GOR-XX1234",
+                  "name": "Motorways UK"
+                },
+                "payee": {
+                  "id": "GB-COH-11111111",
+                  "name": "A1 Expert Smart Moto Design"
+                },
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+              }
+            ],
             "documents": [
               {
                 "id": "a1b1c1-tender-doc-001",
@@ -386,7 +563,7 @@
                 "title": "M72 improvements at J4-5: Tender Notice",
                 "description": "A tender notice for the design of improvements to M75 J4-5",
                 "url": "https://example.com/Published/a1b1c1-design-001.html",
-                "datePublished": "2018-12-10T16:45:00Z",
+                "datePublished": "2015-12-10T16:45:00Z",
                 "format": "text/html",
                 "author": "Motorways UK"
               }
@@ -408,6 +585,15 @@
                 "award"
               ],
               "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
+            },
+            {
+              "id": "ocds-cdf-pc10010",
+              "date": "2017-08-17T00:00:00Z",
+              "tag": [
+                "implementation",
+                "contractTermination"
+              ],
+              "url": "https://www.example.com/releases/ocds-cdf-pc10010.json"
             }
           ]
         },
@@ -441,8 +627,8 @@
                 "id": "GB-GOR-XX1234"
               },
               "administrativeEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
@@ -538,6 +724,10 @@
               "procuringEntity": {
                 "name": "Motorways UK",
                 "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
               }
             },
             "suppliers": [
@@ -574,7 +764,7 @@
               },
               {
                 "id": "a1b1c1-construction-completion",
-                "documentType": "comletionCertificate",
+                "documentType": "completionCertificate",
                 "title": "Completion certificate for construction at M75 J4-5 upgrade",
                 "description": "Completion certificate for the construction upgrading motorway M75 Junctions 4-5.",
                 "url": "https://example.com/Published/a1b1c1-construction-completion.html",

@@ -1,21 +1,83 @@
 # Changelog
 
+## [0.9.3] - 2021-04-30
+
+### Documentation
+
+* [#210](https://github.com/open-contracting/infrastructure/issues/210):
+  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids).
+  * remove references to the PPP profile, reference individual extensions instead.
+  * update project identification mapping for sector.
+  * replace reference to Budget and projects extension with Projects extension.
+  * remove reference to 'publicAuthority' code from OCDS mapping.
+* [#216](https://github.com/open-contracting/infrastructure/issues/216) - update CoST IDS & OCDS mapping documentation to separate the OC4IDS to CoST IDS mapping and the OCDS to OC4IDS mapping.
+* [#217](https://github.com/open-contracting/infrastructure/issues/217) - remove repeated 'OCDS:' in mapping documentation.
+* [#220](https://github.com/open-contracting/infrastructure/issues/220) - add reactive disclosure elements to CoST IDS & OCDS mapping documentation.
+* [#246](https://github.com/open-contracting/infrastructure/issues/246) - correct link and wording to Project extension in project identifiers guidance.
+* [#268](https://github.com/open-contracting/infrastructure/issues/268), [#269](https://github.com/open-contracting/infrastructure/issues/269) replace 'finalAudit' with 'technicalAuditReport' and 'financialAuditReport' in mapping.
+* [#278](https://github.com/open-contracting/infrastructure/issues/278) - add reactive disclosures to worked example.
+* [#304](https://github.com/open-contracting/infrastructure/issues/304) - update blank OC4IDS file with schema changes, and add project package.
+* [#316](https://github.com/open-contracting/infrastructure/issues/316) - update wording around worked example file, add link to blank.json.
+* [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
+* [#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping.
+* [#339](https://github.com/open-contracting/infrastructure/pull/339) - update link to CoST IDS on mapping page.
+
+### Schema
+
+* [#277](https://github.com/open-contracting/infrastructure/issues/277) - add `forecasts` and `metrics`, which can be used to publish implementation progress reports.
+* [#317](https://github.com/open-contracting/infrastructure/pull/317) - update fields shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5.
+* [#264](https://github.com/open-contracting/infrastructure/issues/264) - add a field and class for natural persons.
+* [#273](https://github.com/open-contracting/infrastructure/issues/273) - add `contractingProcesses/summary/transactions`, which can be used to publish disbursement records.
+* [#284](https://github.com/open-contracting/infrastructure/issues/284) - restore `classification/uri` field.
+* [#223](https://github.com/open-contracting/infrastructure/issues/223) - add stricter validation rules to catch empty arrays, objects and strings.
+
+### Codelists
+
+* [#317](https://github.com/open-contracting/infrastructure/pull/317) - update codes shared with OCDS for PPPs 1.0.0-beta3 and OCDS 1.1.5.
+
+#### documentType codelist
+
+Changed:
+
+* [#261](https://github.com/open-contracting/infrastructure/issues/261) Update description of 'feasibilityStudy' code to include "project".
+* [#267](https://github.com/open-contracting/infrastructure/issues/267) Update description of 'completionCertificate' code to include "project".
+
+Added:
+
+* [#262](https://github.com/open-contracting/infrastructure/issues/262) 'socialImpact'
+* [#263](https://github.com/open-contracting/infrastructure/issues/263) 'resettlementPlan'
+* [#265](https://github.com/open-contracting/infrastructure/issues/265) 'financialAgreement'
+* [#266](https://github.com/open-contracting/infrastructure/issues/266) 'budgetAmendmentApproval'
+* [#268](https://github.com/open-contracting/infrastructure/issues/268) 'technicalAuditReport'
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'financialAuditReport'
+* [#271](https://github.com/open-contracting/infrastructure/issues/271) 'escalationApproval'
+* [#272](https://github.com/open-contracting/infrastructure/issues/272) 'qualityAssuranceReport'
+* [#274](https://github.com/open-contracting/infrastructure/issues/274) 'incorporationCertificate'
+* [#275](https://github.com/open-contracting/infrastructure/issues/275) 'contractAmendment'
+* [#270](https://github.com/open-contracting/infrastructure/issues/270) 'designReport'
+* [#273](https://github.com/open-contracting/infrastructure/issues/273) 'paymentCertificate'
+
+Removed:
+
+* [#269](https://github.com/open-contracting/infrastructure/issues/269) 'finalAudit' (use 'technicalAuditReport' or 'financialAuditReport')
+* [#321](https://github.com/open-contracting/infrastructure/issues/269) 'contractSchedule' (use 'contractAnnexe')
+
 ## [0.9.2] - 2020-06-29
 
 ### Documentation
 
 * [#96](https://github.com/open-contracting/infrastructure/issues/96) - add guidance on providing project identifiers in OCDS data.
-* [#120](https://github.com/open-contracting/infrastructure/issues/120) - add list of registered project identifier prefixes to documentation
+* [#120](https://github.com/open-contracting/infrastructure/issues/120) - add list of registered project identifier prefixes to documentation.
 * [#124](https://github.com/open-contracting/infrastructure/issues/124) - clarify guidance on project identifier prefixes.
 * [#131](https://github.com/open-contracting/infrastructure/issues/131) - replace 'owner' with 'publicAuthority' in mapping.
-* [#133](https://github.com/open-contracting/infrastructure/issues/133) - improve clarity of 'what is a project' in getting started section
+* [#133](https://github.com/open-contracting/infrastructure/issues/133) - improve clarity of 'what is a project' in getting started section.
 * [#136](https://github.com/open-contracting/infrastructure/issues/136) - add project identifier prefix to example file.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - update worked example page to describe project package, use non-normative keywords, and edit for clarity.
 * [#143](https://github.com/open-contracting/infrastructure/issues/143) - add data user guide page.
-* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists that are shared
+* [#145](https://github.com/open-contracting/infrastructure/issues/145) - re-order codelist reference page, refer to OCDS and extension documentation for codelists that are shared.
 * [#146](https://github.com/open-contracting/infrastructure/issues/146) - add 'publicAuthority' role to example file.
-* [#218](https://github.com/open-contracting/infrastructure/pull/218) - add link to CoST guidance note on OGP commitments
-* [#211](https://github.com/open-contracting/infrastructure/issues/211) - update description of 'publicAuthority' role
+* [#218](https://github.com/open-contracting/infrastructure/pull/218) - add link to CoST guidance note on OGP commitments.
+* [#211](https://github.com/open-contracting/infrastructure/issues/211) - update description of 'publicAuthority' role.
 
 ### Schema
 
@@ -26,24 +88,24 @@
 
 #### OC4IDS project schema
 
-* [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance
-* [#132](https://github.com/open-contracting/infrastructure/issues/132) - add a publicAuthority organization reference field  
-* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)
+* [#127](https://github.com/open-contracting/infrastructure/issues/127) - remove the requirement that linked OCDS releases must be provided in release packages containing only one release. Remove recommendation that OCDS releases are cached from schema and add guidance on caching releases from unreliable sources to implementation guidance.
+* [#132](https://github.com/open-contracting/infrastructure/issues/132) - add a publicAuthority organization reference field.
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update properties of fields in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1).
 * [#140](https://github.com/open-contracting/infrastructure/issues/140) - update the description of `project/period` to clarify that this field should be used to provide the planned start and end dates during the preparation phase, for comparison with the actual completion date for the project.
-* [#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work
-* [#141](https://github.com/open-contracting/infrastructure/issues/141) - remove incorrect guidance about other fields from `contractingProcesses/summary/modifications`
-* [#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array
-* [#154](https://github.com/open-contracting/infrastructure/issues/154) - add `.requestDate` field to `project/budget` to record the date of the budget request for the project
-* [#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*
-* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues
-* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix)
-* [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance
-* [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`
+* [#141](https://github.com/open-contracting/infrastructure/issues/141) - clarify that `contractingProcesses/summary/description` is for the contract's *initial* scope of work.
+* [#141](https://github.com/open-contracting/infrastructure/issues/141) - remove incorrect guidance about other fields from `contractingProcesses/summary/modifications`.
+* [#153](https://github.com/open-contracting/infrastructure/issues/153) - add project/relatedProjects array.
+* [#154](https://github.com/open-contracting/infrastructure/issues/154) - add `.requestDate` field to `project/budget` to record the date of the budget request for the project.
+* [#156](https://github.com/open-contracting/infrastructure/issues/156) - fix the description of `completion/endDateDetails` to refer to the end date of the *project*, not that of the *contract*.
+* [#157](https://github.com/open-contracting/infrastructure/issues/157) - fix spelling and grammar issues.
+* [#158](https://github.com/open-contracting/infrastructure/issues/158) - make `contractingProcesses/releases/tag` an array, not a string (bugfix).
+* [#160](https://github.com/open-contracting/infrastructure/issues/160) - describe the components of `project/id`, and link to guidance.
+* [#161](https://github.com/open-contracting/infrastructure/issues/161) - removed `contractingProcesses/summary/ocid` because it duplicates `contractingProcesses/id`.
 * [#182](https://github.com/open-contracting/infrastructure/issues/182) - update validation properties to enforce unique items in arrays and minimum length on required string fields.
 
 ### Codelists
 
-* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1)
+* [#139](https://github.com/open-contracting/infrastructure/issues/139) - update codelists in common with OCDS to version [1.1.4](https://standard.open-contracting.org/1.1/en/schema/changelog/#id1).
 * [#152](https://github.com/open-contracting/infrastructure/issues/152) - add 'expansion' code to projectType codelist.
 
 ## [0.9.1] - 2019-06-17
@@ -73,20 +135,20 @@ In addition to the specific changes to schema and codelists noted below:
 
 ### Schema updates
 
-* `sector` - use projectSector open codelist
-* `ContractingProcess` - add required `id` field
-* `LinkedRelease` - make `id` required
-* `variations` - rename to `modifications`
-* `Location` - add required `id` field
+* `sector` - use projectSector open codelist.
+* `ContractingProcess` - add required `id` field.
+* `LinkedRelease` - make `id` required.
+* `variations` - rename to `modifications`.
+* `Location` - add required `id` field.
 
 ### New codelists
 
-* `projectSector` codelist - add codelist for project sector
+* `projectSector` codelist - add codelist for project sector.
 
 ### Codelist updates
 
-* projectStatus codelist - replace 'construction' with 'implementation'
-* variationType codelist - rename to modificationType
+* projectStatus codelist - replace 'construction' with 'implementation'.
+* variationType codelist - rename to modificationType.
 * partyRole codelist - add OC4IDS codes mentioned in schema and mapping:
   * funder
   * administrativeEntity
