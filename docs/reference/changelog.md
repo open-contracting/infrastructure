@@ -1,5 +1,11 @@
 # Changelog
 
+## [X.X.X] - YYYY-MM-DD
+
+### Documentation
+
+* [#344](https://github.com/open-contracting/infrastructure/pull/344) - add Implementation Model guidance.
+
 ## [0.9.3] - 2021-04-30
 
 ### Documentation
