@@ -79,7 +79,7 @@ To make your data easier to access, consider providing:
 * A page on your website with details of how users can access your data
 
 ````{tip}
-You can use [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/) to convert OC4IDS data between JSON and CSV/Excel format. For example, the the following command generates converts the [example project package](https://standard.open-contracting.org/infrastructure/latest/en/_static/example.json) to Excel format:
+You can use [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/) to convert OC4IDS data between JSON and CSV/Excel format. For example, the the following command converts the [example project package](https://standard.open-contracting.org/infrastructure/latest/en/_static/example.json) to Excel format:
 
 ```shell
 flatten-tool flatten -f xlsx example.json --root-id=id --root-list-path=projects
