@@ -24,7 +24,7 @@ For each project, the infrastructure transparency portal needs to join up the pr
 
 CoST Ukraine uses this model in its [infrastructure transparency portal](https://portal.costukraine.org/), which imports data from Prozorro, the national procurement system. Project identifiers are not captured in [Prozorro](https://prozorro.gov.ua/en) so procuring entities manually match contracts to projects.
 
-The main benefit of this approach is reducing the data entry burden on procuring entities, because they need only enter contracting data in one system. When the data from the procurement system includes project identifiers, the burden is further reduced since the transparency portal can match contracts to projects without manual intervention. The downsides of this approach are increased complexity of the transparency portal and the potential need for development work on the procurement system to enable access to its data.
+The main benefit of this approach is reducing the data entry burden on procuring entities, who need only enter contracting data in one system. When the data from the procurement system includes project identifiers, the burden is further reduced since the transparency portal can match contracts to projects without manual intervention. The downsides of this approach are increased complexity of the transparency portal and the potential need for development work on the procurement system to enable access to its data.
 
 When the procurement system publishes OCDS data, there are two further benefits:
 
