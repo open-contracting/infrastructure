@@ -10,7 +10,7 @@ In this guidance we discuss options for the collection of data, the flow of data
 
 ![Standalone infrastructure transparency portal](../_static/images/implementation_scenario_1.png)
 
-In this model, procuring entities enter project and contract level data directly into an infrastructure transparency portal and the portal publishes project data and summary contracting process data in OC4IDS format. CoST Honduras uses this model in [SISOCS](https://sisocs.org/), as does CoST West Lombok in [INTRAS](http://intras.fllajlombokbaratkab.or.id/).
+In this model, procuring entities enter project and contract level data directly into an infrastructure transparency portal. The portal publishes project data and summary contracting process data in OC4IDS format. CoST Honduras uses this model in [SISOCS](https://sisocs.org/), as does CoST West Lombok in [INTRAS](http://intras.fllajlombokbaratkab.or.id/).
 
 The main benefit of this approach is that it is relatively simple because it does not involve integrating data from different systems. The downside of this approach is that it can increase the data entry burden on procuring entities; for example, if they also need to enter the data about contracting processes into a separate procurement system.
 
