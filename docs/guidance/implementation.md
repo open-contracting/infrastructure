@@ -18,7 +18,7 @@ The main benefit of this approach is that it is relatively simple because it doe
 
 ![Integrated infrastructure transparency portal and procurement system](../_static/images/implementation_scenario_4.png)
 
-In this model, procuring entities enter project data directly into an infrastructure transparency portal and the portal imports data about contracting processes from a separate procurement system. The infrastructure transparency portal publishes project data and summary contracting process data in OC4IDS format.
+In this model, procuring entities enter project data directly into an infrastructure transparency portal, whilst contracting process data is imported from an existing procurement system. The portal then publishes project data and summary contracting process data in OC4IDS format.
 
 For each project, the infrastructure transparency portal needs to join up the project data entered by the procuring entity with contracting data imported from the procurement system. If the contracting data includes [project identifiers](https://standard.open-contracting.org/infrastructure/latest/en/guidance/identifiers/#local-project-identifiers-in-contracting-data), this process can be automated. Otherwise, procuring entities need to manually associate contracts with projects.
 
