@@ -48,4 +48,4 @@ In this model, rather than implementing a separate infrastructure transparency p
 
 Uganda’s Public Procurement and Disposal of Public Assets Authority uses this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/).
 
-The main benefit of this model is that it does not require the development of a separate infrastructure transparency model. The downside of this model is that it may require significant changes to legacy procurement systems.
+The main benefit of this model is that it does not require the development of a separate infrastructure transparency portal. The downside of this model is that it may require significant changes to legacy procurement systems.
