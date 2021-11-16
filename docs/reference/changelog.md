@@ -4,6 +4,7 @@
 
 ### Documentation
 
+* [#344](https://github.com/open-contracting/infrastructure/pull/344) - add implementation models guidance.
 * [#343](https://github.com/open-contracting/infrastructure/pull/343) - add Flatten Tool command to implementation guidance.
 
 ## [0.9.3] - 2021-04-30
