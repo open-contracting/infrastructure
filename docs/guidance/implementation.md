@@ -12,7 +12,7 @@ In this guidance we discuss options for the collection of data, the flow of data
 
 In this model, procuring entities enter project and contract level data directly into an infrastructure transparency portal. The portal publishes project data and summary contracting process data in OC4IDS format. CoST Honduras uses this model in [SISOCS](https://sisocs.org/), as does CoST West Lombok in [INTRAS](http://intras.fllajlombokbaratkab.or.id/).
 
-The main benefit of this approach is that it is relatively simple because it does not involve integrating data from different systems. The downside of this approach is that it can increase the data entry burden on procuring entities who may also need to enter contracting process data into a separate procurement system.
+The main benefit of this approach is that it is relatively simple because it does not involve integrating data from different systems. The downside of this approach is that it can increase the data entry burden on procuring entities who might also need to enter contracting process data into a separate procurement system.
 
 ## Integrated infrastructure transparency portal and procurement system
 
@@ -28,7 +28,7 @@ The main benefit of this approach is reducing the data entry burden on procuring
 
 When the procurement system publishes OCDS data, there are two further benefits:
 
-* OC4IDS Kit’s [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds) command can be used to generate OC4IDS data using the OCDS data as an input, reducing the amount of software development required.
+* OC4IDS Kit’s [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds) command can be used to generate OC4IDS data using the OCDS data as an input, reducing the amount of software development needed.
 * The published OC4IDS data can be linked to the OCDS data from the procurement system, allowing users to dig deeper into detailed data about the contracting processes related to each project.
 
 ![Infrastructure transparency portal with existing source of OCDS data](../_static/images/implementation_scenario_2.png)
@@ -48,4 +48,4 @@ In this model, rather than implementing a separate infrastructure transparency p
 
 Uganda’s Public Procurement and Disposal of Public Assets Authority uses this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/).
 
-The main benefit of this model is that it does not require the development of a separate infrastructure transparency portal. The downside of this model is that it may require significant changes to legacy procurement systems.
+The main benefit of this model is that it does not require the development of a separate infrastructure transparency portal. The downside of this model is that it might involve significant changes to legacy procurement systems.

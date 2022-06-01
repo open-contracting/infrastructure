@@ -15,12 +15,12 @@ Within an infrastructure project, a procuring entity can initiate multiple contr
 ![Projects typically involve multiple contracts](../_static/images/diagram-project-contracting-process.png)
 
 ```{tip}
-The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and should not be applied to an investment project, investment program, or budget code.
+The term "project" is used in many contexts to mean different things. In OC4IDS, the term "project" only refers to an infrastructure project and not to an investment project, investment program, or budget code.
 ```
 
 ## What is the scope of OC4IDS?
 
-OC4IDS describes how to structure and format the disclosures recommended in the CoST IDS.
+OC4IDS describes how to structure and format the disclosures described by the CoST IDS.
 
 The CoST IDS is a best practice framework for disclosure on infrastructure projects. It describes what information to disclose to support monitoring of infrastructure projects.
 
@@ -39,7 +39,7 @@ Project-level data relates to the project as a whole and covers the following st
 
 ### What is summary contracting process data?
 
-![Design, build and supervision activities may be delivered using contracts](../_static/images/diagram-project-contract-summary.png)
+![Design, build and supervision activities can be delivered using contracts](../_static/images/diagram-project-contract-summary.png)
 
 Summary contracting process data relates to the contracts used to deliver the project and covers the following stages:
 
@@ -72,7 +72,7 @@ OCDS is used to disclose detailed data on contracting processes for goods, works
 
 ![Project-level data three stages](../_static/images/diagram-project-level-data-spec-update.png)
 
-OCDS data can be used to identify and monitor infrastructure projects. It can also be used to produce OC4IDS data. Converting OCDS data to OC4IDS data can reduce the amount of manual data entry required for infrastructure project monitoring.
+OCDS data can be used to identify and monitor infrastructure projects. It can also be used to produce OC4IDS data. Converting OCDS data to OC4IDS data can reduce the amount of manual data entry necessary for infrastructure project monitoring.
 
 ```{admonition} Tool
 :class: tip
@@ -128,7 +128,7 @@ OC4IDS provides definitions for fields and codelists which can be used to collec
 
 **Publishing data that complies with the CoST IDS**
 
-OC4IDS describes how to structure and format the disclosures recommended in the CoST IDS.
+OC4IDS describes how to structure and format the disclosures described by the CoST IDS.
 
 Review the [CoST IDS mapping](https://standard.open-contracting.org/infrastructure/latest/en/cost/) to learn how to publish each element of the CoST IDS using OC4IDS.
 

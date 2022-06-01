@@ -44,7 +44,7 @@ The tables below describe each of the fields and objects in OC4IDS. To see how t
 
 We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
 
-When working with data, users should be aware that addresses may not always be broken down using all the properties the specification provides.
+When working with data, users ought to be aware that addresses might not always be broken down using all the properties the specification provides.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Address
@@ -94,7 +94,7 @@ For example:
 
 ### Document
 
-For each document the following structured information may be provided.
+For each document the following structured information can be provided.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Document
@@ -118,7 +118,7 @@ For example, if identifying a company in Colombia, look up its identifier in the
 
 ### Location
 
-A project may have one or more locations. Locations may be expressed in a number of different ways, using one or more of:
+A project can have one or more locations. Locations can be expressed in a number of different ways, using one or more of:
 
 * A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
 * A gazetteer entry (e.g. town name);
@@ -132,7 +132,7 @@ A project may have one or more locations. Locations may be expressed in a number
 
 ### Modification
 
-For each modification, the following structured information may be provided.
+For each modification, the following structured information can be provided.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Modification
@@ -163,7 +163,7 @@ Dates MUST be expressed using a full ISO 8601 date-time including a timezone. E.
 
 > 2018-09-18T11:26:04+01:00
 
-Where the source system does not contain time information, a judgment should be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
+Where the source system does not contain time information, a judgment ought to be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Period

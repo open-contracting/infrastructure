@@ -73,7 +73,7 @@
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications can be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
+      "description": "One or more additional project classifications may be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
@@ -289,7 +289,7 @@
     "ContractingProcessSummary": {
       "type": "object",
       "title": "Summary",
-      "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and modifications may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
+      "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data might vary between implementations; and modifications can be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
@@ -425,12 +425,12 @@
         },
         "finalValue": {
           "title": "Final value",
-          "description": "This should be provided when the contracting process is complete. This may be derived from the sum of `contract.implementation.transactions` values in linked OCDS data where available. In other cases, it may need to be identified and entered manually based on other project documentation.",
+          "description": "This should be provided when the contracting process is complete. This can be derived from the sum of `contract.implementation.transactions` values in linked OCDS data where available. In other cases, it might need to be identified and entered manually based on other project documentation.",
           "$ref": "#/definitions/Value"
         },
         "documents": {
           "title": "Documents",
-          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
+          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents can be found by looking at the published releases.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
