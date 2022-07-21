@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "title": "Identifier or Reference",
-      "description": "An identifier for this infrastructure project. The identifier must be globally unique and must begin with a registered project identifier prefix. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/prefixes).",
+      "description": "An identifier for this infrastructure project. The identifier must be globally unique and must begin with a registered project identifier prefix. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#project-identifier-prefixes).",
       "type": "string",
       "minLength": 1
     },
