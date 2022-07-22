@@ -3,12 +3,12 @@
 The CoST Infrastructure Data Standard (IDS) is a framework for disclosure which is adapted by CoST national programmes to meet their local needs. This section sets out how to use **OC4IDS** and **OCDS** to assess coverage of published data against the IDS. For example, to monitor which elements of IDS are being supplied and whether they are available for all projects or only some.
 
 ```{note}
-It is not possible to fully automate checks of whether disclosures from a particular publisher, or disclosures about a particular project, meet the requirements of the CoST IDS. For example, a human check may be needed to determine whether documents linked to from the data contain the required information.
+It is not possible to fully automate checks of whether disclosures from a particular publisher, or disclosures about a particular project, meet the requirements of the CoST IDS. For example, a human check might be needed to determine whether documents linked to from the data contain the necessary information.
 ```
 
 ## Getting started
 
-*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
+*The following steps might require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 ### (1) Check your data formats
 
@@ -44,7 +44,7 @@ If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping Te
 
 Use the [CoST IDS Mapping](../../cost/index) to construct queries to determine which elements of the IDS are provided in the data.
 
-For example, the CoST IDS mapping describes how the project name element of the IDS should be disclosed:
+For example, the CoST IDS mapping describes how the project name element of the IDS ought to be disclosed:
 
 > Project-Level: Publish as `title`
 

@@ -5,7 +5,7 @@ If you are planning to publish or use data using the OC4IDS then the OC4IDS Help
 We can:
 
 * Help you identify approaches for converting data from your existing systems to OC4IDS;
-* Suggest existing tools and services which may help you publish or use OC4IDS data;
+* Suggest existing tools and services which might help you publish or use OC4IDS data;
 * Provide guidance on mapping your data structures to the standard;
 * Give you feedback on draft data files, and support with validation of your data;
 
@@ -16,5 +16,5 @@ E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your q
 ```{admonition} Contributing
 :class: hint
 
-Developers, or those wishing to provide technical input to OC4IDS, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure).
+Developers, or those wishing to provide technical input to OC4IDS, can go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure).
 ```

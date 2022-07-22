@@ -10,22 +10,22 @@ CoST – the Infrastructure Transparency Initiative (CoST) is the leading global
 
 The [CoST approach](http://infrastructuretransparency.org/our-approach/) is based on four core features:
 
-* **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that should be proactively disclosed at key stages of an infrastructure project cycle.
+* **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that ought to be proactively disclosed at key stages of an infrastructure project cycle.
 
-* **Assurance** - an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams may identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
+* **Assurance** - an independent review of the disclosed data by assurance teams based within CoST national programmes. Teams identify key issues of concern analyzing the data that has been disclosed, and will put technical terms into plain language to allow stakeholders to understand the issues, and hold decision makers to account.
 
 * **Multi-stakeholder working** - each CoST national programme is managed by a stakeholder group including government, private sector and civil society.
 
 * **Social accountability** - raising awareness of key issues arising from the assurance process, and engaging civil society and media to hold decision makers to account.
 
-The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritized different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that should be provided for each infrastructure project.
+The 'Infrastructure Data Standard' is a **framework for disclosure** which has been adapted by a range of CoST national programmes, who have variously prioritized different elements based on their local needs, or who have included additional elements that they wish to monitor: particularly additional kinds of documentation that ought to be provided for each infrastructure project.
 
 You can read more about the Infrastructure Data Standard on the [CoST website](https://infrastructuretransparency.org/our-approach/disclosure/).
 
 ```{admonition} Frameworks and standards
 :class: note
 
-There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that should be disclosed. OCDS describes *specific fields* and how they should be structured as data.
+There is an important distinction between the Infrastructure Data Standard (IDS) and the Open Contracting Data Standard (OCDS). IDS provides a framework to identify *categories of information* that ought to be disclosed. OCDS describes *specific fields* and how they should be structured as data.
 
 The [Open Contracting for Infrastructure Data Standard (OC4IDS)](../projects/index) documented on this site acts as a bridge between the IDS framework, and the idea of a more structured technical data standard.
 ```
@@ -118,7 +118,7 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 In addition to the documents listed in the mapping table, you can use OC4IDS to publish structured data on planned and actual physical and financial progress.
 
-Choose from the following options, depending on the data you collect and the data required by your use cases.
+Choose from the following options, depending on the data you collect and the data needed by your use cases.
 
 **Actual progress over time**
 
@@ -353,13 +353,13 @@ However, `convert-to-oc4ids` does not cover all mappings, nor does it perform cu
 
 #### Mapping codelists
 
-Mappings that depend on the specific classification or codelist used in the OCDS data are not documented in detail, as they may differ by publisher. For example, mapping to the OC4IDS projectSector codelist.
+Mappings that depend on the specific classification or codelist used in the OCDS data are not documented in detail, as they can differ by publisher. For example, mapping to the OC4IDS projectSector codelist.
 
 #### Alternative mappings
 
-Some mappings offer optional alternatives in case the primary mapping isn't available. For example, for OCDS data in which `planning.project.title` isn't available, you can optionally set the project `title` based on the `tender.title`.
+Some mappings offer alternatives in case the primary mapping isn't available. For example, for OCDS data in which `planning.project.title` isn't available, you can set the project `title` based on the `tender.title`.
 
-In order to provide analysts with additional context, alternative mappings may copy additional fields which don't appear in OC4IDS schema. You should remove these fields if you plan to publish your OC4IDS data.
+In order to provide analysts with additional context, some alternative mappings copy additional fields which don't appear in OC4IDS schema. You ought to remove these fields if you plan to publish your OC4IDS data.
 
 #### OCDS extensions
 
@@ -367,7 +367,7 @@ Some mappings use fields from [OCDS extensions](https://standard.open-contractin
 
 #### Handling conflicts and duplicates
 
-Implementations of the mapping should give consideration to:
+Implementations of the mapping ought to give consideration to:
 
 * OCDS data that contains fields that differ between contracting processes but map to a single field in OC4IDS: for example, where `planning.project.title` differs for two contracting processes that relate to the same project, but OC4IDS has a single `title` field at the project level.
 * OCDS data that contains multiple `Organization` objects with the same `.role` that map to a single field in OC4IDS: for example, where a contracting process has two `Organization`s with the 'procuringEntity' role, but OC4IDS has a single `.summary.tender.procuringEntity` field at the contract level.
@@ -378,9 +378,9 @@ Read the `convert-to-oc4ids` [transformation notes](https://ocdskit.readthedocs.
 
 #### Handling multiple currencies
 
-Some mappings involve converting values in OCDS, which may be in different currencies, to a base currency.
+Some mappings involve converting values in OCDS, which can be in different currencies, to a base currency.
 
-Implementations which include multiple currencies should give consideration to [value dating](https://en.wikipedia.org/wiki/Value_date). One approach is to use the compiled release's `date`.
+Implementations which include multiple currencies ought to give consideration to [value dating](https://en.wikipedia.org/wiki/Value_date). One approach is to use the compiled release's `date`.
 
 ### Mapping
 
@@ -452,7 +452,7 @@ Disclosures in the implementation section of the CoST IDS relate to changes to a
 
 If OCDS data is available, these changes can be determined by comparing the most recent OCDS release to a compiled release created from all prior releases (to better understand these concepts, refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/getting_started/releases_and_records/)). The specific fields to monitor for changes between releases are described in the mapping table below.
 
-In some cases, OCDS data may include an explanation of changes in the relevant `amendments` block. In other cases, the reason may need to be manually entered.
+In some cases, OCDS data might include an explanation of changes in the relevant `amendments` block. In other cases, the reason might need to be manually entered.
 
 ```{csv-table-no-translate}
 :header-rows: 1
