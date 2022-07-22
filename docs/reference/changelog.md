@@ -6,6 +6,7 @@
 
 * [#344](https://github.com/open-contracting/infrastructure/pull/344) - add implementation models guidance.
 * [#343](https://github.com/open-contracting/infrastructure/pull/343) - add Flatten Tool command to implementation guidance.
+* [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. LinkedRelease.tag  is now correctly marked as "Required")
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
 
