@@ -173,7 +173,7 @@ def cli():
 def update(ppp_base_url):
     """
     Aligns OC4IDS with OCDS. It uses OCDS for PPPs as a basis, as it includes most definitions and codelists needed in
-    OC4IDS. It copies definitions and codelists across, making modifications as required.
+    OC4IDS. It copies definitions, properties and codelists across, making modifications as required.
 
     Run this command for every release of OCDS for PPPs, review any changes to schemas or codelists, and update the
     command as needed.
@@ -188,9 +188,23 @@ def update(ppp_base_url):
     descriptions of such fields, and instead leaves this up to the editor.
     """
 
-    def copy_def(definition, replacements=None):
-        value = deepcopy(ppp_schema['definitions'][definition])
-        schema['definitions'][definition] = value
+    def copy_element(element, replacements=None, type='definition'):
+        """
+        Copies definitions or properties from the OCDS for PPPs schema to the OC4IDS schema.
+
+        :param str type: The type of the element to copy: definition or property
+        :param element: The definition or property to copy
+        :param replacements: A dict whose keys are tuples containing the path of the field in which the replacement is to be performed and whose values are a function to perform the replacements
+        """  # noqa: E501
+        if type == 'definition':
+            location = 'definitions'
+        elif type == 'property':
+            location = 'properties'
+        else:
+            raise ValueError(f'{type} is not a valid type')
+
+        value = deepcopy(ppp_schema[location][element])
+        schema[location][element] = value
         if replacements:
             for keys, replacement in replacements.items():
                 leaf = keys[-1]
@@ -225,6 +239,7 @@ def update(ppp_base_url):
         'currency.csv',
         'documentType.csv',
         'geometryType.csv',
+        # 'language.csv', Uncomment once OCDS for PPPs is updated for OCDS 1.2
         'locationGazetteers.csv',
         'method.csv',
         'partyRole.csv',
@@ -361,22 +376,28 @@ def update(ppp_base_url):
 
             f.write(text)
 
-    # The following definitions follow the same order as in project-schema.json.
+    # Copy properties
 
-    copy_def('Period', {
+    copy_element('language', {
+        ('title',): lambda s: s.replace('Release language', 'Language'),
+    }, type='property')
+
+    # Copy definitions. The following definitions follow the same order as in project-schema.json.
+
+    copy_element('Period', {
         # Refer to project.
         ('description',): lambda s: s.replace('contracting process', 'project or contracting process'),
     })
 
-    copy_def('Classification', {
+    copy_element('Classification', {
         # Remove line item classifications from the definition.
         ('properties', 'scheme', 'description'): lambda s: s[:s.index(' For line item classifications,')],
     })
     # Remove the `itemClassificationScheme.csv` codelist.
-    del(schema['definitions']['Classification']['properties']['scheme']['codelist'])
-    del(schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
+    del (schema['definitions']['Classification']['properties']['scheme']['codelist'])
+    del (schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
 
-    copy_def('Location')
+    copy_element('Location')
     # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
     schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa: E501
     # Add id to Location.
@@ -398,16 +419,16 @@ def update(ppp_base_url):
     # Set stricter validation on gazetteer identifiers
     schema['definitions']['Location']['properties']['gazetteer']['properties']['identifiers']['uniqueItems'] = True
 
-    copy_def('Value')
+    copy_element('Value')
 
-    copy_def('Organization', {
+    copy_element('Organization', {
         # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
         ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')  # noqa: E501
     })
     # Remove unneeded extensions and details from Organization.
-    del(schema['definitions']['Organization']['properties']['shareholders'])
-    del(schema['definitions']['Organization']['properties']['beneficialOwnership'])
-    del(schema['definitions']['Organization']['properties']['details'])
+    del (schema['definitions']['Organization']['properties']['shareholders'])
+    del (schema['definitions']['Organization']['properties']['beneficialOwnership'])
+    del (schema['definitions']['Organization']['properties']['details'])
 
     # Set stricter validation on party roles
     schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
@@ -423,18 +444,18 @@ def update(ppp_base_url):
         "uniqueItems": True
     }
 
-    copy_def('OrganizationReference')
+    copy_element('OrganizationReference')
 
-    copy_def('Address')
+    copy_element('Address')
 
-    copy_def('ContactPoint', {
+    copy_element('ContactPoint', {
         # Refer to project instead of contracting process.
         ('properties', 'name', 'description'): lambda s: s.replace('contracting process', 'project'),
     })
 
-    copy_def('BudgetBreakdown')
+    copy_element('BudgetBreakdown')
 
-    copy_def('Document', {
+    copy_element('Document', {
         # Link to infrastructure codelist instead of PPP codelist
         ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),  # noqa: E501
     })
@@ -443,19 +464,19 @@ def update(ppp_base_url):
     # noqa: Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type."
     schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."  # noqa: E501
 
-    copy_def('Identifier')
+    copy_element('Identifier')
 
-    copy_def('Metric', {
+    copy_element('Metric', {
         ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
 
     schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
     # noqa: Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs."
 
-    copy_def('Observation')
+    copy_element('Observation')
     # Remove the `relatedImplementationMilestone` property
-    del(schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
+    del (schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
 
-    copy_def('Transaction')
+    copy_element('Transaction')
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)
