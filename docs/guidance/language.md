@@ -4,7 +4,7 @@ You can publish the value of free-text fields, for example `title`, `description
 
 In order for your data to be interoperable and compatible with OC4IDS tools and methodologies, you cannot:
 
-* Translate codes from OC4IDS's codelists, for example the `type` field needs to be set to a code from the [ProjectType codelist](../reference/codelists/#projecttype), like 'construction', which cannot be translated.
+* Translate codes from OC4IDS's codelists, for example the `type` field needs to be set to a code from the [ProjectType codelist](../reference/codelists.md#projecttype), like 'construction', which cannot be translated.
 * Translate field names (keys), for example, you cannot translate `title` to `ชื่อ`.
 
 ## Examples
@@ -19,7 +19,7 @@ The following JSON snippet is valid OC4IDS data. `title` can be published in Tha
 }
 ```
 
-The following JSON snippet is not valid because "การก่อสร้าง" is not a valid code from the [ProjectType codelist](../reference/codelists/#projecttype):
+The following JSON snippet is not valid because "การก่อสร้าง" is not a valid code from the [ProjectType codelist](../reference/codelists.md#projecttype):
 
 ```json
 {
@@ -54,3 +54,7 @@ You can use [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/) to ge
 ```bash
 flatten-tool flatten -s https://standard.open-contracting.org/infrastructure/0.9/es/_downloads/f53c05d8f3cfd5c65a3b33cdf80c5079/project-schema.json -f xlsx --use-titles --root-id=id --root-list-path=projects example.json
 ```
+
+## Publishing in multiple languages
+
+To publish data in multiple languages, follow the above guidance and publish a [separate project](../../reference/package.md) package for each language. You ought to ensure that the values of `id` fields are consistent across each package so that users can find the translation of an object.
