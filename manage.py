@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import csv
 import json
+import os
 import re
 import sys
 import warnings
@@ -12,7 +13,9 @@ from pathlib import Path
 import click
 import requests
 from ocdsextensionregistry import ProfileBuilder
+from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
+
 
 basedir = Path(__file__).resolve().parent
 
@@ -165,6 +168,50 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
 @click.group()
 def cli():
     pass
+
+
+@cli.command()
+def pre_commit():
+    """
+    Generate a CSV indicating which fields can contain non-English text.
+    """
+
+    schema_dir = basedir / 'schema' / 'project-level'
+    guidance_dir = basedir / 'docs' / 'guidance'
+
+    with (schema_dir / 'project-schema.json').open() as f:
+        schema = json.load(f, object_pairs_hook=OrderedDict)
+
+    with open(schema_dir / 'mapping_sheet.csv', 'w') as f:
+        mapping_sheet(schema, f, include_codelist=True, include_deprecated=False)
+
+    with open(schema_dir / 'mapping_sheet.csv', newline='') as infile, \
+         open(guidance_dir / 'internationalization.csv', 'w', newline='') as outfile:
+        reader = csv.DictReader(infile)
+
+        fieldnames = ['path', 'title', 'type', 'values', 'codelist', 'internationalization', 'notes']
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames, lineterminator='\n')
+        writer.writeheader()
+
+        keys_to_delete = ['section', 'description', 'range', 'links', 'deprecated', 'deprecationNotes']
+
+        for row in reader:
+            if row['type'] != 'string' or row['values'] != '' or row['codelist'] != '':
+                row['internationalization'] = False
+            else:
+                row['internationalization'] = True
+
+            if row['path'] in ['id', 'contractingProcesses/id', 'contractingProcesses/summary/ocid']:
+                row['notes'] = 'Only the part of the identifier following the prefix can be internationalized.'
+            elif row['path'] in ['forecasts/observations/measure', 'metrics/observation/measure']:
+                row['notes'] = 'Only string measures can be internationalized.'
+
+            for key in keys_to_delete:
+                del row[key]
+
+            writer.writerow(row)
+
+        os.remove(schema_dir / 'mapping_sheet.csv')
 
 
 @cli.command()
