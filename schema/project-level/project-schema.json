@@ -121,7 +121,7 @@
     },
     "budget": {
       "title": "Total project value",
-      "description": "Specify the projected costs or allocated budget for the project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
+      "description": "Specify the projected costs or allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
       "type": "object",
       "properties": {
         "amount": {
