@@ -7,6 +7,8 @@ In order for your data to be interoperable and compatible with OC4IDS tools and 
 * Translate codes from OC4IDS's codelists, for example the `type` field needs to be set to a code from the [ProjectType codelist](../reference/codelists.md#projecttype), like 'construction', which cannot be translated.
 * Translate field names (keys), for example, you cannot translate `title` to `ชื่อ`.
 
+To check whether a field can be published in your own language, check the [internationalization lookup table](#internationalization-lookup).
+
 ## Examples
 
 The following JSON snippet is valid OC4IDS data. `title` can be published in Thai because it is a free-text field:
@@ -58,3 +60,12 @@ flatten-tool flatten -s https://standard.open-contracting.org/infrastructure/0.9
 ## Publishing in multiple languages
 
 To publish data in multiple languages, follow the above guidance and publish a [separate project](../../reference/package.md) package for each language. You ought to ensure that the values of `id` fields are consistent across each package so that users can find the translation of an object.
+
+## Internationalization lookup
+
+Use the following table to check whether a field can be published in your own language. You can download the table as a {download}`CSV spreadsheet <../_static/internationalization.csv>`.
+
+```{csv-table}
+:file: ../_static/internationalization.csv
+:header-rows: 1
+```
