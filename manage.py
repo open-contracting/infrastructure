@@ -176,7 +176,7 @@ def pre_commit():
     """
 
     schema_dir = basedir / 'schema' / 'project-level'
-    guidance_dir = basedir / 'docs' / 'guidance'
+    static_dir = basedir / 'docs' / '_static'
 
     with (schema_dir / 'project-schema.json').open() as f:
         schema = json.load(f, object_pairs_hook=OrderedDict)
@@ -185,14 +185,22 @@ def pre_commit():
         mapping_sheet(schema, f, include_codelist=True, include_deprecated=False)
 
     with open(schema_dir / 'mapping_sheet.csv', newline='') as infile, \
-         open(guidance_dir / 'internationalization.csv', 'w', newline='') as outfile:
+         open(static_dir / 'internationalization.csv', 'w', newline='') as outfile:
         reader = csv.DictReader(infile)
 
-        fieldnames = ['path', 'title', 'type', 'values', 'codelist', 'internationalization', 'notes']
+        fieldnames = ['path', 'title', 'internationalization', 'notes']
         writer = csv.DictWriter(outfile, fieldnames=fieldnames, lineterminator='\n')
         writer.writeheader()
 
-        keys_to_delete = ['section', 'description', 'range', 'links', 'deprecated', 'deprecationNotes']
+        keys_to_delete = ['section',
+                          'description',
+                          'type',
+                          'values',
+                          'codelist',
+                          'range',
+                          'links',
+                          'deprecated',
+                          'deprecationNotes']
 
         for row in reader:
             if row['type'] != 'string' or row['values'] != '' or row['codelist'] != '':
