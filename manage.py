@@ -16,7 +16,6 @@ from ocdsextensionregistry import ProfileBuilder
 from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
 
-
 basedir = Path(__file__).resolve().parent
 
 
