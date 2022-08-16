@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import csv
 import json
-import os
 import re
 import sys
 import warnings
@@ -11,6 +10,7 @@ from io import StringIO
 from pathlib import Path
 
 import click
+import jsonref
 import requests
 from ocdsextensionregistry import ProfileBuilder
 from ocdskit.mapping_sheet import mapping_sheet
@@ -172,53 +172,28 @@ def cli():
 @cli.command()
 def pre_commit():
     """
-    Generate a CSV indicating which fields can contain non-English text.
+    Generate a CSV file of fields that can contain non-English text.
     """
+    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
+        schema = jsonref.JsonRef.replace_refs(json.load(f))
 
-    schema_dir = basedir / 'schema' / 'project-level'
-    static_dir = basedir / 'docs' / '_static'
+    _, rows = mapping_sheet(schema, include_codelist=True, include_deprecated=False)
 
-    with (schema_dir / 'project-schema.json').open() as f:
-        schema = json.load(f, object_pairs_hook=OrderedDict)
+    with (basedir / 'docs' / '_static' / 'i18n.csv').open('w') as f:
+        fieldnames = ['path', 'title', 'translatable', 'notes']
 
-    with open(schema_dir / 'mapping_sheet.csv', 'w') as f:
-        mapping_sheet(schema, f, include_codelist=True, include_deprecated=False)
-
-    with open(schema_dir / 'mapping_sheet.csv', newline='') as infile, \
-         open(static_dir / 'internationalization.csv', 'w', newline='') as outfile:
-        reader = csv.DictReader(infile)
-
-        fieldnames = ['path', 'title', 'internationalization', 'notes']
-        writer = csv.DictWriter(outfile, fieldnames=fieldnames, lineterminator='\n')
+        writer = csv.DictWriter(f, fieldnames=fieldnames, lineterminator='\n', extrasaction='ignore')
         writer.writeheader()
 
-        keys_to_delete = ['section',
-                          'description',
-                          'type',
-                          'values',
-                          'codelist',
-                          'range',
-                          'links',
-                          'deprecated',
-                          'deprecationNotes']
+        for row in rows:
+            row['translatable'] = row['type'] == 'string' and not row['values'] and not row['codelist']
 
-        for row in reader:
-            if row['type'] != 'string' or row['values'] != '' or row['codelist'] != '':
-                row['internationalization'] = False
-            else:
-                row['internationalization'] = True
-
-            if row['path'] in ['id', 'contractingProcesses/id', 'contractingProcesses/summary/ocid']:
+            if row['path'] in ('id', 'contractingProcesses/id', 'contractingProcesses/summary/ocid'):
                 row['notes'] = 'Only the part of the identifier following the prefix can be internationalized.'
-            elif row['path'] in ['forecasts/observations/measure', 'metrics/observation/measure']:
+            elif row['path'] in ('forecasts/observations/measure', 'metrics/observation/measure'):
                 row['notes'] = 'Only string measures can be internationalized.'
 
-            for key in keys_to_delete:
-                del row[key]
-
             writer.writerow(row)
-
-        os.remove(schema_dir / 'mapping_sheet.csv')
 
 
 @cli.command()
@@ -226,8 +201,10 @@ def pre_commit():
               default='https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/')
 def update(ppp_base_url):
     """
-    Aligns OC4IDS with OCDS. It uses OCDS for PPPs as a basis, as it includes most definitions and codelists needed in
-    OC4IDS. It copies definitions, properties and codelists across, making modifications as required.
+    Align OC4IDS with OCDS.
+
+    It uses OCDS for PPPs as a basis, because it includes most definitions and codelists needed in OC4IDS. It copies
+    definitions, properties and codelists across, making modifications as required.
 
     Run this command for every release of OCDS for PPPs, review any changes to schemas or codelists, and update the
     command as needed.
@@ -242,23 +219,17 @@ def update(ppp_base_url):
     descriptions of such fields, and instead leaves this up to the editor.
     """
 
-    def copy_element(element, replacements=None, type='definition'):
+    def copy_element(name, replacements=None, root='definitions'):
         """
         Copies definitions or properties from the OCDS for PPPs schema to the OC4IDS schema.
 
-        :param str type: The type of the element to copy: definition or property
-        :param element: The definition or property to copy
-        :param replacements: A dict whose keys are tuples containing the path of the field in which the replacement is to be performed and whose values are a function to perform the replacements
-        """  # noqa: E501
-        if type == 'definition':
-            location = 'definitions'
-        elif type == 'property':
-            location = 'properties'
-        else:
-            raise ValueError(f'{type} is not a valid type')
-
-        value = deepcopy(ppp_schema[location][element])
-        schema[location][element] = value
+        :param name: The name of the definition or property to copy
+        :param replacements: A dict whose keys are tuples containing the path of the field in which the replacement is
+                             to be performed and whose values are a function to perform the replacements
+        :param str root: "definitions" or "properties"
+        """
+        value = deepcopy(ppp_schema[root][name])
+        schema[root][name] = value
         if replacements:
             for keys, replacement in replacements.items():
                 leaf = keys[-1]
@@ -293,7 +264,8 @@ def update(ppp_base_url):
         'currency.csv',
         'documentType.csv',
         'geometryType.csv',
-        # 'language.csv', Uncomment once OCDS for PPPs is updated for OCDS 1.2
+        # Uncomment once OCDS for PPPs is updated for OCDS 1.2.
+        # 'language.csv',
         'locationGazetteers.csv',
         'method.csv',
         'partyRole.csv',
@@ -434,7 +406,7 @@ def update(ppp_base_url):
 
     copy_element('language', {
         ('title',): lambda s: s.replace('Release language', 'Language'),
-    }, type='property')
+    }, root='properties')
 
     # Copy definitions. The following definitions follow the same order as in project-schema.json.
 
