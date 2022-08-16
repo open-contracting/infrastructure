@@ -448,8 +448,8 @@ def update(ppp_base_url):
         ('properties', 'scheme', 'description'): lambda s: s[:s.index(' For line item classifications,')],
     })
     # Remove the `itemClassificationScheme.csv` codelist.
-    del (schema['definitions']['Classification']['properties']['scheme']['codelist'])
-    del (schema['definitions']['Classification']['properties']['scheme']['openCodelist'])
+    del schema['definitions']['Classification']['properties']['scheme']['codelist']
+    del schema['definitions']['Classification']['properties']['scheme']['openCodelist']
 
     copy_element('Location')
     # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
@@ -480,9 +480,9 @@ def update(ppp_base_url):
         ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')  # noqa: E501
     })
     # Remove unneeded extensions and details from Organization.
-    del (schema['definitions']['Organization']['properties']['shareholders'])
-    del (schema['definitions']['Organization']['properties']['beneficialOwnership'])
-    del (schema['definitions']['Organization']['properties']['details'])
+    del schema['definitions']['Organization']['properties']['shareholders']
+    del schema['definitions']['Organization']['properties']['beneficialOwnership']
+    del schema['definitions']['Organization']['properties']['details']
 
     # Set stricter validation on party roles
     schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
@@ -528,7 +528,7 @@ def update(ppp_base_url):
 
     copy_element('Observation')
     # Remove the `relatedImplementationMilestone` property
-    del (schema['definitions']['Observation']['properties']['relatedImplementationMilestone'])
+    del schema['definitions']['Observation']['properties']['relatedImplementationMilestone']
 
     copy_element('Transaction')
 
