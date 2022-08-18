@@ -10,7 +10,6 @@ from io import StringIO
 from pathlib import Path
 
 import click
-import jsonref
 import requests
 from ocdsextensionregistry import ProfileBuilder
 from ocdskit.mapping_sheet import mapping_sheet
@@ -175,7 +174,7 @@ def pre_commit():
     Generate a CSV file of fields that can contain non-English text.
     """
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
-        schema = jsonref.JsonRef.replace_refs(json.load(f))
+        schema = json.load(f)
 
     _, rows = mapping_sheet(schema, include_codelist=True, include_deprecated=False)
 
