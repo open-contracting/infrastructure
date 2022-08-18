@@ -23,6 +23,8 @@ DOMAIN_PREFIX=infrastructure-
 TRANSIFEX_PROJECT=oc4ids-09
 # Any additional extract targets.
 EXTRACT_TARGETS=extract_mappings
+# Extra arguments for sphinx-autobuild.
+SPHINX_AUTOBUILD_EXTRA_ARGS=--re-ignore $(DOCS_DIR)/_static.*
 
 # The path to the branch of the documentation to print to PDF.
 PDF_ROOT=/infrastructure/latest
