@@ -129,7 +129,7 @@
           "description": "A short free-text description of the budget source that will fund the project. This may be used to provide human-readable information on: the budget category for the project and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
           "type": "string",
           "minLength": 1
-      },
+        },
         "amount": {
           "title": "Amount",
           "description": "The projected costs or allocated budget for the project.",
