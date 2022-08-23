@@ -123,6 +123,7 @@
       "title": "Total project value",
       "description": "Specify the projected costs or allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
       "type": "object",
+      "properties": {
       "description": {
         "title": "Budget Source",
         "description": "A short free-text description of the budget source that will fund the project. This may be used to provide human-readable information on: the budget category for the project and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
