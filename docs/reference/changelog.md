@@ -7,8 +7,8 @@
 * [#344](https://github.com/open-contracting/infrastructure/pull/344) - add implementation models guidance.
 * [#343](https://github.com/open-contracting/infrastructure/pull/343) - add Flatten Tool command to implementation guidance.
 * [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. LinkedRelease.tag  is now correctly marked as "Required")
-
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
+* [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
 
 ### Schema
 
@@ -18,6 +18,7 @@
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
+
 ## [0.9.3] - 2021-04-30
 
 ### Documentation
