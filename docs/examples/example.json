@@ -494,6 +494,7 @@
             "tender": {
               "procurementMethod": "limited",
               "procurementMethodDetails": "Restricted procedure",
+              "datePublished": "2016-04-01T00:00:00Z",
               "costEstimate": {
                 "amount": 2000000,
                 "currency": "GBP"
@@ -611,6 +612,7 @@
             "tender": {
               "procurementMethod": "limited",
               "procurementMethodDetails": "Framework",
+              "datePublished": "2017-01-01T00:00:00Z",
               "costEstimate": {
                 "amount": 5000000,
                 "currency": "GBP"
@@ -710,6 +712,7 @@
             "tender": {
               "procurementMethod": "limited",
               "procurementMethodDetails": "Restricted procedure",
+              "datePublished": "2017-01-01T00:00:00Z",
               "costEstimate": {
                 "amount": 33000000,
                 "currency": "GBP"

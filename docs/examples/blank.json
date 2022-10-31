@@ -195,6 +195,7 @@
         "tender": {
           "procurementMethod": "string from method codelist",
           "procurementMethodDetails": "",
+          "datePublished": "string",
           "costEstimate": {
             "amount": "number",
             "currency": "string from currency codelist"
