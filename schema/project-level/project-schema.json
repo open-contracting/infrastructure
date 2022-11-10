@@ -73,7 +73,7 @@
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications, from the [additionalClassificationsScheme codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#additionalclassificationsscheme), may be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
+      "description": "One or more additional project classifications, from the [additionalClassificationsScheme codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#additionalclassificationsscheme), may be provided to describe the social or economic focus of the project.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
@@ -657,10 +657,10 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken.",
-          "type": [
-            "string"
-          ],
+          "description": "The additional classification scheme, using the open [additionalClassificationsScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#additionalclassificationsscheme) codelist.",
+          "type": "string",
+          "codelist": "additionalClassificationsScheme.csv",
+          "openCodelist": true,
           "minLength": 1
         },
         "id": {
