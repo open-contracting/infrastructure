@@ -270,7 +270,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "An identifier for this contracting process. If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](https://standard.open-contracting.org/1.1/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "description": "An identifier for this contracting process. If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into.",
           "type": "string",
           "minLength": 1
         },
