@@ -6,156 +6,169 @@
 }
 </style>
 
-The tables below describe each of the fields and objects in OC4IDS. To see how they fit together, consult the [schema browser](browser).
+This section presents each field in the schema in tables with additional information in paragraphs. Required fields are indicated in the **Required** column. For fields that reference a sub-schema, a link is provided to a table with details of the sub-schema. To see how the fields and sub-schemas fit together, consult the [schema browser](browser).
 
 ## Project
 
+The top-level object in OC4IDS is a project.
+
+A project is defined as:
+
+> The development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+
+Each project has the following fields:
+
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
-:collapse: period,assetLifetime,sector,additionalClassifications,locations,budget/amount,budget/budgetBreakdown,parties,documents,contractingProcesses,relatedProjects
+:collapse: period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 ```
 
-## ContractingProcess
+## Sub-schemas
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:include:
+This section lists each sub-schema in the OC4IDS schema. Some sub-schemas are referenced in multiple places in the schema.
+
+### ContractingProcess
+`ContractingProcess` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/ContractingProcess/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`contractingProcesses`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,contractingProcesses)
+
+Each `ContractingProcess` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcess
-:collapse: releases,summary
+:collapse: id,summary,releases
 ```
 
-## ContractingProcessSummary
+:::
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:include:
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses
+ :title: contractingProcesses
+```
+
+:::
+
+::::
+
+### ContractingProcessSummary
+`ContractingProcessSummary` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/ContractingProcessSummary/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcess/summary`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcess,summary)
+
+Each `ContractingProcessSummary` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
-:collapse: documents
+:collapse: ocid,externalReference,nature,title,description,status,tender,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
 ```
 
-## LinkedRelease
+:::
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:include:
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary
+ :title: contractingProcesses/0/summary
+```
+
+:::
+
+::::
+
+### LinkedRelease
+`LinkedRelease` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/LinkedRelease/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcess/releases`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcess,releases)
+
+Each `LinkedRelease` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/LinkedRelease
+:collapse: id,tag,date,url
 ```
 
-## Components
+:::
 
-### Address
+:::{tab-item} Examples
 
-We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
-
-When working with data, users ought to be aware that addresses might not always be broken down using all the properties the specification provides.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Address
-:include:
-:collapse:
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/releases
+ :title: contractingProcesses/0/releases
 ```
 
-### BudgetBreakdown
+:::
 
-A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
-
-See the [documentation of the OCDS Budget Breakdown extension](https://extensions.open-contracting.org/en/extensions/budget/master/) for more details of this data model. BudgetBreakdown can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://extensions.open-contracting.org/en/extensions/budget_and_spend/master/).
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/BudgetBreakdown
-:include:
-:collapse:
-```
-
-### Classification
-
-A classification consists of an identifier for the codelist (the `scheme`) and a code from that codelist (the `id`), and then a human-readable label for the classification (the `description`).
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Classification
-:include:
-:collapse:
-```
-
-For example:
-
-```json
-{
-    "scheme":"COFOG",
-    "id":"05.2",
-    "description":"Waste water management"
-}
-```
-
-### ContactPoint
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/ContactPoint
-:include:
-:collapse:
-```
-
-### Document
-
-For each document the following structured information can be provided.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Document
-:include:
-:collapse:
-```
-
-### Identifier
-
-Use of stable official organization identifiers can help join up data between systems.
-
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
-
-For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Identifier
-:include:
-:collapse:
-```
-
-### Location
-
-A project can have one or more locations. Locations can be expressed in a number of different ways, using one or more of:
-
-* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
-* A gazetteer entry (e.g. town name);
-* An address.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Location
-:include:
-:collapse: address
-```
+::::
 
 ### Modification
 
 For each modification, the following structured information can be provided.
 
-```{jsonschema} ../../build/current_lang/project-schema.json
+`Modification` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Modification/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/modifications`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,modifications)
+
+Each `Modification` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Modification
-:include:
-:collapse:
+:collapse: id,date,description,rationale,type,releaseID,oldContractValue,newContractValue,oldContractPeriod,newContractPeriod
 ```
 
-### Organization
+:::
 
-For each organization, provide as much structured data as you can.
+:::{tab-item} Examples
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Organization
-:collapse: identifier,additionalIdentifiers,address,contactPoint
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications
+ :title: contractingProcesses/0/summary/modifications
 ```
 
-### OrganizationReference
+:::
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/OrganizationReference
-:include:
-:collapse:
-```
+::::
 
 ### Period
 
@@ -165,48 +178,778 @@ Dates MUST be expressed using a full ISO 8601 date-time including a timezone. E.
 
 Where the source system does not contain time information, a judgment ought to be made as to the relevant time to attach (e.g. start of the day; end of the working day etc.).
 
-```{jsonschema} ../../build/current_lang/project-schema.json
+`Period` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Period/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,period)
+* [`assetLifetime`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,assetLifetime)
+* [`ContractingProcessSummary/contractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
+* [`Modification/oldContractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,oldContractPeriod)
+* [`Modification/newContractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,newContractPeriod)
+* [`BudgetBreakdown/period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,period)
+* [`Observation/period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Observation,period)
+
+Each `Period` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Period
-:include:
-:collapse:
+:collapse: startDate,endDate,maxExtentDate,durationInDays
 ```
 
-### Person
+:::
 
-Use this object when you need to disclose the details of people associated with, representing or working on behalf of an organization involved in the project.
+:::{tab-item} Examples
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Person
-:include:
-:collapse:
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/period
+ :title: period
 ```
 
-### RelatedProject
-
-A reference to a project related to the same set of infrastructure assets as the current project.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/RelatedProject
-:include:
-:collapse:
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/assetLifetime
+ :title: assetLifetime
 ```
 
-### Transaction
-
-A spending transaction related to a contracting process.
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Transaction
-:include:
-:collapse:
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/budget/budgetBreakdown/0/period
+ :title: budget/budgetBreakdown/0/period
 ```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/forecasts/0/observations/0/period
+ :title: forecasts/0/observations/0/period
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/contractPeriod
+ :title: contractingProcesses/0/summary/contractPeriod
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/oldContractPeriod
+ :title: contractingProcesses/0/summary/modifications/0/oldContractPeriod
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/newContractPeriod
+ :title: contractingProcesses/0/summary/modifications/0/newContractPeriod
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/metrics/0/observations/0/period
+ :title: metrics/0/observations/0/period
+```
+
+:::
+
+::::
+
+### Classification
+
+A classification consists of an identifier for the codelist (the `scheme`) and a code from that codelist (the `id`), and then a human-readable label for the classification (the `description`).
+
+`Classification` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Classification/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`additionalClassifications`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,additionalClassifications)
+
+Each `Classification` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Classification
+:collapse: scheme,id,description,uri
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/additionalClassifications
+ :title: additionalClassifications
+```
+
+:::
+
+::::
+
+### Location
+
+A project can have one or more locations. Locations can be expressed in a number of different ways, using one or more of:
+
+* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
+* A gazetteer entry (e.g. town name);
+* An address.
+
+`Location` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Location/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`locations`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,locations)
+
+Each `Location` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Location
+:collapse: id,description,geometry,gazetteer,uri,address
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/locations
+ :title: locations
+```
+
+:::
+
+::::
 
 ### Value
 
 All values should be published along with their currency using the following structure.
 
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Value
-:include:
-:collapse:
+`Value` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Value/description
 ```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/contractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,contractValue)
+* [`ContractingProcessSummary/finalValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,finalValue)
+* [`Modification/oldContractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,oldContractValue)
+* [`Modification/newContractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,newContractValue)
+* [`BudgetBreakdown/amount`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,amount)
+* [`Observation/value`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Observation,value)
+* [`Transaction/value`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,value)
+
+Each `Value` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Value
+:collapse: amount,currency
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/budget/amount
+ :title: budget/amount
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
+ :title: budget/budgetBreakdown/0/amount
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/costEstimate
+ :title: contractingProcesses/0/summary/tender/costEstimate
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/contractValue
+ :title: contractingProcesses/0/summary/contractValue
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/finalValue
+ :title: contractingProcesses/0/summary/finalValue
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
+ :title: contractingProcesses/0/summary/transactions/0/value
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/completion/finalValue
+ :title: completion/finalValue
+```
+
+:::
+
+::::
+
+### Organization
+
+For each organization, provide as much structured data as you can.
+
+`Organization` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Organization/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`parties`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,parties)
+
+Each `Organization` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Organization
+:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,people
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties
+ :title: parties
+```
+
+:::
+
+::::
+
+### OrganizationReference
+
+`OrganizationReference` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/OrganizationReference/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`publicAuthority`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,publicAuthority)
+* [`ContractingProcessSummary/suppliers`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,suppliers)
+* [`BudgetBreakdown/sourceParty`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,sourceParty)
+* [`Transaction/payer`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,payer)
+* [`Transaction/payee`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,payee)
+
+Each `OrganizationReference` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/OrganizationReference
+:collapse: name,id
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
+ :title: budget/budgetBreakdown/0/sourceParty
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/publicAuthority
+ :title: publicAuthority
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/tenderers
+ :title: contractingProcesses/0/summary/tender/tenderers
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/procuringEntity
+ :title: contractingProcesses/0/summary/tender/procuringEntity
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/administrativeEntity
+ :title: contractingProcesses/0/summary/tender/administrativeEntity
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/suppliers
+ :title: contractingProcesses/0/summary/suppliers
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payer
+ :title: contractingProcesses/0/summary/transactions/0/payer
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payee
+ :title: contractingProcesses/0/summary/transactions/0/payee
+```
+
+:::
+
+::::
+
+### Address
+
+We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
+
+When working with data, users ought to be aware that addresses might not always be broken down using all the properties the specification provides.
+
+`Address` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Address/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`Location/address`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Location,address)
+* [`Organization/address`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,address)
+
+Each `Address` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Address
+:collapse: streetAddress,locality,region,postalCode,countryName
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/locations/0/address
+ :title: locations/0/address
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties/0/address
+ :title: parties/0/address
+```
+
+:::
+
+::::
+
+### ContactPoint
+
+`ContactPoint` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/ContactPoint/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`Organization/contactPoint`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,contactPoint)
+
+Each `ContactPoint` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/ContactPoint
+:collapse: name,email,telephone,faxNumber,url
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties/0/contactPoint
+ :title: parties/0/contactPoint
+```
+
+:::
+
+::::
+
+### BudgetBreakdown
+
+A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
+
+See the [documentation of the OCDS Budget Breakdown extension](https://extensions.open-contracting.org/en/extensions/budget/master/) for more details of this data model. BudgetBreakdown can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://extensions.open-contracting.org/en/extensions/budget_and_spend/master/).
+
+`BudgetBreakdown` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/BudgetBreakdown/description
+```
+
+This sub-schema is referenced by the following properties:
+
+Each `BudgetBreakdown` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/BudgetBreakdown
+:collapse: id,description,amount,uri,period,sourceParty
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/budget/budgetBreakdown
+ :title: budget/budgetBreakdown
+```
+
+:::
+
+::::
+
+### Document
+
+For each document the following structured information can be provided.
+
+`Document` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Document/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`documents`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,documents)
+* [`ContractingProcessSummary/documents`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,documents)
+
+Each `Document` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Document
+:collapse: id,documentType,title,description,url,datePublished,dateModified,format,language,pageStart,pageEnd,accessDetails,author
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/documents
+ :title: documents
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/documents
+ :title: contractingProcesses/0/summary/documents
+```
+
+:::
+
+::::
+
+### Identifier
+
+Use of stable official organization identifiers can help join up data between systems.
+
+Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
+
+For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
+
+`Identifier` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Identifier/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`Organization/identifier`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,identifier)
+* [`Organization/additionalIdentifiers`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,additionalIdentifiers)
+
+Each `Identifier` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Identifier
+:collapse: scheme,id,legalName,uri
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties/0/identifier
+ :title: parties/0/identifier
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties/0/additionalIdentifiers
+ :title: parties/0/additionalIdentifiers
+```
+
+:::
+
+::::
+
+### RelatedProject
+
+A reference to a project related to the same set of infrastructure assets as the current project.
+
+`RelatedProject` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/RelatedProject/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`relatedProjects`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,relatedProjects)
+
+Each `RelatedProject` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/RelatedProject
+:collapse: id,scheme,identifier,relationship,title,uri
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/relatedProjects
+ :title: relatedProjects
+```
+
+:::
+
+::::
+
+### Metric
+`Metric` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Metric/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`forecasts`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,forecasts)
+* [`metrics`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,metrics)
+
+Each `Metric` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Metric
+:collapse: id,title,description,observations
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/forecasts
+ :title: forecasts
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/metrics
+ :title: metrics
+```
+
+:::
+
+::::
+
+### Observation
+`Observation` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Observation/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`Metric/observations`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Metric,observations)
+
+Each `Observation` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Observation
+:collapse: id,period,value,measure,unit,dimensions,notes
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/forecasts/0/observations
+ :title: forecasts/0/observations
+```
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/metrics/0/observations
+ :title: metrics/0/observations
+```
+
+:::
+
+::::
+
+### Person
+
+Use this object when you need to disclose the details of people associated with, representing or working on behalf of an organization involved in the project.
+
+`Person` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Person/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`Organization/people`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,people)
+
+Each `Person` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Person
+:collapse: id,name,jobTitle
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/parties/0/people
+ :title: parties/0/people
+```
+
+:::
+
+::::
+
+### Transaction
+
+A spending transaction related to a contracting process.
+
+`Transaction` is defined as:
+
+```{jsoninclude-quote} ../../schema/project-level/project-schema.json
+:jsonpointer: /definitions/Transaction/description
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/transactions`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,transactions)
+
+Each `Transaction` has the following fields:
+
+::::{tab-set}
+
+:::{tab-item} Schema
+
+```{jsonschema} ../../schema/project-level/project-schema.json
+:pointer: /definitions/Transaction
+:collapse: id,source,date,value,payer,payee,uri
+```
+
+:::
+
+:::{tab-item} Examples
+
+```{eval-rst}
+.. jsoninclude:: ../../docs/examples/example.json
+ :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
+ :title: contractingProcesses/0/summary/transactions
+```
+
+:::
+
+::::
+
