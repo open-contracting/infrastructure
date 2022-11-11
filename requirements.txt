@@ -10,4 +10,4 @@ sphinxcontrib-opendataservices==0.1.0
 
 # Build
 jsonref
-ocdskit>=1.1.1
+ocdskit>=1.1.3
