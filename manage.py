@@ -16,6 +16,7 @@ from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
 
 basedir = Path(__file__).resolve().parent
+referencedir = basedir / 'reference'
 
 
 def get(url):
@@ -164,146 +165,153 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
 
 
 def get_definition_references(schema, defn, parents=None, project_schema=None):
-  """
-  Recursively generate a list of JSON pointers that reference a definition in JSON schema.
+    """
+    Recursively generate a list of JSON pointers that reference a definition in JSON schema.
 
-  :param schema: The JSON schema
-  :defn: The name of the definition
-  :parents: A list of the parents of schema
-  :project_schema: The full project schema
-  """
+    :param schema: The JSON schema
+    :defn: The name of the definition
+    :parents: A list of the parents of schema
+    :project_schema: The full project schema
+    """
 
-  references = []
+    references = []
 
-  if parents is None:
-    parents = []
+    if parents is None:
+        parents = []
 
-  if project_schema is None:
-    project_schema = schema
+    if project_schema is None:
+        project_schema = schema
 
-  if 'properties' in schema:
-    for key, value in schema['properties'].items():
-      if value.get('type') == 'array' and '$ref' in value['items']:
-        if value['items']['$ref'] == f"#/definitions/{defn}":
-          references.append(parents + [key, '0'])
-        else:
-          references.extend(get_definition_references(project_schema['definitions'][value['items']['$ref'].split('/')[-1]], defn, parents + [key, '0'], project_schema))
-      elif '$ref' in value:
-        if value['$ref'] == f"#/definitions/{defn}":
-          references.append(parents + [key])
-        else:
-          references.extend(get_definition_references(project_schema['definitions'][value['$ref'].split('/')[-1]], defn, parents + [key], project_schema))
-      elif 'properties' in value:
-          references.extend(get_definition_references(value, defn, parents + [key], project_schema))
+    if 'properties' in schema:
+        for key, value in schema['properties'].items():
+            if value.get('type') == 'array' and '$ref' in value['items']:
+                if value['items']['$ref'] == f"#/definitions/{defn}":
+                    references.append(parents + [key, '0'])
+                else:
+                    references.extend(get_definition_references(
+                        project_schema['definitions'][value['items']['$ref'].split('/')[-1]],
+                        defn,
+                        parents + [key, '0'],
+                        project_schema))
+            elif '$ref' in value:
+                if value['$ref'] == f"#/definitions/{defn}":
+                    references.append(parents + [key])
+                else:
+                    references.extend(get_definition_references(
+                        project_schema['definitions'][value['$ref'].split('/')[-1]],
+                        defn,
+                        parents + [key],
+                        project_schema))
+            elif 'properties' in value:
+                references.extend(get_definition_references(value, defn, parents + [key], project_schema))
 
-  if 'definitions' in schema:
-    for key, value in schema['definitions'].items():
-      references.extend(get_definition_references(value, defn, [key], project_schema))
-  
-  return references
+    if 'definitions' in schema:
+        for key, value in schema['definitions'].items():
+            references.extend(get_definition_references(value, defn, [key], project_schema))
+
+    return references
 
 
 def update_sub_schema_reference(schema):
-  """Update docs/reference/schema.md"""    
+    """Update docs/reference/schema.md"""
 
-  # Load schema reference
-  with (referencedir / 'schema.md').open() as f:
-    schema_reference = f.readlines()
+    # Load schema reference
+    with (referencedir / 'schema.md').open() as f:
+        schema_reference = f.readlines()
 
-  # Preserve content that appears before the generated reference content for each sub-schema
-  sub_schema_index = schema_reference.index("## Sub-schemas\n") + 3
+    # Preserve content that appears before the generated reference content for each sub-schema
+    sub_schema_index = schema_reference.index("## Sub-schemas\n") + 3
 
-  for i in range(sub_schema_index, len(schema_reference)):
-      if schema_reference[i][:4] == "### ":
-          defn = schema_reference[i][4:-1]
-          
-          # Drop definitions that don't appear in the schema
-          if defn in schema["definitions"]:
-              schema["definitions"][defn]["content"] = []
-              j = i+1
+    for i in range(sub_schema_index, len(schema_reference)):
+        if schema_reference[i][:4] == "### ":
+            defn = schema_reference[i][4:-1]
 
-              #while j < len(schema_reference) and not schema_reference[j].startswith(f"{defn}"):
-              while j < len(schema_reference) and not schema_reference[j].startswith("```{jsonschema}"):
-                schema["definitions"][defn]["content"].append(schema_reference[j])
-                j = j+1
+            # Drop definitions that don't appear in the schema
+            if defn in schema["definitions"]:
+                schema["definitions"][defn]["content"] = []
+                j = i+1
 
-  # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
-  schema_reference = schema_reference[:sub_schema_index]
-  schema_reference.append("\n")
-    
-  # Generate standard reference content for each definition
-  for defn, definition in schema["definitions"].items():
-      definition["content"] = definition.get("content", [])
-      
-      # Add heading
-      definition["content"].insert(0, f"### {defn}\n")
-                  
-      # Add description
-      definition["content"].extend([
-          f"`{defn}` is defined as:\n\n",
-          "```{jsoninclude-quote} ../../schema/project-level/project-schema.json\n",
-          f":jsonpointer: /definitions/{defn}/description\n",
-          "```\n\n"
-      ])
+                while j < len(schema_reference) and not schema_reference[j].startswith(f"{defn}"):
+                    schema["definitions"][defn]["content"].append(schema_reference[j])
+                    j = j+1
 
-      # Add a list of properties that reference this definition
-      definition["references"] = get_definition_references(schema, defn)
-      definition["content"].append("This sub-schema is referenced by the following properties:\n")
+    # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
+    schema_reference = schema_reference[:sub_schema_index]
+    schema_reference.append("\n")
 
-      for ref in definition["references"]:
-          # Remove array indices because they do not appear in the HTML anchors generated by the json schema directive
-          ref = [part for part in ref if part != '0']
+    # Generate standard reference content for each definition
+    for defn, definition in schema["definitions"].items():
+        definition["content"] = definition.get("content", [])
 
-          # Ideally, these would be relative links - see https://github.com/OpenDataServices/sphinxcontrib-opendataservices/issues/43
-          url = 'https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,'
-          
-          # Omit nested references
-          if ref[0] in schema['definitions'] and len(ref) == 2:
-            url += '/definitions/'
-          elif len(ref) == 1:
-            url += ','
-          else:
-            continue
-    
-          url += ','.join(ref)
-          definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
+        # Add heading
+        definition["content"].insert(0, f"### {defn}\n")
 
-      # Add schema table
-      definition["content"].extend([
-          f"\nEach `{defn}` has the following fields:\n\n", 
-          "`````{tab-set}\n\n",
-          "````{tab-item} Schema\n\n",
-          "```{jsonschema} ../../schema/project-level/project-schema.json\n",
-          f":pointer: /definitions/{defn}\n",
-          f":collapse: {','.join(definition['properties'].keys())}\n"
-          "```\n\n",
-          "````\n\n",
-          "````{tab-item} Examples\n\n"
-      ])
-
-      # Add examples
-      for ref in definition["references"]:
-        if ref[0] not in schema['definitions']:
-          if ref[-1] == '0':
-            ref.pop(-1)
-          
-          definition["content"].extend([
-            "```{eval-rst}\n",
-            ".. jsoninclude:: ../../docs/examples/example.json\n",
-            f" :jsonpointer: /projects/0/{'/'.join(ref)}\n",
-            f" :title: {'/'.join(ref)}\n",
+        # Add description
+        definition["content"].extend([
+            f"`{defn}` is defined as:\n\n",
+            "```{jsoninclude-quote} ../../schema/project-level/project-schema.json\n",
+            f":jsonpointer: /definitions/{defn}/description\n",
             "```\n\n"
-          ])
+        ])
 
-      definition["content"].extend([          
-          "````\n\n",
-          "`````\n\n"
-      ])
+        # Add a list of properties that reference this definition
+        definition["references"] = get_definition_references(schema, defn)
+        definition["content"].append("This sub-schema is referenced by the following properties:\n")
 
-      schema_reference.extend(definition["content"])     
+        for ref in definition["references"]:
+            # noqa: Remove array indices because they do not appear in the HTML anchors generated by the json schema directive
+            ref = [part for part in ref if part != '0']
 
-  with (referencedir/ 'schema.md').open('w') as f:
-    f.writelines(schema_reference)
+            # noqa: Ideally, these would be relative links - see https://github.com/OpenDataServices/sphinxcontrib-opendataservices/issues/43
+            url = 'https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,' # noqa
+
+            # Omit nested references
+            if ref[0] in schema['definitions'] and len(ref) == 2:
+                url += '/definitions/'
+            elif len(ref) == 1:
+                url += ','
+            else:
+                continue
+
+            url += ','.join(ref)
+            definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
+
+        # Add schema table
+        definition["content"].extend([
+            f"\nEach `{defn}` has the following fields:\n\n",
+            "`````{tab-set}\n\n",
+            "````{tab-item} Schema\n\n",
+            "```{jsonschema} ../../schema/project-level/project-schema.json\n",
+            f":pointer: /definitions/{defn}\n",
+            f":collapse: {','.join(definition['properties'].keys())}\n"
+            "```\n\n",
+            "````\n\n",
+            "````{tab-item} Examples\n\n"
+        ])
+
+        # Add examples
+        for ref in definition["references"]:
+            if ref[0] not in schema['definitions']:
+                if ref[-1] == '0':
+                    ref.pop(-1)
+
+                definition["content"].extend([
+                  "```{eval-rst}\n",
+                  ".. jsoninclude:: ../../docs/examples/example.json\n",
+                  f" :jsonpointer: /projects/0/{'/'.join(ref)}\n",
+                  f" :title: {'/'.join(ref)}\n",
+                  "```\n\n"
+                ])
+
+        definition["content"].extend([
+            "````\n\n",
+            "`````\n\n"
+        ])
+
+        schema_reference.extend(definition["content"])
+
+    with (referencedir / 'schema.md').open('w') as f:
+        f.writelines(schema_reference)
 
 
 @click.group()
