@@ -161,7 +161,7 @@ The `contractingProcesses` array is used to provide information about each contr
 In the contractingProcess example below, information is given about a contracting process for the design of the motorway upgrade, with one related document in the `documents` array (a tender notice) and two related OCDS `releases` (one for the tender and one for the contract award).
 
 ```{jsoninclude} ../examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0
+:jsonpointer: /projects/0/contractingProcesses/1
 :expand: summary, documents, releases
 :title: contractingProcess
 ```
@@ -173,7 +173,7 @@ Each contracting process includes a `modifications` array which is used to list 
 In the modification example below, a change in duration is shown, using the `oldContractPeriod` and `newContractPeriod` fields.
 
 ```{jsoninclude} ../examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/2/summary/modifications/0
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0
 :expand: oldContractPeriod, newContractPeriod
 :title: modification
 ```
