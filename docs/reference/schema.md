@@ -39,18 +39,18 @@ This sub-schema is referenced by the following properties:
 
 Each `ContractingProcess` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcess
 :collapse: id,summary,releases
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -58,9 +58,9 @@ Each `ContractingProcess` has the following fields:
  :title: contractingProcesses
 ```
 
-:::
+````
 
-::::
+`````
 
 ### ContractingProcessSummary
 `ContractingProcessSummary` is defined as:
@@ -74,18 +74,18 @@ This sub-schema is referenced by the following properties:
 
 Each `ContractingProcessSummary` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
 :collapse: ocid,externalReference,nature,title,description,status,tender,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -93,9 +93,9 @@ Each `ContractingProcessSummary` has the following fields:
  :title: contractingProcesses/0/summary
 ```
 
-:::
+````
 
-::::
+`````
 
 ### LinkedRelease
 `LinkedRelease` is defined as:
@@ -109,18 +109,18 @@ This sub-schema is referenced by the following properties:
 
 Each `LinkedRelease` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/LinkedRelease
 :collapse: id,tag,date,url
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -128,9 +128,9 @@ Each `LinkedRelease` has the following fields:
  :title: contractingProcesses/0/releases
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Modification
 
@@ -147,18 +147,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Modification` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Modification
 :collapse: id,date,description,rationale,type,releaseID,oldContractValue,newContractValue,oldContractPeriod,newContractPeriod
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -166,9 +166,9 @@ Each `Modification` has the following fields:
  :title: contractingProcesses/0/summary/modifications
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Period
 
@@ -195,18 +195,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Period` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Period
 :collapse: startDate,endDate,maxExtentDate,durationInDays
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -256,9 +256,9 @@ Each `Period` has the following fields:
  :title: metrics/0/observations/0/period
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Classification
 
@@ -275,18 +275,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Classification` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Classification
 :collapse: scheme,id,description,uri
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -294,9 +294,9 @@ Each `Classification` has the following fields:
  :title: additionalClassifications
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Location
 
@@ -317,18 +317,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Location` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Location
 :collapse: id,description,geometry,gazetteer,uri,address
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -336,9 +336,9 @@ Each `Location` has the following fields:
  :title: locations
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Value
 
@@ -361,18 +361,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Value` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Value
 :collapse: amount,currency
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -416,9 +416,9 @@ Each `Value` has the following fields:
  :title: completion/finalValue
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Organization
 
@@ -435,18 +435,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Organization` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Organization
 :collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,people
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -454,9 +454,9 @@ Each `Organization` has the following fields:
  :title: parties
 ```
 
-:::
+````
 
-::::
+`````
 
 ### OrganizationReference
 
@@ -475,18 +475,18 @@ This sub-schema is referenced by the following properties:
 
 Each `OrganizationReference` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/OrganizationReference
 :collapse: name,id
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -536,9 +536,9 @@ Each `OrganizationReference` has the following fields:
  :title: contractingProcesses/0/summary/transactions/0/payee
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Address
 
@@ -558,18 +558,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Address` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Address
 :collapse: streetAddress,locality,region,postalCode,countryName
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -583,9 +583,9 @@ Each `Address` has the following fields:
  :title: parties/0/address
 ```
 
-:::
+````
 
-::::
+`````
 
 ### ContactPoint
 
@@ -600,18 +600,18 @@ This sub-schema is referenced by the following properties:
 
 Each `ContactPoint` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContactPoint
 :collapse: name,email,telephone,faxNumber,url
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -619,9 +619,9 @@ Each `ContactPoint` has the following fields:
  :title: parties/0/contactPoint
 ```
 
-:::
+````
 
-::::
+`````
 
 ### BudgetBreakdown
 
@@ -639,18 +639,18 @@ This sub-schema is referenced by the following properties:
 
 Each `BudgetBreakdown` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/BudgetBreakdown
 :collapse: id,description,amount,uri,period,sourceParty
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -658,9 +658,9 @@ Each `BudgetBreakdown` has the following fields:
  :title: budget/budgetBreakdown
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Document
 
@@ -678,18 +678,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Document` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Document
 :collapse: id,documentType,title,description,url,datePublished,dateModified,format,language,pageStart,pageEnd,accessDetails,author
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -703,9 +703,9 @@ Each `Document` has the following fields:
  :title: contractingProcesses/0/summary/documents
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Identifier
 
@@ -727,18 +727,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Identifier` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Identifier
 :collapse: scheme,id,legalName,uri
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -752,9 +752,9 @@ Each `Identifier` has the following fields:
  :title: parties/0/additionalIdentifiers
 ```
 
-:::
+````
 
-::::
+`````
 
 ### RelatedProject
 
@@ -771,18 +771,18 @@ This sub-schema is referenced by the following properties:
 
 Each `RelatedProject` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/RelatedProject
 :collapse: id,scheme,identifier,relationship,title,uri
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -790,9 +790,9 @@ Each `RelatedProject` has the following fields:
  :title: relatedProjects
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Metric
 `Metric` is defined as:
@@ -807,18 +807,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Metric` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Metric
 :collapse: id,title,description,observations
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -832,9 +832,9 @@ Each `Metric` has the following fields:
  :title: metrics
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Observation
 `Observation` is defined as:
@@ -848,18 +848,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Observation` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Observation
 :collapse: id,period,value,measure,unit,dimensions,notes
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -873,9 +873,9 @@ Each `Observation` has the following fields:
  :title: metrics/0/observations
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Person
 
@@ -892,18 +892,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Person` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Person
 :collapse: id,name,jobTitle
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -911,9 +911,9 @@ Each `Person` has the following fields:
  :title: parties/0/people
 ```
 
-:::
+````
 
-::::
+`````
 
 ### Transaction
 
@@ -930,18 +930,18 @@ This sub-schema is referenced by the following properties:
 
 Each `Transaction` has the following fields:
 
-::::{tab-set}
+`````{tabs}
 
-:::{tab-item} Schema
+````{tab} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Transaction
 :collapse: id,source,date,value,payer,payee,uri
 ```
 
-:::
+````
 
-:::{tab-item} Examples
+````{tab} Examples
 
 ```{eval-rst}
 .. jsoninclude:: ../../docs/examples/example.json
@@ -949,7 +949,7 @@ Each `Transaction` has the following fields:
  :title: contractingProcesses/0/summary/transactions
 ```
 
-:::
+````
 
-::::
+`````
 
