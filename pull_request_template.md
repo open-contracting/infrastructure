@@ -5,6 +5,7 @@
 *If the changes in the PR are not sufficiently explained by the related issues and commit messages, add a description here.*
 
 **Merge checklist**
+*Complete the checklist before requesting a review.*
 - [ ] [Log your changes](https://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/contributing.html#logging-changes)
 
 If there are changes to `project-schema.json` or `project-package-schema.json`:
