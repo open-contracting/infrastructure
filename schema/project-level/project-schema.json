@@ -1348,7 +1348,7 @@
         },
         "approvalDate": {
           "title": "Approval date",
-          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with [documentType](https://standard.open-contracting.org/infrastructure/latest/en/reference/codelists/#documenttype) set to 'budgetApproval'.",
+          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
           "type": "string",
           "format": "date-time"
         },
