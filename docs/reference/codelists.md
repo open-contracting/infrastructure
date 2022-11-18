@@ -112,10 +112,10 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 ```
 
-### AdditionalClassificationsScheme
+### classificationScheme
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :widths: auto
-:file: ../../build/current_lang/codelists/additionalClassificationsScheme.csv
+:file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
