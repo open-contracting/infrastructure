@@ -657,7 +657,7 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The additional classification scheme, using the open [additionalClassificationsScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#additionalclassificationsscheme) codelist.",
+          "description": "The scheme or codelist from which the classification code is taken, using the open [additionalClassificationsScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#additionalclassificationsscheme) codelist.",
           "type": "string",
           "codelist": "additionalClassificationsScheme.csv",
           "openCodelist": true,
