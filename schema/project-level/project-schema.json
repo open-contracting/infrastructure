@@ -1346,6 +1346,12 @@
           "description": "The value of the budget line item.",
           "$ref": "#/definitions/Value"
         },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
+        },
         "uri": {
           "title": "Linked budget information",
           "description": "A URI pointing directly to a machine-readable information about this budget entry.",
