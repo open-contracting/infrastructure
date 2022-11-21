@@ -657,10 +657,10 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken.",
-          "type": [
-            "string"
-          ],
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.",
+          "type": "string",
+          "codelist": "classificationScheme.csv",
+          "openCodelist": true,
           "minLength": 1
         },
         "id": {
