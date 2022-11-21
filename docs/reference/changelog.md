@@ -15,13 +15,14 @@
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
-* [#367](https://github.com/open-contracting/infrastructure/pull/367) - Add approval date to budget breakdown.
+* [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
-* [#369](https://github.com/open-contracting/infrastructure/pull/369) - Add classification scheme codelist.
+* [#369](https://github.com/open-contracting/infrastructure/pull/369) - add classification scheme codelist.
+* [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
 
 ## [0.9.3] - 2021-04-30
 
