@@ -17,6 +17,7 @@
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#367](https://github.com/open-contracting/infrastructure/pull/367) - Add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
+* [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
 
 ### Codelists
 
