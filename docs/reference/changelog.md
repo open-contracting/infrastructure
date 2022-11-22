@@ -23,6 +23,10 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#369](https://github.com/open-contracting/infrastructure/pull/369) - Add classification scheme codelist.
 
+### Other
+
+* [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
+
 ## [0.9.3] - 2021-04-30
 
 ### Documentation
