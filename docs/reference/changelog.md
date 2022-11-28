@@ -9,16 +9,24 @@
 * [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. LinkedRelease.tag  is now correctly marked as "Required")
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
 * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
+* [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
 
 ### Schema
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
-* [#379](https://github.com/open-contracting/infrastructure/pull/379) - Add `tender.datePublished`. 
+* [#367](https://github.com/open-contracting/infrastructure/pull/367) - Add approval date to budget breakdown.
+* [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
+* [#379](https://github.com/open-contracting/infrastructure/pull/379) - Add `tender.datePublished`.
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
+* [#369](https://github.com/open-contracting/infrastructure/pull/369) - Add classification scheme codelist.
+
+### Other
+
+* [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
 
 ## [0.9.3] - 2021-04-30
 
