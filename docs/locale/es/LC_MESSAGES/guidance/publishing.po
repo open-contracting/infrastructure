@@ -251,11 +251,11 @@ msgstr ""
 
 #: ../../docs/guidance/publishing.md:1
 msgid ""
-"You can use a {download}`blank example OC4IDS JSON file "
-"<../examples/blank.json>` to get started."
+"You can use a [blank example OC4IDS JSON file"
+"](../examples/blank.json) to get started."
 msgstr ""
-"Puede usar {download}` un archivo JSON OC4IDS de ejemplo, en blanco "
-"<../examples/blank.json>` para empezar."
+"Puede usar [ un archivo JSON OC4IDS de ejemplo, en blanco"
+"](../examples/blank.json) para empezar."
 
 #: ../../docs/guidance/publishing.md:59
 msgid ""

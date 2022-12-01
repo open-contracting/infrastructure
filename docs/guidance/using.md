@@ -108,7 +108,7 @@ You might not be able to fill all the project-level details from the contracts, 
 * Any environmental impact or land and settlement impact studies that have been undertaken
 
 ```{tip}
-You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started.
+You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
 ### (5) Monitoring contracting process updates

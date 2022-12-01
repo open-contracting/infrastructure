@@ -25,7 +25,7 @@ You can use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/
 If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the specification and create an OC4IDS JSON file for each project.
 
 ```{tip}
-You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started.
+You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
 #### Contracting data
