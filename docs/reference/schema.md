@@ -21,6 +21,7 @@ Each project has the following fields:
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
 :collapse: period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
+:addtargets:
 ```
 
 ## Sub-schemas
@@ -35,7 +36,7 @@ This section lists each sub-schema in the OC4IDS schema. Some sub-schemas are re
 ```
 
 This sub-schema is referenced by the following properties:
-* [`contractingProcesses`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,contractingProcesses)
+* [`contractingProcesses`](project-schema.json,,contractingProcesses)
 
 Each `ContractingProcess` has the following fields:
 
@@ -46,16 +47,16 @@ Each `ContractingProcess` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcess
 :collapse: id,summary,releases
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses
- :title: contractingProcesses
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses
+:title: contractingProcesses
 ```
 
 ````
@@ -70,7 +71,7 @@ Each `ContractingProcess` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`ContractingProcess/summary`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcess,summary)
+* [`ContractingProcess/summary`](project-schema.json,/definitions/ContractingProcess,summary)
 
 Each `ContractingProcessSummary` has the following fields:
 
@@ -81,16 +82,16 @@ Each `ContractingProcessSummary` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
 :collapse: ocid,externalReference,nature,title,description,status,tender,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary
- :title: contractingProcesses/0/summary
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary
+:title: contractingProcesses/0/summary
 ```
 
 ````
@@ -105,7 +106,7 @@ Each `ContractingProcessSummary` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`ContractingProcess/releases`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcess,releases)
+* [`ContractingProcess/releases`](project-schema.json,/definitions/ContractingProcess,releases)
 
 Each `LinkedRelease` has the following fields:
 
@@ -116,16 +117,16 @@ Each `LinkedRelease` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/LinkedRelease
 :collapse: id,tag,date,url
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/releases
- :title: contractingProcesses/0/releases
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/releases
+:title: contractingProcesses/0/releases
 ```
 
 ````
@@ -143,7 +144,7 @@ For each modification, the following structured information can be provided.
 ```
 
 This sub-schema is referenced by the following properties:
-* [`ContractingProcessSummary/modifications`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,modifications)
+* [`ContractingProcessSummary/modifications`](project-schema.json,/definitions/ContractingProcessSummary,modifications)
 
 Each `Modification` has the following fields:
 
@@ -154,16 +155,16 @@ Each `Modification` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Modification
 :collapse: id,date,description,rationale,type,releaseID,oldContractValue,newContractValue,oldContractPeriod,newContractPeriod
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications
- :title: contractingProcesses/0/summary/modifications
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications
+:title: contractingProcesses/0/summary/modifications
 ```
 
 ````
@@ -185,13 +186,13 @@ Where the source system does not contain time information, a judgment ought to b
 ```
 
 This sub-schema is referenced by the following properties:
-* [`period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,period)
-* [`assetLifetime`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,assetLifetime)
-* [`ContractingProcessSummary/contractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
-* [`Modification/oldContractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,oldContractPeriod)
-* [`Modification/newContractPeriod`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,newContractPeriod)
-* [`BudgetBreakdown/period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,period)
-* [`Observation/period`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Observation,period)
+* [`period`](project-schema.json,,period)
+* [`assetLifetime`](project-schema.json,,assetLifetime)
+* [`ContractingProcessSummary/contractPeriod`](project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
+* [`Modification/oldContractPeriod`](project-schema.json,/definitions/Modification,oldContractPeriod)
+* [`Modification/newContractPeriod`](project-schema.json,/definitions/Modification,newContractPeriod)
+* [`BudgetBreakdown/period`](project-schema.json,/definitions/BudgetBreakdown,period)
+* [`Observation/period`](project-schema.json,/definitions/Observation,period)
 
 Each `Period` has the following fields:
 
@@ -202,58 +203,51 @@ Each `Period` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Period
 :collapse: startDate,endDate,maxExtentDate,durationInDays
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/period
- :title: period
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/period
+:title: period
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/assetLifetime
- :title: assetLifetime
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/assetLifetime
+:title: assetLifetime
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/budget/budgetBreakdown/0/period
- :title: budget/budgetBreakdown/0/period
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdown/0/period
+:title: budget/budgetBreakdown/0/period
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/forecasts/0/observations/0/period
- :title: forecasts/0/observations/0/period
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/forecasts/0/observations/0/period
+:title: forecasts/0/observations/0/period
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/contractPeriod
- :title: contractingProcesses/0/summary/contractPeriod
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/contractPeriod
+:title: contractingProcesses/0/summary/contractPeriod
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/oldContractPeriod
- :title: contractingProcesses/0/summary/modifications/0/oldContractPeriod
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/oldContractPeriod
+:title: contractingProcesses/0/summary/modifications/0/oldContractPeriod
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/newContractPeriod
- :title: contractingProcesses/0/summary/modifications/0/newContractPeriod
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/newContractPeriod
+:title: contractingProcesses/0/summary/modifications/0/newContractPeriod
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/metrics/0/observations/0/period
- :title: metrics/0/observations/0/period
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/metrics/0/observations/0/period
+:title: metrics/0/observations/0/period
 ```
 
 ````
@@ -271,7 +265,7 @@ A classification consists of an identifier for the codelist (the `scheme`) and a
 ```
 
 This sub-schema is referenced by the following properties:
-* [`additionalClassifications`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,additionalClassifications)
+* [`additionalClassifications`](project-schema.json,,additionalClassifications)
 
 Each `Classification` has the following fields:
 
@@ -282,16 +276,16 @@ Each `Classification` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Classification
 :collapse: scheme,id,description,uri
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/additionalClassifications
- :title: additionalClassifications
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/additionalClassifications
+:title: additionalClassifications
 ```
 
 ````
@@ -313,7 +307,7 @@ A project can have one or more locations. Locations can be expressed in a number
 ```
 
 This sub-schema is referenced by the following properties:
-* [`locations`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,locations)
+* [`locations`](project-schema.json,,locations)
 
 Each `Location` has the following fields:
 
@@ -324,16 +318,16 @@ Each `Location` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Location
 :collapse: id,description,geometry,gazetteer,uri,address
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/locations
- :title: locations
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/locations
+:title: locations
 ```
 
 ````
@@ -351,13 +345,13 @@ All values should be published along with their currency using the following str
 ```
 
 This sub-schema is referenced by the following properties:
-* [`ContractingProcessSummary/contractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,contractValue)
-* [`ContractingProcessSummary/finalValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,finalValue)
-* [`Modification/oldContractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,oldContractValue)
-* [`Modification/newContractValue`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Modification,newContractValue)
-* [`BudgetBreakdown/amount`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,amount)
-* [`Observation/value`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Observation,value)
-* [`Transaction/value`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,value)
+* [`ContractingProcessSummary/contractValue`](project-schema.json,/definitions/ContractingProcessSummary,contractValue)
+* [`ContractingProcessSummary/finalValue`](project-schema.json,/definitions/ContractingProcessSummary,finalValue)
+* [`Modification/oldContractValue`](project-schema.json,/definitions/Modification,oldContractValue)
+* [`Modification/newContractValue`](project-schema.json,/definitions/Modification,newContractValue)
+* [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
+* [`Observation/value`](project-schema.json,/definitions/Observation,value)
+* [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
 
 Each `Value` has the following fields:
 
@@ -368,52 +362,66 @@ Each `Value` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Value
 :collapse: amount,currency
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/budget/amount
- :title: budget/amount
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/amount
+:title: budget/amount
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
- :title: budget/budgetBreakdown/0/amount
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
+:title: budget/budgetBreakdown/0/amount
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/costEstimate
- :title: contractingProcesses/0/summary/tender/costEstimate
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/forecasts/0/observations/0/value
+:title: forecasts/0/observations/0/value
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/contractValue
- :title: contractingProcesses/0/summary/contractValue
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/costEstimate
+:title: contractingProcesses/0/summary/tender/costEstimate
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/finalValue
- :title: contractingProcesses/0/summary/finalValue
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/contractValue
+:title: contractingProcesses/0/summary/contractValue
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
- :title: contractingProcesses/0/summary/transactions/0/value
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/finalValue
+:title: contractingProcesses/0/summary/finalValue
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/completion/finalValue
- :title: completion/finalValue
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/2/oldContractValue
+:title: contractingProcesses/0/summary/modifications/2/oldContractValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/2/newContractValue
+:title: contractingProcesses/0/summary/modifications/2/newContractValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
+:title: contractingProcesses/0/summary/transactions/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/metrics/0/observations/0/value
+:title: metrics/0/observations/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/completion/finalValue
+:title: completion/finalValue
 ```
 
 ````
@@ -431,7 +439,7 @@ For each organization, provide as much structured data as you can.
 ```
 
 This sub-schema is referenced by the following properties:
-* [`parties`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,parties)
+* [`parties`](project-schema.json,,parties)
 
 Each `Organization` has the following fields:
 
@@ -442,16 +450,16 @@ Each `Organization` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Organization
 :collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,people
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties
- :title: parties
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties
+:title: parties
 ```
 
 ````
@@ -467,11 +475,11 @@ Each `Organization` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`publicAuthority`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,publicAuthority)
-* [`ContractingProcessSummary/suppliers`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,suppliers)
-* [`BudgetBreakdown/sourceParty`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/BudgetBreakdown,sourceParty)
-* [`Transaction/payer`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,payer)
-* [`Transaction/payee`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Transaction,payee)
+* [`publicAuthority`](project-schema.json,,publicAuthority)
+* [`ContractingProcessSummary/suppliers`](project-schema.json,/definitions/ContractingProcessSummary,suppliers)
+* [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
+* [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
+* [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
 
 Each `OrganizationReference` has the following fields:
 
@@ -482,58 +490,51 @@ Each `OrganizationReference` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/OrganizationReference
 :collapse: name,id
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
- :title: budget/budgetBreakdown/0/sourceParty
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
+:title: budget/budgetBreakdown/0/sourceParty
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/publicAuthority
- :title: publicAuthority
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/publicAuthority
+:title: publicAuthority
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/tenderers
- :title: contractingProcesses/0/summary/tender/tenderers
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/tenderers
+:title: contractingProcesses/0/summary/tender/tenderers
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/procuringEntity
- :title: contractingProcesses/0/summary/tender/procuringEntity
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/procuringEntity
+:title: contractingProcesses/0/summary/tender/procuringEntity
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/administrativeEntity
- :title: contractingProcesses/0/summary/tender/administrativeEntity
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/administrativeEntity
+:title: contractingProcesses/0/summary/tender/administrativeEntity
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/suppliers
- :title: contractingProcesses/0/summary/suppliers
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/suppliers
+:title: contractingProcesses/0/summary/suppliers
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payer
- :title: contractingProcesses/0/summary/transactions/0/payer
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payer
+:title: contractingProcesses/0/summary/transactions/0/payer
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payee
- :title: contractingProcesses/0/summary/transactions/0/payee
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payee
+:title: contractingProcesses/0/summary/transactions/0/payee
 ```
 
 ````
@@ -553,8 +554,8 @@ When working with data, users ought to be aware that addresses might not always 
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Location/address`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Location,address)
-* [`Organization/address`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,address)
+* [`Location/address`](project-schema.json,/definitions/Location,address)
+* [`Organization/address`](project-schema.json,/definitions/Organization,address)
 
 Each `Address` has the following fields:
 
@@ -565,22 +566,21 @@ Each `Address` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Address
 :collapse: streetAddress,locality,region,postalCode,countryName
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/locations/0/address
- :title: locations/0/address
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/locations/0/address
+:title: locations/0/address
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties/0/address
- :title: parties/0/address
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/address
+:title: parties/0/address
 ```
 
 ````
@@ -596,7 +596,7 @@ Each `Address` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Organization/contactPoint`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,contactPoint)
+* [`Organization/contactPoint`](project-schema.json,/definitions/Organization,contactPoint)
 
 Each `ContactPoint` has the following fields:
 
@@ -607,16 +607,16 @@ Each `ContactPoint` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContactPoint
 :collapse: name,email,telephone,faxNumber,url
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties/0/contactPoint
- :title: parties/0/contactPoint
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/contactPoint
+:title: parties/0/contactPoint
 ```
 
 ````
@@ -645,17 +645,17 @@ Each `BudgetBreakdown` has the following fields:
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/BudgetBreakdown
-:collapse: id,description,amount,uri,period,sourceParty
+:collapse: id,description,amount,approvalDate,uri,period,sourceParty
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/budget/budgetBreakdown
- :title: budget/budgetBreakdown
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdown
+:title: budget/budgetBreakdown
 ```
 
 ````
@@ -673,8 +673,8 @@ For each document the following structured information can be provided.
 ```
 
 This sub-schema is referenced by the following properties:
-* [`documents`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,documents)
-* [`ContractingProcessSummary/documents`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,documents)
+* [`documents`](project-schema.json,,documents)
+* [`ContractingProcessSummary/documents`](project-schema.json,/definitions/ContractingProcessSummary,documents)
 
 Each `Document` has the following fields:
 
@@ -685,22 +685,21 @@ Each `Document` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Document
 :collapse: id,documentType,title,description,url,datePublished,dateModified,format,language,pageStart,pageEnd,accessDetails,author
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/documents
- :title: documents
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/documents
+:title: documents
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/documents
- :title: contractingProcesses/0/summary/documents
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/documents
+:title: contractingProcesses/0/summary/documents
 ```
 
 ````
@@ -722,8 +721,8 @@ For example, if identifying a company in Colombia, look up its identifier in the
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Organization/identifier`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,identifier)
-* [`Organization/additionalIdentifiers`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,additionalIdentifiers)
+* [`Organization/identifier`](project-schema.json,/definitions/Organization,identifier)
+* [`Organization/additionalIdentifiers`](project-schema.json,/definitions/Organization,additionalIdentifiers)
 
 Each `Identifier` has the following fields:
 
@@ -734,22 +733,21 @@ Each `Identifier` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Identifier
 :collapse: scheme,id,legalName,uri
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties/0/identifier
- :title: parties/0/identifier
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/identifier
+:title: parties/0/identifier
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties/0/additionalIdentifiers
- :title: parties/0/additionalIdentifiers
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/additionalIdentifiers
+:title: parties/0/additionalIdentifiers
 ```
 
 ````
@@ -767,7 +765,7 @@ A reference to a project related to the same set of infrastructure assets as the
 ```
 
 This sub-schema is referenced by the following properties:
-* [`relatedProjects`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,relatedProjects)
+* [`relatedProjects`](project-schema.json,,relatedProjects)
 
 Each `RelatedProject` has the following fields:
 
@@ -778,16 +776,16 @@ Each `RelatedProject` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/RelatedProject
 :collapse: id,scheme,identifier,relationship,title,uri
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/relatedProjects
- :title: relatedProjects
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/relatedProjects
+:title: relatedProjects
 ```
 
 ````
@@ -802,8 +800,8 @@ Each `RelatedProject` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`forecasts`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,forecasts)
-* [`metrics`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,,metrics)
+* [`forecasts`](project-schema.json,,forecasts)
+* [`metrics`](project-schema.json,,metrics)
 
 Each `Metric` has the following fields:
 
@@ -814,22 +812,21 @@ Each `Metric` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Metric
 :collapse: id,title,description,observations
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/forecasts
- :title: forecasts
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/forecasts
+:title: forecasts
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/metrics
- :title: metrics
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/metrics
+:title: metrics
 ```
 
 ````
@@ -844,7 +841,7 @@ Each `Metric` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Metric/observations`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Metric,observations)
+* [`Metric/observations`](project-schema.json,/definitions/Metric,observations)
 
 Each `Observation` has the following fields:
 
@@ -855,22 +852,21 @@ Each `Observation` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Observation
 :collapse: id,period,value,measure,unit,dimensions,notes
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/forecasts/0/observations
- :title: forecasts/0/observations
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/forecasts/0/observations
+:title: forecasts/0/observations
 ```
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/metrics/0/observations
- :title: metrics/0/observations
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/metrics/0/observations
+:title: metrics/0/observations
 ```
 
 ````
@@ -888,7 +884,7 @@ Use this object when you need to disclose the details of people associated with,
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Organization/people`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/Organization,people)
+* [`Organization/people`](project-schema.json,/definitions/Organization,people)
 
 Each `Person` has the following fields:
 
@@ -899,16 +895,16 @@ Each `Person` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Person
 :collapse: id,name,jobTitle
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/parties/0/people
- :title: parties/0/people
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/people
+:title: parties/0/people
 ```
 
 ````
@@ -926,7 +922,7 @@ A spending transaction related to a contracting process.
 ```
 
 This sub-schema is referenced by the following properties:
-* [`ContractingProcessSummary/transactions`](https://standard.open-contracting.org/infrastructure/latest/en/reference/schema/index.html#project-schema.json,/definitions/ContractingProcessSummary,transactions)
+* [`ContractingProcessSummary/transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions)
 
 Each `Transaction` has the following fields:
 
@@ -937,16 +933,16 @@ Each `Transaction` has the following fields:
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Transaction
 :collapse: id,source,date,value,payer,payee,uri
+:addtargets:
 ```
 
 ````
 
 ````{tab} Examples
 
-```{eval-rst}
-.. jsoninclude:: ../../docs/examples/example.json
- :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
- :title: contractingProcesses/0/summary/transactions
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
+:title: contractingProcesses/0/summary/transactions
 ```
 
 ````
