@@ -3,11 +3,9 @@
 # Add your own requirements below.
 
 sphinxcontrib-opencontracting==0.0.3
-# https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema/pull/41
-# sphinxcontrib-opendataservices-jsonschema==0.5.0
--e git+https://github.com/jpmckinney/sphinxcontrib-opendataservices-jsonschema.git@upgrade-jsonref#egg=sphinxcontrib-opendataservices-jsonschema
+sphinxcontrib-opendataservices-jsonschema==0.5.1
 sphinxcontrib-opendataservices==0.5.0
-sphinx-tabs
+sphinx-tabs==3.4.1
 
 # Build
 jsonref
