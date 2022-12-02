@@ -88,4 +88,4 @@ flatten-tool flatten -f xlsx example.json --root-id=id --root-list-path=projects
 ```
 ````
 
-Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
+Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/) for more information on providing data in multiple formats.
