@@ -11,7 +11,7 @@ We can:
 
 Use the following email addresses to request support:
 
-* [opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org) for support from CoST - the Infrastructur Transparency Initiative
+* [opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org) for support from CoST - the Infrastructure Transparency Initiative
 * [data@open-contracting.org](mailto:data@open-contracting.org) for support from the Open Contracting Partnership.
 
 ```{admonition} Contributing
