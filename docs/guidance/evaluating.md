@@ -19,7 +19,7 @@ First, check that the disclosures you want to analyze are in the correct format.
 Check whether the project-level data is published using [OC4IDS](../../projects/index)
 
 ```{tip}
-You can use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that whether your data is in the correct format.
+You can use the [OC4IDS Data Review Tool](https://review-oc4ids.standard.open-contracting.org/) to check that whether your data is in the correct format.
 ```
 
 If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-level-mapping-template/) to map the data to the specification and create an OC4IDS JSON file for each project.
