@@ -380,11 +380,6 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/forecasts/0/observations/0/value
-:title: forecasts/0/observations/0/value
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/costEstimate
 :title: contractingProcesses/0/summary/tender/costEstimate
 ```
@@ -401,22 +396,17 @@ Each `Value` has the following fields:
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/2/oldContractValue
-:title: contractingProcesses/0/summary/modifications/2/oldContractValue
+:title: contractingProcesses/0/summary/modifications/0/oldContractValue
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/2/newContractValue
-:title: contractingProcesses/0/summary/modifications/2/newContractValue
+:title: contractingProcesses/0/summary/modifications/0/newContractValue
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
 :title: contractingProcesses/0/summary/transactions/0/value
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/metrics/0/observations/0/value
-:title: metrics/0/observations/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -948,3 +938,4 @@ Each `Transaction` has the following fields:
 ::::
 
 :::::
+
