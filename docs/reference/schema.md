@@ -26,7 +26,7 @@ Each project has the following fields:
 
 ## Sub-schemas
 
-This section lists each sub-schema in the OC4IDS schema. Some sub-schemas are referenced in multiple places in the schema.
+This section lists each sub-schema in the OC4IDS schema. Some sub-schemas are referenced from multiple places in the schema.
 
 ### ContractingProcess
 `ContractingProcess` is defined as:
@@ -40,9 +40,9 @@ This sub-schema is referenced by the following properties:
 
 Each `ContractingProcess` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcess
@@ -50,18 +50,18 @@ Each `ContractingProcess` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses
 :title: contractingProcesses
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### ContractingProcessSummary
 `ContractingProcessSummary` is defined as:
@@ -75,9 +75,9 @@ This sub-schema is referenced by the following properties:
 
 Each `ContractingProcessSummary` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
@@ -85,18 +85,18 @@ Each `ContractingProcessSummary` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary
 :title: contractingProcesses/0/summary
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### LinkedRelease
 `LinkedRelease` is defined as:
@@ -110,9 +110,9 @@ This sub-schema is referenced by the following properties:
 
 Each `LinkedRelease` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/LinkedRelease
@@ -120,18 +120,18 @@ Each `LinkedRelease` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/releases
 :title: contractingProcesses/0/releases
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Modification
 
@@ -148,9 +148,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Modification` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Modification
@@ -158,18 +158,18 @@ Each `Modification` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications
 :title: contractingProcesses/0/summary/modifications
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Period
 
@@ -196,9 +196,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Period` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Period
@@ -206,9 +206,9 @@ Each `Period` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/period
@@ -250,9 +250,9 @@ Each `Period` has the following fields:
 :title: metrics/0/observations/0/period
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Classification
 
@@ -269,9 +269,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Classification` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Classification
@@ -279,18 +279,18 @@ Each `Classification` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/additionalClassifications
 :title: additionalClassifications
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Location
 
@@ -311,9 +311,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Location` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Location
@@ -321,18 +321,18 @@ Each `Location` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/locations
 :title: locations
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Value
 
@@ -355,9 +355,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Value` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Value
@@ -365,9 +365,9 @@ Each `Value` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/amount
@@ -424,9 +424,9 @@ Each `Value` has the following fields:
 :title: completion/finalValue
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Organization
 
@@ -443,9 +443,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Organization` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Organization
@@ -453,18 +453,18 @@ Each `Organization` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties
 :title: parties
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### OrganizationReference
 
@@ -483,9 +483,9 @@ This sub-schema is referenced by the following properties:
 
 Each `OrganizationReference` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/OrganizationReference
@@ -493,9 +493,9 @@ Each `OrganizationReference` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
@@ -537,9 +537,9 @@ Each `OrganizationReference` has the following fields:
 :title: contractingProcesses/0/summary/transactions/0/payee
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Address
 
@@ -559,9 +559,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Address` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Address
@@ -569,9 +569,9 @@ Each `Address` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/locations/0/address
@@ -583,9 +583,9 @@ Each `Address` has the following fields:
 :title: parties/0/address
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### ContactPoint
 
@@ -600,9 +600,9 @@ This sub-schema is referenced by the following properties:
 
 Each `ContactPoint` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContactPoint
@@ -610,18 +610,18 @@ Each `ContactPoint` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/contactPoint
 :title: parties/0/contactPoint
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### BudgetBreakdown
 
@@ -639,9 +639,9 @@ This sub-schema is referenced by the following properties:
 
 Each `BudgetBreakdown` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/BudgetBreakdown
@@ -649,18 +649,18 @@ Each `BudgetBreakdown` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown
 :title: budget/budgetBreakdown
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Document
 
@@ -678,9 +678,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Document` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Document
@@ -688,9 +688,9 @@ Each `Document` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/documents
@@ -702,9 +702,9 @@ Each `Document` has the following fields:
 :title: contractingProcesses/0/summary/documents
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Identifier
 
@@ -726,9 +726,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Identifier` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Identifier
@@ -736,9 +736,9 @@ Each `Identifier` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/identifier
@@ -750,9 +750,9 @@ Each `Identifier` has the following fields:
 :title: parties/0/additionalIdentifiers
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### RelatedProject
 
@@ -769,9 +769,9 @@ This sub-schema is referenced by the following properties:
 
 Each `RelatedProject` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/RelatedProject
@@ -779,18 +779,18 @@ Each `RelatedProject` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/relatedProjects
 :title: relatedProjects
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Metric
 `Metric` is defined as:
@@ -805,9 +805,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Metric` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Metric
@@ -815,9 +815,9 @@ Each `Metric` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/forecasts
@@ -829,9 +829,9 @@ Each `Metric` has the following fields:
 :title: metrics
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Observation
 `Observation` is defined as:
@@ -845,9 +845,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Observation` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Observation
@@ -855,9 +855,9 @@ Each `Observation` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/forecasts/0/observations
@@ -869,9 +869,9 @@ Each `Observation` has the following fields:
 :title: metrics/0/observations
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Person
 
@@ -888,9 +888,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Person` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Person
@@ -898,18 +898,18 @@ Each `Person` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/people
 :title: parties/0/people
 ```
 
-````
+::::
 
-`````
+:::::
 
 ### Transaction
 
@@ -926,9 +926,9 @@ This sub-schema is referenced by the following properties:
 
 Each `Transaction` has the following fields:
 
-`````{tabs}
+:::::{tab-set}
 
-````{tab} Schema
+::::{tab-item} Schema
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Transaction
@@ -936,16 +936,15 @@ Each `Transaction` has the following fields:
 :addtargets:
 ```
 
-````
+::::
 
-````{tab} Examples
+::::{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
 :title: contractingProcesses/0/summary/transactions
 ```
 
-````
+::::
 
-`````
-
+:::::

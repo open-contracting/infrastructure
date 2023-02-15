@@ -42,7 +42,7 @@ extensions = [
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
-    'sphinx_tabs.tabs'
+    'sphinx_design'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -86,7 +86,7 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 smartquotes = False
 
 # MyST configuration.
-myst_enable_extensions = ['linkify']
+myst_enable_extensions = ['linkify', 'colon_fence']
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
 

@@ -278,15 +278,15 @@ def update_sub_schema_reference(schema):
         # Add schema table
         definition["content"].extend([
             f"\nEach `{defn}` has the following fields:\n\n",
-            "`````{tabs}\n\n",
-            "````{tab} Schema\n\n",
+            ":::::{tab-set}\n\n",
+            "::::{tab-item} Schema\n\n",
             "```{jsonschema} ../../schema/project-level/project-schema.json\n",
             f":pointer: /definitions/{defn}\n",
             f":collapse: {','.join(definition['properties'].keys())}\n"
             ":addtargets:\n"
             "```\n\n",
-            "````\n\n",
-            "````{tab} Examples\n\n"
+            "::::\n\n",
+            "::::{tab-item} Examples\n\n"
         ])
 
         # Add examples
@@ -303,8 +303,8 @@ def update_sub_schema_reference(schema):
                 ])
 
         definition["content"].extend([
-            "````\n\n",
-            "`````\n\n"
+            "::::\n\n",
+            ":::::\n\n"
         ])
 
         schema_reference.extend(definition["content"])
