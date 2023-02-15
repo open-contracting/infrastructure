@@ -6,7 +6,7 @@
 }
 </style>
 
-This section presents each field in the schema in tables with additional information in paragraphs. Required fields are indicated in the **Required** column. For fields that reference a sub-schema, a link is provided to a table with details of the sub-schema. To see how the fields and sub-schemas fit together, consult the [schema browser](browser).
+This page presents the fields in the OC4IDS schema in tables with additional information in paragraphs. Required fields are indicated in the **Required** column. For fields that reference a sub-schema, a link is provided to a table with details of the sub-schema. To see how the fields and sub-schemas fit together, consult the [schema browser](browser).
 
 ## Project
 
@@ -26,7 +26,7 @@ Each project has the following fields:
 
 ## Sub-schemas
 
-This section lists each sub-schema in the OC4IDS schema. Some sub-schemas are referenced from multiple places in the schema.
+This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts of the schema that are represented as objects in OC4IDS data. Some sub-schemas are referenced from multiple places in the schema.
 
 ### ContractingProcess
 `ContractingProcess` is defined as:
