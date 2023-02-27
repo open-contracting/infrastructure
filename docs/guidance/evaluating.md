@@ -33,7 +33,7 @@ You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get st
 Check whether the contracting data is published using OCDS.
 
 ```{tip}
-You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check that whether your data is published in OCDS format.
+You can use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check that whether your data is published in OCDS format.
 ```
 
 If the contracting data is published using OCDS then use it to populate the contracting processes section of the project-level data, following the guidance on [using contracting data to understand infrastructure projects](using).

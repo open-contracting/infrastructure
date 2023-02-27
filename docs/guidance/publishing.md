@@ -58,7 +58,7 @@ Create an OC4IDS JSON file for each project your system has information on and u
 You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
-If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check your OCDS releases.
+If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
 
