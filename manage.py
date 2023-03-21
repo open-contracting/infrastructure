@@ -164,7 +164,7 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
         sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
 
 
-def get_definition_references(schema, defn, parents=None, project_schema=None):
+def get_definition_references(schema, defn, parents=None, project_schema=None, include_nested=True):
     """
     Recursively generate a list of JSON pointers that reference a definition in JSON schema.
 
@@ -172,6 +172,7 @@ def get_definition_references(schema, defn, parents=None, project_schema=None):
     :defn: The name of the definition
     :parents: A list of the parents of schema
     :project_schema: The full project schema
+    "include_nested: Whether to include nested references
     """
 
     references = []
@@ -187,27 +188,27 @@ def get_definition_references(schema, defn, parents=None, project_schema=None):
             if value.get('type') == 'array' and '$ref' in value['items']:
                 if value['items']['$ref'] == f"#/definitions/{defn}":
                     references.append(parents + [key, '0'])
-                else:
+                elif include_nested:
                     references.extend(get_definition_references(
                         project_schema['definitions'][value['items']['$ref'].split('/')[-1]],
                         defn,
                         parents + [key, '0'],
-                        project_schema))
+                        project_schema, include_nested))
             elif '$ref' in value:
                 if value['$ref'] == f"#/definitions/{defn}":
                     references.append(parents + [key])
-                else:
+                elif include_nested:
                     references.extend(get_definition_references(
                         project_schema['definitions'][value['$ref'].split('/')[-1]],
                         defn,
                         parents + [key],
-                        project_schema))
+                        project_schema, include_nested))
             elif 'properties' in value:
-                references.extend(get_definition_references(value, defn, parents + [key], project_schema))
+                references.extend(get_definition_references(value, defn, parents + [key], project_schema, include_nested))
 
     if 'definitions' in schema:
         for key, value in schema['definitions'].items():
-            references.extend(get_definition_references(value, defn, [key], project_schema))
+            references.extend(get_definition_references(value, defn, [key], project_schema, include_nested))
 
     return references
 
@@ -255,7 +256,7 @@ def update_sub_schema_reference(schema):
         ])
 
         # Add a list of properties that reference this definition
-        definition["references"] = get_definition_references(schema, defn)
+        definition["references"] = get_definition_references(schema, defn, include_nested=False)
         definition["content"].append("This sub-schema is referenced by the following properties:\n")
 
         for ref in definition["references"]:
@@ -265,24 +266,26 @@ def update_sub_schema_reference(schema):
             url = 'project-schema.json,'
 
             # Omit nested references
-            if ref[0] in schema['definitions'] and len(ref) == 2:
-                url += '/definitions/'
-            elif len(ref) == 1:
-                url += ','
+            if ref[0] in schema['definitions']:
+                url += f"/definitions/{ref[0]},{'/'.join(ref[1:])}"
             else:
-                continue
+                url += f",{'/'.join(ref)}"
 
-            url += ','.join(ref)
             definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
 
         # Add schema table
+        properties_to_collapse = []
+        for key, value in definition['properties'].items():
+            if value.get('type') != 'object':
+                properties_to_collapse.append(key)
+        
         definition["content"].extend([
             f"\nEach `{defn}` has the following fields:\n\n",
             ":::::{tab-set}\n\n",
             "::::{tab-item} Schema\n\n",
             "```{jsonschema} ../../schema/project-level/project-schema.json\n",
             f":pointer: /definitions/{defn}\n",
-            f":collapse: {','.join(definition['properties'].keys())}\n"
+            f":collapse: {','.join(properties_to_collapse)}\n"
             ":addtargets:\n"
             "```\n\n",
             "::::\n\n",
@@ -293,6 +296,7 @@ def update_sub_schema_reference(schema):
         paths_to_skip = ['forecasts/0/observations/0/value', 'metrics/0/observations/0/value']
 
         # Add examples
+        definition["references"] = get_definition_references(schema, defn)
         for ref in definition["references"]:
             if ref[0] not in schema['definitions'] and '/'.join(ref) not in paths_to_skip:
                 if ref[-1] == '0':

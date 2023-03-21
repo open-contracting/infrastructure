@@ -81,7 +81,7 @@ Each `ContractingProcessSummary` has the following fields:
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
-:collapse: ocid,externalReference,nature,title,description,status,tender,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
+:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
 :addtargets:
 ```
 
@@ -317,7 +317,7 @@ Each `Location` has the following fields:
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Location
-:collapse: id,description,geometry,gazetteer,uri,address
+:collapse: id,description,uri,address
 :addtargets:
 ```
 
@@ -345,6 +345,9 @@ All values should be published along with their currency using the following str
 ```
 
 This sub-schema is referenced by the following properties:
+* [`budget/amount`](project-schema.json,,budget/amount)
+* [`completion/finalValue`](project-schema.json,,completion/finalValue)
+* [`ContractingProcessSummary/tender/costEstimate`](project-schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)
 * [`ContractingProcessSummary/contractValue`](project-schema.json,/definitions/ContractingProcessSummary,contractValue)
 * [`ContractingProcessSummary/finalValue`](project-schema.json,/definitions/ContractingProcessSummary,finalValue)
 * [`Modification/oldContractValue`](project-schema.json,/definitions/Modification,oldContractValue)
@@ -466,6 +469,9 @@ Each `Organization` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`publicAuthority`](project-schema.json,,publicAuthority)
+* [`ContractingProcessSummary/tender/tenderers`](project-schema.json,/definitions/ContractingProcessSummary,tender/tenderers)
+* [`ContractingProcessSummary/tender/procuringEntity`](project-schema.json,/definitions/ContractingProcessSummary,tender/procuringEntity)
+* [`ContractingProcessSummary/tender/administrativeEntity`](project-schema.json,/definitions/ContractingProcessSummary,tender/administrativeEntity)
 * [`ContractingProcessSummary/suppliers`](project-schema.json,/definitions/ContractingProcessSummary,suppliers)
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
@@ -626,6 +632,7 @@ See the [documentation of the OCDS Budget Breakdown extension](https://extension
 ```
 
 This sub-schema is referenced by the following properties:
+* [`budget/budgetBreakdown`](project-schema.json,,budget/budgetBreakdown)
 
 Each `BudgetBreakdown` has the following fields:
 
@@ -841,7 +848,7 @@ Each `Observation` has the following fields:
 
 ```{jsonschema} ../../schema/project-level/project-schema.json
 :pointer: /definitions/Observation
-:collapse: id,period,value,measure,unit,dimensions,notes
+:collapse: id,period,value,measure,notes
 :addtargets:
 ```
 
