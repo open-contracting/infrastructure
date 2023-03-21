@@ -204,7 +204,11 @@ def get_definition_references(schema, defn, parents=None, project_schema=None, i
                         parents + [key],
                         project_schema, include_nested))
             elif 'properties' in value:
-                references.extend(get_definition_references(value, defn, parents + [key], project_schema, include_nested))
+                references.extend(get_definition_references(value,
+                                                            defn,
+                                                            parents + [key],
+                                                            project_schema,
+                                                            include_nested))
 
     if 'definitions' in schema:
         for key, value in schema['definitions'].items():
@@ -278,7 +282,7 @@ def update_sub_schema_reference(schema):
         for key, value in definition['properties'].items():
             if value.get('type') != 'object':
                 properties_to_collapse.append(key)
-        
+
         definition["content"].extend([
             f"\nEach `{defn}` has the following fields:\n\n",
             ":::::{tab-set}\n\n",
