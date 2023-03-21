@@ -135,8 +135,6 @@ Each `LinkedRelease` has the following fields:
 
 ### Modification
 
-For each modification, the following structured information can be provided.
-
 `Modification` is defined as:
 
 ```{jsoninclude-quote} ../../schema/project-level/project-schema.json
@@ -256,8 +254,6 @@ Each `Period` has the following fields:
 
 ### Classification
 
-A classification consists of an identifier for the codelist (the `scheme`) and a code from that codelist (the `id`), and then a human-readable label for the classification (the `description`).
-
 `Classification` is defined as:
 
 ```{jsoninclude-quote} ../../schema/project-level/project-schema.json
@@ -294,12 +290,6 @@ Each `Classification` has the following fields:
 
 ### Location
 
-A project can have one or more locations. Locations can be expressed in a number of different ways, using one or more of:
-
-* A point location or geometry (e.g. trace of a road, or polygon giving the boundary of a site);
-* A gazetteer entry (e.g. town name);
-* An address.
-
 `Location` is defined as:
 
 ```{jsoninclude-quote} ../../schema/project-level/project-schema.json
@@ -335,8 +325,6 @@ Each `Location` has the following fields:
 :::::
 
 ### Value
-
-All values should be published along with their currency using the following structure.
 
 `Value` is defined as:
 
@@ -422,8 +410,6 @@ Each `Value` has the following fields:
 :::::
 
 ### Organization
-
-For each organization, provide as much structured data as you can.
 
 `Organization` is defined as:
 
@@ -539,9 +525,9 @@ Each `OrganizationReference` has the following fields:
 
 ### Address
 
-We use properties from schema.org and vCard for address components. In the event source data cannot be broken down into these parts, data SHOULD contain at least a streetAddress value and postal code.
+The address sub-schema re-uses fields from schema.org and vCard. In the event source data cannot be broken down into these parts, data should contain at least a `streetAddress` and `postalCode`.
 
-When working with data, users ought to be aware that addresses might not always be broken down using all the properties the specification provides.
+When working with data, users ought to be aware that addresses might not always be broken down using all the fields the schema provides.
 
 `Address` is defined as:
 
@@ -621,9 +607,7 @@ Each `ContactPoint` has the following fields:
 
 ### BudgetBreakdown
 
-A budget breakdown is provided through an array of `BudgetBreakdown` objects, each of which represents budget for a particular period, from a particular source, or a combination of the two.
-
-See the [documentation of the OCDS Budget Breakdown extension](https://extensions.open-contracting.org/en/extensions/budget/master/) for more details of this data model. BudgetBreakdown can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://extensions.open-contracting.org/en/extensions/budget_and_spend/master/).
+For more information about this sub-schema, see the [OCDS Budget Breakdown extension documentation](https://extensions.open-contracting.org/en/extensions/budget/master/). `BudgetBreakdown` can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://extensions.open-contracting.org/en/extensions/budget_and_spend/master/).
 
 `BudgetBreakdown` is defined as:
 
@@ -660,8 +644,6 @@ Each `BudgetBreakdown` has the following fields:
 :::::
 
 ### Document
-
-For each document the following structured information can be provided.
 
 `Document` is defined as:
 
@@ -752,8 +734,6 @@ Each `Identifier` has the following fields:
 :::::
 
 ### RelatedProject
-
-A reference to a project related to the same set of infrastructure assets as the current project.
 
 `RelatedProject` is defined as:
 
@@ -945,4 +925,3 @@ Each `Transaction` has the following fields:
 ::::
 
 :::::
-
