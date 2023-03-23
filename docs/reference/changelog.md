@@ -10,6 +10,7 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
 * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
 * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
+* [#299](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
 
 ### Schema
 
