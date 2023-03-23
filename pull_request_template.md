@@ -19,10 +19,7 @@ If there are changes to `project-schema.json` or `project-package-schema.json`:
   - [ ] `docs/examples/blank.json`
 - [ ] Run `./manage.py pre-commit` to update `docs/_static/i8n.csv`
 
-If you added a new definition to the schema, update `docs/reference/schema.md`:
-
-- [ ] Add an entry to the components section
-- [ ] Update the `:collapse:` parameter of the `jsonschema` directive for any schemas or sub-schemas that reference the new definition 
+If you added a new definition to the schema, run `./manage.py pre-commit`.
 
 If you added a new codelist:
 
