@@ -23,7 +23,7 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 Check that the data you plan to analyze is in OCDS format
 
 ```{tip}
-You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
+You can use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check whether your data is in the correct format
 ```
 
 Check which stages of the contracting process the data covers.

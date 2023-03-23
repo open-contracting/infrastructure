@@ -98,7 +98,7 @@ html_context = {
 html_theme_options = {
     'analytics_id': 'YEWDOOEQ',
     'display_version': True,
-    'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
+    'root_url': f'/{profile_identifier}' if profile_identifier else '',
     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
     'copyright': copyright,
     'license_name': 'Apache License 2.0',

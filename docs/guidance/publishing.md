@@ -52,13 +52,13 @@ Include an identifier for the infrastructure project that each contracting proce
 
 ### (3) Build your data, systems and processes
 
-Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that the files are structurally correct against OC4IDS.
+Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://review-oc4ids.standard.open-contracting.org/) to check that the files are structurally correct against OC4IDS.
 
 ```{tip}
 You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
-If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check your OCDS releases.
+If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
 

@@ -29,7 +29,7 @@
 * [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
 * [#380](https://github.com/open-contracting/infrastructure/pull/380) - update links to OC4IDS Kit.
 
-## [0.9.3] - 2021-04-30
+## [0.9.3] - 2021-10-07
 
 ### Documentation
 
@@ -50,6 +50,7 @@
 * [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
 * [#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping.
 * [#339](https://github.com/open-contracting/infrastructure/pull/339) - update link to CoST IDS on mapping page.
+* [#382](https://github.com/open-contracting/infrastructure/pull/382) - update email addresses for support.
 
 ### Schema
 
