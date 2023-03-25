@@ -8,9 +8,9 @@ The worked example is a JSON file that conforms to the [project package schema](
 
 The worked example describes a fictional infrastructure project to upgrade a motorway in the UK with three related contracting processes. An example value is provided for each field in the schema, including:
 
-* [`forecasts`](../reference/schema.md#project-schema.json,,forecasts) and [`metrics`](../reference/schema.md#project-schema.json,,metrics) that describe planned and actual physical progress
-* [`modifications`](../reference/schema.md#project-schema.json,,metrics) that describe changes to the duration, scope and value of contracting processes
-* [`completion`](../reference/schema.md#project-schema.json,,completion) data, describing the final end date, value and scope of the project.
+* [`forecasts`](project-schema.json,,forecasts) and [`metrics`](project-schema.json,,metrics) that describe planned and actual physical progress
+* [`modifications`](project-schema.json,,metrics) that describe changes to the duration, scope and value of contracting processes
+* [`completion`](project-schema.json,,completion) data, describing the final end date, value and scope of the project.
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer:
