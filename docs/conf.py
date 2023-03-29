@@ -42,7 +42,7 @@ extensions = [
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
-    'sphinx_design'
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
