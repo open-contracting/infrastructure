@@ -254,8 +254,7 @@ def update_sub_schema_reference(schema):
         # Add description
         definition["content"].extend([
             f"`{defn}` is defined as:\n\n",
-            "```{jsoninclude-quote} ../../schema/project-level/project-schema.json\n",
-            f":jsonpointer: /definitions/{defn}/description\n",
+            f"```{{field-description}} ../../schema/project-level/project-schema.json /definitions/{defn}\n",
             "```\n\n"
         ])
 

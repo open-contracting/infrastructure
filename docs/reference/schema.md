@@ -60,8 +60,7 @@ This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts o
 ### ContractingProcess
 `ContractingProcess` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/ContractingProcess/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/ContractingProcess
 ```
 
 This sub-schema is referenced by the following properties:
@@ -95,8 +94,7 @@ Each `ContractingProcess` has the following fields:
 ### ContractingProcessSummary
 `ContractingProcessSummary` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/ContractingProcessSummary/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/ContractingProcessSummary
 ```
 
 This sub-schema is referenced by the following properties:
@@ -130,8 +128,7 @@ Each `ContractingProcessSummary` has the following fields:
 ### LinkedRelease
 `LinkedRelease` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/LinkedRelease/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/LinkedRelease
 ```
 
 This sub-schema is referenced by the following properties:
@@ -166,8 +163,7 @@ Each `LinkedRelease` has the following fields:
 
 `Modification` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Modification/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Modification
 ```
 
 This sub-schema is referenced by the following properties:
@@ -208,8 +204,7 @@ Where the source system does not contain time information, a judgment ought to b
 
 `Period` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Period/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Period
 ```
 
 This sub-schema is referenced by the following properties:
@@ -285,8 +280,7 @@ Each `Period` has the following fields:
 
 `Classification` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Classification/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Classification
 ```
 
 This sub-schema is referenced by the following properties:
@@ -321,8 +315,7 @@ Each `Classification` has the following fields:
 
 `Location` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Location/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Location
 ```
 
 This sub-schema is referenced by the following properties:
@@ -357,8 +350,7 @@ Each `Location` has the following fields:
 
 `Value` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Value/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Value
 ```
 
 This sub-schema is referenced by the following properties:
@@ -442,8 +434,7 @@ Each `Value` has the following fields:
 
 `Organization` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Organization/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Organization
 ```
 
 This sub-schema is referenced by the following properties:
@@ -478,8 +469,7 @@ Each `Organization` has the following fields:
 
 `OrganizationReference` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/OrganizationReference/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/OrganizationReference
 ```
 
 This sub-schema is referenced by the following properties:
@@ -560,8 +550,7 @@ When working with data, users ought to be aware that addresses might not always 
 
 `Address` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Address/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Address
 ```
 
 This sub-schema is referenced by the following properties:
@@ -602,8 +591,7 @@ Each `Address` has the following fields:
 
 `ContactPoint` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/ContactPoint/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/ContactPoint
 ```
 
 This sub-schema is referenced by the following properties:
@@ -640,8 +628,7 @@ For more information about this sub-schema, see the [OCDS Budget Breakdown exten
 
 `BudgetBreakdown` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/BudgetBreakdown/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/BudgetBreakdown
 ```
 
 This sub-schema is referenced by the following properties:
@@ -676,8 +663,7 @@ Each `BudgetBreakdown` has the following fields:
 
 `Document` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Document/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Document
 ```
 
 This sub-schema is referenced by the following properties:
@@ -724,8 +710,7 @@ For example, if identifying a company in Colombia, look up its identifier in the
 
 `Identifier` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Identifier/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Identifier
 ```
 
 This sub-schema is referenced by the following properties:
@@ -766,8 +751,7 @@ Each `Identifier` has the following fields:
 
 `RelatedProject` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/RelatedProject/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/RelatedProject
 ```
 
 This sub-schema is referenced by the following properties:
@@ -801,8 +785,7 @@ Each `RelatedProject` has the following fields:
 ### Metric
 `Metric` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Metric/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Metric
 ```
 
 This sub-schema is referenced by the following properties:
@@ -842,8 +825,7 @@ Each `Metric` has the following fields:
 ### Observation
 `Observation` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Observation/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Observation
 ```
 
 This sub-schema is referenced by the following properties:
@@ -885,8 +867,7 @@ Use this object when you need to disclose the details of people associated with,
 
 `Person` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Person/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Person
 ```
 
 This sub-schema is referenced by the following properties:
@@ -923,8 +904,7 @@ A spending transaction related to a contracting process.
 
 `Transaction` is defined as:
 
-```{jsoninclude-quote} ../../schema/project-level/project-schema.json
-:jsonpointer: /definitions/Transaction/description
+```{field-description} ../../schema/project-level/project-schema.json /definitions/Transaction
 ```
 
 This sub-schema is referenced by the following properties:
