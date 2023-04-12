@@ -15,6 +15,7 @@
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
+* [#365](https://github.com/open-contracting/infrastructure/pull/365) - add description field to budget.
 * [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 
