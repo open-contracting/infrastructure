@@ -9,19 +9,27 @@
 * [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. LinkedRelease.tag  is now correctly marked as "Required")
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
 * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
+* [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
 
 ### Schema
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) - add description field to budget.
+* [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
+* [#369](https://github.com/open-contracting/infrastructure/pull/369) - add classification scheme codelist.
 
-## [0.9.3] - 2021-04-30
+### Other
+
+* [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
+* [#380](https://github.com/open-contracting/infrastructure/pull/380) - update links to OC4IDS Kit.
+
+## [0.9.3] - 2021-10-07
 
 ### Documentation
 
@@ -42,6 +50,7 @@
 * [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
 * [#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping.
 * [#339](https://github.com/open-contracting/infrastructure/pull/339) - update link to CoST IDS on mapping page.
+* [#382](https://github.com/open-contracting/infrastructure/pull/382) - update email addresses for support.
 
 ### Schema
 

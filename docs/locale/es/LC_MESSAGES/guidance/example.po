@@ -48,19 +48,19 @@ msgstr ""
 
 #: ../../docs/guidance/example.md:7
 msgid ""
-"The full OC4IDS JSON file for the worked example is {download}`available to "
-"download <../examples/example.json>`."
+"The full OC4IDS JSON file for the worked example is [available to "
+"download](../examples/example.json)."
 msgstr ""
 "El archivo OC4IDS JSON completo para el ejemplo práctico está disponible "
 "{aquí}`para su descarga <../examples/example.json>`."
 
 #: ../../docs/guidance/example.md:1
 msgid ""
-"You can also download a {download}`blank example OC4IDS JSON file "
-"<../examples/blank.json>` as a starting point for your implementation."
+"You can also download a [blank example OC4IDS JSON file"
+"](../examples/blank.json) as a starting point for your implementation."
 msgstr ""
-"También puede descargar un {download}`blank example OC4IDS JSON file "
-"<../examples/blank.json>`  como punto de partida para su implementación. "
+"También puede descargar un [blank example OC4IDS JSON file"
+"](../examples/blank.json)  como punto de partida para su implementación. "
 
 #: ../../docs/guidance/example.md:13
 msgid ""

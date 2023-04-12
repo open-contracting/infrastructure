@@ -99,7 +99,7 @@ html_context = {
 html_theme_options = {
     'analytics_id': 'YEWDOOEQ',
     'display_version': True,
-    'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
+    'root_url': f'/{profile_identifier}' if profile_identifier else '',
     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
     'copyright': copyright,
     'license_name': 'Apache License 2.0',
@@ -132,7 +132,7 @@ def setup(app):
     static_dir = basedir / 'docs' / '_static' / 'project-level'
     build_dir = basedir / 'build' / language
 
-    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
+    branch = os.getenv('GITHUB_REF_NAME', 'latest')
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.

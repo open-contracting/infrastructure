@@ -663,10 +663,10 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken.",
-          "type": [
-            "string"
-          ],
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.",
+          "type": "string",
+          "codelist": "classificationScheme.csv",
+          "openCodelist": true,
           "minLength": 1
         },
         "id": {
@@ -1351,6 +1351,12 @@
           "title": "Amount",
           "description": "The value of the budget line item.",
           "$ref": "#/definitions/Value"
+        },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
         },
         "uri": {
           "title": "Linked budget information",

@@ -1,4 +1,4 @@
-name: Lint JavaScript
+name: Spell-check
 on: [push, pull_request]
 jobs:
   build:
@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-python@v4
         with:
-          node-version: 18
-      - run: npm install standard
-      - run: npx standard docs/_static/json-example-format.js
+          python-version: 3.8
+      - run: pip install codespell
+      - run: codespell -S .git,docson,locale,currency.csv -L zar .

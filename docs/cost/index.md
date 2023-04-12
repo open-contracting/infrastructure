@@ -71,7 +71,6 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-identification.csv
 ```
@@ -80,7 +79,6 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-preparation.csv
 ```
@@ -89,7 +87,6 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/project-level-completion.csv
 ```
@@ -100,7 +97,6 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
@@ -109,7 +105,6 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-project-level-completion.csv
 ```
@@ -292,7 +287,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/process-level-procurement.csv
 ```
@@ -301,7 +295,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/process-level-implementation.csv
 ```
@@ -312,7 +305,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-procurement.csv
 ```
@@ -321,7 +313,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-contract.csv
 ```
@@ -330,7 +321,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,2
 :file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
@@ -341,15 +331,15 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 #### Command-line tool and reference implementation
 
-OCDS Kit's [convert-to-oc4ids](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#convert-to-oc4ids) command  is a command-line tool and reference implementation for converting OCDS data to OC4IDS format.
+OC4IDS Kit's [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds) command is a command-line tool and reference implementation for converting OCDS data to OC4IDS format.
 
-`convert-to-oc4ids` covers most mappings in the following categories:
+`convert-from-ocds` covers most mappings in the following categories:
 
 * project-level identification
 * project-level preparation
 * process-level procurement
 
-However, `convert-to-oc4ids` does not cover all mappings, nor does it perform currency conversions. Mappings which `convert-to-oc4ids` does not cover are shown in *italics*.
+However, `convert-from-ocds` does not cover all mappings, nor does it perform currency conversions. Mappings that `convert-from-ocds` does not cover are shown in *italics*.
 
 #### Mapping codelists
 
@@ -374,7 +364,7 @@ Implementations of the mapping ought to give consideration to:
 * Checking for duplicates when copying objects from OCDS. For example, checking whether an `Organization` object has already been copied before copying it again.
 * Handling identifier conflicts when copying objects from OCDS. For example, where two contracting processes both contain a ``Document`` with the same `.id`.
 
-Read the `convert-to-oc4ids` [transformation notes](https://ocdskit.readthedocs.io/en/latest/cli/ocds.html#transformation-notes) to learn about how OCDS Kit handles the above scenarios.
+Read the `convert-from-ocds` [transformation notes](https://oc4idskit.readthedocs.io/en/latest/cli.html#transformation-notes) to learn about how OC4IDS Kit handles the above scenarios.
 
 #### Handling multiple currencies
 
@@ -390,7 +380,6 @@ Implementations which include multiple currencies ought to give consideration to
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-identification.csv
 ```
@@ -399,7 +388,6 @@ Implementations which include multiple currencies ought to give consideration to
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-preparation.csv
 ```
@@ -408,7 +396,6 @@ Implementations which include multiple currencies ought to give consideration to
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/project-level-completion.csv
 ```
@@ -419,7 +406,6 @@ Implementations which include multiple currencies ought to give consideration to
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
@@ -428,7 +414,6 @@ Implementations which include multiple currencies ought to give consideration to
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/reactive-project-level-completion.csv
 ```
@@ -441,7 +426,6 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/process-level-procurement.csv
 ```
@@ -456,7 +440,6 @@ In some cases, OCDS data might include an explanation of changes in the relevant
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/process-level-implementation.csv
 ```
@@ -467,7 +450,6 @@ In some cases, OCDS data might include an explanation of changes in the relevant
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/reactive-process-level-procurement.csv
 ```
@@ -476,7 +458,6 @@ In some cases, OCDS data might include an explanation of changes in the relevant
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/reactive-process-level-contract.csv
 ```
@@ -485,7 +466,6 @@ In some cases, OCDS data might include an explanation of changes in the relevant
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :included_cols: 0,1,3
 :file: ../../build/current_lang/reactive-process-level-implementation.csv
 ```
