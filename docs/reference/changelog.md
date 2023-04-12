@@ -18,6 +18,7 @@
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) - add description field to budget.
 * [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
+* [#386](https://github.com/open-contracting/infrastructure/pull/386) - add example for description field in budget.
 
 ### Codelists
 
