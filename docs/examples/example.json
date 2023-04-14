@@ -102,6 +102,7 @@
         }
       ],
       "budget": {
+        "description": "Budget allocation for Motorways UK, aligned with the 2016-2018 strategic plan.",
         "amount": {
           "amount": 40000000,
           "currency": "GBP"
