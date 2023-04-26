@@ -169,10 +169,10 @@ def get_definition_references(schema, defn, parents=None, project_schema=None, i
     Recursively generate a list of JSON pointers that reference a definition in JSON schema.
 
     :param schema: The JSON schema
-    :defn: The name of the definition
-    :parents: A list of the parents of schema
-    :project_schema: The full project schema
-    "include_nested: Whether to include nested references
+    :param defn: The name of the definition
+    :param parents: A list of the parents of schema
+    :param project_schema: The full project schema
+    :param include_nested: Whether to include nested references
     """
 
     references = []
