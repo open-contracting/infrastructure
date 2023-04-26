@@ -170,6 +170,13 @@
             "id": "XX1234",
             "uri": "https://government-organisation.register.gov.uk/records/XX1234"
           },
+          "additionalIdentifiers": [
+            {
+              "scheme": "GB-GOV",
+              "legalName": "Motorways UK",
+              "id": "ABCDE"
+            }
+          ],
           "address": {
             "postalCode": "LL55 4NY",
             "countryName": "United Kingdom",
@@ -402,7 +409,8 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              }
+              },
+              "value": {}
             },
             {
               "id": "2",
@@ -449,7 +457,8 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              }
+              },
+              "value": {}
             },
             {
               "id": "2",
@@ -481,6 +490,199 @@
         }
       ],
       "contractingProcesses": [
+        {
+          "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
+          "summary": {
+            "ocid": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
+            "externalReference": "2016-SMP-M75-J4_J5-construction",
+            "nature": [
+              "construction"
+            ],
+            "title": "Smart Motorways Programme - Construction - Package 3 - M75 J8 - 10",
+            "description": "Collaborative Delivery Framework (CDF) - Lot 3B - Construction  £10 to  £50m",
+            "status": "closed",
+            "tender": {
+              "procurementMethod": "limited",
+              "procurementMethodDetails": "Restricted procedure",
+              "costEstimate": {
+                "amount": 33000000,
+                "currency": "GBP"
+              },
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Concrete Motorways Construction",
+                  "id": "GB-COH-33333333"
+                }
+              ],
+              "procuringEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
+              }
+            },
+            "suppliers": [
+              {
+                "name": "Concrete Motorways Construction",
+                "id": "GB-COH-33333333"
+              }
+            ],
+            "contractValue": {
+              "amount": 29000000,
+              "currency": "GBP"
+            },
+            "contractPeriod": {
+              "startDate": "2017-07-07T00:00:00Z",
+              "endDate": "2018-07-01T00:00:00Z"
+            },
+            "finalValue": {
+              "amount": 35250000,
+              "currency": "GBP"
+            },
+            "transactions": [
+              {
+                "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-00001-1",
+                "source": "https://openspending.org/motorways-uk-spending/",
+                "date": "2017-08-07T00:00:00Z",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                },
+                "payer": {
+                  "id": "GB-GOR-XX1234",
+                  "name": "Motorways UK"
+                },
+                "payee": {
+                  "name": "Concrete Motorways Construction",
+                  "id": "GB-COH-33333333"
+                },
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+              }
+            ],
+            "documents": [
+              {
+                "id": "a1b1c1-construction-excavation-report",
+                "documentType": "physicalProgressReport",
+                "title": "Report on construction excavation",
+                "description": "A report on the construction at Junction 5 where excavation damaged a watercourse.",
+                "url": "https://example.com/Published/a1b1c1-construction-monitoring.html",
+                "datePublished": "2018-02-01T00:00:00Z",
+                "dateModified": "2018-02-11T00:00:00Z",
+                "format": "text/html",
+                "language": "en",
+                "accessDetails": "Register for document access.",
+                "author": "Motorways UK"
+              },
+              {
+                "id": "a1b1c1-construction-completion",
+                "documentType": "completionCertificate",
+                "title": "Completion certificate for construction at M75 J4-5 upgrade",
+                "description": "Completion certificate for the construction upgrading motorway M75 Junctions 4-5.",
+                "url": "https://example.com/Published/a1b1c1-construction-completion.html",
+                "datePublished": "2018-12-10T00:00:00Z",
+                "format": "text/html",
+                "language": "en",
+                "accessDetails": "Register for document access.",
+                "author": "Motorways UK"
+              }
+            ],
+            "modifications": [
+              {
+                "id": "m27-4-5-construction-modification-001",
+                "date": "2018-04-01T15:15:00Z",
+                "description": "Construction extended for 5 months",
+                "rationale": "Excavation damaged a watercourse. Construction extended for repairs.",
+                "type": "duration",
+                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b005",
+                "oldContractPeriod": {
+                  "startDate": "2017-07-07T00:00:00Z",
+                  "endDate": "2018-07-01T00:00:00Z"
+                },
+                "newContractPeriod": {
+                  "startDate": "2017-07-07T00:00:00Z",
+                  "endDate": "2018-12-01T00:00:00Z"
+                }
+              },
+              {
+                "id": "m27-4-5-construction-modification-002",
+                "date": "2018-04-01T15:15:00Z",
+                "description": "Construction scope extended to include repairing a watercourse",
+                "rationale": "Excavation damaged a watercourse. Construction scope extended for repairs.",
+                "type": "scope",
+                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015"
+              },
+              {
+                "id": "m27-4-5-construction-modification-003",
+                "date": "2018-04-01T15:15:00Z",
+                "description": "Contract value increased from 29000000 to 35250000 to include repairing a watercourse",
+                "rationale": "Excavation damaged a watercourse. Construction budget extended for repairs.",
+                "type": "value",
+                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
+                "oldContractValue": {
+                  "amount": 29000000,
+                  "currency": "GBP"
+                },
+                "newContractValue": {
+                  "amount": 35250000,
+                  "currency": "GBP"
+                }
+              }
+            ]
+          },
+          "releases": [
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0011",
+              "date": "2015-09-16T15:12:32Z",
+              "tag": [
+                "tender"
+              ],
+              "url": "https://example.com/Published/releases/5553-b55.json"
+            },
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0012",
+              "date": "2015-12-16T15:15:00Z",
+              "tag": [
+                "award"
+              ],
+              "url": "https://example.com/Published/releases/5553-b56.json"
+            },
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0013",
+              "date": "2015-12-16T15:15:00Z",
+              "tag": [
+                "contract"
+              ],
+              "url": "https://example.com/Published/releases/5553-b57.json"
+            },
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0014",
+              "date": "2015-12-16T15:15:00Z",
+              "tag": [
+                "implementation"
+              ],
+              "url": "https://example.com/Published/releases/5553-b58.json"
+            },
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
+              "date": "2018-04-01T15:15:00Z",
+              "tag": [
+                "implementationUpdate"
+              ],
+              "url": "https://example.com/Published/releases/5553-b59.json"
+            },
+            {
+              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0016",
+              "date": "2018-12-10T09:15:00Z",
+              "tag": [
+                "contractTermination"
+              ],
+              "url": "https://example.com/Published/releases/5553-b60.json"
+            }
+          ]
+        },
         {
           "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
           "summary": {
@@ -537,26 +739,6 @@
               "amount": 1950000,
               "currency": "GBP"
             },
-            "transactions": [
-              {
-                "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b-00001-1",
-                "source": "https://openspending.org/motorways-uk-spending/",
-                "date": "2017-08-07T00:00:00Z",
-                "value": {
-                  "amount": 1950000,
-                  "currency": "GBP"
-                },
-                "payer": {
-                  "id": "GB-GOR-XX1234",
-                  "name": "Motorways UK"
-                },
-                "payee": {
-                  "id": "GB-COH-11111111",
-                  "name": "A1 Expert Smart Moto Design"
-                },
-                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
-              }
-            ],
             "documents": [
               {
                 "id": "a1b1c1-tender-doc-001",
@@ -694,179 +876,6 @@
                 "contractTermination"
               ],
               "url": "https://example.com/releases/ex-a1b1c1--033h.json"
-            }
-          ]
-        },
-        {
-          "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
-          "summary": {
-            "ocid": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
-            "externalReference": "2016-SMP-M75-J4_J5-construction",
-            "nature": [
-              "construction"
-            ],
-            "title": "Smart Motorways Programme - Construction - Package 3 - M75 J8 - 10",
-            "description": "Collaborative Delivery Framework (CDF) - Lot 3B - Construction  £10 to  £50m",
-            "status": "closed",
-            "tender": {
-              "procurementMethod": "limited",
-              "procurementMethodDetails": "Restricted procedure",
-              "costEstimate": {
-                "amount": 33000000,
-                "currency": "GBP"
-              },
-              "numberOfTenderers": 1,
-              "tenderers": [
-                {
-                  "name": "Concrete Motorways Construction",
-                  "id": "GB-COH-33333333"
-                }
-              ],
-              "procuringEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
-              },
-              "administrativeEntity": {
-                "name": "Motorways Administrator UK",
-                "id": "GB-GOR-XX9876"
-              }
-            },
-            "suppliers": [
-              {
-                "name": "Concrete Motorways Construction",
-                "id": "GB-COH-33333333"
-              }
-            ],
-            "contractValue": {
-              "amount": 29000000,
-              "currency": "GBP"
-            },
-            "contractPeriod": {
-              "startDate": "2017-07-07T00:00:00Z",
-              "endDate": "2018-07-01T00:00:00Z"
-            },
-            "finalValue": {
-              "amount": 35250000,
-              "currency": "GBP"
-            },
-            "documents": [
-              {
-                "id": "a1b1c1-construction-excavation-report",
-                "documentType": "physicalProgressReport",
-                "title": "Report on construction excavation",
-                "description": "A report on the construction at Junction 5 where excavation damaged a watercourse.",
-                "url": "https://example.com/Published/a1b1c1-construction-monitoring.html",
-                "datePublished": "2018-02-01T00:00:00Z",
-                "dateModified": "2018-02-11T00:00:00Z",
-                "format": "text/html",
-                "language": "en",
-                "accessDetails": "Register for document access.",
-                "author": "Motorways UK"
-              },
-              {
-                "id": "a1b1c1-construction-completion",
-                "documentType": "completionCertificate",
-                "title": "Completion certificate for construction at M75 J4-5 upgrade",
-                "description": "Completion certificate for the construction upgrading motorway M75 Junctions 4-5.",
-                "url": "https://example.com/Published/a1b1c1-construction-completion.html",
-                "datePublished": "2018-12-10T00:00:00Z",
-                "format": "text/html",
-                "language": "en",
-                "accessDetails": "Register for document access.",
-                "author": "Motorways UK"
-              }
-            ],
-            "modifications": [
-              {
-                "id": "m27-4-5-construction-modification-001",
-                "date": "2018-04-01T15:15:00Z",
-                "description": "Construction extended for 5 months",
-                "rationale": "Excavation damaged a watercourse. Construction extended for repairs.",
-                "type": "duration",
-                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b005",
-                "oldContractPeriod": {
-                  "startDate": "2017-07-07T00:00:00Z",
-                  "endDate": "2018-07-01T00:00:00Z"
-                },
-                "newContractPeriod": {
-                  "startDate": "2017-07-07T00:00:00Z",
-                  "endDate": "2018-12-01T00:00:00Z"
-                }
-              },
-              {
-                "id": "m27-4-5-construction-modification-002",
-                "date": "2018-04-01T15:15:00Z",
-                "description": "Construction scope extended to include repairing a watercourse",
-                "rationale": "Excavation damaged a watercourse. Construction scope extended for repairs.",
-                "type": "scope",
-                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015"
-              },
-              {
-                "id": "m27-4-5-construction-modification-003",
-                "date": "2018-04-01T15:15:00Z",
-                "description": "Contract value increased from 29000000 to 35250000 to include repairing a watercourse",
-                "rationale": "Excavation damaged a watercourse. Construction budget extended for repairs.",
-                "type": "value",
-                "releaseID": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
-                "oldContractValue": {
-                  "amount": 29000000,
-                  "currency": "GBP"
-                },
-                "newContractValue": {
-                  "amount": 35250000,
-                  "currency": "GBP"
-                }
-              }
-            ]
-          },
-          "releases": [
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0011",
-              "date": "2015-09-16T15:12:32Z",
-              "tag": [
-                "tender"
-              ],
-              "url": "https://example.com/Published/releases/5553-b55.json"
-            },
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0012",
-              "date": "2015-12-16T15:15:00Z",
-              "tag": [
-                "award"
-              ],
-              "url": "https://example.com/Published/releases/5553-b56.json"
-            },
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0013",
-              "date": "2015-12-16T15:15:00Z",
-              "tag": [
-                "contract"
-              ],
-              "url": "https://example.com/Published/releases/5553-b57.json"
-            },
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0014",
-              "date": "2015-12-16T15:15:00Z",
-              "tag": [
-                "implementation"
-              ],
-              "url": "https://example.com/Published/releases/5553-b58.json"
-            },
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0015",
-              "date": "2018-04-01T15:15:00Z",
-              "tag": [
-                "implementationUpdate"
-              ],
-              "url": "https://example.com/Published/releases/5553-b59.json"
-            },
-            {
-              "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-cdfpc3b0016",
-              "date": "2018-12-10T09:15:00Z",
-              "tag": [
-                "contractTermination"
-              ],
-              "url": "https://example.com/Published/releases/5553-b60.json"
             }
           ]
         }
