@@ -126,13 +126,13 @@ msgstr ""
 
 #: ../../docs/guidance/publishing.md:27
 msgid ""
-"Applications to join [CoST](http://infrastructuretransparency.org/) can be "
+"Applications to join [CoST](https://infrastructuretransparency.org/) can be "
 "used to make a commitment or if your country is a member of the [Open "
 "Government Partnership](https://www.opengovpartnership.org/), your National "
 "Action Plan is another great place to start."
 msgstr ""
 "Las solicitudes para adherirse a "
-"[CoST](http://infrastructuretransparency.org/) pueden usarse para realizar "
+"[CoST](https://infrastructuretransparency.org/) pueden usarse para realizar "
 "un compromiso, o si su país es un miembro de la [Open Government "
 "Partnership](https://www.opengovpartnership.org/), su Plan de Acción "
 "Nacional es otro buen lugar para empezar."
@@ -142,14 +142,14 @@ msgid ""
 "Refer to the [OCDS implementation journey](https://standard.open-"
 "contracting.org/latest/en/guidance/design/) for information and resources "
 "about making commitments related to OCDS. Refer to the [CoST and OGP "
-"guidance note](http://infrastructuretransparency.org/wp-"
+"guidance note](https://infrastructuretransparency.org/wp-"
 "content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on "
 "making OGP commitments related to CoST."
 msgstr ""
 "Utilizar el [recorrido de implementación OCDS](https://standard.open-"
 "contracting.org/latest/en/guidance/design/) para información y recursos "
 "sobre cómo hacer compromisos relacionados a OCDS. Consulte la [nota de guía "
-"de CoST y OGP] (http://infrastructuretransparency.org/wp-"
+"de CoST y OGP] (https://infrastructuretransparency.org/wp-"
 "content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) para orientación "
 "sobre cómo hacer compromisos OGP relacionados a CoST."
 
@@ -289,8 +289,8 @@ msgstr ""
 "de una API) en una URL estable, tal como:"
 
 #: ../../docs/guidance/publishing.md:67
-msgid "`http://{your-website}/opendata/projects/{project-id}.json`"
-msgstr "`http://{your-website}/opendata/projects/{project-id}.json`"
+msgid "`https://{your-website}/opendata/projects/{project-id}.json`"
+msgstr "`https://{your-website}/opendata/projects/{project-id}.json`"
 
 #: ../../docs/guidance/publishing.md:69
 msgid ""
@@ -302,8 +302,8 @@ msgstr ""
 "como:"
 
 #: ../../docs/guidance/publishing.md:71
-msgid "`http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
-msgstr "`http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
+msgid "`https://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
+msgstr "`https://{your-website}/opendata/contracting/{ocid}/{release-id}.json`"
 
 #: ../../docs/guidance/publishing.md:73
 msgid ""

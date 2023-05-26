@@ -24,9 +24,9 @@ Consider making or advocating for a public commitment to publish standardized op
 
 Commitments are important to help align implementation with the goals of publishing open data and to help overcome technical, political or bureaucratic barriers to publication.
 
-Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
+Applications to join [CoST](https://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
 
-Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
+Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](https://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
 
 ### (2a) Map project-level data and summary contracting process data
 
@@ -66,11 +66,11 @@ Make sure you have systems and/or business processes in place to keep the data y
 
 Publish your OC4IDS JSON fields (as either static files or via an API) at a stable URL, such as:
 
-> `http://{your-website}/opendata/projects/{project-id}.json`
+> `https://{your-website}/opendata/projects/{project-id}.json`
 
 If you are also publishing contracting data using OCDS, publish each new release of data as a JSON file at a stable URL such as:
 
-> `http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`
+> `https://{your-website}/opendata/contracting/{ocid}/{release-id}.json`
 
 Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 

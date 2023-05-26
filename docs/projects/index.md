@@ -66,7 +66,7 @@ Alongside project-level data and documents, monitoring an infrastructure project
 
 It is possible to use contracting data to identify infrastructure projects for monitoring. It can also be used to monitor projects for changes to costs, timescales and scope. Each change you identify can be recorded in the summary contracting process data section of OC4IDS, along with an explanation.
 
-Where detailed contracting data is published using the [Open Contracting Data Standard](http://standard.open-contracting.org), the `contractingProcesses/releases` array in OC4IDS can be used to link to OCDS releases, recording each update to a contracting process.
+Where detailed contracting data is published using the [Open Contracting Data Standard](https://standard.open-contracting.org), the `contractingProcesses/releases` array in OC4IDS can be used to link to OCDS releases, recording each update to a contracting process.
 
 OCDS is used to disclose detailed data on contracting processes for goods, works and services. It covers all stages of a contracting process: planning, initiation, award, contract and implementation.
 

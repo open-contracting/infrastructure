@@ -8,7 +8,7 @@
 
 CoST – the Infrastructure Transparency Initiative (CoST) is the leading global initiative improving transparency and accountability in public infrastructure.
 
-The [CoST approach](http://infrastructuretransparency.org/our-approach/) is based on four core features:
+The [CoST approach](https://infrastructuretransparency.org/our-approach/) is based on four core features:
 
 * **Disclosure** - where procuring entities are asked to follow the CoST Infrastructure Data Standard. This describes 40 items of data that ought to be proactively disclosed at key stages of an infrastructure project cycle.
 

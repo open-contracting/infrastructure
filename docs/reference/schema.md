@@ -704,9 +704,9 @@ Each `Document` has the following fields:
 
 Use of stable official organization identifiers can help join up data between systems.
 
-Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](http://www.org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
+Organization identifiers should be constructed by collecting an official company (or government body) registration number for the organization, and then finding the [org-id.guide list code](https://org-id.guide) for the list this identifier is taken from to use in the `scheme` field.
 
-For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](http://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
+For example, if identifying a company in Colombia, look up its identifier in the [Unified Commercial and Social Registry](https://org-id.guide/list/CO-RUE) and use the list code `CO-RUE`.
 
 `Identifier` is defined as:
 
