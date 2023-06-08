@@ -35,7 +35,7 @@ Each project has the following fields.
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
 :collapse: period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 :addtargets:
@@ -60,7 +60,7 @@ This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts o
 ### ContractingProcess
 `ContractingProcess` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/ContractingProcess
+```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcess
 ```
 
 This sub-schema is referenced by the following properties:
@@ -72,7 +72,7 @@ Each `ContractingProcess` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContractingProcess
 :collapse: id,summary,releases
 :addtargets:
@@ -94,7 +94,7 @@ Each `ContractingProcess` has the following fields:
 ### ContractingProcessSummary
 `ContractingProcessSummary` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/ContractingProcessSummary
+```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcessSummary
 ```
 
 This sub-schema is referenced by the following properties:
@@ -106,7 +106,7 @@ Each `ContractingProcessSummary` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
 :collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
 :addtargets:
@@ -128,7 +128,7 @@ Each `ContractingProcessSummary` has the following fields:
 ### LinkedRelease
 `LinkedRelease` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/LinkedRelease
+```{field-description} ../../build/current_lang/project-schema.json /definitions/LinkedRelease
 ```
 
 This sub-schema is referenced by the following properties:
@@ -140,7 +140,7 @@ Each `LinkedRelease` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/LinkedRelease
 :collapse: id,tag,date,url
 :addtargets:
@@ -163,7 +163,7 @@ Each `LinkedRelease` has the following fields:
 
 `Modification` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Modification
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Modification
 ```
 
 This sub-schema is referenced by the following properties:
@@ -175,7 +175,7 @@ Each `Modification` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Modification
 :collapse: id,date,description,rationale,type,releaseID,oldContractValue,newContractValue,oldContractPeriod,newContractPeriod
 :addtargets:
@@ -204,7 +204,7 @@ Where the source system does not contain time information, a judgment ought to b
 
 `Period` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Period
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Period
 ```
 
 This sub-schema is referenced by the following properties:
@@ -222,7 +222,7 @@ Each `Period` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Period
 :collapse: startDate,endDate,maxExtentDate,durationInDays
 :addtargets:
@@ -280,7 +280,7 @@ Each `Period` has the following fields:
 
 `Classification` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Classification
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Classification
 ```
 
 This sub-schema is referenced by the following properties:
@@ -292,7 +292,7 @@ Each `Classification` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Classification
 :collapse: scheme,id,description,uri
 :addtargets:
@@ -315,7 +315,7 @@ Each `Classification` has the following fields:
 
 `Location` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Location
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Location
 ```
 
 This sub-schema is referenced by the following properties:
@@ -327,7 +327,7 @@ Each `Location` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Location
 :collapse: id,description,uri,address
 :addtargets:
@@ -350,7 +350,7 @@ Each `Location` has the following fields:
 
 `Value` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Value
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Value
 ```
 
 This sub-schema is referenced by the following properties:
@@ -371,7 +371,7 @@ Each `Value` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Value
 :collapse: amount,currency
 :addtargets:
@@ -434,7 +434,7 @@ Each `Value` has the following fields:
 
 `Organization` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Organization
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Organization
 ```
 
 This sub-schema is referenced by the following properties:
@@ -446,7 +446,7 @@ Each `Organization` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Organization
 :collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,people
 :addtargets:
@@ -469,7 +469,7 @@ Each `Organization` has the following fields:
 
 `OrganizationReference` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/OrganizationReference
+```{field-description} ../../build/current_lang/project-schema.json /definitions/OrganizationReference
 ```
 
 This sub-schema is referenced by the following properties:
@@ -488,7 +488,7 @@ Each `OrganizationReference` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/OrganizationReference
 :collapse: name,id
 :addtargets:
@@ -550,7 +550,7 @@ When working with data, users ought to be aware that addresses might not always 
 
 `Address` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Address
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Address
 ```
 
 This sub-schema is referenced by the following properties:
@@ -563,7 +563,7 @@ Each `Address` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Address
 :collapse: streetAddress,locality,region,postalCode,countryName
 :addtargets:
@@ -591,7 +591,7 @@ Each `Address` has the following fields:
 
 `ContactPoint` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/ContactPoint
+```{field-description} ../../build/current_lang/project-schema.json /definitions/ContactPoint
 ```
 
 This sub-schema is referenced by the following properties:
@@ -603,7 +603,7 @@ Each `ContactPoint` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContactPoint
 :collapse: name,email,telephone,faxNumber,url
 :addtargets:
@@ -628,7 +628,7 @@ For more information about this sub-schema, see the [OCDS Budget Breakdown exten
 
 `BudgetBreakdown` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/BudgetBreakdown
+```{field-description} ../../build/current_lang/project-schema.json /definitions/BudgetBreakdown
 ```
 
 This sub-schema is referenced by the following properties:
@@ -640,7 +640,7 @@ Each `BudgetBreakdown` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/BudgetBreakdown
 :collapse: id,description,amount,approvalDate,uri,period,sourceParty
 :addtargets:
@@ -663,7 +663,7 @@ Each `BudgetBreakdown` has the following fields:
 
 `Document` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Document
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Document
 ```
 
 This sub-schema is referenced by the following properties:
@@ -676,7 +676,7 @@ Each `Document` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Document
 :collapse: id,documentType,title,description,url,datePublished,dateModified,format,language,pageStart,pageEnd,accessDetails,author
 :addtargets:
@@ -710,7 +710,7 @@ For example, if identifying a company in Colombia, look up its identifier in the
 
 `Identifier` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Identifier
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Identifier
 ```
 
 This sub-schema is referenced by the following properties:
@@ -723,7 +723,7 @@ Each `Identifier` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Identifier
 :collapse: scheme,id,legalName,uri
 :addtargets:
@@ -751,7 +751,7 @@ Each `Identifier` has the following fields:
 
 `RelatedProject` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/RelatedProject
+```{field-description} ../../build/current_lang/project-schema.json /definitions/RelatedProject
 ```
 
 This sub-schema is referenced by the following properties:
@@ -763,7 +763,7 @@ Each `RelatedProject` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/RelatedProject
 :collapse: id,scheme,identifier,relationship,title,uri
 :addtargets:
@@ -785,7 +785,7 @@ Each `RelatedProject` has the following fields:
 ### Metric
 `Metric` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Metric
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Metric
 ```
 
 This sub-schema is referenced by the following properties:
@@ -798,7 +798,7 @@ Each `Metric` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Metric
 :collapse: id,title,description,observations
 :addtargets:
@@ -825,7 +825,7 @@ Each `Metric` has the following fields:
 ### Observation
 `Observation` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Observation
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Observation
 ```
 
 This sub-schema is referenced by the following properties:
@@ -837,7 +837,7 @@ Each `Observation` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Observation
 :collapse: id,period,value,measure,notes
 :addtargets:
@@ -867,7 +867,7 @@ Use this object when you need to disclose the details of people associated with,
 
 `Person` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Person
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Person
 ```
 
 This sub-schema is referenced by the following properties:
@@ -879,7 +879,7 @@ Each `Person` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Person
 :collapse: id,name,jobTitle
 :addtargets:
@@ -904,7 +904,7 @@ A spending transaction related to a contracting process.
 
 `Transaction` is defined as:
 
-```{field-description} ../../schema/project-level/project-schema.json /definitions/Transaction
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Transaction
 ```
 
 This sub-schema is referenced by the following properties:
@@ -916,7 +916,7 @@ Each `Transaction` has the following fields:
 
 ````{tab-item} Schema
 
-```{jsonschema} ../../schema/project-level/project-schema.json
+```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Transaction
 :collapse: id,source,date,value,payer,payee,uri
 :addtargets:
@@ -934,4 +934,3 @@ Each `Transaction` has the following fields:
 ````
 
 `````
-
