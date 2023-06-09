@@ -11,6 +11,7 @@
 * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
 * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
 * [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
+* [#389](https://github.com/open-contracting/infrastructure/pull/389) - add guidance on when to publish projects.
 
 ### Schema
 
