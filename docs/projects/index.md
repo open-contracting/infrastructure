@@ -60,6 +60,10 @@ The `contractingProcesses` array can be used to provide a summary of the procure
 
 The `contractingProcesses/modifications` section can be used to record information on changes to each contracting process.
 
+## When to publish OC4IDS?
+
+ A project does not need to be complete before publishing in OC4IDS. The data can be updated at each stage of a project or when there is a change.   
+ 
 ## How does detailed contracting data fit in?
 
 Alongside project-level data and documents, monitoring an infrastructure project can largely involve monitoring the contracts used to deliver it, particularly any primary construction contracts.
