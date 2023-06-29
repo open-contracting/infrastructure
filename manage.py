@@ -4,7 +4,6 @@ import json
 import re
 import sys
 import warnings
-from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
@@ -416,14 +415,14 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5', {'budget': 'master'})
-    ppp_schema = get(f'{ppp_base_url}release-schema.json').json(object_pairs_hook=OrderedDict)
+    ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
     schema_dir = basedir / 'schema' / 'project-level'
     codelists_dir = schema_dir / 'codelists'
 
     with (schema_dir / 'project-schema.json').open() as f:
-        schema = json.load(f, object_pairs_hook=OrderedDict)
+        schema = json.load(f)
 
     infra_codelists = {
         'contractingProcessStatus.csv',
