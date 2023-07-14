@@ -15,7 +15,8 @@ test_navigation_params = [
 
 test_search_params = [
     ('en', r'found \d+ page\(s\) matching'),
-    ('es', r'encontró \d+ página\(s\) acorde'),
+    # See https://github.com/sphinx-doc/sphinx/issues/11008
+    # ('es', r'encontraron \d+ páginas que coinciden'),
 ]
 
 last_path = '/support/'

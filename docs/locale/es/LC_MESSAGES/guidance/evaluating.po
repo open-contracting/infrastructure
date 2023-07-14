@@ -102,12 +102,10 @@ msgstr ""
 
 #: ../../docs/guidance/evaluating.md:1
 msgid ""
-"You can use the [OC4IDS Data Review Tool](https://standard.open-"
-"contracting.org/infrastructure/review/) to check that whether your data is "
+"You can use the [OC4IDS Data Review Tool](https://review-oc4ids.standard.open-contracting.org/) to check that whether your data is "
 "in the correct format."
 msgstr ""
-"Puede usar la [Herramienta de revisión de datos OC4IDS](https://standard"
-".open-contracting.org/infrastructure/review/) para verificar si sus datos "
+"Puede usar la [Herramienta de revisión de datos OC4IDS](https://review-oc4ids.standard.open-contracting.org/) para verificar si sus datos "
 "están en el formato correcto."
 
 #: ../../docs/guidance/evaluating.md:25
@@ -124,8 +122,8 @@ msgstr ""
 
 #: ../../docs/guidance/evaluating.md:1
 msgid ""
-"You can use a {download}`blank example OC4IDS JSON file "
-"<../examples/blank.json>` to get started."
+"You can use a [blank example OC4IDS JSON file"
+"](../examples/blank.json) to get started."
 msgstr ""
 "Puede usar un {archivo de ejemplo}`OC4IDS JSON en blanco "
 "<../examples/blank.json>` para empezar."
@@ -140,12 +138,12 @@ msgstr "Verifique si los datos de contratación son publicados usando OCDS."
 
 #: ../../docs/guidance/evaluating.md:1
 msgid ""
-"You can use the [OCDS Data Review Tool](https://standard.open-"
-"contracting.org/review/) to check that whether your data is published in "
+"You can use the [OCDS Data Review Tool](https://review.standard.open-"
+"contracting.org/) to check that whether your data is published in "
 "OCDS format."
 msgstr ""
-"Puede usar la [Herramienta de revisión de datos OCDS](https://standard.open-"
-"contracting.org/review/) para verificar si sus datos están publicados en "
+"Puede usar la [Herramienta de revisión de datos OCDS](https://review.standard.open-"
+"contracting.org/) para verificar si sus datos están publicados en "
 "formato OCDS."
 
 #: ../../docs/guidance/evaluating.md:39

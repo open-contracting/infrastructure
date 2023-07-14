@@ -54,13 +54,13 @@ msgstr ""
 #: ../../docs/reference/index.md:7
 msgid ""
 "The schema can be explored using the [schema browser](browser) and can be "
-"{download}`downloaded here <../../build/current_lang/project-schema.json>`. "
+"[downloaded here](../../build/current_lang/project-schema.json). "
 "The schema is expressed using [JSON Schema, draft "
 "4](https://tools.ietf.org/html/draft-zyp-json-schema-04)."
 msgstr ""
 "El esquema puede ser explorado usando el [navegador de esquema](browser) y "
-"puede ser {download}`descargado aquí <../../build/current_lang/project-"
-"schema.json>`. El esquema está escrito usando [JSON Schema, borrador "
+"puede ser [descargado aquí](../../build/current_lang/project-"
+"schema.json). El esquema está escrito usando [JSON Schema, borrador "
 "4](https://tools.ietf.org/html/draft-zyp-json-schema-04)."
 
 #: ../../docs/reference/index.md:9

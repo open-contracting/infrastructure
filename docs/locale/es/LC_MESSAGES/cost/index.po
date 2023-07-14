@@ -42,10 +42,10 @@ msgstr ""
 
 #: ../../docs/cost/index.md:11
 msgid ""
-"The [CoST approach](http://infrastructuretransparency.org/our-approach/) is "
+"The [CoST approach](https://infrastructuretransparency.org/our-approach/) is "
 "based on four core features:"
 msgstr ""
-"El [enfoque de CoST](http://infrastructuretransparency.org/our-approach/) se"
+"El [enfoque de CoST](https://infrastructuretransparency.org/our-approach/) se"
 " basa en cuatro características clave:"
 
 #: ../../docs/cost/index.md:13

@@ -42,6 +42,7 @@ extensions = [
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +51,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '_static/docson/integration/*.md']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**/docson/[!p]**', '**/docson/package*.json']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -85,8 +86,6 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 smartquotes = False
 
 # MyST configuration.
-# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
-# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
@@ -99,7 +98,7 @@ html_context = {
 html_theme_options = {
     'analytics_id': 'YEWDOOEQ',
     'display_version': True,
-    'root_url': f'/profiles/{profile_identifier}' if profile_identifier else '',
+    'root_url': f'/{profile_identifier}' if profile_identifier else '',
     'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
     'copyright': copyright,
     'license_name': 'Apache License 2.0',
@@ -132,7 +131,7 @@ def setup(app):
     static_dir = basedir / 'docs' / '_static' / 'project-level'
     build_dir = basedir / 'build' / language
 
-    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
+    branch = os.getenv('GITHUB_REF_NAME', 'latest')
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.

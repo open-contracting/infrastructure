@@ -24,9 +24,9 @@ Consider making or advocating for a public commitment to publish standardized op
 
 Commitments are important to help align implementation with the goals of publishing open data and to help overcome technical, political or bureaucratic barriers to publication.
 
-Applications to join [CoST](http://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
+Applications to join [CoST](https://infrastructuretransparency.org/) can be used to make a commitment or if your country is a member of the [Open Government Partnership](https://www.opengovpartnership.org/), your National Action Plan is another great place to start.
 
-Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](http://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
+Refer to the [OCDS implementation journey](https://standard.open-contracting.org/latest/en/guidance/design/) for information and resources about making commitments related to OCDS. Refer to the [CoST and OGP guidance note](https://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) for guidance on making OGP commitments related to CoST.
 
 ### (2a) Map project-level data and summary contracting process data
 
@@ -52,13 +52,13 @@ Include an identifier for the infrastructure project that each contracting proce
 
 ### (3) Build your data, systems and processes
 
-Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://standard.open-contracting.org/infrastructure/review/) to check that the files are structurally correct against OC4IDS.
+Create an OC4IDS JSON file for each project your system has information on and use the [OC4IDS Data Review Tool](https://review-oc4ids.standard.open-contracting.org/) to check that the files are structurally correct against OC4IDS.
 
 ```{tip}
-You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started.
+You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
-If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check your OCDS releases.
+If you are also publishing contracting data using OCDS, create an OCDS release each time the data about a contracting process changes and use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check your OCDS releases.
 
 Make sure you have systems and/or business processes in place to keep the data you produce up to date.
 
@@ -66,11 +66,11 @@ Make sure you have systems and/or business processes in place to keep the data y
 
 Publish your OC4IDS JSON fields (as either static files or via an API) at a stable URL, such as:
 
-> `http://{your-website}/opendata/projects/{project-id}.json`
+> `https://{your-website}/opendata/projects/{project-id}.json`
 
 If you are also publishing contracting data using OCDS, publish each new release of data as a JSON file at a stable URL such as:
 
-> `http://{your-website}/opendata/contracting/{ocid}/{release-id}.json`
+> `https://{your-website}/opendata/contracting/{ocid}/{release-id}.json`
 
 Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 
@@ -88,4 +88,4 @@ flatten-tool flatten -f xlsx example.json --root-id=id --root-list-path=projects
 ```
 ````
 
-Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/#data-files-apis-and-discovery) for more information on providing data in multiple formats.
+Refer to the [OCDS documentation](https://standard.open-contracting.org/1.1/en/guidance/build/hosting/) for more information on providing data in multiple formats.
