@@ -74,6 +74,8 @@ If you are also publishing contracting data using OCDS, publish each new release
 
 Make sure your project-level files include links in the `contractingProcesses/releases` section to each related OCDS file.
 
+You ought to publish updates throughout the project lifecycle, rather than only after projects are completed.
+
 To make your data easier to access, consider providing:
 
 * A regularly updated bulk file of all your data for download
