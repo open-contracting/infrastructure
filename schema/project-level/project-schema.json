@@ -73,7 +73,7 @@
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications may be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
+      "description": "Classifications of the project: for example, according to its social and economic purpose. See also the `purpose` field.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
