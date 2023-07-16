@@ -24,6 +24,7 @@
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#369](https://github.com/open-contracting/infrastructure/pull/369) - add classification scheme codelist.
+* [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
 
 ### Other
 
