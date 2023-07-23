@@ -17,7 +17,7 @@
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#367](https://github.com/open-contracting/infrastructure/pull/367) - Add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
-* [#379](https://github.com/open-contracting/infrastructure/pull/379) - Add `tender.datePublished`.
+* [#379](https://github.com/open-contracting/infrastructure/pull/379) - Add `contractingProcesses.summary.tender.datePublished`.
 
 ### Codelists
 
