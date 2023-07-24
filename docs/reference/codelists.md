@@ -32,7 +32,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/contractingProcessStatus.csv
 ```
 
@@ -40,7 +39,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/contractNature.csv
 ```
 
@@ -48,7 +46,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/projectStatus.csv
 ```
 
@@ -58,7 +55,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/projectType.csv
 ```
 
@@ -68,7 +64,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/documentType.csv
 ```
 
@@ -76,7 +71,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/modificationType.csv
 ```
 
@@ -84,7 +78,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/partyRole.csv
 ```
 
@@ -92,7 +85,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/projectSector.csv
 ```
 
@@ -100,7 +92,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/relatedProject.csv
 ```
 
@@ -108,7 +99,6 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 ```
 
@@ -116,6 +106,5 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:widths: auto
 :file: ../../build/current_lang/codelists/classificationScheme.csv
 ```

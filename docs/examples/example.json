@@ -102,6 +102,7 @@
         }
       ],
       "budget": {
+        "description": "Budget allocation for Motorways UK, aligned with the 2016-2018 strategic plan.",
         "amount": {
           "amount": 40000000,
           "currency": "GBP"
@@ -169,6 +170,13 @@
             "id": "XX1234",
             "uri": "https://government-organisation.register.gov.uk/records/XX1234"
           },
+          "additionalIdentifiers": [
+            {
+              "scheme": "GB-GOV",
+              "legalName": "Motorways UK",
+              "id": "ABCDE"
+            }
+          ],
           "address": {
             "postalCode": "LL55 4NY",
             "countryName": "United Kingdom",
@@ -401,7 +409,8 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              }
+              },
+              "value": {}
             },
             {
               "id": "2",
@@ -448,7 +457,8 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              }
+              },
+              "value": {}
             },
             {
               "id": "2",
@@ -481,224 +491,6 @@
       ],
       "contractingProcesses": [
         {
-          "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
-          "summary": {
-            "ocid": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
-            "externalReference": "2016-SMP-M75-J4_J5-design",
-            "nature": [
-              "design"
-            ],
-            "title": "Smart Motorway Design M75 J4-5",
-            "description": "Design of Smart Motorway upgrade M75 J4-5",
-            "status": "closed",
-            "tender": {
-              "procurementMethod": "limited",
-              "procurementMethodDetails": "Restricted procedure",
-              "datePublished": "2016-04-01T00:00:00Z",
-              "costEstimate": {
-                "amount": 2000000,
-                "currency": "GBP"
-              },
-              "numberOfTenderers": 2,
-              "tenderers": [
-                {
-                  "name": "A1 Expert Smart Moto Design",
-                  "id": "GB-COH-11111111"
-                },
-                {
-                  "name": "Motorway Design Services PLC",
-                  "id": "GB-COH-12345678"
-                }
-              ],
-              "procuringEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
-              },
-              "administrativeEntity": {
-                "name": "Motorways Administrator UK",
-                "id": "GB-GOR-XX9876"
-              }
-            },
-            "suppliers": [
-              {
-                "name": "A1 Expert Smart Moto Design",
-                "id": "GB-COH-11111111"
-              }
-            ],
-            "contractValue": {
-              "amount": 1950000,
-              "currency": "GBP"
-            },
-            "contractPeriod": {
-              "startDate": "2016-06-01T00:00:00Z",
-              "endDate": "2017-07-07T00:00:00Z"
-            },
-            "finalValue": {
-              "amount": 1950000,
-              "currency": "GBP"
-            },
-            "transactions": [
-              {
-                "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b-00001-1",
-                "source": "https://openspending.org/motorways-uk-spending/",
-                "date": "2017-08-07T00:00:00Z",
-                "value": {
-                  "amount": 1950000,
-                  "currency": "GBP"
-                },
-                "payer": {
-                  "id": "GB-GOR-XX1234",
-                  "name": "Motorways UK"
-                },
-                "payee": {
-                  "id": "GB-COH-11111111",
-                  "name": "A1 Expert Smart Moto Design"
-                },
-                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
-              }
-            ],
-            "documents": [
-              {
-                "id": "a1b1c1-tender-doc-001",
-                "documentType": "tenderNotice",
-                "title": "M72 improvements at J4-5: Tender Notice",
-                "description": "A tender notice for the design of improvements to M75 J4-5",
-                "url": "https://example.com/Published/a1b1c1-design-001.html",
-                "datePublished": "2015-12-10T16:45:00Z",
-                "format": "text/html",
-                "author": "Motorways UK"
-              }
-            ]
-          },
-          "releases": [
-            {
-              "id": "ocds-cdf-pc10008",
-              "date": "2016-04-01T00:00:00Z",
-              "tag": [
-                "tender"
-              ],
-              "url": "https://www.example.com/releases/ocds-cdf-pc10008.json"
-            },
-            {
-              "id": "ocds-cdf-pc10009",
-              "date": "2016-06-01T15:49:19Z",
-              "tag": [
-                "award"
-              ],
-              "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
-            },
-            {
-              "id": "ocds-cdf-pc10010",
-              "date": "2017-08-17T00:00:00Z",
-              "tag": [
-                "implementation",
-                "contractTermination"
-              ],
-              "url": "https://www.example.com/releases/ocds-cdf-pc10010.json"
-            }
-          ]
-        },
-        {
-          "id": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
-          "summary": {
-            "ocid": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
-            "externalReference": "2016-SMP-M75-J4_J5-supervision",
-            "nature": [
-              "supervision"
-            ],
-            "title": "Commercial Management and Assurance for the Motorways Upgrade Programme M75 J4-5",
-            "description": "Specialist Professional and Technical Services Framework: Commercial Management and Assurance for the Motorways Upgrade Programme M75 J4-5",
-            "status": "closed",
-            "tender": {
-              "procurementMethod": "limited",
-              "procurementMethodDetails": "Framework",
-              "datePublished": "2017-01-01T00:00:00Z",
-              "costEstimate": {
-                "amount": 5000000,
-                "currency": "GBP"
-              },
-              "numberOfTenderers": 1,
-              "tenderers": [
-                {
-                  "name": "Expert Motorway Supervisors",
-                  "id": "GB-COH-22222222"
-                }
-              ],
-              "procuringEntity": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
-              },
-              "administrativeEntity": {
-                "name": "Motorways Administrator UK",
-                "id": "GB-GOR-XX9876"
-              }
-            },
-            "suppliers": [
-              {
-                "name": "Expert Motorway Supervisors",
-                "id": "GB-COH-22222222"
-              }
-            ],
-            "contractValue": {
-              "amount": 4900000,
-              "currency": "GBP"
-            },
-            "contractPeriod": {
-              "startDate": "2017-02-24T00:00:00Z",
-              "endDate": "2018-10-10T00:00:00Z"
-            },
-            "finalValue": {
-              "amount": 4900000,
-              "currency": "GBP"
-            },
-            "documents": [
-              {
-                "id": "a1b1c1-spats-2-033-completion",
-                "documentType": "completionCertificate",
-                "title": "Completion Certificate for supervision",
-                "description": "A completion certificate for Expert Motorway Supervisors supervision of M75 J4-5",
-                "url": "https://example.com/Published/a1b1c1-spats-2-033-completion.html",
-                "datePublished": "2018-12-10T16:45:00Z",
-                "format": "text/html"
-              }
-            ]
-          },
-          "releases": [
-            {
-              "id": "ocds-a1b1c1-spats-2-033e",
-              "date": "2017-03-02T17:14:37Z",
-              "tag": [
-                "tender"
-              ],
-              "url": "https://example.com/releases/ex-a1b1c1--033e.json"
-            },
-            {
-              "id": "ocds-a1b1c1-spats-2-033f",
-              "date": "2017-05-02T17:14:37Z",
-              "tag": [
-                "award"
-              ],
-              "url": "https://example.com/releases/ex-a1b1c1--033f.json"
-            },
-            {
-              "id": "ocds-a1b1c1-spats-2-033g",
-              "date": "2017-07-02T17:14:37Z",
-              "tag": [
-                "implementation"
-              ],
-              "url": "https://example.com/Published/releases/ex-a1b1c1--033g.json"
-            },
-            {
-              "id": "ocds-a1b1c1-spats-2-033h",
-              "date": "2018-12-10T14:45:00Z",
-              "tag": [
-                "contractTermination"
-              ],
-              "url": "https://example.com/releases/ex-a1b1c1--033h.json"
-            }
-          ]
-        },
-        {
           "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
           "summary": {
             "ocid": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b",
@@ -712,7 +504,7 @@
             "tender": {
               "procurementMethod": "limited",
               "procurementMethodDetails": "Restricted procedure",
-              "datePublished": "2017-01-01T00:00:00Z",
+              "datePublished": "2016-04-01T00:00:00Z",
               "costEstimate": {
                 "amount": 33000000,
                 "currency": "GBP"
@@ -751,6 +543,26 @@
               "amount": 35250000,
               "currency": "GBP"
             },
+            "transactions": [
+              {
+                "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-00001-1",
+                "source": "https://openspending.org/motorways-uk-spending/",
+                "date": "2017-08-07T00:00:00Z",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                },
+                "payer": {
+                  "id": "GB-GOR-XX1234",
+                  "name": "Motorways UK"
+                },
+                "payee": {
+                  "name": "Concrete Motorways Construction",
+                  "id": "GB-COH-33333333"
+                },
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+              }
+            ],
             "documents": [
               {
                 "id": "a1b1c1-construction-excavation-report",
@@ -869,6 +681,204 @@
                 "contractTermination"
               ],
               "url": "https://example.com/Published/releases/5553-b60.json"
+            }
+          ]
+        },
+        {
+          "id": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
+          "summary": {
+            "ocid": "ocds-a1b1c1-a410a80d-adc8-11e6-9901-0019b9f3037b",
+            "externalReference": "2016-SMP-M75-J4_J5-design",
+            "nature": [
+              "design"
+            ],
+            "title": "Smart Motorway Design M75 J4-5",
+            "description": "Design of Smart Motorway upgrade M75 J4-5",
+            "status": "closed",
+            "tender": {
+              "procurementMethod": "limited",
+              "datePublished": "2017-01-01T00:00:00Z",
+              "procurementMethodDetails": "Restricted procedure",
+              "costEstimate": {
+                "amount": 2000000,
+                "currency": "GBP"
+              },
+              "numberOfTenderers": 2,
+              "tenderers": [
+                {
+                  "name": "A1 Expert Smart Moto Design",
+                  "id": "GB-COH-11111111"
+                },
+                {
+                  "name": "Motorway Design Services PLC",
+                  "id": "GB-COH-12345678"
+                }
+              ],
+              "procuringEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
+              }
+            },
+            "suppliers": [
+              {
+                "name": "A1 Expert Smart Moto Design",
+                "id": "GB-COH-11111111"
+              }
+            ],
+            "contractValue": {
+              "amount": 1950000,
+              "currency": "GBP"
+            },
+            "contractPeriod": {
+              "startDate": "2016-06-01T00:00:00Z",
+              "endDate": "2017-07-07T00:00:00Z"
+            },
+            "finalValue": {
+              "amount": 1950000,
+              "currency": "GBP"
+            },
+            "documents": [
+              {
+                "id": "a1b1c1-tender-doc-001",
+                "documentType": "tenderNotice",
+                "title": "M72 improvements at J4-5: Tender Notice",
+                "description": "A tender notice for the design of improvements to M75 J4-5",
+                "url": "https://example.com/Published/a1b1c1-design-001.html",
+                "datePublished": "2015-12-10T16:45:00Z",
+                "format": "text/html",
+                "author": "Motorways UK"
+              }
+            ]
+          },
+          "releases": [
+            {
+              "id": "ocds-cdf-pc10008",
+              "date": "2016-04-01T00:00:00Z",
+              "tag": [
+                "tender"
+              ],
+              "url": "https://www.example.com/releases/ocds-cdf-pc10008.json"
+            },
+            {
+              "id": "ocds-cdf-pc10009",
+              "date": "2016-06-01T15:49:19Z",
+              "tag": [
+                "award"
+              ],
+              "url": "https://www.example.com/releases/ocds-cdf-pc10009.json"
+            },
+            {
+              "id": "ocds-cdf-pc10010",
+              "date": "2017-08-17T00:00:00Z",
+              "tag": [
+                "implementation",
+                "contractTermination"
+              ],
+              "url": "https://www.example.com/releases/ocds-cdf-pc10010.json"
+            }
+          ]
+        },
+        {
+          "id": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
+          "summary": {
+            "ocid": "ocds-a1b1c1-370ad85a-097f-4b8c-adf8-09d840c7c48b",
+            "externalReference": "2016-SMP-M75-J4_J5-supervision",
+            "nature": [
+              "supervision"
+            ],
+            "title": "Commercial Management and Assurance for the Motorways Upgrade Programme M75 J4-5",
+            "description": "Specialist Professional and Technical Services Framework: Commercial Management and Assurance for the Motorways Upgrade Programme M75 J4-5",
+            "status": "closed",
+            "tender": {
+              "procurementMethod": "limited",
+              "datePublished": "2017-01-01T00:00:00Z",
+              "procurementMethodDetails": "Framework",
+              "costEstimate": {
+                "amount": 5000000,
+                "currency": "GBP"
+              },
+              "numberOfTenderers": 1,
+              "tenderers": [
+                {
+                  "name": "Expert Motorway Supervisors",
+                  "id": "GB-COH-22222222"
+                }
+              ],
+              "procuringEntity": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "administrativeEntity": {
+                "name": "Motorways Administrator UK",
+                "id": "GB-GOR-XX9876"
+              }
+            },
+            "suppliers": [
+              {
+                "name": "Expert Motorway Supervisors",
+                "id": "GB-COH-22222222"
+              }
+            ],
+            "contractValue": {
+              "amount": 4900000,
+              "currency": "GBP"
+            },
+            "contractPeriod": {
+              "startDate": "2017-02-24T00:00:00Z",
+              "endDate": "2018-10-10T00:00:00Z"
+            },
+            "finalValue": {
+              "amount": 4900000,
+              "currency": "GBP"
+            },
+            "documents": [
+              {
+                "id": "a1b1c1-spats-2-033-completion",
+                "documentType": "completionCertificate",
+                "title": "Completion Certificate for supervision",
+                "description": "A completion certificate for Expert Motorway Supervisors supervision of M75 J4-5",
+                "url": "https://example.com/Published/a1b1c1-spats-2-033-completion.html",
+                "datePublished": "2018-12-10T16:45:00Z",
+                "format": "text/html"
+              }
+            ]
+          },
+          "releases": [
+            {
+              "id": "ocds-a1b1c1-spats-2-033e",
+              "date": "2017-03-02T17:14:37Z",
+              "tag": [
+                "tender"
+              ],
+              "url": "https://example.com/releases/ex-a1b1c1--033e.json"
+            },
+            {
+              "id": "ocds-a1b1c1-spats-2-033f",
+              "date": "2017-05-02T17:14:37Z",
+              "tag": [
+                "award"
+              ],
+              "url": "https://example.com/releases/ex-a1b1c1--033f.json"
+            },
+            {
+              "id": "ocds-a1b1c1-spats-2-033g",
+              "date": "2017-07-02T17:14:37Z",
+              "tag": [
+                "implementation"
+              ],
+              "url": "https://example.com/Published/releases/ex-a1b1c1--033g.json"
+            },
+            {
+              "id": "ocds-a1b1c1-spats-2-033h",
+              "date": "2018-12-10T14:45:00Z",
+              "tag": [
+                "contractTermination"
+              ],
+              "url": "https://example.com/releases/ex-a1b1c1--033h.json"
             }
           ]
         }

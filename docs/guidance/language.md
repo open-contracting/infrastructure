@@ -57,7 +57,7 @@ To publish data in multiple languages, follow the above guidance and publish a s
 
 ## Internationalization lookup table
 
-Use the following table to check whether a field can be published in your own language. You can download the table as a {download}`CSV spreadsheet <../_static/i18n.csv>`.
+Use the following table to check whether a field can be published in your own language. You can download the table as a [CSV spreadsheet](../_static/i18n.csv).
 
 ```{csv-table}
 :file: ../_static/i18n.csv

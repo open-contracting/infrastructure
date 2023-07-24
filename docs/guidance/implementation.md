@@ -33,7 +33,7 @@ When the procurement system publishes OCDS data, there are two further benefits:
 
 ![Infrastructure transparency portal with existing source of OCDS data](../_static/images/implementation_scenario_2.png)
 
-Nuevo León’s [Infraestructura Abierta platform](http://si.nl.gob.mx/transparencia/) implements a similar model:
+Nuevo León’s [Infraestructura Abierta platform](https://smpu.nl.gob.mx/transparencia/) implements a similar model:
 
 * Internal systems collect, combine and publish project and contracting data using OC4IDS and OCDS.
 * The Infraestructura Abierta platform consumes the OC4IDS and OCDS data and provides an interface for users to explore and analyze the data.

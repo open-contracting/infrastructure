@@ -60,6 +60,7 @@
     }
   ],
   "budget": {
+    "description": "",
     "amount": {
       "amount": "number",
       "currency": "string from currency codelist"

@@ -1,8 +1,8 @@
 # About
 
-The [Open Contracting Partnership](http://www.open-contracting.org), [CoST](http://www.constructiontransparency.org/) - the Infrastructure Transparency Initiative - and [Open Data Services Co-operative](http://www.opendataservices.coop) are working together to document how the [Open Contracting Data Standard](https://standard.open-contracting.org), and additional standardized data models, can be used to represent, share and analyze all the information necessary under the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf).
+The [Open Contracting Partnership](https://www.open-contracting.org), [CoST](https://infrastructuretransparency.org/) - the Infrastructure Transparency Initiative - and [Open Data Services Co-operative](https://opendataservices.coop) are working together to document how the [Open Contracting Data Standard](https://standard.open-contracting.org), and additional standardized data models, can be used to represent, share and analyze all the information necessary under the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf).
 
-You can get involved via the [issue tracker](https://github.com/open-contracting/infrastructure), or for more information about this work, contact [Bernadine Fernz](mailto:bfernz@open-contracting.org), Head of Infrastructure at the Open Contracting Partnership and/or [Evelyn Hernandez](mailto:e.hernandez@constructiontransparency.org), Head of Members and Affiliate Programmes at CoST.
+You can get involved via the [issue tracker](https://github.com/open-contracting/infrastructure), or for more information about this work, contact [Bernadine Fernz](mailto:bfernz@open-contracting.org), Head of Infrastructure at the Open Contracting Partnership and/or [Evelyn Hernandez](mailto:e.hernandez@infrastructuretransparency.org), Head of Members and Affiliate Programmes at CoST.
 
 Read more about [Open Contracting and Infrastructure on the Open Contracting Partnership Blog](https://www.open-contracting.org/tag/infrastructure/)
 
@@ -10,7 +10,7 @@ Read more about [Open Contracting and Infrastructure on the Open Contracting Par
 
 The Open Contracting Data Standard is already used to describe millions of procurement processes around the world relating to goods, services and public works.
 
-CoST, the Infrastructure Transparency Initiative, has identified [67 key items of information](http://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf) that ought to be **pro-actively and reactively disclosed** for public works projects in order to support stakeholders to monitor these infrastructure projects, and to carry out assurance activities.
+CoST, the Infrastructure Transparency Initiative, has identified [67 key items of information](https://infrastructuretransparency.org/wp-content/uploads/2018/06/36_List_of_CoST_Project_Information.pdf) that ought to be **pro-actively and reactively disclosed** for public works projects in order to support stakeholders to monitor these infrastructure projects, and to carry out assurance activities.
 
 These 67 elements cover both **project information** and **contract information** for the planning, preparation, procurement and implementation phases of an infrastructure project and its associated contracting processes.
 

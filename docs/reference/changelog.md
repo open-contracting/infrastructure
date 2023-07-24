@@ -10,25 +10,29 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
 * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
 * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
+* [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
 
 ### Schema
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
-* [#367](https://github.com/open-contracting/infrastructure/pull/367) - Add approval date to budget breakdown.
+* [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
+* [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#379](https://github.com/open-contracting/infrastructure/pull/379) - Add `contractingProcesses.summary.tender.datePublished`.
-
+* [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
-* [#369](https://github.com/open-contracting/infrastructure/pull/369) - Add classification scheme codelist.
+* [#369](https://github.com/open-contracting/infrastructure/pull/369) - add classification scheme codelist.
+* [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
 
 ### Other
 
 * [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
+* [#380](https://github.com/open-contracting/infrastructure/pull/380) - update links to OC4IDS Kit.
 
-## [0.9.3] - 2021-04-30
+## [0.9.3] - 2021-10-07
 
 ### Documentation
 
@@ -49,6 +53,7 @@
 * [#260](https://github.com/open-contracting/infrastructure/pull/260) - improve the clarity of the Getting Started documentation.
 * [#329](https://github.com/open-contracting/infrastructure/pull/329) - fix incorrect references to `document.type` in the CoST IDS & OCDS mapping.
 * [#339](https://github.com/open-contracting/infrastructure/pull/339) - update link to CoST IDS on mapping page.
+* [#382](https://github.com/open-contracting/infrastructure/pull/382) - update email addresses for support.
 
 ### Schema
 

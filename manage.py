@@ -4,7 +4,6 @@ import json
 import re
 import sys
 import warnings
-from collections import OrderedDict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
@@ -16,6 +15,7 @@ from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
 
 basedir = Path(__file__).resolve().parent
+referencedir = basedir / 'docs' / 'reference'
 
 
 def get(url):
@@ -163,6 +163,178 @@ def compare(actual, infra_list, ocds_list, prefix, suffix):
         sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
 
 
+def get_definition_references(schema, defn, parents=None, project_schema=None, include_nested=True):
+    """
+    Recursively generate a list of JSON pointers that reference a definition in JSON schema.
+
+    :param schema: The JSON schema
+    :param defn: The name of the definition
+    :param parents: A list of the parents of schema
+    :param project_schema: The full project schema
+    :param include_nested: Whether to include nested references
+    """
+
+    references = []
+
+    if parents is None:
+        parents = []
+
+    if project_schema is None:
+        project_schema = schema
+
+    if 'properties' in schema:
+        for key, value in schema['properties'].items():
+            if value.get('type') == 'array' and '$ref' in value['items']:
+                if value['items']['$ref'] == f"#/definitions/{defn}":
+                    references.append(parents + [key, '0'])
+                elif include_nested:
+                    references.extend(get_definition_references(
+                        project_schema['definitions'][value['items']['$ref'].split('/')[-1]],
+                        defn,
+                        parents + [key, '0'],
+                        project_schema, include_nested))
+            elif '$ref' in value:
+                if value['$ref'] == f"#/definitions/{defn}":
+                    references.append(parents + [key])
+                elif include_nested:
+                    references.extend(get_definition_references(
+                        project_schema['definitions'][value['$ref'].split('/')[-1]],
+                        defn,
+                        parents + [key],
+                        project_schema, include_nested))
+            elif 'properties' in value:
+                references.extend(get_definition_references(value,
+                                                            defn,
+                                                            parents + [key],
+                                                            project_schema,
+                                                            include_nested))
+
+    if 'definitions' in schema:
+        for key, value in schema['definitions'].items():
+            references.extend(get_definition_references(value, defn, [key], project_schema, include_nested))
+
+    return references
+
+
+def update_sub_schema_reference(schema):
+    """Update docs/reference/schema.md"""
+
+    # Load schema reference
+    with (referencedir / 'schema.md').open() as f:
+        schema_reference = f.readlines()
+
+    # Preserve content that appears before the generated reference content for each sub-schema
+    sub_schema_index = schema_reference.index("## Sub-schemas\n") + 3
+
+    for i in range(sub_schema_index, len(schema_reference)):
+        if schema_reference[i][:4] == "### ":
+            defn = schema_reference[i][4:-1]
+
+            # Drop definitions that don't appear in the schema
+            if defn in schema["definitions"]:
+                schema["definitions"][defn]["content"] = []
+                j = i+1
+
+                while j < len(schema_reference) and not schema_reference[j].startswith(f"`{defn}` is defined as:"):
+                    schema["definitions"][defn]["content"].append(schema_reference[j])
+                    j = j+1
+
+    # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
+    schema_reference = schema_reference[:sub_schema_index]
+    schema_reference.append("\n")
+
+    # Generate standard reference content for each definition
+    for defn, definition in schema["definitions"].items():
+        definition["content"] = definition.get("content", [])
+
+        # Add heading
+        definition["content"].insert(0, f"### {defn}\n")
+
+        # Add description
+        definition["content"].extend([
+            f"`{defn}` is defined as:\n\n",
+            f"```{{field-description}} ../../build/current_lang/project-schema.json /definitions/{defn}\n",
+            "```\n\n"
+        ])
+
+        # Add a list of properties that reference this definition
+        definition["references"] = get_definition_references(schema, defn, include_nested=False)
+        definition["content"].append("This sub-schema is referenced by the following properties:\n")
+
+        for ref in definition["references"]:
+            # noqa: Remove array indices because they do not appear in the HTML anchors generated by the json schema directive
+            ref = [part for part in ref if part != '0']
+
+            url = 'project-schema.json,'
+
+            # Omit nested references
+            if ref[0] in schema['definitions']:
+                url += f"/definitions/{ref[0]},{'/'.join(ref[1:])}"
+            else:
+                url += f",{'/'.join(ref)}"
+
+            definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
+
+        # Add schema table
+        properties_to_collapse = []
+        for key, value in definition['properties'].items():
+            if value.get('type') != 'object':
+                properties_to_collapse.append(key)
+
+        definition["content"].extend([
+            f"\nEach `{defn}` has the following fields:\n\n",
+            "`````{tab-set}\n\n",
+            "````{tab-item} Schema\n\n",
+            "```{jsonschema} ../../build/current_lang/project-schema.json\n",
+            f":pointer: /definitions/{defn}\n",
+            f":collapse: {','.join(properties_to_collapse)}\n"
+            ":addtargets:\n"
+            "```\n\n",
+            "````\n\n",
+            "````{tab-item} Examples\n\n"
+        ])
+
+        # Paths that don't appear in the example data at all
+        paths_to_skip = ['forecasts/0/observations/0/value', 'metrics/0/observations/0/value']
+
+        # Add examples
+        definition["references"] = get_definition_references(schema, defn)
+        for ref in definition["references"]:
+            if ref[0] not in schema['definitions'] and '/'.join(ref) not in paths_to_skip:
+                if ref[-1] == '0':
+                    ref.pop(-1)
+
+                definition["content"].extend([
+                  "```{jsoninclude} ../../docs/examples/example.json\n",
+                  f":jsonpointer: /projects/0/{'/'.join(ref)}\n",
+                  f":title: {'/'.join(ref)}\n",
+                  "```\n\n"
+                ])
+
+        definition["content"].extend([
+            "````\n\n",
+            "`````\n\n"
+        ])
+
+        schema_reference.extend(definition["content"])
+
+    # Paths that don't appear in the example data, but for which there is an alternative
+    paths_to_replace = {
+      '/projects/0/contractingProcesses/0/summary/modifications/0/oldContractValue': (
+        '/projects/0/contractingProcesses/0/summary/modifications/2/oldContractValue'),
+      '/projects/0/contractingProcesses/0/summary/modifications/0/newContractValue': (
+        '/projects/0/contractingProcesses/0/summary/modifications/2/newContractValue')
+    }
+
+    for key, value in paths_to_replace.items():
+        index = schema_reference.index(f":jsonpointer: {key}\n")
+        del schema_reference[index]
+        schema_reference.insert(index, f":jsonpointer: {value}\n")
+
+    with (referencedir / 'schema.md').open('w') as f:
+        f.writelines(schema_reference)
+
+
 @click.group()
 def cli():
     pass
@@ -171,11 +343,15 @@ def cli():
 @cli.command()
 def pre_commit():
     """
-    Generate a CSV file of fields that can contain non-English text.
+    Update docs/reference/schema.md and _static/i8n.csv
     """
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
 
+    # Update schema reference documentation
+    update_sub_schema_reference(schema)
+
+    # Generate a CSV file of fields that can contain non-English text.
     _, rows = mapping_sheet(schema, include_codelist=True, include_deprecated=False)
 
     with (basedir / 'docs' / '_static' / 'i18n.csv').open('w') as f:
@@ -239,14 +415,14 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5', {'budget': 'master'})
-    ppp_schema = get(f'{ppp_base_url}release-schema.json').json(object_pairs_hook=OrderedDict)
+    ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
     schema_dir = basedir / 'schema' / 'project-level'
     codelists_dir = schema_dir / 'codelists'
 
     with (schema_dir / 'project-schema.json').open() as f:
-        schema = json.load(f, object_pairs_hook=OrderedDict)
+        schema = json.load(f)
 
     infra_codelists = {
         'contractingProcessStatus.csv',
@@ -423,7 +599,7 @@ def update(ppp_base_url):
     del schema['definitions']['Classification']['properties']['scheme']['openCodelist']
 
     copy_element('Location')
-    # noqa: Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both."
+    # Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both." # noqa: E501
     schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa: E501
     # Add id to Location.
     schema['definitions']['Location']['properties']['id'] = {
@@ -484,9 +660,9 @@ def update(ppp_base_url):
         # Link to infrastructure codelist instead of PPP codelist
         ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),  # noqa: E501
     })
-    # noqa: Original from standard:                                                 "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.",
+    # Original from standard:                                                 "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.", # noqa: E501
     schema['definitions']['Document']['properties']['description']['description'] = "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. "  # noqa: E501
-    # noqa: Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type."
+    # Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type." # noqa: E501
     schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."  # noqa: E501
 
     copy_element('Identifier')
@@ -495,7 +671,7 @@ def update(ppp_base_url):
         ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
 
     schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
-    # noqa: Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs."
+    # Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs." # noqa: E501
 
     copy_element('Observation')
     # Remove the `relatedImplementationMilestone` property
