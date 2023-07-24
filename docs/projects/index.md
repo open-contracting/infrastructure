@@ -1,6 +1,6 @@
 # Getting started
 
-The regular disclosure of structured data can greatly enhance the transparency and accountability of publicly funded infrastructure projects.
+The regular disclosure of structured data throughout the project lifecycle can greatly enhance the transparency and accountability of publicly funded infrastructure projects.
 
 Publishing standardized data makes using data easier, for example to compare data across projects. It also supports the development of reusable tools and methodologies.
 
