@@ -385,6 +385,14 @@
               "type": "string",
               "minLength": 1
             },
+            "datePublished": {
+              "description": "The date on which the tender was published.",
+              "format": "date-time",
+              "title": "Date published",
+              "type": [
+                "string"
+              ]
+            },
             "costEstimate": {
               "title": "Cost estimate",
               "description": "The pre-tender estimated value of the contracting process.",
