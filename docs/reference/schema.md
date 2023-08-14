@@ -37,7 +37,7 @@ Each project has the following fields.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
-:collapse: period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
+:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 :addtargets:
 ```
 ````
@@ -929,6 +929,40 @@ Each `Transaction` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
 :title: contractingProcesses/0/summary/transactions
+```
+
+````
+
+`````
+
+### SimpleIdentifier
+`SimpleIdentifier` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/SimpleIdentifier
+```
+
+This sub-schema is referenced by the following properties:
+* [`identifiers`](project-schema.json,,identifiers)
+
+Each `SimpleIdentifier` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/SimpleIdentifier
+:collapse: id,scheme
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/identifiers
+:title: identifiers
 ```
 
 ````

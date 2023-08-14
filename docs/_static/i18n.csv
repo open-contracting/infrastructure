@@ -1,5 +1,9 @@
 path,title,translatable,notes
 id,Identifier or Reference,True,Only the part of the identifier following the prefix can be internationalized.
+identifiers,Identifiers,False,
+identifiers,Simple identifier,False,
+identifiers/id,ID,True,
+identifiers/scheme,Scheme,True,
 updated,Last updated,False,
 title,Project title,True,
 description,Project description,True,
