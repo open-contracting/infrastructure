@@ -14,6 +14,16 @@
       "type": "string",
       "minLength": 1
     },
+    "identifiers": {
+      "title": "Identifiers",
+      "description": "Identifiers for this project. This field can be used to provide internal identifiers for the project, such as identifiers from a project management system or procurement system.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SimpleIdentifier"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "updated": {
       "title": "Last updated",
       "description": "The date on which project-level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project-level data has been updated as a result, or to provide explanations or justifications for those changes.",
@@ -1810,6 +1820,29 @@
           "format": "uri"
         }
       },
+      "minProperties": 1
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "The identifier taken from the scheme.",
+          "type": "string",
+          "minLength": 1
+        },
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which the identifier is taken.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id"
+      ],
       "minProperties": 1
     }
   },

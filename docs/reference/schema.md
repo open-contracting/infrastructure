@@ -37,7 +37,7 @@ Each project has the following fields.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
-:collapse: period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
+:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 :addtargets:
 ```
 ````
@@ -58,6 +58,7 @@ Each project has the following fields.
 This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts of the schema that are represented as objects in OC4IDS data. Some sub-schemas are referenced from multiple places in the schema.
 
 ### ContractingProcess
+
 `ContractingProcess` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcess
@@ -92,6 +93,7 @@ Each `ContractingProcess` has the following fields:
 `````
 
 ### ContractingProcessSummary
+
 `ContractingProcessSummary` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcessSummary
@@ -126,6 +128,7 @@ Each `ContractingProcessSummary` has the following fields:
 `````
 
 ### LinkedRelease
+
 `LinkedRelease` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/LinkedRelease
@@ -783,6 +786,7 @@ Each `RelatedProject` has the following fields:
 `````
 
 ### Metric
+
 `Metric` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/Metric
@@ -823,6 +827,7 @@ Each `Metric` has the following fields:
 `````
 
 ### Observation
+
 `Observation` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/Observation
@@ -929,6 +934,41 @@ Each `Transaction` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
 :title: contractingProcesses/0/summary/transactions
+```
+
+````
+
+`````
+
+### SimpleIdentifier
+
+`SimpleIdentifier` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/SimpleIdentifier
+```
+
+This sub-schema is referenced by the following properties:
+* [`identifiers`](project-schema.json,,identifiers)
+
+Each `SimpleIdentifier` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/SimpleIdentifier
+:collapse: id,scheme
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/identifiers
+:title: identifiers
 ```
 
 ````

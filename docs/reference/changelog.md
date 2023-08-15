@@ -22,6 +22,7 @@
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#379](https://github.com/open-contracting/infrastructure/pull/379) - add `contractingProcesses.summary.tender.datePublished`.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
+* [#390](https://github.com/open-contracting/infrastructure/pull/390) - add `identifiers`.
 
 ### Codelists
 
