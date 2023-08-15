@@ -58,6 +58,7 @@ Each project has the following fields.
 This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts of the schema that are represented as objects in OC4IDS data. Some sub-schemas are referenced from multiple places in the schema.
 
 ### ContractingProcess
+
 `ContractingProcess` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcess
@@ -92,6 +93,7 @@ Each `ContractingProcess` has the following fields:
 `````
 
 ### ContractingProcessSummary
+
 `ContractingProcessSummary` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/ContractingProcessSummary
@@ -126,6 +128,7 @@ Each `ContractingProcessSummary` has the following fields:
 `````
 
 ### LinkedRelease
+
 `LinkedRelease` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/LinkedRelease
@@ -783,6 +786,7 @@ Each `RelatedProject` has the following fields:
 `````
 
 ### Metric
+
 `Metric` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/Metric
@@ -823,6 +827,7 @@ Each `Metric` has the following fields:
 `````
 
 ### Observation
+
 `Observation` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/Observation
@@ -936,6 +941,7 @@ Each `Transaction` has the following fields:
 `````
 
 ### SimpleIdentifier
+
 `SimpleIdentifier` is defined as:
 
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/SimpleIdentifier

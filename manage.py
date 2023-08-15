@@ -241,16 +241,18 @@ def update_sub_schema_reference(schema):
 
     # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
     schema_reference = schema_reference[:sub_schema_index]
-    schema_reference.append("\n")
 
     # Generate standard reference content for each definition
     for defn, definition in schema["definitions"].items():
         definition["content"] = definition.get("content", [])
 
         # Add heading
-        definition["content"].insert(0, f"### {defn}\n")
+        definition["content"].insert(0, f"\n### {defn}\n")
 
         # Add description
+        if definition["content"][-1] != "\n":
+            definition["content"].append("\n")
+
         definition["content"].extend([
             f"`{defn}` is defined as:\n\n",
             f"```{{field-description}} ../../build/current_lang/project-schema.json /definitions/{defn}\n",
@@ -313,7 +315,7 @@ def update_sub_schema_reference(schema):
 
         definition["content"].extend([
             "````\n\n",
-            "`````\n\n"
+            "`````\n"
         ])
 
         schema_reference.extend(definition["content"])
