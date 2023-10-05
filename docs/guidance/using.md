@@ -57,7 +57,7 @@ This might be possible by downloading and filtering spreadsheets of the data, or
 ````{admonition} Worked example
 :class: Tip
 
-Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
+Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
 
 ```sql
 -- The following query runs against a filtered set of data in Kingfisher.
