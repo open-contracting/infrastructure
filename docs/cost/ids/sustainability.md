@@ -13,6 +13,13 @@
 
 This page documents a mapping from the elements in the CoST IDS sustainability modules to OC4IDS fields and codes.
 
+```{admonition} Download this page in PDF format
+:class: tip
+
+ In Google Chrome, Microsoft Edge or Mozilla Firefox, open the **Print** dialog (Ctrl+P) and set **Destination** (**Printer**, in Microsoft Edge) to 'Save to PDF'. In Safari, open the **File** menu and click **Export as PDF**.
+
+```
+
 ## Economic and fiscal
 
 `````{grid} 2
