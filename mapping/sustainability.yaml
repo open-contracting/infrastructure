@@ -1,10 +1,9 @@
--   id: "1.1"
+-   id: '1.1'
     title: Procurement strategy (Identification)
     module: Economic and fiscal
     indicator: Procurement viability
-    disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision. (E.g. [Document]).
-    mapping: |-
-        **Project Level:** [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'procurementStrategyRiskAssessment'.
+    disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision. (E.g. \[Document\]).
+    mapping: '**Project Level:** [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''procurementStrategyRiskAssessment''.'
     example: |-
         {
           "documents": [
@@ -16,13 +15,12 @@
             }
           ]
         }
--   id: "1.2"
+-   id: '1.2'
     title: Life cycle cost
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017) (E.g. [value]).
-    mapping: |-
-        **Project Level:** Add a `CostMeasurement` object to the `costMeasurements` array. Set `.date` to the date the analysis was prepared. If the cost measurement was performed as part of the project appraisal, set `.stage` to 'preConstruction'. Otherwise, choose an appropriate code from the stage codelist. Map to the cost measurement's `.lifeCycleCost.cost`.  
+    disclosure format: Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017) (E.g. \[value\]).
+    mapping: '**Project Level:** Add a `CostMeasurement` object to the `costMeasurements` array. Set `.date` to the date the analysis was prepared. If the cost measurement was performed as part of the project appraisal, set `.stage` to ''preConstruction''. Otherwise, choose an appropriate code from the stage codelist. Map to the cost measurement''s `.lifeCycleCost.cost`.'
     example: |-
         {
           "costMeasurements": [
@@ -39,13 +37,12 @@
             }
           ]
         }
--   id: "1.3"
+-   id: '1.3'
     title: Life cycle cost calculation methodology
     module: Economic and fiscal
-    indicator:
+    indicator: null
     disclosure format: Disclose the methodology used to calculate the life-cycle cost. The methodology ought to specify whether income and externalities are included in the calculation and the common date, discount rate and period of analysis used.
-    mapping: |-
-        **Project Level:** Publish in documents, with `.documentType` set to 'lifecycleCostCalculationMethodology' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    mapping: '**Project Level:** Publish in documents, with `.documentType` set to ''lifecycleCostCalculationMethodology'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -56,31 +53,26 @@
             }
           ]
         }
--   id: "1.4"
+-   id: '1.4'
     title: Funding source for preparation, implementation and operation
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Name the funding organization(s)/sources of funding for Preparation, Implementation and Operation. If the information is not available for any of the stages, select ['funding/budget source not specified'] for the respective stage where the nature of the funding/budget source could not be identified.
-    mapping: |-
-         
-    example: |-
-        
--   id: "1.5"
+    disclosure format: Name the funding organization(s)/sources of funding for Preparation, Implementation and Operation. If the information is not available for any of the stages, select \['funding/budget source not specified'\] for the respective stage where the nature of the funding/budget source could not be identified.
+    mapping: ''
+    example: ''
+-   id: '1.5'
     title: Budget for preparation, implementation and operation
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Specify the allocated budget for preparation, implementation, operation. If no amount is allocated for each of the stages, select the option 'amount not allocated" (E.g. Preparation [currency and amount], Implementation[currency and amount], Operation [currency and amount]
-    mapping: |-
-        
-    example: |-
-        
--   id: "1.6"
+    disclosure format: Specify the allocated budget for preparation, implementation, operation. If no amount is allocated for each of the stages, select the option 'amount not allocated" (E.g. Preparation \[currency and amount\], Implementation\[currency and amount\], Operation \[currency and amount\]
+    mapping: ''
+    example: ''
+-   id: '1.6'
     title: Cost benefit analysis
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the project cost-benefit analysis. This information tends to be part of the appraisal documents. (E.g. [Document]).
-    mapping: |-
-        **Project Level:** Publish in `documents`, with `.documentType` set to 'costBenefitAnalysis' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Disclose the project cost-benefit analysis. This information tends to be part of the appraisal documents. (E.g. \[Document\]).
+    mapping: '**Project Level:** Publish in `documents`, with `.documentType` set to ''costBenefitAnalysis'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -91,13 +83,12 @@
             }
           ]
         }
--   id: "1.7"
+-   id: '1.7'
     title: Value for money
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents. (E.g. [Document]).
-    mapping: |-
-        Project Level: Publish in `documents`, with `.documentType` set to 'valueForMoneyAnalysis' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents. (E.g. \[Document\]).
+    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''valueForMoneyAnalysis'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -108,22 +99,18 @@
             }
           ]
         }
--   id: "1.8"
+-   id: '1.8'
     title: Budget projections
     module: Economic and fiscal
     indicator: Multi-year implementation
-    disclosure format: |-
-        In case of multiyear project implementation, disclose information on budget projection for all years of implementation (E.g. Y1: [currency and amount], Y2: [currency and amount], etc).
-    mapping: |-
-        
-    example: |-
-        
--   id: "1.9"
+    disclosure format: 'In case of multiyear project implementation, disclose information on budget projection for all years of implementation (E.g. Y1: \[currency and amount\], Y2: \[currency and amount\], etc).'
+    mapping: ''
+    example: ''
+-   id: '1.9'
     title: Budget shortfall
     module: Economic and fiscal
     indicator: Budget execution
-    disclosure format: |-
-        Disclose any shortfall in the allocated budget (E.g. [currency and amount] and [free text: reasons for the funding shortfall]
+    disclosure format: 'Disclose any shortfall in the allocated budget (E.g. \[currency and amount\] and \[free text: reasons for the funding shortfall\]'
     mapping: |-
         Add a `Metric` object to the `.metrics` array, set its `.id` incrementally and set its `.title` to "Budget shortfall". Add an `Observation` object to the metric's `.observations` array and set
 
@@ -154,7 +141,7 @@
             }
           ]
         }
--   id: "2.1"
+-   id: '2.1'
     title: Environmental impact category
     module: Environment and climate
     indicator: Environmental impact
@@ -165,15 +152,15 @@
 
         - Category B: projects with potential limited adverse environmental or social risks and/or impacts that are few in number, generally site-specific, largely reversible, and readily addressed through mitigation measures.
 
-        - Category C: projects with minimal or no adverse environmental or social risks and/or impacts. 
+        - Category C: projects with minimal or no adverse environmental or social risks and/or impacts.
 
-        (Select from a list: A/B/C - Specify list as IFC's Environmental and Social Categorization). 
+        (Select from a list: A/B/C - Specify list as IFC's Environmental and Social Categorization).
     mapping: |-
-        Project level: 
+        Project level:
 
-        1. If an environmental impact assessment was conducted, set `.environment.hasImpactAssessment` to true. If an environmental impact assessment was not conducted, set environmental.hasImpactAssessment` to false.
+        1. If an environmental impact assessment was conducted, set `.environment.hasImpactAssessment` to true. If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
 
-        2. Add a `Classification` object to the `.environment.impactClassifications` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.        
+        2. Add a `Classification` object to the `.environment.impactClassifications` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
     example: |-
         {
           "environment": {
@@ -186,14 +173,12 @@
             ]
           }
         }
--   id: "2.2"
+-   id: '2.2'
     title: Environmental measures
     module: Environment and climate
     indicator: Environmental impact
-    disclosure format: |-
-        Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. [free text justification/explaining the measures adopted] and document)Click here to enter text.
-    mapping: |-
-        Project level: Add a document, set its `.documentType` to 'environmentalMeasures', add a description of the environmental measures adopted to its `.description` and set  `.url` to the URL of the document that describes the project's environmental measures (if available).
+    disclosure format: Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document)Click here to enter text.
+    mapping: 'Project level: Add a document, set its `.documentType` to ''environmentalMeasures'', add a description of the environmental measures adopted to its `.description` and set  `.url` to the URL of the document that describes the project''s environmental measures (if available).'
     example: |-
         {
         "documents": [
@@ -205,14 +190,12 @@
           }
         ]
         }
--   id: "2.3"
+-   id: '2.3'
     title: Environmental exceptions
     module: Environment and climate
     indicator: Environmental impact
-    disclosure format: |-
-        Disclose all exemptions and/or amnesties obtained for the project. (E.g. [Document]). This can be planning, environmental, construction and/or operational related.
-    mapping: |-
-        Project Level: Publish in `documents`, with `.documentType` set to 'environmentalExemption' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Document\]). This can be planning, environmental, construction and/or operational related.
+    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''environmentalExemption'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -223,12 +206,11 @@
             }
           ]
         }
--   id: "2.4"
+-   id: '2.4'
     title: Protected area
     module: Environment and climate
     indicator: Biodiversity impact
-    disclosure format: |-
-        Identify whether the project is located in a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
+    disclosure format: Identify whether the project is located in a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
     mapping: |-
         Project level:
 
@@ -256,12 +238,12 @@
             }
           ]
         }
--   id: "2.5"
+-   id: '2.5'
     title: Conservation measures
     module: Environment and climate
     indicator: Biodiversity impact
     disclosure format: |-
-        Disclose and provide further details on the measures adopted by the project to protect and enhance biodiversity. This can comprise, without limitation the following: 
+        Disclose and provide further details on the measures adopted by the project to protect and enhance biodiversity. This can comprise, without limitation the following:
 
         avoidance of ecological sitting
         buffers for ecological land
@@ -273,10 +255,10 @@
         reduce habitat loss
         pollution reduction
         soil management
-        hazardous material management])
+        hazardous material management\])
         others (explain)
     mapping: |-
-        Project level: 
+        Project level:
 
         For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, setting its `.type` according to the matching code in the open "conservationMeasuresType" codelist and mapping the further explanation to its `.description`.
 
@@ -299,14 +281,12 @@
             }
           ]
         }
--   id: "2.6"
+-   id: '2.6'
     title: Climate and disaster risk assessment
     module: Environment and climate
     indicator: Climate and disaster risk
-    disclosure format: |-
-        Clarify the type of climate and disaster risks to which the project is exposed to (E.g. [document or free text to list and explain risks]). This tends to be part of the appraisal documents.Click here to enter text.
-    mapping: |-
-        Project level: Add a document, set its `.documentType` to 'climateAndDisasterRiskAssessment', add a description of the type of climate and disaster risks to which the project is exposed to its `.description` and set  `.url` to the URL of the risk assessment document .
+    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.Click here to enter text.
+    mapping: 'Project level: Add a document, set its `.documentType` to ''climateAndDisasterRiskAssessment'', add a description of the type of climate and disaster risks to which the project is exposed to its `.description` and set  `.url` to the URL of the risk assessment document .'
     example: |-
         {
           "documents": [
@@ -318,13 +298,12 @@
             }
           ]
         }
--   id: "2.7"
+-   id: '2.7'
     title: Climate measures
     module: Environment and climate
     indicator: Climate risk
     disclosure format: |-
         Clarify whether the project design considered climate change mitigation and/or adaptation measures,. disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
-
 
         use of lower-emission sources of energy
         use of lower-emission materials
@@ -338,11 +317,9 @@
         assessment of rising sea levels
         others (explain)
 
-        And [Document]).
-
-        Click here to enter text.
+        And \[Document\]).
     mapping: |-
-        Project level: 
+        Project level:
 
         For each measure add a `ClimateMeasure` object to the `environment.climateMeasures` array, setting it's `.type` according to the matching code in the open climateMeasuresType codelist and mapping the further explanation to its `.description`.
 
@@ -365,22 +342,22 @@
             }
           ]
         }
--   id: "2.8"
+-   id: '2.8'
     title: Forecast of greenhouse gas emissions
     module: Environment and climate
     indicator: Climate risk
-    disclosure format: |-
-        Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. [amount] and [free text for methodology clarification]). Click here to enter text.
+    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). Click here to enter text.
     mapping: |-
-        Project-level: 
+        Project-level:
 
         1. Add a `Metric` object to the `.forecasts` array.
 
         2. Set the metric's `.title` to "Greenhouse gas emissions (carbon dioxide equivalent)" and map the methodology clarification to its `.description`.
 
         3. Add an `Observation` object to the metric's `.observations` array and:
-        -  Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure`
-        -  Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
+
+        - Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure`
+        - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
         - Set `.period` to the period covered by the forecast.
 
         4. If supporting documentation is available, publish in documents, with `.documentType` set to 'GhgEmissionForecast' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
@@ -416,16 +393,12 @@
             }
           ]
         }
--   id: "2.9"
+-   id: '2.9'
     title: Environmental certifications
     module: Environment and climate
     indicator: Climate management
-    disclosure format: |-
-        Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management (E.g. [Document]). 
-
-        Click here to enter text
-    mapping: |-
-        Contracting process level: Publish in `documents`, with `.documentType` set to 'contractorEnvironmentalCertification' and include a short description and/or a link to a document providing details.
+    disclosure format: Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management (E.g. \[Document\]).
+    mapping: 'Contracting process level: Publish in `documents`, with `.documentType` set to ''contractorEnvironmentalCertification'' and include a short description and/or a link to a document providing details.'
     example: |-
         {
           "contractingProcesses": [
@@ -443,14 +416,12 @@
             }
           ]
         }
--   id: "2.10"
+-   id: '2.10'
     title: Decommissioning plans
     module: Environment and climate
     indicator: Climate management
-    disclosure format: |-
-        Disclose the decommissioning plans for the project assets [document].Click here to enter text.
-    mapping: |-
-        Project level: Publish in `documents`, with `.documentType` set to 'decommissioningPlans' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Disclose the decommissioning plans for the project assets \[document\].Click here to enter text.
+    mapping: 'Project level: Publish in `documents`, with `.documentType` set to ''decommissioningPlans'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -461,19 +432,20 @@
             }
           ]
         }
--   id: "2.11"
+-   id: '2.11'
     title: Decommissioning cost forecast
     module: Environment and climate
     indicator: Climate management
-    disclosure format: |-
-        Disclose the forecast decommissioning costs for the project assets [value, currency].
+    disclosure format: Disclose the forecast decommissioning costs for the project assets \[value, currency\].
     mapping: |-
         Project level:
 
         1. Add a `CostMeasurement` object to the `.costMeasurements` array and set:
-          - `.id` incrementally
-          - `.status` to 'endOfLifeForecast'
-          - `.date` to the date that the forecast was prepared.
+
+        - `.id` incrementally
+        - `.status` to 'endOfLifeForecast'
+        - `.date` to the date that the forecast was prepared.
+
         2. Add a `CostGroup` object to the cost measurement's `.costGroups` array, set its `.id` incrementally and set its `.category` to 'endOfLife'
         3. Add a `Cost` object to the cost group's `.costs` array, set its `.id` incrementally and set its `.value` to the amount and currency of the forecast decommissioning costs.
     example: |-
@@ -501,20 +473,20 @@
             }
           ]
         }
--   id: "3.1"
-    title: Climate objective (Identification) 
+-   id: '3.1'
+    title: Climate objective (Identification)
     module: Climate finance
     indicator: Project theme
     disclosure format: |-
-        Disclose the main climate objective that the project addresses.  
-          
-        Select from a list: 
-        Eg: 
-        ·   	mitigation 
-        ·   	adaptation 
-        ·   	cross-cutting  
-    mapping: |-
-        Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array
+        Disclose the main climate objective that the project addresses.
+
+        Select from a list:
+        Eg:
+
+        - mitigation
+        - adaptation
+        - cross-cutting
+    mapping: 'Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array'
     example: |-
         {
           "environment": {
@@ -523,7 +495,7 @@
             ]
           }
         }
--   id: "3.2"
+-   id: '3.2'
     title: Financial instrument (preparation)
     module: Climate finance
     indicator: Financial mechanism
@@ -535,8 +507,7 @@
         grant
         equity
         guarantees
-    mapping: |-
-        Project level: For each instrument, add a `finance` object to the `budget.finance` array. Set the `.id` appropriately. Set the `.financeCategory` to the matching code from the financeCategory codelist.
+    mapping: 'Project level: For each instrument, add a `finance` object to the `budget.finance` array. Set the `.id` appropriately. Set the `.financeCategory` to the matching code from the financeCategory codelist.'
     example: |-
         {
           "budget": {
@@ -549,15 +520,12 @@
             ]
           }
         }
-
--   id: "3.3"
+-   id: '3.3'
     title: Climate transformation (identification)
     module: Climate finance
     indicator: Model of change
-    disclosure format: |-
-        Clarify the theory of change, systemic transition or transformation that is intended [free text to explain]. 
-    mapping: |-
-        Project level: Publish in documents, with `.documentType` set to 'climateTransformation' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Clarify the theory of change, systemic transition or transformation that is intended \[free text to explain\].
+    mapping: 'Project level: Publish in documents, with `.documentType` set to ''climateTransformation'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -570,23 +538,19 @@
             }
           ]
         }
--   id: "3.4"
-    title: Climate finance decision-maker (Identification) 
+-   id: '3.4'
+    title: Climate finance decision-maker (Identification)
     module: Climate finance
     indicator: Decision-making process
-    disclosure format: |-
-        Identify who approved the climate finance investment in the country (organization, party, role)
-    mapping: |-
-
-    example: |-
--   id: "3.5"
-    title: Nationally Determined Contributions (NDC) (Identification) 
+    disclosure format: Identify who approved the climate finance investment in the country (organization, party, role)
+    mapping: ''
+    example: ''
+-   id: '3.5'
+    title: Nationally Determined Contributions (NDC) (Identification)
     module: Climate finance
     indicator: Policy coherence
-    disclosure format: |-
-        Select from a list of international commitments and clarify how the project is aligned with it [codelist, free text to explain]. 
-    mapping: |-
-        See mapping for data point "Policy coherence" in Institutional extension adding the selected codes to the `policyAlighment.policies` array. 
+    disclosure format: Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
+    mapping: See mapping for data point "Policy coherence" in Institutional extension adding the selected codes to the `policyAlighment.policies` array.
     example: |-
         {
           "policyAlignment": {
@@ -605,36 +569,29 @@
             }
           ]
         }
--   id: "3.6"
+-   id: '3.6'
     title: Paris Agreement (Identification)
     module: Climate finance
     indicator: Policy coherence
-    disclosure format: |-
-        Select from a list of international commitments and clarify how the project is aligned with it [codelist, free text to explain]. 
-    mapping: |-
-        See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
-    example: |-
-
--   id: "3.7"
+    disclosure format: Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
+    mapping: See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
+    example: ''
+-   id: '3.7'
     title: Beneficiaries (Preparation)
     module: Climate finance
     indicator: Beneficiary population
     disclosure format: |-
-        Disclose who is the climate finance investment intended to benefit [free text to explain the beneficiaries] and number of beneficiaries. [Select from the list:
+        Disclose who is the climate finance investment intended to benefit \[free text to explain the beneficiaries\] and number of beneficiaries. \[Select from the list:
         Direct
-        Indirect]
-    mapping: |-
-
-    example: |-
-
--   id: "3.8"
+        Indirect\]
+    mapping: ''
+    example: ''
+-   id: '3.8'
     title: Amount of investment (Preparation)
     module: Climate finance
     indicator: Economic viability
-    disclosure format: |-
-        Disclose the quantum of the climate finance investment [value, currency]. 
-    mapping: |-
-        Project level: For each financing instrument, add the value and currency to the`.value` in the `finance` object in `budget.finance` 
+    disclosure format: Disclose the quantum of the climate finance investment \[value, currency\].
+    mapping: 'Project level: For each financing instrument, add the value and currency to the`.value` in the `finance` object in `budget.finance`'
     example: |-
         {
         "budget": {
@@ -649,15 +606,14 @@
           ]
         }
         }
--   id: "3.9"
+-   id: '3.9'
     title: Funding source (Preparation)
     module: Climate finance
     indicator: Economic viability
-    disclosure format: |-
-        Disclose who is providing the finance [party/organization/role]
+    disclosure format: Disclose who is providing the finance \[party/organization/role\]
     mapping: |-
         Project level: Add the organization to the `parties` array and add 'funder' to their `.roles` array.
-        Map the organization's `.id` from the party array to `financingParty.id` in the `budget.finance` 
+        Map the organization's `.id` from the party array to `financingParty.id` in the `budget.finance`
     example: |-
         {
           "parties": [
@@ -681,14 +637,13 @@
             ]
           }
         }
--   id: "3.10"
+-   id: '3.10'
     title: Green Climate Fund Accredited Entity (Preparation)
     module: Climate finance
     indicator: Accessibility
-    disclosure format: |-
-        For projects financed by the Green Climate Fund, disclose the accredited entities through which GCF resources are accessed.
+    disclosure format: For projects financed by the Green Climate Fund, disclose the accredited entities through which GCF resources are accessed.
     mapping: |-
-        Project level: 
+        Project level:
 
         Add each accredited entity organization to the `parties` array and add 'gcfAccreditedEntity' to its `.roles` array.
     example: |-
@@ -703,7 +658,7 @@
             }
           ]
         }
--   id: "3.11"
+-   id: '3.11'
     title: Accredited Entity Type (preparation)
     module: Climate finance
     indicator: Accessibility
@@ -716,54 +671,41 @@
         national
         regional
         international
-    mapping: |-
-
-    example: |-
--   id: "3.12"
+    mapping: ''
+    example: ''
+-   id: '3.12'
     title: Project preparation costs (preparation)
     module: Climate finance
     indicator: Accessibility/ Project viability
-    disclosure format: |-
-        Disclose the amounts invested in project preparation [value, currency]
-    mapping: |-
-
-    example: |-
-
--   id: "3.13"
+    disclosure format: Disclose the amounts invested in project preparation \[value, currency\]
+    mapping: ''
+    example: ''
+-   id: '3.13'
     title: Project preparation period (preparation)
     module: Climate finance
-    indicator: Accessibility/ efficiency 
-    disclosure format: |-
-        Disclose dates for project preparation [start date, end date]
-    mapping: |-
-
-    example: |-
-
--   id: "3.14"
+    indicator: Accessibility/ efficiency
+    disclosure format: Disclose dates for project preparation \[start date, end date\]
+    mapping: ''
+    example: ''
+-   id: '3.14'
     title: Project approval period (preparation)
     module: Climate finance
     indicator: Accessibility
-    disclosure format: |-
-        Disclose dates for project approval [submission date, approval date]
-    mapping: |-
-
-    example: |-
-
--   id: "3.15"
+    disclosure format: Disclose dates for project approval \[submission date, approval date\]
+    mapping: ''
+    example: ''
+-   id: '3.15'
     title: Ratio of co-finance (Preparation)
     module: Climate finance
     indicator: Economic viability
     disclosure format: |-
-        Disclose the ratio of co-finance. Select from a list to specify amounts. 
-          
-        Eg:  
-        Domestic mobilisations [value or NA] 
-        Private Finance [value or NA] 
+        Disclose the ratio of co-finance. Select from a list to specify amounts.
 
+        Eg:\
+        Domestic mobilisations \[value or NA\]
+        Private Finance \[value or NA\]
     mapping: |-
         Project level:
-
-
 
         For each co-financing arrangement add a new `finance` object to the `budget.finance` array. Map the value and currency to the objects `.value`. Add the financing party to the parties array and add `funder` to their `roles` array. Map the funders `id` and `name` to the `.financingParty` object in the `finance` object.
     example: |-
@@ -811,7 +753,7 @@
             ]
           }
         }
--   id: "3.16"
+-   id: '3.16'
     title: Terms of climate finance (Preparation)
     module: Climate finance
     indicator: Economic viability
@@ -823,21 +765,16 @@
         Interest (%)
         Service fee (per annum)
         Commitment fee (per annum)
-    mapping: |-
-
-    example: |-
-
--   id: "3.17"
+    mapping: ''
+    example: ''
+-   id: '3.17'
     title: Carbon efficiency (Preparation)
     module: Climate finance
     indicator: Climate impact
-    disclosure format: |-
-        Disclose the cost per tonne of CO2 equivalent [value, currency]. 
-    mapping: |-
-        Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
-    example: |-
-
--   id: "3.18"
+    disclosure format: Disclose the cost per tonne of CO2 equivalent \[value, currency\].
+    mapping: Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
+    example: ''
+-   id: '3.18'
     title: Non-climate co-benefits (Preparation)
     module: Climate finance
     indicator: Non-climate impact
@@ -847,9 +784,8 @@
         social
         environmental
         gender empowerment
-        [add free text to explain the co-benefits]
-    mapping: |-
-        Project level: For each impact identified add a `benefit` object to the `benefits` array and assign it a locally unique `id`. Set the `title` as the list code and add details explaining the benefit to `.description`.
+        \[add free text to explain the co-benefits\]
+    mapping: 'Project level: For each impact identified add a `benefit` object to the `benefits` array and assign it a locally unique `id`. Set the `title` as the list code and add details explaining the benefit to `.description`.'
     example: |-
         {
           "benefits": [
@@ -860,27 +796,21 @@
             }
           ]
         }
--   id: "3.19"
+-   id: '3.19'
     title: Public consultation meetings (Preparation)
     module: Climate finance
-    indicator: Public participation 
-    disclosure format: |-
-        Disclose the occurrence of public meetings with communities and impacted groups including the minutes, number of the participants, dates and location of these meetings (E.g. Meeting 1 [date] [location] [number of participants] [Document], Meeting 2 [date] [location] [number of participants], [Document]). 
-    mapping: |-
-        See mapping for data point "Public consultation meetings" in the Social extension
-    example: |-
-
--   id: "3.20"
+    indicator: Public participation
+    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the minutes, number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\], \[Document\]).
+    mapping: See mapping for data point "Public consultation meetings" in the Social extension
+    example: ''
+-   id: '3.20'
     title: Disbursement records
     module: Climate finance
     indicator: Efficiency
-    disclosure format: |-
-        Disbursements dates according to financial agreement versus actual disbursements dates [value, currency, date]
-    mapping: |-
-
-    example: |-
-
--   id: "3.21"
+    disclosure format: Disbursements dates according to financial agreement versus actual disbursements dates \[value, currency, date\]
+    mapping: ''
+    example: ''
+-   id: '3.21'
     title: Type of project monitoring
     module: Climate finance
     indicator: KPIs
@@ -889,15 +819,13 @@
         internal
         external
         mixed
-    mapping: |-
-
-    example: |-
--   id: "3.22"
+    mapping: ''
+    example: ''
+-   id: '3.22'
     title: Performance monitoring (Implementation)
     module: Climate finance
     indicator: KPIs
-    disclosure format: |-
-        Disclose Key Performance Indicators adopted by the project (E.g. [free text]).
+    disclosure format: Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
     mapping: |-
         Project level:
 
@@ -911,12 +839,11 @@
             }
           ]
         }
--   id: "3.23"
+-   id: '3.23'
     title: Reporting period
     module: Climate finance
     indicator: KPIs
-    disclosure format: |-
-        It could be quarterly, annually, biannually, etc. [free text]
+    disclosure format: It could be quarterly, annually, biannually, etc. \[free text\]
     mapping: |-
         Project level:
 
@@ -931,24 +858,19 @@
           }
         ]
         }
--   id: "3.24"
+-   id: '3.24'
     title: Oversight reports (implementation)
     module: Climate finance
     indicator: Anti-corruption impact
-    disclosure format: |-
-        [document]
-    mapping: |-
-
-    example: |-
-
--   id: "3.25"
+    disclosure format: \[document\]
+    mapping: ''
+    example: ''
+-   id: '3.25'
     title: Independent monitoring (Implementation)
     module: Climate finance
     indicator: Anti-corruption impact
-    disclosure format: |-
-        Identify the entities acting as independent monitors of the project (E.g. [free text]) 
-    mapping: |-
-        Project level: Add an entry to `parties` with 'independentMonitor' included in its `.roles`.
+    disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\])
+    mapping: 'Project level: Add an entry to `parties` with ''independentMonitor'' included in its `.roles`.'
     example: |-
         {
           "parties": [
@@ -961,63 +883,61 @@
             }
           ]
         }
--   id: "3.26"
+-   id: '3.26'
     title: Independent evaluation (Implementation)
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: |-
-        Disclose technical audits produced at end of the project (E.g. [free text]. 
-    mapping: |-
-        Project level: Add a document, set its `.documentType` to 'technicalAuditReport', add a description of the reports findings to its `.description` and set `.url` to the URL of the document that details the audit (if available). If multiple reports have been produced add a document for each one.
+    disclosure format: Disclose technical audits produced at end of the project (E.g. \[free text\].
+    mapping: 'Project level: Add a document, set its `.documentType` to ''technicalAuditReport'', add a description of the reports findings to its `.description` and set `.url` to the URL of the document that details the audit (if available). If multiple reports have been produced add a document for each one.'
     example: |-
-      {
-      "documents": [
         {
-          "id": "1",
-          "documentType": "technicalAuditReport",
-          "description": "The project has been constructed as specified…",
-          "url": "http://example.com/technicalAuditReport.pdf"
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "technicalAuditReport",
+              "description": "The project has been constructed as specified...",
+              "url": "http://example.com/technicalAuditReport.pdf",
+              "pageStart": "13",
+              "pageEnd": "14"
+            }
+          ]
         }
-      ]
-      }
--   id: "3.27"
+-   id: '3.27'
     title: Impact measurement (Operation)
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: |-
-        Clarify the methodology or system to measure the long-term impact of the project solution (E.g. [free text]. 
-    mapping: |-
-        Project level: Publish in documents, with `.documentType` set to 'impactMethodology' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution (E.g. \[free text\].
+    mapping: 'Project level: Publish in documents, with `.documentType` set to ''impactMethodology'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
             {
               "id": "1",
               "documentType": "impactMethodology",
-              "description": "The long term impact of this project will be measured according to…",
+              "description": "The long term impact of this project will be measured according to...",
               "url": " http://example.com/impactMethodology.pdf "
             }
           ]
         }
--   id: "3.28"
+-   id: '3.28'
     title: Carbon footprint (Operation)
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: |-
-        Disclose the carbon footprint of the project [value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint]
+    disclosure format: Disclose the carbon footprint of the project \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\]
     mapping: |-
-        Project-level:  
-        
-        1. Add a `Metric` object to the `.metrics` array. 
-        
-        2. Set the metric's `.title` to "Greenhouse gas emissions (carbon dioxide equivalent) - operation" and map the methodology clarification to its `.description`. 
-        
-        3. Add an `Observation` object to the metric's `.observations` array and: 
-        -  Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure` 
-        -  Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE" 
-        - Set `.period` to the period covered by the calculation. 
-        
-        4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissions' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`. 
+        Project-level:
+
+        1. Add a `Metric` object to the `.metrics` array.
+
+        2. Set the metric's `.title` to "Greenhouse gas emissions (carbon dioxide equivalent) - operation" and map the methodology clarification to its `.description`.
+
+        3. Add an `Observation` object to the metric's `.observations` array and:
+
+        - Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure`
+        - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
+        - Set `.period` to the period covered by the calculation.
+
+        4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissions' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
     example: |-
         {
           "metrics": [
@@ -1050,64 +970,52 @@
             }
           ]
         }
--   id: "3.29"
+-   id: '3.29'
     title: Infrastructure assets to be decommissioned
     module: Climate finance
     indicator: Stranded assets
-    disclosure format: |-
-        Identify the asset for disposal purpose [free text]
-    mapping: |-
-
-    example: |-
-
--   id: "3.30"
+    disclosure format: Identify the asset for disposal purpose \[free text\]
+    mapping: ''
+    example: ''
+-   id: '3.30'
     title: Decommission period
     module: Climate finance
     indicator: Stranded assets
-    disclosure format: |-
-        Intended start and end dates of decommissioning.
-    mapping: |-
-
-    example: |-
-
--   id: "3.31"
+    disclosure format: Intended start and end dates of decommissioning.
+    mapping: ''
+    example: ''
+-   id: '3.31'
     title: Decommission plan (Decommission)
     module: Climate finance
-    indicator: Climate management 
-    disclosure format: |-
-        Disclose the technical plan for decommissioning (E.g.: [Doc]). 
-    mapping: |-
-        See decommissioning plan data point in environment extension
-    example: |-
-
--   id: "3.32"
+    indicator: Climate management
+    disclosure format: 'Disclose the technical plan for decommissioning (E.g.: \[Doc\]).'
+    mapping: See decommissioning plan data point in environment extension
+    example: ''
+-   id: '3.32'
     title: Decommission costs (Decommission)
     module: Climate finance
     indicator: Climate management
-    disclosure format: |-
-        Disclose socio-economic assessments on transition and decommissioning costs (E.g.: [Doc]). 
-    mapping: |-
-
-    example: |-
-
--   id: "3.33"
+    disclosure format: 'Disclose socio-economic assessments on transition and decommissioning costs (E.g.: \[Doc\]).'
+    mapping: ''
+    example: ''
+-   id: '3.33'
     title: Carbon decommission savings (Decommission)
     module: Climate finance
     indicator: Climate management
-    disclosure format: |-
-        Disclose the evaluation of CO2 savings as a result of decommissioning [value, tons CO2 equivalent]
+    disclosure format: Disclose the evaluation of CO2 savings as a result of decommissioning \[value, tons CO2 equivalent\]
     mapping: |-
-        Project-level:  
-        
-        1. Add a `Metric` object to the `.forecasts` array. 
-        
-        2. Set the metric's `.title` to "Greenhouse gas emissions reduction (carbon dioxide equivalent)" and map the methodology clarification to its `.description`. 
-        
-        3. Add an `Observation` object to the metric's `.observations` array and: 
-        -  Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure` 
-        -  Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE" 
-        - Set `.period` to the period covered by the calculation. 
-        
+        Project-level:
+
+        1. Add a `Metric` object to the `.forecasts` array.
+
+        2. Set the metric's `.title` to "Greenhouse gas emissions reduction (carbon dioxide equivalent)" and map the methodology clarification to its `.description`.
+
+        3. Add an `Observation` object to the metric's `.observations` array and:
+
+        - Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's `.measure`
+        - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
+        - Set `.period` to the period covered by the calculation.
+
         4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissionsReduction' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
     example: |-
         {
@@ -1142,17 +1050,15 @@
             }
           ]
         }
-
--   id: "3.34"
+-   id: '3.34'
     title: Decommission mitigation plan (Decommission)
     module: Climate finance
     indicator: Climate management
-    disclosure format: |-
-        Disclose mitigation plan for people and communities affected by decommissioning (E.g.: [Doc]), 
+    disclosure format: 'Disclose mitigation plan for people and communities affected by decommissioning (E.g.: \[Doc\]),'
     mapping: |-
         Project level:
 
-        Publish in documents, with `.documentType` set to 'socialImpact' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`. 
+        Publish in documents, with `.documentType` set to 'socialImpact' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
     example: |-
         {
           "id": "oc4ids-bu3kcz-123456789",
@@ -1166,28 +1072,24 @@
             }
           ]
         }
--   id: "4.1"
+-   id: '4.1'
     title: Number of beneficiaries (Preparation)
     module: Social
     indicator: Beneficiary population
-    disclosure format: |-
-        Indicate the number of direct and indirect project beneficiaries (E.g. direct: [number]; indirect: "number"). Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention. 
-    mapping: |-
-
-    example: |-
-
--   id: "4.2"
+    disclosure format: 'Indicate the number of direct and indirect project beneficiaries (E.g. direct: \[number\]; indirect: "number"). Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.'
+    mapping: ''
+    example: ''
+-   id: '4.2'
     title: Inclusive design and implementation
     module: Social
     indicator: Gender and inclusion
-    disclosure format: |-
-        Clarify whether gender, people with disabilities and vulnerable and disadvantaged populations were considered in the project design (e.g. "free text to explain how the design meets inclusion goals" and document to support – the project design) and project implementation (e.g. "free text to explain implementation practices targeting inclusion goals" and document to support – contractor policy and procedures).
+    disclosure format: Clarify whether gender, people with disabilities and vulnerable and disadvantaged populations were considered in the project design (e.g. "free text to explain how the design meets inclusion goals" and document to support - the project design) and project implementation (e.g. "free text to explain implementation practices targeting inclusion goals" and document to support - contractor policy and procedures).
     mapping: |-
         Project-level:
 
         1. Add a document, set its `.documentType` to 'inclusiveDesign' and add an explanation of how the project design meets inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
 
-        1. Add a document, set its `.documentType` to 'inclusiveImplementation' and add an explanation of how the project  imlpementation practices target inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`. 
+        2. Add a document, set its `.documentType` to 'inclusiveImplementation' and add an explanation of how the project  imlpementation practices target inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
     example: |-
         {
           "documents": [
@@ -1205,19 +1107,18 @@
             }
           ]
         }
--   id: "4.3"
+-   id: '4.3'
     title: Indigenous land (Preparation)
     module: Social
     indicator: Indigenous populations
-    disclosure format: |-
-        Identify whether the project is located or cut through indigenous land. Use the information at the LandMark – Global Platform of Indigenous and Community Lands on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
+    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the LandMark - Global Platform of Indigenous and Community Lands on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
     mapping: |-
-        Project level: 
+        Project level:
 
         If the project is located or cut through indigenous land:
 
         1. Set `.social.indigenousLand` to `true`
-        2 Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name>  and <Category> for the name and land category from the Landmark database.
+           2 Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name>  and <Category> for the name and land category from the Landmark database.
 
         If the project is not located or cut through indigenous land, set `.social.indigenousLand` to `false`.
     example: |-
@@ -1232,14 +1133,13 @@
             }
           ]
         }
--   id: "4.4"
+-   id: '4.4'
     title: Public consultation meetings
     module: Social
     indicator: Public participation
-    disclosure format: |-
-        Disclose the occurrence of public meetings with communities and impacted groups including meeting invite, the number of the participants, dates and location of these meetings.
+    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including meeting invite, the number of the participants, dates and location of these meetings.
     mapping: |-
-        Project Level: 
+        Project Level:
 
         For each meeting:
 
@@ -1284,14 +1184,12 @@
             }
           ]
         }
--   id: "4.5"
+-   id: '4.5'
     title: Land compensation budget
     module: Social
     indicator: Land issues
-    disclosure format: |-
-        Disclose budget allocated to fund land compensation (E.g. [value]).
-    mapping: |-
-        Project Level: Set `.social.landCompensationBudget` to the amount and currency of the budget allocated for land compensation.
+    disclosure format: Disclose budget allocated to fund land compensation (E.g. \[value\]).
+    mapping: 'Project Level: Set `.social.landCompensationBudget` to the amount and currency of the budget allocated for land compensation.'
     example: |-
         {
           "social": {
@@ -1301,12 +1199,12 @@
             }
           }
         }
--   id: "4.6"
+-   id: '4.6'
     title: Labour obligations
     module: Social
     indicator: Labour compliance
     disclosure format: |-
-        Disclose labour obligations in the construction contract. This can include, without limitation, the following: 
+        Disclose labour obligations in the construction contract. This can include, without limitation, the following:
 
         Minimum wage
         Overtime
@@ -1366,14 +1264,12 @@
             }
           ]
         }
--   id: "4.7"
+-   id: '4.7'
     title: Labour budget
     module: Social
     indicator: Labour compliance
-    disclosure format: |-
-        Disclose the amount allocated by the main contractor to cover for labour costs (E.g. [value]).
-    mapping: |-
-        Contract level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.
+    disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs (E.g. \[value\]).
+    mapping: 'Contract level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.'
     example: |-
         {
           "contractingProcesses": [
@@ -1390,12 +1286,11 @@
             }
           ]
         }
--   id: "4.8"
+-   id: '4.8'
     title: Workers' accidents
     module: Social
     indicator: Health and Safety
-    disclosure format: |-
-        Disclose summary statistics on accidents and fatalities involving construction workers, and an explanation of these events.
+    disclosure format: Disclose summary statistics on accidents and fatalities involving construction workers, and an explanation of these events.
     mapping: |-
         Project level:
 
@@ -1442,14 +1337,12 @@
             }
           ]
         }
--   id: "4.9"
+-   id: '4.9'
     title: Health and safety certifications
     module: Social
     indicator: Health and Safety
-    disclosure format: |-
-        Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety (E.g. [Document]).
-    mapping: |-
-        Contracting process level: Publish in `.summary.documents`, with `.documentType` set to 'contractorHealthAndSafetyCertification' and include a short description and/or a link to a document providing details.
+    disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety (E.g. \[Document\]).
+    mapping: 'Contracting process level: Publish in `.summary.documents`, with `.documentType` set to ''contractorHealthAndSafetyCertification'' and include a short description and/or a link to a document providing details.'
     example: |-
         {
           "contractingProcesses": [
@@ -1467,13 +1360,12 @@
             }
           ]
         }
--   id: "4.10"
+-   id: '4.10'
     title: Construction materials testing
     module: Social
     indicator: Health and Safety
     disclosure format: |-
-        Disclose materials tests performed during implementation [document]. These can include, without limitation, the following:
-
+        Disclose materials tests performed during implementation \[document\]. These can include, without limitation, the following:
 
         Foundations
         Pavements
@@ -1489,7 +1381,7 @@
         Thickness
         Others (explain)
 
-        [Free text to add not mentioned tests]
+        \[Free text to add not mentioned tests\]
 
         Document
     mapping: |-
@@ -1522,14 +1414,12 @@
             }
           ]
         }
--   id: "4.11"
+-   id: '4.11'
     title: Building inspections
     module: Social
     indicator: Health and Safety
-    disclosure format: |-
-        Disclose building inspections during project implementation (E.g. [Document]).
-    mapping: |-
-        Project Level: Publish in `documents`, with `.documentType` set to 'buildingInspectionReport' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Disclose building inspections during project implementation (E.g. \[Document\]).
+    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''buildingInspectionReport'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -1540,19 +1430,18 @@
             }
           ]
         }
--   id: "4.12"
+-   id: '4.12'
     title: Jobs generated
     module: Social
     indicator: Growth impact
-    disclosure format: |-
-        Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (E.g. [direct: value] [indirect: value]).
+    disclosure format: 'Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (E.g. \[direct: value\] \[indirect: value\]).'
     mapping: |-
-        Project level: 
+        Project level:
 
         Publish job creation estimates:
 
         1. Add a `Metric` object to the `forecasts` array and set its `.title` to 'Jobs created'.
-        2. Add an `observation` object for each job relationship – stage pair and set `.dimensions` accordingly, i.e.
+        2. Add an `observation` object for each job relationship - stage pair and set `.dimensions` accordingly, i.e.
 
         - relationship: direct, stage: implementation
         - relationship: indirect, stage: implementation
@@ -1564,7 +1453,7 @@
         Publish actual jobs created:
 
         1. Add a `Metric` object to the `metrics` array and set its `.title` to 'Jobs created'.
-        2. Add an `observation` object for each job relationship – stage pair and set `.dimensions` accordingly, i.e.
+        2. Add an `observation` object for each job relationship - stage pair and set `.dimensions` accordingly, i.e.
 
         - relationship: direct, stage: implementation
         - relationship: indirect, stage: implementation
@@ -1655,26 +1544,24 @@
             }
           ]
         }
--   id: "5.1"
+-   id: '5.1'
     title: Policy coherence
     module: Institutional
     indicator: Investment transparency
     disclosure format: |-
         Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment.   Consider alignment with:
-        
-
 
         SDGs
         National plan or strategy
         Infrastructure plan or strategy
         Sector plan or strategy
         Procuring entity plan or strategy
-        Paris Agreement 
+        Paris Agreement
         Nationally Determined Contributions (NDCs)
         National Adaptation Plans
         Medium-term fiscal frameworks/targets
 
-        [free text]
+        \[free text\]
     mapping: |-
         Project level:
 
@@ -1713,14 +1600,13 @@
           }
         ]
         }
--   id: "5.2"
+-   id: '5.2'
     title: Freedom of information requests
     module: Institutional
     indicator: Access to information
-    disclosure format: |-
-        Disclose Freedom of Information (FoI) requests that have been presented in relation to the project [E.g. Document]. Note that FoI requests can also be known as access to information requests.
+    disclosure format: Disclose Freedom of Information (FoI) requests that have been presented in relation to the project \[E.g. Document\]. Note that FoI requests can also be known as access to information requests.
     mapping: |-
-        Project level: 
+        Project level:
 
         For each freedom of information request, add a document, set `.documentType` to 'foiRequest' and set `.url` to the URL at which the request is available
     example: |-
@@ -1733,14 +1619,13 @@
             }
           ]
         }
--   id: "5.3"
+-   id: '5.3'
     title: Answers to Freedom of information requests
     module: Institutional
     indicator: Access to information
-    disclosure format: |-
-        Disclose the responses provided by authorities toFreedom of Information (FoI) requests related to the project (Eg. [Document]). Note that FoI requests may also be known as acccess to information requests. 
+    disclosure format: Disclose the responses provided by authorities toFreedom of Information (FoI) requests related to the project (Eg. \[Document\]). Note that FoI requests may also be known as acccess to information requests.
     mapping: |-
-        Project level: 
+        Project level:
 
         For each freedom of information request response, add a document, set `.documentType` to 'foiRequestResponse' and set `.url` to the URL at which the response is available.
     example: |-
@@ -1753,14 +1638,13 @@
             }
           ]
         }
--   id: "5.4"
+-   id: '5.4'
     title: Lobbying transparency
     module: Institutional
     indicator: Access to information
-    disclosure format: |-
-        Disclose the occurrence of meetings with interest groups, including the meeting agenda and minutes, the number of the participants, dates and location of these meetings (E.g. Meeting 1 [date] [location] [number of participants] [Document], Meeting 2 [date] [location] [number of participants] [Document]). 
+    disclosure format: Disclose the occurrence of meetings with interest groups, including the meeting agenda and minutes, the number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\] \[Document\]).
     mapping: |-
-        Project Level: 
+        Project Level:
 
         For each meeting:
 
@@ -1803,22 +1687,18 @@
             }
           ]
         }
--   id: "5.5"
+-   id: '5.5'
     title: Beneficial ownership
     module: Institutional
     indicator: Access to information
-    disclosure format: |-
-        Disclose the beneficial owners of the contractors and suppliers appointed in the project (E.g. [name, identifier]). 
-    mapping: |-
-        Use modelling from OCDS Beneficial Owners extension
-    example: |-
-
--   id: "5.6"
+    disclosure format: Disclose the beneficial owners of the contractors and suppliers appointed in the project (E.g. \[name, identifier\]).
+    mapping: Use modelling from OCDS Beneficial Owners extension
+    example: ''
+-   id: '5.6'
     title: Sustainability criteria
     module: Institutional
     indicator: Award criteria
-    disclosure format: |-
-        Identify the presence of sustainability and non-price attributes in the award criteria.
+    disclosure format: Identify the presence of sustainability and non-price attributes in the award criteria.
     mapping: |-
         Contracting process level:
 
@@ -1842,14 +1722,12 @@
             }
           ]
         }
--   id: "5.7"
+-   id: '5.7'
     title: Anti-corruption certifications
     module: Institutional
     indicator: Anti-corruption impact
-    disclosure format: |-
-        Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard (E.g. [Document]). 
-    mapping: |-
-        Project Level: Publish in documents, with .documentType set to 'antiCorruptionCertification' and include a short description and/or a link to a document providing details.
+    disclosure format: Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard (E.g. \[Document\]).
+    mapping: 'Project Level: Publish in documents, with .documentType set to ''antiCorruptionCertification'' and include a short description and/or a link to a document providing details.'
     example: |-
         {
           "documents": [
@@ -1860,14 +1738,12 @@
             }
           ]
         }
--   id: "5.8"
-    title: Independent monitoring 
+-   id: '5.8'
+    title: Independent monitoring
     module: Institutional
     indicator: Anti-corruption impact
-    disclosure format: |-
-        Identify the entities acting as independent monitors of the project (E.g. [free text])
-    mapping: |-
-        Project Level: Add an entry to `parties` with 'independentMonitor' included in its `.roles`.
+    disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\])
+    mapping: 'Project Level: Add an entry to `parties` with ''independentMonitor'' included in its `.roles`.'
     example: |-
         {
           "parties": [
@@ -1880,14 +1756,12 @@
             }
           ]
         }
--   id: "5.9"
+-   id: '5.9'
     title: Performance monitoring
     module: Institutional
     indicator: KPIs
-    disclosure format: |-
-        Disclose Key Performance Indicators adopted by the project (E.g. [free text]).
-    mapping: |-
-        Project level: Publish in `metrics`. For each KPI add a Metric object to the metrics array and set the object's fields according to the schema. Prefix the metric's `.title` with "KPI: "
+    disclosure format: Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
+    mapping: 'Project level: Publish in `metrics`. For each KPI add a Metric object to the metrics array and set the object''s fields according to the schema. Prefix the metric''s `.title` with "KPI: "'
     example: |-
         {
           "metrics": [
@@ -1897,14 +1771,12 @@
             }
           ]
         }
--   id: "5.10"
+-   id: '5.10'
     title: Risk management plans
     module: Institutional
     indicator: Risk management
-    disclosure format: |-
-        Disclose risk management plans prepared for the project (E.g. [Document]).
-    mapping: |-
-        Project Level: Publish in documents, with .documentType set to 'riskProvisions' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+    disclosure format: Disclose risk management plans prepared for the project (E.g. \[Document\]).
+    mapping: 'Project Level: Publish in documents, with .documentType set to ''riskProvisions'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
           "documents": [
@@ -1915,25 +1787,25 @@
             }
           ]
         }
--   id: "5.11"
+-   id: '5.11'
     title: Sustainable sub-sectors
     module: Institutional
     indicator: Subsectors
     disclosure format: |-
         Identify relevant sub-sectors related to the project scope.
-        Select from a list (non-exhaustive): 
+        Select from a list (non-exhaustive):
+
         - Renewable energy
-        solar, wind, 
-        hydropower, 
-        biomass
-        geothermal 
-        Low carbon transport
+          solar, wind,
+          hydropower,
+          biomass
+          geothermal
+          Low carbon transport
         - Flood protection
-        energy efficiency, 
-        water and wastewater management
-        natural resource management
+          energy efficiency,
+          water and wastewater management
+          natural resource management
 
         Free text to add not mentioned sub-sectors
-    mapping: |-
-        Project Level: Add equivalent code from ProjectSector codelist to sector array.
-    example: |-
+    mapping: 'Project Level: Add equivalent code from ProjectSector codelist to sector array.'
+    example: ''
