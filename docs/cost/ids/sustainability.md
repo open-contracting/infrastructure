@@ -368,7 +368,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document)Click here to enter text.
+Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document).
 ````
 
 ````{grid-item-card}
@@ -537,7 +537,7 @@ If there is an accompanying document publish in `documents`, with `.documentType
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.Click here to enter text.
+Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents..
 ````
 
 ````{grid-item-card}
@@ -628,7 +628,7 @@ If there is an accompanying document publish in `documents`, with `.documentType
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). Click here to enter text.
+Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). .
 ````
 
 ````{grid-item-card}
@@ -733,7 +733,7 @@ Contracting process level: Publish in `documents`, with `.documentType` set to '
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the decommissioning plans for the project assets \[document\].Click here to enter text.
+Disclose the decommissioning plans for the project assets \[document\]..
 ````
 
 ````{grid-item-card}
