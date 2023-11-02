@@ -8,7 +8,7 @@
 
 ## Project level
 
-## Identification
+### Identification
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -16,7 +16,7 @@
 :file: ../../../build/current_lang/project-level-identification.csv
 ```
 
-## Preparation
+### Preparation
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -24,7 +24,7 @@
 :file: ../../../build/current_lang/project-level-preparation.csv
 ```
 
-## Project completion
+### Project completion
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -32,9 +32,9 @@
 :file: ../../../build/current_lang/project-level-completion.csv
 ```
 
-## Reactive disclosures
+### Reactive disclosures
 
-## Identification and preparation
+#### Identification and preparation
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -42,7 +42,7 @@
 :file: ../../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
 
-## Completion
+#### Completion
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -50,7 +50,7 @@
 :file: ../../../build/current_lang/reactive-project-level-completion.csv
 ```
 
-## Implementation progress reports
+#### Implementation progress reports
 
 In addition to the documents listed in the mapping table, you can use OC4IDS to publish structured data on planned and actual physical and financial progress.
 
@@ -224,7 +224,7 @@ You can use the `forecasts` array to publish progress forecasts for different po
 
 The mappings in this section relate to the `contractingProcesses` section of the OC4IDS schema, unless otherwise specified.
 
-## Procurement
+### Procurement
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -232,7 +232,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 :file: ../../../build/current_lang/process-level-procurement.csv
 ```
 
-## Implementation
+### Implementation
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -240,9 +240,9 @@ The mappings in this section relate to the `contractingProcesses` section of the
 :file: ../../../build/current_lang/process-level-implementation.csv
 ```
 
-## Reactive disclosures
+### Reactive disclosures
 
-## Procurement
+#### Procurement
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -250,7 +250,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 :file: ../../../build/current_lang/reactive-process-level-procurement.csv
 ```
 
-## Contract
+#### Contract
 
 ```{csv-table-no-translate}
 :header-rows: 1
@@ -258,7 +258,7 @@ The mappings in this section relate to the `contractingProcesses` section of the
 :file: ../../../build/current_lang/reactive-process-level-contract.csv
 ```
 
-## Implementation
+#### Implementation
 
 ```{csv-table-no-translate}
 :header-rows: 1
