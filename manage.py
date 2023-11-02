@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 import csv
 import json
-import json_merge_patch
-import mdformat
 import re
 import sys
 import warnings
-import yaml
+from collections import defaultdict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
 
 import click
+import json_merge_patch
+import mdformat
 import requests
-from collections import defaultdict
+import yaml
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator as validator
 from ocdsextensionregistry import ProfileBuilder
