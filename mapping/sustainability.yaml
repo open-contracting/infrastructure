@@ -946,7 +946,7 @@
     module: Climate finance
     indicator: Anti-corruption impact
     disclosure format: |-
-Identify the entities acting as independent monitors of the project (E.g. [free text]) 
+        Identify the entities acting as independent monitors of the project (E.g. [free text]) 
     mapping: |-
         Project level: Add an entry to `parties` with 'independentMonitor' included in its `.roles`.
     example: |-
