@@ -177,7 +177,7 @@
     title: Environmental measures
     module: Environment and climate
     indicator: Environmental impact
-    disclosure format: Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document)Click here to enter text.
+    disclosure format: Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document)title.
     mapping: 'Project level: Add a document, set its `.documentType` to ''environmentalMeasures'', add a description of the environmental measures adopted to its `.description` and set  `.url` to the URL of the document that describes the project''s environmental measures (if available).'
     example: |-
         {
@@ -285,7 +285,7 @@
     title: Climate and disaster risk assessment
     module: Environment and climate
     indicator: Climate and disaster risk
-    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.Click here to enter text.
+    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.title.
     mapping: 'Project level: Add a document, set its `.documentType` to ''climateAndDisasterRiskAssessment'', add a description of the type of climate and disaster risks to which the project is exposed to its `.description` and set  `.url` to the URL of the risk assessment document .'
     example: |-
         {
@@ -346,7 +346,7 @@
     title: Forecast of greenhouse gas emissions
     module: Environment and climate
     indicator: Climate risk
-    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). Click here to enter text.
+    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). title.
     mapping: |-
         Project-level:
 
@@ -420,7 +420,7 @@
     title: Decommissioning plans
     module: Environment and climate
     indicator: Climate management
-    disclosure format: Disclose the decommissioning plans for the project assets \[document\].Click here to enter text.
+    disclosure format: Disclose the decommissioning plans for the project assets \[document\].title.
     mapping: 'Project level: Publish in `documents`, with `.documentType` set to ''decommissioningPlans'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
     example: |-
         {
