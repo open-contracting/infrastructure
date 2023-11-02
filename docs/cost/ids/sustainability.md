@@ -2731,7 +2731,7 @@ For each freedom of information request, add a document, set `.documentType` to 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the responses provided by authorities toFreedom of Information (FoI) requests related to the project (Eg. \[Document\]). Note that FoI requests may also be known as acccess to information requests.
+Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project (Eg. \[Document\]). Note that FoI requests may also be known as access to information requests.
 ````
 
 ````{grid-item-card}
