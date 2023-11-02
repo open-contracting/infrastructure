@@ -181,14 +181,14 @@
     mapping: 'Project level: Add a document, set its `.documentType` to ''environmentalMeasures'', add a description of the environmental measures adopted to its `.description` and set  `.url` to the URL of the document that describes the project''s environmental measures (if available).'
     example: |-
         {
-        "documents": [
-          {
-            "id": "1",
-            "documentType": "environmentalMeasures",
-            "description": "The following environmental measures are adopted by the project...",
-            "url": "http://example.com/documents/environmentalMeasures.pdf"
-          }
-        ]
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "environmentalMeasures",
+              "description": "The following environmental measures are adopted by the project...",
+              "url": "http://example.com/documents/environmentalMeasures.pdf"
+            }
+          ]
         }
 -   id: '2.3'
     title: Environmental exceptions
@@ -515,7 +515,7 @@
               {
                 "id": "1",
                 "financeCategory": "seniorDebt",
-                "concessional": false,
+                "concessional": false
               }
             ]
           }
@@ -594,17 +594,17 @@
     mapping: 'Project level: For each financing instrument, add the value and currency to the`.value` in the `finance` object in `budget.finance`'
     example: |-
         {
-        "budget": {
-          "finance": [
-            {
-              "id": "1",
-              "value": {
-                "amount": "3000000",
-                "currency": "EUR"
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "value": {
+                  "amount": "3000000",
+                  "currency": "EUR"
+                }
               }
-            }
-          ]
-        }
+            ]
+          }
         }
 -   id: '3.9'
     title: Funding source (Preparation)
@@ -850,13 +850,13 @@
         For each KPI metric add the sentence "To be reported XXX" where XXX is the reporting frequency to the metrics `.description`.
     example: |-
         {
-        "metrics": [
-          {
-            "id": "1",
-            "title": "KPI: Capacity utilization",
-            "description": "To be reported annually."
-          }
-        ]
+          "metrics": [
+            {
+              "id": "1",
+              "title": "KPI: Capacity utilization",
+              "description": "To be reported annually."
+            }
+          ]
         }
 -   id: '3.24'
     title: Oversight reports (implementation)
@@ -1574,31 +1574,31 @@
         If further documentation of the project's policy alignment is available, add a document with `.documentType` set to 'policyAlignment', `url` set to the URL at which the documentation can be accessed.
     example: |-
         {
-        "additionalClassifications": [
-          {
-            "scheme": "sdg",
-            "id": "6",
-            "description": "Ensure availability and sustainable management of water and sanitation for all"
-          },
-          {
-            "scheme": "sdgTarget",
-            "id": "6.3",
-            "description": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally"
-          }
-        ],
-        "policyAlignment": {
-          "policies": [
-            "infrastructurePlan"
+          "additionalClassifications": [
+            {
+              "scheme": "sdg",
+              "id": "6",
+              "description": "Ensure availability and sustainable management of water and sanitation for all"
+            },
+            {
+              "scheme": "sdgTarget",
+              "id": "6.3",
+              "description": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally"
+            }
           ],
-          "description": "The project is intended to contribute towards the goals set out in the 2021 Australian Infrastructure Plan."
-        },
-        "documents": [
-          {
-            "id": "1",
-            "documentType": "policyAlignment",
-            "url": "http://example.com/infrastructurePlanAlignment.pdf"
-          }
-        ]
+          "policyAlignment": {
+            "policies": [
+              "infrastructurePlan"
+            ],
+            "description": "The project is intended to contribute towards the goals set out in the 2021 Australian Infrastructure Plan."
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "policyAlignment",
+              "url": "http://example.com/infrastructurePlanAlignment.pdf"
+            }
+          ]
         }
 -   id: '5.2'
     title: Freedom of information requests
