@@ -91,7 +91,7 @@ Implementations which include multiple currencies ought to give consideration to
 :file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
 ```
 
-###### Completion
+##### Completion
 
 ```{csv-table-no-translate}
 :header-rows: 1
