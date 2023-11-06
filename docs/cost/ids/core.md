@@ -6,6 +6,10 @@
 }
 </style>
 
+This page documents a mapping from the 'core' CoST IDS elements to OC4IDS fields and codes. The organization of the mapping tables reflects the structure of the CoST IDS.
+
+The CoST IDS sets out a number of disclosure requirements under the heading of 'information for disclosure upon request', also known as 'reactive disclosure'. You can disclose these elements proactively using OC4IDS. Separate tables are provided for project-level and process-level reactive disclosures.
+
 ## Project level
 
 ### Identification
@@ -50,7 +54,7 @@
 :file: ../../../build/current_lang/reactive-project-level-completion.csv
 ```
 
-#### Implementation progress reports
+##### Implementation progress reports
 
 In addition to the documents listed in the mapping table, you can use OC4IDS to publish structured data on planned and actual physical and financial progress.
 
