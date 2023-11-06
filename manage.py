@@ -4,18 +4,37 @@ import json
 import re
 import sys
 import warnings
+from collections import defaultdict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
 
 import click
+import json_merge_patch
+import mdformat
 import requests
+import yaml
+from jsonschema import FormatChecker
+from jsonschema.validators import Draft4Validator as validator
 from ocdsextensionregistry import ProfileBuilder
 from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
 
 basedir = Path(__file__).resolve().parent
 referencedir = basedir / 'docs' / 'reference'
+
+
+class Dumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):
+        return True
+
+
+def str_representer(dumper, data):
+    # Use the literal style on multiline strings to reduce quoting, instead of the single-quoted style (default).
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style="|" if "\n" in data else None)
+
+
+Dumper.add_representer(str, str_representer)
 
 
 def get(url):
@@ -32,6 +51,12 @@ def csv_reader(url):
     Reads a CSV from a URL and returns a ``csv.DictReader`` object.
     """
     return csv.DictReader(StringIO(get(url).text))
+
+
+def write_yaml_file(filename, data):
+    with open(filename, "w") as f:
+        # Make it easier to see indentation. Avoid line wrapping. sort_keys is True by default.
+        yaml.dump(data, f, Dumper=Dumper, indent=4, width=1000, sort_keys=False)
 
 
 def coerce_to_list(data, key):
@@ -142,6 +167,18 @@ def remove_integer_identifier_types(*args):
             warnings.warn(f'Missing "properties" key at {pointer}')
 
     traverse(schema_action)(*args)
+
+
+# From standard-maintenance-scripts/tests/test_readme.py
+def set_additional_properties(data, additional_properties):
+    if isinstance(data, list):
+        for item in data:
+            set_additional_properties(item, additional_properties)
+    elif isinstance(data, dict):
+        if "properties" in data:
+            data["additionalProperties"] = additional_properties
+        for value in data.values():
+            set_additional_properties(value, additional_properties)
 
 
 def compare(actual, infra_list, ocds_list, prefix, suffix):
@@ -689,6 +726,140 @@ def update(ppp_base_url):
     with (schema_dir / 'project-schema.json').open('w') as f:
         json.dump(schema, f, ensure_ascii=False, indent=2)
         f.write('\n')
+
+
+@cli.command()
+@click.argument("filename", type=click.Path(exists=True, dir_okay=False))
+@click.option("-a", "--additional-properties", is_flag=True, help="Allow additional properties")
+def lint(filename, additional_properties):
+
+    minimal_project = {
+        "id": "oc4ids-bu3kcz-1",
+    }
+
+    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
+        schema = json.load(f)
+
+    # Disallow additional properties
+    set_additional_properties(schema, additional_properties)
+
+    format_checker = FormatChecker()
+
+    # Load sustainability modules mapping
+    with open(filename) as f:
+        elements = yaml.safe_load(f)
+
+    additional_fields = defaultdict(list)
+    missing_data = defaultdict(list)
+
+    for element in elements:
+        identifier = element["id"]
+        title = element["title"]
+
+        # Check for missing data
+        for key, value in element.items():
+            if value == '' or value is None:
+                missing_data[key].append(f"{identifier} {title}")
+
+        # Format Markdown
+        for key in ["disclosure format", "mapping"]:
+            value = element.get(key, "")
+            element[key] = mdformat.text(value, options={"number": True}).rstrip()
+
+        # Format and validate JSON.
+        example = element["example"]
+        if example and example != "N/A":
+            try:
+                data = json.loads(example)
+                element["example"] = json.dumps(data, indent=2).replace("Infinity", "1e9999")
+
+                release = deepcopy(minimal_project)
+                json_merge_patch.merge(release, data)
+
+                for e in validator(schema, format_checker=format_checker).iter_errors(release):
+                    if e.validator == "additionalProperties":
+                        e.absolute_schema_path[-1] = "properties"
+                        e.absolute_schema_path.append("")
+                        for match in re.findall(r"'(\S+)'", e.message):
+                            e.absolute_schema_path[-1] = match
+                            additional_fields[
+                                "/".join(e.absolute_schema_path)
+                                .replace("items/properties/", "")
+                                .replace("properties/", "")
+                            ].append([identifier, title])
+                    else:
+                        click.echo(f"{identifier} ({title}): OC4IDS is invalid: "
+                                   f"{e.message} ({'/'.join(e.absolute_schema_path)})")
+            except json.decoder.JSONDecodeError as e:
+                click.echo(f"{identifier} ({title}): JSON is invalid: {e}: {example}")
+
+    if additional_fields:
+        click.echo(f"\nAdditional fields ({len(additional_fields)}):")
+        click.echo("   field,id,title")
+        for field, occurrences in sorted(additional_fields.items(), key=lambda item: item[1]):
+            click.echo(f"   {field}{''.join(f',{identifier},{title}' for identifier, title in occurrences)}")
+
+    if missing_data:
+        for key, occurrences in missing_data.items():
+            click.echo(f"\nMissing {key}:")
+            for occurrence in occurrences:
+                click.echo(f"   {occurrence}")
+
+    write_yaml_file(filename, elements)
+
+
+@cli.command()
+def update_sustainability_docs():
+    """Update docs/cost/ids/sustainability.md"""
+
+    # Load sustainability mapping documentation
+    with (basedir / 'docs' / 'cost' / 'ids' / 'sustainability.md').open() as f:
+        docs = f.readlines()
+
+    # Preserve content that appears before the content generated by this function
+    module_index = docs.index("## Economic and fiscal\n")
+    docs = docs[:module_index]
+
+    # Generate mapping documentation for each module
+    modules = {}
+    with (basedir / 'mapping' / 'sustainability.yaml').open() as f:
+        elements = yaml.safe_load(f)
+
+    for element in elements:
+        module = element.get("module")
+        if module not in modules:
+            modules[module] = []
+
+        title = element.get("title", "")
+        modules[module].extend(
+            [
+              f"\n({title})=",
+              "\n\n`````{grid} 2",
+              f"\n\n````{{grid-item-card}} {title}",
+              "\n:columns: 4",
+              "\nCoST IDS element",
+              "\n^^^\n",
+              element.get("disclosure format", ""),
+              "\n````",
+              "\n\n````{grid-item-card}",
+              "\n:columns: 8",
+              "\nOC4IDS mapping",
+              "\n^^^\n",
+              element.get("mapping", ""),
+              "\n```json\n",
+              element.get("example", ""),
+              "\n```",
+              "\n````",
+              "\n\n`````\n\n"
+            ]
+        )
+
+    for name, content in modules.items():
+        docs.append(f"## {name}\n\n"),
+        docs.extend(content)
+
+    with (basedir / 'docs' / 'cost' / 'ids' / 'sustainability.md').open('w') as f:
+        f.writelines(docs)
 
 
 if __name__ == '__main__':
