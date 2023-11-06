@@ -8,6 +8,8 @@
 
 This page provides guidance and documents a mapping from OCDS fields and codes to OC4IDS fields and codes. The organization of the mapping tables reflects the structure of the CoST IDS.
 
+The CoST IDS sets out a number of disclosure requirements under the heading of 'information for disclosure upon request', also known as 'reactive disclosure'. You can disclose these elements proactively using OC4IDS. Separate tables are provided for project-level and process-level reactive disclosures.
+
 ## Guidance
 
 ### Command-line tool and reference implementation
