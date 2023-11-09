@@ -762,7 +762,7 @@ def lint(filename, additional_properties):
                 missing_data[key].append(f"{identifier} {title}")
 
         # Format Markdown
-        for key in ["disclosure format", "mapping"]:
+        for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
             value = element.get(key, "")
             element[key] = mdformat.text(value, options={"number": True}).rstrip()
 
@@ -806,6 +806,55 @@ def lint(filename, additional_properties):
                 click.echo(f"   {occurrence}")
 
     write_yaml_file(filename, elements)
+
+
+@cli.command()
+def update_sustainability_elements():
+    """Update mapping/sustainability.yaml"""
+
+    filename = basedir / 'mapping' / 'sustainability.yaml'
+
+    source = csv_reader(
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHlHTshFw7PMbPsNz5ecYZsIy7aEHl0pN4sENGgesTT7kR8eZ0GjJjPVf54iMA6eK3ZpQZ2k5e6rQn/pub?gid=0&single=true&output=csv") # noqa
+    source = {element["id"]: element for element in source}
+
+    # Load sustainability modules mapping
+    with open(filename) as f:
+        mapping = yaml.safe_load(f)
+
+    mapping = {element["id"]: element for element in mapping}
+
+    new_elements = []
+    deleted_elements = []
+
+    # Update common elements
+    for identifier, properties in source.items():
+        element = mapping.get(identifier)
+
+        if element:
+            for prop in ['title', 'module', 'indicator', 'disclosure format']:
+                element[prop] = properties[prop]
+        else:
+            new_elements.append(identifier)
+
+    # Add new elements
+    for identifier in new_elements:
+        properties = source[identifier]
+
+        for prop in ['mapping', 'example']:
+            properties[prop] = ''
+
+        mapping[identifier] = properties
+
+    # Remove deleted elements
+    for identifier in mapping:
+        if identifier not in source:
+            deleted_elements.append(identifier)
+
+    for identifier in deleted_elements:
+        mapping.pop(identifier)
+
+    write_yaml_file(filename, list(mapping.values()))
 
 
 @cli.command()
