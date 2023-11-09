@@ -23,11 +23,11 @@ This page documents a mapping from the elements in the CoST IDS sustainability m
 ## Economic and fiscal
 
 
-(Procurement strategy (Identification))=
+(Economic and fiscal-Procurement strategy)=
 
 `````{grid} 2
 
-````{grid-item-card} Procurement strategy (Identification)
+````{grid-item-card} Procurement strategy
 :columns: 4
 CoST IDS element
 ^^^
@@ -56,7 +56,7 @@ OC4IDS mapping
 `````
 
 
-(Life cycle cost)=
+(Economic and fiscal-Life cycle cost)=
 
 `````{grid} 2
 
@@ -94,7 +94,7 @@ OC4IDS mapping
 `````
 
 
-(Life cycle cost calculation methodology)=
+(Economic and fiscal-Life cycle cost calculation methodology)=
 
 `````{grid} 2
 
@@ -126,7 +126,7 @@ OC4IDS mapping
 `````
 
 
-(Funding source for preparation, implementation and operation)=
+(Economic and fiscal-Funding source for preparation, implementation and operation)=
 
 `````{grid} 2
 
@@ -150,7 +150,7 @@ OC4IDS mapping
 `````
 
 
-(Budget for preparation, implementation and operation)=
+(Economic and fiscal-Budget for preparation, implementation and operation)=
 
 `````{grid} 2
 
@@ -174,7 +174,7 @@ OC4IDS mapping
 `````
 
 
-(Cost benefit analysis)=
+(Economic and fiscal-Cost benefit analysis)=
 
 `````{grid} 2
 
@@ -206,7 +206,7 @@ OC4IDS mapping
 `````
 
 
-(Value for money)=
+(Economic and fiscal-Value for money)=
 
 `````{grid} 2
 
@@ -238,7 +238,7 @@ Project Level: Publish in `documents`, with `.documentType` set to 'valueForMone
 `````
 
 
-(Budget projections)=
+(Economic and fiscal-Budget projections)=
 
 `````{grid} 2
 
@@ -262,7 +262,7 @@ OC4IDS mapping
 `````
 
 
-(Budget shortfall)=
+(Economic and fiscal-Budget shortfall)=
 
 `````{grid} 2
 
@@ -314,7 +314,7 @@ Add a `Metric` object to the `.metrics` array, set its `.id` incrementally and s
 ## Environment and climate
 
 
-(Environmental impact category)=
+(Environment and climate-Environmental impact category)=
 
 `````{grid} 2
 
@@ -360,7 +360,7 @@ Project level:
 `````
 
 
-(Environmental measures)=
+(Environment and climate-Environmental measures)=
 
 `````{grid} 2
 
@@ -393,7 +393,7 @@ Project level: Add a document, set its `.documentType` to 'environmentalMeasures
 `````
 
 
-(Environmental exceptions)=
+(Environment and climate-Environmental exceptions)=
 
 `````{grid} 2
 
@@ -425,7 +425,7 @@ Project Level: Publish in `documents`, with `.documentType` set to 'environmenta
 `````
 
 
-(Protected area)=
+(Environment and climate-Protected area)=
 
 `````{grid} 2
 
@@ -472,7 +472,7 @@ If the project is not located in a protected area, set `.environment.protectedAr
 `````
 
 
-(Conservation measures)=
+(Environment and climate-Conservation measures)=
 
 `````{grid} 2
 
@@ -529,7 +529,7 @@ If there is an accompanying document publish in `documents`, with `.documentType
 `````
 
 
-(Climate and disaster risk assessment)=
+(Environment and climate-Climate and disaster risk assessment)=
 
 `````{grid} 2
 
@@ -562,7 +562,7 @@ Project level: Add a document, set its `.documentType` to 'climateAndDisasterRis
 `````
 
 
-(Climate measures)=
+(Environment and climate-Climate measures)=
 
 `````{grid} 2
 
@@ -620,7 +620,7 @@ If there is an accompanying document publish in `documents`, with `.documentType
 `````
 
 
-(Forecast of greenhouse gas emissions)=
+(Environment and climate-Forecast of greenhouse gas emissions)=
 
 `````{grid} 2
 
@@ -686,7 +686,7 @@ Project-level:
 `````
 
 
-(Environmental certifications)=
+(Environment and climate-Environmental certifications)=
 
 `````{grid} 2
 
@@ -725,7 +725,7 @@ Contracting process level: Publish in `documents`, with `.documentType` set to '
 `````
 
 
-(Decommissioning plans)=
+(Environment and climate-Decommissioning plans)=
 
 `````{grid} 2
 
@@ -757,7 +757,7 @@ Project level: Publish in `documents`, with `.documentType` set to 'decommission
 `````
 
 
-(Decommissioning cost forecast)=
+(Environment and climate-Decommissioning cost forecast)=
 
 `````{grid} 2
 
@@ -815,11 +815,11 @@ Project level:
 ## Climate finance
 
 
-(Climate objective (Identification))=
+(Climate finance-Climate objective)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate objective (Identification)
+````{grid-item-card} Climate objective
 :columns: 4
 CoST IDS element
 ^^^
@@ -852,11 +852,11 @@ Project level: Add the relevant code from the climateChangeGoal codelist to the 
 `````
 
 
-(Financial instrument (preparation))=
+(Climate finance-Financial instrument)=
 
 `````{grid} 2
 
-````{grid-item-card} Financial instrument (preparation)
+````{grid-item-card} Financial instrument
 :columns: 4
 CoST IDS element
 ^^^
@@ -892,11 +892,11 @@ Project level: For each instrument, add a `finance` object to the `budget.financ
 `````
 
 
-(Climate transformation (identification))=
+(Climate finance-Climate transformation)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate transformation (identification)
+````{grid-item-card} Climate transformation
 :columns: 4
 CoST IDS element
 ^^^
@@ -926,11 +926,11 @@ Project level: Publish in documents, with `.documentType` set to 'climateTransfo
 `````
 
 
-(Climate finance decision-maker (Identification))=
+(Climate finance-Climate finance decision-maker)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate finance decision-maker (Identification)
+````{grid-item-card} Climate finance decision-maker
 :columns: 4
 CoST IDS element
 ^^^
@@ -950,11 +950,11 @@ OC4IDS mapping
 `````
 
 
-(Nationally Determined Contributions (NDC) (Identification))=
+(Climate finance-Nationally Determined Contributions (NDC))=
 
 `````{grid} 2
 
-````{grid-item-card} Nationally Determined Contributions (NDC) (Identification)
+````{grid-item-card} Nationally Determined Contributions (NDC)
 :columns: 4
 CoST IDS element
 ^^^
@@ -990,11 +990,11 @@ See mapping for data point "Policy coherence" in Institutional extension adding 
 `````
 
 
-(Paris Agreement (Identification))=
+(Climate finance-Paris Agreement)=
 
 `````{grid} 2
 
-````{grid-item-card} Paris Agreement (Identification)
+````{grid-item-card} Paris Agreement
 :columns: 4
 CoST IDS element
 ^^^
@@ -1014,11 +1014,11 @@ See mapping for data point "Policy coherence" in Institutional extension adding 
 `````
 
 
-(Beneficiaries (Preparation))=
+(Climate finance-Beneficiaries)=
 
 `````{grid} 2
 
-````{grid-item-card} Beneficiaries (Preparation)
+````{grid-item-card} Beneficiaries
 :columns: 4
 CoST IDS element
 ^^^
@@ -1040,11 +1040,11 @@ OC4IDS mapping
 `````
 
 
-(Amount of investment (Preparation))=
+(Climate finance-Amount of investment)=
 
 `````{grid} 2
 
-````{grid-item-card} Amount of investment (Preparation)
+````{grid-item-card} Amount of investment
 :columns: 4
 CoST IDS element
 ^^^
@@ -1076,11 +1076,11 @@ Project level: For each financing instrument, add the value and currency to the`
 `````
 
 
-(Funding source (Preparation))=
+(Climate finance-Funding source)=
 
 `````{grid} 2
 
-````{grid-item-card} Funding source (Preparation)
+````{grid-item-card} Funding source
 :columns: 4
 CoST IDS element
 ^^^
@@ -1122,11 +1122,11 @@ Map the organization's `.id` from the party array to `financingParty.id` in the 
 `````
 
 
-(Green Climate Fund Accredited Entity (Preparation))=
+(Climate finance-Green Climate Fund Accredited Entity)=
 
 `````{grid} 2
 
-````{grid-item-card} Green Climate Fund Accredited Entity (Preparation)
+````{grid-item-card} Green Climate Fund Accredited Entity
 :columns: 4
 CoST IDS element
 ^^^
@@ -1158,11 +1158,11 @@ Add each accredited entity organization to the `parties` array and add 'gcfAccre
 `````
 
 
-(Accredited Entity Type (preparation))=
+(Climate finance-Accredited Entity Type)=
 
 `````{grid} 2
 
-````{grid-item-card} Accredited Entity Type (preparation)
+````{grid-item-card} Accredited Entity Type
 :columns: 4
 CoST IDS element
 ^^^
@@ -1189,11 +1189,11 @@ OC4IDS mapping
 `````
 
 
-(Project preparation costs (preparation))=
+(Climate finance-Project preparation costs)=
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation costs (preparation)
+````{grid-item-card} Project preparation costs
 :columns: 4
 CoST IDS element
 ^^^
@@ -1213,11 +1213,11 @@ OC4IDS mapping
 `````
 
 
-(Project preparation period (preparation))=
+(Climate finance-Project preparation period)=
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation period (preparation)
+````{grid-item-card} Project preparation period
 :columns: 4
 CoST IDS element
 ^^^
@@ -1237,11 +1237,11 @@ OC4IDS mapping
 `````
 
 
-(Project approval period (preparation))=
+(Climate finance-Project approval period)=
 
 `````{grid} 2
 
-````{grid-item-card} Project approval period (preparation)
+````{grid-item-card} Project approval period
 :columns: 4
 CoST IDS element
 ^^^
@@ -1261,11 +1261,11 @@ OC4IDS mapping
 `````
 
 
-(Ratio of co-finance (Preparation))=
+(Climate finance-Ratio of co-finance)=
 
 `````{grid} 2
 
-````{grid-item-card} Ratio of co-finance (Preparation)
+````{grid-item-card} Ratio of co-finance
 :columns: 4
 CoST IDS element
 ^^^
@@ -1334,11 +1334,11 @@ For each co-financing arrangement add a new `finance` object to the `budget.fina
 `````
 
 
-(Terms of climate finance (Preparation))=
+(Climate finance-Terms of climate finance)=
 
 `````{grid} 2
 
-````{grid-item-card} Terms of climate finance (Preparation)
+````{grid-item-card} Terms of climate finance
 :columns: 4
 CoST IDS element
 ^^^
@@ -1364,11 +1364,11 @@ OC4IDS mapping
 `````
 
 
-(Carbon efficiency (Preparation))=
+(Climate finance-Carbon efficiency)=
 
 `````{grid} 2
 
-````{grid-item-card} Carbon efficiency (Preparation)
+````{grid-item-card} Carbon efficiency
 :columns: 4
 CoST IDS element
 ^^^
@@ -1388,11 +1388,11 @@ Publish the cost in `environment.abatementCost`. If supporting documentation is 
 `````
 
 
-(Non-climate co-benefits (Preparation))=
+(Climate finance-Non-climate co-benefits)=
 
 `````{grid} 2
 
-````{grid-item-card} Non-climate co-benefits (Preparation)
+````{grid-item-card} Non-climate co-benefits
 :columns: 4
 CoST IDS element
 ^^^
@@ -1425,11 +1425,11 @@ Project level: For each impact identified add a `benefit` object to the `benefit
 `````
 
 
-(Public consultation meetings (Preparation))=
+(Climate finance-Public consultation meetings)=
 
 `````{grid} 2
 
-````{grid-item-card} Public consultation meetings (Preparation)
+````{grid-item-card} Public consultation meetings
 :columns: 4
 CoST IDS element
 ^^^
@@ -1449,7 +1449,7 @@ See mapping for data point "Public consultation meetings" in the Social extensio
 `````
 
 
-(Disbursement records)=
+(Climate finance-Disbursement records)=
 
 `````{grid} 2
 
@@ -1473,7 +1473,7 @@ OC4IDS mapping
 `````
 
 
-(Type of project monitoring)=
+(Climate finance-Type of project monitoring)=
 
 `````{grid} 2
 
@@ -1500,11 +1500,11 @@ OC4IDS mapping
 `````
 
 
-(Performance monitoring (Implementation))=
+(Climate finance-Performance monitoring)=
 
 `````{grid} 2
 
-````{grid-item-card} Performance monitoring (Implementation)
+````{grid-item-card} Performance monitoring
 :columns: 4
 CoST IDS element
 ^^^
@@ -1533,7 +1533,7 @@ For each KPI add a `Metric` object to the `metrics` array and set the object's f
 `````
 
 
-(Reporting period)=
+(Climate finance-Reporting period)=
 
 `````{grid} 2
 
@@ -1567,11 +1567,11 @@ For each KPI metric add the sentence "To be reported XXX" where XXX is the repor
 `````
 
 
-(Oversight reports (implementation))=
+(Climate finance-Oversight reports)=
 
 `````{grid} 2
 
-````{grid-item-card} Oversight reports (implementation)
+````{grid-item-card} Oversight reports
 :columns: 4
 CoST IDS element
 ^^^
@@ -1591,11 +1591,11 @@ OC4IDS mapping
 `````
 
 
-(Independent monitoring (Implementation))=
+(Climate finance-Independent monitoring)=
 
 `````{grid} 2
 
-````{grid-item-card} Independent monitoring (Implementation)
+````{grid-item-card} Independent monitoring
 :columns: 4
 CoST IDS element
 ^^^
@@ -1625,11 +1625,11 @@ Project level: Add an entry to `parties` with 'independentMonitor' included in i
 `````
 
 
-(Independent evaluation (Implementation))=
+(Climate finance-Independent evaluation)=
 
 `````{grid} 2
 
-````{grid-item-card} Independent evaluation (Implementation)
+````{grid-item-card} Independent evaluation
 :columns: 4
 CoST IDS element
 ^^^
@@ -1660,11 +1660,11 @@ Project level: Add a document, set its `.documentType` to 'technicalAuditReport'
 `````
 
 
-(Impact measurement (Operation))=
+(Climate finance-Impact measurement)=
 
 `````{grid} 2
 
-````{grid-item-card} Impact measurement (Operation)
+````{grid-item-card} Impact measurement
 :columns: 4
 CoST IDS element
 ^^^
@@ -1693,11 +1693,11 @@ Project level: Publish in documents, with `.documentType` set to 'impactMethodol
 `````
 
 
-(Carbon footprint (Operation))=
+(Climate finance-Carbon footprint)=
 
 `````{grid} 2
 
-````{grid-item-card} Carbon footprint (Operation)
+````{grid-item-card} Carbon footprint
 :columns: 4
 CoST IDS element
 ^^^
@@ -1759,7 +1759,7 @@ Project-level:
 `````
 
 
-(Infrastructure assets to be decommissioned)=
+(Climate finance-Infrastructure assets to be decommissioned)=
 
 `````{grid} 2
 
@@ -1783,7 +1783,7 @@ OC4IDS mapping
 `````
 
 
-(Decommission period)=
+(Climate finance-Decommission period)=
 
 `````{grid} 2
 
@@ -1807,11 +1807,11 @@ OC4IDS mapping
 `````
 
 
-(Decommission plan (Decommission))=
+(Climate finance-Decommission plan)=
 
 `````{grid} 2
 
-````{grid-item-card} Decommission plan (Decommission)
+````{grid-item-card} Decommission plan
 :columns: 4
 CoST IDS element
 ^^^
@@ -1831,35 +1831,11 @@ See decommissioning plan data point in environment extension
 `````
 
 
-(Decommission costs (Decommission))=
+(Climate finance-Carbon decommission savings)=
 
 `````{grid} 2
 
-````{grid-item-card} Decommission costs (Decommission)
-:columns: 4
-CoST IDS element
-^^^
-Disclose socio-economic assessments on transition and decommissioning costs (E.g.: \[Doc\]).
-````
-
-````{grid-item-card}
-:columns: 8
-OC4IDS mapping
-^^^
-
-```json
-
-```
-````
-
-`````
-
-
-(Carbon decommission savings (Decommission))=
-
-`````{grid} 2
-
-````{grid-item-card} Carbon decommission savings (Decommission)
+````{grid-item-card} Carbon decommission savings
 :columns: 4
 CoST IDS element
 ^^^
@@ -1922,11 +1898,11 @@ Project-level:
 `````
 
 
-(Decommission mitigation plan (Decommission))=
+(Climate finance-Decommission mitigation plan)=
 
 `````{grid} 2
 
-````{grid-item-card} Decommission mitigation plan (Decommission)
+````{grid-item-card} Decommission mitigation plan
 :columns: 4
 CoST IDS element
 ^^^
@@ -1961,11 +1937,11 @@ Publish in documents, with `.documentType` set to 'socialImpact' and include a s
 ## Social
 
 
-(Number of beneficiaries (Preparation))=
+(Social-Number of beneficiaries)=
 
 `````{grid} 2
 
-````{grid-item-card} Number of beneficiaries (Preparation)
+````{grid-item-card} Number of beneficiaries
 :columns: 4
 CoST IDS element
 ^^^
@@ -1985,7 +1961,7 @@ OC4IDS mapping
 `````
 
 
-(Inclusive design and implementation)=
+(Social-Inclusive design and implementation)=
 
 `````{grid} 2
 
@@ -2028,11 +2004,11 @@ Project-level:
 `````
 
 
-(Indigenous land (Preparation))=
+(Social-Indigenous land)=
 
 `````{grid} 2
 
-````{grid-item-card} Indigenous land (Preparation)
+````{grid-item-card} Indigenous land
 :columns: 4
 CoST IDS element
 ^^^
@@ -2069,7 +2045,7 @@ If the project is not located or cut through indigenous land, set `.social.indig
 `````
 
 
-(Public consultation meetings)=
+(Social-Public consultation meetings)=
 
 `````{grid} 2
 
@@ -2135,7 +2111,7 @@ For each meeting:
 `````
 
 
-(Land compensation budget)=
+(Social-Land compensation budget)=
 
 `````{grid} 2
 
@@ -2166,7 +2142,7 @@ Project Level: Set `.social.landCompensationBudget` to the amount and currency o
 `````
 
 
-(Labour obligations)=
+(Social-Labour obligations)=
 
 `````{grid} 2
 
@@ -2245,7 +2221,7 @@ Publish the signed contract that includes labor obligations:  Add a document to 
 `````
 
 
-(Labour budget)=
+(Social-Labour budget)=
 
 `````{grid} 2
 
@@ -2283,7 +2259,7 @@ Contract level: Publish the amount and currency of the labor budget in `.summary
 `````
 
 
-(Workers' accidents)=
+(Social-Workers' accidents)=
 
 `````{grid} 2
 
@@ -2349,7 +2325,7 @@ Publish summary statistics on worker fatalities:
 `````
 
 
-(Health and safety certifications)=
+(Social-Health and safety certifications)=
 
 `````{grid} 2
 
@@ -2388,7 +2364,7 @@ Contracting process level: Publish in `.summary.documents`, with `.documentType`
 `````
 
 
-(Construction materials testing)=
+(Social-Construction materials testing)=
 
 `````{grid} 2
 
@@ -2456,7 +2432,7 @@ Publish test results: For each test result, add a document, set `.documentType` 
 `````
 
 
-(Building inspections)=
+(Social-Building inspections)=
 
 `````{grid} 2
 
@@ -2488,7 +2464,7 @@ Project Level: Publish in `documents`, with `.documentType` set to 'buildingInsp
 `````
 
 
-(Jobs generated)=
+(Social-Jobs generated)=
 
 `````{grid} 2
 
@@ -2619,7 +2595,7 @@ Publish actual jobs created:
 ## Institutional
 
 
-(Policy coherence)=
+(Institutional-Policy coherence)=
 
 `````{grid} 2
 
@@ -2627,7 +2603,7 @@ Publish actual jobs created:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment.   Consider alignment with:
+Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment. Consider alignment with:
 
 SDGs
 National plan or strategy
@@ -2689,7 +2665,7 @@ If further documentation of the project's policy alignment is available, add a d
 `````
 
 
-(Freedom of information requests)=
+(Institutional-Freedom of information requests)=
 
 `````{grid} 2
 
@@ -2723,7 +2699,7 @@ For each freedom of information request, add a document, set `.documentType` to 
 `````
 
 
-(Answers to Freedom of information requests)=
+(Institutional-Answers to Freedom of information requests)=
 
 `````{grid} 2
 
@@ -2757,7 +2733,7 @@ For each freedom of information request response, add a document, set `.document
 `````
 
 
-(Lobbying transparency)=
+(Institutional-Lobbying transparency)=
 
 `````{grid} 2
 
@@ -2821,7 +2797,7 @@ For each meeting:
 `````
 
 
-(Beneficial ownership)=
+(Institutional-Beneficial ownership)=
 
 `````{grid} 2
 
@@ -2845,7 +2821,7 @@ Use modelling from OCDS Beneficial Owners extension
 `````
 
 
-(Sustainability criteria)=
+(Institutional-Sustainability criteria)=
 
 `````{grid} 2
 
@@ -2888,7 +2864,7 @@ Add a `Sustainability` object to the `.summary.tender.sustainability` array and 
 `````
 
 
-(Anti-corruption certifications)=
+(Institutional-Anti-corruption certifications)=
 
 `````{grid} 2
 
@@ -2920,7 +2896,7 @@ Project Level: Publish in documents, with .documentType set to 'antiCorruptionCe
 `````
 
 
-(Independent monitoring)=
+(Institutional-Independent monitoring)=
 
 `````{grid} 2
 
@@ -2954,7 +2930,7 @@ Project Level: Add an entry to `parties` with 'independentMonitor' included in i
 `````
 
 
-(Performance monitoring)=
+(Institutional-Performance monitoring)=
 
 `````{grid} 2
 
@@ -2985,7 +2961,7 @@ Project level: Publish in `metrics`. For each KPI add a Metric object to the met
 `````
 
 
-(Risk management plans)=
+(Institutional-Risk management plans)=
 
 `````{grid} 2
 
@@ -3017,7 +2993,7 @@ Project Level: Publish in documents, with .documentType set to 'riskProvisions' 
 `````
 
 
-(Sustainable sub-sectors)=
+(Institutional-Sustainable sub-sectors)=
 
 `````{grid} 2
 

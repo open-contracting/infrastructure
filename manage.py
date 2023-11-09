@@ -882,7 +882,7 @@ def update_sustainability_docs():
         title = element.get("title", "")
         modules[module].extend(
             [
-              f"\n({title})=",
+              f"\n({module}-{title})=",
               "\n\n`````{grid} 2",
               f"\n\n````{{grid-item-card}} {title}",
               "\n:columns: 4",
