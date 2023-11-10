@@ -4,7 +4,7 @@ import json
 import re
 import sys
 import warnings
-from collections import defaultdict, OrderedDict
+from collections import OrderedDict, defaultdict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
