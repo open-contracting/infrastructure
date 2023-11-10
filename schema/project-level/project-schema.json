@@ -225,6 +225,26 @@
       "uniqueItems": true,
       "minItems": 1
     },
+    "transactions": {
+      "title": "Transactions",
+      "description": "Financial transactions related to this project. For example, a disbursement from a funder to the project company. Transactions related to a contracting process, like a disbursement from a funder to a supplier, should be recorded in the contracting process summary's `.transactions.`",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Transaction"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "milestones": {
+      "title": "Milestones",
+      "description": "Milestones associated with this project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Milestone"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "completion": {
       "title": "Completion",
       "description": "This information is provided at project completion, and reflects the final timing and values relating to the project. The reason for any variation (not already explained) between the anticipated project scope, period and value should be detailed.",
@@ -270,7 +290,7 @@
     },
     "language": {
       "title": "Language",
-      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
+      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
       "type": [
         "string"
       ],
@@ -490,6 +510,16 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "milestones": {
+          "title": "Milestones",
+          "description": "Milestones associated with this contracting process.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Milestone"
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
@@ -682,7 +712,9 @@
         "scheme": {
           "title": "Scheme",
           "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.",
-          "type": "string",
+          "type": [
+            "string"
+          ],
           "codelist": "classificationScheme.csv",
           "openCodelist": true,
           "minLength": 1
@@ -735,11 +767,11 @@
         "geometry": {
           "type": "object",
           "title": "Geometry",
-          "description": "We follow the [GeoJSON standard](https://geojson.org/) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
+          "description": "We follow the [GeoJSON standard](http://geojson.org/) to express basic location information, using longitude, latitude, and optional elevation values in the [WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG:4326) projection. A point location can be identified by geocoding a delivery address. For concession licenses, or other contracts covering a polygon location which is not contained in a known gazetteer, polygon and multi-polygon can be used.",
           "properties": {
             "type": {
               "title": "Type",
-              "description": "The type of [GeoJSON Geometry Objects](https://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
+              "description": "The type of [GeoJSON Geometry Objects](http://geojson.org/geojson-spec.html#geometry-objects) being provided. To provide longitude, latitude, and optional elevation, use 'Point', and enter an array of [longitude, latitude] or [longitude, latitude, elevation] as the value of the coordinates field: e.g. [-122.085, 37.42].",
               "type": [
                 "string"
               ],
@@ -1344,9 +1376,9 @@
       "minProperties": 1
     },
     "BudgetBreakdown": {
-      "type": "object",
       "title": "Detailed budget breakdown",
       "description": "This section allows a detailed budget breakdown to be expressed, covering multiple budget sources and multiple periods",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1367,14 +1399,8 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value of the budget line item.",
+          "description": "The value of the budget line item. A positive amount means the source organization funds the project. A negative amount means the project pays the source organization.",
           "$ref": "#/definitions/Value"
-        },
-        "approvalDate": {
-          "title": "Approval date",
-          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
-          "type": "string",
-          "format": "date-time"
         },
         "uri": {
           "title": "Linked budget information",
@@ -1385,14 +1411,20 @@
           "format": "uri"
         },
         "period": {
-          "$ref": "#/definitions/Period",
           "title": "Budget period",
-          "description": "The period covered by this budget entry."
+          "description": "The period covered by this budget entry.",
+          "$ref": "#/definitions/Period"
         },
         "sourceParty": {
-          "$ref": "#/definitions/OrganizationReference",
-          "title": "Source party",
-          "description": "An organization reference, linking to the entry in the `parties` section describing the organization providing the funds for this part of the budget. The party must have the 'funder' role. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party."
+          "title": "Source organization",
+          "description": "The organization providing the funds for this budget entry. The corresponding entry in the `parties` array must have 'sourceParty' in its `roles` array.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
         }
       },
       "minProperties": 1
@@ -1463,7 +1495,7 @@
         },
         "format": {
           "title": "Format",
-          "description": "The format of the document, using the open [IANA Media Types](https://www.iana.org/assignments/media-types/) codelist (see the values in the 'Template' column), or using the 'offline/print' code if the described document is published offline. For example, web pages have a format of 'text/html'.",
+          "description": "The format of the document, using the open [IANA Media Types](http://www.iana.org/assignments/media-types/) codelist (see the values in the 'Template' column), or using the 'offline/print' code if the described document is published offline. For example, web pages have a format of 'text/html'.",
           "type": [
             "string"
           ],
@@ -1471,7 +1503,7 @@
         },
         "language": {
           "title": "Language",
-          "description": "The language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](https://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended unless there is a clear user need for distinguishing the language subtype.",
+          "description": "The language of the linked document using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended unless there is a clear user need for distinguishing the language subtype.",
           "type": [
             "string"
           ],
@@ -1542,7 +1574,7 @@
         },
         "uri": {
           "title": "URI",
-          "description": "A URI to identify the organization, such as those provided by [Open Corporates](https://opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
+          "description": "A URI to identify the organization, such as those provided by [Open Corporates](http://www.opencorporates.com) or some other relevant URI provider. This is not for listing the website of the organization: that can be done through the URL field of the Organization contact point.",
           "type": [
             "string"
           ],
@@ -1769,7 +1801,7 @@
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](https://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A financial transaction related to a project or contracting process. Draws upon the data models of the Fiscal Data Package and the International Aid Transparency Initiative and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional data.",
       "required": [
         "id"
       ],
@@ -1843,6 +1875,108 @@
       "required": [
         "id"
       ],
+      "minProperties": 1
+    },
+    "Milestone": {
+      "title": "Milestone",
+      "description": "An event in the lifetime of a project or contracting process.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "A local identifier for this milestone, unique within this block.",
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "title": "Title",
+          "description": "Milestone title",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "type": {
+          "title": "Milestone type",
+          "description": "The nature of the milestone, using the open [milestoneType](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonetype) codelist.",
+          "type": [
+            "string"
+          ],
+          "codelist": "milestoneType.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A description of the milestone.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "code": {
+          "title": "Milestone code",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+          "type": [
+            "string"
+          ],
+          "codelist": "milestoneCode.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "dueDate": {
+          "title": "Due date",
+          "description": "The date the milestone is due.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "dateMet": {
+          "format": "date-time",
+          "title": "Date met",
+          "description": "The date on which the milestone was met.",
+          "type": [
+            "string"
+          ]
+        },
+        "dateModified": {
+          "title": "Date modified",
+          "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "status": {
+          "title": "Status",
+          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status) codelist.",
+          "type": [
+            "string"
+          ],
+          "enum": [
+            "scheduled",
+            "met",
+            "notMet",
+            "partiallyMet"
+          ],
+          "codelist": "milestoneStatus.csv",
+          "openCodelist": false
+        },
+        "documents": {
+          "title": "Documents",
+          "description": "List of documents associated with this milestone (Deprecated in 1.1).",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Document"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
       "minProperties": 1
     }
   },
