@@ -453,7 +453,7 @@ def update(ppp_base_url):
 
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
-    builder = ProfileBuilder('1__1__5', {'budget': 'master'})
+    builder = ProfileBuilder('1__1__5', {'budget': 'master', 'transaction_milestones': 'master'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -516,7 +516,8 @@ def update(ppp_base_url):
         'Metric',
         'Observation',
         'Transaction',
-        'Milestone'
+        'Milestone',
+        'MilestoneReference'
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -738,6 +739,13 @@ def update(ppp_base_url):
     schema['definitions']['Milestone']['properties']['id']['description'] = "A local identifier for this milestone, unique within this block."  # noqa: E501
     # Original from standard: "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed." # noqa: E501
     schema['definitions']['Milestone']['properties']['code']['description'] = "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed."  # noqa: E501
+
+    copy_element('MilestoneReference', {
+        # Remove reference to release, add reference to project.
+        ('properties', 'id', 'description'): lambda s: s.replace(' described elsewhere in a release about this contracting process.', " in this project or contracting process's `.milestones`."),
+    })
+    # Original from standard: "The title of the milestone being referenced, this must match the title of a milestone described elsewhere in a release about this contracting process." # noqa: E501
+    schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`." # noqa: E501
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)
