@@ -17,3 +17,8 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 * Set its `.id` incrementally
 * Set its `.url` to a direct link to the document
 * Set its `.title` to the title of the document
+
+## Add an organization
+
+* Add an `Organization` object to the `.parties` array and set its `.name` to the name of the organization.
+* If you collect organization identifiers, set `.identifier` according to the [identifier reference](../reference/schema.md#identifier) and set `.id` to {identifier.scheme}-{identifier.id}(-{department-identifier}). Otherwise, set `.id` incrementally.
