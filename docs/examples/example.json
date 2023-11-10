@@ -555,6 +555,20 @@
               "amount": 35250000,
               "currency": "GBP"
             },
+            "milestones": [
+              {
+                "id": "1",
+                "title": "Construction payment",
+                "status": "met",
+                "dueDate": "2017-08-07T00:00:00Z",
+                "dateMet": "2017-08-07T00:00:00Z",
+                "type": "payment",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                }
+              }
+            ],
             "transactions": [
               {
                 "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-00001-1",
@@ -572,7 +586,11 @@
                   "name": "Concrete Motorways Construction",
                   "id": "GB-COH-33333333"
                 },
-                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123",
+                "relatedImplementationMilestone": {
+                  "id": "1",
+                  "title": "Construction payment"
+                }
               }
             ],
             "documents": [
