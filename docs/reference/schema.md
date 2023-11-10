@@ -687,7 +687,6 @@ Each `BudgetBreakdown` has the following fields:
 This sub-schema is referenced by the following properties:
 * [`documents`](project-schema.json,,documents)
 * [`ContractingProcessSummary/documents`](project-schema.json,/definitions/ContractingProcessSummary,documents)
-* [`Milestone/documents`](project-schema.json,/definitions/Milestone,documents)
 
 Each `Document` has the following fields:
 
@@ -713,16 +712,6 @@ Each `Document` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/documents
 :title: contractingProcesses/0/summary/documents
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/milestones/0/documents
-:title: contractingProcesses/0/summary/milestones/0/documents
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/milestones/0/documents
-:title: milestones/0/documents
 ```
 
 ````
@@ -1026,7 +1015,7 @@ Each `Milestone` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Milestone
-:collapse: id,title,type,description,code,dueDate,dateMet,dateModified,status,documents
+:collapse: id,title,type,description,code,dueDate,dateMet,dateModified,status
 :addtargets:
 ```
 
