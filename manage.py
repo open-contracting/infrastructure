@@ -488,6 +488,7 @@ def update(ppp_base_url):
         'unitClassificationScheme.csv',
         'milestoneType.csv',
         'milestoneStatus.csv',
+        'milestoneCode.csv'
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -742,10 +743,10 @@ def update(ppp_base_url):
 
     copy_element('MilestoneReference', {
         # Remove reference to release, add reference to project.
-        ('properties', 'id', 'description'): lambda s: s.replace(' described elsewhere in a release about this contracting process.', " in this project or contracting process's `.milestones`."),
+        ('properties', 'id', 'description'): lambda s: s.replace(' described elsewhere in a release about this contracting process.', " in this project or contracting process's `.milestones`."),  # noqa: E501
     })
     # Original from standard: "The title of the milestone being referenced, this must match the title of a milestone described elsewhere in a release about this contracting process." # noqa: E501
-    schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`." # noqa: E501
+    schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`."  # noqa: E501
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)
