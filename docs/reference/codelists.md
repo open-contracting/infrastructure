@@ -25,6 +25,8 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 * [Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)
+* [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
+* [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
 
 ## Closed codelists
 
@@ -56,6 +58,13 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/projectType.csv
+```
+
+### MilestoneType
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/milestoneType.csv
 ```
 
 ## Open codelists

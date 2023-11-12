@@ -110,7 +110,7 @@ Each `ContractingProcessSummary` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
-:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions
+:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions,milestones
 :addtargets:
 ```
 
@@ -425,6 +425,11 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions/0/value
+:title: transactions/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/completion/finalValue
 :title: completion/finalValue
 ```
@@ -541,6 +546,16 @@ Each `OrganizationReference` has the following fields:
 :title: contractingProcesses/0/summary/transactions/0/payee
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions/0/payer
+:title: transactions/0/payer
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions/0/payee
+:title: transactions/0/payee
+```
+
 ````
 
 `````
@@ -645,7 +660,7 @@ Each `BudgetBreakdown` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/BudgetBreakdown
-:collapse: id,description,amount,approvalDate,uri,period,sourceParty
+:collapse: id,description,amount,uri,period,sourceParty,approvalDate
 :addtargets:
 ```
 
@@ -913,6 +928,7 @@ A spending transaction related to a contracting process.
 ```
 
 This sub-schema is referenced by the following properties:
+* [`transactions`](project-schema.json,,transactions)
 * [`ContractingProcessSummary/transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions)
 
 Each `Transaction` has the following fields:
@@ -923,7 +939,7 @@ Each `Transaction` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Transaction
-:collapse: id,source,date,value,payer,payee,uri
+:collapse: id,source,date,value,payer,payee,uri,relatedImplementationMilestone
 :addtargets:
 ```
 
@@ -934,6 +950,11 @@ Each `Transaction` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
 :title: contractingProcesses/0/summary/transactions
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions
+:title: transactions
 ```
 
 ````
@@ -969,6 +990,87 @@ Each `SimpleIdentifier` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/identifiers
 :title: identifiers
+```
+
+````
+
+`````
+
+### Milestone
+
+`Milestone` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Milestone
+```
+
+This sub-schema is referenced by the following properties:
+* [`milestones`](project-schema.json,,milestones)
+* [`ContractingProcessSummary/milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones)
+
+Each `Milestone` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Milestone
+:collapse: id,title,type,description,code,dueDate,dateMet,dateModified,status
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/milestones
+:title: contractingProcesses/0/summary/milestones
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/milestones
+:title: milestones
+```
+
+````
+
+`````
+
+### MilestoneReference
+
+`MilestoneReference` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/MilestoneReference
+```
+
+This sub-schema is referenced by the following properties:
+* [`Transaction/relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone)
+
+Each `MilestoneReference` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/MilestoneReference
+:collapse: id,title
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
+:title: contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
+:title: transactions/0/relatedImplementationMilestone
 ```
 
 ````

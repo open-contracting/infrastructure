@@ -309,6 +309,23 @@
             },
             "uri": "string"
           }
+        ],
+        "milestones": [
+          {
+            "id": "string",
+            "title": "string",
+            "type": "string from milestoneType codelist",
+            "description": "string",
+            "code": "string from milestoneCode codelist",
+            "dueDate": "string",
+            "dateMet": "string",
+            "dateModified": "string",
+            "status": "string from milestoneStatus codelist",
+            "relatedImplementationMilestone": {
+              "id": "string",
+              "title": "title"
+            }
+          }
         ]
       },
       "releases": [
@@ -350,6 +367,43 @@
           "notes": "string"
         }
       ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "",
+      "source": "string",
+      "date": "string",
+      "value": {
+        "amount": "number",
+        "currency": "string from currency codelist"
+      },
+      "payer": {
+        "name": "string",
+        "id": ""
+      },
+      "payee": {
+        "name": "string",
+        "id": ""
+      },
+      "uri": "string"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "string",
+      "title": "string",
+      "type": "string from milestoneType codelist",
+      "description": "string",
+      "code": "string from milestoneCode codelist",
+      "dueDate": "string",
+      "dateMet": "string",
+      "dateModified": "string",
+      "status": "string from milestoneStatus codelist",
+      "relatedImplementationMilestone": {
+        "id": "string",
+        "title": "title"
+      }
     }
   ],
   "completion": {

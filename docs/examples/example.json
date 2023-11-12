@@ -200,7 +200,8 @@
             "procuringEntity",
             "buyer",
             "publicAuthority",
-            "funder"
+            "funder",
+            "payee"
           ],
           "people": [
             {
@@ -344,6 +345,11 @@
               "jobTitle": "Commercial Contract Officer"
             }
           ]
+        },
+        {
+          "id": "1",
+          "name": "United Nations Development Programme",
+          "roles": "payer"
         }
       ],
       "publicAuthority": {
@@ -549,6 +555,20 @@
               "amount": 35250000,
               "currency": "GBP"
             },
+            "milestones": [
+              {
+                "id": "1",
+                "title": "Construction payment",
+                "status": "met",
+                "dueDate": "2017-08-07T00:00:00Z",
+                "dateMet": "2017-08-07T00:00:00Z",
+                "type": "payment",
+                "value": {
+                  "amount": 1950000,
+                  "currency": "GBP"
+                }
+              }
+            ],
             "transactions": [
               {
                 "id": "ocds-a1b1c1-c9b14c18-adc8-11e6-9901-0019b9f3037b-00001-1",
@@ -566,7 +586,11 @@
                   "name": "Concrete Motorways Construction",
                   "id": "GB-COH-33333333"
                 },
-                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123"
+                "uri": "https://openspending.org/motorways-uk-spending/transaction/xyz123",
+                "relatedImplementationMilestone": {
+                  "id": "1",
+                  "title": "Construction payment"
+                }
               }
             ],
             "documents": [
@@ -887,6 +911,42 @@
               "url": "https://example.com/releases/ex-a1b1c1--033h.json"
             }
           ]
+        }
+      ],
+      "milestones": [
+        {
+          "id": "1",
+          "title": "Grant disbursement",
+          "status": "met",
+          "dueDate": "2016-01-01T00:00:00Z",
+          "dateMet": "2016-01-01T00:00:00Z",
+          "type": "payment",
+          "value": {
+            "amount": 5000000,
+            "currency": "GBP"
+          }
+        }
+      ],
+      "transactions": [
+        {
+          "id": "1",
+          "date": "2016-01-01T00:00:00Z",
+          "value": {
+            "amount": 5000000,
+            "currency": "GBP"
+          },
+          "payer": {
+            "id": "1",
+            "name": "United Nations Development Programme"
+          },
+          "payee": {
+            "id": "GB-GOR-XX1234",
+            "name": "Motorways UK"
+          },
+          "relatedImplementationMilestone": {
+            "id": "1",
+            "title": "Grant disbursement"
+          }
         }
       ],
       "completion": {

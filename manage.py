@@ -4,7 +4,7 @@ import json
 import re
 import sys
 import warnings
-from collections import defaultdict
+from collections import OrderedDict, defaultdict
 from copy import deepcopy
 from io import StringIO
 from pathlib import Path
@@ -453,7 +453,7 @@ def update(ppp_base_url):
 
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
-    builder = ProfileBuilder('1__1__5', {'budget': 'master'})
+    builder = ProfileBuilder('1__1__5', {'budget': 'master', 'transaction_milestones': 'master'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -473,6 +473,7 @@ def update(ppp_base_url):
         'projectType.csv',
         'relatedProjectScheme.csv',
         'relatedProject.csv',
+        'classificationScheme.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -485,6 +486,9 @@ def update(ppp_base_url):
         'partyRole.csv',
         'releaseTag.csv',
         'unitClassificationScheme.csv',
+        'milestoneType.csv',
+        'milestoneStatus.csv',
+        'milestoneCode.csv',
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -496,6 +500,7 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'Person',
+        'SimpleIdentifier',
     }
     ocds_definitions = {
         'Period',
@@ -512,6 +517,8 @@ def update(ppp_base_url):
         'Metric',
         'Observation',
         'Transaction',
+        'Milestone',
+        'MilestoneReference',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -630,12 +637,11 @@ def update(ppp_base_url):
     })
 
     copy_element('Classification', {
-        # Remove line item classifications from the definition.
-        ('properties', 'scheme', 'description'): lambda s: s[:s.index(' For line item classifications,')],
+        # Replace line item classification scheme codelist with classification scheme codelist
+        ('properties', 'scheme', 'description'): lambda s: s.replace('. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme) codelist.', ', using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.'),  # noqa: E501
     })
-    # Remove the `itemClassificationScheme.csv` codelist.
-    del schema['definitions']['Classification']['properties']['scheme']['codelist']
-    del schema['definitions']['Classification']['properties']['scheme']['openCodelist']
+    # Replace line item classification scheme codelist with classification scheme codelist
+    schema['definitions']['Classification']['properties']['scheme']['codelist'] = 'classificationScheme.csv'
 
     copy_element('Location')
     # Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both." # noqa: E501
@@ -653,6 +659,7 @@ def update(ppp_base_url):
         'description': 'A physical address where works will take place.',
         '$ref': '#/definitions/Address',
     }
+    schema['definitions']['Location']['properties'] = OrderedDict(schema['definitions']['Location']['properties'])
     schema['definitions']['Location']['properties'].move_to_end('id', last=False)
     schema['definitions']['Location']['required'] = ['id']
 
@@ -693,7 +700,13 @@ def update(ppp_base_url):
         ('properties', 'name', 'description'): lambda s: s.replace('contracting process', 'project'),
     })
 
-    copy_element('BudgetBreakdown')
+    copy_element('BudgetBreakdown', {
+        # Refer to project instead of contracting process
+        ('properties', 'amount', 'description'): lambda s: s.replace('contracting process', 'project',)
+    })
+    # Add approval date
+    schema['definitions']['BudgetBreakdown']['properties']['approvalDate'] = deepcopy(schema['properties']['budget']['properties']['approvalDate'])  # noqa: E501
+    schema['definitions']['BudgetBreakdown']['properties']['approvalDate']['description'] = "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'."  # noqa: E501
 
     copy_element('Document', {
         # Link to infrastructure codelist instead of PPP codelist
@@ -717,6 +730,25 @@ def update(ppp_base_url):
     del schema['definitions']['Observation']['properties']['relatedImplementationMilestone']
 
     copy_element('Transaction')
+    # Original from standard: "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data." # noqa: E501
+    schema['definitions']['Transaction']['description'] = "A financial transaction related to a project or contracting process. Draws upon the data models of the Fiscal Data Package and the International Aid Transparency Initiative and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional data."  # noqa: E501
+
+    copy_element('Milestone')
+    # Original from standard: "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process." # noqa: E501
+    schema['definitions']['Milestone']['description'] = "An event in the lifetime of a project or contracting process."  # noqa: E501
+    # Original from standard: "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism." # noqa: E501
+    schema['definitions']['Milestone']['properties']['id']['description'] = "A local identifier for this milestone, unique within this block."  # noqa: E501
+    # Original from standard: "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed." # noqa: E501
+    schema['definitions']['Milestone']['properties']['code']['description'] = "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed."  # noqa: E501
+    # Remove deprecated milestone documents field
+    del schema['definitions']['Milestone']['properties']['documents']
+
+    copy_element('MilestoneReference', {
+        # Remove reference to release, add reference to project.
+        ('properties', 'id', 'description'): lambda s: s.replace(' described elsewhere in a release about this contracting process.', " in this project or contracting process's `.milestones`."),  # noqa: E501
+    })
+    # Original from standard: "The title of the milestone being referenced, this must match the title of a milestone described elsewhere in a release about this contracting process." # noqa: E501
+    schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`."  # noqa: E501
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)
