@@ -488,7 +488,7 @@ def update(ppp_base_url):
         'unitClassificationScheme.csv',
         'milestoneType.csv',
         'milestoneStatus.csv',
-        'milestoneCode.csv'
+        'milestoneCode.csv',
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -518,7 +518,7 @@ def update(ppp_base_url):
         'Observation',
         'Transaction',
         'Milestone',
-        'MilestoneReference'
+        'MilestoneReference',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
