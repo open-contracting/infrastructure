@@ -456,7 +456,7 @@ Each `Organization` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Organization
-:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,people
+:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,beneficialOwners,people
 :addtargets:
 ```
 
@@ -574,6 +574,7 @@ When working with data, users ought to be aware that addresses might not always 
 This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
+* [`Person/address`](project-schema.json,/definitions/Person,address)
 
 Each `Address` has the following fields:
 
@@ -734,6 +735,7 @@ For example, if identifying a company in Colombia, look up its identifier in the
 This sub-schema is referenced by the following properties:
 * [`Organization/identifier`](project-schema.json,/definitions/Organization,identifier)
 * [`Organization/additionalIdentifiers`](project-schema.json,/definitions/Organization,additionalIdentifiers)
+* [`Person/identifier`](project-schema.json,/definitions/Person,identifier)
 
 Each `Identifier` has the following fields:
 
@@ -891,6 +893,7 @@ Use this object when you need to disclose the details of people associated with,
 ```
 
 This sub-schema is referenced by the following properties:
+* [`Organization/beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners)
 * [`Organization/people`](project-schema.json,/definitions/Organization,people)
 
 Each `Person` has the following fields:
@@ -901,7 +904,7 @@ Each `Person` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Person
-:collapse: id,name,jobTitle
+:collapse: id,name,identifier,nationalities,address,email,faxNumber,telephone,jobTitle
 :addtargets:
 ```
 
