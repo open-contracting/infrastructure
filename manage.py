@@ -810,10 +810,11 @@ def lint(filename, additional_properties):
 
 @cli.command()
 def update_sustainability_elements():
-    """Update mapping/sustainability.yaml"""
+    """Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet"""
 
     filename = basedir / 'mapping' / 'sustainability.yaml'
 
+    # CoST IDS sustainability elements are maintained in https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o # noqa: E501
     source = csv_reader(
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHlHTshFw7PMbPsNz5ecYZsIy7aEHl0pN4sENGgesTT7kR8eZ0GjJjPVf54iMA6eK3ZpQZ2k5e6rQn/pub?gid=0&single=true&output=csv") # noqa
     source = {element["id"]: element for element in source}
@@ -859,7 +860,7 @@ def update_sustainability_elements():
 
 @cli.command()
 def update_sustainability_docs():
-    """Update docs/cost/ids/sustainability.md"""
+    """Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml"""
 
     # Load sustainability mapping documentation
     with (basedir / 'docs' / 'cost' / 'ids' / 'sustainability.md').open() as f:
