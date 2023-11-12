@@ -1466,38 +1466,45 @@ OC4IDS mapping
 ^^^
 For each planned disbursement:
 
-* If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Milestone` object to its `.summary.milestones` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Milestone` object to the project-level `.milestones` array.
-* Set the milestone's:
-  * `.id` incrementally
-  * `.status` to 'scheduled'
-  * `.dueDate` to the date on which the disbursement is planned to occur
-  * `.type` to 'payment'
-  * `.value` to the amount and currency of the planned disbursement
+- If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Milestone` object to its `.summary.milestones` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Milestone` object to the project-level `.milestones` array.
+- Set the milestone's:
+  - `.id` incrementally
+  - `.status` to 'scheduled'
+  - `.dueDate` to the date on which the disbursement is planned to occur
+  - `.type` to 'payment'
+  - `.value` to the amount and currency of the planned disbursement
 
 For each actual disbursement:
 
-* If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Transaction` object to its `.summary.transactions` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Transaction` object to the project-level `.transactions` array.
-* Set the transaction's:
-  * `.id` incrementally
-  * `.date` to the date of the disbursement
-  * `.value` to the amount and currency of the disbursement
+- If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Transaction` object to its `.summary.transactions` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Transaction` object to the project-level `.transactions` array.
 
-* Get the `Organization` in `.parties` that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
-  * Add 'payer' to the organization's `.roles` array
-  * Set the transaction's `.payer` to the `.id` and `.name` of the organization
-* Get the `Organization` in `.parties` that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
-  * Add 'payee' to the organization's `.roles` array.
-  * Set the transaction's `.payee` to the `.id` and `.name` of the organization
-* Get the `Milestone` in `.milestones` that represents that planned disbursement:
-  * Set its `.status` to 'met'
-  * Set its `.dateMet` to the date of the disbursement
-  * Set the transaction's `.relatedImplementationMilestone` to the `.id` and `.title` of the milestone
+- Set the transaction's:
+
+  - `.id` incrementally
+  - `.date` to the date of the disbursement
+  - `.value` to the amount and currency of the disbursement
+
+- Get the `Organization` in `.parties` that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
+
+  - Add 'payer' to the organization's `.roles` array
+  - Set the transaction's `.payer` to the `.id` and `.name` of the organization
+
+- Get the `Organization` in `.parties` that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
+
+  - Add 'payee' to the organization's `.roles` array.
+  - Set the transaction's `.payee` to the `.id` and `.name` of the organization
+
+- Get the `Milestone` in `.milestones` that represents that planned disbursement:
+
+  - Set its `.status` to 'met'
+  - Set its `.dateMet` to the date of the disbursement
+  - Set the transaction's `.relatedImplementationMilestone` to the `.id` and `.title` of the milestone
 ```json
 {
   "milestones": [
     {
       "id": "1",
-      "title": "Grant disbursement"
+      "title": "Grant disbursement",
       "status": "met",
       "dueDate": "2023-07-01T00:00:00Z",
       "dateMet": "2023-08-01T00:00:00Z",
@@ -2876,9 +2883,32 @@ Disclose the beneficial owners of the contractors and suppliers appointed in the
 :columns: 8
 OC4IDS mapping
 ^^^
-Use modelling from OCDS Beneficial Owners extension
-```json
+For each beneficial owner:
 
+- Get the `Organization` in `.parties` that represents the contractor or supplier.
+- Add a `Person` object to the organization's `.beneficialOwners` array.
+- Set the person's:
+  - `.id` incrementally
+  - `.name` to the beneficial owner's name
+  - `.identifier` to the beneficial owner's identifier
+```json
+{
+  "parties": [
+    {
+      "id": "1",
+      "beneficialOwners": [
+        {
+          "id": "1",
+          "name": "Juan Perez",
+          "identifier": {
+            "scheme": "PRY-IDCARD",
+            "id": "12345"
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 ````
 
