@@ -28,6 +28,7 @@
   * `.transactions`
   * `.milestones`
   * `ContractingProcesses.milestones`
+* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
 
 ### Codelists
 
@@ -38,6 +39,7 @@
   * milestoneType
   * milestoneStatus
   * milestoneCode
+* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add country codelist.
 
 ### Other
 
