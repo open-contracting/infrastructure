@@ -12,7 +12,7 @@
 * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
 * [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
 * [#389](https://github.com/open-contracting/infrastructure/pull/389) - emphasize publishing data throughout a project's lifecycle.
-* [#422](https://github.com/open-contracting/infrastructure/pull/422) - add CoST IDS sustainability modules to mapping documentation.
+* [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425) - add CoST IDS sustainability modules to mapping documentation.
 
 ### Schema
 

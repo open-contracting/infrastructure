@@ -794,7 +794,7 @@ def lint(filename, additional_properties):
                 missing_data[key].append(f"{identifier} {title}")
 
         # Format Markdown
-        for key in ["disclosure format", "mapping"]:
+        for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
             value = element.get(key, "")
             element[key] = mdformat.text(value, options={"number": True}).rstrip()
 
@@ -841,8 +841,58 @@ def lint(filename, additional_properties):
 
 
 @cli.command()
+def update_sustainability_elements():
+    """Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet"""
+
+    filename = basedir / 'mapping' / 'sustainability.yaml'
+
+    # CoST IDS sustainability elements are maintained in https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o # noqa: E501
+    source = csv_reader(
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHlHTshFw7PMbPsNz5ecYZsIy7aEHl0pN4sENGgesTT7kR8eZ0GjJjPVf54iMA6eK3ZpQZ2k5e6rQn/pub?gid=0&single=true&output=csv") # noqa
+    source = {element["id"]: element for element in source}
+
+    # Load sustainability modules mapping
+    with open(filename) as f:
+        mapping = yaml.safe_load(f)
+
+    mapping = {element["id"]: element for element in mapping}
+
+    new_elements = []
+    deleted_elements = []
+
+    # Update common elements
+    for identifier, properties in source.items():
+        element = mapping.get(identifier)
+
+        if element:
+            for prop in ['title', 'module', 'indicator', 'disclosure format']:
+                element[prop] = properties[prop]
+        else:
+            new_elements.append(identifier)
+
+    # Add new elements
+    for identifier in new_elements:
+        properties = source[identifier]
+
+        for prop in ['mapping', 'example']:
+            properties[prop] = ''
+
+        mapping[identifier] = properties
+
+    # Remove deleted elements
+    for identifier in mapping:
+        if identifier not in source:
+            deleted_elements.append(identifier)
+
+    for identifier in deleted_elements:
+        mapping.pop(identifier)
+
+    write_yaml_file(filename, list(mapping.values()))
+
+
+@cli.command()
 def update_sustainability_docs():
-    """Update docs/cost/ids/sustainability.md"""
+    """Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml"""
 
     # Load sustainability mapping documentation
     with (basedir / 'docs' / 'cost' / 'ids' / 'sustainability.md').open() as f:
@@ -865,7 +915,7 @@ def update_sustainability_docs():
         title = element.get("title", "")
         modules[module].extend(
             [
-              f"\n({title})=",
+              f"\n({module}-{title})=",
               "\n\n`````{grid} 2",
               f"\n\n````{{grid-item-card}} {title}",
               "\n:columns: 4",
