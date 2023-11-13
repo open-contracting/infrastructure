@@ -38,6 +38,7 @@
   * milestoneType
   * milestoneStatus
   * milestoneCode
+* [#429](https://github.com/open-contracting/infrastructure/pull/429) - add climateFinanceFocalPoint code to partyRole codelist.
 
 ### Other
 
