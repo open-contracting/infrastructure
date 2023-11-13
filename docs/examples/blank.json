@@ -416,5 +416,33 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
-  }
+  },
+  "lobbyingMeetings": [
+    {
+      "id": "string",
+      "location": {
+        "id": "string",
+        "description": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        }
+      },
+      "date": "date-time",
+      "numberOfParticipants": "integer",
+      "publicOfficial": {
+        "person": {
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
+        },
+        "jobTitle": "string"
+      }
+    }
+  ]
 }
