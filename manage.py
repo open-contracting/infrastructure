@@ -343,23 +343,16 @@ def update_sub_schema_reference(schema):
         # Add examples
         definition["references"] = get_definition_references(schema, defn)
         for ref in definition["references"]:
-            if ref[0] not in schema['definitions']:
-                skip = False
+            if ref[0] not in schema['definitions'] and not any(p == '/'.join(ref)[:len(p)] for p in paths_to_skip):
+                if ref[-1] == '0':
+                    ref.pop(-1)
 
-                for path_to_skip in paths_to_skip:
-                    if path_to_skip == '/'.join(ref)[:len(path_to_skip)]:
-                        skip = True
-
-                if not skip:
-                    if ref[-1] == '0':
-                        ref.pop(-1)
-
-                    definition["content"].extend([
-                      "```{jsoninclude} ../../docs/examples/example.json\n",
-                      f":jsonpointer: /projects/0/{'/'.join(ref)}\n",
-                      f":title: {'/'.join(ref)}\n",
-                      "```\n\n"
-                    ])
+                definition["content"].extend([
+                  "```{jsoninclude} ../../docs/examples/example.json\n",
+                  f":jsonpointer: /projects/0/{'/'.join(ref)}\n",
+                  f":title: {'/'.join(ref)}\n",
+                  "```\n\n"
+                ])
 
         definition["content"].extend([
             "````\n\n",
