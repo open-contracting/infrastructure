@@ -543,8 +543,19 @@
     module: Climate finance
     indicator: Decision-making process
     disclosure format: Identify who approved the climate finance investment in the country (organization, party, role)
-    mapping: ''
-    example: ''
+    mapping: 'Project level: Add the organization to the `parties` array and add ''climateFinanceFocalPoint'' to their `.roles` array.'
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "name": "Presidential Climate Commission",
+              "roles": [
+                "climateFinanceFocalPoint"
+              ]
+            }
+          ]
+        }
 -   id: '3.5'
     title: Nationally Determined Contributions (NDC)
     module: Climate finance
