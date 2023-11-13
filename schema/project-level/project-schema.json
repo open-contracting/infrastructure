@@ -2032,12 +2032,12 @@
         "location": {
           "title": "Location",
           "description": "The location of the meeting.",
-          "$ref": "#/definitions/Location"
+          "$ref": "#/definitions/Address"
         },
         "numberOfParticipants": {
           "title": "Participant count",
           "description": "The number of people in attendance at the meeting.",
-          "type": "number"
+          "type": "integer"
         },
         "publicOfficial": {
           "title": "Public official",

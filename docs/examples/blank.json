@@ -421,15 +421,11 @@
     {
       "id": "string",
       "location": {
-        "id": "string",
-        "description": "string",
-        "address": {
-          "streetAddress": "string",
-          "locality": "string",
-          "region": "string",
-          "postalCode": "string",
-          "countryName": "string"
-        }
+        "streetAddress": "string",
+        "locality": "string",
+        "region": "string",
+        "postalCode": "string",
+        "countryName": "string"
       },
       "date": "date-time",
       "numberOfParticipants": "integer",

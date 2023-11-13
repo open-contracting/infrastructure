@@ -323,7 +323,6 @@ Each `Classification` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`locations`](project-schema.json,,locations)
-* [`Meeting/location`](project-schema.json,/definitions/Meeting,location)
 
 Each `Location` has the following fields:
 
@@ -344,11 +343,6 @@ Each `Location` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/locations
 :title: locations
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/location
-:title: lobbyingMeetings/0/location
 ```
 
 ````
@@ -586,6 +580,7 @@ When working with data, users ought to be aware that addresses might not always 
 This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
+* [`Meeting/location`](project-schema.json,/definitions/Meeting,location)
 
 Each `Address` has the following fields:
 
@@ -614,8 +609,8 @@ Each `Address` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/location/address
-:title: lobbyingMeetings/0/location/address
+:jsonpointer: /projects/0/lobbyingMeetings/0/location
+:title: lobbyingMeetings/0/location
 ```
 
 ````

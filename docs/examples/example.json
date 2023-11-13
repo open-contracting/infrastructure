@@ -964,7 +964,7 @@
         {
           "id": "1",
           "date": "2024-01-01T00:00:00Z",
-          "address": {
+          "location": {
             "streetAddress": "1600 Amphitheatre Pkwy",
             "locality": "London",
             "region": "London",
