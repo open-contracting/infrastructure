@@ -33,13 +33,13 @@
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
-* [#369](https://github.com/open-contracting/infrastructure/pull/369) - add classification scheme codelist.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
-* [#426](https://github.com/open-contracting/infrastructure/pull/426) - add codelists:
-  * milestoneType
-  * milestoneStatus
-  * milestoneCode
-* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add country codelist.
+* add codelists:
+  * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
 
 ### Other
 
