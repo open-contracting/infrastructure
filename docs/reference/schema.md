@@ -323,6 +323,7 @@ Each `Classification` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`locations`](project-schema.json,,locations)
+* [`Meeting/location`](project-schema.json,/definitions/Meeting,location)
 
 Each `Location` has the following fields:
 
@@ -343,6 +344,11 @@ Each `Location` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/locations
 :title: locations
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/location
+:title: lobbyingMeetings/0/location
 ```
 
 ````
@@ -489,6 +495,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
+* [`PublicOfficial/person/organization`](project-schema.json,/definitions/PublicOfficial,person/organization)
 
 Each `OrganizationReference` has the following fields:
 
@@ -556,6 +563,11 @@ Each `OrganizationReference` has the following fields:
 :title: transactions/0/payee
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial/person/organization
+:title: lobbyingMeetings/0/publicOfficial/person/organization
+```
+
 ````
 
 `````
@@ -599,6 +611,11 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/address
 :title: parties/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/location/address
+:title: lobbyingMeetings/0/location/address
 ```
 
 ````
@@ -1071,6 +1088,76 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### Meeting
+
+`Meeting` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Meeting
+```
+
+This sub-schema is referenced by the following properties:
+* [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)
+
+Each `Meeting` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Meeting
+:collapse: id,date,location,numberOfParticipants,publicOfficial
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings
+:title: lobbyingMeetings
+```
+
+````
+
+`````
+
+### PublicOfficial
+
+`PublicOfficial` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/PublicOfficial
+```
+
+This sub-schema is referenced by the following properties:
+* [`Meeting/publicOfficial`](project-schema.json,/definitions/Meeting,publicOfficial)
+
+Each `PublicOfficial` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/PublicOfficial
+:collapse: jobTitle
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial
+:title: lobbyingMeetings/0/publicOfficial
 ```
 
 ````
