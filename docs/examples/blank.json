@@ -440,5 +440,21 @@
         "jobTitle": "string"
       }
     }
-  ]
+  ],
+  "social": {
+    "consultationMeetings": [
+      {
+        "id": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        },
+        "date": "date-time",
+        "numberOfParticipants": "integer"
+      }
+    ]
+  }
 }

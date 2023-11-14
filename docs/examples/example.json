@@ -983,7 +983,23 @@
             "jobTitle": "Group General Manager Transport Services"
           }
         }
-      ]
+      ],
+      "social": {
+        "consultationMeetings": [
+          {
+            "id": "1",
+            "address": {
+              "streetAddress": "1600 Amphitheatre Pkwy",
+              "locality": "Mountain View",
+              "region": "CA",
+              "postalCode": "94043",
+              "countryName": "United States"
+            },
+            "date": "2024-01-01T00:00:00Z",
+            "numberOfParticipants": "25"
+          }
+        ]
+      }
     }
   ]
 }
