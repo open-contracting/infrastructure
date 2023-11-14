@@ -28,6 +28,7 @@
   * `.transactions`
   * `.milestones`
   * `ContractingProcesses.milestones`
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
 
 ### Codelists
 
@@ -38,6 +39,7 @@
   * milestoneType
   * milestoneStatus
   * milestoneCode
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
 
 ### Other
 
