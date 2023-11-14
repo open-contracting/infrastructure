@@ -945,9 +945,7 @@ def update_sustainability_docs():
               "\nOC4IDS mapping",
               "\n^^^\n",
               element.get("mapping", ""),
-              "\n```json\n",
-              element.get("example", ""),
-              "\n```",
+              f"\n```json\n{element.get('example', '')}\n```" if element.get('example', '') != '' else '',
               "\n````",
               "\n\n`````\n\n"
             ]

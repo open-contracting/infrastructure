@@ -142,9 +142,6 @@ Name the funding organization(s)/sources of funding for Preparation, Implementat
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -166,9 +163,6 @@ Specify the allocated budget for preparation, implementation, operation. If no a
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -254,9 +248,6 @@ In case of multiyear project implementation, disclose information on budget proj
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -942,9 +933,6 @@ Identify who approved the climate finance investment in the country (organizatio
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1006,9 +994,6 @@ Select from a list of international commitments and clarify how the project is a
 OC4IDS mapping
 ^^^
 See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
-```json
-
-```
 ````
 
 `````
@@ -1032,9 +1017,6 @@ Indirect\]
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1181,9 +1163,6 @@ international
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1205,9 +1184,6 @@ Disclose the amounts invested in project preparation \[value, currency\]
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1229,9 +1205,6 @@ Disclose dates for project preparation \[start date, end date\]
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1253,9 +1226,6 @@ Disclose dates for project approval \[submission date, approval date\]
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1356,9 +1326,6 @@ Commitment fee (per annum)
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1380,9 +1347,6 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 OC4IDS mapping
 ^^^
 Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
-```json
-
-```
 ````
 
 `````
@@ -1441,9 +1405,6 @@ Disclose the occurrence of public meetings with communities and impacted groups 
 OC4IDS mapping
 ^^^
 See [public consultation meetings (social module)](social-public-consultation-meetings).
-```json
-
-```
 ````
 
 `````
@@ -1563,9 +1524,6 @@ mixed
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1654,9 +1612,6 @@ CoST IDS element
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1846,9 +1801,6 @@ Identify the asset for disposal purpose \[free text\]
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1870,9 +1822,6 @@ Intended start and end dates of decommissioning.
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -1894,9 +1843,6 @@ Disclose the technical plan for decommissioning (E.g.: \[Doc\]).
 OC4IDS mapping
 ^^^
 See decommissioning plan data point in environment extension
-```json
-
-```
 ````
 
 `````
@@ -2024,9 +1970,6 @@ Indicate the number of direct and indirect project beneficiaries (E.g. direct: \
 OC4IDS mapping
 ^^^
 
-```json
-
-```
 ````
 
 `````
@@ -3123,9 +3066,6 @@ Free text to add not mentioned sub-sectors
 OC4IDS mapping
 ^^^
 Project Level: Add equivalent code from ProjectSector codelist to sector array.
-```json
-
-```
 ````
 
 `````
