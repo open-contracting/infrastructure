@@ -416,5 +416,10 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
+  },
+  "environment": {
+    "goals": [
+      "string"
+    ]
   }
 }
