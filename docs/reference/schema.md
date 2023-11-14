@@ -562,11 +562,6 @@ Each `OrganizationReference` has the following fields:
 :title: lobbyingMeetings/0/publicOfficial/organization
 ```
 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOfficial/organization
-:title: social/consultationMeetings/0/publicOfficial/organization
-```
-
 ````
 
 `````
@@ -585,8 +580,8 @@ When working with data, users ought to be aware that addresses might not always 
 This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
-* [`Meeting/address`](project-schema.json,/definitions/Meeting,address)
 * [`Person/address`](project-schema.json,/definitions/Person,address)
+* [`Meeting/address`](project-schema.json,/definitions/Meeting,address)
 
 Each `Address` has the following fields:
 
@@ -1172,11 +1167,6 @@ Each `PublicOfficial` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial
 :title: lobbyingMeetings/0/publicOfficial
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOfficial
-:title: social/consultationMeetings/0/publicOfficial
 ```
 
 ````

@@ -338,7 +338,8 @@ def update_sub_schema_reference(schema):
                          'metrics/0/observations/0/value',
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
-                         'parties/0/people/0/identifier']
+                         'parties/0/people/0/identifier',
+                         'social/consultationMeetings/0/publicOfficial']
 
         # Add examples
         definition["references"] = get_definition_references(schema, defn)

@@ -1019,17 +1019,7 @@
               "countryName": "United Kingdom"
             },
             "date": "2024-01-15T00:00:00Z",
-            "numberOfParticipants": "25",
-            "publicOfficial": {
-              "person": {
-                "name": "Brett Gliddon"
-              },
-              "organization": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
-              },
-              "jobTitle": "Group General Manager Transport Services"
-            }
+            "numberOfParticipants": "25"
           }
         ]
       }
