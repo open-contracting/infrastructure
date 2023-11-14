@@ -1076,38 +1076,3 @@ Each `MilestoneReference` has the following fields:
 ````
 
 `````
-
-### Environment
-
-`Environment` is defined as:
-
-```{field-description} ../../build/current_lang/project-schema.json /definitions/Environment
-```
-
-This sub-schema is referenced by the following properties:
-* [`environment`](project-schema.json,,environment)
-
-Each `Environment` has the following fields:
-
-`````{tab-set}
-
-````{tab-item} Schema
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Environment
-:collapse: goals
-:addtargets:
-```
-
-````
-
-````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/environment
-:title: environment
-```
-
-````
-
-`````
