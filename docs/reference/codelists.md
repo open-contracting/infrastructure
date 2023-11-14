@@ -67,6 +67,13 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/milestoneType.csv
 ```
 
+### EnvironmentalGoal
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/environmentalGoal.csv
+```
+
 ## Open codelists
 
 ### DocumentType
