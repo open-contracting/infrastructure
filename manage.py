@@ -14,6 +14,7 @@ import json_merge_patch
 import mdformat
 import requests
 import yaml
+from docutils import nodes
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator as validator
 from ocdsextensionregistry import ProfileBuilder
@@ -928,9 +929,10 @@ def update_sustainability_docs():
             modules[module] = []
 
         title = element.get("title", "")
+        target = nodes.make_id(f"{module}-{title}")
         modules[module].extend(
             [
-              f"\n({module}-{title})=",
+              f"\n({target})=",
               "\n\n`````{grid} 2",
               f"\n\n````{{grid-item-card}} {title}",
               "\n:columns: 4",

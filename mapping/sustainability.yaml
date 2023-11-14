@@ -801,7 +801,7 @@
     module: Climate finance
     indicator: Public participation
     disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the minutes, number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\], \[Document\]).
-    mapping: See mapping for the Public consultation meetings data point in the Social module.
+    mapping: See [public consultation meetings (social module)](social-public-consultation-meetings).
     example: ''
 -   id: '3.20'
     title: Disbursement records
