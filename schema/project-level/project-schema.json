@@ -2029,9 +2029,9 @@
           ],
           "format": "date-time"
         },
-        "location": {
-          "title": "Location",
-          "description": "The location of the meeting.",
+        "address": {
+          "title": "Address",
+          "description": "The address of the meeting.",
           "$ref": "#/definitions/Address"
         },
         "numberOfParticipants": {
@@ -2064,13 +2064,13 @@
               "title": "Name",
               "description": "The full name of the person.",
               "type": "string"
-            },
-            "organization": {
-              "title": "Organization",
-              "description": "The organization in respect of which the person is a public official.",
-              "$ref": "#/definitions/OrganizationReference"
             }
           }
+        },
+        "organization": {
+          "title": "Organization",
+          "description": "The organization in respect of which the person is a public official.",
+          "$ref": "#/definitions/OrganizationReference"
         },
         "jobTitle": {
           "title": "Job title",

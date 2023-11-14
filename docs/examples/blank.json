@@ -431,11 +431,11 @@
       "numberOfParticipants": "integer",
       "publicOfficial": {
         "person": {
-          "name": "string",
-          "organization": {
-            "id": "string",
-            "name": "string"
-          }
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
         },
         "jobTitle": "string"
       }

@@ -974,11 +974,11 @@
           "numberOfParticipants": 4,
           "publicOfficial": {
             "person": {
-              "name": "Brett Gliddon",
-              "organization": {
-                "name": "Motorways UK",
-                "id": "GB-GOR-XX1234"
-              }
+              "name": "Brett Gliddon"
+            },
+            "organization": {
+              "name": "Motorways UK",
+              "id": "GB-GOR-XX1234"
             },
             "jobTitle": "Group General Manager Transport Services"
           }

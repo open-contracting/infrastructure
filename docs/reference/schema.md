@@ -489,7 +489,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
-* [`PublicOfficial/person/organization`](project-schema.json,/definitions/PublicOfficial,person/organization)
+* [`PublicOfficial/organization`](project-schema.json,/definitions/PublicOfficial,organization)
 
 Each `OrganizationReference` has the following fields:
 
@@ -558,8 +558,8 @@ Each `OrganizationReference` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial/person/organization
-:title: lobbyingMeetings/0/publicOfficial/person/organization
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial/organization
+:title: lobbyingMeetings/0/publicOfficial/organization
 ```
 
 ````
@@ -580,7 +580,7 @@ When working with data, users ought to be aware that addresses might not always 
 This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
-* [`Meeting/location`](project-schema.json,/definitions/Meeting,location)
+* [`Meeting/address`](project-schema.json,/definitions/Meeting,address)
 
 Each `Address` has the following fields:
 
@@ -609,8 +609,8 @@ Each `Address` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/location
-:title: lobbyingMeetings/0/location
+:jsonpointer: /projects/0/lobbyingMeetings/0/address
+:title: lobbyingMeetings/0/address
 ```
 
 ````
@@ -1107,7 +1107,7 @@ Each `Meeting` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Meeting
-:collapse: id,date,location,numberOfParticipants,publicOfficial
+:collapse: id,date,address,numberOfParticipants,publicOfficial
 :addtargets:
 ```
 
@@ -1142,7 +1142,7 @@ Each `PublicOfficial` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/PublicOfficial
-:collapse: jobTitle
+:collapse: organization,jobTitle
 :addtargets:
 ```
 
