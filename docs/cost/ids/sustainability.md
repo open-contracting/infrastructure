@@ -1440,7 +1440,7 @@ Disclose the occurrence of public meetings with communities and impacted groups 
 :columns: 8
 OC4IDS mapping
 ^^^
-See mapping for data point "Public consultation meetings" in the Social extension
+See mapping for the Public consultation meetings data point in the Social module.
 ```json
 
 ```
@@ -1466,38 +1466,45 @@ OC4IDS mapping
 ^^^
 For each planned disbursement:
 
-* If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Milestone` object to its `.summary.milestones` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Milestone` object to the project-level `.milestones` array.
-* Set the milestone's:
-  * `.id` incrementally
-  * `.status` to 'scheduled'
-  * `.dueDate` to the date on which the disbursement is planned to occur
-  * `.type` to 'payment'
-  * `.value` to the amount and currency of the planned disbursement
+- If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Milestone` object to its `.summary.milestones` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Milestone` object to the project-level `.milestones` array.
+- Set the milestone's:
+  - `.id` incrementally
+  - `.status` to 'scheduled'
+  - `.dueDate` to the date on which the disbursement is planned to occur
+  - `.type` to 'payment'
+  - `.value` to the amount and currency of the planned disbursement
 
 For each actual disbursement:
 
-* If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Transaction` object to its `.summary.transactions` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Transaction` object to the project-level `.transactions` array.
-* Set the transaction's:
-  * `.id` incrementally
-  * `.date` to the date of the disbursement
-  * `.value` to the amount and currency of the disbursement
+- If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or subcontractor of a supplier, get the `ContractingProcess` in the `.contractingProcesses` array to which the disbursement relates and add a `Transaction` object to its `.summary.transactions` array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a `Transaction` object to the project-level `.transactions` array.
 
-* Get the `Organization` in `.parties` that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
-  * Add 'payer' to the organization's `.roles` array
-  * Set the transaction's `.payer` to the `.id` and `.name` of the organization
-* Get the `Organization` in `.parties` that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
-  * Add 'payee' to the organization's `.roles` array.
-  * Set the transaction's `.payee` to the `.id` and `.name` of the organization
-* Get the `Milestone` in `.milestones` that represents that planned disbursement:
-  * Set its `.status` to 'met'
-  * Set its `.dateMet` to the date of the disbursement
-  * Set the transaction's `.relatedImplementationMilestone` to the `.id` and `.title` of the milestone
+- Set the transaction's:
+
+  - `.id` incrementally
+  - `.date` to the date of the disbursement
+  - `.value` to the amount and currency of the disbursement
+
+- Get the `Organization` in `.parties` that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
+
+  - Add 'payer' to the organization's `.roles` array
+  - Set the transaction's `.payer` to the `.id` and `.name` of the organization
+
+- Get the `Organization` in `.parties` that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
+
+  - Add 'payee' to the organization's `.roles` array.
+  - Set the transaction's `.payee` to the `.id` and `.name` of the organization
+
+- Get the `Milestone` in `.milestones` that represents that planned disbursement:
+
+  - Set its `.status` to 'met'
+  - Set its `.dateMet` to the date of the disbursement
+  - Set the transaction's `.relatedImplementationMilestone` to the `.id` and `.title` of the milestone
 ```json
 {
   "milestones": [
     {
       "id": "1",
-      "title": "Grant disbursement"
+      "title": "Grant disbursement",
       "status": "met",
       "dueDate": "2023-07-01T00:00:00Z",
       "dateMet": "2023-08-01T00:00:00Z",
@@ -2128,16 +2135,16 @@ Project Level:
 
 For each meeting:
 
-1. Publish the meeting invite. Add a document, set its `.documentType` to 'consultationMeetingInvite' and its `.url` to the URL at which the meeting invite is available.
+1. Publish the meeting invite. Add a document, set its `.documentType` to 'consultationMeetingInvitation' and its `.url` to the URL at which the meeting invite is available.
 
 2. Publish the meeting details. Add a `Meeting` object to the `.social.consultationMeetings` array and set:
 
 - `.id` incrementally
 - `.date` to the date of the meeting
 - `.address` to the address of the meeting
-- `.participantCount` to the number of people that participated in the meeting
+- `.numberOfparticipants` to the number of people that participated in the meeting
 
-3. Publish the meeting minutes. Add a document, set its `.documentType` to 'consultationMeetingMinutes' and its `.url` to the URL at which the meeting minutes are available.
+3. Publish the meeting minutes. Add a document, set its `.documentType` to 'minutes.consultationMeeting' and its `.url` to the URL at which the meeting minutes are available.
 ```json
 {
   "social": {
@@ -2152,19 +2159,19 @@ For each meeting:
           "postalCode": "94043",
           "countryName": "United States"
         },
-        "participantCount": 12
+        "numberOfParticipants": 12
       }
     ]
   },
   "documents": [
     {
       "id": "1",
-      "documentType": "consultationMeetingInvite",
-      "url": "http://example.com/consultationMeetingInvite.pdf"
+      "documentType": "consultationMeetingInvitation",
+      "url": "http://example.com/consultationMeetingInvitation.pdf"
     },
     {
       "id": "2",
-      "documentType": "consultationMeetingMinutes",
+      "documentType": "minutes.consultationMeeting",
       "url": "http://example.com/consultationMeetingMinutes.pdf"
     }
   ]
@@ -2816,16 +2823,17 @@ Project Level:
 
 For each meeting:
 
-1. Publish the meeting agenda. Add a document, set its `.documentType` to 'lobbyingMeetingAgenda' and its `.url` to the URL at which the agenda is available.
-
-2. Publish the meeting details. Add a `Meeting` object to the `.lobbyingMeetings` array and set:
+1. Publish the meeting details. Add a `Meeting` object to the `.lobbyingMeetings` array and set:
 
 - `.id` incrementally
 - `.date` to the date of the meeting
 - `.address` to the address of the meeting
-- `.beneficiary` to the name of the organisation or interest group that ultimately benefits from the lobbying activity
+- `.numberOfParticipants` to the number of people present at the meeting
+- `.publicOfficial.name` to the name of the person who was representing the organization at the meeting.
+- `.publicOfficial.organization` to the `.name` and `.id` of the organization the public official represents. These should match the organization's entry in the `parties` array
+  ` `.publicOfficial.jobTitle`to the job title of the person named in`.name\`
 
-3. Publish the meeting minutes. Add a document, set its `.documentType` to 'lobbyingMeetingMinutes' and its `.url` to the URL at which the meeting minutes are available.
+2. Publish the meeting minutes. Add a document, set its `.documentType` to 'minutes.lobbyingMeeting' and its `.url` to the URL at which the meeting minutes are available.
 ```json
 {
   "lobbyingMeetings": [
@@ -2834,23 +2842,28 @@ For each meeting:
       "date": "2024-01-01T00:00:00Z",
       "address": {
         "streetAddress": "1600 Amphitheatre Pkwy",
-        "locality": "Mountain View",
-        "region": "CA",
-        "postalCode": "94043",
-        "countryName": "United States"
+        "locality": "London",
+        "region": "London",
+        "postalCode": "WC1 8HG",
+        "countryName": "United Kingdom"
       },
-      "beneficiary": "Arup Group"
+      "numberOfParticipants": 4,
+      "publicOfficial": {
+        "person": {
+          "name": "Brett Gliddon"
+        },
+        "organization": {
+          "name": "Motorways UK",
+          "id": "GB-GOR-XX1234"
+        },
+        "jobTitle": "Group General Manager Transport Services"
+      }
     }
   ],
   "documents": [
     {
-      "id": "1",
-      "documentType": "lobbyingMeetingAgenda",
-      "url": "http://example.com/lobbyingMeetingAgenda.pdf"
-    },
-    {
       "id": "2",
-      "documentType": "lobbyingMeetingMinutes",
+      "documentType": "minutes.lobbyingMeeting",
       "url": "http://example.com/lobbyingMeetingMinutes.pdf"
     }
   ]

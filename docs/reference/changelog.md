@@ -28,7 +28,7 @@
   * `.transactions`
   * `.milestones`
   * `ContractingProcesses.milestones`
-* [#428](https://github.com/open-contracting/infrastructure/pull/428) - add `lobbyingMeetings` field.
+* [#428](https://github.com/open-contracting/infrastructure/pull/428) - add `lobbyingMeetings` and `social.consultationMeetings` fields.
 
 ### Codelists
 

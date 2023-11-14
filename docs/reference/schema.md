@@ -562,6 +562,11 @@ Each `OrganizationReference` has the following fields:
 :title: lobbyingMeetings/0/publicOfficial/organization
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOfficial/organization
+:title: social/consultationMeetings/0/publicOfficial/organization
+```
+
 ````
 
 `````
@@ -611,6 +616,11 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/address
 :title: lobbyingMeetings/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/address
+:title: social/consultationMeetings/0/address
 ```
 
 ````
@@ -1098,6 +1108,7 @@ Each `MilestoneReference` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)
+* [`Social/consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings)
 
 Each `Meeting` has the following fields:
 
@@ -1118,6 +1129,11 @@ Each `Meeting` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings
 :title: lobbyingMeetings
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings
+:title: social/consultationMeetings
 ```
 
 ````
@@ -1153,6 +1169,46 @@ Each `PublicOfficial` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial
 :title: lobbyingMeetings/0/publicOfficial
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOfficial
+:title: social/consultationMeetings/0/publicOfficial
+```
+
+````
+
+`````
+
+### Social
+
+`Social` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Social
+```
+
+This sub-schema is referenced by the following properties:
+* [`social`](project-schema.json,,social)
+
+Each `Social` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Social
+:collapse: consultationMeetings
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social
+:title: social
 ```
 
 ````

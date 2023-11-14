@@ -420,7 +420,7 @@
   "lobbyingMeetings": [
     {
       "id": "string",
-      "location": {
+      "address": {
         "streetAddress": "string",
         "locality": "string",
         "region": "string",

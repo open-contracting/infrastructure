@@ -306,6 +306,11 @@
       },
       "uniqueItems": true,
       "minItems": 1
+    },
+    "social": {
+      "title": "Social",
+      "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "$ref": "#/definitions/Social"
     }
   },
   "definitions": {
@@ -2078,6 +2083,22 @@
           "type": "string"
         }
       }
+    },
+    "Social": {
+      "title": "Social",
+      "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "type": "object",
+      "properties": {
+        "consultationMeetings": {
+          "title": "Public consultation meetings",
+          "description": "Information about public consultation meetings held during the project preparation stage.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Meeting"
+          }
+        }
+      },
+      "minProperties": 1
     }
   },
   "minProperties": 1
