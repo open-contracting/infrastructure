@@ -990,13 +990,23 @@
             "id": "1",
             "address": {
               "streetAddress": "1600 Amphitheatre Pkwy",
-              "locality": "Mountain View",
-              "region": "CA",
-              "postalCode": "94043",
-              "countryName": "United States"
+              "locality": "London",
+              "region": "London",
+              "postalCode": "WC1 8HG",
+              "countryName": "United Kingdom"
             },
-            "date": "2024-01-01T00:00:00Z",
-            "numberOfParticipants": "25"
+            "date": "2024-01-15T00:00:00Z",
+            "numberOfParticipants": "25",
+            "publicOfficial": {
+              "person": {
+                "name": "Brett Gliddon"
+              },
+              "organization": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "jobTitle": "Group General Manager Transport Services"
+            }
           }
         ]
       }

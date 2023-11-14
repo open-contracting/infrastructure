@@ -453,7 +453,17 @@
           "countryName": "string"
         },
         "date": "date-time",
-        "numberOfParticipants": "integer"
+        "numberOfParticipants": "integer",
+        "publicOfficial": {
+          "person": {
+            "name": "string"
+          },
+          "organization": {
+            "id": "string",
+            "name": "string"
+          },
+          "jobTitle": "string"
+        }
       }
     ]
   }
