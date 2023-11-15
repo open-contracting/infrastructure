@@ -6,7 +6,10 @@ Publishing standardized data makes using data easier, for example to compare dat
 
 ## What is a project?
 
-In the context of OC4IDS, the term ‘project’ refers to an infrastructure project, defined as the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+```{eval-rst}
+.. jsoninclude-quote:: ../../build/current_lang/project-schema.json
+    :jsonpointer: /description
+```
 
 An infrastructure project can stand alone (e.g. a new hospital), or can form part of a wider investment project or programme of work (e.g. a new rail station, as part of an extension to a railway line).
 
