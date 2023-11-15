@@ -51,7 +51,10 @@
         "preparation",
         "implementation",
         "completion",
+        "maintenance",
+        "decommissioning",
         "completed",
+        "decommissioned",
         "cancelled"
       ],
       "codelist": "projectStatus.csv",
