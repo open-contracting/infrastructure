@@ -91,7 +91,7 @@ CoST recommends disclosing data on contracts for the design, construction and su
 % Image source: https://docs.google.com/drawings/d/1VnV44NY_WR02jRouWaLYc0dVVZRojbkrUJyqlfrKUSQ
 ![OC4IDS is structured in three parts](../_static/images/diagram-toplevel-summary.png)
 
-The top-level of the OC4IDS data model is used for project-level data, covering the following stages: identification, preparation, implementation, completion, maintenance and decomissioning.
+The top-level of the OC4IDS data model is used for project-level data, covering the following stages: identification, preparation, implementation, completion, maintenance and decommissioning.
 
 Each project in OC4IDS can have many related contracting processes.
 
