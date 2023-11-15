@@ -19,27 +19,41 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
-* [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
-* [#379](https://github.com/open-contracting/infrastructure/pull/379) - add `contractingProcesses.summary.tender.datePublished`.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
-* [#390](https://github.com/open-contracting/infrastructure/pull/390) - add `identifiers`.
-* [#426](https://github.com/open-contracting/infrastructure/pull/426) - add fields:
-  * `.transactions`
-  * `.milestones`
-  * `ContractingProcesses.milestones`
-* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* Add fields:
+  * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
+  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `.contractingProcesses.summary.tender.datePublished`
+  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `.identifiers`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426):
+    * `.transactions`
+    * `.milestones`
+    * `ContractingProcesses.milestones`
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `Organization.beneficialOwners`
+  * [#432](https://github.com/open-contracting/infrastructure/pull/432):
+    * `identificationPeriod`
+    * `preparationPeriod`
+    * `implementationPeriod`
+    * `completionPeriod`
+    * `maintenancePeriod`
+    * `decommissioningPeriod`
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
-* add codelists:
+* Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+* [#432](https://github.com/open-contracting/infrastructure/pull/432):
+  * Add codes to projectStatus codelist:
+    * 'maintenance' 
+    * 'decommissioning'
+    * 'decommissioned;
+  * Deprecate 'completed' in favour of 'maintenance'
 
 ### Other
 
