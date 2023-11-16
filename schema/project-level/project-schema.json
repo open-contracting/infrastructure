@@ -2337,7 +2337,7 @@
       "properties": {
         "obligations": {
           "title": "Obligations",
-          "description": "The labor obligations stipulated in the construction contract(s), using the open laborObligations codelist.",
+          "description": "The labor obligations stipulated in the construction contract(s), using the open [laborObligations codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations).",
           "type": [
             "array"
           ],
