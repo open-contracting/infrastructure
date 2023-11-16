@@ -304,7 +304,7 @@
       "properties": {
         "goals": {
           "title": "Environmental goals",
-          "description": "The environmental goals pursued, using the closed environmentalGoal codelist.",
+          "description": "The environmental goals pursued, using the closed [environmentalGoal codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal).",
           "type": [
             "array"
           ],

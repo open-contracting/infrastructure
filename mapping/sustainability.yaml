@@ -486,7 +486,7 @@
         - mitigation
         - adaptation
         - cross-cutting
-    mapping: 'Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array'
+    mapping: 'Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array'
     example: |-
         {
           "environment": {
