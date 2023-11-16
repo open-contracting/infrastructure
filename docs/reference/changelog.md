@@ -29,6 +29,7 @@
   * `.milestones`
   * `ContractingProcesses.milestones`
 * [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* [#433](https://github.com/open-contracting/infrastructure/pull/433) - add `contractingProcesses.summary.social`.
 
 ### Codelists
 
@@ -40,6 +41,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
 
 ### Other
 
