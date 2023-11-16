@@ -362,6 +362,7 @@ This sub-schema is referenced by the following properties:
 * [`ContractingProcessSummary/tender/costEstimate`](project-schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)
 * [`ContractingProcessSummary/contractValue`](project-schema.json,/definitions/ContractingProcessSummary,contractValue)
 * [`ContractingProcessSummary/finalValue`](project-schema.json,/definitions/ContractingProcessSummary,finalValue)
+* [`ContractingProcessSummary/social/laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget)
 * [`Modification/oldContractValue`](project-schema.json,/definitions/Modification,oldContractValue)
 * [`Modification/newContractValue`](project-schema.json,/definitions/Modification,newContractValue)
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
@@ -422,6 +423,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
 :title: contractingProcesses/0/summary/transactions/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborBudget
+:title: contractingProcesses/0/summary/social/laborBudget
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -1074,6 +1080,41 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### LaborObligations
+
+`LaborObligations` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
+
+Each `LaborObligations` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/LaborObligations
+:collapse: obligations,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
+:title: contractingProcesses/0/summary/social/laborObligations
 ```
 
 ````

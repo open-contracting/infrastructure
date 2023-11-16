@@ -1309,7 +1309,7 @@
                   "laborObligations": {
                     "obligations": [
                       "minimumWage",
-                      "overtime"
+                      "paidOvertime"
                     ],
                     "description": "The contract's labor obligations include a minimum wage of $20 per hour and an overtime limit of 10 hours per week."
                   }
@@ -1335,7 +1335,7 @@
     module: Social
     indicator: Labour compliance
     disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs (E.g. \[value\]).
-    mapping: 'Contract level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.'
+    mapping: 'Contracting process level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.'
     example: |-
         {
           "contractingProcesses": [

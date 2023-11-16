@@ -349,7 +349,19 @@
               "title": "title"
             }
           }
-        ]
+        ],
+        "social": {
+          "laborBudget": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "laborObligations": {
+            "obligations": [
+              "string from laborObligations codelist"
+            ],
+            "description": "string"
+          }
+        }
       },
       "releases": [
         {

@@ -2265,7 +2265,7 @@ Publish the signed contract that includes labor obligations:  Add a document to 
           "laborObligations": {
             "obligations": [
               "minimumWage",
-              "overtime"
+              "paidOvertime"
             ],
             "description": "The contract's labor obligations include a minimum wage of $20 per hour and an overtime limit of 10 hours per week."
           }
@@ -2307,7 +2307,7 @@ Disclose the amount allocated by the main contractor to cover for labour costs (
 :columns: 8
 OC4IDS mapping
 ^^^
-Contract level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.
+Contracting process level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.
 ```json
 {
   "contractingProcesses": [
