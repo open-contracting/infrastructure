@@ -1266,7 +1266,7 @@ For each date:
   - `.type` to 'financing'
   - `.status` to 'met'
 - For the submission date, set the milestone's `.title` to "Climate finance submission" and its `.dateMet` to the date of the submission
-- For the approval date, set the milestone's `.title` to "Climate finance approval" and its `.dateMet` to the date of the approval
+- For the approval date, set the milestone's `.title` to "Climate finance approval" and its `.dateMet` to the date of the approval.
 ```json
 {
   "milestones": [
