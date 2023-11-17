@@ -28,7 +28,8 @@
   * `.transactions`
   * `.milestones`
   * `ContractingProcesses.milestones`
-* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`.
+* [#434](https://github.com/open-contracting/infrastructure/pull/434) - add `contractingProcesses.summary.tender.sustainability`.
 
 ### Codelists
 
@@ -40,6 +41,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+* [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
 
 ### Other
 
