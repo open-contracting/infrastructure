@@ -235,6 +235,8 @@ contractingProcesses/summary/tender/administrativeEntity,Administrative entity,F
 contractingProcesses/summary/tender/administrativeEntity,Organization reference,False,
 contractingProcesses/summary/tender/administrativeEntity/name,Organization name,True,
 contractingProcesses/summary/tender/administrativeEntity/id,Organization ID,True,
+contractingProcesses/summary/tender/sustainability,Sustainability,False,
+contractingProcesses/summary/tender/sustainability/strategies,Strategies,False,
 contractingProcesses/summary/suppliers,Suppliers,False,
 contractingProcesses/summary/suppliers,Organization reference,False,
 contractingProcesses/summary/suppliers/name,Organization name,True,

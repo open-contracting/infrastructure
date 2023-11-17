@@ -244,6 +244,11 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
+          },
+          "sustainability": {
+            "strategies": [
+              "string"
+            ]
           }
         },
         "suppliers": [
