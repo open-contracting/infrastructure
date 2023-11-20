@@ -3098,16 +3098,16 @@ CoST IDS element
 Identify relevant sub-sectors related to the project scope.
 Select from a list (non-exhaustive):
 
-- Renewable energy
-  solar, wind,
+- Renewable energy:
+  solar,
+  wind,
   hydropower,
   biomass
   geothermal
-  Low carbon transport
-- Flood protection
-  energy efficiency,
-  water and wastewater management
-  natural resource management
+- Low carbon transport
+- Water and wastewater management
+- Natural resource management
+  flood protection
 
 Free text to add not mentioned sub-sectors
 ````
@@ -3116,9 +3116,13 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Add equivalent code from ProjectSector codelist to sector array.
+Project Level: Add the equivalent code from ProjectSector codelist to the `sector` array.
 ```json
-
+{
+  "sector": [
+    "solar"
+  ]
+}
 ```
 ````
 
