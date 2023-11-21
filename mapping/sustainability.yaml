@@ -954,7 +954,7 @@
     module: Climate finance
     indicator: Anti-corruption impact
     disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\])
-    mapping: 'Project level: Add an entry to `parties` with ''independentMonitor'' included in its `.roles`.'
+    mapping: 'Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add ''independentMonitor'' to its `.roles` array.'
     example: |-
         {
           "parties": [
@@ -1845,7 +1845,7 @@
     module: Institutional
     indicator: Anti-corruption impact
     disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\])
-    mapping: 'Project Level: Add an entry to `parties` with ''independentMonitor'' included in its `.roles`.'
+    mapping: 'Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add ''independentMonitor'' to its `.roles` array.'
     example: |-
         {
           "parties": [

@@ -837,7 +837,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -1687,7 +1687,7 @@ Identify the entities acting as independent monitors of the project (E.g. \[free
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add an entry to `parties` with 'independentMonitor' included in its `.roles`.
+Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its `.roles` array.
 ```json
 {
   "parties": [
@@ -3015,7 +3015,7 @@ Identify the entities acting as independent monitors of the project (E.g. \[free
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Add an entry to `parties` with 'independentMonitor' included in its `.roles`.
+Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its `.roles` array.
 ```json
 {
   "parties": [
