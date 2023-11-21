@@ -811,6 +811,7 @@ def lint(filename, additional_properties):
         for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
             value = element.get(key, "")
             element[key] = mdformat.text(value, options={"number": True}).rstrip()
+            element[key] = element[key].replace("%7B", "{").replace("%7D", "}")
 
         # Format and validate JSON.
         example = element["example"]

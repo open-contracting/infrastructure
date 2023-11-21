@@ -1631,7 +1631,7 @@
     mapping: |-
         Project level:
 
-        For each plan or policy to which the project is aligned, add a code from the [policyAlignment](https://standard.open-contracting.org/infrastructure/%7B%7Bversion%7D%7D/%7B%7Blang%7D%7D/reference/codelists/#policyalignment) codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
+        For each plan or policy to which the project is aligned, add a code from the [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
 
         For each United Nations Sustainable Development Goal to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdg', set its `.id` to the goal's number and set its `.description` to the goal's title.
 
