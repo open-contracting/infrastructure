@@ -837,7 +837,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -1855,9 +1855,31 @@ Identify the asset for disposal purpose \[free text\]
 :columns: 8
 OC4IDS mapping
 ^^^
+For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
+1. Set `.type` to 'decommissioning'
+
+2. Set `.title` to the name of the asset
+
+3. Add a `RelatedProject` object to the `.relatedProjects` array and set its:
+
+- `.id` and `.title` to the `.id` and `.title` of the OC4IDS project for the replacement of the asset
+- `.scheme` to 'oc4ids'
+- `.relationship` to 'replacement'
 ```json
-
+{
+  "id": "oc4ids-bu3kcz-123456789",
+  "title": "Otahuhu B Power Station",
+  "type": "decommissioning",
+  "relatedProjects": [
+    {
+      "id": "oc4ids-bu3kcz-987654321",
+      "scheme": "oc4ids",
+      "title": "Otahuhu C Power Station",
+      "relationship": "replacement"
+    }
+  ]
+}
 ```
 ````
 
