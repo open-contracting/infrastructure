@@ -38,6 +38,7 @@
 * Add codes:
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
+    * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
 * [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
 * add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
