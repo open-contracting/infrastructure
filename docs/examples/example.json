@@ -986,6 +986,13 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
+        ],
+        "hasImpactAssessment": true,
+        "impactCategories": [
+          {
+            "scheme": "ifc-environmental-social",
+            "id": "a"
+          }
         ]
       }
     }

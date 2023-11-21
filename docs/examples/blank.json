@@ -443,6 +443,13 @@
   "environment": {
     "goals": [
       "string"
+    ],
+    "hasImpactAssessment": "boolean",
+    "impactCategories": [
+      {
+        "scheme": "string",
+        "id": "string"
+      }
     ]
   }
 }

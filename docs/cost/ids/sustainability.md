@@ -339,14 +339,17 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. If an environmental impact assessment was conducted, set `.environment.hasImpactAssessment` to true. If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
+If an environmental impact assessment was conducted:
 
-2. Add a `Classification` object to the `.environment.impactClassifications` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+- set `.environment.hasImpactAssessment` to true.
+- Add a `Classification` object to the `.environment.impactCategories` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+
+If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
 ```json
 {
   "environment": {
     "hasImpactAssessment": true,
-    "impactClassifications": [
+    "impactCategories": [
       {
         "scheme": "ifc-environmental-social",
         "id": "a"
@@ -837,7 +840,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {

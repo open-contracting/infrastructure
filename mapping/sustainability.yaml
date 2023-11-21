@@ -158,14 +158,17 @@
     mapping: |-
         Project level:
 
-        1. If an environmental impact assessment was conducted, set `.environment.hasImpactAssessment` to true. If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
+        If an environmental impact assessment was conducted:
 
-        2. Add a `Classification` object to the `.environment.impactClassifications` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+        - set `.environment.hasImpactAssessment` to true.
+        - Add a `Classification` object to the `.environment.impactCategories` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+
+        If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
     example: |-
         {
           "environment": {
             "hasImpactAssessment": true,
-            "impactClassifications": [
+            "impactCategories": [
               {
                 "scheme": "ifc-environmental-social",
                 "id": "a"

@@ -318,6 +318,21 @@
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
           "minItems": 1
+        },
+        "hasImpactAssessment": {
+          "title": "Has impact assessment",
+          "description": "Whether an environmental impact assessment has been conducted.",
+          "type": "boolean"
+        },
+        "impactCategories": {
+          "title": "Impact categories",
+          "description": "The categories of the environmental impact of the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "minProperties": 1
