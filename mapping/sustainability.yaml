@@ -1335,7 +1335,7 @@
     module: Social
     indicator: Labour compliance
     disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs (E.g. \[value\]).
-    mapping: 'Contracting process level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.'
+    mapping: 'Contracting process level: Map to `.summary.social.laborBudget`.'
     example: |-
         {
           "contractingProcesses": [
