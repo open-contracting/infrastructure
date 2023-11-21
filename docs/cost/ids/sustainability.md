@@ -837,12 +837,12 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array
+Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
-    "climateChangeGoals": [
-      "mitigation"
+    "goals": [
+      "climateChangeMitigation"
     ]
   }
 }
