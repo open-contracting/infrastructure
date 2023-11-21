@@ -837,7 +837,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -1031,9 +1031,36 @@ Indirect\]
 :columns: 8
 OC4IDS mapping
 ^^^
-
+See the data point "Number of beneficiaries" in the Social extension, adding "Climate finance" to the `benefit.description`.
 ```json
-
+{
+  "benefits": [
+    {
+      "beneficiaries": [
+        {
+          "description": "Direct beneficiaries Climate finance",
+          "numberOfPeople": 1000,
+          "location": {
+            "id": "1",
+            "address": {
+              "countryName": "HT"
+            }
+          }
+        },
+        {
+          "description": "Indirect beneficiaries Climate finance",
+          "numberOfPeople": 2000,
+          "location": {
+            "id": "1",
+            "address": {
+              "countryName": "HT"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 ````
 
@@ -1408,12 +1435,13 @@ gender empowerment
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each impact identified add a `benefit` object to the `benefits` array and assign it a locally unique `id`. Set the `title` as the list code and add details explaining the benefit to `.description`.
+Project level: For each impact identified add a `benefit` object to the `benefits` array.
+
+- Set the `title` as the list code and add details explaining the benefit to `.description`.
 ```json
 {
   "benefits": [
     {
-      "id": "1",
       "title": "environmental",
       "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome."
     }
@@ -2023,9 +2051,46 @@ Indicate the number of direct and indirect project beneficiaries (E.g. direct: \
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level: For each beneficiary type add a `benefit` object to the `benefits` array.
+For direct beneficiaries:
 
+- Set the `.description` to "direct beneficiaries".
+- Set the number of people to `.numberOfPeople`.
+- Add the location of the beneficiary population to `.location`
+  For indirect beneficiaries:
+- Set the `.description` to "indirect beneficiaries".
+- Set the number of people to `.numberOfPeople`.
+- Add the location of the beneficiary population to `.location`
 ```json
-
+{
+  "benefits": [
+    {
+      "beneficiaries": [
+        {
+          "description": "Direct beneficiaries",
+          "numberOfPeople": 1000,
+          "location": {
+            "id": "1",
+            "address": {
+              "region": "Hampshire",
+              "countryName": "GB"
+            }
+          }
+        },
+        {
+          "description": "Indirect beneficiaries",
+          "numberOfPeople": 2000,
+          "location": {
+            "id": "1",
+            "address": {
+              "countryName": "GB"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 ````
 

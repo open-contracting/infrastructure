@@ -444,5 +444,18 @@
     "goals": [
       "string"
     ]
-  }
+  },
+  "benefits": [
+    {
+      "title": "string",
+      "description": "string",
+      "beneficiaries": [
+        {
+          "description": "string",
+          "location": {},
+          "numberOfPeople": "integer"
+        }
+      ]
+    }
+  ]
 }

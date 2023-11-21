@@ -321,6 +321,17 @@
         }
       },
       "minProperties": 1
+    },
+    "benefits": {
+      "title": "Benefits",
+      "description": "The benefits and intended benefits of the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Benefit"
+      },
+      "wholeListMerge": true,
+      "uniqueItems": true,
+      "minItems": 1
     }
   },
   "definitions": {
@@ -2333,6 +2344,58 @@
             "string"
           ],
           "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Benefit": {
+      "title": "Benefit",
+      "description": "A benefit or intended benefit of the project.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "description": "A short, locally unique title for the benefit.",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the benefit.",
+          "type": "string"
+        },
+        "beneficiaries": {
+          "title": "Beneficiaries",
+          "description": "Whom the benefit will aid.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Beneficiary"
+          },
+          "wholeListMerge": true,
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Beneficiary": {
+      "title": "Beneficiary",
+      "description": "Information about a beneficiary of the project.",
+      "type": "object",
+      "properties": {
+        "location": {
+          "title": "Location",
+          "description": "The location of the beneficiary.",
+          "$ref": "#/definitions/Location"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the beneficiary.",
+          "type": "string"
+        },
+        "numberOfPeople": {
+          "title": "Number of people",
+          "description": "The total size of the beneficiary population.",
+          "type": "integer"
         }
       },
       "minProperties": 1

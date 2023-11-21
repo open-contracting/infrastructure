@@ -323,6 +323,7 @@ Each `Classification` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`locations`](project-schema.json,,locations)
+* [`Beneficiary/location`](project-schema.json,/definitions/Beneficiary,location)
 
 Each `Location` has the following fields:
 
@@ -343,6 +344,11 @@ Each `Location` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/locations
 :title: locations
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location
+:title: benefits/0/beneficiaries/0/location
 ```
 
 ````
@@ -600,6 +606,11 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/address
 :title: parties/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
+:title: benefits/0/beneficiaries/0/location/address
 ```
 
 ````
@@ -1074,6 +1085,76 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### Benefit
+
+`Benefit` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Benefit
+```
+
+This sub-schema is referenced by the following properties:
+* [`benefits`](project-schema.json,,benefits)
+
+Each `Benefit` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Benefit
+:collapse: title,description,beneficiaries
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits
+:title: benefits
+```
+
+````
+
+`````
+
+### Beneficiary
+
+`Beneficiary` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Beneficiary
+```
+
+This sub-schema is referenced by the following properties:
+* [`Benefit/beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries)
+
+Each `Beneficiary` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Beneficiary
+:collapse: location,description,numberOfPeople
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries
+:title: benefits/0/beneficiaries
 ```
 
 ````
