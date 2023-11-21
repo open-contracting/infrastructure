@@ -299,12 +299,12 @@
     },
     "environment": {
       "title": "Environment",
-      "description": "Information about the environmental and climate impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
+      "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
       "type": "object",
       "properties": {
         "goals": {
           "title": "Environmental goals",
-          "description": "The environmental goals pursued, using the closed [environmentalGoal codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal).",
+          "description": "The environmental goals pursued, using the closed [environmentalGoal](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal) codelist.",
           "type": [
             "array"
           ],
