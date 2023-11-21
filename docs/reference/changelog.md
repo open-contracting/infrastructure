@@ -30,6 +30,7 @@
   * `ContractingProcesses.milestones`
 * [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
 * [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* [#442](https://github.com/open-contracting/infrastructure/pull/442) - add `environment.abatementCost`.
 
 ### Codelists
 
