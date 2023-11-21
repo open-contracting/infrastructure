@@ -131,3 +131,10 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :header-rows: 1
 :file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
+
+### CostCategory
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/costCategory.csv
+```

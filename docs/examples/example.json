@@ -166,6 +166,38 @@
           }
         ]
       },
+      "costMeasurements": [
+        {
+          "id": "1",
+          "date": "2024-05-01T00:00:00Z",
+          "lifeCycleCosting": {
+            "value": {
+              "amount": 10000000,
+              "currency": "USD"
+            }
+          },
+          "costGroups": [
+            {
+              "id": "1",
+              "category": "endOfLife",
+              "costs": [
+                {
+                  "id": "1",
+                  "value": {
+                    "amount": 50000000,
+                    "currency": "USD"
+                  },
+                  "classification": {
+                    "id": "4.02",
+                    "scheme": "icms",
+                    "description": "Decommissioning and decontamination"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "parties": [
         {
           "name": "Motorways UK",

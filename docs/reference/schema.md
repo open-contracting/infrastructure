@@ -288,6 +288,7 @@ Each `Period` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
+* [`Cost/classification`](project-schema.json,/definitions/Cost,classification)
 
 Each `Classification` has the following fields:
 
@@ -308,6 +309,11 @@ Each `Classification` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/additionalClassifications
 :title: additionalClassifications
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/classification
+:title: costMeasurements/0/costGroups/0/costs/0/classification
 ```
 
 ````
@@ -367,6 +373,8 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`CostMeasurement/lifeCycleCosting/value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)
+* [`Cost/value`](project-schema.json,/definitions/Cost,value)
 
 Each `Value` has the following fields:
 
@@ -392,6 +400,16 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
 :title: budget/budgetBreakdown/0/amount
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/lifeCycleCosting/value
+:title: costMeasurements/0/lifeCycleCosting/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/value
+:title: costMeasurements/0/costGroups/0/costs/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -1074,6 +1092,111 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### CostMeasurement
+
+`CostMeasurement` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/CostMeasurement
+```
+
+This sub-schema is referenced by the following properties:
+* [`costMeasurements`](project-schema.json,,costMeasurements)
+
+Each `CostMeasurement` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/CostMeasurement
+:collapse: id,date,costGroups
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements
+:title: costMeasurements
+```
+
+````
+
+`````
+
+### CostGroup
+
+`CostGroup` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/CostGroup
+```
+
+This sub-schema is referenced by the following properties:
+* [`CostMeasurement/costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups)
+
+Each `CostGroup` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/CostGroup
+:collapse: id,category,costs
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups
+:title: costMeasurements/0/costGroups
+```
+
+````
+
+`````
+
+### Cost
+
+`Cost` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Cost
+```
+
+This sub-schema is referenced by the following properties:
+* [`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)
+
+Each `Cost` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Cost
+:collapse: id,classification,value
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs
+:title: costMeasurements/0/costGroups/0/costs
 ```
 
 ````
