@@ -1898,7 +1898,7 @@
           flood protection
 
         Free text to add not mentioned sub-sectors
-    mapping: 'Project Level: Add the equivalent code from ProjectSector codelist to the `sector` array.'
+    mapping: 'Project Level: Map to `sector`, using the [ProjectSector codelist]((../../reference/codelists.md#projectsector).'
     example: |-
         {
           "sector": [
