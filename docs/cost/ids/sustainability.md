@@ -1031,14 +1031,29 @@ Indirect\]
 :columns: 8
 OC4IDS mapping
 ^^^
-See the data point "Number of beneficiaries" in the Social extension, adding "Climate finance" to the `benefit.description`.
+Project level: Add a new `benefit` object to the `benefits` array and set `.title` to "Climate finance beneficiaries".
+
+For direct beneficiaries:
+
+- Add a `Beneficiary` object to the `.beneficiaries` array.
+  - Set the `.description` to "direct beneficiaries".
+  - Set the number of people to `.numberOfPeople`.
+  - Add the location of the beneficiary population to `.location`
+
+For indirect beneficiaries:
+
+- Add a `Beneficiary` object to the `.beneficiaries` array.
+  - Set the `.description` to "indirect beneficiaries".
+  - Set the number of people to `.numberOfPeople`.
+  - Add the location of the beneficiary population to `.location`
 ```json
 {
   "benefits": [
     {
+      "title": "Cliamte finance beneficiaries",
       "beneficiaries": [
         {
-          "description": "Direct beneficiaries Climate finance",
+          "description": "Direct beneficiaries",
           "numberOfPeople": 1000,
           "location": {
             "id": "1",
@@ -1048,7 +1063,7 @@ See the data point "Number of beneficiaries" in the Social extension, adding "Cl
           }
         },
         {
-          "description": "Indirect beneficiaries Climate finance",
+          "description": "Indirect beneficiaries",
           "numberOfPeople": 2000,
           "location": {
             "id": "1",
@@ -2051,13 +2066,18 @@ Indicate the number of direct and indirect project beneficiaries (E.g. direct: \
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each beneficiary type add a `benefit` object to the `benefits` array.
+Project level: Add a `benefit` object to the `benefits` array.
+
 For direct beneficiaries:
 
+- Add a `Beneficiary` object to the `.beneficiaries` array.
 - Set the `.description` to "direct beneficiaries".
 - Set the number of people to `.numberOfPeople`.
 - Add the location of the beneficiary population to `.location`
-  For indirect beneficiaries:
+
+For indirect beneficiaries:
+
+- Add a `Beneficiary` object to the `.beneficiaries` array.
 - Set the `.description` to "indirect beneficiaries".
 - Set the number of people to `.numberOfPeople`.
 - Add the location of the beneficiary population to `.location`

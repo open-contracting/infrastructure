@@ -584,14 +584,30 @@
         Disclose who is the climate finance investment intended to benefit \[free text to explain the beneficiaries\] and number of beneficiaries. \[Select from the list:
         Direct
         Indirect\]
-    mapping: See the data point "Number of beneficiaries" in the Social extension, adding "Climate finance" to the `benefit.description`.
+    mapping: |-
+        Project level: Add a new `benefit` object to the `benefits` array and set `.title` to "Climate finance beneficiaries".
+
+        For direct beneficiaries:
+
+        - Add a `Beneficiary` object to the `.beneficiaries` array.
+          - Set the `.description` to "direct beneficiaries".
+          - Set the number of people to `.numberOfPeople`.
+          - Add the location of the beneficiary population to `.location`
+
+        For indirect beneficiaries:
+
+        - Add a `Beneficiary` object to the `.beneficiaries` array.
+          - Set the `.description` to "indirect beneficiaries".
+          - Set the number of people to `.numberOfPeople`.
+          - Add the location of the beneficiary population to `.location`
     example: |-
         {
           "benefits": [
             {
+              "title": "Cliamte finance beneficiaries",
               "beneficiaries": [
                 {
-                  "description": "Direct beneficiaries Climate finance",
+                  "description": "Direct beneficiaries",
                   "numberOfPeople": 1000,
                   "location": {
                     "id": "1",
@@ -601,7 +617,7 @@
                   }
                 },
                 {
-                  "description": "Indirect beneficiaries Climate finance",
+                  "description": "Indirect beneficiaries",
                   "numberOfPeople": 2000,
                   "location": {
                     "id": "1",
@@ -1174,13 +1190,18 @@
     indicator: Beneficiary population
     disclosure format: 'Indicate the number of direct and indirect project beneficiaries (E.g. direct: \[number\]; indirect: "number"). Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.'
     mapping: |-
-        Project level: For each beneficiary type add a `benefit` object to the `benefits` array.
+        Project level: Add a `benefit` object to the `benefits` array.
+
         For direct beneficiaries:
 
+        - Add a `Beneficiary` object to the `.beneficiaries` array.
         - Set the `.description` to "direct beneficiaries".
         - Set the number of people to `.numberOfPeople`.
         - Add the location of the beneficiary population to `.location`
-          For indirect beneficiaries:
+
+        For indirect beneficiaries:
+
+        - Add a `Beneficiary` object to the `.beneficiaries` array.
         - Set the `.description` to "indirect beneficiaries".
         - Set the number of people to `.numberOfPeople`.
         - Add the location of the beneficiary population to `.location`
