@@ -29,7 +29,8 @@
   * `.milestones`
   * `ContractingProcesses.milestones`
 * [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
-* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`.
+* [#441](https://github.com/open-contracting/infrastructure/pull/441) - add `environment.hasImpactAssessment` and `environment.impactCategories`.
 
 ### Codelists
 
