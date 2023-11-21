@@ -99,7 +99,8 @@
         "construction",
         "rehabilitation",
         "replacement",
-        "expansion"
+        "expansion",
+        "decommissioning"
       ],
       "codelist": "projectType.csv",
       "openCodelist": false
