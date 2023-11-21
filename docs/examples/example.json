@@ -987,6 +987,12 @@
         "goals": [
           "climateChangeMitigation"
         ]
+      },
+      "policyAlignment": {
+        "policies": [
+          "infrastructurePlan"
+        ],
+        "description": "The project is intended to contribute towards the goals set out in the 2021 Australian Infrastructure Plan."
       }
     }
   ]

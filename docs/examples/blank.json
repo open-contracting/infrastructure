@@ -444,5 +444,11 @@
     "goals": [
       "string"
     ]
+  },
+  "policyAlignment": {
+    "policies": [
+      "string"
+    ],
+    "description": "string"
   }
 }
