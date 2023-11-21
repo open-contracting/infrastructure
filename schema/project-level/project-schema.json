@@ -456,23 +456,15 @@
             "sustainability": {
               "title": "Sustainability",
               "description": "Information about how the contracting process incorporates sustainable public procurement.",
-              "type": "object",
-              "properties": {
-                "strategies": {
-                  "title": "Strategies",
-                  "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy)",
-                  "type": [
-                    "array"
-                  ],
-                  "items": {
-                    "type": "string"
-                  },
-                  "codelist": "sustainabilityStrategy.csv",
-                  "openCodelist": true,
-                  "minItems": 1
-                }
+              "type": [
+                "array"
+              ],
+              "items": {
+                "$ref": "#/definitions/Sustainability"
               },
-              "minProperties": 1
+              "wholeListMerge": true,
+              "uniqueItems": true,
+              "minItems": 1
             }
           },
           "minProperties": 1
@@ -2329,6 +2321,27 @@
             "string"
           ],
           "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Sustainability": {
+      "title": "Sustainability",
+      "description": "Information about how the contracting process incorporates sustainable public procurement.",
+      "type": "object",
+      "properties": {
+        "strategies": {
+          "title": "Strategies",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy)",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "sustainabilityStrategy.csv",
+          "openCodelist": true,
+          "minItems": 1
         }
       },
       "minProperties": 1

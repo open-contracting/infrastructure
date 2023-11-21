@@ -1079,3 +1079,32 @@ Each `MilestoneReference` has the following fields:
 ````
 
 `````
+
+### Sustainability
+
+`Sustainability` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Sustainability
+```
+
+This sub-schema is referenced by the following properties:
+
+Each `Sustainability` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Sustainability
+:collapse: strategies
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+````
+
+`````
