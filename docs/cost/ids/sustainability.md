@@ -837,12 +837,12 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
-    "climateChangeGoals": [
-      "mitigation"
+    "goals": [
+      "climateChangeMitigation"
     ]
   }
 }
@@ -941,9 +941,19 @@ Identify who approved the climate finance investment in the country (organizatio
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its `.roles` array.
 ```json
-
+{
+  "parties": [
+    {
+      "id": "1",
+      "name": "Presidential Climate Commission",
+      "roles": [
+        "climateFinanceFocalPoint"
+      ]
+    }
+  ]
+}
 ```
 ````
 
@@ -1869,9 +1879,31 @@ Identify the asset for disposal purpose \[free text\]
 :columns: 8
 OC4IDS mapping
 ^^^
+For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
+1. Set `.type` to 'decommissioning'
+
+2. Set `.title` to the name of the asset
+
+3. Add a `RelatedProject` object to the `.relatedProjects` array and set its:
+
+- `.id` and `.title` to the `.id` and `.title` of the OC4IDS project for the replacement of the asset
+- `.scheme` to 'oc4ids'
+- `.relationship` to 'replacement'
 ```json
-
+{
+  "id": "oc4ids-bu3kcz-123456789",
+  "title": "Otahuhu B Power Station",
+  "type": "decommissioning",
+  "relatedProjects": [
+    {
+      "id": "oc4ids-bu3kcz-987654321",
+      "scheme": "oc4ids",
+      "title": "Otahuhu C Power Station",
+      "relationship": "replacement"
+    }
+  ]
+}
 ```
 ````
 

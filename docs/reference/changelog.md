@@ -36,6 +36,13 @@
     * `completionPeriod`
     * `maintenancePeriod`
     * `decommissioningPeriod`
+  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`.
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426):
+    * `.transactions`
+    * `.milestones`
+    * `ContractingProcesses.milestones`
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`.
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `Organization.beneficialOwners`
 
 ### Codelists
 
@@ -47,12 +54,15 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
-* [#432](https://github.com/open-contracting/infrastructure/pull/432):
-  * Add codes to projectStatus codelist:
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+* Add codes:
+  * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
+  * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
+  * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
     * 'maintenance' 
     * 'decommissioning'
     * 'decommissioned'
-  * Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
+* [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
 

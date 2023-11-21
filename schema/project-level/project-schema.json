@@ -132,7 +132,8 @@
         "construction",
         "rehabilitation",
         "replacement",
-        "expansion"
+        "expansion",
+        "decommissioning"
       ],
       "codelist": "projectType.csv",
       "openCodelist": false
@@ -329,6 +330,31 @@
       ],
       "default": "en",
       "minLength": 1
+    },
+    "environment": {
+      "title": "Environment",
+      "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
+      "type": "object",
+      "properties": {
+        "goals": {
+          "title": "Environmental goals",
+          "description": "The environmental goals pursued, using the closed [environmentalGoal](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "climateChangeAdaptation",
+              "climateChangeMitigation"
+            ]
+          },
+          "codelist": "environmentalGoal.csv",
+          "openCodelist": false,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
     }
   },
   "definitions": {
