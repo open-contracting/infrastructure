@@ -245,11 +245,13 @@
             "name": "string",
             "id": ""
           },
-          "sustainability": {
-            "strategies": [
-              "string"
-            ]
-          }
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
