@@ -837,7 +837,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -1389,9 +1389,23 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
+Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in `documents` with `.documentType` set to 'abatementCostMethodology'.
 ```json
-
+{
+  "environment": {
+    "abatementCost": {
+      "amount": 50000,
+      "currency": "USD"
+    }
+  },
+  "documents": [
+    {
+      "id": "1",
+      "documentType": "abatementCostMethodology",
+      "url": "http://example.com/abatementCostMethodology.pdf"
+    }
+  ]
+}
 ```
 ````
 

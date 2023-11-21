@@ -64,3 +64,4 @@ contractAmendment,Contract amendment,A legal document that changes or adds to th
 designReport,Project design report,"A record of the justification for the design approach adopted in the project, typically issued before the works start, by the consultant or firm that will supervise the works.",OC4IDS
 paymentCertificate,Payment certificate,A document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved.,OC4IDS
 escalationApproval,Escalation approval,Documentation of one or more approved escalations of the contract price during the project life-cycle.,OC4IDS
+abatementCostMethodology,Abatement cost methodology,The methodology used to calculate the project's abatement cost.,OC4IDS

@@ -443,6 +443,10 @@
   "environment": {
     "goals": [
       "string"
-    ]
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    }
   }
 }

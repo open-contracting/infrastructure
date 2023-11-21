@@ -986,7 +986,11 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
-        ]
+        ],
+        "abatementCost": {
+          "amount": 50000,
+          "currency": "USD"
+        }
       }
     }
   ]

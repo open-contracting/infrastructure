@@ -359,6 +359,7 @@ Each `Location` has the following fields:
 This sub-schema is referenced by the following properties:
 * [`budget/amount`](project-schema.json,,budget/amount)
 * [`completion/finalValue`](project-schema.json,,completion/finalValue)
+* [`environment/abatementCost`](project-schema.json,,environment/abatementCost)
 * [`ContractingProcessSummary/tender/costEstimate`](project-schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)
 * [`ContractingProcessSummary/contractValue`](project-schema.json,/definitions/ContractingProcessSummary,contractValue)
 * [`ContractingProcessSummary/finalValue`](project-schema.json,/definitions/ContractingProcessSummary,finalValue)
@@ -432,6 +433,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/completion/finalValue
 :title: completion/finalValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/environment/abatementCost
+:title: environment/abatementCost
 ```
 
 ````

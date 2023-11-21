@@ -783,8 +783,23 @@
     module: Climate finance
     indicator: Climate impact
     disclosure format: Disclose the cost per tonne of CO2 equivalent \[value, currency\].
-    mapping: Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
-    example: ''
+    mapping: Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in `documents` with `.documentType` set to 'abatementCostMethodology'.
+    example: |-
+        {
+          "environment": {
+            "abatementCost": {
+              "amount": 50000,
+              "currency": "USD"
+            }
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "abatementCostMethodology",
+              "url": "http://example.com/abatementCostMethodology.pdf"
+            }
+          ]
+        }
 -   id: '3.18'
     title: Non-climate co-benefits
     module: Climate finance
