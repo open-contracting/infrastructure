@@ -28,12 +28,14 @@
   * `.transactions`
   * `.milestones`
   * `ContractingProcesses.milestones`
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
 * [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
 * add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
