@@ -2249,12 +2249,12 @@ Contracting process level:
 
 Publish a summary of the labor obligations:
 
-1. For each labor obligation in the contract, add a code from the laborObligations codelist to the`.summary.social.laborObligations.obligations` array.
+1. For each labor obligation in the contract, add a code from the [laborObligations](https://standard.open-contracting.org/infrastructure/%7B%7Bversion%7D%7D/%7B%7Blang%7D%7D/reference/codelists/#laborobligations) codelist to the`.summary.social.laborObligations.obligations` array.
 2. Optionally, add a further explanation of the labor obligations to `.summary.social.laborObligations.description`.
 
-Publish the bidding documents that specify labor obligations: Add a document to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'biddingDocuments' and set its `.url` to the URL at which the documents are available.
+Publish the bidding documents that specify labor obligations: [Add a contracting process document](../common.md#add-a-contracting-process-document), to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'biddingDocuments' and set its `.url` to the URL at which the documents are available.
 
-Publish the signed contract that includes labor obligations:  Add a document to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'contractSigned' and set its `.url` to the URL at which the signed contract that includes labor obligations is accessible.
+Publish the signed contract that includes labor obligations:  [Add a contracting process document](../common.md#add-a-contracting-process-document), to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'contractSigned' and set its `.url` to the URL at which the signed contract that includes labor obligations is accessible.
 ```json
 {
   "contractingProcesses": [
@@ -2307,7 +2307,7 @@ Disclose the amount allocated by the main contractor to cover for labour costs (
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.
+Contracting process level: Map to `.summary.social.laborBudget`.
 ```json
 {
   "contractingProcesses": [
