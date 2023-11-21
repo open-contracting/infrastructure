@@ -29,12 +29,17 @@
   * `.milestones`
   * `ContractingProcesses.milestones`
 * [#428](https://github.com/open-contracting/infrastructure/pull/428) - add `lobbyingMeetings` and `social.consultationMeetings` fields.
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
 * [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
+* Add codes:
+  * partyRole:
+    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
+* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
 * add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country

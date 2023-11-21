@@ -1022,6 +1022,11 @@
             "numberOfParticipants": "25"
           }
         ]
+      },
+      "environment": {
+        "goals": [
+          "climateChangeMitigation"
+        ]
       }
     }
   ]

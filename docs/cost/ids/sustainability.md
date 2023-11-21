@@ -828,12 +828,12 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array
+Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
-    "climateChangeGoals": [
-      "mitigation"
+    "goals": [
+      "climateChangeMitigation"
     ]
   }
 }
@@ -932,6 +932,20 @@ Identify who approved the climate finance investment in the country (organizatio
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level: [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its `.roles` array.
+```json
+{
+  "parties": [
+    {
+      "id": "1",
+      "name": "Presidential Climate Commission",
+      "roles": [
+        "climateFinanceFocalPoint"
+      ]
+    }
+  ]
+}
+```
 
 ````
 

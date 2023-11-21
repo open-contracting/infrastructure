@@ -449,3 +449,5 @@ social/consultationMeetings/publicOfficial/organization,Organization reference,F
 social/consultationMeetings/publicOfficial/organization/name,Organization name,True,
 social/consultationMeetings/publicOfficial/organization/id,Organization ID,True,
 social/consultationMeetings/publicOfficial/jobTitle,Job title,True,
+environment,Environment,False,
+environment/goals,Environmental goals,False,
