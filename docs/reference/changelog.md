@@ -23,13 +23,12 @@
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
 * Add fields:
   * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
-  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `.contractingProcesses.summary.tender.datePublished`
-  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `.identifiers`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426):
-    * `.transactions`
-    * `.milestones`
-    * `ContractingProcesses.milestones`
-  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `Organization.beneficialOwners`
+  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
+  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
   * [#432](https://github.com/open-contracting/infrastructure/pull/432):
     * `identificationPeriod`
     * `preparationPeriod`
@@ -52,8 +51,8 @@
   * Add codes to projectStatus codelist:
     * 'maintenance' 
     * 'decommissioning'
-    * 'decommissioned;
-  * Deprecate 'completed' in favour of 'maintenance'
+    * 'decommissioned'
+  * Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
 
