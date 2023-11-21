@@ -989,6 +989,11 @@
         "finalValueDetails": "Budget increase due to construction delay.",
         "finalScope": "Upgrade of Junctions 4 and 5 and repairs to the watercourse at Junction 5.",
         "finalScopeDetails": "Scope was expanded to include repairs to a watercourse damaged during construction excavation."
+      },
+      "environment": {
+        "goals": [
+          "climateChangeMitigation"
+        ]
       }
     }
   ]

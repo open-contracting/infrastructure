@@ -486,12 +486,12 @@
         - mitigation
         - adaptation
         - cross-cutting
-    mapping: 'Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array'
+    mapping: 'Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array'
     example: |-
         {
           "environment": {
-            "climateChangeGoals": [
-              "mitigation"
+            "goals": [
+              "climateChangeMitigation"
             ]
           }
         }
