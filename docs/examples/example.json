@@ -312,6 +312,29 @@
           "roles": [
             "supplier",
             "tenderer"
+          ],
+          "beneficialOwners": [
+            {
+              "id": "1",
+              "name": "Juan Perez",
+              "identifier": {
+                "scheme": "PRY-IDCARD",
+                "id": "12345"
+              },
+              "nationalities": [
+                "PY"
+              ],
+              "address": {
+                "streetAddress": "Avenida Eusebio Ayala 1347",
+                "locality": "Asunción",
+                "region": "Gran Asunción",
+                "postalCode": "1001",
+                "countryName": "Paraguay"
+              },
+              "email": "jperez@example.com",
+              "faxNumber": "+595210000001",
+              "telephone": "+595210000000"
+            }
           ]
         },
         {
@@ -959,6 +982,11 @@
         "finalValueDetails": "Budget increase due to construction delay.",
         "finalScope": "Upgrade of Junctions 4 and 5 and repairs to the watercourse at Junction 5.",
         "finalScopeDetails": "Scope was expanded to include repairs to a watercourse damaged during construction excavation."
+      },
+      "environment": {
+        "goals": [
+          "climateChangeMitigation"
+        ]
       }
     }
   ]

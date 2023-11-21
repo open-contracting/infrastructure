@@ -486,12 +486,12 @@
         - mitigation
         - adaptation
         - cross-cutting
-    mapping: 'Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array'
+    mapping: 'Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array'
     example: |-
         {
           "environment": {
-            "climateChangeGoals": [
-              "mitigation"
+            "goals": [
+              "climateChangeMitigation"
             ]
           }
         }
@@ -1769,8 +1769,33 @@
     module: Institutional
     indicator: Access to information
     disclosure format: Disclose the beneficial owners of the contractors and suppliers appointed in the project (E.g. \[name, identifier\]).
-    mapping: Use modelling from OCDS Beneficial Owners extension
-    example: ''
+    mapping: |-
+        For each beneficial owner:
+
+        - Get the `Organization` in `.parties` that represents the contractor or supplier.
+        - Add a `Person` object to the organization's `.beneficialOwners` array.
+        - Set the person's:
+          - `.id` incrementally
+          - `.name` to the beneficial owner's name
+          - `.identifier` to the beneficial owner's identifier
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "beneficialOwners": [
+                {
+                  "id": "1",
+                  "name": "Juan Perez",
+                  "identifier": {
+                    "scheme": "PRY-IDCARD",
+                    "id": "12345"
+                  }
+                }
+              ]
+            }
+          ]
+        }
 -   id: '5.6'
     title: Sustainability criteria
     module: Institutional

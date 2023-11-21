@@ -334,12 +334,16 @@ def update_sub_schema_reference(schema):
         ])
 
         # Paths that don't appear in the example data at all
-        paths_to_skip = ['forecasts/0/observations/0/value', 'metrics/0/observations/0/value']
+        paths_to_skip = ['forecasts/0/observations/0/value',
+                         'metrics/0/observations/0/value',
+                         'parties/0/beneficialOwners/0',
+                         'parties/0/people/0/address',
+                         'parties/0/people/0/identifier']
 
         # Add examples
         definition["references"] = get_definition_references(schema, defn)
         for ref in definition["references"]:
-            if ref[0] not in schema['definitions'] and '/'.join(ref) not in paths_to_skip:
+            if ref[0] not in schema['definitions'] and not any(p == '/'.join(ref)[:len(p)] for p in paths_to_skip):
                 if ref[-1] == '0':
                     ref.pop(-1)
 
@@ -453,7 +457,8 @@ def update(ppp_base_url):
 
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
-    builder = ProfileBuilder('1__1__5', {'budget': 'master', 'transaction_milestones': 'master'})
+    builder = ProfileBuilder('1__1__5',
+                             {'budget': 'master', 'transaction_milestones': 'master', 'beneficialOwners': 'master'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -474,6 +479,7 @@ def update(ppp_base_url):
         'relatedProjectScheme.csv',
         'relatedProject.csv',
         'classificationScheme.csv',
+        'country.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -499,7 +505,6 @@ def update(ppp_base_url):
         'LinkedRelease',  # Similar to linked release in OCDS
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
-        'Person',
         'SimpleIdentifier',
     }
     ocds_definitions = {
@@ -519,6 +524,7 @@ def update(ppp_base_url):
         'Transaction',
         'Milestone',
         'MilestoneReference',
+        'Person',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -749,6 +755,14 @@ def update(ppp_base_url):
     })
     # Original from standard: "The title of the milestone being referenced, this must match the title of a milestone described elsewhere in a release about this contracting process." # noqa: E501
     schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`."  # noqa: E501
+
+    copy_element('Person')
+    schema['definitions']['Person']['properties']['jobTitle'] = {
+          "title": "Job title",
+          "description": "The job title of the person (for example, Financial Manager).",
+          "type": "string",
+          "minLength": 1
+        }
 
     remove_null_and_pattern_properties(schema)
     remove_integer_identifier_types(schema)

@@ -165,6 +165,29 @@
           "name": "",
           "jobTitle": ""
         }
+      ],
+      "beneficialOwners": [
+        {
+          "id": "string",
+          "name": "string",
+          "identifier": {
+            "scheme": "string",
+            "id": "string"
+          },
+          "nationalities": [
+            "string"
+          ],
+          "address": {
+            "streetAddress": "string",
+            "locality": "string",
+            "region": "string",
+            "postalCode": "string",
+            "countryName": "string"
+          },
+          "email": "string",
+          "faxNumber": "string",
+          "telephone": "string"
+        }
       ]
     }
   ],
@@ -416,5 +439,10 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
+  },
+  "environment": {
+    "goals": [
+      "string"
+    ]
   }
 }

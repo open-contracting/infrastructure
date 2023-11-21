@@ -837,12 +837,12 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the climateChangeGoal codelist to the `environment.climateChangeGoal` array
+Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
-    "climateChangeGoals": [
-      "mitigation"
+    "goals": [
+      "climateChangeMitigation"
     ]
   }
 }
@@ -2893,9 +2893,32 @@ Disclose the beneficial owners of the contractors and suppliers appointed in the
 :columns: 8
 OC4IDS mapping
 ^^^
-Use modelling from OCDS Beneficial Owners extension
-```json
+For each beneficial owner:
 
+- Get the `Organization` in `.parties` that represents the contractor or supplier.
+- Add a `Person` object to the organization's `.beneficialOwners` array.
+- Set the person's:
+  - `.id` incrementally
+  - `.name` to the beneficial owner's name
+  - `.identifier` to the beneficial owner's identifier
+```json
+{
+  "parties": [
+    {
+      "id": "1",
+      "beneficialOwners": [
+        {
+          "id": "1",
+          "name": "Juan Perez",
+          "identifier": {
+            "scheme": "PRY-IDCARD",
+            "id": "12345"
+          }
+        }
+      ]
+    }
+  ]
+}
 ```
 ````
 
