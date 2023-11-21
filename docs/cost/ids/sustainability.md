@@ -941,9 +941,19 @@ Identify who approved the climate finance investment in the country (organizatio
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its `.roles` array.
 ```json
-
+{
+  "parties": [
+    {
+      "id": "1",
+      "name": "Presidential Climate Commission",
+      "roles": [
+        "climateFinanceFocalPoint"
+      ]
+    }
+  ]
+}
 ```
 ````
 

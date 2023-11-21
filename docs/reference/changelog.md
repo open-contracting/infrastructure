@@ -36,6 +36,9 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
 * [#435](https://github.com/open-contracting/infrastructure/pull/435) - add sustainability sector codes to projectSector codelist.
+* Add codes:
+  * partyRole:
+    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
 * [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
 * add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
