@@ -2332,7 +2332,7 @@
       "properties": {
         "strategies": {
           "title": "Strategies",
-          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy)",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy) codelist.",
           "type": [
             "array"
           ],

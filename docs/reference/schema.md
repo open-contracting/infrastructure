@@ -1089,6 +1089,8 @@ Each `MilestoneReference` has the following fields:
 
 This sub-schema is referenced by the following properties:
 
+* [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
+
 Each `Sustainability` has the following fields:
 
 `````{tab-set}
@@ -1104,6 +1106,11 @@ Each `Sustainability` has the following fields:
 ````
 
 ````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
+:title: contractingProcesses/0/summary/tender/sustainability
+```
 
 ````
 
