@@ -28,6 +28,30 @@
         "endDate": "2018-12-10T00:00:00Z",
         "durationInDays": 1074
       },
+      "identificationPeriod": {
+        "startDate": "2016-01-01T00:00:00Z",
+        "endDate": "2016-06-30T00:00:00Z"
+      },
+      "preparationPeriod": {
+        "startDate": "2016-07-01T00:00:00Z",
+        "endDate": "2016-12-31T00:00:00Z"
+      },
+      "implementationPeriod": {
+        "startDate": "2017-01-01T00:00:00Z",
+        "endDate": "2017-06-30T00:00:00Z"
+      },
+      "completionPeriod": {
+        "startDate": "2017-07-01T00:00:00Z",
+        "endDate": "2017-12-31T00:00:00Z"
+      },
+      "maintenancePeriod": {
+        "startDate": "2018-01-01T00:00:00Z",
+        "endDate": "2040-07-01T00:00:00Z"
+      },
+      "decommissioningPeriod": {
+        "startDate": "2040-07-01T00:00:00Z",
+        "endDate": "2041-06-30T00:00:00Z"
+      },
       "sector": [
         "transport",
         "transport.road"
@@ -1014,6 +1038,11 @@
         "finalValueDetails": "Budget increase due to construction delay.",
         "finalScope": "Upgrade of Junctions 4 and 5 and repairs to the watercourse at Junction 5.",
         "finalScopeDetails": "Scope was expanded to include repairs to a watercourse damaged during construction excavation."
+      },
+      "environment": {
+        "goals": [
+          "climateChangeMitigation"
+        ]
       }
     }
   ]

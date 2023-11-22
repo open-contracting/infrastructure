@@ -55,6 +55,13 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 :file: ../../build/current_lang/codelists/country.csv
 ```
 
+### EnvironmentalGoal
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/environmentalGoal.csv
+```
+
 ### MilestoneType
 
 ```{csv-table-no-translate}

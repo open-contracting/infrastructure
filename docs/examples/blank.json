@@ -16,6 +16,42 @@
     "maxExtentDate": "string",
     "durationInDays": "integer"
   },
+  "identificationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "preparationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "implementationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "completionPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "maintenancePeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "decommissioningPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
   "sector": [],
   "purpose": "",
   "additionalClassifications": [
@@ -468,5 +504,10 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
+  },
+  "environment": {
+    "goals": [
+      "string"
+    ]
   }
 }
