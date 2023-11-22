@@ -37,6 +37,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.details.classifications`
 
 ### Codelists
 
