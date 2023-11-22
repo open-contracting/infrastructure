@@ -36,13 +36,7 @@
     * `completionPeriod`
     * `maintenancePeriod`
     * `decommissioningPeriod`
-  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`.
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426):
-    * `.transactions`
-    * `.milestones`
-    * `ContractingProcesses.milestones`
-  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`.
-  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `Organization.beneficialOwners`
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
 
 ### Codelists
 
