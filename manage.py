@@ -338,7 +338,10 @@ def update_sub_schema_reference(schema):
                          'metrics/0/observations/0/value',
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
-                         'parties/0/people/0/identifier']
+                         'parties/0/people/0/identifier',
+                         'contractingProcesses/0/summary/finance',
+                         'contractingProcesses/1/summary/finance',
+                         'contractingProcesses/2/summary/finance']
 
         # Add examples
         definition["references"] = get_definition_references(schema, defn)
@@ -480,6 +483,10 @@ def update(ppp_base_url):
         'relatedProject.csv',
         'classificationScheme.csv',
         'country.csv',
+        'assetClass.csv',
+        'debtRepaymentPriority.csv',
+        'financingArrangementType.csv',
+        'financingPartyType.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -495,6 +502,11 @@ def update(ppp_base_url):
         'milestoneType.csv',
         'milestoneStatus.csv',
         'milestoneCode.csv',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'assetClass.csv',
+        # 'debtRepaymentPriority.csv',
+        # 'financingArrangementType.csv',
+        # 'financingPartyType.csv',
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -506,6 +518,7 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'SimpleIdentifier',
+        'Finance',
     }
     ocds_definitions = {
         'Period',
@@ -525,6 +538,8 @@ def update(ppp_base_url):
         'Milestone',
         'MilestoneReference',
         'Person',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'Finance',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
