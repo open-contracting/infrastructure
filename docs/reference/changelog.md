@@ -37,6 +37,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
 
 ### Codelists
 
