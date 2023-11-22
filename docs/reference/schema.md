@@ -324,6 +324,7 @@ Each `Period` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
+* [`Organization/details/classifications`](project-schema.json,/definitions/Organization,details/classifications)
 
 Each `Classification` has the following fields:
 
@@ -344,6 +345,11 @@ Each `Classification` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/additionalClassifications
 :title: additionalClassifications
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/details/classifications
+:title: parties/0/details/classifications
 ```
 
 ````

@@ -351,7 +351,8 @@
           },
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
@@ -1302,6 +1303,27 @@
           "openCodelist": true,
           "uniqueItems": true,
           "minItems": 1
+        },
+        "details": {
+          "type": [
+            "object"
+          ],
+          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
+          "title": "Details",
+          "properties": {
+            "classifications": {
+              "title": "Organization classifications",
+              "description": "The classifications that categorize the organization",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Classification"
+              },
+              "wholeListMerge": true,
+              "uniqueItems": true,
+              "minItems": 1
+            }
+          },
+          "minProperties": 1
         },
         "beneficialOwners": {
           "title": "Beneficial owners",

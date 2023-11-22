@@ -224,7 +224,15 @@
           "faxNumber": "string",
           "telephone": "string"
         }
-      ]
+      ],
+      "details": {
+        "classifications": [
+          {
+            "id": "string",
+            "scheme": "string"
+          }
+        ]
+      }
     }
   ],
   "publicAuthority": {
