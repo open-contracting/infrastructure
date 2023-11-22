@@ -696,15 +696,42 @@
     module: Climate finance
     indicator: Accessibility/ efficiency
     disclosure format: Disclose dates for project preparation \[start date, end date\]
-    mapping: ''
-    example: ''
+    mapping: 'Project level: Map to `preparationPeriod`.'
+    example: |-
+        {
+          "preparationPeriod": {
+            "startDate": "2016-07-01T00:00:00Z",
+            "endDate": "2016-12-31T00:00:00Z"
+          }
+        }
 -   id: '3.14'
     title: Project approval period
     module: Climate finance
     indicator: Accessibility
     disclosure format: Disclose dates for project approval \[submission date, approval date\]
-    mapping: ''
-    example: ''
+    mapping: |-
+        Project level:
+
+        For each date:
+
+        - Add a `Milestone` to the `milestones` array and set its:
+          - `.id` incrementally
+          - `.type` to 'financing'
+          - `.status` to 'met'
+        - For the submission date, set the milestone's `.title` to "Climate finance submission" and its `.dateMet` to the date of the submission
+        - For the approval date, set the milestone's `.title` to "Climate finance approval" and its `.dateMet` to the date of the approval.
+    example: |-
+        {
+          "milestones": [
+            {
+              "id": "1",
+              "title": "Climate finance submission",
+              "type": "financing",
+              "dateMet": "2023-06-01T00:00:00Z",
+              "status": "met"
+            }
+          ]
+        }
 -   id: '3.15'
     title: Ratio of co-finance
     module: Climate finance
@@ -1090,8 +1117,14 @@
     module: Climate finance
     indicator: Stranded assets
     disclosure format: Intended start and end dates of decommissioning.
-    mapping: ''
-    example: ''
+    mapping: Map to `decommissioningPeriod`.
+    example: |-
+        {
+          "decommissioningPeriod": {
+            "startDate": "2040-07-01T00:00:00Z",
+            "endDate": "2041-06-30T00:00:00Z"
+          }
+        }
 -   id: '3.31'
     title: Decommission plan
     module: Climate finance

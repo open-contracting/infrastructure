@@ -1238,9 +1238,14 @@ Disclose dates for project preparation \[start date, end date\]
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: Map to `preparationPeriod`.
 ```json
-
+{
+  "preparationPeriod": {
+    "startDate": "2016-07-01T00:00:00Z",
+    "endDate": "2016-12-31T00:00:00Z"
+  }
+}
 ```
 ````
 
@@ -1262,9 +1267,28 @@ Disclose dates for project approval \[submission date, approval date\]
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+For each date:
+
+- Add a `Milestone` to the `milestones` array and set its:
+  - `.id` incrementally
+  - `.type` to 'financing'
+  - `.status` to 'met'
+- For the submission date, set the milestone's `.title` to "Climate finance submission" and its `.dateMet` to the date of the submission
+- For the approval date, set the milestone's `.title` to "Climate finance approval" and its `.dateMet` to the date of the approval.
 ```json
-
+{
+  "milestones": [
+    {
+      "id": "1",
+      "title": "Climate finance submission",
+      "type": "financing",
+      "dateMet": "2023-06-01T00:00:00Z",
+      "status": "met"
+    }
+  ]
+}
 ```
 ````
 
@@ -1901,9 +1925,14 @@ Intended start and end dates of decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Map to `decommissioningPeriod`.
 ```json
-
+{
+  "decommissioningPeriod": {
+    "startDate": "2040-07-01T00:00:00Z",
+    "endDate": "2041-06-30T00:00:00Z"
+  }
+}
 ```
 ````
 
