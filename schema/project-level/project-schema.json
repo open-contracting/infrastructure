@@ -329,7 +329,7 @@
       "properties": {
         "policies": {
           "title": "Policies",
-          "description": "The policies the project is in alignment with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
           "type": [
             "array"
           ],

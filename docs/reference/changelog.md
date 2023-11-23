@@ -41,8 +41,8 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
-  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal.
-  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment.
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
 
 ### Other
 
