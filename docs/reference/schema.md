@@ -212,6 +212,12 @@ Where the source system does not contain time information, a judgment ought to b
 
 This sub-schema is referenced by the following properties:
 * [`period`](project-schema.json,,period)
+* [`identificationPeriod`](project-schema.json,,identificationPeriod)
+* [`preparationPeriod`](project-schema.json,,preparationPeriod)
+* [`implementationPeriod`](project-schema.json,,implementationPeriod)
+* [`completionPeriod`](project-schema.json,,completionPeriod)
+* [`maintenancePeriod`](project-schema.json,,maintenancePeriod)
+* [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)
 * [`assetLifetime`](project-schema.json,,assetLifetime)
 * [`ContractingProcessSummary/contractPeriod`](project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
 * [`Modification/oldContractPeriod`](project-schema.json,/definitions/Modification,oldContractPeriod)
@@ -238,6 +244,36 @@ Each `Period` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/period
 :title: period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/identificationPeriod
+:title: identificationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/preparationPeriod
+:title: preparationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/implementationPeriod
+:title: implementationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/completionPeriod
+:title: completionPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/maintenancePeriod
+:title: maintenancePeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/decommissioningPeriod
+:title: decommissioningPeriod
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
