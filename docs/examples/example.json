@@ -1010,6 +1010,12 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
+        ],
+        "conservationMeasures": [
+          {
+            "type": "locationAnalysis",
+            "description": "Detailed GIS analysis was undertaken comparing multiple potential locations to select the final project site with the lowest potentially negative ecological impact."
+          }
         ]
       }
     }

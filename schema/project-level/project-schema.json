@@ -352,6 +352,17 @@
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
           "minItems": 1
+        },
+        "conservationMeasures": {
+          "title": "Conservation measures",
+          "description": "The measures adopted by the project to protect and enhance biodiversity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1,
+          "wholeListMerge": true
         }
       },
       "minProperties": 1
@@ -2367,6 +2378,27 @@
             "string"
           ],
           "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "ConservationMeasure": {
+      "title": "Conservation measure",
+      "description": "A measure adopted by the project to protect and enhance biodiversity.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of conservation measure, using the open [conservationMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "type": "string",
+          "codelist": "conservationMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the conservation measure.",
+          "type": "string"
         }
       },
       "minProperties": 1

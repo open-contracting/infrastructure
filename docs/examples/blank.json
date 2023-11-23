@@ -479,6 +479,12 @@
   "environment": {
     "goals": [
       "string"
+    ],
+    "conservationMeasures": [
+      {
+        "type": "string from conservationMeasure codelist",
+        "description": "string"
+      }
     ]
   }
 }
