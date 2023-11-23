@@ -53,9 +53,30 @@
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance' 
+    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
+  * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
+    * 'procurementStrategyRiskAssessment'
+    * 'lifeCycleCostMethodology'
+    * 'costBenefitAnalysis'
+    * 'environmentalExemption'
+    * 'climateAndDisasterRiskAssessment'
+    * 'climateTransformation'
+    * 'decommissioningPlans'
+    * 'impactMethodology'
+    * 'inclusiveDesign'
+    * 'inclusiveImplementation'
+    * 'supplierEnvironmentalCertification'
+    * 'supplierHealthAndSafetyCertification'
+    * 'antiCorruptionCertification'
+    * 'oversightReport'
+    * 'informationRequest'
+    * 'informationRequestResponse'
+    * 'buildingInspectionReport'
+    * 'ghgEmissionsForecast'
+    * 'ghgEmissionsReduction'
+    * 'ghgEmissions'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
