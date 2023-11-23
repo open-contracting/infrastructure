@@ -19,33 +19,53 @@
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
-* [#367](https://github.com/open-contracting/infrastructure/pull/367) - add approval date to budget breakdown.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
-* [#379](https://github.com/open-contracting/infrastructure/pull/379) - add `contractingProcesses.summary.tender.datePublished`.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
-* [#390](https://github.com/open-contracting/infrastructure/pull/390) - add `identifiers`.
-* [#426](https://github.com/open-contracting/infrastructure/pull/426) - add fields:
-  * `.transactions`
-  * `.milestones`
-  * `ContractingProcesses.milestones`
-* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add `environment.goals`.
-* [#427](https://github.com/open-contracting/infrastructure/pull/427) - add `Organization.beneficialOwners`
+* Add fields:
+  * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
+  * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
+  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
+  * [#432](https://github.com/open-contracting/infrastructure/pull/432):
+    * `identificationPeriod`
+    * `preparationPeriod`
+    * `implementationPeriod`
+    * `completionPeriod`
+    * `maintenancePeriod`
+    * `decommissioningPeriod`
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
-* [#435](https://github.com/open-contracting/infrastructure/pull/435) - add sustainability sector codes to projectSector codelist.
-* Add codes:
-  * partyRole:
-    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
-* [#431](https://github.com/open-contracting/infrastructure/pull/431) - add environmentalGoal codelist.
-* add codelists:
+* Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+* Add codes:
+  * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
+  * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
+  * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
+    * 'maintenance' 
+    * 'decommissioning'
+    * 'decommissioned'
+  * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
+    * 'energy.solar'
+    * 'energy.wind'
+    * 'energy.hydropower'
+    * 'energy.biomass'
+    * 'energy.geothermal'
+    * 'transport.lowCarbon'
+    * 'naturalResources'
+    * 'naturalResources.floodProtection'
+* [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
 

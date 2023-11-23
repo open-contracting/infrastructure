@@ -1238,9 +1238,14 @@ Disclose dates for project preparation \[start date, end date\]
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: Map to `preparationPeriod`.
 ```json
-
+{
+  "preparationPeriod": {
+    "startDate": "2016-07-01T00:00:00Z",
+    "endDate": "2016-12-31T00:00:00Z"
+  }
+}
 ```
 ````
 
@@ -1262,9 +1267,28 @@ Disclose dates for project approval \[submission date, approval date\]
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+For each date:
+
+- Add a `Milestone` to the `milestones` array and set its:
+  - `.id` incrementally
+  - `.type` to 'financing'
+  - `.status` to 'met'
+- For the submission date, set the milestone's `.title` to "Climate finance submission" and its `.dateMet` to the date of the submission
+- For the approval date, set the milestone's `.title` to "Climate finance approval" and its `.dateMet` to the date of the approval.
 ```json
-
+{
+  "milestones": [
+    {
+      "id": "1",
+      "title": "Climate finance submission",
+      "type": "financing",
+      "dateMet": "2023-06-01T00:00:00Z",
+      "status": "met"
+    }
+  ]
+}
 ```
 ````
 
@@ -1855,9 +1879,31 @@ Identify the asset for disposal purpose \[free text\]
 :columns: 8
 OC4IDS mapping
 ^^^
+For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
+1. Set `.type` to 'decommissioning'
+
+2. Set `.title` to the name of the asset
+
+3. Add a `RelatedProject` object to the `.relatedProjects` array and set its:
+
+- `.id` and `.title` to the `.id` and `.title` of the OC4IDS project for the replacement of the asset
+- `.scheme` to 'oc4ids'
+- `.relationship` to 'replacement'
 ```json
-
+{
+  "id": "oc4ids-bu3kcz-123456789",
+  "title": "Otahuhu B Power Station",
+  "type": "decommissioning",
+  "relatedProjects": [
+    {
+      "id": "oc4ids-bu3kcz-987654321",
+      "scheme": "oc4ids",
+      "title": "Otahuhu C Power Station",
+      "relationship": "replacement"
+    }
+  ]
+}
 ```
 ````
 
@@ -1879,9 +1925,14 @@ Intended start and end dates of decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Map to `decommissioningPeriod`.
 ```json
-
+{
+  "decommissioningPeriod": {
+    "startDate": "2040-07-01T00:00:00Z",
+    "endDate": "2041-06-30T00:00:00Z"
+  }
+}
 ```
 ````
 
