@@ -988,7 +988,7 @@
           "climateChangeMitigation"
         ],
         "abatementCost": {
-          "amount": 50000,
+          "amount": 12.29,
           "currency": "USD"
         }
       }
