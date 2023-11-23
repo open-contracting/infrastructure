@@ -896,7 +896,8 @@ guarantee | | 'guarantee'
           "debt"
         ],
         "type": "loan",
-        "concessional": false
+        "concessional": false,
+        "resultsBased": true
       }
     ]
   }
