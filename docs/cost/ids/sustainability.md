@@ -1413,12 +1413,12 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in `documents` with `.documentType` set to 'abatementCostMethodology'.
+Map to `environment.abatementCost`. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'abatementCostMethodology'.
 ```json
 {
   "environment": {
     "abatementCost": {
-      "amount": 50000,
+      "amount": 12.29,
       "currency": "USD"
     }
   },
