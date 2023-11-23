@@ -2355,7 +2355,7 @@
       "properties": {
         "title": {
           "title": "Title",
-          "description": "A short, locally unique title for the benefit.",
+          "description": "A title for the benefit.",
           "type": "string"
         },
         "description": {
