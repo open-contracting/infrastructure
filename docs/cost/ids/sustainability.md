@@ -1407,7 +1407,7 @@ OC4IDS mapping
         "interestRate": {
           "margin": 0.0075
         },
-        "description": "Annual principal repayment years 11\u201320 (% of initial principal): 6.7%. Service fee (per annum): 0.50%. Commitment fee (per annum): Up to 0.75%."
+        "description": "Annual principal repayment years 11-20 (% of initial principal): 6.7%. Service fee (per annum): 0.50%. Commitment fee (per annum): Up to 0.75%."
       }
     ]
   }
