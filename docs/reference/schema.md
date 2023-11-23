@@ -489,7 +489,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
-* [`PublicOfficial/organization`](project-schema.json,/definitions/PublicOfficial,organization)
+* [`PublicOffice/organization`](project-schema.json,/definitions/PublicOffice,organization)
 
 Each `OrganizationReference` has the following fields:
 
@@ -558,8 +558,13 @@ Each `OrganizationReference` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial/organization
-:title: lobbyingMeetings/0/publicOfficial/organization
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice/organization
+:title: lobbyingMeetings/0/publicOffice/organization
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
+:title: social/consultationMeetings/0/publicOffice/organization
 ```
 
 ````
@@ -1116,7 +1121,7 @@ Each `Meeting` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Meeting
-:collapse: id,date,address,numberOfParticipants,publicOfficial
+:collapse: id,date,address,numberOfParticipants,publicOffice
 :addtargets:
 ```
 
@@ -1138,24 +1143,24 @@ Each `Meeting` has the following fields:
 
 `````
 
-### PublicOfficial
+### PublicOffice
 
-`PublicOfficial` is defined as:
+`PublicOffice` is defined as:
 
-```{field-description} ../../build/current_lang/project-schema.json /definitions/PublicOfficial
+```{field-description} ../../build/current_lang/project-schema.json /definitions/PublicOffice
 ```
 
 This sub-schema is referenced by the following properties:
-* [`Meeting/publicOfficial`](project-schema.json,/definitions/Meeting,publicOfficial)
+* [`Meeting/publicOffice`](project-schema.json,/definitions/Meeting,publicOffice)
 
-Each `PublicOfficial` has the following fields:
+Each `PublicOffice` has the following fields:
 
 `````{tab-set}
 
 ````{tab-item} Schema
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/PublicOfficial
+:pointer: /definitions/PublicOffice
 :collapse: organization,jobTitle
 :addtargets:
 ```
@@ -1165,8 +1170,13 @@ Each `PublicOfficial` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/publicOfficial
-:title: lobbyingMeetings/0/publicOfficial
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
+:title: lobbyingMeetings/0/publicOffice
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
+:title: social/consultationMeetings/0/publicOffice
 ```
 
 ````

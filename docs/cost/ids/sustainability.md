@@ -828,7 +828,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -946,7 +946,6 @@ Project level: [Add an organization](../common.md#add-an-organization) for the d
   ]
 }
 ```
-
 ````
 
 `````
@@ -2092,7 +2091,7 @@ Project Level:
 
 For each meeting:
 
-1. Publish the meeting invite. Add a document, set its `.documentType` to 'consultationMeetingInvitation' and its `.url` to the URL at which the meeting invite is available.
+1. Publish the meeting invite. [Add a project document](../common.md#add-a-project-document) and set its `.documentType` to 'consultationMeetingInvitation'.
 
 2. Publish the meeting details. Add a `Meeting` object to the `.social.consultationMeetings` array and set:
 
@@ -2101,7 +2100,7 @@ For each meeting:
 - `.address` to the address of the meeting
 - `.numberOfparticipants` to the number of people that participated in the meeting
 
-3. Publish the meeting minutes. Add a document, set its `.documentType` to 'minutes.consultationMeeting' and its `.url` to the URL at which the meeting minutes are available.
+3. Publish the meeting minutes. [Add a project document](../common.md#add-a-project-document), set its `.documentType` to 'minutes.consultationMeeting'.
 ```json
 {
   "social": {
@@ -2780,17 +2779,17 @@ Project Level:
 
 For each meeting:
 
-1. Publish the meeting details. Add a `Meeting` object to the `.lobbyingMeetings` array and set:
-
-- `.id` incrementally
-- `.date` to the date of the meeting
-- `.address` to the address of the meeting
-- `.numberOfParticipants` to the number of people present at the meeting
-- `.publicOfficial.name` to the name of the person who was representing the organization at the meeting.
-- `.publicOfficial.organization` to the `.name` and `.id` of the organization the public official represents. These should match the organization's entry in the `parties` array
-  ` `.publicOfficial.jobTitle`to the job title of the person named in`.name\`
-
-2. Publish the meeting minutes. Add a document, set its `.documentType` to 'minutes.lobbyingMeeting' and its `.url` to the URL at which the meeting minutes are available.
+1. Publish the meeting details:
+2. Add a `Meeting` object to the `.lobbyingMeetings` array and set:
+   \- `.id` incrementally
+   \- `.date` to the date of the meeting
+   \- `.address` to the address of the meeting
+   \- `.numberOfParticipants` to the number of people present at the meeting
+   \- `.publicOffice.name` to the name of the person representing the public office present at the meeting
+   \- `.publicOffice.jobTitle` to the job title of the person representing the public office present at the meeting
+3. Get the `Organization` in `.parties` that represents the public office. If none exists yet, [add an organization](../common.md#add-an-organization).
+4. Set the meeting's `.publicOffice.organization` to the `.id` and `.name` of the organization.
+5. Publish the meeting minutes. [Add a project document](../common.md#add-a-project-document) and set its `.documentType` to 'minutes.lobbyingMeeting'.
 ```json
 {
   "lobbyingMeetings": [
@@ -2805,7 +2804,7 @@ For each meeting:
         "countryName": "United Kingdom"
       },
       "numberOfParticipants": 4,
-      "publicOfficial": {
+      "publicOffice": {
         "person": {
           "name": "Brett Gliddon"
         },

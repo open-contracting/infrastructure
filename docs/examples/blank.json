@@ -452,7 +452,7 @@
       },
       "date": "date-time",
       "numberOfParticipants": "integer",
-      "publicOfficial": {
+      "PublicOffice": {
         "person": {
           "name": "string"
         },
@@ -477,7 +477,7 @@
         },
         "date": "date-time",
         "numberOfParticipants": "integer",
-        "publicOfficial": {
+        "publicOffice": {
           "person": {
             "name": "string"
           },
