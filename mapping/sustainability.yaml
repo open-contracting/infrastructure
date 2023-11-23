@@ -1905,11 +1905,11 @@
           geothermal
         - Low carbon transport
         - Water and wastewater management
-        - Natural resource management
+        - Natural resource management:
           flood protection
 
         Free text to add not mentioned sub-sectors
-    mapping: 'Project Level: Map to `sector`, using the [ProjectSector codelist]((../../reference/codelists.md#projectsector).'
+    mapping: 'Project Level: Map to `sector`, using the \[ProjectSector codelist\]((../../reference/codelists.md#projectsector).'
     example: |-
         {
           "sector": [

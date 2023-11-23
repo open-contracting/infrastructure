@@ -1,12 +1,12 @@
 Code,Title,Description
 education,Education,"Education, including schools, universities and other learning and training facilities"
 health,Health,"Health, including hospitals, healthcare and human services"
-energy,Energy,"Energy, including electric power generation, and the transmission and distribution of electricity, oil and gas, for example: power plants, power lines, gas pipelines. A more detailed breakdown may be provided using the energy.[source] codes."
-energy.solar,Solar energy,Energy the earth receives from the sun in the form of electromagnetic radiation.
-energy.wind,Wind energy,Energy obtained by harnessing the movement of the wind.
+energy,Energy,"Energy, including electric power generation, and the transmission and distribution of electricity, oil and gas, for example: power plants, power lines, gas pipelines."
+energy.solar,Solar energy,Energy generated from electromagnetic radiation from the Sun.
+energy.wind,Wind energy,Energy generated from air movement in Earth's atmosphere.
 energy.hydropower,Hydropower energy,Energy generated from falling or running water.
-energy.biomass,Biomass energy,Energy contained within living or recently living biological organisms.
-energy.geothermal,Geothermal energy,Heat energy harvested directly from the earth.
+energy.biomass,Biomass energy,Energy generated from recently living organisms.
+energy.geothermal,Geothermal energy,Thermal energy in Earth's crust.
 communications,Communications,"Communications, including ICT, IT, telecommunications, postal facilities, high-speed internet, broadband"
 waterAndWaste,Water and waste,"Water and waste, including sanitation and wastewater"
 governance,Governance,"Governance, including government accommodations, public buildings, government offices; justice, courts; emergency services / response, local security; security, prisons, corrections; defence, military"
@@ -20,5 +20,5 @@ transport.road,Road transport,"Road transport, including roads, highways, street
 transport.urban,Urban transport,"Urban transport, including mass transit, urban mobility, buses, cycling, walking and taxi"
 transport.lowCarbon,Low-carbon transport,"Low-carbon sustainable transport, including urban mobility, cycling, air and water vehicles powered by renewable energy sources."
 socialHousing,Social housing,Social housing
-naturalResources,Natural resources,"The management of natural resources including forests, land, water and soil. A more detailed breakdown may be provided using the naturalResources.[subsector] codes."
+naturalResources,Natural resources,"The management of natural resources including forests, land, water and soil."
 naturalResources.floodProtection,Flood protection,"Flood protection including hard infrastructure such as flood walls and flood gates, and soft infrastructure."

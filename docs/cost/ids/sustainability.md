@@ -837,7 +837,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the relevant code from the environmentalGoal codelist to the `environment.goals` array
+Project level: Add the relevant codes from the environmentalGoal codelist to the `environment.goals` array
 ```json
 {
   "environment": {
@@ -3116,7 +3116,7 @@ Select from a list (non-exhaustive):
   geothermal
 - Low carbon transport
 - Water and wastewater management
-- Natural resource management
+- Natural resource management:
   flood protection
 
 Free text to add not mentioned sub-sectors
@@ -3126,7 +3126,7 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Add the equivalent code from ProjectSector codelist to the `sector` array.
+Project Level: Map to `sector`, using the \[ProjectSector codelist\]((../../reference/codelists.md#projectsector).
 ```json
 {
   "sector": [
