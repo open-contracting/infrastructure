@@ -487,7 +487,6 @@
               "items": {
                 "$ref": "#/definitions/Sustainability"
               },
-              "wholeListMerge": true,
               "uniqueItems": true,
               "minItems": 1
             }

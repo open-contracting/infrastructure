@@ -43,7 +43,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
-* [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
 
 ### Other
 
