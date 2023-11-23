@@ -341,10 +341,10 @@ Project level:
 
 If an environmental impact assessment was conducted:
 
-- set `.environment.hasImpactAssessment` to true.
+- Set `.environment.hasImpactAssessment` to `true`.
 - Add a `Classification` object to the `.environment.impactCategories` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
 
-If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
+If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to `false`.
 ```json
 {
   "environment": {
