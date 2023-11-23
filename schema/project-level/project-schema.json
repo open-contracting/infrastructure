@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "https://standard.open-contracting.org/infrastructure/schema/0__9__3/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
-  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
+  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/resource/977/). OC4IDS defines an \"infrastructure project\" as: \"the development, maintenance and decommissioning of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus. Development covers project identification, preparation, implementation and completion.\"",
   "type": "object",
   "required": [
     "id"
@@ -51,7 +51,10 @@
         "preparation",
         "implementation",
         "completion",
+        "maintenance",
+        "decommissioning",
         "completed",
+        "decommissioned",
         "cancelled"
       ],
       "codelist": "projectStatus.csv",
@@ -60,6 +63,36 @@
     "period": {
       "title": "Project period",
       "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
+      "$ref": "#/definitions/Period"
+    },
+    "identificationPeriod": {
+      "title": "Identification period",
+      "description": "The period over which the identification stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "preparationPeriod": {
+      "title": "Preparation period",
+      "description": "The period over which the preparation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "implementationPeriod": {
+      "title": "Implementation period",
+      "description": "The period over which the implementation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "completionPeriod": {
+      "title": "Completion period",
+      "description": "The period over which the completion stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "maintenancePeriod": {
+      "title": "Maintenance period",
+      "description": "The period over which the maintenance stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "decommissioningPeriod": {
+      "title": "Decommissioning period",
+      "description": "The period over which the decommissioning stage is planned to run.",
       "$ref": "#/definitions/Period"
     },
     "sector": {
@@ -99,7 +132,8 @@
         "construction",
         "rehabilitation",
         "replacement",
-        "expansion"
+        "expansion",
+        "decommissioning"
       ],
       "codelist": "projectType.csv",
       "openCodelist": false
@@ -296,6 +330,31 @@
       ],
       "default": "en",
       "minLength": 1
+    },
+    "environment": {
+      "title": "Environment",
+      "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
+      "type": "object",
+      "properties": {
+        "goals": {
+          "title": "Environmental goals",
+          "description": "The environmental goals pursued, using the closed [environmentalGoal](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "climateChangeAdaptation",
+              "climateChangeMitigation"
+            ]
+          },
+          "codelist": "environmentalGoal.csv",
+          "openCodelist": false,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
     }
   },
   "definitions": {
