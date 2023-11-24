@@ -604,11 +604,6 @@ Each `OrganizationReference` has the following fields:
 :title: lobbyingMeetings/0/publicOffice/organization
 ```
 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
-:title: social/consultationMeetings/0/publicOffice/organization
-```
-
 ````
 
 `````
@@ -657,11 +652,6 @@ Each `Address` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
-:title: benefits/0/beneficiaries/0/location/address
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/address
 :title: lobbyingMeetings/0/address
 ```
@@ -669,6 +659,11 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/social/consultationMeetings/0/address
 :title: social/consultationMeetings/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
+:title: benefits/0/beneficiaries/0/location/address
 ```
 
 ````
@@ -1149,7 +1144,6 @@ Each `MilestoneReference` has the following fields:
 
 `````
 
-
 ### Benefit
 
 `Benefit` is defined as:
@@ -1169,15 +1163,7 @@ Each `Benefit` has the following fields:
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Benefit
 :collapse: title,description,beneficiaries
-```
-
-````
-
-````{tab-item} Schema
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/benefits
-:title: benefits
+:addtargets:
 ```
 
 ````
@@ -1187,6 +1173,41 @@ Each `Benefit` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/benefits
 :title: benefits
+```
+
+````
+
+`````
+
+### Beneficiary
+
+`Beneficiary` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Beneficiary
+```
+
+This sub-schema is referenced by the following properties:
+* [`Benefit/beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries)
+
+Each `Beneficiary` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Beneficiary
+:collapse: location,description,numberOfPeople
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries
+:title: benefits/0/beneficiaries
 ```
 
 ````
@@ -1234,38 +1255,6 @@ Each `Meeting` has the following fields:
 
 `````
 
-### Beneficiary
-
-`Beneficiary` is defined as:
-
-```{field-description} ../../build/current_lang/project-schema.json /definitions/Beneficiary
-```
-
-This sub-schema is referenced by the following properties:
-* [`Benefit/beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries)
-
-Each `Beneficiary` has the following fields:
-`````{tab-set}
-
-````{tab-item} Schema
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Beneficiary
-:collapse: location,description,numberOfPeople
-:addtargets:
-```
-````
-
-````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/benefits/0/beneficiaries
-:title: benefits/0/beneficiaries
-```
-
-````
-
-`````
-
 ### PublicOffice
 
 `PublicOffice` is defined as:
@@ -1295,11 +1284,6 @@ Each `PublicOffice` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
 :title: lobbyingMeetings/0/publicOffice
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
-:title: social/consultationMeetings/0/publicOffice
 ```
 
 ````
