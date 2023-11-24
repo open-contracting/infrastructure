@@ -2433,7 +2433,7 @@
       "type": "object",
       "properties": {
         "person": {
-          "title": "Person.",
+          "title": "Person",
           "description": "The person holding the public office.",
           "type": "object",
           "properties": {

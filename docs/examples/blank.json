@@ -488,7 +488,7 @@
       },
       "date": "date-time",
       "numberOfParticipants": "integer",
-      "PublicOffice": {
+      "publicOffice": {
         "person": {
           "name": "string"
         },
