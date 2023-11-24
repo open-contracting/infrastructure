@@ -212,6 +212,12 @@ Where the source system does not contain time information, a judgment ought to b
 
 This sub-schema is referenced by the following properties:
 * [`period`](project-schema.json,,period)
+* [`identificationPeriod`](project-schema.json,,identificationPeriod)
+* [`preparationPeriod`](project-schema.json,,preparationPeriod)
+* [`implementationPeriod`](project-schema.json,,implementationPeriod)
+* [`completionPeriod`](project-schema.json,,completionPeriod)
+* [`maintenancePeriod`](project-schema.json,,maintenancePeriod)
+* [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)
 * [`assetLifetime`](project-schema.json,,assetLifetime)
 * [`ContractingProcessSummary/contractPeriod`](project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
 * [`Modification/oldContractPeriod`](project-schema.json,/definitions/Modification,oldContractPeriod)
@@ -238,6 +244,36 @@ Each `Period` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/period
 :title: period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/identificationPeriod
+:title: identificationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/preparationPeriod
+:title: preparationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/implementationPeriod
+:title: implementationPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/completionPeriod
+:title: completionPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/maintenancePeriod
+:title: maintenancePeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/decommissioningPeriod
+:title: decommissioningPeriod
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -489,6 +525,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
+* [`PublicOffice/organization`](project-schema.json,/definitions/PublicOffice,organization)
 
 Each `OrganizationReference` has the following fields:
 
@@ -556,6 +593,16 @@ Each `OrganizationReference` has the following fields:
 :title: transactions/0/payee
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice/organization
+:title: lobbyingMeetings/0/publicOffice/organization
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
+:title: social/consultationMeetings/0/publicOffice/organization
+```
+
 ````
 
 `````
@@ -575,6 +622,7 @@ This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
 * [`Person/address`](project-schema.json,/definitions/Person,address)
+* [`Meeting/address`](project-schema.json,/definitions/Meeting,address)
 
 Each `Address` has the following fields:
 
@@ -600,6 +648,16 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/address
 :title: parties/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/address
+:title: lobbyingMeetings/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/address
+:title: social/consultationMeetings/0/address
 ```
 
 ````
@@ -1074,6 +1132,122 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### Meeting
+
+`Meeting` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Meeting
+```
+
+This sub-schema is referenced by the following properties:
+* [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)
+* [`Social/consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings)
+
+Each `Meeting` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Meeting
+:collapse: id,date,address,numberOfParticipants,publicOffice
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings
+:title: lobbyingMeetings
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings
+:title: social/consultationMeetings
+```
+
+````
+
+`````
+
+### PublicOffice
+
+`PublicOffice` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/PublicOffice
+```
+
+This sub-schema is referenced by the following properties:
+* [`Meeting/publicOffice`](project-schema.json,/definitions/Meeting,publicOffice)
+
+Each `PublicOffice` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/PublicOffice
+:collapse: organization,jobTitle
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
+:title: lobbyingMeetings/0/publicOffice
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
+:title: social/consultationMeetings/0/publicOffice
+```
+
+````
+
+`````
+
+### Social
+
+`Social` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Social
+```
+
+This sub-schema is referenced by the following properties:
+* [`social`](project-schema.json,,social)
+
+Each `Social` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Social
+:collapse: consultationMeetings
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social
+:title: social
 ```
 
 ````

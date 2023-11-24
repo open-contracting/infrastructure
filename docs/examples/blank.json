@@ -16,6 +16,42 @@
     "maxExtentDate": "string",
     "durationInDays": "integer"
   },
+  "identificationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "preparationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "implementationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "completionPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "maintenancePeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "decommissioningPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
   "sector": [],
   "purpose": "",
   "additionalClassifications": [
@@ -439,6 +475,56 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
+  },
+  "lobbyingMeetings": [
+    {
+      "id": "string",
+      "address": {
+        "streetAddress": "string",
+        "locality": "string",
+        "region": "string",
+        "postalCode": "string",
+        "countryName": "string"
+      },
+      "date": "date-time",
+      "numberOfParticipants": "integer",
+      "publicOffice": {
+        "person": {
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
+        },
+        "jobTitle": "string"
+      }
+    }
+  ],
+  "social": {
+    "consultationMeetings": [
+      {
+        "id": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        },
+        "date": "date-time",
+        "numberOfParticipants": "integer",
+        "publicOffice": {
+          "person": {
+            "name": "string"
+          },
+          "organization": {
+            "id": "string",
+            "name": "string"
+          },
+          "jobTitle": "string"
+        }
+      }
+    ]
   },
   "environment": {
     "goals": [
