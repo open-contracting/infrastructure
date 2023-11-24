@@ -1008,7 +1008,7 @@
     module: Climate finance
     indicator: Long-term project impact
     disclosure format: Disclose technical audits produced at end of the project (E.g. \[free text\].
-    mapping: 'Project-level: For each audit report [add a project document](../common.md#add-a-project-document) and set `.documentType` to ''technicalAuditReport''.'
+    mapping: 'Project-level: For each audit report [add a project document](../common.md#add-a-project-document), set `.documentType` to ''technicalAuditReport'' and map any free text to `.description` .'
     example: |-
         {
           "documents": [
