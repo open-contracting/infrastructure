@@ -84,3 +84,6 @@ buildingInspectionReport,Building inspection report,Documentation of checks that
 ghgEmissionsForecast,Greenhouse gas emissions forecast,"Documentation of the forecast greenhouse gases that the project will emit, including the methodology and calculation method used.",OC4IDS
 ghgEmissionsReduction,Greenhouse gas emissions reduction forecast,"Documentation of the forecast reduction in greenhouse gas emissions resulting from the project, including the methodology and calculation method used.",OC4IDS
 ghgEmissions,Greenhouse gas emissions,"Documentation of the actual greenhouse gases that the project emitted, including the methodology and calculation method used.",OC4IDS
+minutes.lobbyingMeeting,Lobbying meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a lobbying meeting.",OC4IDS
+minutes.consultationMeeting,Consultation meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a public consultation meeting.",OC4IDS
+consultationMeetingInvitation,Consultation meeting invitation,A notice about an upcoming public consultation meeting relating to the project.,OC4IDS
