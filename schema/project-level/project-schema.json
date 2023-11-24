@@ -378,7 +378,6 @@
       "items": {
         "$ref": "#/definitions/Benefit"
       },
-      "wholeListMerge": true,
       "uniqueItems": true,
       "minItems": 1
     }
@@ -2419,7 +2418,6 @@
           "items": {
             "$ref": "#/definitions/Beneficiary"
           },
-          "wholeListMerge": true,
           "uniqueItems": true,
           "minItems": 1
         }
