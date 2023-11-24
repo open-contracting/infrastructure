@@ -21,6 +21,7 @@
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
+
 * Add fields:
   * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
   * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
@@ -38,6 +39,8 @@
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
   * [#447](https://github.com/open-contracting/infrastructure/pull/447) - `environment.conservationMeasures`
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
 
 ### Codelists
 

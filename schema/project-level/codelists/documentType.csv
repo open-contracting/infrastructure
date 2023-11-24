@@ -65,3 +65,6 @@ designReport,Project design report,"A record of the justification for the design
 paymentCertificate,Payment certificate,A document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved.,OC4IDS
 escalationApproval,Escalation approval,Documentation of one or more approved escalations of the contract price during the project life-cycle.,OC4IDS
 conservationMeasures,Conservation measures,Documentation of measures to be taken to mitigate the project's impact on biodiversity.,OC4IDS
+minutes.lobbyingMeeting,Lobbying meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a lobbying meeting.",OC4IDS
+minutes.consultationMeeting,Consultation meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a public consultation meeting.",OC4IDS
+consultationMeetingInvitation,Consultation meeting invitation,A notice about an upcoming public consultation meeting relating to the project.,OC4IDS
