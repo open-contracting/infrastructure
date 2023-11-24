@@ -604,11 +604,6 @@ Each `OrganizationReference` has the following fields:
 :title: lobbyingMeetings/0/publicOffice/organization
 ```
 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
-:title: social/consultationMeetings/0/publicOffice/organization
-```
-
 ````
 
 `````
@@ -1156,7 +1151,6 @@ This sub-schema is referenced by the following properties:
 
 Each `LaborObligations` has the following fields:
 
-
 `````{tab-set}
 
 ````{tab-item} Schema
@@ -1250,11 +1244,6 @@ Each `PublicOffice` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
 :title: lobbyingMeetings/0/publicOffice
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
-:title: social/consultationMeetings/0/publicOffice
 ```
 
 ````

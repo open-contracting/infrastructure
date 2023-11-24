@@ -2427,7 +2427,7 @@
           "description": "A short description of the labor obligations.",
           "type": "string",
           "minLength": 1
-          }
+        }
       },
       "minProperties": 1
     },
