@@ -331,6 +331,21 @@
       "default": "en",
       "minLength": 1
     },
+    "lobbyingMeetings": {
+      "title": "Lobbying meetings",
+      "description": "Information about lobbying meetings in relation to the project. That is, meetings with public officials that are made, managed or directed with the purpose of influencing public decision-making in relation to the project, whether for private, public or collective ends, whether for compensation or without. Public decision-making is the creation and amendment of legislation or any other regulatory measures; the development, modification and implementation of public policies, strategies and programs; and the awarding of government contracts or grants, administrative decisions or any other public spending decisions.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Meeting"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "$ref": "#/definitions/Social"
+    },
     "environment": {
       "title": "Environment",
       "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
@@ -2393,6 +2408,92 @@
             "string"
           ],
           "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Meeting": {
+      "title": "Meeting",
+      "description": "Information about a meeting.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "The locally unique identifier for the meeting.",
+          "type": [
+            "string"
+          ]
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date of the meeting.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the meeting.",
+          "$ref": "#/definitions/Address"
+        },
+        "numberOfParticipants": {
+          "title": "Number of participants",
+          "description": "The number of people in attendance at the meeting.",
+          "type": "integer"
+        },
+        "publicOffice": {
+          "title": "Public office",
+          "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+          "$ref": "#/definitions/PublicOffice"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "PublicOffice": {
+      "title": "Public office",
+      "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+      "type": "object",
+      "properties": {
+        "person": {
+          "title": "Person",
+          "description": "The person holding the public office.",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The full name of the person.",
+              "type": "string"
+            }
+          }
+        },
+        "organization": {
+          "title": "Organization",
+          "description": "The organization in which the public office exists.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "jobTitle": {
+          "title": "Job title",
+          "description": "The job title of the person holding the public office.",
+          "type": "string"
+        }
+      }
+    },
+    "Social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "type": "object",
+      "properties": {
+        "consultationMeetings": {
+          "title": "Public consultation meetings",
+          "description": "Information about public consultation meetings held during the project preparation stage.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Meeting"
+          }
         }
       },
       "minProperties": 1
