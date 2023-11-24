@@ -83,7 +83,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ## Open codelists
 
-### conservationMeasure
+### ConservationMeasure
 
 ```{csv-table-no-translate}
 :header-rows: 1
