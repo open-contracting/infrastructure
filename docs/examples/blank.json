@@ -476,6 +476,56 @@
     "finalScope": "",
     "finalScopeDetails": ""
   },
+  "lobbyingMeetings": [
+    {
+      "id": "string",
+      "address": {
+        "streetAddress": "string",
+        "locality": "string",
+        "region": "string",
+        "postalCode": "string",
+        "countryName": "string"
+      },
+      "date": "date-time",
+      "numberOfParticipants": "integer",
+      "publicOffice": {
+        "person": {
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
+        },
+        "jobTitle": "string"
+      }
+    }
+  ],
+  "social": {
+    "consultationMeetings": [
+      {
+        "id": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        },
+        "date": "date-time",
+        "numberOfParticipants": "integer",
+        "publicOffice": {
+          "person": {
+            "name": "string"
+          },
+          "organization": {
+            "id": "string",
+            "name": "string"
+          },
+          "jobTitle": "string"
+        }
+      }
+    ]
+  },
   "environment": {
     "goals": [
       "string"

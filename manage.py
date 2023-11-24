@@ -14,6 +14,7 @@ import json_merge_patch
 import mdformat
 import requests
 import yaml
+from docutils import nodes
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator as validator
 from ocdsextensionregistry import ProfileBuilder
@@ -338,7 +339,8 @@ def update_sub_schema_reference(schema):
                          'metrics/0/observations/0/value',
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
-                         'parties/0/people/0/identifier']
+                         'parties/0/people/0/identifier',
+                         'social/consultationMeetings/0/publicOffice']
 
         # Add examples
         definition["references"] = get_definition_references(schema, defn)
@@ -927,9 +929,10 @@ def update_sustainability_docs():
             modules[module] = []
 
         title = element.get("title", "")
+        target = nodes.make_id(f"{module}-{title}")
         modules[module].extend(
             [
-              f"\n({module}-{title})=",
+              f"\n({target})=",
               "\n\n`````{grid} 2",
               f"\n\n````{{grid-item-card}} {title}",
               "\n:columns: 4",
@@ -942,9 +945,7 @@ def update_sustainability_docs():
               "\nOC4IDS mapping",
               "\n^^^\n",
               element.get("mapping", ""),
-              "\n```json\n",
-              element.get("example", ""),
-              "\n```",
+              f"\n```json\n{element['example']}\n```" if element.get('example') else '',
               "\n````",
               "\n\n`````\n\n"
             ]
