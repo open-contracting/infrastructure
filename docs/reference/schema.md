@@ -622,11 +622,6 @@ Each `OrganizationReference` has the following fields:
 :title: lobbyingMeetings/0/publicOffice/organization
 ```
 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
-:title: social/consultationMeetings/0/publicOffice/organization
-```
-
 ````
 
 `````
@@ -1162,7 +1157,6 @@ Each `MilestoneReference` has the following fields:
 
 `````
 
-
 ### Finance
 
 `Finance` is defined as:
@@ -1176,12 +1170,14 @@ This sub-schema is referenced by the following properties:
 
 Each `Finance` has the following fields:
 
+`````{tab-set}
 
 ````{tab-item} Schema
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Finance
 :collapse: id,title,description,value,financingParty,financingPartyType,source,assetClass,type,repaymentPriority,concessional,resultsBased,period,paymentPeriod,paymentFrequency,exchangeRateGuarantee,stepInRights,relatedLots
+:addtargets:
 ```
 
 ````
@@ -1194,6 +1190,8 @@ Each `Finance` has the following fields:
 ```
 
 ````
+
+`````
 
 ### Meeting
 
@@ -1265,11 +1263,6 @@ Each `PublicOffice` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
 :title: lobbyingMeetings/0/publicOffice
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
-:title: social/consultationMeetings/0/publicOffice
 ```
 
 ````
