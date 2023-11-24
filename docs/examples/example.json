@@ -1055,7 +1055,12 @@
               "jobTitle": "Group General Manager Transport Services"
             }
           }
-        ]
+        ],
+        "landCompensationBudget": {
+          "amount": 10000,
+          "currency": "USD"
+        },
+        "inIndigenousLand": false
       },
       "environment": {
         "goals": [

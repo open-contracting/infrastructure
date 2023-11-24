@@ -524,7 +524,12 @@
           "jobTitle": "string"
         }
       }
-    ]
+    ],
+    "landCompensationBudget": {
+      "amount": "integer",
+      "currency": "string from currency codelist"
+    },
+    "inIndigenousLand": "boolean"
   },
   "environment": {
     "goals": [

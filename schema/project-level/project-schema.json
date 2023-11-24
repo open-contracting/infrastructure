@@ -2468,6 +2468,16 @@
           "items": {
             "$ref": "#/definitions/Meeting"
           }
+        },
+        "landCompensationBudget": {
+          "title": "Land compensation budget",
+          "description": "The budget allocated for compensation of land.",
+          "$ref": "#/definitions/Value"
+        },
+        "inIndigenousLand": {
+          "title": "In Indigenous land",
+          "description": "Whether the project is located in or cuts through Indigenous land.",
+          "type": "boolean"
         }
       },
       "minProperties": 1

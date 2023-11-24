@@ -1247,6 +1247,7 @@ Disclose dates for project approval \[submission date, approval date\]
 OC4IDS mapping
 ^^^
 Project level:
+
 For each date:
 
 - Add a `Milestone` to the `milestones` array and set its:
@@ -2101,7 +2102,7 @@ Project-level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify whether the project is located or cut through indigenous land. Use the information at the LandMark - Global Platform of Indigenous and Community Lands on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
+Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
 ````
 
 ````{grid-item-card}
@@ -2110,16 +2111,16 @@ OC4IDS mapping
 ^^^
 Project level:
 
-If the project is located or cut through indigenous land:
+If the project is located in or cuts through Indigenous land:
 
-1. Set `.social.indigenousLand` to `true`
+1. Set `.social.inIndigenousLand` to `true`
    2 Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name>  and <Category> for the name and land category from the Landmark database.
 
-If the project is not located or cut through indigenous land, set `.social.indigenousLand` to `false`.
+If the project is not located in or cutting through indigenous land, set `.social.inIndigenousLand` to `false`.
 ```json
 {
   "social": {
-    "indigenousLand": true
+    "inIndigenousLand": true
   },
   "locations": [
     {

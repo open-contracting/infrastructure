@@ -403,6 +403,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`Social/landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget)
 
 Each `Value` has the following fields:
 
@@ -468,6 +469,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/completion/finalValue
 :title: completion/finalValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/landCompensationBudget
+:title: social/landCompensationBudget
 ```
 
 ````
@@ -596,11 +602,6 @@ Each `OrganizationReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice/organization
 :title: lobbyingMeetings/0/publicOffice/organization
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
-:title: social/consultationMeetings/0/publicOffice/organization
 ```
 
 ````
@@ -1210,11 +1211,6 @@ Each `PublicOffice` has the following fields:
 :title: lobbyingMeetings/0/publicOffice
 ```
 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
-:title: social/consultationMeetings/0/publicOffice
-```
-
 ````
 
 `````
@@ -1237,7 +1233,7 @@ Each `Social` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Social
-:collapse: consultationMeetings
+:collapse: consultationMeetings,landCompensationBudget,inIndigenousLand
 :addtargets:
 ```
 
