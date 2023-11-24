@@ -376,7 +376,8 @@
           },
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
@@ -2597,7 +2598,8 @@
           "uniqueItems": true,
           "minItems": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Meeting": {
       "title": "Meeting",
@@ -2609,7 +2611,8 @@
           "description": "The locally unique identifier for the meeting.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "date": {
           "title": "Date",
@@ -2653,9 +2656,11 @@
             "name": {
               "title": "Name",
               "description": "The full name of the person.",
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
-          }
+          },
+          "minProperties": 1
         },
         "organization": {
           "title": "Organization",
@@ -2665,9 +2670,11 @@
         "jobTitle": {
           "title": "Job title",
           "description": "The job title of the person holding the public office.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Social": {
       "title": "Social",
@@ -2680,7 +2687,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Meeting"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
