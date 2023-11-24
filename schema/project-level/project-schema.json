@@ -2415,7 +2415,7 @@
           "description": "A short description of the conservation measure.",
           "type": "string",
           "minLength": 1
-          }
+        }
       },
       "minProperties": 1
     },

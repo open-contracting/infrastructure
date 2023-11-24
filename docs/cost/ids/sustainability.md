@@ -493,7 +493,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, set its `.type` according to the matching code in the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map the further explanation to its `.description`.
+For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, set its `.type` according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map the further explanation to its `.description`.
 
 If there is an accompanying document [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'conservationMeasures'.
 ```json
@@ -1247,6 +1247,7 @@ Disclose dates for project approval \[submission date, approval date\]
 OC4IDS mapping
 ^^^
 Project level:
+
 For each date:
 
 - Add a `Milestone` to the `milestones` array and set its:
