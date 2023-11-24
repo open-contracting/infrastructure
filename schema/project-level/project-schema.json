@@ -376,8 +376,7 @@
             "$ref": "#/definitions/ConservationMeasure"
           },
           "uniqueItems": true,
-          "minItems": 1,
-          "wholeListMerge": true
+          "minItems": 1
         }
       },
       "minProperties": 1
