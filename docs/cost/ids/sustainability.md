@@ -1247,6 +1247,7 @@ Disclose dates for project approval \[submission date, approval date\]
 OC4IDS mapping
 ^^^
 Project level:
+
 For each date:
 
 - Add a `Milestone` to the `milestones` array and set its:
@@ -2488,22 +2489,22 @@ OC4IDS mapping
 ^^^
 Project level:
 
-Publish a summarry of the material tests:
+Publish a summary of the material tests:
 
-1. For each material test, add a code from the materialTests codelist to the`.social.healthAndSafety.materialTests.tests` array.
-2. Optionally, add a further explanation of the material tests to `.social.healthAndSafety.materialTests.description`.
+1. For each material test, add a code from the [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the`.social.healthAndSafety.materialTests.tests` array.
+2. Add a further explanation of the material tests to `.social.healthAndSafety.materialTests.description` including the code of the relevant international or national standard the test conformed to.
 
-Publish test results: For each test result, add a document, set `.documentType` to 'materialTestResults' and set `.url` to the URL at which the document is accessible.
+Publish test results: For each test result, [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'materialTestResults'.
 ```json
 {
   "social": {
     "healthAndSafety": {
       "materialTests": {
         "tests": [
-          "retainingWalls",
-          "roofs"
+          "metal",
+          "masonry"
         ],
-        "description": "Tests were conducted of the main retaining wall and of the roof of each structure according to..."
+        "description": "Tests were conducted of the steel frame and masonry each structure according to ASTM International standards..."
       }
     }
   },

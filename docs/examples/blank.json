@@ -524,7 +524,15 @@
           "jobTitle": "string"
         }
       }
-    ]
+    ],
+    "healthAndSafety": {
+      "materialTests": {
+        "test": [
+          "string from constructionMaterial codelist"
+        ],
+        "description": "string"
+      }
+    }
   },
   "environment": {
     "goals": [
