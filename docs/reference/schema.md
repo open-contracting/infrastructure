@@ -287,6 +287,11 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/forecasts/0/observations/0/period
 :title: forecasts/0/observations/0/period
 ```
@@ -431,6 +436,11 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/amount
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/amount
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/costEstimate
 :title: contractingProcesses/0/summary/tender/costEstimate
 ```
@@ -549,6 +559,11 @@ Each `OrganizationReference` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/publicAuthority
 :title: publicAuthority
 ```
@@ -596,11 +611,6 @@ Each `OrganizationReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice/organization
 :title: lobbyingMeetings/0/publicOffice/organization
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice/organization
-:title: social/consultationMeetings/0/publicOffice/organization
 ```
 
 ````
@@ -699,6 +709,41 @@ Each `ContactPoint` has the following fields:
 
 `````
 
+### BudgetBreakdowns
+
+`BudgetBreakdowns` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/BudgetBreakdowns
+```
+
+This sub-schema is referenced by the following properties:
+* [`budget/budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns)
+
+Each `BudgetBreakdowns` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/BudgetBreakdowns
+:collapse: id,description,budgetBreakdown
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns
+:title: budget/budgetBreakdowns
+```
+
+````
+
+`````
+
 ### BudgetBreakdown
 
 For more information about this sub-schema, see the [OCDS Budget Breakdown extension documentation](https://extensions.open-contracting.org/en/extensions/budget/master/). `BudgetBreakdown` can also be extended further to include budget classifications data following the pattern described in the [OCDS Budgets and Spend extension](https://extensions.open-contracting.org/en/extensions/budget_and_spend/master/).
@@ -710,6 +755,7 @@ For more information about this sub-schema, see the [OCDS Budget Breakdown exten
 
 This sub-schema is referenced by the following properties:
 * [`budget/budgetBreakdown`](project-schema.json,,budget/budgetBreakdown)
+* [`BudgetBreakdowns/budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown)
 
 Each `BudgetBreakdown` has the following fields:
 
@@ -730,6 +776,11 @@ Each `BudgetBreakdown` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown
 :title: budget/budgetBreakdown
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown
+:title: budget/budgetBreakdowns/0/budgetBreakdown
 ```
 
 ````
@@ -1208,11 +1259,6 @@ Each `PublicOffice` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
 :title: lobbyingMeetings/0/publicOffice
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings/0/publicOffice
-:title: social/consultationMeetings/0/publicOffice
 ```
 
 ````

@@ -129,6 +129,33 @@
           "id": ""
         }
       }
+    ],
+    "budgetBreakdowns": [
+      {
+        "id": "string",
+        "description": "string",
+        "budgetBreakdown": [
+          {
+            "id": "",
+            "description": "string",
+            "amount": {
+              "amount": "number",
+              "currency": "string from currency codelist"
+            },
+            "uri": "string",
+            "period": {
+              "startDate": "string",
+              "endDate": "string",
+              "maxExtentDate": "string",
+              "durationInDays": "integer"
+            },
+            "sourceParty": {
+              "name": "string",
+              "id": ""
+            }
+          }
+        ]
+      }
     ]
   },
   "forecasts": [
