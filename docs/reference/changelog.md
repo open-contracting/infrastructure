@@ -40,6 +40,8 @@
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
+  * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
+  * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
 
 ### Codelists
 
