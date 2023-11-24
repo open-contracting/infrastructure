@@ -39,6 +39,8 @@
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`.
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
 
 ### Codelists
 
