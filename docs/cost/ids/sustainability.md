@@ -143,15 +143,15 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Get the `BudgetBreakdownGroup` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
 
-- Add a `BudgetBreakdownGroup` object to the `budget.budgetBreakdowns` array.
+- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
 
 2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
 
-3. Get the `BudgetBreakdown` object in the  budget breakdown group for each of the 3 stages. If none exists yet:
+3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
 
-- Add 3 `BudgetBreakdownGroup` objects to the `budget.budgetBreakdowns` array. For each object:
+- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
 - Set the `.id` incrementally.
 - Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget source not specified" to the `.description`.
 
@@ -223,15 +223,15 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Get the `BudgetBreakdownGroup` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
 
-- Add a `BudgetBreakdownGroup` object to the `budget.budgetBreakdowns` array.
+- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
 
 2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
 
-3. Get the `BudgetBreakdown` object in the  budget breakdown group for each of the 3 stages. If none exists yet:
+3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
 
-- Add 3 `BudgetBreakdownGroup` objects to the `budget.budgetBreakdowns` array. For each object:
+- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
 - Set the `.id` incrementally.
 - Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget amount not allocated" to the `.description`.
 
@@ -356,11 +356,11 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Add a `BudgetBreakdownGroup` object to the `budget.budgetBreakdowns` array.
+1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
 
 2. Set it's `.id` incrementally and it's `.description` to "Breakdown by year of implementation".
 
-3. For each year of implementation, add a `BudgetBreakdownGroup` object to the `budget.budgetBreakdowns` array. For each object:
+3. For each year of implementation, add a `BudgetBreakdown` object to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
 
 - Set the `.id` incrementally.
 - Set the `.description` to the year of implementation.
@@ -1344,7 +1344,7 @@ Disclose the amounts invested in project preparation \[value, currency\]
 :columns: 8
 OC4IDS mapping
 ^^^
-See [Budget for preparation, implementation and operation (economic and fiscal module)](budget-for-preparation-implementation-and-operation).
+See [Budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
 ````
 
 `````

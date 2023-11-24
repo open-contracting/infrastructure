@@ -834,7 +834,7 @@
     module: Climate finance
     indicator: Accessibility/Project viability
     disclosure format: Disclose the amounts invested in project preparation \[value, currency\]
-    mapping: See [Budget for preparation, implementation and operation (economic and fiscal module)](budget-for-preparation-implementation-and-operation).
+    mapping: See [Budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
     example: ''
 -   id: '3.13'
     title: Project preparation period
