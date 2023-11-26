@@ -2492,7 +2492,7 @@ Project level:
 Publish a summary of the material tests:
 
 1. For each material test, add a code from the [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the`.social.healthAndSafety.materialTests.tests` array.
-2. Add a further explanation of the material tests to `.social.healthAndSafety.materialTests.description` including the code of the relevant international or national standard the test conformed to.
+2. Add any further explanation of the tests to `.social.healthAndSafety.materialTests.description` including the international or national standards the tests conform to.
 
 Publish test results: For each test result, [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'materialTestResults'.
 ```json
@@ -2504,7 +2504,7 @@ Publish test results: For each test result, [Add a project document](../common.m
           "metal",
           "masonry"
         ],
-        "description": "Tests were conducted of the steel frame and masonry each structure according to ASTM International standards..."
+        "description": "Tests were conducted of the steel frame and masonry of each structure according to ASTM International standards..."
       }
     }
   },
