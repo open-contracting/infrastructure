@@ -37,7 +37,7 @@ Each project has the following fields.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
-:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
+:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,budget/budgetBreakdowns,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 :addtargets:
 ```
 ````
