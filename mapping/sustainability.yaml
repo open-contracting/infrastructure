@@ -1249,10 +1249,10 @@
     mapping: |-
         Project level:
 
-        If the project is located in or cuts through Indigenous land:
+        If the project is located in or cuts through indigenous land:
 
         1. Set `.social.inIndigenousLand` to `true`
-           2 Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name>  and <Category> for the name and land category from the Landmark database.
+        2. Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name>  and <Category> for the name and land category from the Landmark database.
 
         If the project is not located in or cutting through indigenous land, set `.social.inIndigenousLand` to `false`.
     example: |-

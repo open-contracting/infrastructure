@@ -526,7 +526,7 @@
       }
     ],
     "landCompensationBudget": {
-      "amount": "integer",
+      "amount": "number",
       "currency": "string from currency codelist"
     },
     "inIndigenousLand": "boolean"
