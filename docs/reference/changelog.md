@@ -38,6 +38,8 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
   * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
