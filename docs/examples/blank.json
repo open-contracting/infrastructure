@@ -544,6 +544,11 @@
         }
       }
     ],
+    "landCompensationBudget": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    },
+    "inIndigenousLand": "boolean",
     "healthAndSafety": {
       "materialTests": {
         "test": [

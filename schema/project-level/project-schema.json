@@ -2567,6 +2567,16 @@
             "$ref": "#/definitions/Meeting"
           }
         },
+        "landCompensationBudget": {
+          "title": "Land compensation budget",
+          "description": "The budget allocated for land compensation.",
+          "$ref": "#/definitions/Value"
+        },
+        "inIndigenousLand": {
+          "title": "In indigenous land",
+          "description": "Whether the project is located in or cuts through indigenous land.",
+          "type": "boolean"
+        },
         "healthAndSafety": {
           "title": "Health and safety",
           "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
