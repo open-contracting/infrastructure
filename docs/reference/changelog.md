@@ -30,6 +30,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
   * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`.
   * [#432](https://github.com/open-contracting/infrastructure/pull/432):
     * `identificationPeriod`
     * `preparationPeriod`
@@ -55,6 +56,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
 * Add codes:

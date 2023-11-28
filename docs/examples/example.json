@@ -715,7 +715,19 @@
                   "currency": "GBP"
                 }
               }
-            ]
+            ],
+            "social": {
+              "laborBudget": {
+                "amount": "150000",
+                "currency": "USD"
+              },
+              "laborObligations": {
+                "obligations": [
+                  "minimumWage"
+                ],
+                "description": "The local minimum wage will be paid to all contracted workers."
+              }
+            }
           },
           "releases": [
             {

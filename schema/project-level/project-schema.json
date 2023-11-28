@@ -626,6 +626,24 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "social": {
+          "title": "Social",
+          "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+          "type": "object",
+          "properties": {
+            "laborBudget": {
+              "title": "Labor budget",
+              "description": "The budget allocated in the contract for labor costs.",
+              "$ref": "#/definitions/Value"
+            },
+            "laborObligations": {
+              "title": "Labor obligations",
+              "description": "Information about labor obligations stipulated in the construction contract(s).",
+              "$ref": "#/definitions/LaborObligations"
+            }
+          },
+          "minProperties": 1
         }
       },
       "minProperties": 1
@@ -2413,6 +2431,33 @@
           "type": [
             "string"
           ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "LaborObligations": {
+      "title": "Labor obligations",
+      "description": "Information about labor obligations stipulated in the construction contract(s).",
+      "type": "object",
+      "properties": {
+        "obligations": {
+          "title": "Obligations",
+          "description": "The labor obligations stipulated in the construction contract(s), using the open [laborObligations codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations).",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "laborObligations.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the labor obligations.",
+          "type": "string",
           "minLength": 1
         }
       },
