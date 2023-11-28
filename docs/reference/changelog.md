@@ -65,7 +65,9 @@
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
 * Add codes:
-  * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
+  * partyRole:
+    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
+    * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
     * 'maintenance' 
