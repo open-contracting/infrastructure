@@ -582,7 +582,14 @@
               "administrativeEntity": {
                 "name": "Motorways Administrator UK",
                 "id": "GB-GOR-XX9876"
-              }
+              },
+              "sustainability": [
+                {
+                  "strategies": [
+                    "awardCriteria"
+                  ]
+                }
+              ]
             },
             "suppliers": [
               {
@@ -708,7 +715,19 @@
                   "currency": "GBP"
                 }
               }
-            ]
+            ],
+            "social": {
+              "laborBudget": {
+                "amount": "150000",
+                "currency": "USD"
+              },
+              "laborObligations": {
+                "obligations": [
+                  "minimumWage"
+                ],
+                "description": "The local minimum wage will be paid to all contracted workers."
+              }
+            }
           },
           "releases": [
             {
@@ -1069,7 +1088,18 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
-        ]
+        ],
+        "hasImpactAssessment": true,
+        "impactCategories": [
+          {
+            "scheme": "ifc-environmental-social",
+            "id": "a"
+          }
+        ],
+        "abatementCost": {
+          "amount": 12.29,
+          "currency": "USD"
+        }
       }
     }
   ]

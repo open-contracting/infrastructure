@@ -280,7 +280,14 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
-          }
+          },
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
@@ -385,7 +392,19 @@
               "title": "title"
             }
           }
-        ]
+        ],
+        "social": {
+          "laborBudget": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "laborObligations": {
+            "obligations": [
+              "string from laborObligations codelist"
+            ],
+            "description": "string"
+          }
+        }
       },
       "releases": [
         {
@@ -537,6 +556,17 @@
   "environment": {
     "goals": [
       "string"
-    ]
+    ],
+    "hasImpactAssessment": "boolean",
+    "impactCategories": [
+      {
+        "scheme": "string",
+        "id": "string"
+      }
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    }
   }
 }

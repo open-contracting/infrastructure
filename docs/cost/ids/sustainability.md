@@ -330,14 +330,17 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. If an environmental impact assessment was conducted, set `.environment.hasImpactAssessment` to true. If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to false.
+If an environmental impact assessment was conducted:
 
-2. Add a `Classification` object to the `.environment.impactClassifications` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+- Set `.environment.hasImpactAssessment` to `true`.
+- Add a `Classification` object to the `.environment.impactCategories` array, set its `.scheme` to "ifc-environmental-social" and set its `.id` to the letter for the category into which the project falls.
+
+If an environmental impact assessment was not conducted, set `environmental.hasImpactAssessment` to `false`.
 ```json
 {
   "environment": {
     "hasImpactAssessment": true,
-    "impactClassifications": [
+    "impactCategories": [
       {
         "scheme": "ifc-environmental-social",
         "id": "a"
@@ -1389,7 +1392,24 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
+Map to `environment.abatementCost`. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'abatementCostMethodology'.
+```json
+{
+  "environment": {
+    "abatementCost": {
+      "amount": 12.29,
+      "currency": "USD"
+    }
+  },
+  "documents": [
+    {
+      "id": "1",
+      "documentType": "abatementCostMethodology",
+      "url": "http://example.com/abatementCostMethodology.pdf"
+    }
+  ]
+}
+```
 ````
 
 `````
@@ -2268,12 +2288,12 @@ Contracting process level:
 
 Publish a summary of the labor obligations:
 
-1. For each labor obligation in the contract, add a code from the laborObligations codelist to the`.summary.social.laborObligations.obligations` array.
+1. For each labor obligation in the contract, add a code from the [laborObligations](../../reference/codelists.md#laborobligations) codelist to the`.summary.social.laborObligations.obligations` array.
 2. Optionally, add a further explanation of the labor obligations to `.summary.social.laborObligations.description`.
 
-Publish the bidding documents that specify labor obligations: Add a document to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'biddingDocuments' and set its `.url` to the URL at which the documents are available.
+Publish the bidding documents that specify labor obligations: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its `.documentType` to 'biddingDocuments'.
 
-Publish the signed contract that includes labor obligations:  Add a document to `.summary.documents`, set its `.id` incrementally, set its `.documentType` to 'contractSigned' and set its `.url` to the URL at which the signed contract that includes labor obligations is accessible.
+Publish the signed contract that includes labor obligations:  [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its `.documentType` to 'contractSigned'.
 ```json
 {
   "contractingProcesses": [
@@ -2284,7 +2304,7 @@ Publish the signed contract that includes labor obligations:  Add a document to 
           "laborObligations": {
             "obligations": [
               "minimumWage",
-              "overtime"
+              "paidOvertime"
             ],
             "description": "The contract's labor obligations include a minimum wage of $20 per hour and an overtime limit of 10 hours per week."
           }
@@ -2326,7 +2346,7 @@ Disclose the amount allocated by the main contractor to cover for labour costs (
 :columns: 8
 OC4IDS mapping
 ^^^
-Contract level: Publish the amount and currency of the labor budget in `.summary.social.laborBudget`.
+Contracting process level: Map to `.summary.social.laborBudget`.
 ```json
 {
   "contractingProcesses": [
@@ -2957,7 +2977,7 @@ OC4IDS mapping
 ^^^
 Contracting process level:
 
-Add a `Sustainability` object to the `.summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
+Add a `Sustainability` object to the `summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
 ```json
 {
   "contractingProcesses": [
@@ -2968,7 +2988,7 @@ Add a `Sustainability` object to the `.summary.tender.sustainability` array and 
           "sustainability": [
             {
               "strategies": [
-                "awardCritera"
+                "awardCriteria"
               ]
             }
           ]
@@ -3123,16 +3143,16 @@ CoST IDS element
 Identify relevant sub-sectors related to the project scope.
 Select from a list (non-exhaustive):
 
-- Renewable energy
-  solar, wind,
+- Renewable energy:
+  solar,
+  wind,
   hydropower,
   biomass
   geothermal
-  Low carbon transport
-- Flood protection
-  energy efficiency,
-  water and wastewater management
-  natural resource management
+- Low carbon transport
+- Water and wastewater management
+- Natural resource management:
+  flood protection
 
 Free text to add not mentioned sub-sectors
 ````
@@ -3141,7 +3161,14 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Add equivalent code from ProjectSector codelist to sector array.
+Project Level: Map to `sector`, using the \[ProjectSector codelist\]((../../reference/codelists.md#projectsector).
+```json
+{
+  "sector": [
+    "solar"
+  ]
+}
+```
 ````
 
 `````
