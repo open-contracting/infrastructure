@@ -39,6 +39,10 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
+  * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
 
@@ -53,6 +57,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
 * Add codes:
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
@@ -61,6 +66,15 @@
     * 'maintenance' 
     * 'decommissioning'
     * 'decommissioned'
+  * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
+    * 'energy.solar'
+    * 'energy.wind'
+    * 'energy.hydropower'
+    * 'energy.biomass'
+    * 'energy.geothermal'
+    * 'transport.lowCarbon'
+    * 'naturalResources'
+    * 'naturalResources.floodProtection'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
