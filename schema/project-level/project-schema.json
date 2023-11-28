@@ -367,6 +367,11 @@
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
           "minItems": 1
+        },
+        "abatementCost": {
+          "title": "Abatement cost",
+          "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
