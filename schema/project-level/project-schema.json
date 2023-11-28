@@ -2586,7 +2586,7 @@
       "minProperties": 1
     },
     "HealthAndSafety": {
-      "title": "Health and Safety",
+      "title": "Health and safety",
       "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
       "type": "object",
       "properties": {
