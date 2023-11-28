@@ -225,14 +225,12 @@
           "telephone": "string"
         }
       ],
-      "details": {
-        "classifications": [
-          {
-            "id": "string",
-            "scheme": "string"
-          }
-        ]
-      }
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
+        }
+      ]
     }
   ],
   "publicAuthority": {

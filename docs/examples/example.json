@@ -234,14 +234,12 @@
               "jobTitle": "Chair"
             }
           ],
-          "details": {
-            "classifications": [
-              {
-                "id": "national",
-                "scheme": "costIdsAdministrativeLevel"
-              }
-            ]
-          }
+          "classifications": [
+            {
+              "id": "national",
+              "scheme": "costIdsAdministrativeLevel"
+            }
+          ]
         },
         {
           "name": "A1 Expert Smart Moto Design",

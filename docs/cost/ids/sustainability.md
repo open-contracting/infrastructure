@@ -1191,8 +1191,8 @@ international
 OC4IDS mapping
 ^^^
 1. Get the `Organization` object in `parties` that represents the accredited entity. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
-2. Add a `Classification` object to the organization's `.details.classifications` array, set its `.scheme` to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its `.id`.
-3. Add a `Classification` object to the organization's `.details.classifications` array, set its `.scheme` to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its `.id`.
+2. Add a `Classification` object to the organization's `.classifications` array, set its `.scheme` to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its `.id`.
+3. Add a `Classification` object to the organization's `.classifications` array, set its `.scheme` to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its `.id`.
 ```json
 {
   "parties": [
@@ -1202,18 +1202,16 @@ OC4IDS mapping
       "roles": [
         "funder"
       ],
-      "details": {
-        "classifications": [
-          {
-            "id": "public",
-            "scheme": "costIdsLegalType"
-          },
-          {
-            "id": "national",
-            "scheme": "costIdsAdministrativeLevel"
-          }
-        ]
-      }
+      "classifications": [
+        {
+          "id": "public",
+          "scheme": "costIdsLegalType"
+        },
+        {
+          "id": "national",
+          "scheme": "costIdsAdministrativeLevel"
+        }
+      ]
     }
   ]
 }

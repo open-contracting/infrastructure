@@ -1304,26 +1304,6 @@
           "uniqueItems": true,
           "minItems": 1
         },
-        "details": {
-          "type": [
-            "object"
-          ],
-          "description": "Additional classification information about parties can be provided using partyDetail extensions that define particular fields and classification schemes.",
-          "title": "Details",
-          "properties": {
-            "classifications": {
-              "title": "Classifications",
-              "description": "The classifications that categorize the organization.",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Classification"
-              },
-              "uniqueItems": true,
-              "minItems": 1
-            }
-          },
-          "minProperties": 1
-        },
         "beneficialOwners": {
           "title": "Beneficial owners",
           "description": "The beneficial owners of the organization.",
@@ -1331,6 +1311,17 @@
           "items": {
             "$ref": "#/definitions/Person"
           },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "classifications": {
+          "title": "Organization classifications",
+          "description": "The classifications that categorize the organization",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "wholeListMerge": true,
           "uniqueItems": true,
           "minItems": 1
         },

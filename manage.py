@@ -685,7 +685,10 @@ def update(ppp_base_url):
     # Remove unneeded extensions and details from Organization.
     del schema['definitions']['Organization']['properties']['shareholders']
     del schema['definitions']['Organization']['properties']['beneficialOwnership']
-    del schema['definitions']['Organization']['properties']['details']['properties']['listedOnRegulatedMarket']
+
+    # Move classifications from details to Organization
+    schema['definitions']['Organization']['properties']['classifications'] = schema['definitions']['Organization']['properties']['details']['properties']['classifications']  # noqa: E501
+    del schema['definitions']['Organization']['properties']['details']
 
     # Set stricter validation on party roles
     schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
