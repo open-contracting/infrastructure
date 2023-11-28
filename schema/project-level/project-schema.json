@@ -2566,6 +2566,44 @@
           "items": {
             "$ref": "#/definitions/Meeting"
           }
+        },
+        "healthAndSafety": {
+          "title": "Health and safety",
+          "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+          "$ref": "#/definitions/HealthAndSafety"
+        }
+      },
+      "minProperties": 1
+    },
+    "HealthAndSafety": {
+      "title": "Health and Safety",
+      "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+      "type": "object",
+      "properties": {
+        "materialTests": {
+          "title": "Material tests",
+          "description": "Information about tests conducted on materials used in the construction of the assets.",
+          "type": "object",
+          "properties": {
+            "tests": {
+              "title": "Tests",
+              "description": "The construction materials that were tested, using the open [constructionMaterial](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#constructionMaterial) codelist.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "type": "string"
+              },
+              "codelist": "constructionMaterial.csv",
+              "openCodelist": true,
+              "minItems": 1
+            },
+            "description": {
+              "title": "Description",
+              "description": "A short description of the tests conducted on the construction materials.",
+              "type": "string"
+            }
+          }
         }
       },
       "minProperties": 1

@@ -1316,7 +1316,7 @@ Each `Social` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Social
-:collapse: consultationMeetings
+:collapse: consultationMeetings,healthAndSafety
 :addtargets:
 ```
 
@@ -1327,6 +1327,41 @@ Each `Social` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/social
 :title: social
+```
+
+````
+
+`````
+
+### HealthAndSafety
+
+`HealthAndSafety` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/HealthAndSafety
+```
+
+This sub-schema is referenced by the following properties:
+* [`Social/healthAndSafety`](project-schema.json,/definitions/Social,healthAndSafety)
+
+Each `HealthAndSafety` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/HealthAndSafety
+:collapse: 
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/healthAndSafety
+:title: social/healthAndSafety
 ```
 
 ````

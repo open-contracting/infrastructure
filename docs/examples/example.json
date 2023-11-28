@@ -1074,7 +1074,16 @@
               "jobTitle": "Group General Manager Transport Services"
             }
           }
-        ]
+        ],
+        "healthAndSafety": {
+          "materialTests": {
+            "test": [
+              "masonry",
+              "metal"
+            ],
+            "description": "Onsite tests were conducted on the steel frames and masonry according to relevant ASTM International standards."
+          }
+        }
       },
       "environment": {
         "goals": [

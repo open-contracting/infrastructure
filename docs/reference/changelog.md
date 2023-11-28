@@ -45,6 +45,7 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
 
 ### Codelists
 
@@ -59,6 +60,7 @@
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
 * Add codes:
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
@@ -66,6 +68,7 @@
     * 'maintenance' 
     * 'decommissioning'
     * 'decommissioned'
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'
     * 'energy.wind'
