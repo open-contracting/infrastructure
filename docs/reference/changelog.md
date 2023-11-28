@@ -21,6 +21,7 @@
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
+* [#450](https://github.com/open-contracting/infrastructure/pull/450) - deprecate `budget.budgetBreakdown` in favor of `budget.budgetBreakdowns`
 
 * Add fields:
   * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
