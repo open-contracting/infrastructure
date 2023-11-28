@@ -1138,6 +1138,42 @@ Each `MilestoneReference` has the following fields:
 
 `````
 
+### Sustainability
+
+`Sustainability` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Sustainability
+```
+
+This sub-schema is referenced by the following properties:
+
+* [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
+
+Each `Sustainability` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Sustainability
+:collapse: strategies
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
+:title: contractingProcesses/0/summary/tender/sustainability
+```
+
+````
+
+`````
+
 ### Meeting
 
 `Meeting` is defined as:

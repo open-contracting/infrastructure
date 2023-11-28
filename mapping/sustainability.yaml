@@ -1867,7 +1867,7 @@
     mapping: |-
         Contracting process level:
 
-        Add a `Sustainability` object to the `.summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
+        Add a `Sustainability` object to the `summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
     example: |-
         {
           "contractingProcesses": [
@@ -1878,7 +1878,7 @@
                   "sustainability": [
                     {
                       "strategies": [
-                        "awardCritera"
+                        "awardCriteria"
                       ]
                     }
                   ]

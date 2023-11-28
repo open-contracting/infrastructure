@@ -38,6 +38,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`.
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
 
@@ -51,6 +52,7 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
 * Add codes:
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'

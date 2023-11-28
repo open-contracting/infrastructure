@@ -2956,7 +2956,7 @@ OC4IDS mapping
 ^^^
 Contracting process level:
 
-Add a `Sustainability` object to the `.summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
+Add a `Sustainability` object to the `summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
 ```json
 {
   "contractingProcesses": [
@@ -2967,7 +2967,7 @@ Add a `Sustainability` object to the `.summary.tender.sustainability` array and 
           "sustainability": [
             {
               "strategies": [
-                "awardCritera"
+                "awardCriteria"
               ]
             }
           ]
