@@ -813,8 +813,23 @@
     module: Climate finance
     indicator: Climate impact
     disclosure format: Disclose the cost per tonne of CO2 equivalent \[value, currency\].
-    mapping: Publish the cost in `environment.abatementCost`. If supporting documentation is available, publish in documents with `.documentType` set to 'abatementCostMethodology'.
-    example: ''
+    mapping: Map to `environment.abatementCost`. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'abatementCostMethodology'.
+    example: |-
+        {
+          "environment": {
+            "abatementCost": {
+              "amount": 12.29,
+              "currency": "USD"
+            }
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "abatementCostMethodology",
+              "url": "http://example.com/abatementCostMethodology.pdf"
+            }
+          ]
+        }
 -   id: '3.18'
     title: Non-climate co-benefits
     module: Climate finance
@@ -1870,7 +1885,7 @@
     mapping: |-
         Contracting process level:
 
-        Add a `Sustainability` object to the `.summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
+        Add a `Sustainability` object to the `summary.tender.sustainability` array and add 'awardCriteria' to its `.strategies` array.
     example: |-
         {
           "contractingProcesses": [
@@ -1881,7 +1896,7 @@
                   "sustainability": [
                     {
                       "strategies": [
-                        "awardCritera"
+                        "awardCriteria"
                       ]
                     }
                   ]
@@ -1963,17 +1978,22 @@
         Identify relevant sub-sectors related to the project scope.
         Select from a list (non-exhaustive):
 
-        - Renewable energy
-          solar, wind,
+        - Renewable energy:
+          solar,
+          wind,
           hydropower,
           biomass
           geothermal
-          Low carbon transport
-        - Flood protection
-          energy efficiency,
-          water and wastewater management
-          natural resource management
+        - Low carbon transport
+        - Water and wastewater management
+        - Natural resource management:
+          flood protection
 
         Free text to add not mentioned sub-sectors
-    mapping: 'Project Level: Add equivalent code from ProjectSector codelist to sector array.'
-    example: ''
+    mapping: 'Project Level: Map to `sector`, using the \[ProjectSector codelist\]((../../reference/codelists.md#projectsector).'
+    example: |-
+        {
+          "sector": [
+            "solar"
+          ]
+        }

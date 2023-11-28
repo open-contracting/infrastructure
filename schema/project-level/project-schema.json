@@ -382,6 +382,11 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "abatementCost": {
+          "title": "Abatement cost",
+          "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
@@ -541,6 +546,18 @@
               "title": "Administrative entity",
               "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
+            },
+            "sustainability": {
+              "title": "Sustainability",
+              "description": "Information about how the contracting process incorporates sustainable public procurement.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "$ref": "#/definitions/Sustainability"
+              },
+              "uniqueItems": true,
+              "minItems": 1
             }
           },
           "minProperties": 1
@@ -2401,6 +2418,27 @@
       },
       "minProperties": 1
     },
+    "Sustainability": {
+      "title": "Sustainability",
+      "description": "Information about how the contracting process incorporates sustainable public procurement.",
+      "type": "object",
+      "properties": {
+        "strategies": {
+          "title": "Strategies",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "sustainabilityStrategy.csv",
+          "openCodelist": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
     "Meeting": {
       "title": "Meeting",
       "description": "Information about a meeting.",
@@ -2487,6 +2525,5 @@
       },
       "minProperties": 1
     }
-  },
-  "minProperties": 1
+  }
 }

@@ -582,7 +582,14 @@
               "administrativeEntity": {
                 "name": "Motorways Administrator UK",
                 "id": "GB-GOR-XX9876"
-              }
+              },
+              "sustainability": [
+                {
+                  "strategies": [
+                    "awardCriteria"
+                  ]
+                }
+              ]
             },
             "suppliers": [
               {
@@ -1067,7 +1074,11 @@
             "scheme": "ifc-environmental-social",
             "id": "a"
           }
-        ]
+        ],
+        "abatementCost": {
+          "amount": 12.29,
+          "currency": "USD"
+        }
       }
     }
   ]

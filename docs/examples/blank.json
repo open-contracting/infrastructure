@@ -280,7 +280,14 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
-          }
+          },
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
@@ -536,6 +543,10 @@
         "scheme": "string",
         "id": "string"
       }
-    ]
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    }
   }
 }
