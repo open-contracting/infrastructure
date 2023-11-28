@@ -1168,6 +1168,41 @@ Each `MilestoneReference` has the following fields:
 
 `````
 
+### LaborObligations
+
+`LaborObligations` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
+
+Each `LaborObligations` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/LaborObligations
+:collapse: obligations,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
+:title: contractingProcesses/0/summary/social/laborObligations
+```
+
+````
+
+`````
+
 ### Benefit
 
 `Benefit` is defined as:
@@ -1179,7 +1214,6 @@ This sub-schema is referenced by the following properties:
 * [`benefits`](project-schema.json,,benefits)
 
 Each `Benefit` has the following fields:
-
 
 `````{tab-set}
 
@@ -1239,41 +1273,6 @@ Each `Beneficiary` has the following fields:
 
 `````
 
-### LaborObligations
-
-`LaborObligations` is defined as:
-
-```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
-```
-
-This sub-schema is referenced by the following properties:
-* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
-
-Each `LaborObligations` has the following fields:
-
-`````{tab-set}
-
-````{tab-item} Schema
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/LaborObligations
-:collapse: obligations,description
-:addtargets:
-```
-
-````
-
-````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
-:title: contractingProcesses/0/summary/social/laborObligations
-```
-
-````
-
-`````
-
 ### Sustainability
 
 `Sustainability` is defined as:
@@ -1282,8 +1281,6 @@ Each `LaborObligations` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
-* [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
 
 Each `Sustainability` has the following fields:
 
@@ -1300,11 +1297,6 @@ Each `Sustainability` has the following fields:
 ````
 
 ````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
-:title: contractingProcesses/0/summary/tender/sustainability
-```
 
 ````
 
@@ -1404,13 +1396,7 @@ Each `Social` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Social
-:collapse: consultationMeetings,landCompensationBudget,inIndigenousLand
-:addtargets:
-```
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Social
-:collapse: consultationMeetings,healthAndSafety
+:collapse: consultationMeetings,landCompensationBudget,inIndigenousLand,healthAndSafety
 :addtargets:
 ```
 
