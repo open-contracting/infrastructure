@@ -324,6 +324,7 @@ Each `Period` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
+* [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
 * [`environment/impactCategories`](project-schema.json,,environment/impactCategories)
 
 Each `Classification` has the following fields:
@@ -345,6 +346,11 @@ Each `Classification` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/additionalClassifications
 :title: additionalClassifications
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/classifications
+:title: parties/0/classifications
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -522,7 +528,7 @@ Each `Organization` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Organization
-:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,beneficialOwners,people
+:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,beneficialOwners,classifications,people
 :addtargets:
 ```
 

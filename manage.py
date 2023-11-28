@@ -318,7 +318,7 @@ def update_sub_schema_reference(schema):
         # Add schema table
         properties_to_collapse = []
         for key, value in definition['properties'].items():
-            if value.get('type') != 'object':
+            if value.get('type') not in ['object', ['object']]:
                 properties_to_collapse.append(key)
 
         definition["content"].extend([
@@ -460,7 +460,10 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5',
-                             {'budget': 'master', 'transaction_milestones': 'master', 'beneficialOwners': 'master'})
+                             {'budget': 'master',
+                              'transaction_milestones': 'master',
+                              'beneficialOwners': 'master',
+                              'organizationClassification': '1.1'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -482,6 +485,7 @@ def update(ppp_base_url):
         'relatedProject.csv',
         'classificationScheme.csv',
         'country.csv',
+        'environmentalGoal.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -683,6 +687,9 @@ def update(ppp_base_url):
     # Remove unneeded extensions and details from Organization.
     del schema['definitions']['Organization']['properties']['shareholders']
     del schema['definitions']['Organization']['properties']['beneficialOwnership']
+
+    # Move classifications from details to Organization
+    schema['definitions']['Organization']['properties']['classifications'] = schema['definitions']['Organization']['properties']['details']['properties']['classifications']  # noqa: E501
     del schema['definitions']['Organization']['properties']['details']
 
     # Set stricter validation on party roles

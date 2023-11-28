@@ -685,8 +685,32 @@
         national
         regional
         international
-    mapping: ''
-    example: ''
+    mapping: |-
+        1. Get the `Organization` object in `parties` that represents the accredited entity. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
+        2. Add a `Classification` object to the organization's `.classifications` array, set its `.scheme` to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its `.id`.
+        3. Add a `Classification` object to the organization's `.classifications` array, set its `.scheme` to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its `.id`.
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "name": "Development Bank of South Africa",
+              "roles": [
+                "funder"
+              ],
+              "classifications": [
+                {
+                  "id": "public",
+                  "scheme": "costIdsLegalType"
+                },
+                {
+                  "id": "national",
+                  "scheme": "costIdsAdministrativeLevel"
+                }
+              ]
+            }
+          ]
+        }
 -   id: '3.12'
     title: Project preparation costs
     module: Climate finance

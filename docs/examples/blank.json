@@ -224,6 +224,12 @@
           "faxNumber": "string",
           "telephone": "string"
         }
+      ],
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
+        }
       ]
     }
   ],

@@ -233,6 +233,12 @@
               "name": "Jane Bloggs",
               "jobTitle": "Chair"
             }
+          ],
+          "classifications": [
+            {
+              "id": "national",
+              "scheme": "costIdsAdministrativeLevel"
+            }
           ]
         },
         {

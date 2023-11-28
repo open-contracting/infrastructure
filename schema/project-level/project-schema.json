@@ -366,7 +366,8 @@
           },
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         },
         "hasImpactAssessment": {
           "title": "Has impact assessment",
@@ -1384,6 +1385,16 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Person"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "classifications": {
+          "title": "Organization classifications",
+          "description": "The classifications that categorize the organization.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
           },
           "uniqueItems": true,
           "minItems": 1
