@@ -1675,20 +1675,7 @@ Identify the entities acting as independent monitors of the project (E.g. \[free
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its `.roles` array.
-```json
-{
-  "parties": [
-    {
-      "id": "1",
-      "name": "Climate monitor Africa",
-      "roles": [
-        "independentMonitor"
-      ]
-    }
-  ]
-}
-```
+See [independent monitoring (institutional module)](institutional-independent-monitoring).
 ````
 
 `````
