@@ -367,6 +367,26 @@
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
           "minItems": 1
+        },
+        "hasImpactAssessment": {
+          "title": "Has impact assessment",
+          "description": "Whether an environmental impact assessment has been conducted.",
+          "type": "boolean"
+        },
+        "impactCategories": {
+          "title": "Impact categories",
+          "description": "The categories of the environmental impact of the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "abatementCost": {
+          "title": "Abatement cost",
+          "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
@@ -526,6 +546,18 @@
               "title": "Administrative entity",
               "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
+            },
+            "sustainability": {
+              "title": "Sustainability",
+              "description": "Information about how the contracting process incorporates sustainable public procurement.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "$ref": "#/definitions/Sustainability"
+              },
+              "uniqueItems": true,
+              "minItems": 1
             }
           },
           "minProperties": 1
@@ -594,6 +626,24 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "social": {
+          "title": "Social",
+          "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+          "type": "object",
+          "properties": {
+            "laborBudget": {
+              "title": "Labor budget",
+              "description": "The budget allocated in the contract for labor costs.",
+              "$ref": "#/definitions/Value"
+            },
+            "laborObligations": {
+              "title": "Labor obligations",
+              "description": "Information about labor obligations stipulated in the construction contract(s).",
+              "$ref": "#/definitions/LaborObligations"
+            }
+          },
+          "minProperties": 1
         }
       },
       "minProperties": 1
@@ -2386,6 +2436,54 @@
       },
       "minProperties": 1
     },
+    "LaborObligations": {
+      "title": "Labor obligations",
+      "description": "Information about labor obligations stipulated in the construction contract(s).",
+      "type": "object",
+      "properties": {
+        "obligations": {
+          "title": "Obligations",
+          "description": "The labor obligations stipulated in the construction contract(s), using the open [laborObligations codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations).",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "laborObligations.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the labor obligations.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Sustainability": {
+      "title": "Sustainability",
+      "description": "Information about how the contracting process incorporates sustainable public procurement.",
+      "type": "object",
+      "properties": {
+        "strategies": {
+          "title": "Strategies",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "sustainabilityStrategy.csv",
+          "openCodelist": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
     "Meeting": {
       "title": "Meeting",
       "description": "Information about a meeting.",
@@ -2478,10 +2576,47 @@
           "title": "In indigenous land",
           "description": "Whether the project is located in or cuts through indigenous land.",
           "type": "boolean"
+        },
+        "healthAndSafety": {
+          "title": "Health and safety",
+          "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+          "$ref": "#/definitions/HealthAndSafety"
+        }
+      },
+      "minProperties": 1
+    },
+    "HealthAndSafety": {
+      "title": "Health and Safety",
+      "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+      "type": "object",
+      "properties": {
+        "materialTests": {
+          "title": "Material tests",
+          "description": "Information about tests conducted on materials used in the construction of the assets.",
+          "type": "object",
+          "properties": {
+            "tests": {
+              "title": "Tests",
+              "description": "The construction materials that were tested, using the open [constructionMaterial](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#constructionMaterial) codelist.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "type": "string"
+              },
+              "codelist": "constructionMaterial.csv",
+              "openCodelist": true,
+              "minItems": 1
+            },
+            "description": {
+              "title": "Description",
+              "description": "A short description of the tests conducted on the construction materials.",
+              "type": "string"
+            }
+          }
         }
       },
       "minProperties": 1
     }
-  },
-  "minProperties": 1
+  }
 }

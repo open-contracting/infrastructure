@@ -582,7 +582,14 @@
               "administrativeEntity": {
                 "name": "Motorways Administrator UK",
                 "id": "GB-GOR-XX9876"
-              }
+              },
+              "sustainability": [
+                {
+                  "strategies": [
+                    "awardCriteria"
+                  ]
+                }
+              ]
             },
             "suppliers": [
               {
@@ -708,7 +715,19 @@
                   "currency": "GBP"
                 }
               }
-            ]
+            ],
+            "social": {
+              "laborBudget": {
+                "amount": "150000",
+                "currency": "USD"
+              },
+              "laborObligations": {
+                "obligations": [
+                  "minimumWage"
+                ],
+                "description": "The local minimum wage will be paid to all contracted workers."
+              }
+            }
           },
           "releases": [
             {
@@ -1060,12 +1079,32 @@
           "amount": 10000,
           "currency": "USD"
         },
-        "inIndigenousLand": false
+        "inIndigenousLand": false,
+        "healthAndSafety": {
+          "materialTests": {
+            "test": [
+              "masonry",
+              "metal"
+            ],
+            "description": "Onsite tests were conducted on the steel frames and masonry according to relevant ASTM International standards."
+          }
+        }
       },
       "environment": {
         "goals": [
           "climateChangeMitigation"
-        ]
+        ],
+        "hasImpactAssessment": true,
+        "impactCategories": [
+          {
+            "scheme": "ifc-environmental-social",
+            "id": "a"
+          }
+        ],
+        "abatementCost": {
+          "amount": 12.29,
+          "currency": "USD"
+        }
       }
     }
   ]
