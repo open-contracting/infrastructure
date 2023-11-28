@@ -39,6 +39,8 @@
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
   * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`.
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
 
 ### Codelists
 
