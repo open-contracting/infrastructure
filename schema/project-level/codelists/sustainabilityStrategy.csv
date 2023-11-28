@@ -1,0 +1,10 @@
+Code,Title,Description,Source
+awardCriteria,Award criteria,"Award criteria are used to pursue sustainability goals: for example, allocating points relative to the percentage of recycled materials.",OCDS
+contractPerformanceConditions,Contract performance conditions,"Contract performance conditions are used to pursue sustainability goals: for example, requiring the supplier to monitor carbon emissions during the contract's implementation.",OCDS
+marginOfPreference,Margin of preference,"Margins of preference are used to pursue sustainability goals: for example, accepting the bid of a local supplier that is within a margin of the lowest bid.",OCDS
+reservedParticipation,Reserved participation,"Reserved participation is used to pursue sustainability goals: for example, allowing only SMEs to participate in the contracting process.",OCDS
+selectionCriteria,Selection criteria,"Selection criteria are used to fulfill sustainability goals: for example, requiring a bidder to have a sustainability certificate.",OCDS
+technicalSpecifications,Technical specifications,"Items' technical specifications are used to pursue sustainability goals: for example, requiring a product to have an energy efficiency certificate.",OCDS
+euGPPCriteria,EU GPP criteria,"Green public procurement criteria established at the European Union-level are used to pursue sustainability goals. Criteria can include selection criteria, technical specifications, award criteria and contract performance clauses.",OCDS
+nationalGPPCriteria,National GPP criteria,"Green public procurement criteria established at the national level are used to pursue sustainability goals. Criteria can include selection criteria, technical specifications, award criteria and contract performance clauses.",OCDS
+otherGPPCriteria,Other GPP criteria,"Green public procurement criteria established at a level other than the European Union or national levels are used to pursue sustainability goals. Criteria can include selection criteria, technical specifications, award criteria and contract performance clauses.",OCDS

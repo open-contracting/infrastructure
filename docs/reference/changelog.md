@@ -28,9 +28,10 @@
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
+  * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
-  * [#438](https://github.com/open-contracting/infrastructure/pull/438) - add `benefits`.
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`
   * [#432](https://github.com/open-contracting/infrastructure/pull/432):
     * `identificationPeriod`
     * `preparationPeriod`
@@ -39,8 +40,15 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
+  * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
+  * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
+  * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
 
 ### Codelists
 
@@ -52,7 +60,10 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
 * Add codes:
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
@@ -60,6 +71,16 @@
     * 'maintenance' 
     * 'decommissioning'
     * 'decommissioned'
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
+  * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
+    * 'energy.solar'
+    * 'energy.wind'
+    * 'energy.hydropower'
+    * 'energy.biomass'
+    * 'energy.geothermal'
+    * 'transport.lowCarbon'
+    * 'naturalResources'
+    * 'naturalResources.floodProtection'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
