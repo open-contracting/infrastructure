@@ -80,7 +80,12 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :header-rows: 1
 :file: ../../build/current_lang/codelists/country.csv
 ```
+### ClimateOversightTypes
 
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/climateOversightTypes.csv
+```
 ## Open codelists
 
 ### DocumentType
