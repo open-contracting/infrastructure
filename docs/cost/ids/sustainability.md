@@ -1032,7 +1032,7 @@ Indirect\]
 :columns: 8
 OC4IDS mapping
 ^^^
-
+See [number of beneficiaries (social module)](social-number-of-beneficiaries)
 ````
 
 `````
@@ -1435,12 +1435,11 @@ gender empowerment
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each impact identified add a `benefit` object to the `benefits` array and assign it a locally unique `id`. Set the `title` as the list code and add details explaining the benefit to `.description`.
+Project level: For each co-benefit, add a `Benefit` object to the `benefits` array, map the option from the list to its `.title` and map the explanation to its `.description`.
 ```json
 {
   "benefits": [
     {
-      "id": "1",
       "title": "environmental",
       "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome."
     }
@@ -2065,7 +2064,29 @@ Indicate the number of direct and indirect project beneficiaries (E.g. direct: \
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+1. Add a `Benefit` object to the `benefits` array.
+2. Add a `Beneficiary` object to the benefit's `.beneficiaries` array, set its `.description` to "Direct beneficiaries" and set its `.numberOfPeople` to the number of direct beneficiaries.
+3. Add a `Beneficiary` object to the benefit's `.beneficiaries` array, set its `.description` to "Indirect beneficiaries" and set its `.numberOfPeople` to the number of indirect beneficiaries.
+```json
+{
+  "benefits": [
+    {
+      "beneficiaries": [
+        {
+          "description": "Direct beneficiaries",
+          "numberOfPeople": 1000
+        },
+        {
+          "description": "Indirect beneficiaries",
+          "numberOfPeople": 2000
+        }
+      ]
+    }
+  ]
+}
+```
 ````
 
 `````

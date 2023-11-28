@@ -28,9 +28,10 @@
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
+  * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
-  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`.
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`
   * [#432](https://github.com/open-contracting/infrastructure/pull/432):
     * `identificationPeriod`
     * `preparationPeriod`

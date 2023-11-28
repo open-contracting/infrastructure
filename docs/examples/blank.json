@@ -573,5 +573,18 @@
       "amount": "number",
       "currency": "string from currency codelist"
     }
-  }
+  },
+  "benefits": [
+    {
+      "title": "string",
+      "description": "string",
+      "beneficiaries": [
+        {
+          "description": "string",
+          "location": {},
+          "numberOfPeople": "integer"
+        }
+      ]
+    }
+  ]
 }

@@ -1105,7 +1105,25 @@
           "amount": 12.29,
           "currency": "USD"
         }
-      }
+      },
+      "benefits": [
+        {
+          "title": "Environmental",
+          "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome.",
+          "beneficiaries": [
+            {
+              "description": "Local population of water plant.",
+              "numberOfPeople": 1000,
+              "location": {
+                "id": "1",
+                "address": {
+                  "countryName": "United Kingdom"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
