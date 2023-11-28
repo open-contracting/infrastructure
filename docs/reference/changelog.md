@@ -61,6 +61,15 @@
     * 'maintenance' 
     * 'decommissioning'
     * 'decommissioned'
+  * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
+    * 'energy.solar'
+    * 'energy.wind'
+    * 'energy.hydropower'
+    * 'energy.biomass'
+    * 'energy.geothermal'
+    * 'transport.lowCarbon'
+    * 'naturalResources'
+    * 'naturalResources.floodProtection'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
