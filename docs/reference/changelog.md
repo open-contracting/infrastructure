@@ -15,7 +15,7 @@
 * [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425) - add CoST IDS sustainability modules to mapping documentation.
 
 ### Schema
-https://github.com/open-contracting/infrastructure/pull/445/commits/59f5b6b7c85d88e58bddb063fa8138e347817aac
+
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
