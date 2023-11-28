@@ -367,6 +367,24 @@
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
           "minItems": 1
+        },
+        "climateOversightTypes": {
+          "title": "Climate oversight types",
+          "description": "Whether the oversight of this project's climate impact is performed internally, externally or both, from the closed [climateOversightTypes](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateOversightTypes) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "codelist": "climateOversightTypes.csv",
+          "openCodelist": false,
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "minProperties": 1

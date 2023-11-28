@@ -529,6 +529,9 @@
   "environment": {
     "goals": [
       "string"
+    ],
+    "climateOversightTypes": [
+      "string"
     ]
   }
 }

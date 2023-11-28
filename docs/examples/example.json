@@ -1060,6 +1060,9 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
+        ],
+        "climateOversightTypes": [
+          "internal"
         ]
       }
     }
