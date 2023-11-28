@@ -588,7 +588,14 @@
               "administrativeEntity": {
                 "name": "Motorways Administrator UK",
                 "id": "GB-GOR-XX9876"
-              }
+              },
+              "sustainability": [
+                {
+                  "strategies": [
+                    "awardCriteria"
+                  ]
+                }
+              ]
             },
             "suppliers": [
               {
@@ -714,7 +721,19 @@
                   "currency": "GBP"
                 }
               }
-            ]
+            ],
+            "social": {
+              "laborBudget": {
+                "amount": "150000",
+                "currency": "USD"
+              },
+              "laborObligations": {
+                "obligations": [
+                  "minimumWage"
+                ],
+                "description": "The local minimum wage will be paid to all contracted workers."
+              }
+            }
           },
           "releases": [
             {
@@ -1013,11 +1032,104 @@
         "finalScope": "Upgrade of Junctions 4 and 5 and repairs to the watercourse at Junction 5.",
         "finalScopeDetails": "Scope was expanded to include repairs to a watercourse damaged during construction excavation."
       },
+      "lobbyingMeetings": [
+        {
+          "id": "1",
+          "date": "2024-01-01T00:00:00Z",
+          "address": {
+            "streetAddress": "1600 Amphitheatre Pkwy",
+            "locality": "London",
+            "region": "London",
+            "postalCode": "WC1 8HG",
+            "countryName": "United Kingdom"
+          },
+          "numberOfParticipants": 4,
+          "publicOffice": {
+            "person": {
+              "name": "Brett Gliddon"
+            },
+            "organization": {
+              "name": "Motorways UK",
+              "id": "GB-GOR-XX1234"
+            },
+            "jobTitle": "Group General Manager Transport Services"
+          }
+        }
+      ],
+      "social": {
+        "consultationMeetings": [
+          {
+            "id": "1",
+            "address": {
+              "streetAddress": "1600 Amphitheatre Pkwy",
+              "locality": "London",
+              "region": "London",
+              "postalCode": "WC1 8HG",
+              "countryName": "United Kingdom"
+            },
+            "date": "2024-01-15T00:00:00Z",
+            "numberOfParticipants": "25",
+            "publicOffice": {
+              "person": {
+                "name": "Brett Gliddon"
+              },
+              "organization": {
+                "name": "Motorways UK",
+                "id": "GB-GOR-XX1234"
+              },
+              "jobTitle": "Group General Manager Transport Services"
+            }
+          }
+        ],
+        "landCompensationBudget": {
+          "amount": 10000,
+          "currency": "USD"
+        },
+        "inIndigenousLand": false,
+        "healthAndSafety": {
+          "materialTests": {
+            "test": [
+              "masonry",
+              "metal"
+            ],
+            "description": "Onsite tests were conducted on the steel frames and masonry according to relevant ASTM International standards."
+          }
+        }
+      },
       "environment": {
         "goals": [
           "climateChangeMitigation"
-        ]
-      }
+        ],
+        "hasImpactAssessment": true,
+        "impactCategories": [
+          {
+            "scheme": "ifc-environmental-social",
+            "id": "a"
+          }
+        ],
+        "abatementCost": {
+          "amount": 12.29,
+          "currency": "USD"
+        }
+      },
+      "benefits": [
+        {
+          "title": "Environmental",
+          "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome.",
+          "beneficiaries": [
+            {
+              "description": "Local population of water plant.",
+              "numberOfPeople": 1000,
+              "location": {
+                "id": "1",
+                "address": {
+                  "countryName": "United Kingdom"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

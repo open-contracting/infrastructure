@@ -325,6 +325,7 @@ Each `Period` has the following fields:
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
 * [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
+* [`environment/impactCategories`](project-schema.json,,environment/impactCategories)
 
 Each `Classification` has the following fields:
 
@@ -352,6 +353,11 @@ Each `Classification` has the following fields:
 :title: parties/0/classifications
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/environment/impactCategories
+:title: environment/impactCategories
+```
+
 ````
 
 `````
@@ -365,6 +371,7 @@ Each `Classification` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`locations`](project-schema.json,,locations)
+* [`Beneficiary/location`](project-schema.json,/definitions/Beneficiary,location)
 
 Each `Location` has the following fields:
 
@@ -387,6 +394,11 @@ Each `Location` has the following fields:
 :title: locations
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location
+:title: benefits/0/beneficiaries/0/location
+```
+
 ````
 
 `````
@@ -401,14 +413,17 @@ Each `Location` has the following fields:
 This sub-schema is referenced by the following properties:
 * [`budget/amount`](project-schema.json,,budget/amount)
 * [`completion/finalValue`](project-schema.json,,completion/finalValue)
+* [`environment/abatementCost`](project-schema.json,,environment/abatementCost)
 * [`ContractingProcessSummary/tender/costEstimate`](project-schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)
 * [`ContractingProcessSummary/contractValue`](project-schema.json,/definitions/ContractingProcessSummary,contractValue)
 * [`ContractingProcessSummary/finalValue`](project-schema.json,/definitions/ContractingProcessSummary,finalValue)
+* [`ContractingProcessSummary/social/laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget)
 * [`Modification/oldContractValue`](project-schema.json,/definitions/Modification,oldContractValue)
 * [`Modification/newContractValue`](project-schema.json,/definitions/Modification,newContractValue)
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`Social/landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget)
 
 Each `Value` has the following fields:
 
@@ -467,6 +482,11 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborBudget
+:title: contractingProcesses/0/summary/social/laborBudget
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/value
 :title: transactions/0/value
 ```
@@ -474,6 +494,16 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/completion/finalValue
 :title: completion/finalValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/landCompensationBudget
+:title: social/landCompensationBudget
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/environment/abatementCost
+:title: environment/abatementCost
 ```
 
 ````
@@ -531,6 +561,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
+* [`PublicOffice/organization`](project-schema.json,/definitions/PublicOffice,organization)
 
 Each `OrganizationReference` has the following fields:
 
@@ -598,6 +629,11 @@ Each `OrganizationReference` has the following fields:
 :title: transactions/0/payee
 ```
 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice/organization
+:title: lobbyingMeetings/0/publicOffice/organization
+```
+
 ````
 
 `````
@@ -617,6 +653,7 @@ This sub-schema is referenced by the following properties:
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
 * [`Person/address`](project-schema.json,/definitions/Person,address)
+* [`Meeting/address`](project-schema.json,/definitions/Meeting,address)
 
 Each `Address` has the following fields:
 
@@ -642,6 +679,21 @@ Each `Address` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/parties/0/address
 :title: parties/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/address
+:title: lobbyingMeetings/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings/0/address
+:title: social/consultationMeetings/0/address
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
+:title: benefits/0/beneficiaries/0/location/address
 ```
 
 ````
@@ -1116,6 +1168,291 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### LaborObligations
+
+`LaborObligations` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
+
+Each `LaborObligations` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/LaborObligations
+:collapse: obligations,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
+:title: contractingProcesses/0/summary/social/laborObligations
+```
+
+````
+
+`````
+
+### Benefit
+
+`Benefit` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Benefit
+```
+
+This sub-schema is referenced by the following properties:
+* [`benefits`](project-schema.json,,benefits)
+
+Each `Benefit` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Benefit
+:collapse: title,description,beneficiaries
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits
+:title: benefits
+```
+
+````
+
+`````
+
+### Beneficiary
+
+`Beneficiary` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Beneficiary
+```
+
+This sub-schema is referenced by the following properties:
+* [`Benefit/beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries)
+
+Each `Beneficiary` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Beneficiary
+:collapse: location,description,numberOfPeople
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/benefits/0/beneficiaries
+:title: benefits/0/beneficiaries
+```
+
+````
+
+`````
+
+### Sustainability
+
+`Sustainability` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Sustainability
+```
+
+This sub-schema is referenced by the following properties:
+
+Each `Sustainability` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Sustainability
+:collapse: strategies
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+ 
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
+:title: contractingProcesses/0/summary/tender/sustainability
+```
+
+````
+
+`````
+
+### Meeting
+
+`Meeting` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Meeting
+```
+
+This sub-schema is referenced by the following properties:
+* [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)
+* [`Social/consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings)
+
+Each `Meeting` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Meeting
+:collapse: id,date,address,numberOfParticipants,publicOffice
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings
+:title: lobbyingMeetings
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/consultationMeetings
+:title: social/consultationMeetings
+```
+
+````
+
+`````
+
+### PublicOffice
+
+`PublicOffice` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/PublicOffice
+```
+
+This sub-schema is referenced by the following properties:
+* [`Meeting/publicOffice`](project-schema.json,/definitions/Meeting,publicOffice)
+
+Each `PublicOffice` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/PublicOffice
+:collapse: organization,jobTitle
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/lobbyingMeetings/0/publicOffice
+:title: lobbyingMeetings/0/publicOffice
+```
+
+````
+
+`````
+
+### Social
+
+`Social` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Social
+```
+
+This sub-schema is referenced by the following properties:
+* [`social`](project-schema.json,,social)
+
+Each `Social` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Social
+:collapse: consultationMeetings,landCompensationBudget,inIndigenousLand,healthAndSafety
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social
+:title: social
+```
+
+````
+
+`````
+
+### HealthAndSafety
+
+`HealthAndSafety` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/HealthAndSafety
+```
+
+This sub-schema is referenced by the following properties:
+* [`Social/healthAndSafety`](project-schema.json,/definitions/Social,healthAndSafety)
+
+Each `HealthAndSafety` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/HealthAndSafety
+:collapse: 
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/social/healthAndSafety
+:title: social/healthAndSafety
 ```
 
 ````
