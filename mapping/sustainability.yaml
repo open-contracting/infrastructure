@@ -930,8 +930,15 @@
         internal
         external
         mixed
-    mapping: ''
-    example: ''
+    mapping: 'Project level: Add the relevant codes from the climateOversightTypes codelist to the `environment.climateOversightTypes` array'
+    example: |-
+        {
+          "environment": {
+            "climateOversightTypes": [
+              "internal"
+            ]
+          }
+        }
 -   id: '3.22'
     title: Performance monitoring
     module: Climate finance

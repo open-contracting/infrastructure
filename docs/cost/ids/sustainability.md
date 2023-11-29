@@ -1247,6 +1247,7 @@ Disclose dates for project approval \[submission date, approval date\]
 OC4IDS mapping
 ^^^
 Project level:
+
 For each date:
 
 - Add a `Milestone` to the `milestones` array and set its:
@@ -1565,7 +1566,16 @@ mixed
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: Add the relevant codes from the climateOversightTypes codelist to the `environment.climateOversightTypes` array
+```json
+{
+  "environment": {
+    "climateOversightTypes": [
+      "internal"
+    ]
+  }
+}
+```
 ````
 
 `````
