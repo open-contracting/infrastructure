@@ -52,6 +52,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
 
 ### Codelists
 
@@ -73,7 +74,7 @@
     * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance' 
+    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
