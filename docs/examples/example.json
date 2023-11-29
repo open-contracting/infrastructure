@@ -219,6 +219,38 @@
           }
         ]
       },
+      "costMeasurements": [
+        {
+          "id": "1",
+          "date": "2024-05-01T00:00:00Z",
+          "lifeCycleCosting": {
+            "value": {
+              "amount": 10000000,
+              "currency": "USD"
+            }
+          },
+          "costGroups": [
+            {
+              "id": "1",
+              "category": "endOfLife",
+              "costs": [
+                {
+                  "id": "1",
+                  "value": {
+                    "amount": 50000000,
+                    "currency": "USD"
+                  },
+                  "classification": {
+                    "id": "4.02",
+                    "scheme": "icms",
+                    "description": "Decommissioning and decontamination"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "parties": [
         {
           "name": "Motorways UK",
@@ -261,6 +293,12 @@
               "id": "1",
               "name": "Jane Bloggs",
               "jobTitle": "Chair"
+            }
+          ],
+          "classifications": [
+            {
+              "id": "national",
+              "scheme": "costIdsAdministrativeLevel"
             }
           ]
         },
@@ -614,7 +652,14 @@
               "administrativeEntity": {
                 "name": "Motorways Administrator UK",
                 "id": "GB-GOR-XX9876"
-              }
+              },
+              "sustainability": [
+                {
+                  "strategies": [
+                    "awardCriteria"
+                  ]
+                }
+              ]
             },
             "suppliers": [
               {
@@ -740,7 +785,19 @@
                   "currency": "GBP"
                 }
               }
-            ]
+            ],
+            "social": {
+              "laborBudget": {
+                "amount": "150000",
+                "currency": "USD"
+              },
+              "laborObligations": {
+                "obligations": [
+                  "minimumWage"
+                ],
+                "description": "The local minimum wage will be paid to all contracted workers."
+              }
+            }
           },
           "releases": [
             {
@@ -1087,13 +1144,56 @@
               "jobTitle": "Group General Manager Transport Services"
             }
           }
-        ]
+        ],
+        "landCompensationBudget": {
+          "amount": 10000,
+          "currency": "USD"
+        },
+        "inIndigenousLand": false,
+        "healthAndSafety": {
+          "materialTests": {
+            "test": [
+              "masonry",
+              "metal"
+            ],
+            "description": "Onsite tests were conducted on the steel frames and masonry according to relevant ASTM International standards."
+          }
+        }
       },
       "environment": {
         "goals": [
           "climateChangeMitigation"
-        ]
-      }
+        ],
+        "hasImpactAssessment": true,
+        "impactCategories": [
+          {
+            "scheme": "ifc-environmental-social",
+            "id": "a"
+          }
+        ],
+        "abatementCost": {
+          "amount": 12.29,
+          "currency": "USD"
+        }
+      },
+      "benefits": [
+        {
+          "title": "Environmental",
+          "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome.",
+          "beneficiaries": [
+            {
+              "description": "Local population of water plant.",
+              "numberOfPeople": 1000,
+              "location": {
+                "id": "1",
+                "address": {
+                  "countryName": "United Kingdom"
+                }
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -31,6 +31,7 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 * [Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)
+* [Sustainability strategy](https://extensions.open-contracting.org/en/extensions/sustainability/master/codelists/#sustainabilityStrategy.csv)
 
 ## Closed codelists
 
@@ -94,11 +95,32 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
 
+### ConstructionMaterial
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/constructionMaterial.csv
+```
+
+### CostCategory
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/costCategory.csv
+```
+
 ### DocumentType
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/documentType.csv
+```
+
+### LaborObligations
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/laborObligations.csv
 ```
 
 ### ModificationType
@@ -134,4 +156,11 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
+```
+
+### SustainabilityStrategy
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/sustainabilityStrategy.csv
 ```
