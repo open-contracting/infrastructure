@@ -40,6 +40,7 @@
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
 
 ### Codelists
 
@@ -52,11 +53,12 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
 * Add codes:
   * [#429](https://github.com/open-contracting/infrastructure/pull/429) - partyRole: 'climateFinanceFocalPoint'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance' 
+    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
