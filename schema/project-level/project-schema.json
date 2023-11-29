@@ -165,7 +165,7 @@
     },
     "budget": {
       "title": "Total project value",
-      "description": "Specify the projected costs or allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
+      "description": "Specify the allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and supplier costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
       "type": "object",
       "properties": {
         "description": {
@@ -203,6 +203,16 @@
         }
       },
       "minProperties": 1
+    },
+    "costMeasurements": {
+      "title": "Cost measurements",
+      "description": "Information about cost measurements for the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CostMeasurement"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "forecasts": {
       "title": "Forecasts",
@@ -561,9 +571,7 @@
             "sustainability": {
               "title": "Sustainability",
               "description": "Information about how the contracting process incorporates sustainable public procurement.",
-              "type": [
-                "array"
-              ],
+              "type": "array",
               "items": {
                 "$ref": "#/definitions/Sustainability"
               },
@@ -2456,6 +2464,110 @@
         }
       },
       "minProperties": 1
+    },
+    "CostMeasurement": {
+      "title": "Cost measurement",
+      "description": "A measurement of costs for a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost measurement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date on which the cost measurement was reported.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lifeCycleCosting": {
+          "title": "Life-cycle costing",
+          "description": "Information about life-cycle costing for the cost measurement.",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "Life-cycle cost",
+              "description": "The life-cycle cost of the project.",
+              "$ref": "#/definitions/Value"
+            }
+          },
+          "minProperties": 1
+        },
+        "costGroups": {
+          "title": "Cost groups",
+          "description": "The cost groups included in the cost measurement.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostGroup"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "CostGroup": {
+      "title": "Cost group",
+      "description": "A group of costs relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost group.",
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "title": "Category",
+          "description": "The category of costs included in the cost group, using the open [costCategory](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#costcategory) codelist.",
+          "type": "string",
+          "codelist": "costCategory.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "costs": {
+          "title": "Costs",
+          "description": "The costs included in the cost group.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Cost"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "Cost": {
+      "title": "Cost",
+      "description": "A cost relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local Identifier",
+          "description": "A local identifier for the cost.",
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "title": "Classification",
+          "description": "A classification of the cost.",
+          "$ref": "#/definitions/Classification"
+        },
+        "value": {
+          "title": "Value",
+          "description": "The monetary value of the cost.",
+          "$ref": "#/definitions/Value"
+        }
+      }
     },
     "LaborObligations": {
       "title": "Labor obligations",

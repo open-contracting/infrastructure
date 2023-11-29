@@ -222,7 +222,7 @@ def get_definition_references(schema, defn, parents=None, project_schema=None, i
 
     if 'properties' in schema:
         for key, value in schema['properties'].items():
-            if value.get('type') == 'array' and '$ref' in value['items']:
+            if value.get('type') in ['array', ['array']] and '$ref' in value['items']:
                 if value['items']['$ref'] == f"#/definitions/{defn}":
                     references.append(parents + [key, '0'])
                 elif include_nested:

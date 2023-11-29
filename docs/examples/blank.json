@@ -131,6 +131,38 @@
       }
     ]
   },
+  "costMeasurements": [
+    {
+      "id": "string",
+      "date": "string",
+      "lifeCycleCosting": {
+        "value": {
+          "amount": "number",
+          "currency": "string from currency codelist"
+        }
+      },
+      "costGroups": [
+        {
+          "id": "string",
+          "category": "string",
+          "costs": [
+            {
+              "id": "string",
+              "value": {
+                "amount": "number",
+                "currency": "string from currency codelist"
+              },
+              "classification": {
+                "id": "string",
+                "scheme": "string",
+                "description": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "forecasts": [
     {
       "id": "",

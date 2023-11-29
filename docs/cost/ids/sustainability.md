@@ -71,18 +71,17 @@ Disclose the life cycle cost of the project, which is the cost of an asset throu
 :columns: 8
 OC4IDS mapping
 ^^^
-**Project Level:** Add a `CostMeasurement` object to the `costMeasurements` array. Set `.date` to the date the analysis was prepared. If the cost measurement was performed as part of the project appraisal, set `.stage` to 'preConstruction'. Otherwise, choose an appropriate code from the stage codelist. Map to the cost measurement's `.lifeCycleCost.cost`.
+**Project Level:** Add a `CostMeasurement` object to the `costMeasurements` array. Set `.date` to the date the analysis was prepared. Map to the cost measurement's `.lifeCycleCost.cost`.
 ```json
 {
   "costMeasurements": [
     {
       "id": "1",
-      "stage": "preConstruction",
       "date": "2014-05-01T00:00:00Z",
       "lifeCycleCost": {
         "cost": {
           "amount": 10000000,
-          "currency": "usd"
+          "currency": "USD"
         }
       }
     }
@@ -768,20 +767,18 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Add a `CostMeasurement` object to the `.costMeasurements` array and set:
+1. Add a `CostMeasurement` object to the `.costMeasurements` array and set its:
 
 - `.id` incrementally
-- `.status` to 'endOfLifeForecast'
 - `.date` to the date that the forecast was prepared.
 
 2. Add a `CostGroup` object to the cost measurement's `.costGroups` array, set its `.id` incrementally and set its `.category` to 'endOfLife'
-3. Add a `Cost` object to the cost group's `.costs` array, set its `.id` incrementally and set its `.value` to the amount and currency of the forecast decommissioning costs.
+3. Add a `Cost` object to the cost group's `.costs` array, set its `.id` incrementally and map to its `.value`.
 ```json
 {
   "costMeasurements": [
     {
       "id": "1",
-      "status": "endOfLifeForecast",
       "date": "2024-05-01T00:00:00Z",
       "costGroups": [
         {
