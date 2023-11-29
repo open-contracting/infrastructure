@@ -571,9 +571,7 @@
             "sustainability": {
               "title": "Sustainability",
               "description": "Information about how the contracting process incorporates sustainable public procurement.",
-              "type": [
-                "array"
-              ],
+              "type": "array",
               "items": {
                 "$ref": "#/definitions/Sustainability"
               },
