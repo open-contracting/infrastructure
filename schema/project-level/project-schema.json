@@ -398,6 +398,16 @@
           "title": "Abatement cost",
           "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
           "$ref": "#/definitions/Value"
+        },
+        "climateMeasures": {
+          "title": "Climate measures",
+          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClimateMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
         }
       },
       "minProperties": 1
@@ -3024,6 +3034,34 @@
         }
       },
       "minProperties": 1
+    },
+    "ClimateMeasure": {
+      "title": "Climate measure",
+      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of climate measure, using the open climateMeasures codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "climateMeasures.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   },
   "minProperties": 1

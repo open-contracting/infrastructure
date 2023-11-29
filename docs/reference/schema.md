@@ -1636,3 +1636,38 @@ Each `HealthAndSafety` has the following fields:
 ````
 
 `````
+
+### ClimateMeasure
+
+`ClimateMeasure` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/ClimateMeasure
+```
+
+This sub-schema is referenced by the following properties:
+* [`environment/climateMeasures`](project-schema.json,,environment/climateMeasures)
+
+Each `ClimateMeasure` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/ClimateMeasure
+:collapse: type,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/environment/climateMeasures
+:title: environment/climateMeasures
+```
+
+````
+
+`````
