@@ -40,6 +40,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
   * [#443](https://github.com/open-contracting/infrastructure/pull/443) - `costMeasurements`
   * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.details.classifications`
   * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`

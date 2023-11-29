@@ -129,6 +129,35 @@
           "id": ""
         }
       }
+    ],
+    "finance": [
+      {
+        "id": "string",
+        "assetClass": "string from assetClass codelist",
+        "type": "string from financingArrangementType codelist",
+        "concessional": "boolean",
+        "value": {
+          "amount": "number",
+          "currency": "string"
+        },
+        "source": "string",
+        "financingParty": {
+          "id": "string",
+          "name": "string"
+        },
+        "period": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "paymentPeriod": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "interestRate": {
+          "margin": "number"
+        },
+        "description": "string"
+      }
     ]
   },
   "costMeasurements": [

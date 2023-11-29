@@ -18,15 +18,19 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 OC4IDS reuses some codelists from the Open Contracting Data Standard and its extensions:
 
+* [Asset class](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#assetClass.csv)
 * [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
+* [Debt repayment priority](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#debtRepaymentPriority.csv)
+* [Financing arrangement type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingArrangementType.csv)
+* [Financing party type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingPartyType.csv)
 * [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
 * [Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)
 * [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
+* [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
+* [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 * [Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)
-* [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
-* [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
 * [Sustainability strategy](https://extensions.open-contracting.org/en/extensions/sustainability/master/codelists/#sustainabilityStrategy.csv)
 
 ## Closed codelists

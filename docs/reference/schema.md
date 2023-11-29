@@ -110,7 +110,7 @@ Each `ContractingProcessSummary` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
-:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions,milestones
+:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions,milestones,finance
 :addtargets:
 ```
 
@@ -224,6 +224,8 @@ This sub-schema is referenced by the following properties:
 * [`Modification/newContractPeriod`](project-schema.json,/definitions/Modification,newContractPeriod)
 * [`BudgetBreakdown/period`](project-schema.json,/definitions/BudgetBreakdown,period)
 * [`Observation/period`](project-schema.json,/definitions/Observation,period)
+* [`Finance/period`](project-schema.json,/definitions/Finance,period)
+* [`Finance/paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod)
 
 Each `Period` has the following fields:
 
@@ -284,6 +286,16 @@ Each `Period` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/period
 :title: budget/budgetBreakdown/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/period
+:title: budget/finance/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/paymentPeriod
+:title: budget/finance/0/paymentPeriod
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -429,6 +441,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`Finance/value`](project-schema.json,/definitions/Finance,value)
 * [`CostMeasurement/lifeCycleCosting/value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)
 * [`Cost/value`](project-schema.json,/definitions/Cost,value)
 * [`Social/landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget)
@@ -457,6 +470,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
 :title: budget/budgetBreakdown/0/amount
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/value
+:title: budget/finance/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -579,6 +597,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
+* [`Finance/financingParty`](project-schema.json,/definitions/Finance,financingParty)
 * [`PublicOffice/organization`](project-schema.json,/definitions/PublicOffice,organization)
 
 Each `OrganizationReference` has the following fields:
@@ -600,6 +619,11 @@ Each `OrganizationReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
 :title: budget/budgetBreakdown/0/sourceParty
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/financingParty
+:title: budget/finance/0/financingParty
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -1119,7 +1143,6 @@ Each `SimpleIdentifier` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-* [`milestones`](project-schema.json,,milestones)
 * [`ContractingProcessSummary/milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones)
 
 Each `Milestone` has the following fields:
@@ -1141,11 +1164,6 @@ Each `Milestone` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/milestones
 :title: contractingProcesses/0/summary/milestones
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/milestones
-:title: milestones
 ```
 
 ````
@@ -1186,6 +1204,42 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### Finance
+
+`Finance` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Finance
+```
+
+This sub-schema is referenced by the following properties:
+* [`budget/finance`](project-schema.json,,budget/finance)
+* [`ContractingProcessSummary/finance`](project-schema.json,/definitions/ContractingProcessSummary,finance)
+
+Each `Finance` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Finance
+:collapse: id,title,description,value,financingParty,financingPartyType,source,assetClass,type,repaymentPriority,concessional,resultsBased,period,paymentPeriod,paymentFrequency,exchangeRateGuarantee,stepInRights,relatedLots
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance
+:title: budget/finance
 ```
 
 ````

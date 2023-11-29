@@ -340,6 +340,9 @@ def update_sub_schema_reference(schema):
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
                          'parties/0/people/0/identifier',
+                         'contractingProcesses/0/summary/finance',
+                         'contractingProcesses/1/summary/finance',
+                         'contractingProcesses/2/summary/finance',
                          'social/consultationMeetings/0/publicOffice']
 
         # Add examples
@@ -486,6 +489,11 @@ def update(ppp_base_url):
         'classificationScheme.csv',
         'country.csv',
         'environmentalGoal.csv',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
+        'assetClass.csv',
+        'debtRepaymentPriority.csv',
+        'financingArrangementType.csv',
+        'financingPartyType.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -501,6 +509,11 @@ def update(ppp_base_url):
         'milestoneType.csv',
         'milestoneStatus.csv',
         'milestoneCode.csv',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'assetClass.csv',
+        # 'debtRepaymentPriority.csv',
+        # 'financingArrangementType.csv',
+        # 'financingPartyType.csv',
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -512,6 +525,8 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'SimpleIdentifier',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
+        'Finance',
     }
     ocds_definitions = {
         'Period',
@@ -531,6 +546,8 @@ def update(ppp_base_url):
         'Milestone',
         'MilestoneReference',
         'Person',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'Finance',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')

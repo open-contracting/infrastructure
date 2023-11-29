@@ -864,15 +864,31 @@ guarantees
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each instrument, add a `finance` object to the `budget.finance` array. Set the `.id` appropriately. Set the `.financeCategory` to the matching code from the financeCategory codelist.
+1. Get the `Finance` object in `.budget.finance` or `.contractingProcesses.summary.finance` that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Set the the financing arrangement's properties according to the instrument type:
+
+Instrument type | `.assetClass` | `.type`
+-- | -- | --
+loan | 'debt' | 'loan'
+grant | | 'grant'
+equity | 'equity' | 'shares.listed' or 'shares.unlisted'
+guarantee | | 'guarantee'
+
+3. If the instrument is a concessional loan, set `.concessional` to `true`.
+4. If the instrument is a non-concessional loan, set `.concessional` to `false`.
+5. If the instrument is results-based, set `.resultsBased` to `true`.
 ```json
 {
   "budget": {
     "finance": [
       {
         "id": "1",
-        "financeCategory": "seniorDebt",
-        "concessional": false
+        "assetClass": [
+          "debt"
+        ],
+        "type": "loan",
+        "concessional": false,
+        "resultsBased": true
       }
     ]
   }
@@ -1050,7 +1066,8 @@ Disclose the quantum of the climate finance investment \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each financing instrument, add the value and currency to the`.value` in the `finance` object in `budget.finance`
+1. Get the `Finance` object in `.budget.finance` or `.contractingProcesses.summary.finance` that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Map to the financing arrangement's `.value`.
 ```json
 {
   "budget": {
@@ -1058,7 +1075,7 @@ Project level: For each financing instrument, add the value and currency to the`
       {
         "id": "1",
         "value": {
-          "amount": "3000000",
+          "amount": 3000000,
           "currency": "EUR"
         }
       }
@@ -1086,27 +1103,15 @@ Disclose who is providing the finance \[party/organization/role\]
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add the organization to the `parties` array and add 'funder' to their `.roles` array.
-Map the organization's `.id` from the party array to `financingParty.id` in the `budget.finance`
+1. Get the `Finance` object in `.budget.finance` or `.contractingProcesses.summary.finance` that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Map to the financing arrangement's `.source`.
 ```json
 {
-  "parties": [
-    {
-      "id": "1",
-      "name": "African Development Bank",
-      "roles": [
-        "funder"
-      ]
-    }
-  ],
   "budget": {
     "finance": [
       {
         "id": "1",
-        "financingParty": {
-          "id": "1",
-          "name": "African Development Bank"
-        }
+        "source": "Green Climate Fund"
       }
     ]
   }
@@ -1132,17 +1137,28 @@ For projects financed by the Green Climate Fund, disclose the accredited entitie
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
-
-Add each accredited entity organization to the `parties` array and add 'gcfAccreditedEntity' to its `.roles` array.
+1. Get the `Finance` object in `.budget.finance` or `.contractingProcesses.summary.finance` that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Get the `Organization` object in `.parties` that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
+3. Set the financing arrangement's `.financingParty` to the `.id` and `.name` of the organization.
 ```json
 {
+  "budget": {
+    "finance": [
+      {
+        "id": "1",
+        "financingParty": {
+          "id": "1",
+          "name": "Agency for Agricultural Development of Morocco"
+        }
+      }
+    ]
+  },
   "parties": [
     {
       "id": "1",
       "name": "Agency for Agricultural Development of Morocco",
       "roles": [
-        "gcfAccreditedEntity"
+        "funder"
       ]
     }
   ]
@@ -1319,48 +1335,24 @@ Private Finance \[value or NA\]
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
-
-For each co-financing arrangement add a new `finance` object to the `budget.finance` array. Map the value and currency to the objects `.value`. Add the financing party to the parties array and add `funder` to their `roles` array. Map the funders `id` and `name` to the `.financingParty` object in the `finance` object.
+The OC4IDS data model provides the information needed to calculate co-finance ratios by modelling a project's individual financing arrangements. For more information, see the mappings for [amount of investment](climate-finance-amount-of-investment), [funding source](climate-finance-funding-source), [Green Climate Fund Accredited Entity](climate-finance-green-climate-fund-accredited-entity) and [Accredited Entity Type](climate-finance-accredited-entity-type).
 ```json
 {
-  "parties": [
-    {
-      "id": "1",
-      "name": "Green Climate Fund",
-      "roles": [
-        "funder"
-      ]
-    },
-    {
-      "id": "2",
-      "name": "Agency for Agricultural Development of Morocco",
-      "roles": [
-        "funder"
-      ]
-    }
-  ],
   "budget": {
     "finance": [
       {
         "id": "1",
-        "financingParty": {
-          "id": "1",
-          "name": "Green Climate Fund"
-        },
+        "source": "Green Climate Fund",
         "value": {
-          "amount": "3000000",
+          "amount": 3000000,
           "currency": "USD"
         }
       },
       {
         "id": "2",
-        "financingParty": {
-          "id": "2",
-          "name": "Agency for Agricultural Development of Morocco"
-        },
+        "source": "GEF Trust Fund",
         "value": {
-          "amount": "15000",
+          "amount": 150000,
           "currency": "USD"
         }
       }
@@ -1394,6 +1386,38 @@ Commitment fee (per annum)
 :columns: 8
 OC4IDS mapping
 ^^^
+1. Get the `Finance` object in `.budget.finance` or `.contractingProcesses.summary.finance` that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Map the terms to the financing arrangement's properties:
+
+- Maturity: `.period`
+- Grace period: Map the period over which payments will be made to `.paymentPeriod`. The grace period is the difference between `.period` and `.paymentPeriod`.
+- Annual principal repayment years: `.description`
+- Interest: `.interestRate`
+- Service fee: `.description`
+- Commitment fee: `.description`
+```json
+{
+  "budget": {
+    "finance": [
+      {
+        "id": "1",
+        "period": {
+          "startDate": "2024-01-01T00:00:00Z",
+          "endDate": "2043-12-31T00:00:00Z"
+        },
+        "paymentPeriod": {
+          "startDate": "2029-01-01T00:00:00Z",
+          "endDate": "2043-12-31T00:00:00Z"
+        },
+        "interestRate": {
+          "margin": 0.0075
+        },
+        "description": "Annual principal repayment years 11-20 (% of initial principal): 6.7%. Service fee (per annum): 0.50%. Commitment fee (per annum): Up to 0.75%."
+      }
+    ]
+  }
+}
+```
 
 ````
 
