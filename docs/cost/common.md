@@ -25,5 +25,5 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 ## Add a financing arrangement
 
-1. If the project is a public private partnership (PPP), get the `ContractingProcess` in `.contractingProcesses` that represents that contracting process for the PPP contract and add a `Finance` object to its `.summary.finance` array. Otherwise, add a `Finance` object to the `.budget.finance` array.
+1. If the project is a public-private partnership (PPP), get the `ContractingProcess` in `.contractingProcesses` that represents the contracting process for the PPP contract and add a `Finance` object to its `.summary.finance` array. Otherwise, add a `Finance` object to the `.budget.finance` array.
 2. Set the `Finance` object's `.id` incrementally.

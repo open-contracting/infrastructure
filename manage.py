@@ -485,6 +485,7 @@ def update(ppp_base_url):
         'relatedProject.csv',
         'classificationScheme.csv',
         'country.csv',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
         'assetClass.csv',
         'debtRepaymentPriority.csv',
         'financingArrangementType.csv',
@@ -520,6 +521,7 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'SimpleIdentifier',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
         'Finance',
     }
     ocds_definitions = {
