@@ -14,6 +14,7 @@ import json_merge_patch
 import mdformat
 import requests
 import yaml
+from docutils import nodes
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator as validator
 from ocdsextensionregistry import ProfileBuilder
@@ -317,7 +318,7 @@ def update_sub_schema_reference(schema):
         # Add schema table
         properties_to_collapse = []
         for key, value in definition['properties'].items():
-            if value.get('type') != 'object':
+            if value.get('type') not in ['object', ['object']]:
                 properties_to_collapse.append(key)
 
         definition["content"].extend([
@@ -338,7 +339,8 @@ def update_sub_schema_reference(schema):
                          'metrics/0/observations/0/value',
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
-                         'parties/0/people/0/identifier']
+                         'parties/0/people/0/identifier',
+                         'social/consultationMeetings/0/publicOffice']
 
         # Add examples
         definition["references"] = get_definition_references(schema, defn)
@@ -458,7 +460,10 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5',
-                             {'budget': 'master', 'transaction_milestones': 'master', 'beneficialOwners': 'master'})
+                             {'budget': 'master',
+                              'transaction_milestones': 'master',
+                              'beneficialOwners': 'master',
+                              'organizationClassification': '1.1'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -480,6 +485,7 @@ def update(ppp_base_url):
         'relatedProject.csv',
         'classificationScheme.csv',
         'country.csv',
+        'environmentalGoal.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -681,6 +687,9 @@ def update(ppp_base_url):
     # Remove unneeded extensions and details from Organization.
     del schema['definitions']['Organization']['properties']['shareholders']
     del schema['definitions']['Organization']['properties']['beneficialOwnership']
+
+    # Move classifications from details to Organization
+    schema['definitions']['Organization']['properties']['classifications'] = schema['definitions']['Organization']['properties']['details']['properties']['classifications']  # noqa: E501
     del schema['definitions']['Organization']['properties']['details']
 
     # Set stricter validation on party roles
@@ -927,9 +936,10 @@ def update_sustainability_docs():
             modules[module] = []
 
         title = element.get("title", "")
+        target = nodes.make_id(f"{module}-{title}")
         modules[module].extend(
             [
-              f"\n({module}-{title})=",
+              f"\n({target})=",
               "\n\n`````{grid} 2",
               f"\n\n````{{grid-item-card}} {title}",
               "\n:columns: 4",
@@ -942,9 +952,7 @@ def update_sustainability_docs():
               "\nOC4IDS mapping",
               "\n^^^\n",
               element.get("mapping", ""),
-              "\n```json\n",
-              element.get("example", ""),
-              "\n```",
+              f"\n```json\n{element['example']}\n```" if element.get('example') else '',
               "\n````",
               "\n\n`````\n\n"
             ]

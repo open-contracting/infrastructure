@@ -341,6 +341,21 @@
       "default": "en",
       "minLength": 1
     },
+    "lobbyingMeetings": {
+      "title": "Lobbying meetings",
+      "description": "Information about lobbying meetings in relation to the project. That is, meetings with public officials that are made, managed or directed with the purpose of influencing public decision-making in relation to the project, whether for private, public or collective ends, whether for compensation or without. Public decision-making is the creation and amendment of legislation or any other regulatory measures; the development, modification and implementation of public policies, strategies and programs; and the awarding of government contracts or grants, administrative decisions or any other public spending decisions.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Meeting"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "$ref": "#/definitions/Social"
+    },
     "environment": {
       "title": "Environment",
       "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
@@ -361,10 +376,41 @@
           },
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "hasImpactAssessment": {
+          "title": "Has impact assessment",
+          "description": "Whether an environmental impact assessment has been conducted.",
+          "type": "boolean"
+        },
+        "impactCategories": {
+          "title": "Impact categories",
+          "description": "The categories of the environmental impact of the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "uniqueItems": true,
           "minItems": 1
+        },
+        "abatementCost": {
+          "title": "Abatement cost",
+          "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
+    },
+    "benefits": {
+      "title": "Benefits",
+      "description": "The benefits and intended benefits of the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Benefit"
+      },
+      "uniqueItems": true,
+      "minItems": 1
     }
   },
   "definitions": {
@@ -521,6 +567,18 @@
               "title": "Administrative entity",
               "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
+            },
+            "sustainability": {
+              "title": "Sustainability",
+              "description": "Information about how the contracting process incorporates sustainable public procurement.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "$ref": "#/definitions/Sustainability"
+              },
+              "uniqueItems": true,
+              "minItems": 1
             }
           },
           "minProperties": 1
@@ -589,6 +647,24 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        },
+        "social": {
+          "title": "Social",
+          "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+          "type": "object",
+          "properties": {
+            "laborBudget": {
+              "title": "Labor budget",
+              "description": "The budget allocated in the contract for labor costs.",
+              "$ref": "#/definitions/Value"
+            },
+            "laborObligations": {
+              "title": "Labor obligations",
+              "description": "Information about labor obligations stipulated in the construction contract(s).",
+              "$ref": "#/definitions/LaborObligations"
+            }
+          },
+          "minProperties": 1
         }
       },
       "minProperties": 1
@@ -1319,6 +1395,16 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Person"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "classifications": {
+          "title": "Organization classifications",
+          "description": "The classifications that categorize the organization.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
           },
           "uniqueItems": true,
           "minItems": 1
@@ -2483,12 +2569,240 @@
           "description": "The monetary value of the cost.",
           "$ref": "#/definitions/Value"
         }
+      }
+    },
+    "LaborObligations": {
+      "title": "Labor obligations",
+      "description": "Information about labor obligations stipulated in the construction contract(s).",
+      "type": "object",
+      "properties": {
+        "obligations": {
+          "title": "Obligations",
+          "description": "The labor obligations stipulated in the construction contract(s), using the open [laborObligations codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations).",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "laborObligations.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the labor obligations.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Benefit": {
+      "title": "Benefit",
+      "description": "A benefit or intended benefit of the project.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "description": "A title for the benefit.",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the benefit.",
+          "type": "string"
+        },
+        "beneficiaries": {
+          "title": "Beneficiaries",
+          "description": "Whom the benefit will aid.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Beneficiary"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Beneficiary": {
+      "title": "Beneficiary",
+      "description": "Information about a beneficiary of the project.",
+      "type": "object",
+      "properties": {
+        "location": {
+          "title": "Location",
+          "description": "The location of the beneficiary.",
+          "$ref": "#/definitions/Location"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the beneficiary.",
+          "type": "string"
+        },
+        "numberOfPeople": {
+          "title": "Number of people",
+          "description": "The total size of the beneficiary population.",
+          "type": "integer"
+        }
+      },
+      "minProperties": 1
+    },
+    "Sustainability": {
+      "title": "Sustainability",
+      "description": "Information about how the contracting process incorporates sustainable public procurement.",
+      "type": "object",
+      "properties": {
+        "strategies": {
+          "title": "Strategies",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "sustainabilityStrategy.csv",
+          "openCodelist": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Meeting": {
+      "title": "Meeting",
+      "description": "Information about a meeting.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "The locally unique identifier for the meeting.",
+          "type": [
+            "string"
+          ]
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date of the meeting.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the meeting.",
+          "$ref": "#/definitions/Address"
+        },
+        "numberOfParticipants": {
+          "title": "Number of participants",
+          "description": "The number of people in attendance at the meeting.",
+          "type": "integer"
+        },
+        "publicOffice": {
+          "title": "Public office",
+          "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+          "$ref": "#/definitions/PublicOffice"
+        }
       },
       "required": [
         "id"
       ],
       "minProperties": 1
+    },
+    "PublicOffice": {
+      "title": "Public office",
+      "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+      "type": "object",
+      "properties": {
+        "person": {
+          "title": "Person",
+          "description": "The person holding the public office.",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The full name of the person.",
+              "type": "string"
+            }
+          }
+        },
+        "organization": {
+          "title": "Organization",
+          "description": "The organization in which the public office exists.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "jobTitle": {
+          "title": "Job title",
+          "description": "The job title of the person holding the public office.",
+          "type": "string"
+        }
+      }
+    },
+    "Social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "type": "object",
+      "properties": {
+        "consultationMeetings": {
+          "title": "Public consultation meetings",
+          "description": "Information about public consultation meetings held during the project preparation stage.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Meeting"
+          }
+        },
+        "landCompensationBudget": {
+          "title": "Land compensation budget",
+          "description": "The budget allocated for land compensation.",
+          "$ref": "#/definitions/Value"
+        },
+        "inIndigenousLand": {
+          "title": "In indigenous land",
+          "description": "Whether the project is located in or cuts through indigenous land.",
+          "type": "boolean"
+        },
+        "healthAndSafety": {
+          "title": "Health and safety",
+          "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+          "$ref": "#/definitions/HealthAndSafety"
+        }
+      },
+      "minProperties": 1
+    },
+    "HealthAndSafety": {
+      "title": "Health and safety",
+      "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+      "type": "object",
+      "properties": {
+        "materialTests": {
+          "title": "Material tests",
+          "description": "Information about tests conducted on materials used in the construction of the assets.",
+          "type": "object",
+          "properties": {
+            "tests": {
+              "title": "Tests",
+              "description": "The construction materials that were tested, using the open [constructionMaterial](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#constructionMaterial) codelist.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "type": "string"
+              },
+              "codelist": "constructionMaterial.csv",
+              "openCodelist": true,
+              "minItems": 1
+            },
+            "description": {
+              "title": "Description",
+              "description": "A short description of the tests conducted on the construction materials.",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "minProperties": 1
     }
-  },
-  "minProperties": 1
+  }
 }

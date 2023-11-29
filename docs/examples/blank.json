@@ -256,6 +256,12 @@
           "faxNumber": "string",
           "telephone": "string"
         }
+      ],
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
+        }
       ]
     }
   ],
@@ -312,7 +318,14 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
-          }
+          },
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
@@ -417,7 +430,19 @@
               "title": "title"
             }
           }
-        ]
+        ],
+        "social": {
+          "laborBudget": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "laborObligations": {
+            "obligations": [
+              "string from laborObligations codelist"
+            ],
+            "description": "string"
+          }
+        }
       },
       "releases": [
         {
@@ -508,9 +533,96 @@
     "finalScope": "",
     "finalScopeDetails": ""
   },
+  "lobbyingMeetings": [
+    {
+      "id": "string",
+      "address": {
+        "streetAddress": "string",
+        "locality": "string",
+        "region": "string",
+        "postalCode": "string",
+        "countryName": "string"
+      },
+      "date": "date-time",
+      "numberOfParticipants": "integer",
+      "publicOffice": {
+        "person": {
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
+        },
+        "jobTitle": "string"
+      }
+    }
+  ],
+  "social": {
+    "consultationMeetings": [
+      {
+        "id": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        },
+        "date": "date-time",
+        "numberOfParticipants": "integer",
+        "publicOffice": {
+          "person": {
+            "name": "string"
+          },
+          "organization": {
+            "id": "string",
+            "name": "string"
+          },
+          "jobTitle": "string"
+        }
+      }
+    ],
+    "landCompensationBudget": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    },
+    "inIndigenousLand": "boolean",
+    "healthAndSafety": {
+      "materialTests": {
+        "test": [
+          "string from constructionMaterial codelist"
+        ],
+        "description": "string"
+      }
+    }
+  },
   "environment": {
     "goals": [
       "string"
-    ]
-  }
+    ],
+    "hasImpactAssessment": "boolean",
+    "impactCategories": [
+      {
+        "scheme": "string",
+        "id": "string"
+      }
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    }
+  },
+  "benefits": [
+    {
+      "title": "string",
+      "description": "string",
+      "beneficiaries": [
+        {
+          "description": "string",
+          "location": {},
+          "numberOfPeople": "integer"
+        }
+      ]
+    }
+  ]
 }
