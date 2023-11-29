@@ -52,6 +52,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
 
 ### Codelists
 
@@ -67,13 +68,14 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
 * Add codes:
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
     * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance' 
+    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'

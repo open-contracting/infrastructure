@@ -1632,7 +1632,16 @@ mixed
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project level: Add the relevant codes from the climateOversightTypes codelist to the `environment.climateOversightTypes` array
+```json
+{
+  "environment": {
+    "climateOversightTypes": [
+      "internal"
+    ]
+  }
+}
+```
 ````
 
 `````
