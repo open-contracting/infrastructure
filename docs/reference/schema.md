@@ -214,7 +214,7 @@ This sub-schema is referenced by the following properties:
 * [`period`](project-schema.json,,period)
 * [`identificationPeriod`](project-schema.json,,identificationPeriod)
 * [`preparationPeriod`](project-schema.json,,preparationPeriod)
-* [`implementationPeriod`](project-schema.json,,implementationPeriod) figure
+* [`implementationPeriod`](project-schema.json,,implementationPeriod)
 * [`completionPeriod`](project-schema.json,,completionPeriod)
 * [`maintenancePeriod`](project-schema.json,,maintenancePeriod)
 * [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)
@@ -324,9 +324,9 @@ Each `Period` has the following fields:
 
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
-* [`Cost/classification`](project-schema.json,/definitions/Cost,classification)
-* [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
 * [`environment/impactCategories`](project-schema.json,,environment/impactCategories)
+* [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
+* [`Cost/classification`](project-schema.json,/definitions/Cost,classification)
 
 Each `Classification` has the following fields:
 
@@ -365,7 +365,7 @@ Each `Classification` has the following fields:
 ```
 
 ````
- figure
+
 `````
 
 ### Location
@@ -1191,6 +1191,7 @@ Each `MilestoneReference` has the following fields:
 ````
 
 `````
+
 ### CostMeasurement
 
 `CostMeasurement` is defined as:
@@ -1220,44 +1221,6 @@ Each `CostMeasurement` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/costMeasurements
 :title: costMeasurements
-```
-
-````
-
-`````
-
-
-
-### LaborObligations
-
-`LaborObligations` is defined as:
-
-```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
-```
-
-This sub-schema is referenced by the following properties:
-* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
-
-Each `LaborObligations` has the following fields:
-
-
-`````{tab-set}
-
-````{tab-item} Schema
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/LaborObligations
-:collapse: obligations,description
-:addtargets:
-```
-
-````
-
-````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
-:title: contractingProcesses/0/summary/social/laborObligations
 ```
 
 ````
@@ -1299,6 +1262,76 @@ Each `CostGroup` has the following fields:
 
 `````
 
+### Cost
+
+`Cost` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Cost
+```
+
+This sub-schema is referenced by the following properties:
+* [`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)
+
+Each `Cost` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Cost
+:collapse: id,classification,value
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs
+:title: costMeasurements/0/costGroups/0/costs
+```
+
+````
+
+`````
+
+### LaborObligations
+
+`LaborObligations` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/LaborObligations
+```
+
+This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
+
+Each `LaborObligations` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/LaborObligations
+:collapse: obligations,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborObligations
+:title: contractingProcesses/0/summary/social/laborObligations
+```
+
+````
+
+`````
+
 ### Benefit
 
 `Benefit` is defined as:
@@ -1334,45 +1367,10 @@ Each `Benefit` has the following fields:
 
 `````
 
-### Cost
-
-`Cost` is defined as:
-
-```{field-description} ../../build/current_lang/project-schema.json /definitions/Cost
-```
-
-This sub-schema is referenced by the following properties:
-* [`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)
-
-Each `Cost` has the following fields:
-
-`````{tab-set}
-
-````{tab-item} Schema
-
-```{jsonschema} ../../build/current_lang/project-schema.json
-:pointer: /definitions/Cost
-:collapse: id,classification,value
-:addtargets:
-```
-
-````
-
-````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/benefits/0/beneficiaries
-:title: benefits/0/beneficiaries
-```
-
-````
-
-`````
-
 ### Beneficiary
 
 `Beneficiary` is defined as:
- figure
+
 ```{field-description} ../../build/current_lang/project-schema.json /definitions/Beneficiary
 ```
 
@@ -1412,6 +1410,7 @@ Each `Beneficiary` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
 
 Each `Sustainability` has the following fields:
 
@@ -1428,7 +1427,7 @@ Each `Sustainability` has the following fields:
 ````
 
 ````{tab-item} Examples
- 
+
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
 :title: contractingProcesses/0/summary/tender/sustainability
