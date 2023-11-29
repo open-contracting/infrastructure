@@ -639,7 +639,8 @@
     "abatementCost": {
       "amount": "number",
       "currency": "string from currency codelist"
-    }
+    },
+    "inProtectedArea": "boolean"
   },
   "benefits": [
     {

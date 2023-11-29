@@ -1174,7 +1174,8 @@
         "abatementCost": {
           "amount": 12.29,
           "currency": "USD"
-        }
+        },
+        "inProtectedArea": true
       },
       "benefits": [
         {
