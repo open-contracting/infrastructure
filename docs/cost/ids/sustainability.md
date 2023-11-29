@@ -437,15 +437,15 @@ Project level:
 
 If the project is located in a protected area:
 
-1. Set `.environment.protectedArea` to true.
+1. Set `.environment.inProtectedArea` to true.
 2. Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its `.gazetteer.scheme` to 'WDPA_ID'
 3. For each protected area in which the project is located, add the area's WDPA_ID to the `.gazetteer.identifiers` array.
 
-If the project is not located in a protected area, set `.environment.protectedArea` to false.
+If the project is not located in a protected area, set `.environment.inProtectedArea` to false.
 ```json
 {
   "environment": {
-    "protectedArea": true
+    "inProtectedArea": true
   },
   "locations": [
     {
@@ -1217,7 +1217,6 @@ OC4IDS mapping
   ]
 }
 ```
-
 ````
 
 `````
@@ -1418,7 +1417,6 @@ OC4IDS mapping
   }
 }
 ```
-
 ````
 
 `````
