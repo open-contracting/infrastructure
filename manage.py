@@ -222,7 +222,7 @@ def get_definition_references(schema, defn, parents=None, project_schema=None, i
 
     if 'properties' in schema:
         for key, value in schema['properties'].items():
-            if value.get('type') == 'array' and '$ref' in value['items']:
+            if value.get('type') in ['array', ['array']] and '$ref' in value['items']:
                 if value['items']['$ref'] == f"#/definitions/{defn}":
                     references.append(parents + [key, '0'])
                 elif include_nested:
@@ -318,7 +318,7 @@ def update_sub_schema_reference(schema):
         # Add schema table
         properties_to_collapse = []
         for key, value in definition['properties'].items():
-            if value.get('type') != 'object':
+            if value.get('type') not in ['object', ['object']]:
                 properties_to_collapse.append(key)
 
         definition["content"].extend([
@@ -340,6 +340,9 @@ def update_sub_schema_reference(schema):
                          'parties/0/beneficialOwners/0',
                          'parties/0/people/0/address',
                          'parties/0/people/0/identifier',
+                         'contractingProcesses/0/summary/finance',
+                         'contractingProcesses/1/summary/finance',
+                         'contractingProcesses/2/summary/finance',
                          'social/consultationMeetings/0/publicOffice']
 
         # Add examples
@@ -460,7 +463,10 @@ def update(ppp_base_url):
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
     builder = ProfileBuilder('1__1__5',
-                             {'budget': 'master', 'transaction_milestones': 'master', 'beneficialOwners': 'master'})
+                             {'budget': 'master',
+                              'transaction_milestones': 'master',
+                              'beneficialOwners': 'master',
+                              'organizationClassification': '1.1'})
     ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
@@ -482,6 +488,12 @@ def update(ppp_base_url):
         'relatedProject.csv',
         'classificationScheme.csv',
         'country.csv',
+        'environmentalGoal.csv',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
+        'assetClass.csv',
+        'debtRepaymentPriority.csv',
+        'financingArrangementType.csv',
+        'financingPartyType.csv',
     }
     ocds_codelists = {
         'currency.csv',
@@ -497,6 +509,11 @@ def update(ppp_base_url):
         'milestoneType.csv',
         'milestoneStatus.csv',
         'milestoneCode.csv',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'assetClass.csv',
+        # 'debtRepaymentPriority.csv',
+        # 'financingArrangementType.csv',
+        # 'financingPartyType.csv',
     }
     compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
             'schema/project-level/codelists', 'codelists')
@@ -508,6 +525,8 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'SimpleIdentifier',
+        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
+        'Finance',
     }
     ocds_definitions = {
         'Period',
@@ -527,6 +546,8 @@ def update(ppp_base_url):
         'Milestone',
         'MilestoneReference',
         'Person',
+        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
+        # 'Finance',
     }
     compare(schema['definitions'], infra_definitions, ocds_definitions,
             'schema/project-level/project-schema.json#/definitions', 'definitions')
@@ -683,6 +704,9 @@ def update(ppp_base_url):
     # Remove unneeded extensions and details from Organization.
     del schema['definitions']['Organization']['properties']['shareholders']
     del schema['definitions']['Organization']['properties']['beneficialOwnership']
+
+    # Move classifications from details to Organization
+    schema['definitions']['Organization']['properties']['classifications'] = schema['definitions']['Organization']['properties']['details']['properties']['classifications']  # noqa: E501
     del schema['definitions']['Organization']['properties']['details']
 
     # Set stricter validation on party roles
