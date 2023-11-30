@@ -37,7 +37,7 @@ Each project has the following fields.
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :include:
-:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdown,budget/budgetBreakdowns,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
+:collapse: identifiers,period,additionalClassifications,relatedProjects,assetLifetime,locations,budget/amount,budget/budgetBreakdowns,forecasts,parties,publicAuthority,documents,contractingProcesses,metrics,completion/finalValue
 :addtargets:
 ```
 ````
@@ -284,11 +284,6 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
-:title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/period
 :title: budget/finance/0/period
 ```
@@ -468,11 +463,6 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/amount
-:title: budget/budgetBreakdowns/0/budgetBreakdown/0/amount
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/value
 :title: budget/finance/0/value
 ```
@@ -615,11 +605,6 @@ Each `OrganizationReference` has the following fields:
 ````
 
 ````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
-:title: budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
-```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/financingParty
