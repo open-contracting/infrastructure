@@ -52,6 +52,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
 
 ### Codelists
 
@@ -67,16 +68,16 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
 * Add codes:
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
     * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance' 
+    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
-  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'
     * 'energy.wind'
@@ -86,6 +87,9 @@
     * 'transport.lowCarbon'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
+  * documentType:
+    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
