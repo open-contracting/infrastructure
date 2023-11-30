@@ -99,7 +99,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 
 ```{csv-table-no-translate}
 :header-rows: 1
-:file: ../../build/current_lang/codelists/ClimateMeasures.csv
+:file: ../../build/current_lang/codelists/climateMeasures.csv
 ```
 
 ### ConstructionMaterial
