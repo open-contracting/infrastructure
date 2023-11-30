@@ -22,3 +22,8 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 
 * Add an `Organization` object to the `.parties` array and set its `.name` to the name of the organization.
 * If you collect organization identifiers, set `.identifier` according to the [identifier reference](../reference/schema.md#identifier) and set `.id` to {identifier.scheme}-{identifier.id}(-{department-identifier}). Otherwise, set `.id` incrementally.
+
+## Add a financing arrangement
+
+1. If the project is a public-private partnership (PPP), get the `ContractingProcess` in `.contractingProcesses` that represents the contracting process for the PPP contract and add a `Finance` object to its `.summary.finance` array. Otherwise, add a `Finance` object to the `.budget.finance` array.
+2. Set the `Finance` object's `.id` incrementally.
