@@ -450,7 +450,7 @@
         },
         "description": {
           "title": "Description",
-          "description": "A short description of how the project aligns with the policies listed in `.policies`.",
+          "description": "A short description of how the project aligns with the policies.",
           "type": "string"
         }
       },
