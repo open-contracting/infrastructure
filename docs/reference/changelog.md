@@ -88,6 +88,7 @@
     * 'naturalResources'
     * 'naturalResources.floodProtection'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
+* [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers: 'WDPA'
 
 ### Other
 
