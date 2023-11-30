@@ -68,9 +68,9 @@ procurementStrategyRiskAssessment,Procurement strategy risk assessment,"Document
 lifeCycleCostMethodology,Life cycle cost methodology,Documentation of the methodology for calculating the life cycle cost of the assets.,OC4IDS
 costBenefitAnalysis,Cost-benefit analysis,Documentation of the economic cost-benefit analysis carried out for the project.,OC4IDS
 environmentalExemption,Environmental exemption,Documentation of any environmental exemptions or amnesties granted to the project by a relevant authority.,OC4IDS
-climateAndDisasterRiskAssessment,Climate and disaster risk assessment,Documentation of assessments of the project and resulting assets' risk in relation to climate change and natural disasters.,OC4IDS
+climateAndDisasterRiskAssessment,Climate and disaster risk assessment,Documentation of assessments of the project's risk in relation to climate change and natural disasters.,OC4IDS
 climateTransformation,Climate transformation,"Documentation of the theory of change, systemic transition or transformation in relation to the climate that is intended as an outcome of the project.",OC4IDS
-decommissioningPlans,Decommissioning plans,Documentation of planning for decommissioning of the assets at the end of their lifetime.,OC4IDS
+decommissioningPlans,Decommissioning plans,Documentation of plans for the decommissioning of the assets at the end of their lifetime.,OC4IDS
 impactMethodology,Impact methodology,Documentation of the methodology for measuring the long-term impact of the project.,OC4IDS
 inclusiveDesign,Inclusive design,"Documentation of how issues relating to gender, people with disabilities and vulnerable and disadvantaged populations were incorporated into the project's design.",OC4IDS
 inclusiveImplementation,Inclusive implementation,"Documentation of how issues relating to gender, people with disabilities and vulnerable and disadvantaged populations were incorporated into the project's implementation.",OC4IDS
@@ -80,7 +80,7 @@ antiCorruptionCertification,Anti-corruption certification,"A certificate issued 
 oversightReport,Oversight report,Documentation of checks that the governance and management of the project owner or procuring entity comply with all relevant legislative mandates and policies.,OC4IDS
 informationRequest,Freedom of information request,A request for information in relation to the project submitted under relevant freedom of information legislation.,OC4IDS
 informationRequestResponse,Freedom of information request response,The formal response in answer to a request for information in relation to the project submitted under relevant freedom of information legislation.,OC4IDS
-buildingInspectionReport,Building inspection report,Documentation of checks that the assets meet [building code](https://en.wikipedia.org/wiki/Building_code) requirements.,OC4IDS
+buildingInspectionReport,Building inspection report,Documentation of checks that the assets meet building code requirements.,OC4IDS
 ghgEmissionsForecast,Greenhouse gas emissions forecast,"Documentation of the forecast greenhouse gases that the project will emit, including the methodology and calculation method used.",OC4IDS
 ghgEmissionsReduction,Greenhouse gas emissions reduction forecast,"Documentation of the forecast reduction in greenhouse gas emissions resulting from the project, including the methodology and calculation method used.",OC4IDS
 ghgEmissions,Greenhouse gas emissions,"Documentation of the actual greenhouse gases that the project emitted, including the methodology and calculation method used.",OC4IDS

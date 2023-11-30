@@ -1297,11 +1297,6 @@ Each `Sustainability` has the following fields:
 ````
 
 ````{tab-item} Examples
- 
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
-:title: contractingProcesses/0/summary/tender/sustainability
-```
 
 ````
 
