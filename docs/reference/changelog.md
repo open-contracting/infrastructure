@@ -67,6 +67,7 @@
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
 * Add codes:

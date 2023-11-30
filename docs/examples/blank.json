@@ -656,5 +656,11 @@
         }
       ]
     }
-  ]
+  ],
+  "policyAlignment": {
+    "policies": [
+      "string"
+    ],
+    "description": "string"
+  }
 }

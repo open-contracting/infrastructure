@@ -982,7 +982,7 @@ Select from a list of international commitments and clarify how the project is a
 :columns: 8
 OC4IDS mapping
 ^^^
-See mapping for data point "Policy coherence" in Institutional extension adding the selected codes to the `policyAlighment.policies` array.
+See [policy coherence (institutional module)](institutional-policy-coherence).
 ```json
 {
   "policyAlignment": {
@@ -1022,7 +1022,7 @@ Select from a list of international commitments and clarify how the project is a
 :columns: 8
 OC4IDS mapping
 ^^^
-See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
+See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
 `````
@@ -2809,13 +2809,13 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each plan or policy to which the project is aligned, add a code from the policyAlignment codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
+For each plan or policy to which the project is aligned, add a code from the [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
 
 For each United Nations Sustainable Development Goal to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdg', set its `.id` to the goal's number and set its `.description` to the goal's title.
 
 For each United Nations Sustainable Development Goal Target to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdgTarget', set its `.id` to the target's number and set its `.description` to the target's title.
 
-If further documentation of the project's policy alignment is available, add a document with `.documentType` set to 'policyAlignment', `url` set to the URL at which the documentation can be accessed.
+If further documentation of the project's policy alignment is available, [Add a project document](../common.md#add-a-project-document) with `.documentType` set to 'policyAlignment'.
 ```json
 {
   "additionalClassifications": [
