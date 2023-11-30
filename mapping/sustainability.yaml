@@ -323,7 +323,7 @@
     mapping: |-
         Project level:
 
-        For each measure add a `ClimateMeasure` object to the `environment.climateMeasures` array, setting it's `.type` according to the matching code in the open climateMeasuresType codelist and mapping the further explanation to its `.description`.
+        For each measure add a `ClimateMeasure` object to the `environment.climateMeasures` array, setting it's `.type` according to the matching code in the open climateMeasures codelist and mapping the further explanation to its `.description`.
 
         If there is an accompanying document publish in `documents`, with `.documentType` set to 'climateMeasures' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
     example: |-
@@ -332,7 +332,7 @@
             "climateMeasures": [
               {
                 "type": "regenerativeDesign",
-                "description": "Regenerative design measures for the project include..."
+                "description": "Regenerative design measures for the project include biomimicry to imitate nature."
               }
             ]
           },
@@ -1042,7 +1042,7 @@
     module: Climate finance
     indicator: Anti-corruption impact
     disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\])
-    mapping: 'See [independent monitoring (institutional module)](institutional-independent-monitoring).'
+    mapping: See [independent monitoring (institutional module)](institutional-independent-monitoring).
     example: ''
 -   id: '3.26'
     title: Independent evaluation
