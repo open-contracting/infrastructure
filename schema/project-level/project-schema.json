@@ -440,6 +440,32 @@
       },
       "minProperties": 1
     },
+    "policyAlignment": {
+      "title": "Policy alignment",
+      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
+      "type": "object",
+      "properties": {
+        "policies": {
+          "title": "Policies",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "policyAlignment.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of how the project aligns with the policies.",
+          "type": "string"
+        }
+      },
+      "minProperties": 1
+    },
     "benefits": {
       "title": "Benefits",
       "description": "The benefits and intended benefits of the project.",

@@ -69,6 +69,7 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
 * Add codes:
@@ -80,6 +81,27 @@
     * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
+  * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
+    * 'procurementStrategyRiskAssessment'
+    * 'lifeCycleCostMethodology'
+    * 'costBenefitAnalysis'
+    * 'environmentalExemption'
+    * 'climateAndDisasterRiskAssessment'
+    * 'climateTransformation'
+    * 'decommissioningPlans'
+    * 'impactMethodology'
+    * 'inclusiveDesign'
+    * 'inclusiveImplementation'
+    * 'supplierEnvironmentalCertification'
+    * 'supplierHealthAndSafetyCertification'
+    * 'antiCorruptionCertification'
+    * 'oversightReport'
+    * 'informationRequest'
+    * 'informationRequestResponse'
+    * 'buildingInspectionReport'
+    * 'ghgEmissionsForecast'
+    * 'ghgEmissionsReduction'
+    * 'ghgEmissions'
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'

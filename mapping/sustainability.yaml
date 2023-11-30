@@ -3,7 +3,7 @@
     module: Economic and fiscal
     indicator: Procurement viability
     disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision. (E.g. \[Document\]).
-    mapping: '**Project Level:** [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''procurementStrategyRiskAssessment''.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''procurementStrategyRiskAssessment''.'
     example: |-
         {
           "documents": [
@@ -39,15 +39,15 @@
 -   id: '1.3'
     title: Life cycle cost calculation methodology
     module: Economic and fiscal
-    indicator: ''
+    indicator: Economic viability
     disclosure format: Disclose the methodology used to calculate the life-cycle cost. The methodology ought to specify whether income and externalities are included in the calculation and the common date, discount rate and period of analysis used.
-    mapping: '**Project Level:** Publish in documents, with `.documentType` set to ''lifecycleCostCalculationMethodology'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''lifeCycleCostMethodology''.'
     example: |-
         {
           "documents": [
             {
               "id": "1",
-              "documentType": "lifecycleCostCalculationMethodology",
+              "documentType": "lifecycleCostMethodology",
               "url": "http://example.com/documents/lifecycleCostCalculationMethodology.pdf"
             }
           ]
@@ -71,7 +71,7 @@
     module: Economic and fiscal
     indicator: Economic viability
     disclosure format: Disclose the project cost-benefit analysis. This information tends to be part of the appraisal documents. (E.g. \[Document\]).
-    mapping: '**Project Level:** Publish in `documents`, with `.documentType` set to ''costBenefitAnalysis'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''costBenefitAnalysis''.'
     example: |-
         {
           "documents": [
@@ -87,7 +87,7 @@
     module: Economic and fiscal
     indicator: Economic viability
     disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents. (E.g. \[Document\]).
-    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''valueForMoneyAnalysis'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''valueForMoneyAnalysis''.'
     example: |-
         {
           "documents": [
@@ -128,7 +128,7 @@
                   "id": "1",
                   "period": {
                     "startDate": "2024-01-01T00:00:00Z",
-                    "endDate": "202-12-31T00:00:00Z"
+                    "endDate": "2024-12-31T00:00:00Z"
                   },
                   "value": {
                     "amount": 2500000,
@@ -197,7 +197,7 @@
     module: Environment and climate
     indicator: Environmental impact
     disclosure format: Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Document\]). This can be planning, environmental, construction and/or operational related.
-    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''environmentalExemption'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''environmentalExemption''.'
     example: |-
         {
           "documents": [
@@ -288,7 +288,7 @@
     module: Environment and climate
     indicator: Climate and disaster risk
     disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents..
-    mapping: 'Project level: Add a document, set its `.documentType` to ''climateAndDisasterRiskAssessment'', add a description of the type of climate and disaster risks to which the project is exposed to its `.description` and set  `.url` to the URL of the risk assessment document .'
+    mapping: 'Project level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to ''climateAndDisasterRiskAssessment'' and map any free text to `.description`.'
     example: |-
         {
           "documents": [
@@ -362,7 +362,7 @@
         - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
         - Set `.period` to the period covered by the forecast.
 
-        4. If supporting documentation is available, publish in documents, with `.documentType` set to 'GhgEmissionForecast' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+        4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissionsForecast'.
     example: |-
         {
           "forecasts": [
@@ -390,7 +390,7 @@
           "documents": [
             {
               "id": "1",
-              "documentType": "GhgEmissionForecast",
+              "documentType": "ghgEmissionsForecast",
               "url": "http://example.com/GhgEmissionForecast.pdf"
             }
           ]
@@ -400,7 +400,7 @@
     module: Environment and climate
     indicator: Climate management
     disclosure format: Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management (E.g. \[Document\]).
-    mapping: 'Contracting process level: Publish in `documents`, with `.documentType` set to ''contractorEnvironmentalCertification'' and include a short description and/or a link to a document providing details.'
+    mapping: 'Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to ''supplierEnvironmentalCertification''.'
     example: |-
         {
           "contractingProcesses": [
@@ -410,7 +410,7 @@
                 "documents": [
                   {
                     "id": "1",
-                    "documentType": "contractorEnvironmentalCertification",
+                    "documentType": "supplierEnvironmentalCertification",
                     "url": "http://example.com/documents/contractorEnvironmentalCertification.pdf"
                   }
                 ]
@@ -423,7 +423,7 @@
     module: Environment and climate
     indicator: Climate management
     disclosure format: Disclose the decommissioning plans for the project assets \[document\]..
-    mapping: 'Project level: Publish in `documents`, with `.documentType` set to ''decommissioningPlans'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''decommissioningPlans''.'
     example: |-
         {
           "documents": [
@@ -542,7 +542,7 @@
     module: Climate finance
     indicator: Model of change
     disclosure format: Clarify the theory of change, systemic transition or transformation that is intended \[free text to explain\].
-    mapping: 'Project level: Publish in documents, with `.documentType` set to ''climateTransformation'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to ''climateTransformation'' and map any free text to `.description`.'
     example: |-
         {
           "documents": [
@@ -578,7 +578,7 @@
     module: Climate finance
     indicator: Policy coherence
     disclosure format: Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
-    mapping: See mapping for data point "Policy coherence" in Institutional extension adding the selected codes to the `policyAlighment.policies` array.
+    mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: |-
         {
           "policyAlignment": {
@@ -602,7 +602,7 @@
     module: Climate finance
     indicator: Policy coherence
     disclosure format: Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
-    mapping: See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
+    mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
 -   id: '3.7'
     title: Beneficiaries
@@ -1042,8 +1042,17 @@
     module: Climate finance
     indicator: Anti-corruption impact
     disclosure format: \[document\]
-    mapping: ''
-    example: ''
+    mapping: 'Project-level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''oversightReport''.'
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "oversightReport",
+              "url": "http://example.com/oversightReport"
+            }
+          ]
+        }
 -   id: '3.25'
     title: Independent monitoring
     module: Climate finance
@@ -1056,7 +1065,7 @@
     module: Climate finance
     indicator: Long-term project impact
     disclosure format: Disclose technical audits produced at end of the project (E.g. \[free text\].
-    mapping: 'Project level: Add a document, set its `.documentType` to ''technicalAuditReport'', add a description of the reports findings to its `.description` and set `.url` to the URL of the document that details the audit (if available). If multiple reports have been produced add a document for each one.'
+    mapping: 'Project-level: For each audit report [add a project document](../common.md#add-a-project-document), set `.documentType` to ''technicalAuditReport'' and map any free text to `.description` .'
     example: |-
         {
           "documents": [
@@ -1075,7 +1084,7 @@
     module: Climate finance
     indicator: Long-term project impact
     disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution (E.g. \[free text\].
-    mapping: 'Project level: Publish in documents, with `.documentType` set to ''impactMethodology'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project-level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to ''impactMethodology''and map any free text to `.description`.'
     example: |-
         {
           "documents": [
@@ -1105,7 +1114,7 @@
         - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
         - Set `.period` to the period covered by the calculation.
 
-        4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissions' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+        4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissions'.
     example: |-
         {
           "metrics": [
@@ -1133,7 +1142,7 @@
           "documents": [
             {
               "id": "1",
-              "documentType": "GhgEmissions",
+              "documentType": "ghgEmissions",
               "url": " http://example.com/ghgEmissions.pdf "
             }
           ]
@@ -1207,7 +1216,7 @@
         - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
         - Set `.period` to the period covered by the calculation.
 
-        4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissionsReduction' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+        4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissionsReduction'.
     example: |-
         {
           "id": "oc4ids-bu3kcz-123456789",
@@ -1299,9 +1308,9 @@
     mapping: |-
         Project-level:
 
-        1. Add a document, set its `.documentType` to 'inclusiveDesign' and add an explanation of how the project design meets inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
+        1. [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'inclusiveDesign' and map any free text to `.description`.
 
-        2. Add a document, set its `.documentType` to 'inclusiveImplementation' and add an explanation of how the project  imlpementation practices target inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
+        2. [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'inclusiveImplementation' and map any free text to `.description`.
     example: |-
         {
           "documents": [
@@ -1554,7 +1563,7 @@
     module: Social
     indicator: Health and Safety
     disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety (E.g. \[Document\]).
-    mapping: 'Contracting process level: Publish in `.summary.documents`, with `.documentType` set to ''contractorHealthAndSafetyCertification'' and include a short description and/or a link to a document providing details.'
+    mapping: 'Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to ''supplierHealthAndSafetyCertification''.'
     example: |-
         {
           "contractingProcesses": [
@@ -1564,7 +1573,7 @@
                 "documents": [
                   {
                     "id": "1",
-                    "documentType": "contractorHealthAndSafetyCertification",
+                    "documentType": "supplierHealthAndSafetyCertification",
                     "url": "http://example.com/documents/contractorHealthAndSafetyCertification.pdf"
                   }
                 ]
@@ -1631,7 +1640,7 @@
     module: Social
     indicator: Health and Safety
     disclosure format: Disclose building inspections during project implementation (E.g. \[Document\]).
-    mapping: 'Project Level: Publish in `documents`, with `.documentType` set to ''buildingInspectionReport'' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.'
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to ''buildingInspectionReport''.'
     example: |-
         {
           "documents": [
@@ -1777,13 +1786,13 @@
     mapping: |-
         Project level:
 
-        For each plan or policy to which the project is aligned, add a code from the policyAlignment codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
+        For each plan or policy to which the project is aligned, add a code from the [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
 
         For each United Nations Sustainable Development Goal to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdg', set its `.id` to the goal's number and set its `.description` to the goal's title.
 
         For each United Nations Sustainable Development Goal Target to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdgTarget', set its `.id` to the target's number and set its `.description` to the target's title.
 
-        If further documentation of the project's policy alignment is available, add a document with `.documentType` set to 'policyAlignment', `url` set to the URL at which the documentation can be accessed.
+        If further documentation of the project's policy alignment is available, [Add a project document](../common.md#add-a-project-document) with `.documentType` set to 'policyAlignment'.
     example: |-
         {
           "additionalClassifications": [
@@ -1820,13 +1829,13 @@
     mapping: |-
         Project level:
 
-        For each freedom of information request, add a document, set `.documentType` to 'foiRequest' and set `.url` to the URL at which the request is available
+        For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'informationRequest'.
     example: |-
         {
           "documents": [
             {
               "id": "1",
-              "documentType": "foiRequest",
+              "documentType": "informationRequest",
               "url": "http://example.com/foiRequest-1.pdf"
             }
           ]
@@ -1839,13 +1848,13 @@
     mapping: |-
         Project level:
 
-        For each freedom of information request response, add a document, set `.documentType` to 'foiRequestResponse' and set `.url` to the URL at which the response is available.
+        For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'informationRequestResponse'.
     example: |-
         {
           "documents": [
             {
               "id": "1",
-              "documentType": "foiRequest",
+              "documentType": "informationRequestResponse",
               "url": "http://example.com/foiRequest-1.pdf"
             }
           ]
@@ -1970,7 +1979,7 @@
     module: Institutional
     indicator: Anti-corruption impact
     disclosure format: Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard (E.g. \[Document\]).
-    mapping: 'Project Level: Publish in documents, with .documentType set to ''antiCorruptionCertification'' and include a short description and/or a link to a document providing details.'
+    mapping: 'Project Level: [add a project document](../common.md#add-a-project-document) and set `.documentType` to ''antiCorruptionCertification''.'
     example: |-
         {
           "documents": [
