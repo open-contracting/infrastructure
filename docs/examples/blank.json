@@ -129,8 +129,69 @@
           "id": ""
         }
       }
+    ],
+    "finance": [
+      {
+        "id": "string",
+        "assetClass": "string from assetClass codelist",
+        "type": "string from financingArrangementType codelist",
+        "concessional": "boolean",
+        "value": {
+          "amount": "number",
+          "currency": "string"
+        },
+        "source": "string",
+        "financingParty": {
+          "id": "string",
+          "name": "string"
+        },
+        "period": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "paymentPeriod": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "interestRate": {
+          "margin": "number"
+        },
+        "description": "string"
+      }
     ]
   },
+  "costMeasurements": [
+    {
+      "id": "string",
+      "date": "string",
+      "lifeCycleCosting": {
+        "value": {
+          "amount": "number",
+          "currency": "string from currency codelist"
+        }
+      },
+      "costGroups": [
+        {
+          "id": "string",
+          "category": "string",
+          "costs": [
+            {
+              "id": "string",
+              "value": {
+                "amount": "number",
+                "currency": "string from currency codelist"
+              },
+              "classification": {
+                "id": "string",
+                "scheme": "string",
+                "description": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "forecasts": [
     {
       "id": "",
@@ -224,6 +285,12 @@
           "faxNumber": "string",
           "telephone": "string"
         }
+      ],
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
+        }
       ]
     }
   ],
@@ -280,7 +347,14 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
-          }
+          },
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
@@ -385,7 +459,19 @@
               "title": "title"
             }
           }
-        ]
+        ],
+        "social": {
+          "laborBudget": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "laborObligations": {
+            "obligations": [
+              "string from laborObligations codelist"
+            ],
+            "description": "string"
+          }
+        }
       },
       "releases": [
         {
@@ -524,7 +610,20 @@
           "jobTitle": "string"
         }
       }
-    ]
+    ],
+    "landCompensationBudget": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    },
+    "inIndigenousLand": "boolean",
+    "healthAndSafety": {
+      "materialTests": {
+        "test": [
+          "string from constructionMaterial codelist"
+        ],
+        "description": "string"
+      }
+    }
   },
   "environment": {
     "goals": [
@@ -536,5 +635,33 @@
         "description": "string"
       }
     ]
-  }
+  },
+    "climateOversightTypes": [
+      "string"
+    ],
+    "hasImpactAssessment": "boolean",
+    "impactCategories": [
+      {
+        "scheme": "string",
+        "id": "string"
+      }
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    }
+  },
+  "benefits": [
+    {
+      "title": "string",
+      "description": "string",
+      "beneficiaries": [
+        {
+          "description": "string",
+          "location": {},
+          "numberOfPeople": "integer"
+        }
+      ]
+    }
+  ]
 }

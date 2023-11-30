@@ -19,9 +19,10 @@ jobs:
       - if: github.repository == 'open-contracting/standard_profile_template'
         run: make update extract
       - run: make
-      - run: |
-          make linkcheck
-          find . \( -name output.json -o -name output.txt \) -exec rm -r "{}" \;
+      # Disable linkcheck as it is too slow for development.
+      # - run: |
+      #     make linkcheck
+      #     find . \( -name output.json -o -name output.txt \) -exec rm -r "{}" \;
       - run: pytest -W error
       # Deploy the built documentation to the staging directory.
       - if: github.event_name == 'push'
