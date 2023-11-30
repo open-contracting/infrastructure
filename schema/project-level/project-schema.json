@@ -191,20 +191,6 @@
           "type": "string",
           "format": "date-time"
         },
-        "budgetBreakdown": {
-          "type": "array",
-          "title": "Budget breakdown",
-          "description": "A detailed breakdown of the budget by period and/or participating funders.",
-          "items": {
-            "$ref": "#/definitions/BudgetBreakdown"
-          },
-          "uniqueItems": true,
-          "minItems": 1,
-          "deprecated": {
-            "deprecatedVersion": "0.9",
-            "description": "This field is deprecated in favor of `budgetBreakdowns`, to enable the inclusion of multiple different budget breakdowns."
-          }
-        },
         "budgetBreakdowns": {
           "title": "Budget breakdowns",
           "description": "Detailed breakdowns of the budget grouped together by, for example, period, funder or stage.",

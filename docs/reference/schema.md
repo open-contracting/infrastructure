@@ -282,11 +282,6 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdown/0/period
-:title: budget/budgetBreakdown/0/period
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
 :title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
 ```
@@ -431,11 +426,6 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
-:title: budget/budgetBreakdown/0/amount
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/amount
 :title: budget/budgetBreakdowns/0/budgetBreakdown/0/amount
 ```
@@ -552,11 +542,6 @@ Each `OrganizationReference` has the following fields:
 ````
 
 ````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
-:title: budget/budgetBreakdown/0/sourceParty
-```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
@@ -754,7 +739,6 @@ For more information about this sub-schema, see the [OCDS Budget Breakdown exten
 ```
 
 This sub-schema is referenced by the following properties:
-* [`budget/budgetBreakdown`](project-schema.json,,budget/budgetBreakdown)
 * [`BudgetBreakdowns/budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown)
 
 Each `BudgetBreakdown` has the following fields:
@@ -772,11 +756,6 @@ Each `BudgetBreakdown` has the following fields:
 ````
 
 ````{tab-item} Examples
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdown
-:title: budget/budgetBreakdown
-```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown
