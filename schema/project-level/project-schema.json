@@ -234,6 +234,16 @@
       "uniqueItems": true,
       "minItems": 1
     },
+    "milestones": {
+      "title": "Milestones",
+      "description": "Milestones associated with this project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Milestone"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "parties": {
       "title": "Parties",
       "description": "Information on the parties (organizations, economic operators and other participants) who are involved in the project and their roles, e.g. buyer, procuring entity, supplier etc. Organization references elsewhere in the schema are used to refer back to this entries in this list.",
@@ -378,6 +388,24 @@
           "openCodelist": false,
           "minItems": 1,
           "uniqueItems": true
+        },
+        "climateOversightTypes": {
+          "title": "Climate oversight types",
+          "description": "Whether the oversight of this project's climate impact is performed internally, externally or both, from the closed [climateOversightTypes](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateOversightTypes) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "codelist": "climateOversightTypes.csv",
+          "openCodelist": false,
+          "uniqueItems": true,
+          "minItems": 1
         },
         "hasImpactAssessment": {
           "title": "Has impact assessment",

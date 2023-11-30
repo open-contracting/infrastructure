@@ -35,6 +35,13 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 
 ## Closed codelists
 
+### ClimateOversightTypes
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/climateOversightTypes.csv
+```
+
 ### ContractingProcessStatus
 
 ```{csv-table-no-translate}
@@ -115,6 +122,8 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :header-rows: 1
 :file: ../../build/current_lang/codelists/costCategory.csv
 ```
+
+## Open codelists
 
 ### DocumentType
 

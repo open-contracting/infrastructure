@@ -629,6 +629,9 @@
     "goals": [
       "string"
     ],
+    "climateOversightTypes": [
+      "string"
+    ],
     "hasImpactAssessment": "boolean",
     "impactCategories": [
       {

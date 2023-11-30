@@ -27,7 +27,7 @@
   * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `milestones`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426), [#456](https://github.com/open-contracting/infrastructure/pull/456) - `milestones`
   * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
@@ -52,6 +52,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
 
 ### Codelists
@@ -68,6 +69,7 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
 * Add codes:
   * partyRole:

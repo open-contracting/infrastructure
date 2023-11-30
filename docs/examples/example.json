@@ -1164,6 +1164,9 @@
         "goals": [
           "climateChangeMitigation"
         ],
+        "climateOversightTypes": [
+          "internal"
+        ],
         "hasImpactAssessment": true,
         "impactCategories": [
           {
