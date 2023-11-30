@@ -64,6 +64,7 @@ contractAmendment,Contract amendment,A legal document that changes or adds to th
 designReport,Project design report,"A record of the justification for the design approach adopted in the project, typically issued before the works start, by the consultant or firm that will supervise the works.",OC4IDS
 paymentCertificate,Payment certificate,A document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved.,OC4IDS
 escalationApproval,Escalation approval,Documentation of one or more approved escalations of the contract price during the project life-cycle.,OC4IDS
+conservationMeasures,Conservation measures,Documentation of the measures adopted by the project to protect and enhance biodiversity.,OC4IDS
 policyAlignment,Policy alignment,"Documentation detailing how a project aligns with an international, national, sector, or procuring entity policy, plan or strategy.",OC4IDS
 procurementStrategyRiskAssessment,Procurement strategy risk assessment,"Documentation of the strategic risk assessment carried out for this contracting process addressing in-house capabilities, contract packaging decisions and risk allocation decisions.",OC4IDS
 lifeCycleCostMethodology,Life cycle cost methodology,Documentation of the methodology for calculating the life cycle cost of the assets.,OC4IDS

@@ -262,16 +262,16 @@
     mapping: |-
         Project level:
 
-        For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, setting its `.type` according to the matching code in the open "conservationMeasuresType" codelist and mapping the further explanation to its `.description`.
+        For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, set its `.type` according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map the further explanation to its `.description`.
 
-        If there is an accompanying document publish in `documents`, with `.documentType` set to 'conservationMeasures' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+        If there is an accompanying document [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'conservationMeasures'.
     example: |-
         {
           "environment": {
             "conservationMeasures": [
               {
-                "type": "landRestoration",
-                "description": "Land restoration measures for the project include..."
+                "type": "habitatRestoration",
+                "description": "Habitat restoration measures for the project include..."
               }
             ]
           },

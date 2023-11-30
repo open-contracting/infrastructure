@@ -40,6 +40,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - `environment.conservationMeasures`
   * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
   * [#443](https://github.com/open-contracting/infrastructure/pull/443) - `costMeasurements`
   * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.details.classifications`
@@ -67,6 +68,7 @@
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
   * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
