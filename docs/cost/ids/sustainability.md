@@ -38,7 +38,7 @@ Disclose the procurement strategy risk assessment. This tends to be part of the 
 :columns: 8
 OC4IDS mapping
 ^^^
-**Project Level:** [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'procurementStrategyRiskAssessment'.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'procurementStrategyRiskAssessment'.
 ```json
 {
   "documents": [
@@ -108,13 +108,13 @@ Disclose the methodology used to calculate the life-cycle cost. The methodology 
 :columns: 8
 OC4IDS mapping
 ^^^
-**Project Level:** Publish in documents, with `.documentType` set to 'lifecycleCostCalculationMethodology' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'lifeCycleCostMethodology'.
 ```json
 {
   "documents": [
     {
       "id": "1",
-      "documentType": "lifecycleCostCalculationMethodology",
+      "documentType": "lifecycleCostMethodology",
       "url": "http://example.com/documents/lifecycleCostCalculationMethodology.pdf"
     }
   ]
@@ -182,7 +182,7 @@ Disclose the project cost-benefit analysis. This information tends to be part of
 :columns: 8
 OC4IDS mapping
 ^^^
-**Project Level:** Publish in `documents`, with `.documentType` set to 'costBenefitAnalysis' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'costBenefitAnalysis'.
 ```json
 {
   "documents": [
@@ -214,7 +214,7 @@ A summary of the value for money analysis carried out for the project, along wit
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Publish in `documents`, with `.documentType` set to 'valueForMoneyAnalysis' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'valueForMoneyAnalysis'.
 ```json
 {
   "documents": [
@@ -284,7 +284,7 @@ Add a `Metric` object to the `.metrics` array, set its `.id` incrementally and s
           "id": "1",
           "period": {
             "startDate": "2024-01-01T00:00:00Z",
-            "endDate": "202-12-31T00:00:00Z"
+            "endDate": "2024-12-31T00:00:00Z"
           },
           "value": {
             "amount": 2500000,
@@ -401,7 +401,7 @@ Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Docum
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Publish in `documents`, with `.documentType` set to 'environmentalExemption' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'environmentalExemption'.
 ```json
 {
   "documents": [
@@ -495,16 +495,16 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, setting its `.type` according to the matching code in the open "conservationMeasuresType" codelist and mapping the further explanation to its `.description`.
+For each measure add a `ConservationMeasure` object to the `environment.conservationMeasures` array, set its `.type` according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map the further explanation to its `.description`.
 
-If there is an accompanying document publish in `documents`, with `.documentType` set to 'conservationMeasures' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+If there is an accompanying document [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'conservationMeasures'.
 ```json
 {
   "environment": {
     "conservationMeasures": [
       {
-        "type": "landRestoration",
-        "description": "Land restoration measures for the project include..."
+        "type": "habitatRestoration",
+        "description": "Habitat restoration measures for the project include..."
       }
     ]
   },
@@ -537,7 +537,7 @@ Clarify the type of climate and disaster risks to which the project is exposed t
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add a document, set its `.documentType` to 'climateAndDisasterRiskAssessment', add a description of the type of climate and disaster risks to which the project is exposed to its `.description` and set  `.url` to the URL of the risk assessment document .
+Project level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'climateAndDisasterRiskAssessment' and map any free text to `.description`.
 ```json
 {
   "documents": [
@@ -640,7 +640,7 @@ Project-level:
 - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
 - Set `.period` to the period covered by the forecast.
 
-4. If supporting documentation is available, publish in documents, with `.documentType` set to 'GhgEmissionForecast' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissionsForecast'.
 ```json
 {
   "forecasts": [
@@ -668,7 +668,7 @@ Project-level:
   "documents": [
     {
       "id": "1",
-      "documentType": "GhgEmissionForecast",
+      "documentType": "ghgEmissionsForecast",
       "url": "http://example.com/GhgEmissionForecast.pdf"
     }
   ]
@@ -694,7 +694,7 @@ Disclose environmental and/or climate related certifications issued for contract
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: Publish in `documents`, with `.documentType` set to 'contractorEnvironmentalCertification' and include a short description and/or a link to a document providing details.
+Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to 'supplierEnvironmentalCertification'.
 ```json
 {
   "contractingProcesses": [
@@ -704,7 +704,7 @@ Contracting process level: Publish in `documents`, with `.documentType` set to '
         "documents": [
           {
             "id": "1",
-            "documentType": "contractorEnvironmentalCertification",
+            "documentType": "supplierEnvironmentalCertification",
             "url": "http://example.com/documents/contractorEnvironmentalCertification.pdf"
           }
         ]
@@ -733,7 +733,7 @@ Disclose the decommissioning plans for the project assets \[document\]..
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Publish in `documents`, with `.documentType` set to 'decommissioningPlans' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'decommissioningPlans'.
 ```json
 {
   "documents": [
@@ -914,7 +914,7 @@ Clarify the theory of change, systemic transition or transformation that is inte
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Publish in documents, with `.documentType` set to 'climateTransformation' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'climateTransformation' and map any free text to `.description`.
 ```json
 {
   "documents": [
@@ -982,7 +982,7 @@ Select from a list of international commitments and clarify how the project is a
 :columns: 8
 OC4IDS mapping
 ^^^
-See mapping for data point "Policy coherence" in Institutional extension adding the selected codes to the `policyAlighment.policies` array.
+See [policy coherence (institutional module)](institutional-policy-coherence).
 ```json
 {
   "policyAlignment": {
@@ -1022,7 +1022,7 @@ Select from a list of international commitments and clarify how the project is a
 :columns: 8
 OC4IDS mapping
 ^^^
-See mapping for data point "Policy coherence" in Institutional extension adding `parisAgreement` to the `policyAlighment.policies` array.
+See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
 `````
@@ -1727,7 +1727,18 @@ CoST IDS element
 :columns: 8
 OC4IDS mapping
 ^^^
-
+Project-level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'oversightReport'.
+```json
+{
+  "documents": [
+    {
+      "id": "1",
+      "documentType": "oversightReport",
+      "url": "http://example.com/oversightReport"
+    }
+  ]
+}
+```
 ````
 
 `````
@@ -1769,7 +1780,7 @@ Disclose technical audits produced at end of the project (E.g. \[free text\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Add a document, set its `.documentType` to 'technicalAuditReport', add a description of the reports findings to its `.description` and set `.url` to the URL of the document that details the audit (if available). If multiple reports have been produced add a document for each one.
+Project-level: For each audit report [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'technicalAuditReport'.
 ```json
 {
   "documents": [
@@ -1804,7 +1815,7 @@ Clarify the methodology or system to measure the long-term impact of the project
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Publish in documents, with `.documentType` set to 'impactMethodology' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project-level: [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'impactMethodology'and map any free text to `.description`.
 ```json
 {
   "documents": [
@@ -1849,7 +1860,7 @@ Project-level:
 - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
 - Set `.period` to the period covered by the calculation.
 
-4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissions' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissions'.
 ```json
 {
   "metrics": [
@@ -1877,7 +1888,7 @@ Project-level:
   "documents": [
     {
       "id": "1",
-      "documentType": "GhgEmissions",
+      "documentType": "ghgEmissions",
       "url": " http://example.com/ghgEmissions.pdf "
     }
   ]
@@ -2011,7 +2022,7 @@ Project-level:
 - Set the `.unit.name` to "Tonne (metric ton)", `.unit.scheme` to 'UNCEFACT' and `.unit.id` to "TNE"
 - Set `.period` to the period covered by the calculation.
 
-4. If supporting documentation is available, publish in documents, with `.documentType` set to 'ghgEmissionsReduction' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'ghgEmissionsReduction'.
 ```json
 {
   "id": "oc4ids-bu3kcz-123456789",
@@ -2150,9 +2161,9 @@ OC4IDS mapping
 ^^^
 Project-level:
 
-1. Add a document, set its `.documentType` to 'inclusiveDesign' and add an explanation of how the project design meets inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
+1. [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'inclusiveDesign' and map any free text to `.description`.
 
-2. Add a document, set its `.documentType` to 'inclusiveImplementation' and add an explanation of how the project  imlpementation practices target inclusion goals to its `.description`. If supporting documentation is available, add its URL to `.url`.
+2. [Add a project document](../common.md#add-a-project-document), set `.documentType` to 'inclusiveImplementation' and map any free text to `.description`.
 ```json
 {
   "documents": [
@@ -2512,7 +2523,7 @@ Disclose labour related certifications issued in relation to project contractors
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: Publish in `.summary.documents`, with `.documentType` set to 'contractorHealthAndSafetyCertification' and include a short description and/or a link to a document providing details.
+Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to 'supplierHealthAndSafetyCertification'.
 ```json
 {
   "contractingProcesses": [
@@ -2522,7 +2533,7 @@ Contracting process level: Publish in `.summary.documents`, with `.documentType`
         "documents": [
           {
             "id": "1",
-            "documentType": "contractorHealthAndSafetyCertification",
+            "documentType": "supplierHealthAndSafetyCertification",
             "url": "http://example.com/documents/contractorHealthAndSafetyCertification.pdf"
           }
         ]
@@ -2619,7 +2630,7 @@ Disclose building inspections during project implementation (E.g. \[Document\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Publish in `documents`, with `.documentType` set to 'buildingInspectionReport' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
+Project Level: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'buildingInspectionReport'.
 ```json
 {
   "documents": [
@@ -2796,13 +2807,13 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each plan or policy to which the project is aligned, add a code from the policyAlignment codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
+For each plan or policy to which the project is aligned, add a code from the [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the `.policyAlignment.policies` array. Add a further explanation of the project's policy alignment to `.policyAlignment.description`.
 
 For each United Nations Sustainable Development Goal to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdg', set its `.id` to the goal's number and set its `.description` to the goal's title.
 
 For each United Nations Sustainable Development Goal Target to which the project is aligned, add a `Classification` object to the `.additionalClassifications` array, set its `.scheme` to 'sdgTarget', set its `.id` to the target's number and set its `.description` to the target's title.
 
-If further documentation of the project's policy alignment is available, add a document with `.documentType` set to 'policyAlignment', `url` set to the URL at which the documentation can be accessed.
+If further documentation of the project's policy alignment is available, [Add a project document](../common.md#add-a-project-document) with `.documentType` set to 'policyAlignment'.
 ```json
 {
   "additionalClassifications": [
@@ -2854,13 +2865,13 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each freedom of information request, add a document, set `.documentType` to 'foiRequest' and set `.url` to the URL at which the request is available
+For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'informationRequest'.
 ```json
 {
   "documents": [
     {
       "id": "1",
-      "documentType": "foiRequest",
+      "documentType": "informationRequest",
       "url": "http://example.com/foiRequest-1.pdf"
     }
   ]
@@ -2888,13 +2899,13 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each freedom of information request response, add a document, set `.documentType` to 'foiRequestResponse' and set `.url` to the URL at which the response is available.
+For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'informationRequestResponse'.
 ```json
 {
   "documents": [
     {
       "id": "1",
-      "documentType": "foiRequest",
+      "documentType": "informationRequestResponse",
       "url": "http://example.com/foiRequest-1.pdf"
     }
   ]
@@ -3080,7 +3091,7 @@ Disclose anti-corruption certifications of the project, such as ISO 37001 on Ant
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Publish in documents, with .documentType set to 'antiCorruptionCertification' and include a short description and/or a link to a document providing details.
+Project Level: [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'antiCorruptionCertification'.
 ```json
 {
   "documents": [

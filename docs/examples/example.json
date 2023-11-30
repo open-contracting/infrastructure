@@ -1164,6 +1164,12 @@
         "goals": [
           "climateChangeMitigation"
         ],
+        "conservationMeasures": [
+          {
+            "type": "locationAnalysis",
+            "description": "Detailed GIS analysis was undertaken comparing multiple potential locations to select the final project site with the lowest potentially negative ecological impact."
+          }
+        ],
         "climateOversightTypes": [
           "internal"
         ],
@@ -1184,6 +1190,12 @@
             "description": "Regenerative design measures for the project include biomimicry to imitate nature."
           }
         ]
+      },
+      "policyAlignment": {
+        "policies": [
+          "infrastructurePlan"
+        ],
+        "description": "The project is intended to contribute towards the goals set out in the 2021 Australian Infrastructure Plan."
       },
       "benefits": [
         {

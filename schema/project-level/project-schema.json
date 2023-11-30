@@ -422,6 +422,16 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "conservationMeasures": {
+          "title": "Conservation measures",
+          "description": "The measures adopted by the project to protect and enhance biodiversity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "abatementCost": {
           "title": "Abatement cost",
           "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
@@ -436,6 +446,32 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "policyAlignment": {
+      "title": "Policy alignment",
+      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
+      "type": "object",
+      "properties": {
+        "policies": {
+          "title": "Policies",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "policyAlignment.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of how the project aligns with the policies.",
+          "type": "string"
         }
       },
       "minProperties": 1
@@ -2508,6 +2544,28 @@
           "type": [
             "string"
           ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "ConservationMeasure": {
+      "title": "Conservation measure",
+      "description": "A measure adopted by the project to protect and enhance biodiversity.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of conservation measure, using the open [conservationMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "type": "string",
+          "codelist": "conservationMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the conservation measure.",
+          "type": "string",
           "minLength": 1
         }
       },
