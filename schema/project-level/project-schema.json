@@ -165,7 +165,7 @@
     },
     "budget": {
       "title": "Total project value",
-      "description": "Specify the projected costs or allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
+      "description": "Specify the allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and supplier costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
       "type": "object",
       "properties": {
         "description": {
@@ -200,9 +200,29 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "finance": {
+          "title": "Finance",
+          "description": "Information about financing arrangements for the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
+    },
+    "costMeasurements": {
+      "title": "Cost measurements",
+      "description": "Information about cost measurements for the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CostMeasurement"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "forecasts": {
       "title": "Forecasts",
@@ -213,6 +233,16 @@
       },
       "uniqueItems": true,
       "minItems": 1
+    },
+    "milestones": {
+      "title": "Milestones",
+      "description": "Milestones associated with this project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Milestone"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "parties": {
       "title": "Parties",
@@ -265,16 +295,6 @@
       "type": "array",
       "items": {
         "$ref": "#/definitions/Transaction"
-      },
-      "minItems": 1,
-      "uniqueItems": true
-    },
-    "milestones": {
-      "title": "Milestones",
-      "description": "Milestones associated with this project.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Milestone"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -366,6 +386,25 @@
           },
           "codelist": "environmentalGoal.csv",
           "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "climateOversightTypes": {
+          "title": "Climate oversight types",
+          "description": "Whether the oversight of this project's climate impact is performed internally, externally or both, from the closed [climateOversightTypes](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateOversightTypes) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "codelist": "climateOversightTypes.csv",
+          "openCodelist": false,
+          "uniqueItems": true,
           "minItems": 1
         },
         "hasImpactAssessment": {
@@ -560,9 +599,7 @@
             "sustainability": {
               "title": "Sustainability",
               "description": "Information about how the contracting process incorporates sustainable public procurement.",
-              "type": [
-                "array"
-              ],
+              "type": "array",
               "items": {
                 "$ref": "#/definitions/Sustainability"
               },
@@ -633,6 +670,16 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Milestone"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "finance": {
+          "title": "Finance",
+          "description": "Information about financing arrangements for the contracting process.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -1384,6 +1431,16 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Person"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "classifications": {
+          "title": "Organization classifications",
+          "description": "The classifications that categorize the organization.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
           },
           "uniqueItems": true,
           "minItems": 1
@@ -2446,6 +2503,305 @@
       },
       "minProperties": 1
     },
+    "Finance": {
+      "title": "Financing arrangement",
+      "description": "An arrangement between two parties for raising money.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "An identifier for the financing arrangement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "title": "Title",
+          "description": "A short title for the financing arrangement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the financing arrangement. This may include details of service fees, commitment fees, lender rights, step in arrangements, exchange rate guarantees, and for syndicated loans, details of syndication and any members of the syndicate.",
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "title": "Value",
+          "description": "The total value of the finance.",
+          "$ref": "#/definitions/Value"
+        },
+        "financingParty": {
+          "title": "Financing organization",
+          "description": "The organization providing the financing arrangement.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "financingPartyType": {
+          "title": "Financing organization type",
+          "description": "The type of the financing organization, using the closed [financingPartyType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#financingPartyType) codelist.",
+          "type": "string",
+          "codelist": "financingPartyType.csv",
+          "openCodelist": false,
+          "enum": [
+            "institutional",
+            "commercial",
+            "bilateral",
+            "multilateral",
+            "vendor",
+            "other"
+          ]
+        },
+        "source": {
+          "title": "Funding source",
+          "description": "The source of funds for the financing arrangement. For example, the Green Climate Fund.",
+          "type": "string",
+          "minLength": 1
+        },
+        "assetClass": {
+          "title": "Asset class",
+          "description": "The asset classes used in the financing arrangement, using the closed [assetClass](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#assetClass) codelist.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "debt",
+              "equity"
+            ],
+            "minLength": 1
+          },
+          "codelist": "assetClass.csv",
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "type": {
+          "title": "Type",
+          "description": "The type of the financing arrangement, using the closed [financingArrangementType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#financingArrangementType) codelist.",
+          "type": "string",
+          "codelist": "financingArrangementType.csv",
+          "openCodelist": false,
+          "enum": [
+            "bond",
+            "loan",
+            "hybrid",
+            "shares.listed",
+            "shares.unlisted",
+            "grant",
+            "guarantee"
+          ]
+        },
+        "repaymentPriority": {
+          "title": "Repayment priority",
+          "description": "The order in which the debt in the financing arrangement will be repaid in case of default, using the closed [debtRepaymentPriority](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#debtRepaymentPriority) codelist.",
+          "type": "string",
+          "codelist": "debtRepaymentPriority.csv",
+          "openCodelist": false,
+          "enum": [
+            "senior",
+            "subordinated"
+          ]
+        },
+        "concessional": {
+          "title": "Concessional",
+          "description": "Whether the financing arrangement is provided below market rate in order to accelerate climate or development objectives. Also called soft financing and subsidized funding.",
+          "type": "boolean"
+        },
+        "resultsBased": {
+          "title": "Results based",
+          "description": "Whether payments under the financing arrangement are contingent on the achievement of pre-defined results.",
+          "type": "boolean"
+        },
+        "period": {
+          "title": "Finance period",
+          "description": "The period covered by the financing arrangement. Also called maturity.",
+          "$ref": "#/definitions/Period"
+        },
+        "paymentPeriod": {
+          "title": "Payment period",
+          "description": "The period over which the borrower in the financing arrangement is obliged to make payments.",
+          "$ref": "#/definitions/Period"
+        },
+        "paymentFrequency": {
+          "title": "Payment frequency (days)",
+          "description": "The average payment frequency (in days) of the financing arrangement. For example, 365 for yearly, 30.4 for monthly, or 1 for daily.",
+          "type": "number",
+          "minimum": 0
+        },
+        "interestRate": {
+          "title": "Interest rate",
+          "description": "The interest rate associated with the finance.",
+          "type": "object",
+          "properties": {
+            "base": {
+              "title": "Base",
+              "description": "The variable to which an additional margin amount is added to get the Interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR or LIBOR+1%), or can be omitted if margin specifies the entire interest rate.",
+              "type": [
+                "string",
+                "number"
+              ],
+              "minLength": 1
+            },
+            "margin": {
+              "title": "Margin",
+              "description": "The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
+              "type": [
+                "number"
+              ]
+            },
+            "fixed": {
+              "title": "Fixed rate",
+              "description": "A boolean field. If the interest rate of fixed, set to true. Otherwise, set to false.",
+              "type": [
+                "boolean"
+              ]
+            },
+            "notes": {
+              "title": "Notes",
+              "description": "Any explanatory notes concerning the interest rate.",
+              "type": [
+                "string"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
+        },
+        "exchangeRateGuarantee": {
+          "title": "Exchange rate guarantees",
+          "description": "Whether there is an associated exchange rate guarantee with the source of finance.",
+          "type": [
+            "boolean"
+          ]
+        },
+        "stepInRights": {
+          "title": "Step in rights",
+          "description": "Whether provision of the finance confers any step in rights to the financing organization.",
+          "type": [
+            "boolean"
+          ]
+        },
+        "relatedLots": {
+          "title": "Related lot(s)",
+          "description": "The identifiers of the lots to which the financing arrangement relates.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "CostMeasurement": {
+      "title": "Cost measurement",
+      "description": "A measurement of costs for a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost measurement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date on which the cost measurement was reported.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lifeCycleCosting": {
+          "title": "Life-cycle costing",
+          "description": "Information about life-cycle costing for the cost measurement.",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "Life-cycle cost",
+              "description": "The life-cycle cost of the project.",
+              "$ref": "#/definitions/Value"
+            }
+          },
+          "minProperties": 1
+        },
+        "costGroups": {
+          "title": "Cost groups",
+          "description": "The cost groups included in the cost measurement.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostGroup"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "CostGroup": {
+      "title": "Cost group",
+      "description": "A group of costs relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost group.",
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "title": "Category",
+          "description": "The category of costs included in the cost group, using the open [costCategory](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#costcategory) codelist.",
+          "type": "string",
+          "codelist": "costCategory.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "costs": {
+          "title": "Costs",
+          "description": "The costs included in the cost group.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Cost"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "Cost": {
+      "title": "Cost",
+      "description": "A cost relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local Identifier",
+          "description": "A local identifier for the cost.",
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "title": "Classification",
+          "description": "A classification of the cost.",
+          "$ref": "#/definitions/Classification"
+        },
+        "value": {
+          "title": "Value",
+          "description": "The monetary value of the cost.",
+          "$ref": "#/definitions/Value"
+        }
+      },
+      "minProperties": 1
+    },
     "LaborObligations": {
       "title": "Labor obligations",
       "description": "Information about labor obligations stipulated in the construction contract(s).",
@@ -2458,11 +2814,13 @@
             "array"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "laborObligations.csv",
           "openCodelist": true,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         },
         "description": {
           "title": "Description",
@@ -2481,12 +2839,14 @@
         "title": {
           "title": "Title",
           "description": "A title for the benefit.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "description": {
           "title": "Description",
           "description": "A short description of the benefit.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "beneficiaries": {
           "title": "Beneficiaries",
@@ -2514,7 +2874,8 @@
         "description": {
           "title": "Description",
           "description": "A short description of the beneficiary.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "numberOfPeople": {
           "title": "Number of people",
@@ -2536,11 +2897,13 @@
             "array"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "sustainabilityStrategy.csv",
           "openCodelist": true,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         }
       },
       "minProperties": 1
@@ -2555,7 +2918,8 @@
           "description": "The locally unique identifier for the meeting.",
           "type": [
             "string"
-          ]
+          ],
+          "minLength": 1
         },
         "date": {
           "title": "Date",
@@ -2599,9 +2963,11 @@
             "name": {
               "title": "Name",
               "description": "The full name of the person.",
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
-          }
+          },
+          "minProperties": 1
         },
         "organization": {
           "title": "Organization",
@@ -2611,9 +2977,11 @@
         "jobTitle": {
           "title": "Job title",
           "description": "The job title of the person holding the public office.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     },
     "Social": {
       "title": "Social",
@@ -2626,7 +2994,9 @@
           "type": "array",
           "items": {
             "$ref": "#/definitions/Meeting"
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         },
         "landCompensationBudget": {
           "title": "Land compensation budget",
@@ -2663,21 +3033,26 @@
                 "array"
               ],
               "items": {
-                "type": "string"
+                "type": "string",
+                "minLength": 1
               },
               "codelist": "constructionMaterial.csv",
               "openCodelist": true,
-              "minItems": 1
+              "minItems": 1,
+              "uniqueItems": true
             },
             "description": {
               "title": "Description",
               "description": "A short description of the tests conducted on the construction materials.",
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
-          }
+          },
+          "minProperties": 1
         }
       },
       "minProperties": 1
     }
-  }
+  },
+  "minProperties": 1
 }

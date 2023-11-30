@@ -18,18 +18,29 @@ For more information on open and closed codelists, refer to the Open Contracting
 
 OC4IDS reuses some codelists from the Open Contracting Data Standard and its extensions:
 
+* [Asset class](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#assetClass.csv)
 * [Currency](https://standard.open-contracting.org/1.1/en/schema/codelists/#currency)
+* [Debt repayment priority](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#debtRepaymentPriority.csv)
+* [Financing arrangement type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingArrangementType.csv)
+* [Financing party type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingPartyType.csv)
 * [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
 * [Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)
 * [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
+* [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
+* [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
 * [Organization identifier scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)
 * [Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists/#release-tag)
 * [Unit classification scheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)
-* [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
-* [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
 * [Sustainability strategy](https://extensions.open-contracting.org/en/extensions/sustainability/master/codelists/#sustainabilityStrategy.csv)
 
 ## Closed codelists
+
+### ClimateOversightTypes
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/climateOversightTypes.csv
+```
 
 ### ContractingProcessStatus
 
@@ -43,6 +54,27 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/contractNature.csv
+```
+
+### Country
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/country.csv
+```
+
+### EnvironmentalGoal
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/environmentalGoal.csv
+```
+
+### MilestoneType
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/milestoneType.csv
 ```
 
 ### ProjectStatus
@@ -61,28 +93,14 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/projectType.csv
 ```
 
-### MilestoneType
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/milestoneType.csv
-```
-
-### EnvironmentalGoal
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/environmentalGoal.csv
-```
-
-### country
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/country.csv
-```
-
 ## Open codelists
+
+### ClassificationScheme
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/classificationScheme.csv
+```
 
 ### ConstructionMaterial
 
@@ -91,11 +109,27 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/constructionMaterial.csv
 ```
 
+### CostCategory
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/costCategory.csv
+```
+
+## Open codelists
+
 ### DocumentType
 
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/documentType.csv
+```
+
+### LaborObligations
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/laborObligations.csv
 ```
 
 ### ModificationType
@@ -133,21 +167,7 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/relatedProjectScheme.csv
 ```
 
-### classificationScheme
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/classificationScheme.csv
-```
-
-### laborObligations
-
-```{csv-table-no-translate}
-:header-rows: 1
-:file: ../../build/current_lang/codelists/laborObligations.csv
-```
-
-### sustainabilityStrategy
+### SustainabilityStrategy
 
 ```{csv-table-no-translate}
 :header-rows: 1

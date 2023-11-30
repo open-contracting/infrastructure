@@ -129,8 +129,69 @@
           "id": ""
         }
       }
+    ],
+    "finance": [
+      {
+        "id": "string",
+        "assetClass": "string from assetClass codelist",
+        "type": "string from financingArrangementType codelist",
+        "concessional": "boolean",
+        "value": {
+          "amount": "number",
+          "currency": "string"
+        },
+        "source": "string",
+        "financingParty": {
+          "id": "string",
+          "name": "string"
+        },
+        "period": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "paymentPeriod": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "interestRate": {
+          "margin": "number"
+        },
+        "description": "string"
+      }
     ]
   },
+  "costMeasurements": [
+    {
+      "id": "string",
+      "date": "string",
+      "lifeCycleCosting": {
+        "value": {
+          "amount": "number",
+          "currency": "string from currency codelist"
+        }
+      },
+      "costGroups": [
+        {
+          "id": "string",
+          "category": "string",
+          "costs": [
+            {
+              "id": "string",
+              "value": {
+                "amount": "number",
+                "currency": "string from currency codelist"
+              },
+              "classification": {
+                "id": "string",
+                "scheme": "string",
+                "description": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "forecasts": [
     {
       "id": "",
@@ -223,6 +284,12 @@
           "email": "string",
           "faxNumber": "string",
           "telephone": "string"
+        }
+      ],
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
         }
       ]
     }
@@ -560,6 +627,9 @@
   },
   "environment": {
     "goals": [
+      "string"
+    ],
+    "climateOversightTypes": [
       "string"
     ],
     "hasImpactAssessment": "boolean",

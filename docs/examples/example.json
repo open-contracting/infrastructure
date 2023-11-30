@@ -188,8 +188,69 @@
               "id": "GB-GOR-XX1234"
             }
           }
+        ],
+        "finance": [
+          {
+            "id": "1",
+            "assetClass": "debt",
+            "type": "loan",
+            "concessional": true,
+            "value": {
+              "amount": 50000000,
+              "currency": "USD"
+            },
+            "source": "Green Climate Fund",
+            "financingParty": {
+              "id": "1",
+              "name": "United Nations Development Programme"
+            },
+            "period": {
+              "startDate": "2024-01-01T00:00:00Z",
+              "endDate": "2043-12-31T00:00:00Z"
+            },
+            "paymentPeriod": {
+              "startDate": "2029-01-01T00:00:00Z",
+              "endDate": "2043-12-31T00:00:00Z"
+            },
+            "interestRate": {
+              "margin": 0.0075
+            },
+            "description": "Annual principal repayment years 11–20 (% of initial principal): 6.7%. Service fee (per annum): 0.50%. Commitment fee (per annum): Up to 0.75%."
+          }
         ]
       },
+      "costMeasurements": [
+        {
+          "id": "1",
+          "date": "2024-05-01T00:00:00Z",
+          "lifeCycleCosting": {
+            "value": {
+              "amount": 10000000,
+              "currency": "USD"
+            }
+          },
+          "costGroups": [
+            {
+              "id": "1",
+              "category": "endOfLife",
+              "costs": [
+                {
+                  "id": "1",
+                  "value": {
+                    "amount": 50000000,
+                    "currency": "USD"
+                  },
+                  "classification": {
+                    "id": "4.02",
+                    "scheme": "icms",
+                    "description": "Decommissioning and decontamination"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "parties": [
         {
           "name": "Motorways UK",
@@ -232,6 +293,12 @@
               "id": "1",
               "name": "Jane Bloggs",
               "jobTitle": "Chair"
+            }
+          ],
+          "classifications": [
+            {
+              "id": "national",
+              "scheme": "costIdsAdministrativeLevel"
             }
           ]
         },
@@ -396,7 +463,10 @@
         {
           "id": "1",
           "name": "United Nations Development Programme",
-          "roles": "payer"
+          "roles": [
+            "payer",
+            "funder"
+          ]
         }
       ],
       "publicAuthority": {
@@ -1093,6 +1163,9 @@
       "environment": {
         "goals": [
           "climateChangeMitigation"
+        ],
+        "climateOversightTypes": [
+          "internal"
         ],
         "hasImpactAssessment": true,
         "impactCategories": [

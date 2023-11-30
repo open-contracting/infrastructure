@@ -110,7 +110,7 @@ Each `ContractingProcessSummary` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/ContractingProcessSummary
-:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions,milestones
+:collapse: ocid,externalReference,nature,title,description,status,suppliers,contractValue,contractPeriod,finalValue,documents,modifications,transactions,milestones,finance
 :addtargets:
 ```
 
@@ -224,6 +224,8 @@ This sub-schema is referenced by the following properties:
 * [`Modification/newContractPeriod`](project-schema.json,/definitions/Modification,newContractPeriod)
 * [`BudgetBreakdown/period`](project-schema.json,/definitions/BudgetBreakdown,period)
 * [`Observation/period`](project-schema.json,/definitions/Observation,period)
+* [`Finance/period`](project-schema.json,/definitions/Finance,period)
+* [`Finance/paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod)
 
 Each `Period` has the following fields:
 
@@ -287,6 +289,16 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/period
+:title: budget/finance/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/paymentPeriod
+:title: budget/finance/0/paymentPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/forecasts/0/observations/0/period
 :title: forecasts/0/observations/0/period
 ```
@@ -325,6 +337,8 @@ Each `Period` has the following fields:
 This sub-schema is referenced by the following properties:
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
 * [`environment/impactCategories`](project-schema.json,,environment/impactCategories)
+* [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
+* [`Cost/classification`](project-schema.json,/definitions/Cost,classification)
 
 Each `Classification` has the following fields:
 
@@ -345,6 +359,16 @@ Each `Classification` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/additionalClassifications
 :title: additionalClassifications
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/classification
+:title: costMeasurements/0/costGroups/0/costs/0/classification
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/parties/0/classifications
+:title: parties/0/classifications
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -417,6 +441,9 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`Finance/value`](project-schema.json,/definitions/Finance,value)
+* [`CostMeasurement/lifeCycleCosting/value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)
+* [`Cost/value`](project-schema.json,/definitions/Cost,value)
 * [`Social/landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget)
 
 Each `Value` has the following fields:
@@ -443,6 +470,21 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/amount
 :title: budget/budgetBreakdown/0/amount
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/value
+:title: budget/finance/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/lifeCycleCosting/value
+:title: costMeasurements/0/lifeCycleCosting/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/value
+:title: costMeasurements/0/costGroups/0/costs/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -522,7 +564,7 @@ Each `Organization` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Organization
-:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,beneficialOwners,people
+:collapse: name,id,identifier,additionalIdentifiers,address,contactPoint,roles,beneficialOwners,classifications,people
 :addtargets:
 ```
 
@@ -555,6 +597,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty)
 * [`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)
 * [`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)
+* [`Finance/financingParty`](project-schema.json,/definitions/Finance,financingParty)
 * [`PublicOffice/organization`](project-schema.json,/definitions/PublicOffice,organization)
 
 Each `OrganizationReference` has the following fields:
@@ -576,6 +619,11 @@ Each `OrganizationReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdown/0/sourceParty
 :title: budget/budgetBreakdown/0/sourceParty
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/financingParty
+:title: budget/finance/0/financingParty
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -1115,13 +1163,13 @@ Each `Milestone` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/milestones
-:title: contractingProcesses/0/summary/milestones
+:jsonpointer: /projects/0/milestones
+:title: milestones
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/milestones
-:title: milestones
+:jsonpointer: /projects/0/contractingProcesses/0/summary/milestones
+:title: contractingProcesses/0/summary/milestones
 ```
 
 ````
@@ -1162,6 +1210,147 @@ Each `MilestoneReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
 :title: transactions/0/relatedImplementationMilestone
+```
+
+````
+
+`````
+
+### Finance
+
+`Finance` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Finance
+```
+
+This sub-schema is referenced by the following properties:
+* [`budget/finance`](project-schema.json,,budget/finance)
+* [`ContractingProcessSummary/finance`](project-schema.json,/definitions/ContractingProcessSummary,finance)
+
+Each `Finance` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Finance
+:collapse: id,title,description,value,financingParty,financingPartyType,source,assetClass,type,repaymentPriority,concessional,resultsBased,period,paymentPeriod,paymentFrequency,exchangeRateGuarantee,stepInRights,relatedLots
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance
+:title: budget/finance
+```
+
+````
+
+`````
+
+### CostMeasurement
+
+`CostMeasurement` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/CostMeasurement
+```
+
+This sub-schema is referenced by the following properties:
+* [`costMeasurements`](project-schema.json,,costMeasurements)
+
+Each `CostMeasurement` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/CostMeasurement
+:collapse: id,date,costGroups
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements
+:title: costMeasurements
+```
+
+````
+
+`````
+
+### CostGroup
+
+`CostGroup` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/CostGroup
+```
+
+This sub-schema is referenced by the following properties:
+* [`CostMeasurement/costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups)
+
+Each `CostGroup` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/CostGroup
+:collapse: id,category,costs
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups
+:title: costMeasurements/0/costGroups
+```
+
+````
+
+`````
+
+### Cost
+
+`Cost` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/Cost
+```
+
+This sub-schema is referenced by the following properties:
+* [`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)
+
+Each `Cost` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/Cost
+:collapse: id,classification,value
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs
+:title: costMeasurements/0/costGroups/0/costs
 ```
 
 ````
@@ -1281,6 +1470,7 @@ Each `Beneficiary` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
+* [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
 
 Each `Sustainability` has the following fields:
 
@@ -1297,6 +1487,11 @@ Each `Sustainability` has the following fields:
 ````
 
 ````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/tender/sustainability
+:title: contractingProcesses/0/summary/tender/sustainability
+```
 
 ````
 
