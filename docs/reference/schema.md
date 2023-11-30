@@ -1143,6 +1143,7 @@ Each `SimpleIdentifier` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
+* [`milestones`](project-schema.json,,milestones)
 * [`ContractingProcessSummary/milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones)
 
 Each `Milestone` has the following fields:
@@ -1160,6 +1161,11 @@ Each `Milestone` has the following fields:
 ````
 
 ````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/milestones
+:title: milestones
+```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/milestones
