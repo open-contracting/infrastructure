@@ -3070,7 +3070,7 @@
       "properties": {
         "type": {
           "title": "Type",
-          "description": "The type of climate measure, using the open climateMeasures codelist.",
+          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
           "type": [
             "array"
           ],
