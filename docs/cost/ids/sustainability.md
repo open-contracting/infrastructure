@@ -140,7 +140,66 @@ Name the funding organization(s)/sources of funding for Preparation, Implementat
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+
+- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+
+2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
+
+3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
+
+- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
+- Set the `.id` incrementally.
+- Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget source not specified" to the `.description`.
+
+4. For each stage, get the `Organization` object in `.parties` that represents the party providing the funding for the stage named in `.description`. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
+
+- Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the organization.
+```json
+{
+  "budget": {
+    "budgetBreakdowns": [
+      {
+        "id": "1",
+        "description": "Breakdown by stage",
+        "budgetBreakdown": [
+          {
+            "id": "1",
+            "description": "Preparation",
+            "sourceParty": {
+              "id": "1",
+              "name": "Agency for Agricultural Development of Morocco"
+            }
+          },
+          {
+            "id": "2",
+            "description": "Implementation",
+            "sourceParty": {
+              "id": "1",
+              "name": "Agency for Agricultural Development of Morocco"
+            }
+          },
+          {
+            "id": "3",
+            "description": "Operation funding/budget source not specified"
+          }
+        ]
+      }
+    ]
+  },
+  "parties": [
+    {
+      "id": "1",
+      "name": "Agency for Agricultural Development of Morocco",
+      "roles": [
+        "funder"
+      ]
+    }
+  ]
+}
+```
 ````
 
 `````
@@ -161,7 +220,55 @@ Specify the allocated budget for preparation, implementation, operation. If no a
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+
+- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+
+2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
+
+3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
+
+- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
+- Set the `.id` incrementally.
+- Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget amount not allocated" to the `.description`.
+
+4. For each stage, map the amount and currency to the budget breakdown's `.amount`
+```json
+{
+  "budget": {
+    "budgetBreakdowns": [
+      {
+        "id": "1",
+        "description": "Breakdown by stage",
+        "budgetBreakdown": [
+          {
+            "id": "1",
+            "description": "Preparation",
+            "amount": {
+              "amount": 350000,
+              "currency": "USD"
+            }
+          },
+          {
+            "id": "2",
+            "description": "Implementation",
+            "amount": {
+              "amount": 300000,
+              "currency": "USD"
+            }
+          },
+          {
+            "id": "3",
+            "description": "Operation funding/budget amount not allocated"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 ````
 
 `````
@@ -246,7 +353,48 @@ In case of multiyear project implementation, disclose information on budget proj
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
 
+1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+
+2. Set it's `.id` incrementally and it's `.description` to "Breakdown by year of implementation".
+
+3. For each year of implementation, add a `BudgetBreakdown` object to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
+
+- Set the `.id` incrementally.
+- Set the `.description` to the year of implementation.
+
+4. For each year, map the amount and currency to the budget breakdown's `.amount`
+```json
+{
+  "budget": {
+    "budgetBreakdowns": [
+      {
+        "id": "1",
+        "description": "Breakdown by year of implementation",
+        "budgetBreakdown": [
+          {
+            "id": "1",
+            "description": "2024",
+            "amount": {
+              "amount": 350000,
+              "currency": "USD"
+            }
+          },
+          {
+            "id": "2",
+            "description": "2025",
+            "amount": {
+              "amount": 300000,
+              "currency": "USD"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 ````
 
 `````
@@ -1238,7 +1386,7 @@ Disclose the amounts invested in project preparation \[value, currency\]
 :columns: 8
 OC4IDS mapping
 ^^^
-
+See [Budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
 ````
 
 `````

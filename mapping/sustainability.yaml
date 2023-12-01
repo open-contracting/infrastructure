@@ -57,15 +57,100 @@
     module: Economic and fiscal
     indicator: Economic viability
     disclosure format: Name the funding organization(s)/sources of funding for Preparation, Implementation and Operation. If the information is not available for any of the stages, select \['funding/budget source not specified'\] for the respective stage where the nature of the funding/budget source could not be identified.
-    mapping: ''
-    example: ''
+    mapping: |-
+        Project level:
+
+        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
+
+        2. For each stage:
+
+           a. Get the `BudgetBreakdown` object in the budget breakdowns' .budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' .budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
+
+           b. Get the `Organization` object in `.parties` that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
+
+           c. Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the funding source.
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by stage",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "description": "Preparation",
+                    "sourceParty": {
+                      "id": "1",
+                      "name": "Agency for Agricultural Development of Morocco"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "description": "Implementation",
+                    "sourceParty": {
+                      "id": "1",
+                      "name": "Agency for Agricultural Development of Morocco"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "parties": [
+            {
+              "id": "1",
+              "name": "Agency for Agricultural Development of Morocco",
+              "roles": [
+                "funder"
+              ]
+            }
+          ]
+        }
 -   id: '1.5'
     title: Budget for preparation, implementation and operation
     module: Economic and fiscal
     indicator: Economic viability
     disclosure format: Specify the allocated budget for preparation, implementation, operation. If no amount is allocated for each of the stages, select the option 'amount not allocated" (E.g. Preparation \[currency and amount\], Implementation\[currency and amount\], Operation \[currency and amount\]
-    mapping: ''
-    example: ''
+    mapping: |-
+        Project level:
+
+        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
+
+        2. For each stage:
+ 
+           a. Get the `BudgetBreakdown` object in the budget breakdowns' .budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' .budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
+
+           b. Map to the budget breakdown's `.amount`.
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by stage",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "description": "Preparation",
+                    "amount": {
+                      "amount": 350000,
+                      "currency": "USD"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "description": "Implementation",
+                    "amount": {
+                      "amount": 300000,
+                      "currency": "USD"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
 -   id: '1.6'
     title: Cost benefit analysis
     module: Economic and fiscal
@@ -103,8 +188,53 @@
     module: Economic and fiscal
     indicator: Multi-year implementation
     disclosure format: 'In case of multiyear project implementation, disclose information on budget projection for all years of implementation (E.g. Y1: \[currency and amount\], Y2: \[currency and amount\], etc).'
-    mapping: ''
-    example: ''
+    mapping: |-
+        Project level:
+
+        1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by year of implementation".
+
+        2. For each year:
+        
+          a. Add a `BudgetBreakdown` object to the budget breakdowns' `.budgetBreakdown` array and set its `.id` incrementally.
+          
+          b. Map the year's start and end dates to `.period`
+          
+          c. Map the budget projection to `.amount`.
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by year of implementation",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "period": {
+                      "2024-01-01T00:00:00Z",
+                      "2024-12-31T00:00:00Z"
+                    },
+                    "amount": {
+                      "amount": 350000,
+                      "currency": "USD"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "period": {
+                      "2025-01-01T00:00:00Z",
+                      "2025-12-31T00:00:00Z"
+                    },
+                    "amount": {
+                      "amount": 300000,
+                      "currency": "USD"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
 -   id: '1.9'
     title: Budget shortfall
     module: Economic and fiscal
@@ -729,9 +859,9 @@
 -   id: '3.12'
     title: Project preparation costs
     module: Climate finance
-    indicator: Accessibility/ Project viability
+    indicator: Accessibility/Project viability
     disclosure format: Disclose the amounts invested in project preparation \[value, currency\]
-    mapping: ''
+    mapping: See [Budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
     example: ''
 -   id: '3.13'
     title: Project preparation period
