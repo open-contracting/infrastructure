@@ -222,7 +222,7 @@
         2. Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its `.gazetteer.scheme` to 'WDPA'
         3. For each protected area in which the project is located, add the area's WDPA identifier to the `.gazetteer.identifiers` array.
 
-        If the project is not located in a protected area, set `.environment.inProtectedArea` to false.
+        If the project is not located in a protected area, set `.environment.inProtectedArea` to `false`.
     example: |-
         {
           "environment": {
