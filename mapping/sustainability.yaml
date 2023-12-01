@@ -60,21 +60,15 @@
     mapping: |-
         Project level:
 
-        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
 
-        - Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+        2. For each stage:
 
-        2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
+           a. Get the `BudgetBreakdown` object in the budget breakdowns' .budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' .budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
 
-        3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
+           b. Get the `Organization` object in `.parties` that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
 
-        - Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
-        - Set the `.id` incrementally.
-        - Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget source not specified" to the `.description`.
-
-        4. For each stage, get the `Organization` object in `.parties` that represents the party providing the funding for the stage named in `.description`. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
-
-        - Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the organization.
+           c. Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the funding source.
     example: |-
         {
           "budget": {
@@ -98,10 +92,6 @@
                       "id": "1",
                       "name": "Agency for Agricultural Development of Morocco"
                     }
-                  },
-                  {
-                    "id": "3",
-                    "description": "Operation funding/budget source not specified"
                   }
                 ]
               }
@@ -125,19 +115,13 @@
     mapping: |-
         Project level:
 
-        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+        1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
 
-        - Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+        2. For each stage:
+ 
+           a. Get the `BudgetBreakdown` object in the budget breakdowns' .budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' .budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
 
-        2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
-
-        3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
-
-        - Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
-        - Set the `.id` incrementally.
-        - Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget amount not allocated" to the `.description`.
-
-        4. For each stage, map the amount and currency to the budget breakdown's `.amount`
+           b. Map to the budget breakdown's `.amount`.
     example: |-
         {
           "budget": {
@@ -161,10 +145,6 @@
                       "amount": 300000,
                       "currency": "USD"
                     }
-                  },
-                  {
-                    "id": "3",
-                    "description": "Operation funding/budget amount not allocated"
                   }
                 ]
               }
@@ -211,16 +191,15 @@
     mapping: |-
         Project level:
 
-        1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+        1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by year of implementation".
 
-        2. Set it's `.id` incrementally and it's `.description` to "Breakdown by year of implementation".
-
-        3. For each year of implementation, add a `BudgetBreakdown` object to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
-
-        - Set the `.id` incrementally.
-        - Set the `.description` to the year of implementation.
-
-        4. For each year, map the amount and currency to the budget breakdown's `.amount`
+        2. For each year:
+        
+          a. Add a `BudgetBreakdown` object to the budget breakdowns' `.budgetBreakdown` array and set its `.id` incrementally.
+          
+          b. Map the year's start and end dates to `.period`
+          
+          c. Map the budget projection to `.amount`.
     example: |-
         {
           "budget": {
@@ -231,7 +210,10 @@
                 "budgetBreakdown": [
                   {
                     "id": "1",
-                    "description": "2024",
+                    "period": {
+                      "2024-01-01T00:00:00Z",
+                      "2024-12-31T00:00:00Z"
+                    },
                     "amount": {
                       "amount": 350000,
                       "currency": "USD"
@@ -239,7 +221,10 @@
                   },
                   {
                     "id": "2",
-                    "description": "2025",
+                    "period": {
+                      "2025-01-01T00:00:00Z",
+                      "2025-12-31T00:00:00Z"
+                    },
                     "amount": {
                       "amount": 300000,
                       "currency": "USD"
