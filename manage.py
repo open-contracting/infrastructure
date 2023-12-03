@@ -831,7 +831,9 @@ def lint(filename, additional_properties):
         # Check for missing data
         for key, value in element.items():
             if value == '' or value is None:
-                missing_data[key].append(f"{identifier} {title}")
+                # Don't report missing examples for cross-referenced mappings
+                if key != 'example' and 'See [' not in value:
+                    missing_data[key].append(f"{identifier} {title}")
 
         # Format Markdown
         for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
