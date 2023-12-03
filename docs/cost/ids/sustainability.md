@@ -142,21 +142,15 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
 
-- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+2. For each stage:
 
-2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
+   a. Get the `BudgetBreakdown` object in the budget breakdowns' `.budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' `.budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
 
-3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
+   b. Get the `Organization` object in `.parties` that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
 
-- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
-- Set the `.id` incrementally.
-- Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget source not specified" to the `.description`.
-
-4. For each stage, get the `Organization` object in `.parties` that represents the party providing the funding for the stage named in `.description`. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its `.roles`.
-
-- Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the organization.
+   c. Set the budget breakdown's `.sourceParty` to the `.id` and `.name` of the funding source.
 ```json
 {
   "budget": {
@@ -180,10 +174,6 @@ Project level:
               "id": "1",
               "name": "Agency for Agricultural Development of Morocco"
             }
-          },
-          {
-            "id": "3",
-            "description": "Operation funding/budget source not specified"
           }
         ]
       }
@@ -222,19 +212,13 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array that represents the budget breakdown by stage. If none exists yet:
+1. Get the `BudgetBreakdowns` object in the `budget.budgetBreakdowns` array whose `.description` is "Breakdown by stage". If none exists yet, add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by stage".
 
-- Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+2. For each stage:
 
-2. Set it's `.id` incrementally and it's `.description` to "Breakdown by stage".
+   a. Get the `BudgetBreakdown` object in the budget breakdowns' `.budgetBreakdown` array whose `.description` is the name of the stage. If none exists yet, add a `BudgetBreakdown` object to the budget breakdowns' `.budgetBreakdown` array, set its `.id` incrementally and set its `.description` to the name of the stage.
 
-3. Get the `BudgetBreakdown` object in the budget breakdowns object for each of the 3 stages. If none exists yet:
-
-- Add 3 `BudgetBreakdown` objects to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
-- Set the `.id` incrementally.
-- Set the `.description` to the stage name - "Preparation", "Implementation" or "Operation". If the funding source is not known for a stage note append "funding/budget amount not allocated" to the `.description`.
-
-4. For each stage, map the amount and currency to the budget breakdown's `.amount`
+   b. Map to the budget breakdown's `.amount`.
 ```json
 {
   "budget": {
@@ -258,10 +242,6 @@ Project level:
               "amount": 300000,
               "currency": "USD"
             }
-          },
-          {
-            "id": "3",
-            "description": "Operation funding/budget amount not allocated"
           }
         ]
       }
@@ -355,16 +335,15 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array.
+1. Add a `BudgetBreakdowns` object to the `budget.budgetBreakdowns` array, set its `.id` incrementally and its `.description` to "Breakdown by year of implementation".
 
-2. Set it's `.id` incrementally and it's `.description` to "Breakdown by year of implementation".
+2. For each year:
 
-3. For each year of implementation, add a `BudgetBreakdown` object to the `budget.budgetBreakdowns.budgetBreakdown` array. For each object:
+a. Add a `BudgetBreakdown` object to the budget breakdowns' `.budgetBreakdown` array and set its `.id` incrementally.
 
-- Set the `.id` incrementally.
-- Set the `.description` to the year of implementation.
+b. Map the year's start and end dates to `.period`
 
-4. For each year, map the amount and currency to the budget breakdown's `.amount`
+c. Map the budget projection to `.amount`.
 ```json
 {
   "budget": {
@@ -375,7 +354,10 @@ Project level:
         "budgetBreakdown": [
           {
             "id": "1",
-            "description": "2024",
+            "period": {
+              "startDate": "2024-01-01T00:00:00Z",
+              "endDate": "2024-12-31T00:00:00Z"
+            },
             "amount": {
               "amount": 350000,
               "currency": "USD"
@@ -383,7 +365,10 @@ Project level:
           },
           {
             "id": "2",
-            "description": "2025",
+            "period": {
+              "startDate": "2025-01-01T00:00:00Z",
+              "endDate": "2025-12-31T00:00:00Z"
+            },
             "amount": {
               "amount": 300000,
               "currency": "USD"
@@ -1123,7 +1108,7 @@ Project level: [Add an organization](../common.md#add-an-organization) for the d
 :columns: 4
 CoST IDS element
 ^^^
-Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
+Clarify how the investment is aligned with the country's nationally determined contributions. \[codelist, free text to explain\].
 ````
 
 ````{grid-item-card}
@@ -1163,7 +1148,7 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 :columns: 4
 CoST IDS element
 ^^^
-Select from a list of international commitments and clarify how the project is aligned with it \[codelist, free text to explain\].
+Clarify how the investment is aligned with the country's Paris Agreement commitments. \[codelist, free text to explain\].
 ````
 
 ````{grid-item-card}
@@ -1365,7 +1350,6 @@ OC4IDS mapping
   ]
 }
 ```
-
 ````
 
 `````
@@ -1566,7 +1550,6 @@ OC4IDS mapping
   }
 }
 ```
-
 ````
 
 `````
@@ -1870,7 +1853,7 @@ For each KPI metric add the sentence "To be reported XXX" where XXX is the repor
 :columns: 4
 CoST IDS element
 ^^^
-\[document\]
+Disclose oversight reports.\[document\]
 ````
 
 ````{grid-item-card}
@@ -1930,7 +1913,7 @@ Disclose technical audits produced at end of the project (E.g. \[free text\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level: For each audit report [add a project document](../common.md#add-a-project-document) and set `.documentType` to 'technicalAuditReport'.
+Project-level: For each audit report [add a project document](../common.md#add-a-project-document), set `.documentType` to 'technicalAuditReport' and map any free text to `.description` .
 ```json
 {
   "documents": [
@@ -1991,7 +1974,7 @@ Project-level: [Add a project document](../common.md#add-a-project-document), se
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the carbon footprint of the project \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\]
+Disclose the carbon footprint of the project, informing the calculation, the methodology applied, and where the calculation can be found. \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\]
 ````
 
 ````{grid-item-card}
@@ -2705,21 +2688,23 @@ Contracting process level: [Add a contracting process document](../common.md#add
 :columns: 4
 CoST IDS element
 ^^^
-Disclose materials tests performed during implementation \[document\]. These can include, without limitation, the following:
+Disclose construction materials tests performed during project implementation. This can include, without limitation, the following:
 
-Foundations
-Pavements
-Soil
-Steel structure
-Asphalt
-Retaining walls
-Concrete
-Masonry
-Roofs
-Compression
-Compaction
-Thickness
-Others (explain)
+- Asphalt
+- Aggregate and rock
+- Bricks
+- Cement
+- Concrete
+- Coarse and fine aggregate
+- Masonry
+- Metallic materials
+- Mortar
+- Plywood
+- Timber
+- Resin and polymer
+- Soil
+- Stone
+- Others (explain).
 
 \[Free text to add not mentioned tests\]
 
@@ -3366,16 +3351,17 @@ CoST IDS element
 Identify relevant sub-sectors related to the project scope.
 Select from a list (non-exhaustive):
 
-- Renewable energy:
-  solar,
-  wind,
-  hydropower,
-  biomass
-  geothermal
-- Low carbon transport
+- Renewable energy
+  - Solar
+  - Wind
+  - Hydropower
+  - Biomass
+  - Geothermal
 - Water and wastewater management
-- Natural resource management:
-  flood protection
+- Transport
+  - Low carbon transport
+- Natural resource management
+  - Flood protection
 
 Free text to add not mentioned sub-sectors
 ````
