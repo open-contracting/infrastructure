@@ -489,6 +489,13 @@ def update(ppp_base_url):
         'classificationScheme.csv',
         'country.csv',
         'environmentalGoal.csv',
+        'policyAlignment.csv',
+        'constructionMaterial.csv',
+        'climateOversightTypes.csv',
+        'laborObligations.csv',
+        'sustainabilityStrategy.csv',
+        'costCategory.csv',
+        'conservationMeasure.csv',
         # Remove once OCDS for PPPs is updated for the latest version of the finance extension
         'assetClass.csv',
         'debtRepaymentPriority.csv',
@@ -525,6 +532,19 @@ def update(ppp_base_url):
         'Modification',
         'RelatedProject',  # Similar to relatedProcess in OCDS
         'SimpleIdentifier',
+        'CostMeasurement',
+        'Benefit',
+        'ConservationMeasure',
+        'PublicOffice',
+        'Social',
+        'Beneficiary',
+        'Meeting',
+        'BudgetBreakdowns',
+        'CostGroup',
+        'Sustainability',
+        'Cost',
+        'HealthAndSafety',
+        'LaborObligations',
         # Remove once OCDS for PPPs is updated for the latest version of the finance extension
         'Finance',
     }
