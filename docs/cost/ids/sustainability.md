@@ -78,8 +78,8 @@ OC4IDS mapping
     {
       "id": "1",
       "date": "2014-05-01T00:00:00Z",
-      "lifeCycleCost": {
-        "cost": {
+      "lifeCycleCosting": {
+        "value": {
           "amount": 10000000,
           "currency": "USD"
         }
