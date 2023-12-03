@@ -772,6 +772,12 @@ def update(ppp_base_url):
     schema['definitions']['Milestone']['properties']['id']['description'] = "A local identifier for this milestone, unique within this block."  # noqa: E501
     # Original from standard: "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed." # noqa: E501
     schema['definitions']['Milestone']['properties']['code']['description'] = "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed."  # noqa: E501
+    # Add `Milestone.value` from OCDS 1.2
+    schema['definitions']['Milestone']['properties']['value'] = {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "$ref": "#/definitions/Value"
+        }
     # Remove deprecated milestone documents field
     del schema['definitions']['Milestone']['properties']['documents']
 

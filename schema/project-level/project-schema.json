@@ -452,16 +452,19 @@
             "array"
           ],
           "items": {
-            "type": "string"
+            "type": "string",
+            "minLength": 1
           },
           "codelist": "policyAlignment.csv",
           "openCodelist": true,
-          "minItems": 1
+          "minItems": 1,
+          "uniqueItems": true
         },
         "description": {
           "title": "Description",
           "description": "A short description of how the project aligns with the policies.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         }
       },
       "minProperties": 1
@@ -1473,11 +1476,12 @@
         },
         "classifications": {
           "title": "Organization classifications",
-          "description": "The classifications that categorize the organization.",
+          "description": "The classifications that categorize the organization",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Classification"
           },
+          "wholeListMerge": true,
           "uniqueItems": true,
           "minItems": 1
         },
@@ -1629,7 +1633,8 @@
         "description": {
           "title": "Description",
           "description": "A short description of the budget breakdown group including the common dimension used to create the breakdown.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "budgetBreakdown": {
           "title": "Budget breakdown",
@@ -2542,6 +2547,11 @@
           ],
           "codelist": "milestoneStatus.csv",
           "openCodelist": false
+        },
+        "value": {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
@@ -3006,9 +3016,7 @@
         "id": {
           "title": "ID",
           "description": "The locally unique identifier for the meeting.",
-          "type": [
-            "string"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "date": {

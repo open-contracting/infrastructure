@@ -284,6 +284,11 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/period
 :title: budget/finance/0/period
 ```
@@ -436,6 +441,7 @@ This sub-schema is referenced by the following properties:
 * [`BudgetBreakdown/amount`](project-schema.json,/definitions/BudgetBreakdown,amount)
 * [`Observation/value`](project-schema.json,/definitions/Observation,value)
 * [`Transaction/value`](project-schema.json,/definitions/Transaction,value)
+* [`Milestone/value`](project-schema.json,/definitions/Milestone,value)
 * [`Finance/value`](project-schema.json,/definitions/Finance,value)
 * [`CostMeasurement/lifeCycleCosting/value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)
 * [`Cost/value`](project-schema.json,/definitions/Cost,value)
@@ -463,6 +469,11 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/amount
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/amount
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/value
 :title: budget/finance/0/value
 ```
@@ -475,6 +486,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/value
 :title: costMeasurements/0/costGroups/0/costs/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/milestones/0/value
+:title: milestones/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -505,6 +521,11 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/value
 :title: contractingProcesses/0/summary/transactions/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/contractingProcesses/0/summary/milestones/0/value
+:title: contractingProcesses/0/summary/milestones/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -605,6 +626,11 @@ Each `OrganizationReference` has the following fields:
 ````
 
 ````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
+```
 
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/finance/0/financingParty
@@ -1174,7 +1200,7 @@ Each `Milestone` has the following fields:
 
 ```{jsonschema} ../../build/current_lang/project-schema.json
 :pointer: /definitions/Milestone
-:collapse: id,title,type,description,code,dueDate,dateMet,dateModified,status
+:collapse: id,title,type,description,code,dueDate,dateMet,dateModified,status,value
 :addtargets:
 ```
 
