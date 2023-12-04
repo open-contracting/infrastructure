@@ -4,24 +4,26 @@ To avoid repetition in the mapping, we refer and link to the following common op
 
 ## Add a project document
 
-Add a `Document` object to the `documents` array and set its fields as follows:
+Add a `Document` object to the `documents` array and set its:
 
-* Set its `.id` incrementally
-* Set its `.url` to a direct link to the document
-* Set its `.title` to the title of the document
+* `.id` incrementally
+* `.url` to a direct link to the document
+* `.title` to the title of the document
+* `.pageStart` and `pageEnd` to the page range containing the information described in its `.documentType`
 
 ## Add a contracting process document
 
-Add a `Document` object to the `contractingProcesses.summary.documents` array and set its fields as follows:
+Add a `Document` object to the `contractingProcesses.summary.documents` array and set its:
 
-* Set its `.id` incrementally
-* Set its `.url` to a direct link to the document
-* Set its `.title` to the title of the document
+* `.id` incrementally
+* `.url` to a direct link to the document
+* `.title` to the title of the document
+* `.pageStart` and `pageEnd` to the page range containing the information described in its `.documentType`
 
 ## Add an organization
 
-* Add an `Organization` object to the `.parties` array and set its `.name` to the name of the organization.
-* If you collect organization identifiers, set `.identifier` according to the [identifier reference](../reference/schema.md#identifier) and set `.id` to {identifier.scheme}-{identifier.id}(-{department-identifier}). Otherwise, set `.id` incrementally.
+1. Add an `Organization` object to the `.parties` array and set its `.name` to the name of the organization.
+1. If you collect organization identifiers, set `.identifier` according to the [identifier reference](../reference/schema.md#identifier) and set `.id` to {identifier.scheme}-{identifier.id}(-{department-identifier}). Otherwise, set `.id` incrementally.
 
 ## Add a financing arrangement
 
