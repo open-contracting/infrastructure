@@ -654,7 +654,13 @@
     "abatementCost": {
       "amount": "number",
       "currency": "string from currency codelist"
-    }
+    },
+    "climateMeasures": [
+      {
+        "type": "string from climateMeasures codelist",
+        "description": "string"
+      }
+    ]
   },
   "benefits": [
     {

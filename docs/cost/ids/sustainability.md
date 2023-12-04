@@ -734,7 +734,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-For each measure add a `ClimateMeasure` object to the `environment.climateMeasures` array, setting it's `.type` according to the matching code in the open climateMeasuresType codelist and mapping the further explanation to its `.description`.
+For each measure add a `ClimateMeasure` object to the `environment.climateMeasures` array, setting it's `.type` according to the matching code in the open climateMeasures codelist and mapping the further explanation to its `.description`.
 
 If there is an accompanying document publish in `documents`, with `.documentType` set to 'climateMeasures' and include a short description and/or a link to a document providing details. If the details are part of a more general document indicate the relevant section of the document using `.pageStart` and `.pageEnd`.
 ```json
@@ -743,7 +743,7 @@ If there is an accompanying document publish in `documents`, with `.documentType
     "climateMeasures": [
       {
         "type": "regenerativeDesign",
-        "description": "Regenerative design measures for the project include..."
+        "description": "Regenerative design measures for the project include biomimicry to imitate nature."
       }
     ]
   },
@@ -1365,7 +1365,6 @@ OC4IDS mapping
   ]
 }
 ```
-
 ````
 
 `````
@@ -1566,7 +1565,6 @@ OC4IDS mapping
   }
 }
 ```
-
 ````
 
 `````

@@ -55,6 +55,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
 
 ### Codelists
 
@@ -73,6 +74,7 @@
   * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
 * Add codes:
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
@@ -103,7 +105,6 @@
     * 'ghgEmissionsForecast'
     * 'ghgEmissionsReduction'
     * 'ghgEmissions'
-  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'
     * 'energy.wind'
@@ -113,6 +114,9 @@
     * 'transport.lowCarbon'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
+  * documentType:
+    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 ### Other
