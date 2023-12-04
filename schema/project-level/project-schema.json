@@ -191,12 +191,12 @@
           "type": "string",
           "format": "date-time"
         },
-        "budgetBreakdown": {
+        "budgetBreakdowns": {
+          "title": "Budget breakdowns",
+          "description": "Detailed breakdowns of the budget grouped together by, for example, period, funder or stage.",
           "type": "array",
-          "title": "Budget breakdown",
-          "description": "A detailed breakdown of the budget by period and/or participating funders.",
           "items": {
-            "$ref": "#/definitions/BudgetBreakdown"
+            "$ref": "#/definitions/BudgetBreakdowns"
           },
           "uniqueItems": true,
           "minItems": 1
@@ -422,6 +422,16 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "conservationMeasures": {
+          "title": "Conservation measures",
+          "description": "The measures adopted by the project to protect and enhance biodiversity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "abatementCost": {
           "title": "Abatement cost",
           "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
@@ -431,6 +441,42 @@
           "title": "In protected area",
           "description": "Whether the project is located in a protected area.",
           "type": "boolean"
+        },
+        "climateMeasures": {
+          "title": "Climate measures",
+          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClimateMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "policyAlignment": {
+      "title": "Policy alignment",
+      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
+      "type": "object",
+      "properties": {
+        "policies": {
+          "title": "Policies",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "codelist": "policyAlignment.csv",
+          "openCodelist": true,
+          "minItems": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of how the project aligns with the policies.",
+          "type": "string"
         }
       },
       "minProperties": 1
@@ -1581,6 +1627,38 @@
       },
       "minProperties": 1
     },
+    "BudgetBreakdowns": {
+      "title": "Budget breakdown group",
+      "description": "Details of a breakdown of the budget grouped by a common dimension.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "An identifier for the budget breakdown group.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the budget breakdown group including the common dimension used to create the breakdown.",
+          "type": "string"
+        },
+        "budgetBreakdown": {
+          "title": "Budget breakdown",
+          "description": "A detailed breakdown of the budget.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BudgetBreakdown"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
     "BudgetBreakdown": {
       "title": "Detailed budget breakdown",
       "description": "This section allows a detailed budget breakdown to be expressed, covering multiple budget sources and multiple periods",
@@ -2508,6 +2586,28 @@
       },
       "minProperties": 1
     },
+    "ConservationMeasure": {
+      "title": "Conservation measure",
+      "description": "A measure adopted by the project to protect and enhance biodiversity.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of conservation measure, using the open [conservationMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "type": "string",
+          "codelist": "conservationMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the conservation measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
     "Finance": {
       "title": "Financing arrangement",
       "description": "An arrangement between two parties for raising money.",
@@ -3057,6 +3157,34 @@
         }
       },
       "minProperties": 1
+    },
+    "ClimateMeasure": {
+      "title": "Climate measure",
+      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "climateMeasures.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   },
   "minProperties": 1

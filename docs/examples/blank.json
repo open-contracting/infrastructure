@@ -109,25 +109,31 @@
     },
     "requestDate": "",
     "approvalDate": "",
-    "budgetBreakdown": [
+    "budgetBreakdowns": [
       {
-        "id": "",
+        "id": "string",
         "description": "string",
-        "amount": {
-          "amount": "number",
-          "currency": "string from currency codelist"
-        },
-        "uri": "string",
-        "period": {
-          "startDate": "string",
-          "endDate": "string",
-          "maxExtentDate": "string",
-          "durationInDays": "integer"
-        },
-        "sourceParty": {
-          "name": "string",
-          "id": ""
-        }
+        "budgetBreakdown": [
+          {
+            "id": "",
+            "description": "string",
+            "amount": {
+              "amount": "number",
+              "currency": "string from currency codelist"
+            },
+            "uri": "string",
+            "period": {
+              "startDate": "string",
+              "endDate": "string",
+              "maxExtentDate": "string",
+              "durationInDays": "integer"
+            },
+            "sourceParty": {
+              "name": "string",
+              "id": ""
+            }
+          }
+        ]
       }
     ],
     "finance": [
@@ -629,6 +635,12 @@
     "goals": [
       "string"
     ],
+    "conservationMeasures": [
+      {
+        "type": "string from conservationMeasure codelist",
+        "description": "string"
+      }
+    ],
     "climateOversightTypes": [
       "string"
     ],
@@ -643,7 +655,13 @@
       "amount": "number",
       "currency": "string from currency codelist"
     },
-    "inProtectedArea": "boolean"
+    "inProtectedArea": "boolean",
+    "climateMeasures": [
+      {
+        "type": "string from climateMeasures codelist",
+        "description": "string"
+      }
+    ]
   },
   "benefits": [
     {
@@ -657,5 +675,11 @@
         }
       ]
     }
-  ]
+  ],
+  "policyAlignment": {
+    "policies": [
+      "string"
+    ],
+    "description": "string"
+  }
 }

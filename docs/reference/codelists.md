@@ -101,6 +101,13 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 :file: ../../build/current_lang/codelists/classificationScheme.csv
 ```
 
+### ClimateMeasures
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/climateMeasures.csv
+```
+
 ### ConstructionMaterial
 
 ```{csv-table-no-translate}
@@ -116,6 +123,13 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```
 
 ## Open codelists
+
+### ConservationMeasure
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/conservationMeasure.csv
+```
 
 ### DocumentType
 
@@ -178,4 +192,11 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/sustainabilityStrategy.csv
+```
+
+### policyAlignment
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/policyAlignment.csv
 ```

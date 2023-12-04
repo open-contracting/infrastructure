@@ -21,6 +21,7 @@
 * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
+* [#450](https://github.com/open-contracting/infrastructure/pull/450) - deprecate `budget.budgetBreakdown` in favor of `budget.budgetBreakdowns`.
 
 * Add fields:
   * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
@@ -40,6 +41,7 @@
     * `maintenancePeriod`
     * `decommissioningPeriod`
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - `environment.conservationMeasures`
   * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
   * [#443](https://github.com/open-contracting/infrastructure/pull/443) - `costMeasurements`
   * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.details.classifications`
@@ -54,6 +56,7 @@
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
 
 ### Codelists
 
@@ -68,8 +71,11 @@
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
 * Add codes:
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
@@ -79,7 +85,27 @@
     * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
-  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - documentType: 'materialTestResults'
+  * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
+    * 'procurementStrategyRiskAssessment'
+    * 'lifeCycleCostMethodology'
+    * 'costBenefitAnalysis'
+    * 'environmentalExemption'
+    * 'climateAndDisasterRiskAssessment'
+    * 'climateTransformation'
+    * 'decommissioningPlans'
+    * 'impactMethodology'
+    * 'inclusiveDesign'
+    * 'inclusiveImplementation'
+    * 'supplierEnvironmentalCertification'
+    * 'supplierHealthAndSafetyCertification'
+    * 'antiCorruptionCertification'
+    * 'oversightReport'
+    * 'informationRequest'
+    * 'informationRequestResponse'
+    * 'buildingInspectionReport'
+    * 'ghgEmissionsForecast'
+    * 'ghgEmissionsReduction'
+    * 'ghgEmissions'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'
     * 'energy.wind'
@@ -89,7 +115,10 @@
     * 'transport.lowCarbon'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
-   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers: 'WDPA'
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers: 'WDPA'
+  * documentType:
+    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
 
