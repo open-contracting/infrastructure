@@ -11,7 +11,7 @@
 }
 </style>
 
-This page documents a mapping from the elements in the CoST IDS sustainability modules to OC4IDS fields and codes.
+This page documents a mapping from the elements in the CoST IDS sustainability modules to OC4IDS fields and codes. The mapping for each element covers the fields needed to satisfy the specific data needs described in the CoST IDS. In order for your data to meet the widest range of user needs, when implementing the mapping, you are encouraged to consider collecting and publishing the other fields described in the OC4IDS [schema](../../reference/schema.md).
 
 ```{admonition} Download this page in PDF format
 :class: tip
@@ -3381,4 +3381,3 @@ Project Level: Map to `sector`, using the \[ProjectSector codelist\]((../../refe
 ````
 
 `````
-
