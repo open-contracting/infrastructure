@@ -1189,7 +1189,13 @@
         "abatementCost": {
           "amount": 12.29,
           "currency": "USD"
-        }
+        },
+        "climateMeasures": [
+          {
+            "type": "regenerativeDesign",
+            "description": "Regenerative design measures for the project include biomimicry to imitate nature."
+          }
+        ]
       },
       "policyAlignment": {
         "policies": [

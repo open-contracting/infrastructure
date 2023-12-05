@@ -725,7 +725,7 @@ Project level:
     "climateMeasures": [
       {
         "type": "regenerativeDesign",
-        "description": "Regenerative design measures for the project include..."
+        "description": "Regenerative design measures for the project include biomimicry to imitate nature."
       }
     ]
   },
