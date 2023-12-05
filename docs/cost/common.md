@@ -9,7 +9,7 @@ Add a `Document` object to the `documents` array and set its:
 * `.id` incrementally
 * `.url` to a direct link to the document
 * `.title` to the title of the document
-* `.pageStart` and `pageEnd` to the page range containing the information described in its `.documentType`
+* `.pageStart` and `.pageEnd` to the page range containing the information described in its `.documentType`
 
 ## Add a contracting process document
 
@@ -18,11 +18,11 @@ Add a `Document` object to the `contractingProcesses.summary.documents` array an
 * `.id` incrementally
 * `.url` to a direct link to the document
 * `.title` to the title of the document
-* `.pageStart` and `pageEnd` to the page range containing the information described in its `.documentType`
+* `.pageStart` and `.pageEnd` to the page range containing the information described in its `.documentType`
 
 ## Add an organization
 
-1. Add an `Organization` object to the `.parties` array and set its `.name` to the name of the organization.
+1. Add an `Organization` object to the `parties` array and set its `.name` to the name of the organization.
 1. If you collect organization identifiers, set `.identifier` according to the [identifier reference](../reference/schema.md#identifier) and set `.id` to {identifier.scheme}-{identifier.id}(-{department-identifier}). Otherwise, set `.id` incrementally.
 
 ## Add a financing arrangement
