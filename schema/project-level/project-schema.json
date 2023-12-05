@@ -3192,7 +3192,8 @@
           "type": "string",
           "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     }
   },
   "minProperties": 1
