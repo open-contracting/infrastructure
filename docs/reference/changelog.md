@@ -12,7 +12,7 @@
 * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
 * [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
 * [#389](https://github.com/open-contracting/infrastructure/pull/389) - emphasize publishing data throughout a project's lifecycle.
-* [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425) - add CoST IDS sustainability modules to mapping documentation.
+* [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425), [#459](https://github.com/open-contracting/infrastructure/pull/459) - add CoST IDS sustainability modules to mapping documentation.
 
 ### Schema
 
@@ -28,7 +28,7 @@
   * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426), [#456](https://github.com/open-contracting/infrastructure/pull/456) - `milestones`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426), [#456](https://github.com/open-contracting/infrastructure/pull/456) [#459](https://github.com/open-contracting/infrastructure/pull/459) - `milestones`
   * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
