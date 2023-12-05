@@ -567,11 +567,11 @@ Project level:
 
 If the project is located in a protected area:
 
-1. Set `.environment.inProtectedArea` to true.
-2. Add a `Location` object to the `.locations` array, set its `.id` incrementally and set its `.gazetteer.scheme` to 'WDPA'
-3. For each protected area in which the project is located, add the area's WDPA identifier to the `.gazetteer.identifiers` array.
+1. Set [`.environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `true`.
+2. Add a [`Location`](../../reference/schema.md#location) object to the [`.locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its [`.gazetteer.scheme`](project-schema.json,/definitions/Location,gazetteer/scheme) to 'WDPA'.
+3. For each protected area in which the project is located, add the area's WDPA identifier to the [`.gazetteer.identifiers`](project-schema.json,/definitions/Location,gazetteer/identifiers) array.
 
-If the project is not located in a protected area, set `.environment.inProtectedArea` to false.
+If the project is not located in a protected area, set [`.environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `false`.
 ```json
 {
   "environment": {
@@ -716,7 +716,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. For each measure, add a `ClimateMeasure` object to the `environment.climateMeasures` array, set its `.type` according to the open climateMeasures codelist and map any further explanation to its `.description`.
+1. For each measure, add a [`ClimateMeasure`](../../reference/schema.md#climatemeasure) object to the [`environment.climateMeasures`](project-schema.json,,environment/climateMeasures) array, set its [`.type`](project-schema.json,/definitions/ClimateMeasure,type) according to the open climateMeasures codelist and map any further explanation to its [`.description`](project-schema.json,/definitions/ClimateMeasure,description).
 
 2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateMeasures'.
 ```json
@@ -724,7 +724,9 @@ Project level:
   "environment": {
     "climateMeasures": [
       {
-        "type": "regenerativeDesign",
+        "type": [
+          "regenerativeDesign"
+        ],
         "description": "Regenerative design measures for the project include biomimicry to imitate nature."
       }
     ]
@@ -3385,3 +3387,4 @@ Project Level: Map to [`sector`](project-schema.json,,sector), using the open [P
 ````
 
 `````
+
