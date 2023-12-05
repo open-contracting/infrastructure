@@ -14,6 +14,7 @@ import json_merge_patch
 import mdformat
 import requests
 import yaml
+from colorama import Fore
 from docutils import nodes
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator as validator
@@ -381,6 +382,83 @@ def update_sub_schema_reference(schema):
 
     with (referencedir / 'schema.md').open('w') as f:
         f.writelines(schema_reference)
+
+
+def get_properties(schema, parent=None):
+    """
+    Returns a list of property names from a JSON Schema object.
+    """
+    properties = []
+
+    for name, value in schema.get('properties', {}).items():
+        if parent:
+            path = f'{parent}.{name}'
+        else:
+            path = name
+
+        if 'properties' in value:
+            properties.extend(get_properties(value, path))
+        else:
+            properties.append(path)
+
+    return properties
+
+
+def make_link(name, fields, text):
+    """
+    A regex replacement function that generates a link to a field in a jsonschema directive HTML table.
+    Prompts for user input if the field's name is ambiguous.
+
+    :param name: The property name
+    :param fields: A list of fields in the JSON schema
+    :param text: The text in which the property name appears
+    """
+
+    # Ignore boolean literals
+    if name.strip() in ["`true`", "`false`"]:
+        return name
+
+    # Track the number of matches so the current match can be highlighted
+    global matches
+    if name in matches:
+        matches[name] += 1
+    else:
+        matches[name] = 1
+
+    path = name.strip().replace("`", "")
+    path = path.split(".")
+    leading_period = path[0] == ''
+    path = [component for component in path if component != '']
+
+    # Identify occurrences of name in fields
+    occurrences = []
+    for field in fields:
+        field = field.split(".")
+        if field[-len(path):] == path:
+            occurrences.append(field)
+
+    if len(occurrences) == 0:
+        raise ValueError(f"Field {name} not in schema")
+    elif len(occurrences) > 1:
+        # Prompt user to resolve ambiguous field names
+        n = "\n"
+        print(f"{name.strip()} is ambiguous in:{n}")
+        text = text.split(name)
+        highlight = f"{Fore.RED}{name}{Fore.RESET}"
+        print(highlight.join(
+            [name.join(text[:matches[name]]), name.join(text[matches[name]:])]))
+        print("\n")
+
+        index = input(
+            f"""Choose a field to link to:{n}{n}{f'{n}'.join([f'{occurrences.index(o)}: {".".join(o)}' for o in occurrences])}{n}{n} Your choice: """)  # noqa: E501
+
+        occurrences = [occurrences[int(index)]]
+
+    definition = None
+    if occurrences[0][0][0].isupper():
+        definition = occurrences[0][0]
+
+    return f"{name[0]}[`{'.' if leading_period else ''}{'.'.join(path)}`](project-schema.json,{f'/definitions/{definition}' if definition else ''},{'/'.join(path)})"  # noqa: E501
 
 
 @click.group()
@@ -829,14 +907,22 @@ def update(ppp_base_url):
 @cli.command()
 @click.argument("filename", type=click.Path(exists=True, dir_okay=False))
 @click.option("-a", "--additional-properties", is_flag=True, help="Allow additional properties")
-def lint(filename, additional_properties):
+@click.option("-l", "--link-fields", is_flag=True, help="Link field names to jsonschema directives")
+def lint(filename, additional_properties, link_fields):
 
     minimal_project = {
         "id": "oc4ids-bu3kcz-1",
     }
 
+    regex = r"([^\[])`([a-zA-Z.]*)`"
+
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
+
+    # Get list of fields in schema
+    fields = get_properties(schema)
+    for name, definition in schema['definitions'].items():
+        fields.extend(get_properties(definition, name))
 
     # Disallow additional properties
     set_additional_properties(schema, additional_properties)
@@ -864,7 +950,18 @@ def lint(filename, additional_properties):
         # Format Markdown
         for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
             value = element.get(key, "")
-            element[key] = mdformat.text(value, options={"number": True}).rstrip()
+
+            # Link fields to jsonschema directives
+            if link_fields and key == 'mapping':
+                global matches
+                matches = {}
+                value = re.sub(regex, lambda match: make_link(
+                    match.group(0), fields, value), value)
+                element[key] = value
+                write_yaml_file(filename, elements)
+
+            element[key] = mdformat.text(
+                value, options={"number": True}).rstrip()
 
         # Format and validate JSON.
         example = element["example"]

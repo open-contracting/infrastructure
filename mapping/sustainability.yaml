@@ -1750,7 +1750,7 @@
     example: |-
         {
           "social": {
-            "healthAndSafety": {  
+            "healthAndSafety": {
               "materialTests": {
                 "tests": [
                   "metal",
