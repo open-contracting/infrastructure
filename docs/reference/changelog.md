@@ -54,6 +54,7 @@
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
 
@@ -114,6 +115,7 @@
     * 'transport.lowCarbon'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers: 'WDPA'
   * documentType:
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'

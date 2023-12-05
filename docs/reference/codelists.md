@@ -24,7 +24,6 @@ OC4IDS reuses some codelists from the Open Contracting Data Standard and its ext
 * [Financing arrangement type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingArrangementType.csv)
 * [Financing party type](https://extensions.open-contracting.org/en/extensions/finance/master/codelists/#financingPartyType.csv)
 * [Geometry type](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#geometryType.csv)
-* [Location gazetteers](https://extensions.open-contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)
 * [Method](https://standard.open-contracting.org/1.1/en/schema/codelists/#method)
 * [Milestone code](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)
 * [Milestone status](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status)
@@ -142,6 +141,13 @@ Projects with a `status` of 'completed' may be displayed in a list of archived p
 ```{csv-table-no-translate}
 :header-rows: 1
 :file: ../../build/current_lang/codelists/laborObligations.csv
+```
+
+### LocationGazetteers
+
+```{csv-table-no-translate}
+:header-rows: 1
+:file: ../../build/current_lang/codelists/locationGazetteers.csv
 ```
 
 ### ModificationType
