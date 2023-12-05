@@ -1190,6 +1190,7 @@
           "amount": 12.29,
           "currency": "USD"
         },
+        "inProtectedArea": true,
         "climateMeasures": [
           {
             "type": "regenerativeDesign",

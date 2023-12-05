@@ -655,6 +655,7 @@
       "amount": "number",
       "currency": "string from currency codelist"
     },
+    "inProtectedArea": "boolean",
     "climateMeasures": [
       {
         "type": "string from climateMeasures codelist",
