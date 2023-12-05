@@ -212,13 +212,13 @@ Where the source system does not contain time information, a judgment ought to b
 
 This sub-schema is referenced by the following properties:
 * [`period`](project-schema.json,,period)
+* [`assetLifetime`](project-schema.json,,assetLifetime)
 * [`identificationPeriod`](project-schema.json,,identificationPeriod)
 * [`preparationPeriod`](project-schema.json,,preparationPeriod)
 * [`implementationPeriod`](project-schema.json,,implementationPeriod)
 * [`completionPeriod`](project-schema.json,,completionPeriod)
 * [`maintenancePeriod`](project-schema.json,,maintenancePeriod)
 * [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)
-* [`assetLifetime`](project-schema.json,,assetLifetime)
 * [`ContractingProcessSummary/contractPeriod`](project-schema.json,/definitions/ContractingProcessSummary,contractPeriod)
 * [`Modification/oldContractPeriod`](project-schema.json,/definitions/Modification,oldContractPeriod)
 * [`Modification/newContractPeriod`](project-schema.json,/definitions/Modification,newContractPeriod)
@@ -244,8 +244,28 @@ Each `Period` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
+:title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/period
+:title: budget/finance/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/budget/finance/0/paymentPeriod
+:title: budget/finance/0/paymentPeriod
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/period
 :title: period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/assetLifetime
+:title: assetLifetime
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -279,28 +299,13 @@ Each `Period` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/assetLifetime
-:title: assetLifetime
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/period
-:title: budget/budgetBreakdowns/0/budgetBreakdown/0/period
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/finance/0/period
-:title: budget/finance/0/period
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/budget/finance/0/paymentPeriod
-:title: budget/finance/0/paymentPeriod
-```
-
-```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/forecasts/0/observations/0/period
 :title: forecasts/0/observations/0/period
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/metrics/0/observations/0/period
+:title: metrics/0/observations/0/period
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -316,11 +321,6 @@ Each `Period` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/modifications/0/newContractPeriod
 :title: contractingProcesses/0/summary/modifications/0/newContractPeriod
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/metrics/0/observations/0/period
-:title: metrics/0/observations/0/period
 ```
 
 ````
@@ -362,13 +362,13 @@ Each `Classification` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/classification
-:title: costMeasurements/0/costGroups/0/costs/0/classification
+:jsonpointer: /projects/0/parties/0/classifications
+:title: parties/0/classifications
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/parties/0/classifications
-:title: parties/0/classifications
+:jsonpointer: /projects/0/costMeasurements/0/costGroups/0/costs/0/classification
+:title: costMeasurements/0/costGroups/0/costs/0/classification
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -479,6 +479,16 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/milestones/0/value
+:title: milestones/0/value
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/completion/finalValue
+:title: completion/finalValue
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/costMeasurements/0/lifeCycleCosting/value
 :title: costMeasurements/0/lifeCycleCosting/value
 ```
@@ -489,8 +499,8 @@ Each `Value` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/milestones/0/value
-:title: milestones/0/value
+:jsonpointer: /projects/0/transactions/0/value
+:title: transactions/0/value
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -531,16 +541,6 @@ Each `Value` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/social/laborBudget
 :title: contractingProcesses/0/summary/social/laborBudget
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/transactions/0/value
-:title: transactions/0/value
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/completion/finalValue
-:title: completion/finalValue
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -628,6 +628,11 @@ Each `OrganizationReference` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/publicAuthority
+:title: publicAuthority
+```
+
+```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
 :title: budget/budgetBreakdowns/0/budgetBreakdown/0/sourceParty
 ```
@@ -638,8 +643,13 @@ Each `OrganizationReference` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/publicAuthority
-:title: publicAuthority
+:jsonpointer: /projects/0/transactions/0/payer
+:title: transactions/0/payer
+```
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/transactions/0/payee
+:title: transactions/0/payee
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -670,16 +680,6 @@ Each `OrganizationReference` has the following fields:
 ```{jsoninclude} ../../docs/examples/example.json
 :jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/payee
 :title: contractingProcesses/0/summary/transactions/0/payee
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/transactions/0/payer
-:title: transactions/0/payer
-```
-
-```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/transactions/0/payee
-:title: transactions/0/payee
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -735,8 +735,8 @@ Each `Address` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings/0/address
-:title: lobbyingMeetings/0/address
+:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
+:title: benefits/0/beneficiaries/0/location/address
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
@@ -745,8 +745,8 @@ Each `Address` has the following fields:
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/benefits/0/beneficiaries/0/location/address
-:title: benefits/0/beneficiaries/0/location/address
+:jsonpointer: /projects/0/lobbyingMeetings/0/address
+:title: lobbyingMeetings/0/address
 ```
 
 ````
@@ -1133,13 +1133,13 @@ Each `Transaction` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
-:title: contractingProcesses/0/summary/transactions
+:jsonpointer: /projects/0/transactions
+:title: transactions
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/transactions
-:title: transactions
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions
+:title: contractingProcesses/0/summary/transactions
 ```
 
 ````
@@ -1249,13 +1249,13 @@ Each `MilestoneReference` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
-:title: contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
+:jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
+:title: transactions/0/relatedImplementationMilestone
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/transactions/0/relatedImplementationMilestone
-:title: transactions/0/relatedImplementationMilestone
+:jsonpointer: /projects/0/contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
+:title: contractingProcesses/0/summary/transactions/0/relatedImplementationMilestone
 ```
 
 ````
@@ -1606,13 +1606,13 @@ Each `Meeting` has the following fields:
 ````{tab-item} Examples
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/lobbyingMeetings
-:title: lobbyingMeetings
+:jsonpointer: /projects/0/social/consultationMeetings
+:title: social/consultationMeetings
 ```
 
 ```{jsoninclude} ../../docs/examples/example.json
-:jsonpointer: /projects/0/social/consultationMeetings
-:title: social/consultationMeetings
+:jsonpointer: /projects/0/lobbyingMeetings
+:title: lobbyingMeetings
 ```
 
 ````
