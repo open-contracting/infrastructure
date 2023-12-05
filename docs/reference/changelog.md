@@ -121,7 +121,6 @@
     * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
 
-
 ### Other
 
 * [#374](https://github.com/open-contracting/infrastructure/pull/374) - add pull request template.
