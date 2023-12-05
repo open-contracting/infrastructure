@@ -40,7 +40,10 @@ Disclose the procurement strategy risk assessment. This tends to be part of the 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'procurementStrategyRiskAssessment'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'procurementStrategyRiskAssessment'.
+
 ```json
 {
   "documents": [
@@ -73,7 +76,10 @@ Disclose the life cycle cost of the project, which is the cost of an asset throu
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and map to its [`.lifeCycleCosting.value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value).
+Project Level: 
+
+Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and map to its [`.lifeCycleCosting.value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value).
+
 ```json
 {
   "costMeasurements": [
@@ -109,14 +115,16 @@ Disclose the methodology used to calculate the life-cycle cost. The methodology 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'lifeCycleCostMethodology'.
+Project Level:
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'lifeCycleCostMethodology'.
 ```json
 {
   "documents": [
     {
       "id": "1",
-      "documentType": "lifecycleCostMethodology",
-      "url": "http://example.com/documents/lifecycleCostCalculationMethodology.pdf"
+      "documentType": "lifeCycleCostMethodology",
+      "url": "http://example.com/documents/lifeCycleCostMethodology.pdf"
     }
   ]
 }
@@ -149,7 +157,7 @@ Project level:
 
    a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.
 
-   b. Get the [`Organization`](../../reference/schema.md#organization) object in [`.parties`](project-schema.json,,parties) that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
+   b. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
 
    c. Set the budget breakdown's [`.sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the funding source.
 ```json
@@ -270,7 +278,9 @@ Disclose the project cost-benefit analysis. This information tends to be part of
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis'.
 ```json
 {
   "documents": [
@@ -302,6 +312,7 @@ A summary of the value for money analysis carried out for the project, along wit
 :columns: 8
 OC4IDS mapping
 ^^^
+
 Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'valueForMoneyAnalysis'.
 ```json
 {
@@ -403,7 +414,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Budget shortfall".
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Budget shortfall".
 2. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its [`.id`](project-schema.json,/definitions/Observation,id) incrementally.
 3. Map the shortfall's value to its [`.value`](project-schema.json,/definitions/Observation,value).
 4. Map the reasons for the shortfall to its [`.notes`](project-schema.json,/definitions/Observation,notes).
@@ -461,8 +472,8 @@ Project level:
 
 If an environmental impact assessment was conducted:
 
-1. Set [`.environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `true`.
-2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`.environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to "ifc-environmental-social" and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.
+1. Set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `true`.
+2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'ifc-environmental-social' and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.
 
 If an environmental impact assessment was not conducted, set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `false`.
 ```json
@@ -498,7 +509,9 @@ Disclose the measures adopted by the project to mitigate and/or remedy the envir
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures' and map the justification and explanation to its [`.description`](project-schema.json,/definitions/Document,description).
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures' and map the justification and explanation to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
 {
   "documents": [
@@ -531,7 +544,9 @@ Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Docum
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalExemption'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalExemption'.
 ```json
 {
   "documents": [
@@ -567,11 +582,11 @@ Project level:
 
 If the project is located in a protected area:
 
-1. Set [`.environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `true`.
+1. Set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `true`.
 2. Add a [`Location`](../../reference/schema.md#location) object to the [`.locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its [`.gazetteer.scheme`](project-schema.json,/definitions/Location,gazetteer/scheme) to 'WDPA'.
 3. For each protected area in which the project is located, add the area's WDPA identifier to the [`.gazetteer.identifiers`](project-schema.json,/definitions/Location,gazetteer/identifiers) array.
 
-If the project is not located in a protected area, set [`.environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `false`.
+If the project is not located in a protected area, set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `false`.
 ```json
 {
   "environment": {
@@ -667,7 +682,9 @@ Clarify the type of climate and disaster risks to which the project is exposed t
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateAndDisasterRiskAssessment' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateAndDisasterRiskAssessment' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
 {
   "documents": [
@@ -760,7 +777,7 @@ Disclose the forecast greenhouse gas emissions related to the project, informing
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level:
+Project level:
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.forecasts`](project-schema.json,,forecasts) array.
 
@@ -826,7 +843,10 @@ Disclose environmental and/or climate related certifications issued for contract
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierEnvironmentalCertification'.
+Contracting process level: 
+
+[Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierEnvironmentalCertification'.
+
 ```json
 {
   "contractingProcesses": [
@@ -865,7 +885,9 @@ Disclose the decommissioning plans for the project assets \[document\]..
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'decommissioningPlans'.
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'decommissioningPlans'.
 ```json
 {
   "documents": [
@@ -899,9 +921,9 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`.costMeasurements`](project-schema.json,,costMeasurements) array and set its [`.id`](project-schema.json,/definitions/CostMeasurement,id) incrementally.
+1. Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and set its [`.id`](project-schema.json,/definitions/CostMeasurement,id) incrementally.
 
-2. Add a [`CostGroup`](../../reference/schema.md#costgroup) object to the cost measurement's [`.costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups) array, set its [`.id`](project-schema.json,/definitions/CostGroup,id) incrementally and set its [`.category`](project-schema.json,/definitions/CostGroup,category) to 'endOfLife'
+2. Add a [`CostGroup`](../../reference/schema.md#costgroup) object to the cost measurement's [`.costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups) array, set its [`.id`](project-schema.json,/definitions/CostGroup,id) incrementally and set its [`.category`](project-schema.json,/definitions/CostGroup,category) to 'endOfLife'.
 
 3. Add a [`Cost`](../../reference/schema.md#cost) object to the cost group's [`.costs`](project-schema.json,/definitions/CostGroup,costs) array, set its [`.id`](project-schema.json,/definitions/Cost,id) incrementally and map to its [`.value`](project-schema.json,/definitions/Cost,value).
 ```json
@@ -957,7 +979,9 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Map to [`environment.goals`](project-schema.json,,environment/goals) using the closed [environmentalGoal](../../reference/codelists.md#environmentalgoal) codelist.
+Project level: 
+
+Map to [`environment.goals`](project-schema.json,,environment/goals) using the closed [environmentalGoal](../../reference/codelists.md#environmentalgoal) codelist.
 ```json
 {
   "environment": {
@@ -994,7 +1018,7 @@ guarantees
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`.contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.udget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Set the the financing arrangement's [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) and [`.type`](project-schema.json,/definitions/Finance,type) according to the instrument type:
 
 Instrument type | [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) | [`.type`](project-schema.json,/definitions/Finance,type)
@@ -1044,7 +1068,9 @@ Clarify the theory of change, systemic transition or transformation that is inte
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateTransformation' and map any free text to [`.description`](project-schema.json,/definitions/Document,description).
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateTransformation' and map any free text to [`.description`](project-schema.json,/definitions/Document,description).
 ```json
 {
   "documents": [
@@ -1076,7 +1102,9 @@ Identify who approved the climate finance investment in the country (organizatio
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
+Project level: 
+
+[Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
 {
   "parties": [
@@ -1111,25 +1139,6 @@ Clarify how the investment is aligned with the country's nationally determined c
 OC4IDS mapping
 ^^^
 See [policy coherence (institutional module)](institutional-policy-coherence).
-```json
-{
-  "policyAlignment": {
-    "policies": [
-      "nationallyDeterminedContributions"
-    ],
-    "description": "The project is intended to contribute towards the NDC set out in 2022."
-  },
-  "documents": [
-    {
-      "id": "1",
-      "documentType": "policyAlignment",
-      "url": "http://example.com/ndcAlignment.pdf",
-      "pageStart": "13",
-      "pageEnd": "14"
-    }
-  ]
-}
-```
 ````
 
 `````
@@ -1194,7 +1203,7 @@ Disclose the quantum of the climate finance investment \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`.contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map to the financing arrangement's [`.value`](project-schema.json,/definitions/Finance,value).
 ```json
 {
@@ -1231,7 +1240,7 @@ Disclose who is providing the finance \[party/organization/role\]
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`.contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map to the financing arrangement's [`.source`](project-schema.json,/definitions/Finance,source).
 ```json
 {
@@ -1265,8 +1274,8 @@ For projects financed by the Green Climate Fund, disclose the accredited entitie
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`.contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
-2. Get the [`Organization`](../../reference/schema.md#organization) object in [`.parties`](project-schema.json,,parties) that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+2. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
 3. Set the financing arrangement's [`.financingParty`](project-schema.json,/definitions/Finance,financingParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
 ```json
 {
@@ -1386,7 +1395,9 @@ Disclose dates for project preparation \[start date, end date\]
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
+Project level: 
+
+Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 ```json
 {
   "preparationPeriod": {
@@ -1425,7 +1436,7 @@ For each date:
 - [`.type`](project-schema.json,/definitions/Milestone,type) to 'financing'
 - [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'
 
-2. If disclosing the submission date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to "Climate finance submission" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the submission
+2. If disclosing the submission date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to "Climate finance submission" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the submission.
 3. If disclosing the approval date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to "Climate finance approval" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the approval.
 ```json
 {
@@ -1515,7 +1526,7 @@ Commitment fee (per annum)
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`.contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map the terms to the financing arrangement's properties:
 
 - Maturity: [`.period`](project-schema.json,,period)
@@ -1567,7 +1578,9 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Map to [`environment.abatementCost`](project-schema.json,,environment/abatementCost). If a document that describes the methodology used to calculate the cost is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'abatementCostMethodology'.
+Project level: 
+
+Map to [`environment.abatementCost`](project-schema.json,,environment/abatementCost). If a document that describes the methodology used to calculate the cost is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'abatementCostMethodology'.
 ```json
 {
   "environment": {
@@ -1610,7 +1623,9 @@ gender empowerment
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array, map the option from the list to its [`.title`](project-schema.json,/definitions/Benefit,title) and map the explanation to its [`.description`](project-schema.json,/definitions/Benefit,description).
+Project level: 
+
+For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array, map the option from the list to its [`.title`](project-schema.json,/definitions/Benefit,title) and map the explanation to its [`.description`](project-schema.json,/definitions/Benefit,description).
 ```json
 {
   "benefits": [
@@ -1664,7 +1679,8 @@ OC4IDS mapping
 ^^^
 For each planned disbursement:
 
-1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`.contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`.milestones`](project-schema.json,,milestones) array.
+1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. 
+Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.
 2. Set the milestone's:
 
 - [`.id`](project-schema.json,/definitions/Milestone,id) incrementally
@@ -1675,29 +1691,30 @@ For each planned disbursement:
 
 For each actual disbursement:
 
-1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`.contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`.transactions`](project-schema.json,,transactions) array.
+1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. 
+Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`transactions`](project-schema.json,,transactions) array.
 
 2. Set the transaction's:
 
 - [`.id`](project-schema.json,/definitions/Transaction,id) incrementally
 - [`.date`](project-schema.json,/definitions/Transaction,date) to the date of the disbursement
-- [`.value`](project-schema.json,/definitions/Transaction,value) to the amount and currency of the disbursement
+- [`.value`](project-schema.json,/definitions/Transaction,value) to the amount and currency of the disbursement.
 
-3. Get the [`Organization`](../../reference/schema.md#organization) in [`.parties`](project-schema.json,,parties) that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
+3. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
 
 - Add 'payer' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array
-- Set the transaction's [`.payer`](project-schema.json,/definitions/Transaction,payer) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization
+- Set the transaction's [`.payer`](project-schema.json,/definitions/Transaction,payer) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
 
-4. Get the [`Organization`](../../reference/schema.md#organization) in [`.parties`](project-schema.json,,parties) that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
+4. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
 
 - Add 'payee' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array.
-- Set the transaction's [`.payee`](project-schema.json,/definitions/Transaction,payee) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization
+- Set the transaction's [`.payee`](project-schema.json,/definitions/Transaction,payee) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
 
-5. Get the [`Milestone`](../../reference/schema.md#milestone) in [`.milestones`](project-schema.json,,milestones) that represents that planned disbursement:
+5. Get the [`Milestone`](../../reference/schema.md#milestone) in [`milestones`](project-schema.json,,milestones) that represents that planned disbursement:
 
 - Set its [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'
 - Set its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the disbursement
-- Set the transaction's [`.relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone) to the [`.id`](project-schema.json,/definitions/Milestone,id) and [`.title`](project-schema.json,/definitions/Milestone,title) of the milestone
+- Set the transaction's [`.relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone) to the [`.id`](project-schema.json,/definitions/Milestone,id) and [`.title`](project-schema.json,/definitions/Milestone,title) of the milestone.
 ```json
 {
   "milestones": [
@@ -1761,7 +1778,9 @@ mixed
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Map to [`environment.climateOversightTypes`](project-schema.json,,environment/climateOversightTypes) using the closed [climateOversightTypes](../../reference/codelists.md#climateoversighttypes) codelist.
+Project level: 
+
+Map to [`environment.climateOversightTypes`](project-schema.json,,environment/climateOversightTypes) using the closed [climateOversightTypes](../../reference/codelists.md#climateoversighttypes) codelist.
 ```json
 {
   "environment": {
@@ -1792,7 +1811,9 @@ Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [`.metrics`](project-schema.json,,metrics) array and set its fields according to the schema. Prefix the metric's [`.title`](project-schema.json,/definitions/Metric,title) with "KPI: ".
+Project level: 
+
+For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its fields according to the schema. Prefix the metric's [`.title`](project-schema.json,/definitions/Metric,title) with "KPI: ".
 ```json
 {
   "metrics": [
@@ -1823,7 +1844,9 @@ It could be quarterly, annually, biannually, etc. \[free text\]
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: Get the [`Metric`](../../reference/schema.md#metric) object in the [`.metrics`](project-schema.json,,metrics) array that represents the KPI and map to its [`.description`](project-schema.json,/definitions/Metric,description) using the format "Reporting period: <period>".
+Project level: 
+
+Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](project-schema.json,,metrics) array that represents the KPI and map to its [`.description`](project-schema.json,/definitions/Metric,description) using the format "Reporting period: {period}".
 ```json
 {
   "metrics": [
@@ -1855,7 +1878,9 @@ Disclose oversight reports.\[document\]
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'oversightReport'.
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'oversightReport'.
 ```json
 {
   "documents": [
@@ -1908,7 +1933,9 @@ Disclose technical audits produced at end of the project (E.g. \[free text\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level: For each audit report, [add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'technicalAuditReport' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description) .
+Project level: 
+
+For each audit report, [add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'technicalAuditReport' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
 {
   "documents": [
@@ -1943,7 +1970,9 @@ Clarify the methodology or system to measure the long-term impact of the project
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level: [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'impactMethodology' and map any free text to its [`.description`](project-schema.json,,description).
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'impactMethodology' and map any free text to its [`.description`](project-schema.json,,description).
 ```json
 {
   "documents": [
@@ -1976,9 +2005,9 @@ Disclose the carbon footprint of the project, informing the calculation, the met
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level:
+Project level:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.metrics`](project-schema.json,,metrics) array.
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array.
 
 2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to "Greenhouse gas emissions (carbon dioxide equivalent)" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).
 
@@ -2044,15 +2073,15 @@ OC4IDS mapping
 ^^^
 For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
-1. Set its [`.type`](project-schema.json,,type) to 'decommissioning'
+1. Set its [`type`](project-schema.json,,type) to 'decommissioning'.
 
-2. Set its [`.title`](project-schema.json,,title) to the name of the asset
+2. Set its [`title`](project-schema.json,,title) to the name of the asset.
 
-3. Add a [`RelatedProject`](../../reference/schema.md#relatedproject) object to the [`.relatedProjects`](project-schema.json,,relatedProjects) array and set its:
+3. Add a [`RelatedProject`](../../reference/schema.md#relatedproject) object to the [`relatedProjects`](project-schema.json,,relatedProjects) array and set its:
 
 - [`.id`](project-schema.json,/definitions/RelatedProject,id) and [`.title`](project-schema.json,/definitions/RelatedProject,title) to the [`.id`](project-schema.json,,id) and [`.title`](project-schema.json,,title) of the OC4IDS project for the replacement of the asset
 - [`.scheme`](project-schema.json,/definitions/RelatedProject,scheme) to 'oc4ids'
-- [`.relationship`](project-schema.json,/definitions/RelatedProject,relationship) to 'replacement'
+- [`.relationship`](project-schema.json,/definitions/RelatedProject,relationship) to 'replacement'.
 ```json
 {
   "id": "oc4ids-bu3kcz-123456789",
@@ -2088,6 +2117,8 @@ Intended start and end dates of decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
+Project level:
+
 Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
 ```json
 {
@@ -2138,9 +2169,9 @@ Disclose the evaluation of CO2 savings as a result of decommissioning \[value, t
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level:
+Project level:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.forecasts`](project-schema.json,,forecasts) array.
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array.
 
 2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to "Greenhouse gas emissions reduction (carbon dioxide equivalent)" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).
 
@@ -2205,7 +2236,9 @@ Disclose mitigation plan for people and communities affected by decommissioning 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'socialImpact'.
+Project level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'socialImpact'.
 ```json
 {
   "id": "oc4ids-bu3kcz-123456789",
@@ -2285,7 +2318,7 @@ Clarify whether gender, people with disabilities and vulnerable and disadvantage
 :columns: 8
 OC4IDS mapping
 ^^^
-Project-level:
+Project level:
 
 1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveDesign' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 
@@ -2332,10 +2365,10 @@ Project level:
 
 If the project is located in or cuts through indigenous land:
 
-1. Set [`.social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `true`
-2. Add a [`Location`](../../reference/schema.md#location) object to the [`.locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name> and <Category> for the name and land category from the Landmark database.
+1. Set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `true`.
+2. Add a [`Location`](../../reference/schema.md#location) object to the [`locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name> and <Category> for the name and land category from the Landmark database.
 
-If the project is not located in and does not cut through indigenous land, set [`.social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `false`.
+If the project is not located in and does not cut through indigenous land, set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `false`.
 ```json
 {
   "social": {
@@ -2375,12 +2408,12 @@ For each meeting:
 
 1. Publish the meeting invite: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'consultationMeetingInvitation'.
 
-2. Publish the meeting details: add a [`Meeting`](../../reference/schema.md#meeting) object to the [`.social.consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings) array and set its:
+2. Publish the meeting details: add a [`Meeting`](../../reference/schema.md#meeting) object to the [`social.consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings) array and set its:
 
 - [`.id`](project-schema.json,/definitions/Meeting,id) incrementally
 - [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting
 - [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting
-- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people that participated in the meeting
+- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people that participated in the meeting.
 
 3. Publish the meeting minutes: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'minutes.consultationMeeting'.
 ```json
@@ -2435,7 +2468,9 @@ Disclose budget allocated to fund land compensation (E.g. \[value\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Map to [`.social.landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget).
+Project Level: 
+
+Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget).
 ```json
 {
   "social": {
@@ -2487,8 +2522,8 @@ Contracting process level:
 
 1. Publish a summary of the labor obligations:
 
-   1. For each labor obligation, add a code from the open [laborObligations](../../reference/codelists.md#laborobligations) codelist to the [`.summary.social.laborObligations.obligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/obligations) array.
-   2. Optionally, add a further explanation of the labor obligations to [`.summary.social.laborObligations.description`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/description).
+   1. For each labor obligation, add the relevant code from the open [laborObligations](../../reference/codelists.md#laborobligations) codelist to the [`.summary.social.laborObligations.obligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/obligations) array.
+   2. Optionally, add a further explanation of the labor obligations to [`summary.social.laborObligations.description`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/description).
 
 2. Publish the bidding documents that specify labor obligations: [add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'biddingDocuments'.
 
@@ -2545,7 +2580,9 @@ Disclose the amount allocated by the main contractor to cover for labour costs (
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: Map to [`.summary.social.laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget).
+Contracting process level: 
+
+Map to [`summary.social.laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget).
 ```json
 {
   "contractingProcesses": [
@@ -2587,7 +2624,7 @@ Project level:
 
 Publish summary statistics on worker accidents:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker accidents".
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker accidents".
 
 2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
 
@@ -2595,11 +2632,11 @@ Publish summary statistics on worker accidents:
 - [`.period`](project-schema.json,/definitions/Observation,period) to the reporting period
 - [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of accidents.
 
-3. If further details available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field.
+3. If further details are available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field.
 
 Publish summary statistics on worker fatalities:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker fatalities".
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker fatalities".
 
 2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array set its:
 
@@ -2663,7 +2700,9 @@ Disclose labour related certifications issued in relation to project contractors
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierHealthAndSafetyCertification'.
+Contracting process level: 
+
+[Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierHealthAndSafetyCertification'.
 ```json
 {
   "contractingProcesses": [
@@ -2726,9 +2765,9 @@ Project level:
 
 Publish a summary of the material tests:
 
-1. For each material test, add a code from the open [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the [`.social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests) array.
+1. For each material test, add a code from the open [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests) array.
 
-2. Add any further explanation of the tests to [`.social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests), including the international or national standards that the tests conform to.
+2. Add any further explanation of the tests to [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests), including the international or national standards that the tests conform to.
 
 Publish test results: For each test result, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'materialTestResults'.
 ```json
@@ -2773,7 +2812,9 @@ Disclose building inspections during project implementation (E.g. \[Document\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'buildingInspectionReport'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'buildingInspectionReport'.
 ```json
 {
   "documents": [
@@ -2809,20 +2850,20 @@ Project level:
 
 Publish job creation estimates:
 
-1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to 'Jobs created'.
+1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Jobs created".
 
-2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object and set its:
+2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
 
 - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
 - [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship ("direct" or "indirect")
 - [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) to the stage ("implementation" or "operation")
-- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs
+- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs.
 
 Publish actual jobs created:
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to 'Jobs created'.
 
-2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object and set its:
+2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
 
 - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
 - [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship ("direct" or "indirect")
@@ -2948,19 +2989,19 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. For each plan or policy to which the project is aligned, add a code from the open [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the [`.policyAlignment.policies`](project-schema.json,,policyAlignment/policies) array and add a further explanation of the alignment to [`.policyAlignment.description`](project-schema.json,,policyAlignment/description).
+1. For each plan or policy to which the project is aligned, add a code from the open [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the [`policyAlignment.policies`](project-schema.json,,policyAlignment/policies) array and add a further explanation of the alignment to [`policyAlignment.description`](project-schema.json,,policyAlignment/description).
 
-2. For each United Nations Sustainable Development Goal to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`.additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
+2. For each United Nations Sustainable Development Goal to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
 
 - [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdg'
 - [`.id`](project-schema.json,/definitions/Classification,id) to the goal's number
-- [`.description`](project-schema.json,/definitions/Classification,description) to the goal's title
+- [`.description`](project-schema.json,/definitions/Classification,description) to the goal's title.
 
-3. For each United Nations Sustainable Development Goal Target to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`.additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
+3. For each United Nations Sustainable Development Goal Target to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
 
 - [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdgTarget'
 - [`.id`](project-schema.json,/definitions/Classification,id) to the target's number
-- [`.description`](project-schema.json,/definitions/Classification,description) to the target's title
+- [`.description`](project-schema.json,/definitions/Classification,description) to the target's title.
 
 4. If further documentation of the project's policy alignment is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'policyAlignment'.
 ```json
@@ -3012,7 +3053,9 @@ Disclose Freedom of Information (FoI) requests that have been presented in relat
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequest'.
+Project level: 
+
+For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequest'.
 ```json
 {
   "documents": [
@@ -3044,7 +3087,9 @@ Disclose the responses provided by authorities to Freedom of Information (FoI) r
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequestResponse'.
+Project level: 
+
+For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequestResponse'.
 ```json
 {
   "documents": [
@@ -3082,16 +3127,16 @@ For each meeting:
 
 Publish the meeting details:
 
-1. Add a [`Meeting`](../../reference/schema.md#meeting) object to the [`.lobbyingMeetings`](project-schema.json,,lobbyingMeetings) array and set:
+1. Add a [`Meeting`](../../reference/schema.md#meeting) object to the [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings) array and set:
 
 - [`.id`](project-schema.json,/definitions/Meeting,id) incrementally
 - [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting
 - [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting
 - [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people present at the meeting
 - [`.publicOffice.person.name`](project-schema.json,/definitions/PublicOffice,person/name) to the name of the person representing the public office present at the meeting
-- [`.publicOffice.jobTitle`](project-schema.json,/definitions/PublicOffice,jobTitle) to the job title of the person representing the public office present at the meeting
+- [`.publicOffice.jobTitle`](project-schema.json,/definitions/PublicOffice,jobTitle) to the job title of the person representing the public office present at the meeting.
 
-2. Get the [`Organization`](../../reference/schema.md#organization) in [`.parties`](project-schema.json,,parties) that represents the public office. If none exists yet, [add an organization](../common.md#add-an-organization).
+2. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the public office. If none exists yet, [add an organization](../common.md#add-an-organization).
 
 3. Set the meeting's [`.publicOffice.organization`](project-schema.json,/definitions/PublicOffice,organization) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
 
@@ -3155,7 +3200,7 @@ Project level:
 
 For each beneficial owner:
 
-1. Get the [`Organization`](../../reference/schema.md#organization) in [`.parties`](project-schema.json,,parties) that represents the contractor or supplier.
+1. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the contractor or supplier.
 2. Add a [`Person`](../../reference/schema.md#person) object to the organization's [`.beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners) array.
 3. Set the person's:
 
@@ -3201,7 +3246,9 @@ Identify the presence of sustainability and non-price attributes in the award cr
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the [`summary.tender.sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability) array and add 'awardCriteria' to its [`.strategies`](project-schema.json,/definitions/Sustainability,strategies) array.
+Contracting process level: 
+
+Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the [`summary.tender.sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability) array and add 'awardCriteria' to its [`.strategies`](project-schema.json,/definitions/Sustainability,strategies) array.
 ```json
 {
   "contractingProcesses": [
@@ -3242,7 +3289,9 @@ Disclose anti-corruption certifications of the project, such as ISO 37001 on Ant
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'antiCorruptionCertification'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'antiCorruptionCertification'.
 ```json
 {
   "documents": [
@@ -3274,7 +3323,9 @@ Identify the entities acting as independent monitors of the project (E.g. \[free
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
+Project level: 
+
+[Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
 {
   "parties": [
@@ -3329,7 +3380,9 @@ Disclose risk management plans prepared for the project (E.g. \[Document\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'riskProvisions'.
+Project Level: 
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'riskProvisions'.
 ```json
 {
   "documents": [
@@ -3376,7 +3429,9 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector codelist](../../reference/codelists.md#projectsector).
+Project Level: 
+
+Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector codelist](../../reference/codelists.md#projectsector).
 ```json
 {
   "sector": [
