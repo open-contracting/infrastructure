@@ -716,7 +716,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. For each measure, add a `ClimateMeasure` object to the `environment.climateMeasures` array, set its `.type` according to the open climateMeasuresType codelist and map any further explanation to its `.description`.
+1. For each measure, add a `ClimateMeasure` object to the `environment.climateMeasures` array, set its `.type` according to the open climateMeasures codelist and map any further explanation to its `.description`.
 
 2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateMeasures'.
 ```json
@@ -2732,7 +2732,7 @@ Publish test results: For each test result, [add a project document](../common.m
 ```json
 {
   "social": {
-    "healthAndSafety": {  
+    "healthAndSafety": {
       "materialTests": {
         "tests": [
           "metal",
@@ -3385,3 +3385,4 @@ Project Level: Map to [`sector`](project-schema.json,,sector), using the open [P
 ````
 
 `````
+
