@@ -40,10 +40,9 @@ Disclose the procurement strategy risk assessment. This tends to be part of the 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'procurementStrategyRiskAssessment'.
-
 ```json
 {
   "documents": [
@@ -76,10 +75,9 @@ Disclose the life cycle cost of the project, which is the cost of an asset throu
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and map to its [`.lifeCycleCosting.value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value).
-
 ```json
 {
   "costMeasurements": [
@@ -278,7 +276,7 @@ Disclose the project cost-benefit analysis. This information tends to be part of
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis'.
 ```json
@@ -312,7 +310,6 @@ A summary of the value for money analysis carried out for the project, along wit
 :columns: 8
 OC4IDS mapping
 ^^^
-
 Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'valueForMoneyAnalysis'.
 ```json
 {
@@ -509,7 +506,7 @@ Disclose the measures adopted by the project to mitigate and/or remedy the envir
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures' and map the justification and explanation to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -544,7 +541,7 @@ Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Docum
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalExemption'.
 ```json
@@ -620,18 +617,18 @@ CoST IDS element
 ^^^
 Disclose and provide further details on the measures adopted by the project to protect and enhance biodiversity. This can comprise, without limitation the following:
 
-avoidance of ecological sitting
-buffers for ecological land
-nature-based solutions
-land restoration
-protection to landscape and historical sites
-invasive species management
-management of wildlife mortality risk
-reduce habitat loss
-pollution reduction
-soil management
-hazardous material management\])
-others (explain)
+- avoidance of ecological sitting
+- buffers for ecological land
+- nature-based solutions
+- land restoration
+- protection to landscape and historical sites
+- invasive species management
+- management of wildlife mortality risk
+- reduce habitat loss
+- pollution reduction
+- soil management
+- hazardous material management\])
+- others (explain)
 ````
 
 ````{grid-item-card}
@@ -675,14 +672,14 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents..
+Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateAndDisasterRiskAssessment' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -770,7 +767,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]). .
+Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]).
 ````
 
 ````{grid-item-card}
@@ -843,10 +840,9 @@ Disclose environmental and/or climate related certifications issued for contract
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: 
+Contracting process level:
 
 [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierEnvironmentalCertification'.
-
 ```json
 {
   "contractingProcesses": [
@@ -885,7 +881,7 @@ Disclose the decommissioning plans for the project assets \[document\]..
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'decommissioningPlans'.
 ```json
@@ -979,7 +975,7 @@ Eg:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 Map to [`environment.goals`](project-schema.json,,environment/goals) using the closed [environmentalGoal](../../reference/codelists.md#environmentalgoal) codelist.
 ```json
@@ -1006,12 +1002,13 @@ Map to [`environment.goals`](project-schema.json,,environment/goals) using the c
 CoST IDS element
 ^^^
 Disclose the financial instrument type from the list:
-loan
-concessional
-non-concessional
-grant
-equity
-guarantees
+
+- loan
+  - concessional
+  - non-concessional
+- grant
+- equity
+- guarantees
 ````
 
 ````{grid-item-card}
@@ -1068,7 +1065,7 @@ Clarify the theory of change, systemic transition or transformation that is inte
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateTransformation' and map any free text to [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -1102,7 +1099,7 @@ Identify who approved the climate finance investment in the country (organizatio
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
@@ -1233,7 +1230,7 @@ OC4IDS mapping
 :columns: 4
 CoST IDS element
 ^^^
-Disclose who is providing the finance \[party/organization/role\]
+Disclose who is providing the finance \[party/organization/role\].
 ````
 
 ````{grid-item-card}
@@ -1315,13 +1312,14 @@ OC4IDS mapping
 CoST IDS element
 ^^^
 Select from the lists:
-Private
-Public
-non-governmental
-sub-national
-national
-regional
-international
+
+- Private
+- Public
+- non-governmental
+- sub-national
+- national
+- regional
+- international
 ````
 
 ````{grid-item-card}
@@ -1367,7 +1365,7 @@ OC4IDS mapping
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the amounts invested in project preparation \[value, currency\]
+Disclose the amounts invested in project preparation \[value, currency\].
 ````
 
 ````{grid-item-card}
@@ -1388,14 +1386,14 @@ See [budget for preparation, implementation and operation (economic and fiscal m
 :columns: 4
 CoST IDS element
 ^^^
-Disclose dates for project preparation \[start date, end date\]
+Disclose dates for project preparation \[start date, end date\].
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 ```json
@@ -1419,7 +1417,7 @@ Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 :columns: 4
 CoST IDS element
 ^^^
-Disclose dates for project approval \[submission date, approval date\]
+Disclose dates for project approval \[submission date, approval date\].
 ````
 
 ````{grid-item-card}
@@ -1514,12 +1512,13 @@ The OC4IDS data model provides the information needed to calculate co-finance ra
 CoST IDS element
 ^^^
 This includes several financial terms:
-maturity (years)
-Grace period (years)
-annual principal repayment years (% of initial principle)
-Interest (%)
-Service fee (per annum)
-Commitment fee (per annum)
+
+- maturity (years)
+- Grace period (years)
+- annual principal repayment years (% of initial principle)
+- Interest (%)
+- Service fee (per annum)
+- Commitment fee (per annum)
 ````
 
 ````{grid-item-card}
@@ -1578,7 +1577,7 @@ Disclose the cost per tonne of CO2 equivalent \[value, currency\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 Map to [`environment.abatementCost`](project-schema.json,,environment/abatementCost). If a document that describes the methodology used to calculate the cost is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'abatementCostMethodology'.
 ```json
@@ -1612,18 +1611,20 @@ Map to [`environment.abatementCost`](project-schema.json,,environment/abatementC
 CoST IDS element
 ^^^
 Identify potential non-climate impacts that have been factored into the project planning. Select from the list:
-economic
-social
-environmental
-gender empowerment
-\[add free text to explain the co-benefits\]
+
+- economic
+- social
+- environmental
+- gender empowerment
+
+\[add free text to explain the co-benefits\].
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array, map the option from the list to its [`.title`](project-schema.json,/definitions/Benefit,title) and map the explanation to its [`.description`](project-schema.json,/definitions/Benefit,description).
 ```json
@@ -1670,7 +1671,7 @@ See [public consultation meetings (social module)](social-public-consultation-me
 :columns: 4
 CoST IDS element
 ^^^
-Disbursements dates according to financial agreement versus actual disbursements dates \[value, currency, date\]
+Disbursements dates according to financial agreement versus actual disbursements dates \[value, currency, date\].
 ````
 
 ````{grid-item-card}
@@ -1679,8 +1680,7 @@ OC4IDS mapping
 ^^^
 For each planned disbursement:
 
-1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. 
-Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.
+1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.
 2. Set the milestone's:
 
 - [`.id`](project-schema.json,/definitions/Milestone,id) incrementally
@@ -1691,8 +1691,7 @@ Otherwise, if the disbursement relates to the project, for example a payment fro
 
 For each actual disbursement:
 
-1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. 
-Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`transactions`](project-schema.json,,transactions) array.
+1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`transactions`](project-schema.json,,transactions) array.
 
 2. Set the transaction's:
 
@@ -1769,16 +1768,17 @@ Otherwise, if the disbursement relates to the project, for example a payment fro
 CoST IDS element
 ^^^
 Select from a list:
-internal
-external
-mixed
+
+- internal
+- external
+- mixed
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 Map to [`environment.climateOversightTypes`](project-schema.json,,environment/climateOversightTypes) using the closed [climateOversightTypes](../../reference/codelists.md#climateoversighttypes) codelist.
 ```json
@@ -1811,7 +1811,7 @@ Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its fields according to the schema. Prefix the metric's [`.title`](project-schema.json,/definitions/Metric,title) with "KPI: ".
 ```json
@@ -1837,14 +1837,14 @@ For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [
 :columns: 4
 CoST IDS element
 ^^^
-It could be quarterly, annually, biannually, etc. \[free text\]
+It could be quarterly, annually, biannually, etc. \[free text\].
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](project-schema.json,,metrics) array that represents the KPI and map to its [`.description`](project-schema.json,/definitions/Metric,description) using the format "Reporting period: {period}".
 ```json
@@ -1871,14 +1871,14 @@ Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](p
 :columns: 4
 CoST IDS element
 ^^^
-Disclose oversight reports.\[document\]
+Disclose oversight reports.\[document\].
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'oversightReport'.
 ```json
@@ -1905,7 +1905,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the entities acting as independent monitors of the project (E.g. \[free text\])
+Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
 ````
 
 ````{grid-item-card}
@@ -1933,7 +1933,7 @@ Disclose technical audits produced at end of the project (E.g. \[free text\].
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 For each audit report, [add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'technicalAuditReport' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -1970,7 +1970,7 @@ Clarify the methodology or system to measure the long-term impact of the project
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'impactMethodology' and map any free text to its [`.description`](project-schema.json,,description).
 ```json
@@ -1998,7 +1998,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the carbon footprint of the project, informing the calculation, the methodology applied, and where the calculation can be found. \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\]
+Disclose the carbon footprint of the project, informing the calculation, the methodology applied, and where the calculation can be found. \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\].
 ````
 
 ````{grid-item-card}
@@ -2064,7 +2064,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the asset for disposal purpose \[free text\]
+Identify the asset for disposal purpose \[free text\].
 ````
 
 ````{grid-item-card}
@@ -2162,7 +2162,7 @@ See [decommissioning plans (environment and social)](environment-and-climate-dec
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the evaluation of CO2 savings as a result of decommissioning \[value, tons CO2 equivalent\]
+Disclose the evaluation of CO2 savings as a result of decommissioning \[value, tons CO2 equivalent\].
 ````
 
 ````{grid-item-card}
@@ -2229,14 +2229,14 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose mitigation plan for people and communities affected by decommissioning (E.g.: \[Doc\]),
+Disclose mitigation plan for people and communities affected by decommissioning (E.g.: \[Doc\]).
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'socialImpact'.
 ```json
@@ -2468,7 +2468,7 @@ Disclose budget allocated to fund land compensation (E.g. \[value\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget).
 ```json
@@ -2496,22 +2496,22 @@ CoST IDS element
 ^^^
 Disclose labour obligations in the construction contract. This can include, without limitation, the following:
 
-Minimum wage
-Overtime
-Prohibition of forced labour
-Prohibition of child labour
-Equal opportunity
-Non-discrimination
-Freedom of association
-Grievance mechanism
-Working at height
-Underground work
-Handling of materials/equipment
-Monitoring of accidents
-Traffic management
-Accommodation
-Protective equipment
-Others (explain)
+- Minimum wage
+- Overtime
+- Prohibition of forced labour
+- Prohibition of child labour
+- Equal opportunity
+- Non-discrimination
+- Freedom of association
+- Grievance mechanism
+- Working at height
+- Underground work
+- Handling of materials/equipment
+- Monitoring of accidents
+- Traffic management
+- Accommodation
+- Protective equipment
+- Others (explain)
 ````
 
 ````{grid-item-card}
@@ -2580,7 +2580,7 @@ Disclose the amount allocated by the main contractor to cover for labour costs (
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: 
+Contracting process level:
 
 Map to [`summary.social.laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget).
 ```json
@@ -2700,7 +2700,7 @@ Disclose labour related certifications issued in relation to project contractors
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: 
+Contracting process level:
 
 [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierHealthAndSafetyCertification'.
 ```json
@@ -2812,7 +2812,7 @@ Disclose building inspections during project implementation (E.g. \[Document\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'buildingInspectionReport'.
 ```json
@@ -2970,15 +2970,15 @@ CoST IDS element
 ^^^
 Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment. Consider alignment with:
 
-SDGs
-National plan or strategy
-Infrastructure plan or strategy
-Sector plan or strategy
-Procuring entity plan or strategy
-Paris Agreement
-Nationally Determined Contributions (NDCs)
-National Adaptation Plans
-Medium-term fiscal frameworks/targets
+- SDGs
+- National plan or strategy
+- Infrastructure plan or strategy
+- Sector plan or strategy
+- Procuring entity plan or strategy
+- Paris Agreement
+- Nationally Determined Contributions (NDCs)
+- National Adaptation Plans
+- Medium-term fiscal frameworks/targets
 
 \[free text\]
 ````
@@ -3053,7 +3053,7 @@ Disclose Freedom of Information (FoI) requests that have been presented in relat
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequest'.
 ```json
@@ -3087,7 +3087,7 @@ Disclose the responses provided by authorities to Freedom of Information (FoI) r
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequestResponse'.
 ```json
@@ -3246,7 +3246,7 @@ Identify the presence of sustainability and non-price attributes in the award cr
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level: 
+Contracting process level:
 
 Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the [`summary.tender.sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability) array and add 'awardCriteria' to its [`.strategies`](project-schema.json,/definitions/Sustainability,strategies) array.
 ```json
@@ -3289,7 +3289,7 @@ Disclose anti-corruption certifications of the project, such as ISO 37001 on Ant
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'antiCorruptionCertification'.
 ```json
@@ -3316,14 +3316,14 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the entities acting as independent monitors of the project (E.g. \[free text\])
+Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level: 
+Project level:
 
 [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
@@ -3380,7 +3380,7 @@ Disclose risk management plans prepared for the project (E.g. \[Document\]).
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'riskProvisions'.
 ```json
@@ -3429,7 +3429,7 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: 
+Project Level:
 
 Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector codelist](../../reference/codelists.md#projectsector).
 ```json
