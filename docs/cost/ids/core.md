@@ -14,44 +14,39 @@ The CoST IDS sets out a number of disclosure requirements under the heading of "
 
 ### Identification
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/project-level-identification.csv
+:file: ../../../build/current_lang/ids-project-level-identification.csv
 ```
 
 ### Preparation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/project-level-preparation.csv
+:file: ../../../build/current_lang/ids-project-level-preparation.csv
 ```
 
 ### Project completion
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/project-level-completion.csv
+:file: ../../../build/current_lang/ids-project-level-completion.csv
 ```
 
 ### Reactive disclosures
 
 #### Identification and preparation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/reactive-project-level-identification-preparation.csv
+:file: ../../../build/current_lang/ids-reactive-project-level-identification-preparation.csv
 ```
 
 #### Completion
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/reactive-project-level-completion.csv
+:file: ../../../build/current_lang/ids-reactive-project-level-completion.csv
 ```
 
 ##### Implementation progress reports
@@ -230,42 +225,37 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 ### Procurement
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/process-level-procurement.csv
+:file: ../../../build/current_lang/ids-process-level-procurement.csv
 ```
 
 ### Implementation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/process-level-implementation.csv
+:file: ../../../build/current_lang/ids-process-level-implementation.csv
 ```
 
 ### Reactive disclosures
 
 #### Procurement
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/reactive-process-level-procurement.csv
+:file: ../../../build/current_lang/ids-reactive-process-level-procurement.csv
 ```
 
 #### Contract
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/reactive-process-level-contract.csv
+:file: ../../../build/current_lang/ids-reactive-process-level-contract.csv
 ```
 
 #### Implementation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,2
-:file: ../../../build/current_lang/reactive-process-level-implementation.csv
+:file: ../../../build/current_lang/ids-reactive-process-level-implementation.csv
 ```

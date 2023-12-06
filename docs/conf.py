@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import csv
 import os
 from glob import glob
 from pathlib import Path
@@ -107,6 +108,22 @@ html_theme_options = {
 }
 
 
+def remove_column(input_file, output_file, column_index):
+    """
+    Remove a column from a CSV file.
+
+    :param input_file: The input CSV file
+    :param output_file: The output CSV file
+    :param column_index: The column to remove
+    """
+    with open(input_file, 'r') as input_csv_file, open(output_file, 'w', newline='') as output_csv_file:
+        reader = csv.reader(input_csv_file)
+        writer = csv.writer(output_csv_file)
+        for row in reader:
+            del row[column_index]
+            writer.writerow(row)
+
+
 def setup(app):
     # The root of the repository.
     basedir = Path(__file__).resolve().parents[1]
@@ -147,3 +164,13 @@ def setup(app):
         (glob(str(basedir / 'mapping' / '*.csv')), static_dir, mapping_domain),
         (glob(str(basedir / 'mapping' / '*.csv')), build_dir, mapping_domain),
     ], localedir, language, mapping_headers, version=branch)
+
+    # Generate separate mapping CSVs
+    for filename in os.listdir(build_dir):
+        if filename.endswith('.csv') and not filename.startswith('ids') and not filename.startswith('ocds'):
+            input_file = os.path.join(build_dir, filename)
+            for mapping, column_index in {'ids': 3, 'ocds': 2}.items():
+                output_file = os.path.join(build_dir, f"{mapping}-{filename}")
+                remove_column(input_file, output_file, column_index)
+
+            os.remove(input_file)
