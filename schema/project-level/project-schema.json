@@ -1451,7 +1451,6 @@
             "$ref": "#/definitions/Identifier"
           },
           "uniqueItems": true,
-          "wholeListMerge": true,
           "minItems": 1
         },
         "address": {
@@ -1491,12 +1490,11 @@
         },
         "classifications": {
           "title": "Organization classifications",
-          "description": "The classifications that categorize the organization",
+          "description": "The classifications that categorize the organization.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Classification"
           },
-          "wholeListMerge": true,
           "uniqueItems": true,
           "minItems": 1
         },
@@ -1924,9 +1922,9 @@
       "minProperties": 1
     },
     "Metric": {
-      "type": "object",
       "title": "Metric",
       "description": "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1956,9 +1954,9 @@
           "minLength": 1
         },
         "observations": {
-          "type": "array",
           "title": "Observations",
           "description": "An array of target or actual values for this metric.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Observation"
           },
@@ -1969,9 +1967,9 @@
       "minProperties": 1
     },
     "Observation": {
-      "type": "object",
       "title": "Observation",
-      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics).",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics). ",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -2002,16 +2000,16 @@
           "minLength": 1
         },
         "unit": {
-          "type": "object",
           "title": "Unit",
           "description": "Unit",
+          "type": "object",
           "properties": {
             "name": {
+              "title": "Unit name",
+              "description": "The name of the unit.",
               "type": [
                 "string"
               ],
-              "title": "Unit name",
-              "description": "The name of the unit.",
               "minLength": 1
             },
             "scheme": {
@@ -2026,7 +2024,7 @@
             },
             "id": {
               "title": "ID",
-              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
+              "description": "The identifier from the codelist referenced in the scheme field. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
               "type": "string",
               "minLength": 1
             },
@@ -2042,9 +2040,9 @@
           "minProperties": 1
         },
         "dimensions": {
-          "type": "object",
           "title": "Dimensions",
           "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "type": "object",
           "minProperties": 1
         },
         "notes": {
@@ -2572,9 +2570,9 @@
       "minProperties": 1
     },
     "MilestoneReference": {
-      "type": "object",
       "title": "Milestone Reference",
       "description": "A block used to reference a milestone, including the ID and title of the milestone being referenced.",
+      "type": "object",
       "required": [
         "id"
       ],

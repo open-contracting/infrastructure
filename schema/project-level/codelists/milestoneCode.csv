@@ -7,4 +7,4 @@ completion,Completion of construction of development,The date of completion of c
 commissioning,Commissioning,The testing and inspection of the completed works to verify that the works are ready for commercial operation.,OCDS for PPPs Extension
 enquiryPeriodStart,Enquiry period start,"For processes with multiple enquiry periods, the start date of a period during which enquiries can be made and responded to which is not provided in the tender/enquiryPeriod block. Sometimes known as clarification periods.",OCDS for PPPs Extension
 enquiryPeriodEnd,Enquiry period end,"For processes with multiple enquiry periods, the end date of a period during which enquiries can be made and responded to which is not provided in the tender/enquiryPeriod block. Sometimes known as clarification periods.",OCDS for PPPs Extension
-draftFinalTender,Submission of draft final tender,"For competitive dialogue processes, the deadline for submission of draft final tenders",OCDS for PPPs Extension
+draftFinalTender,Submission of draft final bid,"For competitive dialogue processes, the deadline for submission of draft final bids",OCDS for PPPs Extension
