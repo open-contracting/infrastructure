@@ -66,7 +66,7 @@
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
-* [#432](https://github.com/open-contracting/infrastructure/pull/432) - deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist.
+* [#432](https://github.com/open-contracting/infrastructure/pull/432) - rename 'completed' to 'maintenance' in the projectStatus codelist.
 * Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
