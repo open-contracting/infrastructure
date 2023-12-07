@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import csv
 import os
 from glob import glob
 from pathlib import Path
@@ -147,3 +148,16 @@ def setup(app):
         (glob(str(basedir / 'mapping' / '*.csv')), static_dir, mapping_domain),
         (glob(str(basedir / 'mapping' / '*.csv')), build_dir, mapping_domain),
     ], localedir, language, mapping_headers, version=branch)
+
+    # Split the mapping CSV into two.
+    for path in build_dir.iterdir():
+        name = path.name
+        if name.endswith('.csv') and not name.startswith(('ids-', 'ocds-')):
+            for prefix, column_index in (('ids', 3), ('ocds', 2)):
+                with path.open() as i, (build_dir / f'{prefix}-{name}').open('w') as o:
+                    reader = csv.reader(i)
+                    writer = csv.writer(o, lineterminator='\n')
+                    for row in reader:
+                        del row[column_index]
+                        writer.writerow(row)
+            path.unlink()

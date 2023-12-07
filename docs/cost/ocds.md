@@ -61,44 +61,39 @@ Implementations which include multiple currencies ought to give consideration to
 
 #### Identification
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/project-level-identification.csv
+:file: ../../build/current_lang/ocds-project-level-identification.csv
 ```
 
 #### Preparation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/project-level-preparation.csv
+:file: ../../build/current_lang/ocds-project-level-preparation.csv
 ```
 
 #### Project completion
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/project-level-completion.csv
+:file: ../../build/current_lang/ocds-project-level-completion.csv
 ```
 
 #### Reactive disclosures
 
 ##### Identification and preparation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/reactive-project-level-identification-preparation.csv
+:file: ../../build/current_lang/ocds-reactive-project-level-identification-preparation.csv
 ```
 
 ##### Completion
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/reactive-project-level-completion.csv
+:file: ../../build/current_lang/ocds-reactive-project-level-completion.csv
 ```
 
 ### Process level
@@ -107,10 +102,9 @@ The mappings in this section relate to the `contractingProcesses` section of the
 
 #### Procurement
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/process-level-procurement.csv
+:file: ../../build/current_lang/ocds-process-level-procurement.csv
 ```
 
 #### Implementation
@@ -121,34 +115,30 @@ If OCDS data is available, these changes can be determined by comparing the most
 
 In some cases, OCDS data might include an explanation of changes in the relevant `amendments` block. In other cases, the reason might need to be manually entered.
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/process-level-implementation.csv
+:file: ../../build/current_lang/ocds-process-level-implementation.csv
 ```
 
 #### Reactive disclosures
 
 ##### Procurement
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/reactive-process-level-procurement.csv
+:file: ../../build/current_lang/ocds-reactive-process-level-procurement.csv
 ```
 
 ##### Contract
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/reactive-process-level-contract.csv
+:file: ../../build/current_lang/ocds-reactive-process-level-contract.csv
 ```
 
 ##### Implementation
 
-```{csv-table-no-translate}
+```{csv-table}
 :header-rows: 1
-:included_cols: 0,1,3
-:file: ../../build/current_lang/reactive-process-level-implementation.csv
+:file: ../../build/current_lang/ocds-reactive-process-level-implementation.csv
 ```

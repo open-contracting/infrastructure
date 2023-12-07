@@ -14,6 +14,21 @@
       "type": "string",
       "minLength": 1
     },
+    "updated": {
+      "title": "Last updated",
+      "description": "The date on which project-level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project-level data has been updated as a result, or to provide explanations or justifications for those changes.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "language": {
+      "title": "Language",
+      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
+      "type": [
+        "string"
+      ],
+      "default": "en",
+      "minLength": 1
+    },
     "identifiers": {
       "title": "Identifiers",
       "description": "Identifiers for this project. This field can be used to provide internal identifiers for the project, such as identifiers from a project management system or procurement system.",
@@ -24,11 +39,10 @@
       "minItems": 1,
       "uniqueItems": true
     },
-    "updated": {
-      "title": "Last updated",
-      "description": "The date on which project-level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project-level data has been updated as a result, or to provide explanations or justifications for those changes.",
-      "type": "string",
-      "format": "date-time"
+    "publicAuthority": {
+      "title": "Public authority",
+      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `role` of 'publicAuthority'.",
+      "$ref": "#/definitions/OrganizationReference"
     },
     "title": {
       "title": "Project title",
@@ -41,127 +55,6 @@
       "description": "A description of this project. This should usually be no longer than a single paragraph.",
       "type": "string",
       "minLength": 1
-    },
-    "status": {
-      "title": "Status",
-      "description": "The current phase or status of this project, from the [projectStatus](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectstatus) codelist.",
-      "type": "string",
-      "enum": [
-        "identification",
-        "preparation",
-        "implementation",
-        "completion",
-        "maintenance",
-        "decommissioning",
-        "completed",
-        "decommissioned",
-        "cancelled"
-      ],
-      "codelist": "projectStatus.csv",
-      "openCodelist": false
-    },
-    "period": {
-      "title": "Project period",
-      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
-      "$ref": "#/definitions/Period"
-    },
-    "identificationPeriod": {
-      "title": "Identification period",
-      "description": "The period over which the identification stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "preparationPeriod": {
-      "title": "Preparation period",
-      "description": "The period over which the preparation stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "implementationPeriod": {
-      "title": "Implementation period",
-      "description": "The period over which the implementation stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "completionPeriod": {
-      "title": "Completion period",
-      "description": "The period over which the completion stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "maintenancePeriod": {
-      "title": "Maintenance period",
-      "description": "The period over which the maintenance stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "decommissioningPeriod": {
-      "title": "Decommissioning period",
-      "description": "The period over which the decommissioning stage is planned to run.",
-      "$ref": "#/definitions/Period"
-    },
-    "sector": {
-      "title": "Project sector",
-      "description": "One or more values from the [projectSector codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectsector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      },
-      "codelist": "projectSector.csv",
-      "openCodelist": true,
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "purpose": {
-      "title": "Project purpose",
-      "description": "The socioeconomic purpose of this project.",
-      "type": "string",
-      "minLength": 1
-    },
-    "additionalClassifications": {
-      "title": "Additional classifications",
-      "description": "Classifications of the project: for example, according to its social and economic purpose. See also the `purpose` field.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Classification"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "type": {
-      "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projecttype) codelist.",
-      "type": "string",
-      "enum": [
-        "construction",
-        "rehabilitation",
-        "replacement",
-        "expansion",
-        "decommissioning"
-      ],
-      "codelist": "projectType.csv",
-      "openCodelist": false
-    },
-    "relatedProjects": {
-      "title": "Related projects",
-      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RelatedProject"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "assetLifetime": {
-      "title": "Asset lifetime",
-      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
-      "$ref": "#/definitions/Period"
-    },
-    "locations": {
-      "title": "Project locations",
-      "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Location"
-      },
-      "uniqueItems": true,
-      "minItems": 1
     },
     "budget": {
       "title": "Total project value",
@@ -214,35 +107,80 @@
       },
       "minProperties": 1
     },
-    "costMeasurements": {
-      "title": "Cost measurements",
-      "description": "Information about cost measurements for the project.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/CostMeasurement"
-      },
-      "minItems": 1,
-      "uniqueItems": true
+    "period": {
+      "title": "Project period",
+      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
+      "$ref": "#/definitions/Period"
     },
-    "forecasts": {
-      "title": "Forecasts",
-      "description": "Forecast metrics for this project, such as planned physical or financial progress over time.",
+    "locations": {
+      "title": "Project locations",
+      "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Metric"
+        "$ref": "#/definitions/Location"
       },
       "uniqueItems": true,
       "minItems": 1
     },
-    "milestones": {
-      "title": "Milestones",
-      "description": "Milestones associated with this project.",
+    "status": {
+      "title": "Status",
+      "description": "The current phase or status of this project, from the [projectStatus](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectstatus) codelist.",
+      "type": "string",
+      "enum": [
+        "identification",
+        "preparation",
+        "implementation",
+        "completion",
+        "maintenance",
+        "decommissioning",
+        "decommissioned",
+        "cancelled"
+      ],
+      "codelist": "projectStatus.csv",
+      "openCodelist": false
+    },
+    "type": {
+      "title": "Project type",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projecttype) codelist.",
+      "type": "string",
+      "enum": [
+        "construction",
+        "rehabilitation",
+        "replacement",
+        "expansion",
+        "decommissioning"
+      ],
+      "codelist": "projectType.csv",
+      "openCodelist": false
+    },
+    "sector": {
+      "title": "Project sector",
+      "description": "One or more values from the [projectSector codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectsector) representing the sector(s) this project relates to. More detailed sector breakdown information can be provided using the pattern [sector].[subsector]. Where subsector codes are used the parent code should also be included, e.g. `['transport', 'transport.air']`",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Milestone"
+        "type": "string",
+        "minLength": 1
       },
-      "minItems": 1,
-      "uniqueItems": true
+      "codelist": "projectSector.csv",
+      "openCodelist": true,
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "purpose": {
+      "title": "Project purpose",
+      "description": "The socioeconomic purpose of this project.",
+      "type": "string",
+      "minLength": 1
+    },
+    "additionalClassifications": {
+      "title": "Additional classifications",
+      "description": "Classifications of the project: for example, according to its social and economic purpose. See also the `purpose` field.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Classification"
+      },
+      "uniqueItems": true,
+      "minItems": 1
     },
     "parties": {
       "title": "Parties",
@@ -254,27 +192,47 @@
       "uniqueItems": true,
       "minItems": 1
     },
-    "publicAuthority": {
-      "title": "Public authority",
-      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `role` of 'publicAuthority'.",
-      "$ref": "#/definitions/OrganizationReference"
+    "assetLifetime": {
+      "title": "Asset lifetime",
+      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
+      "$ref": "#/definitions/Period"
     },
-    "documents": {
-      "title": "Documents",
-      "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
+    "identificationPeriod": {
+      "title": "Identification period",
+      "description": "The period over which the identification stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "preparationPeriod": {
+      "title": "Preparation period",
+      "description": "The period over which the preparation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "implementationPeriod": {
+      "title": "Implementation period",
+      "description": "The period over which the implementation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "completionPeriod": {
+      "title": "Completion period",
+      "description": "The period over which the completion stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "maintenancePeriod": {
+      "title": "Maintenance period",
+      "description": "The period over which the maintenance stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "decommissioningPeriod": {
+      "title": "Decommissioning period",
+      "description": "The period over which the decommissioning stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "forecasts": {
+      "title": "Forecasts",
+      "description": "Forecast metrics for this project, such as planned physical or financial progress over time.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Document"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "contractingProcesses": {
-      "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major modifications to contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ContractingProcess"
+        "$ref": "#/definitions/Metric"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -289,12 +247,12 @@
       "uniqueItems": true,
       "minItems": 1
     },
-    "transactions": {
-      "title": "Transactions",
-      "description": "Financial transactions related to this project. For example, a disbursement from a funder to the project company. Transactions related to a contracting process, like a disbursement from a funder to a supplier, should be recorded in the contracting process summary's `.transactions.`",
+    "milestones": {
+      "title": "Milestones",
+      "description": "Milestones associated with this project.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Transaction"
+        "$ref": "#/definitions/Milestone"
       },
       "minItems": 1,
       "uniqueItems": true
@@ -342,21 +300,91 @@
       },
       "minProperties": 1
     },
-    "language": {
-      "title": "Language",
-      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
-      "type": [
-        "string"
-      ],
-      "default": "en",
-      "minLength": 1
-    },
-    "lobbyingMeetings": {
-      "title": "Lobbying meetings",
-      "description": "Information about lobbying meetings in relation to the project. That is, meetings with public officials that are made, managed or directed with the purpose of influencing public decision-making in relation to the project, whether for private, public or collective ends, whether for compensation or without. Public decision-making is the creation and amendment of legislation or any other regulatory measures; the development, modification and implementation of public policies, strategies and programs; and the awarding of government contracts or grants, administrative decisions or any other public spending decisions.",
+    "costMeasurements": {
+      "title": "Cost measurements",
+      "description": "Information about cost measurements for the project.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Meeting"
+        "$ref": "#/definitions/CostMeasurement"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "transactions": {
+      "title": "Transactions",
+      "description": "Financial transactions related to this project. For example, a disbursement from a funder to the project company. Transactions related to a contracting process, like a disbursement from a funder to a supplier, should be recorded in the contracting process summary's `.transactions.`",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Transaction"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Document"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "contractingProcesses": {
+      "title": "Contracting processes",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major modifications to contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContractingProcess"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "relatedProjects": {
+      "title": "Related projects",
+      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProject"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "policyAlignment": {
+      "title": "Policy alignment",
+      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
+      "type": "object",
+      "properties": {
+        "policies": {
+          "title": "Policies",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "policyAlignment.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of how the project aligns with the policies.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "benefits": {
+      "title": "Benefits",
+      "description": "The benefits and intended benefits of the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Benefit"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -455,38 +483,12 @@
       },
       "minProperties": 1
     },
-    "policyAlignment": {
-      "title": "Policy alignment",
-      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
-      "type": "object",
-      "properties": {
-        "policies": {
-          "title": "Policies",
-          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
-          "type": [
-            "array"
-          ],
-          "items": {
-            "type": "string"
-          },
-          "codelist": "policyAlignment.csv",
-          "openCodelist": true,
-          "minItems": 1
-        },
-        "description": {
-          "title": "Description",
-          "description": "A short description of how the project aligns with the policies.",
-          "type": "string"
-        }
-      },
-      "minProperties": 1
-    },
-    "benefits": {
-      "title": "Benefits",
-      "description": "The benefits and intended benefits of the project.",
+    "lobbyingMeetings": {
+      "title": "Lobbying meetings",
+      "description": "Information about lobbying meetings in relation to the project. That is, meetings with public officials that are made, managed or directed with the purpose of influencing public decision-making in relation to the project, whether for private, public or collective ends, whether for compensation or without. Public decision-making is the creation and amendment of legislation or any other regulatory measures; the development, modification and implementation of public policies, strategies and programs; and the awarding of government contracts or grants, administrative decisions or any other public spending decisions.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Benefit"
+        "$ref": "#/definitions/Meeting"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -1448,7 +1450,6 @@
             "$ref": "#/definitions/Identifier"
           },
           "uniqueItems": true,
-          "wholeListMerge": true,
           "minItems": 1
         },
         "address": {
@@ -1644,7 +1645,8 @@
         "description": {
           "title": "Description",
           "description": "A short description of the budget breakdown group including the common dimension used to create the breakdown.",
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "budgetBreakdown": {
           "title": "Budget breakdown",
@@ -1919,9 +1921,9 @@
       "minProperties": 1
     },
     "Metric": {
-      "type": "object",
       "title": "Metric",
       "description": "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1951,9 +1953,9 @@
           "minLength": 1
         },
         "observations": {
-          "type": "array",
           "title": "Observations",
           "description": "An array of target or actual values for this metric.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Observation"
           },
@@ -1964,9 +1966,9 @@
       "minProperties": 1
     },
     "Observation": {
-      "type": "object",
       "title": "Observation",
-      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics).",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics). ",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1997,16 +1999,16 @@
           "minLength": 1
         },
         "unit": {
-          "type": "object",
           "title": "Unit",
           "description": "Unit",
+          "type": "object",
           "properties": {
             "name": {
+              "title": "Unit name",
+              "description": "The name of the unit.",
               "type": [
                 "string"
               ],
-              "title": "Unit name",
-              "description": "The name of the unit.",
               "minLength": 1
             },
             "scheme": {
@@ -2021,7 +2023,7 @@
             },
             "id": {
               "title": "ID",
-              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
+              "description": "The identifier from the codelist referenced in the scheme field. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
               "type": "string",
               "minLength": 1
             },
@@ -2037,9 +2039,9 @@
           "minProperties": 1
         },
         "dimensions": {
-          "type": "object",
           "title": "Dimensions",
           "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "type": "object",
           "minProperties": 1
         },
         "notes": {
@@ -2557,14 +2559,19 @@
           ],
           "codelist": "milestoneStatus.csv",
           "openCodelist": false
+        },
+        "value": {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "$ref": "#/definitions/Value"
         }
       },
       "minProperties": 1
     },
     "MilestoneReference": {
-      "type": "object",
       "title": "Milestone Reference",
       "description": "A block used to reference a milestone, including the ID and title of the milestone being referenced.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -3021,9 +3028,7 @@
         "id": {
           "title": "ID",
           "description": "The locally unique identifier for the meeting.",
-          "type": [
-            "string"
-          ],
+          "type": "string",
           "minLength": 1
         },
         "date": {
@@ -3184,7 +3189,8 @@
           "type": "string",
           "minLength": 1
         }
-      }
+      },
+      "minProperties": 1
     }
   },
   "minProperties": 1

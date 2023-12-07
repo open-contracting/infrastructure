@@ -19,7 +19,7 @@ marketStudies,Market studies,Documentation of any market studies that took place
 eligibilityCriteria,Eligibility criteria,Detailed documents about the eligibility of bidders.,OCDS for PPPs
 clarifications,Clarifications to bidders questions,Documentation that provides replies to issues raised in pre-bid conferences or an enquiry processes.,OCDS for PPPs
 shortlistedFirms,Shortlisted firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.,OCDS for PPPs
-environmentalImpact,Environmental impact assessment,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
+environmentalImpact,Environmental impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for the contracting process or project.",OC4IDS
 assetAndLiabilityAssessment,Assessment of government's assets and liabilities,Documentation covering assessments of the government's assets and liabilities related to this contracting process.,OCDS for PPPs
 riskProvisions,Provisions for management of risks and liabilities,Documentation covering how risks will be managed as part of this contracting process.,OCDS for PPPs
 winningBid,Winning bid,"Documentation of the winning bid, including, wherever applicable, a full copy of the proposal received.",OCDS for PPPs

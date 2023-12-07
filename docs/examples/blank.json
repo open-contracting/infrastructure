@@ -463,6 +463,10 @@
             "relatedImplementationMilestone": {
               "id": "string",
               "title": "title"
+            },
+            "value": {
+              "amount": "number",
+              "currency": "string from currency codelist"
             }
           }
         ],
@@ -554,6 +558,10 @@
       "relatedImplementationMilestone": {
         "id": "string",
         "title": "title"
+      },
+      "value": {
+        "amount": "number",
+        "currency": "string from currency codelist"
       }
     }
   ],
