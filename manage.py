@@ -860,12 +860,12 @@ def lint(filename, additional_properties, link_fields):
         match_number = matches[name]
 
         leading_period = name[2] == '.'
-        path = [part for part in name[2:-1].split(".") if part != '']
+        path = tuple(part for part in name[2:-1].split(".") if part != '')
 
         # Identify occurrences of name in fields
         occurrences = []
         for field in fields:
-            if field[-len(path):] == tuple(path):
+            if field[-len(path):] == path:
                 occurrences.append(field)
 
         if not occurrences:
