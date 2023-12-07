@@ -82,6 +82,12 @@
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
+  * [#444](https://github.com/open-contracting/infrastructure/pull/444):
+    - assetClass
+    - debtRepaymentPriority
+    - financingArrangementType
+    - financingPartyType
+  * [#443](https://github.com/open-contracting/infrastructure/pull/443) - costCategory
 * Add codes:
   * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
     * 'procurementStrategyRiskAssessment'
@@ -106,13 +112,19 @@
     * 'ghgEmissions'
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
+    * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
+    * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
+    * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
+    * [#428](https://github.com/open-contracting/infrastructure/pull/428):
+      - 'minutes.lobbyingMeeting'
+      - 'minutes.consultationMeeting'
+      - 'consultationMeetingInvitation'
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
     * 'WDPA'
   * partyRole:
     * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
     * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
   * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance'
     * 'decommissioning'
     * 'decommissioned'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
