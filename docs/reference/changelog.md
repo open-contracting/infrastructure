@@ -74,51 +74,53 @@
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
   * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
+  * [#443](https://github.com/open-contracting/infrastructure/pull/443) - costCategory
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
   * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
   * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426):
+    * milestoneCode
+    * milestoneStatus
+    * milestoneType
   * [#444](https://github.com/open-contracting/infrastructure/pull/444):
-    - assetClass
-    - debtRepaymentPriority
-    - financingArrangementType
-    - financingPartyType
-  * [#443](https://github.com/open-contracting/infrastructure/pull/443) - costCategory
+    * assetClass
+    * debtRepaymentPriority
+    * financingArrangementType
+    * financingPartyType
 * Add codes:
-  * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
-    * 'procurementStrategyRiskAssessment'
-    * 'lifeCycleCostMethodology'
-    * 'costBenefitAnalysis'
-    * 'environmentalExemption'
-    * 'climateAndDisasterRiskAssessment'
-    * 'climateTransformation'
-    * 'decommissioningPlans'
-    * 'impactMethodology'
-    * 'inclusiveDesign'
-    * 'inclusiveImplementation'
-    * 'supplierEnvironmentalCertification'
-    * 'supplierHealthAndSafetyCertification'
-    * 'antiCorruptionCertification'
-    * 'oversightReport'
-    * 'informationRequest'
-    * 'informationRequestResponse'
-    * 'buildingInspectionReport'
-    * 'ghgEmissionsForecast'
-    * 'ghgEmissionsReduction'
-    * 'ghgEmissions'
-    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
+  * documentType:
+    * [#446](https://github.com/open-contracting/infrastructure/pull/446)
+      * 'antiCorruptionCertification'
+      * 'buildingInspectionReport'
+      * 'climateAndDisasterRiskAssessment'
+      * 'climateTransformation'
+      * 'costBenefitAnalysis'
+      * 'decommissioningPlans'
+      * 'environmentalExemption'
+      * 'ghgEmissions'
+      * 'ghgEmissionsForecast'
+      * 'ghgEmissionsReduction'
+      * 'impactMethodology'
+      * 'inclusiveDesign'
+      * 'inclusiveImplementation'
+      * 'informationRequest'
+      * 'informationRequestResponse'
+      * 'lifeCycleCostMethodology'
+      * 'oversightReport'
+      * 'procurementStrategyRiskAssessment'
+      * 'supplierEnvironmentalCertification'
+      * 'supplierHealthAndSafetyCertification'
+    * [#428](https://github.com/open-contracting/infrastructure/pull/428):
+      * 'consultationMeetingInvitation'
+      * 'minutes.consultationMeeting'
+      * 'minutes.lobbyingMeeting'
+    * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
     * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
     * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
+    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
-    * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
-    * [#428](https://github.com/open-contracting/infrastructure/pull/428):
-      - 'minutes.lobbyingMeeting'
-      - 'minutes.consultationMeeting'
-      - 'consultationMeetingInvitation'
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
     * 'WDPA'
   * partyRole:
@@ -128,14 +130,14 @@
     * 'decommissioning'
     * 'decommissioned'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
-    * 'energy.solar'
-    * 'energy.wind'
-    * 'energy.hydropower'
     * 'energy.biomass'
     * 'energy.geothermal'
-    * 'transport.lowCarbon'
+    * 'energy.hydropower'
+    * 'energy.solar'
+    * 'energy.wind'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
+    * 'transport.lowCarbon'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType:
     * 'decommissioning'
 
