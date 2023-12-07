@@ -154,9 +154,9 @@ def setup(app):
         name = path.name
         if name.endswith('.csv') and not name.startswith(('ids-', 'ocds-')):
             for prefix, column_index in (('ids', 3), ('ocds', 2)):
-                with path.open() as i, (build_dir / f'{prefix}-{name}').open('w', lineterminator='\n') as o:
+                with path.open() as i, (build_dir / f'{prefix}-{name}').open('w') as o:
                     reader = csv.reader(i)
-                    writer = csv.writer(o)
+                    writer = csv.writer(o, lineterminator='\n')
                     for row in reader:
                         del row[column_index]
                         writer.writerow(row)
