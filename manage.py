@@ -41,7 +41,7 @@ Dumper.add_representer(str, str_representer)
 
 def get(url):
     """
-    GETs a URL and returns the response. Raises an exception if the status code is not successful.
+    GET a URL and returns the response. Raises an exception if the status code is not successful.
     """
     response = requests.get(url)
     response.raise_for_status()
@@ -50,7 +50,7 @@ def get(url):
 
 def csv_reader(url):
     """
-    Reads a CSV from a URL and returns a ``csv.DictReader`` object.
+    Read a CSV from a URL and returns a ``csv.DictReader`` object.
     """
     return csv.DictReader(StringIO(get(url).text))
 
@@ -61,404 +61,53 @@ def write_yaml_file(filename, data):
         yaml.dump(data, f, Dumper=Dumper, indent=4, width=1000, sort_keys=False)
 
 
-def coerce_to_list(data, key):
-    """
-    Returns the value of the ``key`` key in the ``data`` mapping. If the value is a string, wraps it in an array.
-    """
-    item = data.get(key, [])
-    if isinstance(item, str):
-        return [item]
-    return item
-
-
-def edit_code(row, oc4ids_codes, source):
-    """
-    If the row's "Code" is in the ``oc4ids_codes`` list, adds " or project" after "contracting process" in the row's
-    "Description" and sets the row's "Source" to ``"OC4IDS"``. Otherwise, sets the row's "Source" to ``source``.
-    """
-    if row['Code'] in oc4ids_codes:
-        row['Description'] = re.sub(r'(?<=contracting process\b)', ' or project', row['Description'])
-        row['Description'] = re.sub(r'(?<=contracting processes\b)', ' or projects', row['Description'])
-        row['Source'] = 'OC4IDS'
-    else:
-        row['Source'] = source
-    return row
-
-
 def traverse(schema_action=None, object_action=None):
     """
-    Implements common logic for walking through the schema.
+    Common logic for walking through the schema.
     """
     if object_action is None:
         def object_action(value):
             pass
 
-    def method(schema, pointer=''):
+    def _coerce_to_list(data, key):
+        """
+        Return the value of the ``key`` key in the ``data`` mapping. If the value is a string, wraps it in an array.
+        """
+        item = data.get(key, [])
+        if isinstance(item, str):
+            return [item]
+        return item
+
+    def _method(schema, pointer=''):
         schema_action(schema, pointer)
 
         if 'properties' in schema:
             for key, value in schema['properties'].items():
                 new_pointer = f'{pointer}/{key}'
 
-                prop_type = coerce_to_list(value, 'type')
+                prop_type = _coerce_to_list(value, 'type')
                 object_action(value)
 
                 if 'object' in prop_type:
-                    method(value, pointer=new_pointer)
+                    _method(value, pointer=new_pointer)
                 elif 'array' in prop_type:
-                    items_type = coerce_to_list(value['items'], 'type')
+                    items_type = _coerce_to_list(value['items'], 'type')
                     object_action(value['items'])
 
                     # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
-                    if ('object' in items_type or 'array' in items_type
-                            and new_pointer != '/Location/geometry/coordinates'):
+                    if (
+                        'object' in items_type
+                        or 'array' in items_type
+                        and new_pointer != '/Location/geometry/coordinates'
+                    ):
                         raise NotImplementedError(f'{new_pointer}/items has unexpected type {items_type}')
         elif pointer != '/Observation/dimensions':
             warnings.warn(f'Missing "properties" key at {pointer}')
 
         for key, value in schema.get('definitions', {}).items():
-            method(value, pointer=f'{pointer}/{key}')
+            _method(value, pointer=f'{pointer}/{key}')
 
-    return method
-
-
-# Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
-def remove_null_and_pattern_properties(*args):
-    """
-    Removes the "patternProperties" key, ``"null"`` from the "type" key, and ``None`` from the "enum" key.
-    """
-
-    def schema_action(schema, pointer):
-        schema.pop('patternProperties', None)
-
-    def object_action(value):
-        if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
-            value['type'].remove('null')
-        if 'enum' in value and None in value['enum']:
-            value['enum'].remove(None)
-
-    traverse(schema_action, object_action)(*args)
-
-
-def remove_deprecated_properties(*args):
-    """
-    Removes "deprecated" properties.
-    """
-
-    def schema_action(schema, pointer):
-        if 'properties' in schema:
-            for key in list(schema['properties']):
-                if 'deprecated' in schema['properties'][key]:
-                    del schema['properties'][key]
-        elif pointer != '/Observation/dimensions':
-            warnings.warn(f'Missing "properties" key at {pointer}')
-
-    traverse(schema_action)(*args)
-
-
-def remove_integer_identifier_types(*args):
-    """
-    Sets all ``id`` fields to allow only strings, not integers.
-    """
-
-    def schema_action(schema, pointer):
-        if 'properties' in schema:
-            if 'id' in schema['properties']:
-                schema['properties']['id']['type'] = 'string'
-        elif pointer != '/Observation/dimensions':
-            warnings.warn(f'Missing "properties" key at {pointer}')
-
-    traverse(schema_action)(*args)
-
-
-# From standard-maintenance-scripts/tests/test_readme.py
-def set_additional_properties(data, additional_properties):
-    if isinstance(data, list):
-        for item in data:
-            set_additional_properties(item, additional_properties)
-    elif isinstance(data, dict):
-        if "properties" in data:
-            data["additionalProperties"] = additional_properties
-        for value in data.values():
-            set_additional_properties(value, additional_properties)
-
-
-def compare(actual, infra_list, ocds_list, prefix, suffix):
-    """
-    Aborts if ``infra_list`` contains values not in ``actual``, or if ``actual`` contains values not in ``infra_list``
-    or ``ocds_list``. This ensures an editor updates this script when codelists or definitions are added to OC4IDS.
-    """
-
-    actual = set(actual)
-
-    # An editor might have added an infrastructure codelist, or copied an OCDS codelist, without updating this script.
-    added = actual - infra_list - ocds_list
-    if added:
-        sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
-
-    # An editor might have removed an infrastructure codelist, without updating this script.
-    removed = infra_list - actual
-    if removed:
-        sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
-
-
-def get_definition_references(schema, defn, parents=None, project_schema=None, include_nested=True):
-    """
-    Recursively generate a list of JSON pointers that reference a definition in JSON schema.
-
-    :param schema: The JSON schema
-    :param defn: The name of the definition
-    :param parents: A list of the parents of schema
-    :param project_schema: The full project schema
-    :param include_nested: Whether to include nested references
-    """
-
-    references = []
-
-    if parents is None:
-        parents = []
-
-    if project_schema is None:
-        project_schema = schema
-
-    if 'properties' in schema:
-        for key, value in schema['properties'].items():
-            if value.get('type') in ['array', ['array']] and '$ref' in value['items']:
-                if value['items']['$ref'] == f"#/definitions/{defn}":
-                    references.append(parents + [key, '0'])
-                elif include_nested:
-                    references.extend(get_definition_references(
-                        project_schema['definitions'][value['items']['$ref'].split('/')[-1]],
-                        defn,
-                        parents + [key, '0'],
-                        project_schema, include_nested))
-            elif '$ref' in value:
-                if value['$ref'] == f"#/definitions/{defn}":
-                    references.append(parents + [key])
-                elif include_nested:
-                    references.extend(get_definition_references(
-                        project_schema['definitions'][value['$ref'].split('/')[-1]],
-                        defn,
-                        parents + [key],
-                        project_schema, include_nested))
-            elif 'properties' in value:
-                references.extend(get_definition_references(value,
-                                                            defn,
-                                                            parents + [key],
-                                                            project_schema,
-                                                            include_nested))
-
-    if 'definitions' in schema:
-        for key, value in schema['definitions'].items():
-            references.extend(get_definition_references(value, defn, [key], project_schema, include_nested))
-
-    return references
-
-
-def update_sub_schema_reference(schema):
-    """Update docs/reference/schema.md"""
-
-    # Load schema reference
-    with (referencedir / 'schema.md').open() as f:
-        schema_reference = f.readlines()
-
-    # Preserve content that appears before the generated reference content for each sub-schema
-    sub_schema_index = schema_reference.index("## Sub-schemas\n") + 3
-
-    for i in range(sub_schema_index, len(schema_reference)):
-        if schema_reference[i][:4] == "### ":
-            defn = schema_reference[i][4:-1]
-
-            # Drop definitions that don't appear in the schema
-            if defn in schema["definitions"]:
-                schema["definitions"][defn]["content"] = []
-                j = i+1
-
-                while j < len(schema_reference) and not schema_reference[j].startswith(f"`{defn}` is defined as:"):
-                    schema["definitions"][defn]["content"].append(schema_reference[j])
-                    j = j+1
-
-    # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
-    schema_reference = schema_reference[:sub_schema_index]
-
-    # Generate standard reference content for each definition
-    for defn, definition in schema["definitions"].items():
-        definition["content"] = definition.get("content", [])
-
-        # Add heading
-        definition["content"].insert(0, f"\n### {defn}\n")
-
-        # Add description
-        if definition["content"][-1] != "\n":
-            definition["content"].append("\n")
-
-        definition["content"].extend([
-            f"`{defn}` is defined as:\n\n",
-            f"```{{field-description}} ../../build/current_lang/project-schema.json /definitions/{defn}\n",
-            "```\n\n"
-        ])
-
-        # Add a list of properties that reference this definition
-        definition["references"] = get_definition_references(schema, defn, include_nested=False)
-        definition["content"].append("This sub-schema is referenced by the following properties:\n")
-
-        for ref in definition["references"]:
-            # noqa: Remove array indices because they do not appear in the HTML anchors generated by the json schema directive
-            ref = [part for part in ref if part != '0']
-
-            url = 'project-schema.json,'
-
-            # Omit nested references
-            if ref[0] in schema['definitions']:
-                url += f"/definitions/{ref[0]},{'/'.join(ref[1:])}"
-            else:
-                url += f",{'/'.join(ref)}"
-
-            definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
-
-        # Add schema table
-        properties_to_collapse = []
-        for key, value in definition['properties'].items():
-            if value.get('type') not in ['object', ['object']]:
-                properties_to_collapse.append(key)
-
-        definition["content"].extend([
-            f"\nEach `{defn}` has the following fields:\n\n",
-            "`````{tab-set}\n\n",
-            "````{tab-item} Schema\n\n",
-            "```{jsonschema} ../../build/current_lang/project-schema.json\n",
-            f":pointer: /definitions/{defn}\n",
-            f":collapse: {','.join(properties_to_collapse)}\n"
-            ":addtargets:\n"
-            "```\n\n",
-            "````\n\n",
-            "````{tab-item} Examples\n\n"
-        ])
-
-        # Paths that don't appear in the example data at all
-        paths_to_skip = ['forecasts/0/observations/0/value',
-                         'metrics/0/observations/0/value',
-                         'parties/0/beneficialOwners/0',
-                         'parties/0/people/0/address',
-                         'parties/0/people/0/identifier',
-                         'contractingProcesses/0/summary/finance',
-                         'contractingProcesses/1/summary/finance',
-                         'contractingProcesses/2/summary/finance',
-                         'social/consultationMeetings/0/publicOffice']
-
-        # Add examples
-        definition["references"] = get_definition_references(schema, defn)
-        for ref in definition["references"]:
-            if ref[0] not in schema['definitions'] and not any(p == '/'.join(ref)[:len(p)] for p in paths_to_skip):
-                if ref[-1] == '0':
-                    ref.pop(-1)
-
-                definition["content"].extend([
-                  "```{jsoninclude} ../../docs/examples/example.json\n",
-                  f":jsonpointer: /projects/0/{'/'.join(ref)}\n",
-                  f":title: {'/'.join(ref)}\n",
-                  "```\n\n"
-                ])
-
-        definition["content"].extend([
-            "````\n\n",
-            "`````\n"
-        ])
-
-        schema_reference.extend(definition["content"])
-
-    # Paths that don't appear in the example data, but for which there is an alternative
-    paths_to_replace = {
-      '/projects/0/contractingProcesses/0/summary/modifications/0/oldContractValue': (
-        '/projects/0/contractingProcesses/0/summary/modifications/2/oldContractValue'),
-      '/projects/0/contractingProcesses/0/summary/modifications/0/newContractValue': (
-        '/projects/0/contractingProcesses/0/summary/modifications/2/newContractValue')
-    }
-
-    for key, value in paths_to_replace.items():
-        index = schema_reference.index(f":jsonpointer: {key}\n")
-        del schema_reference[index]
-        schema_reference.insert(index, f":jsonpointer: {value}\n")
-
-    with (referencedir / 'schema.md').open('w') as f:
-        f.writelines(schema_reference)
-
-
-def get_properties(schema, parent=None):
-    """
-    Returns a list of property names from a JSON Schema object.
-    """
-    properties = []
-
-    for name, value in schema.get('properties', {}).items():
-        if parent:
-            path = f'{parent}.{name}'
-        else:
-            path = name
-
-        if 'properties' in value:
-            properties.extend(get_properties(value, path))
-        else:
-            properties.append(path)
-
-    return properties
-
-
-def make_link(name, fields, text):
-    """
-    A regex replacement function that generates a link to a field in a jsonschema directive HTML table.
-    Prompts for user input if the field's name is ambiguous.
-
-    :param name: The property name
-    :param fields: A list of fields in the JSON schema
-    :param text: The text in which the property name appears
-    """
-
-    # Ignore boolean literals
-    if name.strip() in ["`true`", "`false`"]:
-        return name
-
-    # Track the number of matches so the current match can be highlighted
-    global matches
-    if name in matches:
-        matches[name] += 1
-    else:
-        matches[name] = 1
-
-    path = name.strip().replace("`", "")
-    path = path.split(".")
-    leading_period = path[0] == ''
-    path = [component for component in path if component != '']
-
-    # Identify occurrences of name in fields
-    occurrences = []
-    for field in fields:
-        field = field.split(".")
-        if field[-len(path):] == path:
-            occurrences.append(field)
-
-    if len(occurrences) == 0:
-        raise ValueError(f"Field {name} not in schema")
-    elif len(occurrences) > 1:
-        # Prompt user to resolve ambiguous field names
-        n = "\n"
-        print(f"{name.strip()} is ambiguous in:{n}")
-        text = text.split(name)
-        highlight = f"{Fore.RED}{name}{Fore.RESET}"
-        print(highlight.join(
-            [name.join(text[:matches[name]]), name.join(text[matches[name]:])]))
-        print("\n")
-
-        index = input(
-            f"""Choose a field to link to:{n}{n}{f'{n}'.join([f'{occurrences.index(o)}: {".".join(o)}' for o in occurrences])}{n}{n} Your choice: """)  # noqa: E501
-
-        occurrences = [occurrences[int(index)]]
-
-    definition = None
-    if occurrences[0][0][0].isupper():
-        definition = occurrences[0][0]
-
-    return f"{name[0]}[`{'.' if leading_period else ''}{'.'.join(path)}`](project-schema.json,{f'/definitions/{definition}' if definition else ''},{'/'.join(path)})"  # noqa: E501
+    return _method
 
 
 @click.group()
@@ -471,11 +120,191 @@ def pre_commit():
     """
     Update docs/reference/schema.md and _static/i8n.csv
     """
+
+    def _get_definition_references(schema, defn, parents=None, project_schema=None, include_nested=True):
+        """
+        Recursively generate a list of JSON pointers that reference a definition in JSON schema.
+
+        :param schema: The JSON schema
+        :param defn: The name of the definition
+        :param parents: A list of the parents of schema
+        :param project_schema: The full project schema
+        :param include_nested: Whether to include nested references
+        """
+        references = []
+
+        if parents is None:
+            parents = []
+
+        if project_schema is None:
+            project_schema = schema
+
+        if 'properties' in schema:
+            for key, value in schema['properties'].items():
+                if value.get('type') in ['array', ['array']] and '$ref' in value['items']:
+                    if value['items']['$ref'] == f"#/definitions/{defn}":
+                        references.append(parents + [key, '0'])
+                    elif include_nested:
+                        references.extend(_get_definition_references(
+                            project_schema['definitions'][value['items']['$ref'].split('/')[-1]],
+                            defn,
+                            parents + [key, '0'],
+                            project_schema, include_nested))
+                elif '$ref' in value:
+                    if value['$ref'] == f"#/definitions/{defn}":
+                        references.append(parents + [key])
+                    elif include_nested:
+                        references.extend(_get_definition_references(
+                            project_schema['definitions'][value['$ref'].split('/')[-1]],
+                            defn,
+                            parents + [key],
+                            project_schema, include_nested))
+                elif 'properties' in value:
+                    references.extend(
+                        _get_definition_references(value, defn, parents + [key], project_schema, include_nested)
+                    )
+
+        if 'definitions' in schema:
+            for key, value in schema['definitions'].items():
+                references.extend(_get_definition_references(value, defn, [key], project_schema, include_nested))
+
+        return references
+
+    def _update_sub_schema_reference(schema):
+        """
+        Update docs/reference/schema.md
+        """
+        with (referencedir / 'schema.md').open() as f:
+            schema_reference = f.readlines()
+
+        # Preserve content that appears before the generated reference content for each sub-schema
+        sub_schema_index = schema_reference.index("## Sub-schemas\n") + 3
+
+        for i in range(sub_schema_index, len(schema_reference)):
+            if schema_reference[i][:4] == "### ":
+                defn = schema_reference[i][4:-1]
+
+                # Drop definitions that don't appear in the schema
+                if defn in schema["definitions"]:
+                    schema["definitions"][defn]["content"] = []
+                    j = i+1
+
+                    while j < len(schema_reference) and not schema_reference[j].startswith(f"`{defn}` is defined as:"):
+                        schema["definitions"][defn]["content"].append(schema_reference[j])
+                        j = j+1
+
+        # Preserve introductory content up to and including the sentence below the ## Sub-schema heading
+        schema_reference = schema_reference[:sub_schema_index]
+
+        # Generate standard reference content for each definition
+        for defn, definition in schema["definitions"].items():
+            definition["content"] = definition.get("content", [])
+
+            # Add heading
+            definition["content"].insert(0, f"\n### {defn}\n")
+
+            # Add description
+            if definition["content"][-1] != "\n":
+                definition["content"].append("\n")
+
+            definition["content"].extend([
+                f"`{defn}` is defined as:\n\n",
+                f"```{{field-description}} ../../build/current_lang/project-schema.json /definitions/{defn}\n",
+                "```\n\n"
+            ])
+
+            # Add a list of properties that reference this definition
+            definition["references"] = _get_definition_references(schema, defn, include_nested=False)
+            definition["content"].append("This sub-schema is referenced by the following properties:\n")
+
+            for ref in definition["references"]:
+                # noqa: Remove array indices because they do not appear in the HTML anchors generated by the json schema directive
+                ref = [part for part in ref if part != '0']
+
+                url = 'project-schema.json,'
+
+                # Omit nested references
+                if ref[0] in schema['definitions']:
+                    url += f"/definitions/{ref[0]},{'/'.join(ref[1:])}"
+                else:
+                    url += f",{'/'.join(ref)}"
+
+                definition["content"].append(f"* [`{'/'.join(ref)}`]({url})\n")
+
+            # Add schema table
+            properties_to_collapse = []
+            for key, value in definition['properties'].items():
+                if value.get('type') not in ['object', ['object']]:
+                    properties_to_collapse.append(key)
+
+            definition["content"].extend([
+                f"\nEach `{defn}` has the following fields:\n\n",
+                "`````{tab-set}\n\n",
+                "````{tab-item} Schema\n\n",
+                "```{jsonschema} ../../build/current_lang/project-schema.json\n",
+                f":pointer: /definitions/{defn}\n",
+                f":collapse: {','.join(properties_to_collapse)}\n"
+                ":addtargets:\n"
+                "```\n\n",
+                "````\n\n",
+                "````{tab-item} Examples\n\n"
+            ])
+
+            # Paths that don't appear in the example data at all
+            paths_to_skip = [
+                'forecasts/0/observations/0/value',
+                'metrics/0/observations/0/value',
+                'parties/0/beneficialOwners/0',
+                'parties/0/people/0/address',
+                'parties/0/people/0/identifier',
+                'contractingProcesses/0/summary/finance',
+                'contractingProcesses/1/summary/finance',
+                'contractingProcesses/2/summary/finance',
+                'social/consultationMeetings/0/publicOffice',
+            ]
+
+            # Add examples
+            definition["references"] = _get_definition_references(schema, defn)
+            for ref in definition["references"]:
+                if ref[0] not in schema['definitions'] and not any(p == '/'.join(ref)[:len(p)] for p in paths_to_skip):
+                    if ref[-1] == '0':
+                        ref.pop(-1)
+
+                    definition["content"].extend([
+                      "```{jsoninclude} ../../docs/examples/example.json\n",
+                      f":jsonpointer: /projects/0/{'/'.join(ref)}\n",
+                      f":title: {'/'.join(ref)}\n",
+                      "```\n\n"
+                    ])
+
+            definition["content"].extend([
+                "````\n\n",
+                "`````\n"
+            ])
+
+            schema_reference.extend(definition["content"])
+
+        # Paths that don't appear in the example data, but for which there is an alternative
+        paths_to_replace = {
+          '/projects/0/contractingProcesses/0/summary/modifications/0/oldContractValue': (
+            '/projects/0/contractingProcesses/0/summary/modifications/2/oldContractValue'),
+          '/projects/0/contractingProcesses/0/summary/modifications/0/newContractValue': (
+            '/projects/0/contractingProcesses/0/summary/modifications/2/newContractValue')
+        }
+
+        for key, value in paths_to_replace.items():
+            index = schema_reference.index(f":jsonpointer: {key}\n")
+            del schema_reference[index]
+            schema_reference.insert(index, f":jsonpointer: {value}\n")
+
+        with (referencedir / 'schema.md').open('w') as f:
+            f.writelines(schema_reference)
+
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
 
     # Update schema reference documentation
-    update_sub_schema_reference(schema)
+    _update_sub_schema_reference(schema)
 
     # Generate a CSV file of fields that can contain non-English text.
     _, rows = mapping_sheet(schema, include_codelist=True, include_deprecated=False)
@@ -497,6 +326,7 @@ def pre_commit():
             writer.writerow(row)
 
 
+# https://raw.githubusercontent.com/open-contracting-extensions/public-private-partnerships/1.0-dev/schema/patched/
 @cli.command()
 @click.option('--ppp-base-url',
               default='https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/')
@@ -520,9 +350,41 @@ def update(ppp_base_url):
     descriptions of such fields, and instead leaves this up to the editor.
     """
 
-    def copy_element(name, replacements=None, root='definitions'):
+    def _edit_code(row, oc4ids_codes, source):
         """
-        Copies definitions or properties from the OCDS for PPPs schema to the OC4IDS schema.
+        If the row's Code is in the ``oc4ids_codes`` list, add " or project" after "contracting process" in the row's
+        Description and sets the row's Source to ``"OC4IDS"``. Otherwise, set the row's Source to ``source``.
+        """
+        if row['Code'] in oc4ids_codes:
+            row['Description'] = re.sub(r'(?<=contracting process\b)', ' or project', row['Description'])
+            row['Description'] = re.sub(r'(?<=contracting processes\b)', ' or projects', row['Description'])
+            row['Source'] = 'OC4IDS'
+        else:
+            row['Source'] = source
+        return row
+
+    def _merge_codes(sources, fieldnames, basename, ignore, oc4ids_codes, oc4ids_rows):
+        io = StringIO()
+        writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
+        writer.writeheader()
+        seen = []
+
+        for source in sources:
+            reader = csv_reader(f"{ocds_base_url if source == 'OCDS' else ppp_base_url}codelists/{basename}")
+            for row in reader:
+                if row['Code'] not in seen and row['Code'] not in ignore:
+                    seen.append(row['Code'])
+                    _edit_code(row, oc4ids_codes, source)
+                    writer.writerow(row)
+
+        # Add pre-existing codes from OC4IDS.
+        writer.writerows(row for row in oc4ids_rows if row['Code'] not in seen)
+
+        return io.getvalue()
+
+    def _copy_element(name, replacements=None, root='definitions'):
+        """
+        Copy definitions or properties from the OCDS for PPPs schema to the OC4IDS schema.
 
         :param name: The name of the definition or property to copy
         :param replacements: A dict whose keys are tuples containing the path of the field in which the replacement is
@@ -538,14 +400,82 @@ def update(ppp_base_url):
                     value = value[key]
                 value[leaf] = replacement(value[leaf])
 
+    # Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
+    def _remove_null_and_pattern_properties(*args):
+        """
+        Remove the "patternProperties" key, ``"null"`` from the "type" key, and ``None`` from the "enum" key.
+        """
+
+        def __schema_action(schema, pointer):
+            schema.pop('patternProperties', None)
+
+        def __object_action(value):
+            if 'type' in value and isinstance(value['type'], list) and 'null' in value['type']:
+                value['type'].remove('null')
+            if 'enum' in value and None in value['enum']:
+                value['enum'].remove(None)
+
+        traverse(__schema_action, __object_action)(*args)
+
+    def _remove_deprecated_properties(*args):
+        """
+        Remove "deprecated" properties.
+        """
+
+        def __schema_action(schema, pointer):
+            if 'properties' in schema:
+                for key in list(schema['properties']):
+                    if 'deprecated' in schema['properties'][key]:
+                        del schema['properties'][key]
+            elif pointer != '/Observation/dimensions':
+                warnings.warn(f'Missing "properties" key at {pointer}')
+
+        traverse(__schema_action)(*args)
+
+    def _remove_integer_identifier_types(*args):
+        """
+        Set all ``id`` fields to allow only strings, not integers.
+        """
+
+        def __schema_action(schema, pointer):
+            if 'properties' in schema:
+                if 'id' in schema['properties']:
+                    schema['properties']['id']['type'] = 'string'
+            elif pointer != '/Observation/dimensions':
+                warnings.warn(f'Missing "properties" key at {pointer}')
+
+        traverse(__schema_action)(*args)
+
+    def _compare(actual, infra_list, ocds_list, prefix, suffix):
+        """
+        Exit if ``infra_list`` contains values not in ``actual``, or if ``actual`` contains values not in ``ocds_list``
+        or ``infra_list``. This ensures editors update this script when codelists or definitions are added to OC4IDS.
+        """
+        actual = set(actual)
+
+        # An editor might've added an infrastructure codelist or copied an OCDS codelist, without updating this script.
+        added = actual - infra_list - ocds_list
+        if added:
+            sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
+
+        # An editor might've removed an infrastructure codelist, without updating this script.
+        removed = infra_list - actual
+        if removed:
+            sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
+
     ocds_base_url = 'https://standard.open-contracting.org/1.1/en/'
 
-    builder = ProfileBuilder('1__1__5',
-                             {'budget': 'master',
-                              'transaction_milestones': 'master',
-                              'beneficialOwners': 'master',
-                              'organizationClassification': '1.1'})
-    ppp_schema = get(f'{ppp_base_url}release-schema.json').json()
+    builder = ProfileBuilder(
+        '1__1__5',
+        {
+            'budget': 'master',
+            'transaction_milestones': 'master',
+            'beneficialOwners': 'master',
+            'organizationClassification': '1.1',
+        }
+    )
+    response = get(f'{ppp_base_url}release-schema.json')
+    ppp_schema = json.loads(response.text.replace('{{version}}', '1.1').replace('{{lang}}', 'en'))
     ppp_schema = builder.patched_release_schema(schema=ppp_schema)
 
     schema_dir = basedir / 'schema' / 'project-level'
@@ -555,37 +485,31 @@ def update(ppp_base_url):
         schema = json.load(f)
 
     infra_codelists = {
+        'classificationScheme.csv',
+        'climateMeasures.csv',
+        'climateOversightTypes.csv',
+        'conservationMeasure.csv',
+        'constructionMaterial.csv',
         'contractingProcessStatus.csv',
         'contractNature.csv',
+        'costCategory.csv',
+        'country.csv',  # move to ocds_codelists for OCDS 1.2
+        'environmentalGoal.csv',
+        'laborObligations.csv',
         'metricID.csv',
         'modificationType.csv',
+        'policyAlignment.csv',
         'projectSector.csv',
         'projectStatus.csv',
         'projectType.csv',
-        'relatedProjectScheme.csv',
         'relatedProject.csv',
-        'classificationScheme.csv',
-        'country.csv',
-        'environmentalGoal.csv',
-        'policyAlignment.csv',
-        'constructionMaterial.csv',
-        'climateOversightTypes.csv',
-        'laborObligations.csv',
+        'relatedProjectScheme.csv',
         'sustainabilityStrategy.csv',
-        'costCategory.csv',
-        'conservationMeasure.csv',
-        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
-        'assetClass.csv',
-        'debtRepaymentPriority.csv',
-        'financingArrangementType.csv',
-        'financingPartyType.csv',
     }
     ocds_codelists = {
         'currency.csv',
         'documentType.csv',
         'geometryType.csv',
-        # Uncomment once OCDS for PPPs is updated for OCDS 1.2.
-        # 'language.csv',
         'locationGazetteers.csv',
         'method.csv',
         'partyRole.csv',
@@ -594,37 +518,37 @@ def update(ppp_base_url):
         'milestoneType.csv',
         'milestoneStatus.csv',
         'milestoneCode.csv',
-        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
-        # 'assetClass.csv',
-        # 'debtRepaymentPriority.csv',
-        # 'financingArrangementType.csv',
-        # 'financingPartyType.csv',
+        'assetClass.csv',
+        'debtRepaymentPriority.csv',
+        'financingArrangementType.csv',
+        'financingPartyType.csv',
     }
-    compare([path.name for path in codelists_dir.iterdir()], infra_codelists, ocds_codelists,
-            'schema/project-level/codelists', 'codelists')
+    _compare(
+        [path.name for path in codelists_dir.iterdir()],
+        infra_codelists, ocds_codelists, 'schema/project-level/codelists', 'codelists'
+    )
 
     infra_definitions = {
+        'Beneficiary',
+        'Benefit',
+        'BudgetBreakdowns',
+        'ClimateMeasure',
+        'ConservationMeasure',
         'ContractingProcess',
         'ContractingProcessSummary',  # Similar to individual release in OCDS
-        'LinkedRelease',  # Similar to linked release in OCDS
-        'Modification',
-        'RelatedProject',  # Similar to relatedProcess in OCDS
-        'SimpleIdentifier',
-        'CostMeasurement',
-        'Benefit',
-        'ConservationMeasure',
-        'PublicOffice',
-        'Social',
-        'Beneficiary',
-        'Meeting',
-        'BudgetBreakdowns',
-        'CostGroup',
-        'Sustainability',
         'Cost',
+        'CostGroup',
+        'CostMeasurement',
         'HealthAndSafety',
         'LaborObligations',
-        # Remove once OCDS for PPPs is updated for the latest version of the finance extension
-        'Finance',
+        'LinkedRelease',  # Similar to linked release in OCDS
+        'Meeting',
+        'Modification',
+        'PublicOffice',
+        'RelatedProject',  # Similar to relatedProcess in OCDS
+        'SimpleIdentifier',
+        'Social',
+        'Sustainability',
     }
     ocds_definitions = {
         'Period',
@@ -644,11 +568,12 @@ def update(ppp_base_url):
         'Milestone',
         'MilestoneReference',
         'Person',
-        # Uncomment once OCDS for PPPs is updated for the latest version of the finance extension
-        # 'Finance',
+        'Finance',
     }
-    compare(schema['definitions'], infra_definitions, ocds_definitions,
-            'schema/project-level/project-schema.json#/definitions', 'definitions')
+    _compare(
+        schema['definitions'],
+        infra_definitions, ocds_definitions, 'schema/project-level/project-schema.json#/definitions', 'definitions'
+    )
 
     # Originally from https://docs.google.com/spreadsheets/d/1ttXgMmmLvqBlPRi_4jAJhIobjnCiwMv13YwGfFOnoJk/edit#gid=0
     ignore = {
@@ -684,67 +609,24 @@ def update(ppp_base_url):
     for basename in ocds_codelists:
         path = schema_dir / 'codelists' / basename
 
-        if basename in ('documentType.csv', 'partyRole.csv'):
+        if basename in ('documentType.csv', 'locationGazetteers.csv', 'partyRole.csv'):
             with open(path) as f:
                 reader = csv.DictReader(f)
                 fieldnames = reader.fieldnames
-
                 oc4ids_rows = []
                 oc4ids_codes = []
                 for row in reader:
-                    if row['Source'] == 'OC4IDS':
+                    if row.get('Source', row.get('Extension')) == 'OC4IDS':
                         oc4ids_rows.append(row)
                         oc4ids_codes.append(row['Code'])
 
         with open(path, 'w') as f:
             if basename == 'documentType.csv':
-                io = StringIO()
-                writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
-                writer.writeheader()
-                seen = []
-
-                # Add codes from OCDS for PPPs.
-                reader = csv_reader(f'{ppp_base_url}codelists/{basename}')
-                for row in reader:
-                    if row['Code'] not in ignore:
-                        seen.append(row['Code'])
-                        # These codes' descriptions are entirely new.
-                        if row['Code'] in ('environmentalImpact',):
-                            row = next(oc4ids_row for oc4ids_row in oc4ids_rows if oc4ids_row['Code'] == row['Code'])
-                        else:
-                            edit_code(row, oc4ids_codes, 'OCDS for PPPs')
-                        writer.writerow(row)
-
-                # Add codes from OCDS.
-                reader = csv_reader(f'{ocds_base_url}codelists/documentType.csv')
-                for row in reader:
-                    if row['Code'] not in seen and row['Code'] not in ignore:
-                        seen.append(row['Code'])
-                        edit_code(row, oc4ids_codes, 'OCDS')
-                        writer.writerow(row)
-
-                # Add pre-existing codes from OC4IDS.
-                writer.writerows(row for row in oc4ids_rows if row['Code'] not in seen)
-
-                text = io.getvalue()
+                text = _merge_codes(['OCDS for PPPs', 'OCDS'], fieldnames, basename, ignore, oc4ids_codes, oc4ids_rows)
+            elif basename == 'locationGazetteers.csv':
+                text = _merge_codes(['OCDS for PPPs'], fieldnames, basename, [], oc4ids_codes, oc4ids_rows)
             elif basename == 'partyRole.csv':
-                io = StringIO()
-                writer = csv.DictWriter(io, fieldnames, lineterminator='\n', extrasaction='ignore')
-                writer.writeheader()
-                seen = []
-
-                # Add codes from OCDS.
-                reader = csv_reader(f'{ocds_base_url}codelists/partyRole.csv')
-                for row in reader:
-                    if row['Code'] not in seen:
-                        seen.append(row['Code'])
-                        edit_code(row, oc4ids_codes, 'OCDS')
-                        writer.writerow(row)
-
-                # Add pre-existing codes from OC4IDS.
-                writer.writerows(row for row in oc4ids_rows if row['Code'] not in seen)
-
-                text = io.getvalue()
+                text = _merge_codes(['OCDS'], fieldnames, basename, [], oc4ids_codes, oc4ids_rows)
             else:
                 text = get(f'{ppp_base_url}codelists/{basename}').text
 
@@ -752,26 +634,29 @@ def update(ppp_base_url):
 
     # Copy properties
 
-    copy_element('language', {
+    _copy_element('language', {
         ('title',): lambda s: s.replace('Release language', 'Language'),
     }, root='properties')
 
     # Copy definitions. The following definitions follow the same order as in project-schema.json.
 
-    copy_element('Period', {
+    _copy_element('Period', {
         # Refer to project.
         ('description',): lambda s: s.replace('contracting process', 'project or contracting process'),
     })
 
-    copy_element('Classification', {
+    _copy_element('Classification', {
         # Replace line item classification scheme codelist with classification scheme codelist
-        ('properties', 'scheme', 'description'): lambda s: s.replace('. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme) codelist.', ', using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.'),  # noqa: E501
+        ('properties', 'scheme', 'description'): lambda s: s.replace(
+            '. For line item classifications, this uses the open [itemClassificationScheme](https://standard.open-contracting.org/1.1/en/schema/codelists/#item-classification-scheme) codelist.',  # noqa: E501
+            ', using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.'  # noqa: E501
+        ),
     })
     # Replace line item classification scheme codelist with classification scheme codelist
     schema['definitions']['Classification']['properties']['scheme']['codelist'] = 'classificationScheme.csv'
 
-    copy_element('Location')
-    # Original from ocds_location_extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both." # noqa: E501
+    _copy_element('Location')
+    # Original from extension:     "The location where activity related to this tender, contract or license will be delivered, or will take place. A location can be described by either a geometry (point location, line or polygon), or a gazetteer entry, or both." # noqa: E501
     schema['definitions']['Location']['description'] = "The location where activity related to this project will be delivered, or will take place. A location may be described using a geometry (point location, line or polygon), a gazetteer entry, an address, or a combination of these."  # noqa: E501
     # Add id to Location.
     schema['definitions']['Location']['properties']['id'] = {
@@ -790,27 +675,31 @@ def update(ppp_base_url):
     schema['definitions']['Location']['properties'].move_to_end('id', last=False)
     schema['definitions']['Location']['required'] = ['id']
 
-    # Set stricter validation on gazetteer identifiers
+    # Set stricter validation on gazetteer identifiers.
     schema['definitions']['Location']['properties']['gazetteer']['properties']['identifiers']['uniqueItems'] = True
 
-    copy_element('Value')
+    _copy_element('Value')
 
-    copy_element('Organization', {
+    _copy_element('Organization', {
         # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
-        ('properties', 'roles', 'description'): lambda s: s.replace('contracting process', 'project').replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')  # noqa: E501
+        ('properties', 'roles', 'description'): lambda s: (
+            s.replace('contracting process', 'project').replace(
+                'profiles/ppp/latest/en/',
+                'infrastructure/{{version}}/{{lang}}/'
+            )
+        ),
     })
-    # Remove unneeded extensions and details from Organization.
+    # Remove unneeded fields from Organization.
     del schema['definitions']['Organization']['properties']['shareholders']
-    del schema['definitions']['Organization']['properties']['beneficialOwnership']
-
-    # Move classifications from details to Organization
+    # Remove OCDS-specific merging properties.
+    del schema['definitions']['Organization']['properties']['additionalIdentifiers']['wholeListMerge']
+    del schema['definitions']['Organization']['properties']['details']['properties']['classifications']['wholeListMerge']  # noqa: E501
+    # Remove details wrapper from Organization.
     schema['definitions']['Organization']['properties']['classifications'] = schema['definitions']['Organization']['properties']['details']['properties']['classifications']  # noqa: E501
     del schema['definitions']['Organization']['properties']['details']
-
-    # Set stricter validation on party roles
+    # Set stricter validation on party roles.
     schema['definitions']['Organization']['properties']['roles']['uniqueItems'] = True
-
-    # Add `people` property to OrganizationReference
+    # Add people field to Organization.
     schema['definitions']['Organization']['properties']['people'] = {
         "title": "People",
         "description": "People associated with, representing, or working on behalf of this organization in respect of this project.",  # noqa: E501
@@ -821,72 +710,84 @@ def update(ppp_base_url):
         "uniqueItems": True
     }
 
-    copy_element('OrganizationReference')
+    _copy_element('OrganizationReference')
 
-    copy_element('Address')
+    _copy_element('Address')
 
-    copy_element('ContactPoint', {
+    _copy_element('ContactPoint', {
         # Refer to project instead of contracting process.
         ('properties', 'name', 'description'): lambda s: s.replace('contracting process', 'project'),
     })
 
-    copy_element('BudgetBreakdown', {
-        # Refer to project instead of contracting process
+    _copy_element('BudgetBreakdown', {
+        # Refer to project instead of contracting process.
         ('properties', 'amount', 'description'): lambda s: s.replace('contracting process', 'project',)
     })
-    # Add approval date
+    # Add approval date.
     schema['definitions']['BudgetBreakdown']['properties']['approvalDate'] = deepcopy(schema['properties']['budget']['properties']['approvalDate'])  # noqa: E501
     schema['definitions']['BudgetBreakdown']['properties']['approvalDate']['description'] = "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'."  # noqa: E501
 
-    copy_element('Document', {
-        # Link to infrastructure codelist instead of PPP codelist
-        ('properties', 'documentType', 'description'): lambda s: s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/'),  # noqa: E501
+    _copy_element('Document', {
+        # Link to infrastructure codelist instead of PPP codelist.
+        ('properties', 'documentType', 'description'): lambda s: (
+            s.replace('profiles/ppp/latest/en/', 'infrastructure/{{version}}/{{lang}}/')
+        ),
     })
-    # Original from standard:                                                 "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.", # noqa: E501
+    del schema['definitions']['Document']['properties']['accessDetailsURL']
+    del schema['definitions']['Document']['properties']['unofficialTranslations']
+    # Original from standard: "A short description of the document. We recommend descriptions do not exceed 250 words. In the event the document is not accessible online, the description field can be used to describe arrangements for obtaining a copy of the document.", # noqa: E501
     schema['definitions']['Document']['properties']['description']['description'] = "Where a link to a full document is provided, the description should provide a 1 - 3 paragraph summary of the information the document contains, and the `pageStart` field should be used to make sure readers can find the correct section of the document containing more information. Where there is no linked document available, the description field may contain all the information required by the current `documentType`. \n\nLine breaks in text (represented in JSON using `\\n\\n`) must be respected by systems displaying this information, and systems may also support basic HTML tags (H1-H6, B, I, U, strong, A and optionally IMG) or [markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) for formatting. "  # noqa: E501
-    # Original from standard:                                         " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type." # noqa: E501
+    # Original from standard: " direct link to the document or attachment. The server providing access to this document should be configured to correctly report the document mime type." # noqa: E501
     schema['definitions']['Document']['properties']['url']['description'] = "This should be a direct link to the document or web page where the information described by the current documentType exists."  # noqa: E501
 
-    copy_element('Identifier')
+    _copy_element('Identifier')
 
-    copy_element('Metric', {
-        ('properties', 'id', 'description'): lambda s: s.replace('contracting process', 'contracting process or project')}),  # noqa: E501
+    _copy_element('Metric', {
+        ('properties', 'id', 'description'): lambda s: (
+            s.replace('contracting process', 'contracting process or project')
+        ),
+    })
 
-    schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
     # Original from standard: "Metrics are used to set out targets and results from a contracting process. During the planning and tender sections, a metric indicates the anticipated results. In award and contract sections it indicates the awarded/contracted results. In the implementation section it is used to provide updates on actually delivered results, also known as outputs." # noqa: E501
+    schema['definitions']['Metric']['description'] = "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time."  # noqa: E501
 
-    copy_element('Observation')
-    # Remove the `relatedImplementationMilestone` property
+    _copy_element('Observation')
+    # Remove the relatedImplementationMilestone field.
     del schema['definitions']['Observation']['properties']['relatedImplementationMilestone']
 
-    copy_element('Transaction')
+    _copy_element('Transaction')
     # Original from standard: "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data." # noqa: E501
     schema['definitions']['Transaction']['description'] = "A financial transaction related to a project or contracting process. Draws upon the data models of the Fiscal Data Package and the International Aid Transparency Initiative and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional data."  # noqa: E501
 
-    copy_element('Milestone')
+    _copy_element('Milestone')
     # Original from standard: "The milestone block can be used to represent a wide variety of events in the lifetime of a contracting process." # noqa: E501
-    schema['definitions']['Milestone']['description'] = "An event in the lifetime of a project or contracting process."  # noqa: E501
+    schema['definitions']['Milestone']['description'] = "An event in the lifetime of a project or contracting process."
     # Original from standard: "A local identifier for this milestone, unique within this block. This field is used to keep track of multiple revisions of a milestone through the compilation from release to record mechanism." # noqa: E501
     schema['definitions']['Milestone']['properties']['id']['description'] = "A local identifier for this milestone, unique within this block."  # noqa: E501
     # Original from standard: "Milestone codes can be used to track specific events that take place for a particular kind of contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed." # noqa: E501
     schema['definitions']['Milestone']['properties']['code']['description'] = "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed."  # noqa: E501
-    # Add `Milestone.value` from OCDS 1.2
+    # Add Milestone.value from OCDS 1.2.
     schema['definitions']['Milestone']['properties']['value'] = {
           "title": "Value",
           "description": "The payment's value, if the milestone represents a planned payment.",
           "$ref": "#/definitions/Value"
         }
-    # Remove deprecated milestone documents field
+    # Remove deprecated Milestone.documents field.
     del schema['definitions']['Milestone']['properties']['documents']
 
-    copy_element('MilestoneReference', {
+    _copy_element('MilestoneReference', {
         # Remove reference to release, add reference to project.
-        ('properties', 'id', 'description'): lambda s: s.replace(' described elsewhere in a release about this contracting process.', " in this project or contracting process's `.milestones`."),  # noqa: E501
+        ('properties', 'id', 'description'): lambda s: (
+            s.replace(
+                ' described elsewhere in a release about this contracting process.',
+                " in this project or contracting process's `.milestones`."
+            )
+        ),
     })
     # Original from standard: "The title of the milestone being referenced, this must match the title of a milestone described elsewhere in a release about this contracting process." # noqa: E501
     schema['definitions']['MilestoneReference']['properties']['title']['description'] = "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`."  # noqa: E501
 
-    copy_element('Person')
+    _copy_element('Person')
     schema['definitions']['Person']['properties']['jobTitle'] = {
           "title": "Job title",
           "description": "The job title of the person (for example, Financial Manager).",
@@ -894,9 +795,9 @@ def update(ppp_base_url):
           "minLength": 1
         }
 
-    remove_null_and_pattern_properties(schema)
-    remove_integer_identifier_types(schema)
-    remove_deprecated_properties(schema)
+    _remove_null_and_pattern_properties(schema)
+    _remove_integer_identifier_types(schema)
+    _remove_deprecated_properties(schema)
     add_validation_properties(schema)
 
     with (schema_dir / 'project-schema.json').open('w') as f:
@@ -910,22 +811,100 @@ def update(ppp_base_url):
 @click.option("-l", "--link-fields", is_flag=True, help="Link field names to jsonschema directives")
 def lint(filename, additional_properties, link_fields):
 
+    # From standard-maintenance-scripts/tests/test_readme.py
+    def _set_additional_properties(data, additional_properties):
+        if isinstance(data, list):
+            for item in data:
+                _set_additional_properties(item, additional_properties)
+        elif isinstance(data, dict):
+            if "properties" in data:
+                data["additionalProperties"] = additional_properties
+            for value in data.values():
+                _set_additional_properties(value, additional_properties)
+
+    def _get_properties(schema, parents=None):
+        """
+        Return a list of property names from a JSON Schema object.
+        """
+        properties = []
+
+        for name, value in schema.get('properties', {}).items():
+            if parents:
+                path = (*parents, name)
+            else:
+                path = (name,)
+
+            if 'properties' in value:
+                properties.extend(_get_properties(value, path))
+            else:
+                properties.append(path)
+
+        return properties
+
+    def _make_link(name, fields, text):
+        """
+        Generate a link to a field in a jsonschema directive HTML table. Prompt if the field's name is ambiguous.
+
+        :param name: The property name
+        :param fields: A list of fields in the JSON schema
+        :param text: The text in which the property name appears
+        """
+
+        # Ignore boolean literals
+        if name[1:] in {"`true`", "`false`"}:
+            return name
+
+        # Track the number of matches so the current match can be highlighted
+        global matches
+        matches[name] += 1
+        match_number = matches[name]
+
+        leading_period = name[2] == '.'
+        path = [part for part in name[2:-1].split(".") if part != '']
+
+        # Identify occurrences of name in fields
+        occurrences = []
+        for field in fields:
+            if field[-len(path):] == path:
+                occurrences.append(field)
+
+        if not occurrences:
+            raise ValueError(f"Field {name} not in schema")
+        if len(occurrences) > 1:
+            # Prompt user to resolve ambiguous field names
+            text = text.split(name)
+            click.echo(f"{name} is ambiguous in:\n")
+            click.echo(
+                f"{Fore.RED}{name}{Fore.RESET}".join([name.join(text[:match_number]), name.join(text[match_number:])])
+            )
+            click.echo("\n")
+
+            choices = "\n".join(f"{i}: {'.'.join(field)}" for i, field in enumerate(occurrences))
+            chosen_field = occurrences[int(input(f"Choose a field to link to:\n\n{choices}\n\nYour choice: "))]
+        else:
+            chosen_field = occurrences[0]
+
+        definition = chosen_field[0] if chosen_field[0][0].isupper() else None
+
+        url = f"project-schema.json,{f'/definitions/{definition}' if definition else ''},{'/'.join(path)}"
+        return f"{name[0]}[`{'.' if leading_period else ''}{'.'.join(path)}`]({url})"
+
     minimal_project = {
         "id": "oc4ids-bu3kcz-1",
     }
 
-    regex = r"([^\[])`([a-zA-Z.]*)`"
+    unlinked_backticked_field = re.compile(r"[^\[]`[A-Za-z.]+`")
 
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
 
     # Get list of fields in schema
-    fields = get_properties(schema)
+    fields = _get_properties(schema)
     for name, definition in schema['definitions'].items():
-        fields.extend(get_properties(definition, name))
+        fields.extend(_get_properties(definition, (name,)))
 
     # Disallow additional properties
-    set_additional_properties(schema, additional_properties)
+    _set_additional_properties(schema, additional_properties)
 
     format_checker = FormatChecker()
 
@@ -952,16 +931,14 @@ def lint(filename, additional_properties, link_fields):
             value = element.get(key, "")
 
             # Link fields to jsonschema directives
-            if link_fields and key == 'mapping':
+            if link_fields and key == "mapping":
                 global matches
-                matches = {}
-                value = re.sub(regex, lambda match: make_link(
-                    match.group(0), fields, value), value)
+                matches = defaultdict(int)
+                value = unlinked_backticked_field.sub(lambda match: _make_link(match.group(0), fields, value), value)
                 element[key] = value
                 write_yaml_file(filename, elements)
 
-            element[key] = mdformat.text(
-                value, options={"number": True}).rstrip()
+            element[key] = mdformat.text(value, options={"number": True}).rstrip()
 
         # Format and validate JSON.
         example = element["example"]
@@ -1007,7 +984,9 @@ def lint(filename, additional_properties, link_fields):
 
 @cli.command()
 def update_sustainability_elements():
-    """Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet"""
+    """
+    Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet
+    """
 
     filename = basedir / 'mapping' / 'sustainability.yaml'
 
@@ -1057,7 +1036,9 @@ def update_sustainability_elements():
 
 @cli.command()
 def update_sustainability_docs():
-    """Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml"""
+    """
+    Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml
+    """
 
     # Load sustainability mapping documentation
     with (basedir / 'docs' / 'cost' / 'ids' / 'sustainability.md').open() as f:
