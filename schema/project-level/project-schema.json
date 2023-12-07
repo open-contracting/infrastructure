@@ -133,7 +133,6 @@
         "completion",
         "maintenance",
         "decommissioning",
-        "completed",
         "decommissioned",
         "cancelled"
       ],
