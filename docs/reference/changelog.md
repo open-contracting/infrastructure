@@ -21,7 +21,6 @@
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in schema descriptions.
 * [#361](https://github.com/open-contracting/infrastructure/pull/361) - clarify project budget description.
-* [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - add description field to budget.
 * [#368](https://github.com/open-contracting/infrastructure/pull/368) - clarify contracting processes id description.
 * [#378](https://github.com/open-contracting/infrastructure/pull/378) - clarify semantics of `additionalClassifications`.
 * [#450](https://github.com/open-contracting/infrastructure/pull/450) - replace `budget.budgetBreakdown` with `budget.budgetBreakdowns`.
@@ -29,6 +28,7 @@
 * Add fields:
   * [#362](https://github.com/open-contracting/infrastructure/pull/362) - `language`
   * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
+  * [#365](https://github.com/open-contracting/infrastructure/pull/365) [#386](https://github.com/open-contracting/infrastructure/pull/386) - `budget.description`
   * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `budget.budgetBreakdowns.budgetBreakdown.approvalDate`
   * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
@@ -47,6 +47,7 @@
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
   * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
   * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - `policyAlignment`
   * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
