@@ -4,15 +4,18 @@
 
 ### Documentation
 
-* [#344](https://github.com/open-contracting/infrastructure/pull/344) - add implementation models guidance.
-* [#343](https://github.com/open-contracting/infrastructure/pull/343) - add Flatten Tool command to implementation guidance.
-* [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. LinkedRelease.tag  is now correctly marked as "Required")
+* Guidance
+  * [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425), [#459](https://github.com/open-contracting/infrastructure/pull/459) - add CoST IDS sustainability modules to mapping documentation.
+  * [#344](https://github.com/open-contracting/infrastructure/pull/344) - add *Implementation models* page.
+  * [#362](https://github.com/open-contracting/infrastructure/pull/362) - add *Publishing data in your own language* page.
+  * *Publishing data from an infrastructure transparency portal*
+    * [#343](https://github.com/open-contracting/infrastructure/pull/343) - add Flatten Tool command.
+    * [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field-level mapping template tutorial.
+  * [#389](https://github.com/open-contracting/infrastructure/pull/389) - emphasize publishing data throughout a project's lifecycle.
+* Reference
+  * [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
+  * [#328](https://github.com/open-contracting/infrastructure/issues/328) - fix reference tables so that "Required" column is correct for arrays (e.g. `LinkedRelease.tag` is now marked as "Required")
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords in documentation.
-* [#362](https://github.com/open-contracting/infrastructure/pull/362) - add guidance on publishing in your own language.
-* [#371](https://github.com/open-contracting/infrastructure/pull/371) - add link to field level mapping template tutorial.
-* [#370](https://github.com/open-contracting/infrastructure/pull/370) - improve schema reference documentation and integrate worked example.
-* [#389](https://github.com/open-contracting/infrastructure/pull/389) - emphasize publishing data throughout a project's lifecycle.
-* [#422](https://github.com/open-contracting/infrastructure/pull/422), [#425](https://github.com/open-contracting/infrastructure/pull/425), [#459](https://github.com/open-contracting/infrastructure/pull/459) - add CoST IDS sustainability modules to mapping documentation.
 
 ### Schema
 
@@ -24,15 +27,12 @@
 * [#450](https://github.com/open-contracting/infrastructure/pull/450) - deprecate `budget.budgetBreakdown` in favor of `budget.budgetBreakdowns`.
 
 * Add fields:
-  * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `BudgetBreakdown.approvalDate`
+  * [#362](https://github.com/open-contracting/infrastructure/pull/362) - `language`
   * [#390](https://github.com/open-contracting/infrastructure/pull/390) - `identifiers`
+  * [#367](https://github.com/open-contracting/infrastructure/pull/367) - `budget.budgetBreakdowns.budgetBreakdown.approvalDate`
+  * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
   * [#427](https://github.com/open-contracting/infrastructure/pull/427) - `parties.beneficialOwners`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426), [#456](https://github.com/open-contracting/infrastructure/pull/456) [#459](https://github.com/open-contracting/infrastructure/pull/459) - `milestones`
-  * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
-  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
-  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`
+  * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.classifications`
   * [#432](https://github.com/open-contracting/infrastructure/pull/432):
     * `identificationPeriod`
     * `preparationPeriod`
@@ -40,51 +40,48 @@
     * `completionPeriod`
     * `maintenancePeriod`
     * `decommissioningPeriod`
-  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
-  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - `environment.conservationMeasures`
-  * [#444](https://github.com/open-contracting/infrastructure/pull/444) - `budget.finance` and `contractingProcesses.summary.finance`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426), [#456](https://github.com/open-contracting/infrastructure/pull/456) [#459](https://github.com/open-contracting/infrastructure/pull/459) - `milestones`
   * [#443](https://github.com/open-contracting/infrastructure/pull/443) - `costMeasurements`
-  * [#445](https://github.com/open-contracting/infrastructure/pull/445) - `parties.details.classifications`
-  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`
-  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
-  * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `transactions`
+  * [#379](https://github.com/open-contracting/infrastructure/pull/379) - `contractingProcesses.summary.tender.datePublished`
   * [#434](https://github.com/open-contracting/infrastructure/pull/434) - `contractingProcesses.summary.tender.sustainability`
-  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - `contractingProcesses.summary.milestones`
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - `contractingProcesses.summary.social`
+  * [#438](https://github.com/open-contracting/infrastructure/pull/438) - `benefits`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `social.consultationMeetings`
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.inIndigenousLand`
   * [#448](https://github.com/open-contracting/infrastructure/pull/448) - `social.landCompensationBudget`
-  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - `social.healthAndSafety.materialTests`
-  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
-  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
+  * [#442](https://github.com/open-contracting/infrastructure/pull/442) - `environment.abatementCost`
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - `environment.conservationMeasures`
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - `environment.climateMeasures`
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - `environment.climateOversightTypes`
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - `environment.goals`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.hasImpactAssessment`
+  * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
+  * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
 
 ### Codelists
 
 * [#355](https://github.com/open-contracting/infrastructure/pull/355) - use correct normative and non-normative keywords codelist descriptions.
 * [#377](https://github.com/open-contracting/infrastructure/pull/377) - clarify business logic in contractingProcessStatus codelist.
+* [#432](https://github.com/open-contracting/infrastructure/pull/432) - deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist.
 * Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
-  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
-  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
-  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
-  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
-  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
-  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
-  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
-  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
-  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
   * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
+  * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
+  * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
+  * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
+  * [#427](https://github.com/open-contracting/infrastructure/pull/427) - country
+  * [#431](https://github.com/open-contracting/infrastructure/pull/431) - environmentalGoal
+  * [#433](https://github.com/open-contracting/infrastructure/pull/433) - laborObligations
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneCode
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneStatus
+  * [#426](https://github.com/open-contracting/infrastructure/pull/426) - milestoneType
+  * [#437](https://github.com/open-contracting/infrastructure/pull/437) - policyAlignment
+  * [#434](https://github.com/open-contracting/infrastructure/pull/434) - sustainabilityStrategy
 * Add codes:
-  * partyRole:
-    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
-    * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
-  * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType: 'decommissioning'
-  * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
-    * 'maintenance'
-    * 'decommissioning'
-    * 'decommissioned'
   * [#446](https://github.com/open-contracting/infrastructure/pull/446) - documentType:
     * 'procurementStrategyRiskAssessment'
     * 'lifeCycleCostMethodology'
@@ -106,6 +103,17 @@
     * 'ghgEmissionsForecast'
     * 'ghgEmissionsReduction'
     * 'ghgEmissions'
+    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
+  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
+    * 'WDPA'
+  * partyRole:
+    * [#429](https://github.com/open-contracting/infrastructure/pull/429) - 'climateFinanceFocalPoint'
+    * [#439](https://github.com/open-contracting/infrastructure/pull/439) - 'independentMonitor'
+  * [#432](https://github.com/open-contracting/infrastructure/pull/432) - projectStatus:
+    * 'maintenance'
+    * 'decommissioning'
+    * 'decommissioned'
   * [#435](https://github.com/open-contracting/infrastructure/pull/435) - projectSector:
     * 'energy.solar'
     * 'energy.wind'
@@ -115,11 +123,8 @@
     * 'transport.lowCarbon'
     * 'naturalResources'
     * 'naturalResources.floodProtection'
-  * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers: 'WDPA'
-  * documentType:
-    * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
-    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
-* [#432](https://github.com/open-contracting/infrastructure/pull/432) - Deprecate 'completed' in favor of 'maintenance' in the projectStatus codelist
+  * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType:
+    * 'decommissioning'
 
 ### Other
 
