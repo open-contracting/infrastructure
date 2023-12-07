@@ -865,7 +865,7 @@ def lint(filename, additional_properties, link_fields):
         # Identify occurrences of name in fields
         occurrences = []
         for field in fields:
-            if field[-len(path):] == path:
+            if field[-len(path):] == tuple(path):
                 occurrences.append(field)
 
         if not occurrences:
