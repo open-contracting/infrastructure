@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import csv
 import os
 from glob import glob
 from pathlib import Path
@@ -29,7 +30,7 @@ copyright = 'Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
 version = '0.9'
-release = '0.9.3'
+release = '0.9.4'
 
 
 # -- General configuration ---------------------------------------------------
@@ -42,6 +43,7 @@ extensions = [
     'sphinxcontrib.jsonschema',
     'sphinxcontrib.opencontracting',
     'sphinxcontrib.opendataservices',
+    'sphinx_design',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +52,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_static/docson/*.md', '_static/docson/integration/*.md']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**/docson/[!p]**', '**/docson/package*.json']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -85,8 +87,6 @@ locale_dirs = ['locale/', os.path.join(standard_theme.get_html_theme_path(), 'lo
 smartquotes = False
 
 # MyST configuration.
-# Disable dollarmath, which uses MathJax for a string like: "If Alice has $100 and Bob has $1..."
-# https://myst-parser.readthedocs.io/en/latest/using/intro.html#sphinx-configuration-options
 myst_enable_extensions = ['linkify']
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
@@ -132,7 +132,7 @@ def setup(app):
     static_dir = basedir / 'docs' / '_static' / 'project-level'
     build_dir = basedir / 'build' / language
 
-    branch = os.getenv('GITHUB_REF', 'latest').rsplit('/', 1)[-1]
+    branch = os.getenv('GITHUB_REF_NAME', 'latest')
 
     translate([
         # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
@@ -148,3 +148,16 @@ def setup(app):
         (glob(str(basedir / 'mapping' / '*.csv')), static_dir, mapping_domain),
         (glob(str(basedir / 'mapping' / '*.csv')), build_dir, mapping_domain),
     ], localedir, language, mapping_headers, version=branch)
+
+    # Split the mapping CSV into two.
+    for path in build_dir.iterdir():
+        name = path.name
+        if name.endswith('.csv') and not name.startswith(('ids-', 'ocds-')):
+            for prefix, column_index in (('ids', 3), ('ocds', 2)):
+                with path.open() as i, (build_dir / f'{prefix}-{name}').open('w') as o:
+                    reader = csv.reader(i)
+                    writer = csv.writer(o, lineterminator='\n')
+                    for row in reader:
+                        del row[column_index]
+                        writer.writerow(row)
+            path.unlink()

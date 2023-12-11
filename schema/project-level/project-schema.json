@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://standard.open-contracting.org/infrastructure/schema/0__9__3/project-schema.json",
+  "id": "https://standard.open-contracting.org/infrastructure/schema/0__9__4/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
-  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) Schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](http://infrastructuretransparency.org/resource/977/). In the context of OC4IDS, the term 'project' refers to the development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.",
+  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/resource/977/). OC4IDS defines an \"infrastructure project\" as: \"the development, maintenance and decommissioning of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus. Development covers project identification, preparation, implementation and completion.\"",
   "type": "object",
   "required": [
     "id"
@@ -10,7 +10,7 @@
   "properties": {
     "id": {
       "title": "Identifier or Reference",
-      "description": "A unique identifier or reference number for this infrastructure project, composed of a project identifier prefix and a local project identifier. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#project-identifier-prefixes).",
+      "description": "An identifier for this infrastructure project. The identifier must be globally unique and must begin with a registered project identifier prefix. For more information, see the [project identifier guidance](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/guidance/identifiers/#project-identifier-prefixes).",
       "type": "string",
       "minLength": 1
     },
@@ -19,6 +19,30 @@
       "description": "The date on which project-level information was last updated. This should not be changed when constituent contracting processes information changes, unless this project-level data has been updated as a result, or to provide explanations or justifications for those changes.",
       "type": "string",
       "format": "date-time"
+    },
+    "language": {
+      "title": "Language",
+      "description": "The default language of the data using either two-letter [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes), or extended [BCP47 language tags](http://www.w3.org/International/articles/language-tags/). The use of lowercase two-letter codes from [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is recommended.",
+      "type": [
+        "string"
+      ],
+      "default": "en",
+      "minLength": 1
+    },
+    "identifiers": {
+      "title": "Identifiers",
+      "description": "Identifiers for this project. This field can be used to provide internal identifiers for the project, such as identifiers from a project management system or procurement system.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SimpleIdentifier"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "publicAuthority": {
+      "title": "Public authority",
+      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `role` of 'publicAuthority'.",
+      "$ref": "#/definitions/OrganizationReference"
     },
     "title": {
       "title": "Project title",
@@ -32,6 +56,72 @@
       "type": "string",
       "minLength": 1
     },
+    "budget": {
+      "title": "Total project value",
+      "description": "Specify the allocated budget for the infrastructure project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and supplier costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
+      "type": "object",
+      "properties": {
+        "description": {
+          "title": "Description",
+          "description": "A short free-text description of the budget that will fund the project. This may be used to provide human-readable information on: the budget category for the project and/or the nature and source of the budget allocation (e.g. conditional, confirmed, or any official authorizations given to the budget allocation).",
+          "type": "string",
+          "minLength": 1
+        },
+        "amount": {
+          "title": "Amount",
+          "description": "The projected costs or allocated budget for the project.",
+          "$ref": "#/definitions/Value"
+        },
+        "requestDate": {
+          "title": "Request date",
+          "description": "The date on which the project budget was requested.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included among the project documents with the documentType set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "budgetBreakdowns": {
+          "title": "Budget breakdowns",
+          "description": "Detailed breakdowns of the budget grouped together by, for example, period, funder or stage.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BudgetBreakdowns"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "finance": {
+          "title": "Finance",
+          "description": "Information about financing arrangements for the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "period": {
+      "title": "Project period",
+      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
+      "$ref": "#/definitions/Period"
+    },
+    "locations": {
+      "title": "Project locations",
+      "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Location"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
     "status": {
       "title": "Status",
       "description": "The current phase or status of this project, from the [projectStatus](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projectstatus) codelist.",
@@ -41,16 +131,27 @@
         "preparation",
         "implementation",
         "completion",
-        "completed",
+        "maintenance",
+        "decommissioning",
+        "decommissioned",
         "cancelled"
       ],
       "codelist": "projectStatus.csv",
       "openCodelist": false
     },
-    "period": {
-      "title": "Project period",
-      "description": "The period over which this project is planned to run. This may be updated during the preparation phase as information becomes available to more accurately specify anticipated start and end dates, but should not be updated during the implementation or completion phases. The planned completion date of the project should be provided in `period.endDate`, which can be compared with the actual completion date in `completion.endDate`",
-      "$ref": "#/definitions/Period"
+    "type": {
+      "title": "Project type",
+      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projecttype) codelist.",
+      "type": "string",
+      "enum": [
+        "construction",
+        "rehabilitation",
+        "replacement",
+        "expansion",
+        "decommissioning"
+      ],
+      "codelist": "projectType.csv",
+      "openCodelist": false
     },
     "sector": {
       "title": "Project sector",
@@ -73,93 +174,10 @@
     },
     "additionalClassifications": {
       "title": "Additional classifications",
-      "description": "One or more additional project classifications can be provided to describe the social or economic focus of the project. This classification may take place against a locally developed codelist, or a globally established codelist.",
+      "description": "Classifications of the project: for example, according to its social and economic purpose. See also the `purpose` field.",
       "type": "array",
       "items": {
         "$ref": "#/definitions/Classification"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "type": {
-      "title": "Project type",
-      "description": "Whether the primary focus of this project is the construction of a new asset or the rehabilitation or replacement of an existing asset, from the [projectType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#projecttype) codelist.",
-      "type": "string",
-      "enum": [
-        "construction",
-        "rehabilitation",
-        "replacement",
-        "expansion"
-      ],
-      "codelist": "projectType.csv",
-      "openCodelist": false
-    },
-    "relatedProjects": {
-      "title": "Related projects",
-      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/RelatedProject"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "assetLifetime": {
-      "title": "Asset lifetime",
-      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
-      "$ref": "#/definitions/Period"
-    },
-    "locations": {
-      "title": "Project locations",
-      "description": "Information about the location where a project is taking place. One or more locations may be provided, or the location may be described in a number of different ways, such as a point location for the central location of construction, and a gazetteer entry to describe the region where the project is taking place.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Location"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "budget": {
-      "title": "Total project value",
-      "description": "Specify the projected costs or allocated budget for the project (currency and amount). This cost should include land and property acquisition, environmental mitigation measures, health and safety provisions, client, consultant and contractor costs, as well as applicable taxes. Where this value includes costs incurred directly by the project owner or other agencies, which are not subject to procurement, then this value is likely to be higher than the sum of all the linked contracting processes. To indicate the profile of a budget over time, or the budget coming from different sources, the extended budgetBreakdown section may be used.",
-      "type": "object",
-      "properties": {
-        "amount": {
-          "title": "Amount",
-          "description": "The projected costs or allocated budget for the project.",
-          "$ref": "#/definitions/Value"
-        },
-        "requestDate": {
-          "title": "Request date",
-          "description": "The date on which the project budget was requested.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "approvalDate": {
-          "title": "Approval date",
-          "description": "The date on which the project budget was approved. Where documentary evidence for this exists, it may be included among the project documents with the documentType set to 'budgetApproval'.",
-          "type": "string",
-          "format": "date-time"
-        },
-        "budgetBreakdown": {
-          "type": "array",
-          "title": "Budget breakdown",
-          "description": "A detailed breakdown of the budget by period and/or participating funders.",
-          "items": {
-            "$ref": "#/definitions/BudgetBreakdown"
-          },
-          "uniqueItems": true,
-          "minItems": 1
-        }
-      },
-      "minProperties": 1
-    },
-    "forecasts": {
-      "title": "Forecasts",
-      "description": "Forecast metrics for this project, such as planned physical or financial progress over time.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Metric"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -174,27 +192,47 @@
       "uniqueItems": true,
       "minItems": 1
     },
-    "publicAuthority": {
-      "title": "Public authority",
-      "description": "The name and identifier of the public authority that is tendering and contracting the project. The full details of the entity should be added to the project-level `parties` array with a `role` of 'publicAuthority'.",
-      "$ref": "#/definitions/OrganizationReference"
+    "assetLifetime": {
+      "title": "Asset lifetime",
+      "description": "The anticipated lifetime of the asset after this project is completed. This may be provided as either explicit dates or an estimated duration.",
+      "$ref": "#/definitions/Period"
     },
-    "documents": {
-      "title": "Documents",
-      "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
+    "identificationPeriod": {
+      "title": "Identification period",
+      "description": "The period over which the identification stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "preparationPeriod": {
+      "title": "Preparation period",
+      "description": "The period over which the preparation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "implementationPeriod": {
+      "title": "Implementation period",
+      "description": "The period over which the implementation stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "completionPeriod": {
+      "title": "Completion period",
+      "description": "The period over which the completion stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "maintenancePeriod": {
+      "title": "Maintenance period",
+      "description": "The period over which the maintenance stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "decommissioningPeriod": {
+      "title": "Decommissioning period",
+      "description": "The period over which the decommissioning stage is planned to run.",
+      "$ref": "#/definitions/Period"
+    },
+    "forecasts": {
+      "title": "Forecasts",
+      "description": "Forecast metrics for this project, such as planned physical or financial progress over time.",
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Document"
-      },
-      "uniqueItems": true,
-      "minItems": 1
-    },
-    "contractingProcesses": {
-      "title": "Contracting processes",
-      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major modifications to contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ContractingProcess"
+        "$ref": "#/definitions/Metric"
       },
       "uniqueItems": true,
       "minItems": 1
@@ -208,6 +246,16 @@
       },
       "uniqueItems": true,
       "minItems": 1
+    },
+    "milestones": {
+      "title": "Milestones",
+      "description": "Milestones associated with this project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Milestone"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "completion": {
       "title": "Completion",
@@ -251,6 +299,199 @@
         }
       },
       "minProperties": 1
+    },
+    "costMeasurements": {
+      "title": "Cost measurements",
+      "description": "Information about cost measurements for the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CostMeasurement"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "transactions": {
+      "title": "Transactions",
+      "description": "Financial transactions related to this project. For example, a disbursement from a funder to the project company. Transactions related to a contracting process, like a disbursement from a funder to a supplier, should be recorded in the contracting process summary's `.transactions.`",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Transaction"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "documents": {
+      "title": "Documents",
+      "description": "Documentation related to this project. Entries may include a short text summary (plain text, HTML or Markdown), and/or a link to a specific document accessible on the web. \n\n At the identification phase, a project scope (documentType: projectScope) is expected. At the preparation phase, environmental impact (documentType: environmentalImpact) and land and settlement impact (documentType: landAndSettlementImpact) documentation is expected. During implementation, procurement documents should be shared at the contracting process level, but key documents may also be provided here. At the completion phase, final audit (documentType: finalAudit) and evaluation (documentType: projectEvaluation) reports and documents are expected.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Document"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "contractingProcesses": {
+      "title": "Contracting processes",
+      "description": "A single project may have a number of related contracting processes (design, construction, monitoring etc.). Project-level data should contain \n\n (a) an index of those contracting process; \n\n (b) the latest summary information about them; \n\n(c) a change history with explanations for any major modifications to contract duration, price or scope.\n\n Where OCDS data is published on each contracting process, a link should be provided to each available release of OCDS data (e.g. to each notice or updated notice), and this OCDS data may be used to automatically populate the summary information.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ContractingProcess"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "relatedProjects": {
+      "title": "Related projects",
+      "description": "References to projects related to the same set of infrastructure assets as this project. For example, a project for the replacement of a bridge might reference the earlier project for its initial construction.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/RelatedProject"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "policyAlignment": {
+      "title": "Policy alignment",
+      "description": "Information about how the project aligns with international, national and/or sectoral policies.",
+      "type": "object",
+      "properties": {
+        "policies": {
+          "title": "Policies",
+          "description": "The policies the project aligns with, using the open [policyAlignment](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#policyalignment) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "policyAlignment.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of how the project aligns with the policies.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "benefits": {
+      "title": "Benefits",
+      "description": "The benefits and intended benefits of the project.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Benefit"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "$ref": "#/definitions/Social"
+    },
+    "environment": {
+      "title": "Environment",
+      "description": "Information about the environmental and climate impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and habitats.",
+      "type": "object",
+      "properties": {
+        "goals": {
+          "title": "Environmental goals",
+          "description": "The environmental goals pursued, using the closed [environmentalGoal](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalgoal) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "climateChangeAdaptation",
+              "climateChangeMitigation"
+            ]
+          },
+          "codelist": "environmentalGoal.csv",
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "climateOversightTypes": {
+          "title": "Climate oversight types",
+          "description": "Whether the oversight of this project's climate impact is performed internally, externally or both, from the closed [climateOversightTypes](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateOversightTypes) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal",
+              "external"
+            ]
+          },
+          "codelist": "climateOversightTypes.csv",
+          "openCodelist": false,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "hasImpactAssessment": {
+          "title": "Has impact assessment",
+          "description": "Whether an environmental impact assessment has been conducted.",
+          "type": "boolean"
+        },
+        "impactCategories": {
+          "title": "Impact categories",
+          "description": "The categories of the environmental impact of the project.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "conservationMeasures": {
+          "title": "Conservation measures",
+          "description": "The measures adopted by the project to protect and enhance biodiversity.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "abatementCost": {
+          "title": "Abatement cost",
+          "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
+          "$ref": "#/definitions/Value"
+        },
+        "inProtectedArea": {
+          "title": "In protected area",
+          "description": "Whether the project is located in a protected area.",
+          "type": "boolean"
+        },
+        "climateMeasures": {
+          "title": "Climate measures",
+          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClimateMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "lobbyingMeetings": {
+      "title": "Lobbying meetings",
+      "description": "Information about lobbying meetings in relation to the project. That is, meetings with public officials that are made, managed or directed with the purpose of influencing public decision-making in relation to the project, whether for private, public or collective ends, whether for compensation or without. Public decision-making is the creation and amendment of legislation or any other regulatory measures; the development, modification and implementation of public policies, strategies and programs; and the awarding of government contracts or grants, administrative decisions or any other public spending decisions.",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Meeting"
+      },
+      "uniqueItems": true,
+      "minItems": 1
     }
   },
   "definitions": {
@@ -261,7 +502,7 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "description": "An identifier for this contracting process. If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into, following the [guidance for creating contracting process identifiers](https://standard.open-contracting.org/1.1/en/schema/identifiers/#contracting-process-identifier-ocid).",
+          "description": "An identifier for this contracting process. If this contracting process has been assigned an Open Contracting Identifier (OCID) by an external platform (e.g. national procurement system), that OCID must be recorded here. If information about this contracting process has been entered manually, or from a non-OCDS system, then an identifier may be created by the system data is entered into.",
           "type": "string",
           "minLength": 1
         },
@@ -289,7 +530,7 @@
     "ContractingProcessSummary": {
       "type": "object",
       "title": "Summary",
-      "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data may vary between implementations; and modifications may be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
+      "description": "Summary information about a contracting process and any modifications to it.\n\n Summary information can be manually entered and the `modifications` list can be used to manually record a log of changes, with the date and details of each modification.\n\n Where OCDS data is available, most summary fields can be derived from OCDS releases, although the exact method to derive data might vary between implementations; and modifications can be identified by comparing a new release to previous releases to check for relevant changes, with the release identifier recorded in `modifications`.",
       "properties": {
         "ocid": {
           "title": "Open Contracting Identifier",
@@ -370,6 +611,14 @@
               "type": "string",
               "minLength": 1
             },
+            "datePublished": {
+              "description": "The date on which the tender was published.",
+              "format": "date-time",
+              "title": "Date published",
+              "type": [
+                "string"
+              ]
+            },
             "costEstimate": {
               "title": "Cost estimate",
               "description": "The pre-tender estimated value of the contracting process.",
@@ -399,6 +648,16 @@
               "title": "Administrative entity",
               "description": "The name and identifier of the entity responsible for contract administration if this is different from the procuring entity. The full details of the entity should be added to the project-level `parties` array with a `role` of 'administrativeEntity'.",
               "$ref": "#/definitions/OrganizationReference"
+            },
+            "sustainability": {
+              "title": "Sustainability",
+              "description": "Information about how the contracting process incorporates sustainable public procurement.",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Sustainability"
+              },
+              "uniqueItems": true,
+              "minItems": 1
             }
           },
           "minProperties": 1
@@ -425,12 +684,12 @@
         },
         "finalValue": {
           "title": "Final value",
-          "description": "This should be provided when the contracting process is complete. This may be derived from the sum of `contract.implementation.transactions` values in linked OCDS data where available. In other cases, it may need to be identified and entered manually based on other project documentation.",
+          "description": "This should be provided when the contracting process is complete. This can be derived from the sum of `contract.implementation.transactions` values in linked OCDS data where available. In other cases, it might need to be identified and entered manually based on other project documentation.",
           "$ref": "#/definitions/Value"
         },
         "documents": {
           "title": "Documents",
-          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents may be found by looking at the published releases.",
+          "description": "Additional documentation about this contracting process may be provided here, including reports and evaluations produced through a monitoring process, or links to web pages where further information about this process can be found. Where OCDS releases are published, further documents can be found by looking at the published releases.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/Document"
@@ -457,6 +716,44 @@
           },
           "uniqueItems": true,
           "minItems": 1
+        },
+        "milestones": {
+          "title": "Milestones",
+          "description": "Milestones associated with this contracting process.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Milestone"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "finance": {
+          "title": "Finance",
+          "description": "Information about financing arrangements for the contracting process.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Finance"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "social": {
+          "title": "Social",
+          "description": "Information about the social impact of the project and actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+          "type": "object",
+          "properties": {
+            "laborBudget": {
+              "title": "Labor budget",
+              "description": "The budget allocated in the contract for labor costs.",
+              "$ref": "#/definitions/Value"
+            },
+            "laborObligations": {
+              "title": "Labor obligations",
+              "description": "Information about labor obligations stipulated in the construction contract(s).",
+              "$ref": "#/definitions/LaborObligations"
+            }
+          },
+          "minProperties": 1
         }
       },
       "minProperties": 1
@@ -648,10 +945,12 @@
       "properties": {
         "scheme": {
           "title": "Scheme",
-          "description": "The scheme or codelist from which the classification code is taken.",
+          "description": "The scheme or codelist from which the classification code is taken, using the open [classificationScheme](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#classificationscheme) codelist.",
           "type": [
             "string"
           ],
+          "codelist": "classificationScheme.csv",
+          "openCodelist": true,
           "minLength": 1
         },
         "id": {
@@ -1151,7 +1450,6 @@
             "$ref": "#/definitions/Identifier"
           },
           "uniqueItems": true,
-          "wholeListMerge": true,
           "minItems": 1
         },
         "address": {
@@ -1176,6 +1474,26 @@
           },
           "codelist": "partyRole.csv",
           "openCodelist": true,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "beneficialOwners": {
+          "title": "Beneficial owners",
+          "description": "The beneficial owners of the organization.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Person"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "classifications": {
+          "title": "Organization classifications",
+          "description": "The classifications that categorize the organization.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Classification"
+          },
           "uniqueItems": true,
           "minItems": 1
         },
@@ -1310,10 +1628,43 @@
       },
       "minProperties": 1
     },
-    "BudgetBreakdown": {
+    "BudgetBreakdowns": {
+      "title": "Budget breakdown group",
+      "description": "Details of a breakdown of the budget grouped by a common dimension.",
       "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "An identifier for the budget breakdown group.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the budget breakdown group including the common dimension used to create the breakdown.",
+          "type": "string",
+          "minLength": 1
+        },
+        "budgetBreakdown": {
+          "title": "Budget breakdown",
+          "description": "A detailed breakdown of the budget.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BudgetBreakdown"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "BudgetBreakdown": {
       "title": "Detailed budget breakdown",
       "description": "This section allows a detailed budget breakdown to be expressed, covering multiple budget sources and multiple periods",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1334,7 +1685,7 @@
         },
         "amount": {
           "title": "Amount",
-          "description": "The value of the budget line item.",
+          "description": "The value of the budget line item. A positive amount means the source organization funds the project. A negative amount means the project pays the source organization.",
           "$ref": "#/definitions/Value"
         },
         "uri": {
@@ -1346,14 +1697,20 @@
           "format": "uri"
         },
         "period": {
-          "$ref": "#/definitions/Period",
           "title": "Budget period",
-          "description": "The period covered by this budget entry."
+          "description": "The period covered by this budget entry.",
+          "$ref": "#/definitions/Period"
         },
         "sourceParty": {
-          "$ref": "#/definitions/OrganizationReference",
-          "title": "Source party",
-          "description": "An organization reference, linking to the entry in the `parties` section describing the organization providing the funds for this part of the budget. The party must have the 'funder' role. If the budget amount is positive, this indicates a flow of resources from the party to the contracting process. If the budget amount is negative, it indicates a payment from the contracting process to this party."
+          "title": "Source organization",
+          "description": "The organization providing the funds for this budget entry. The corresponding entry in the `parties` array must have 'sourceParty' in its `roles` array.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "approvalDate": {
+          "title": "Approval date",
+          "description": "The date on which this budget entry was approved. Where documentary evidence for this exists, it may be included among the project documents with `.documentType` set to 'budgetApproval'.",
+          "type": "string",
+          "format": "date-time"
         }
       },
       "minProperties": 1
@@ -1564,9 +1921,9 @@
       "minProperties": 1
     },
     "Metric": {
-      "type": "object",
       "title": "Metric",
       "description": "Metrics are used to set out forecast and actual metrics targets for a project: for example, planned and actual physical and financial progress over time.",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1596,9 +1953,9 @@
           "minLength": 1
         },
         "observations": {
-          "type": "array",
           "title": "Observations",
           "description": "An array of target or actual values for this metric.",
+          "type": "array",
           "items": {
             "$ref": "#/definitions/Observation"
           },
@@ -1609,9 +1966,9 @@
       "minProperties": 1
     },
     "Observation": {
-      "type": "object",
       "title": "Observation",
-      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics).",
+      "description": "An actual or target observation. Observations should include either a value (for financial metrics) or measure (for other metrics). ",
+      "type": "object",
       "required": [
         "id"
       ],
@@ -1642,16 +1999,16 @@
           "minLength": 1
         },
         "unit": {
-          "type": "object",
           "title": "Unit",
           "description": "Unit",
+          "type": "object",
           "properties": {
             "name": {
+              "title": "Unit name",
+              "description": "The name of the unit.",
               "type": [
                 "string"
               ],
-              "title": "Unit name",
-              "description": "The name of the unit.",
               "minLength": 1
             },
             "scheme": {
@@ -1666,7 +2023,7 @@
             },
             "id": {
               "title": "ID",
-              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
+              "description": "The identifier from the codelist referenced in the scheme field. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure. ",
               "type": "string",
               "minLength": 1
             },
@@ -1682,9 +2039,9 @@
           "minProperties": 1
         },
         "dimensions": {
-          "type": "object",
           "title": "Dimensions",
           "description": "Any number of dimensions can be recorded within this object. Dimensions names should follow the camelCase conventions of OCDS.",
+          "type": "object",
           "minProperties": 1
         },
         "notes": {
@@ -1702,17 +2059,323 @@
       "title": "Person",
       "description": "A natural person.",
       "type": "object",
+      "required": [
+        "id"
+      ],
       "properties": {
         "id": {
-          "title": "Identifier",
-          "description": "A local identifier for this person.",
+          "title": "ID",
+          "description": "A local identifier for the person.",
           "type": "string",
           "minLength": 1
         },
         "name": {
           "title": "Name",
           "description": "The full name of the person.",
-          "type": "string",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "identifier": {
+          "title": "Identifier",
+          "description": "An official identifier for the person. The scheme should follow the pattern {JURISDICTION}-{TYPE}, where JURISDICTION is a three-letter, uppercase ISO 3166-1 alpha-3 country code, and TYPE is one of \"PASSPORT\", \"TAXID\" or \"IDCARD\".",
+          "$ref": "#/definitions/Identifier"
+        },
+        "nationalities": {
+          "title": "Nationalities",
+          "description": "The nationalities of the person, from the closed country codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "enum": [
+              "AD",
+              "AE",
+              "AF",
+              "AG",
+              "AI",
+              "AL",
+              "AM",
+              "AO",
+              "AQ",
+              "AR",
+              "AS",
+              "AT",
+              "AU",
+              "AW",
+              "AX",
+              "AZ",
+              "BA",
+              "BB",
+              "BD",
+              "BE",
+              "BF",
+              "BG",
+              "BH",
+              "BI",
+              "BJ",
+              "BL",
+              "BM",
+              "BN",
+              "BO",
+              "BQ",
+              "BR",
+              "BS",
+              "BT",
+              "BV",
+              "BW",
+              "BY",
+              "BZ",
+              "CA",
+              "CC",
+              "CD",
+              "CF",
+              "CG",
+              "CH",
+              "CI",
+              "CK",
+              "CL",
+              "CM",
+              "CN",
+              "CO",
+              "CR",
+              "CU",
+              "CV",
+              "CW",
+              "CX",
+              "CY",
+              "CZ",
+              "DE",
+              "DJ",
+              "DK",
+              "DM",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "EH",
+              "ER",
+              "ES",
+              "ET",
+              "FI",
+              "FJ",
+              "FK",
+              "FM",
+              "FO",
+              "FR",
+              "GA",
+              "GB",
+              "GD",
+              "GE",
+              "GF",
+              "GG",
+              "GH",
+              "GI",
+              "GL",
+              "GM",
+              "GN",
+              "GP",
+              "GQ",
+              "GR",
+              "GS",
+              "GT",
+              "GU",
+              "GW",
+              "GY",
+              "HK",
+              "HM",
+              "HN",
+              "HR",
+              "HT",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IM",
+              "IN",
+              "IO",
+              "IQ",
+              "IR",
+              "IS",
+              "IT",
+              "JE",
+              "JM",
+              "JO",
+              "JP",
+              "KE",
+              "KG",
+              "KH",
+              "KI",
+              "KM",
+              "KN",
+              "KP",
+              "KR",
+              "KW",
+              "KY",
+              "KZ",
+              "LA",
+              "LB",
+              "LC",
+              "LI",
+              "LK",
+              "LR",
+              "LS",
+              "LT",
+              "LU",
+              "LV",
+              "LY",
+              "MA",
+              "MC",
+              "MD",
+              "ME",
+              "MF",
+              "MG",
+              "MH",
+              "MK",
+              "ML",
+              "MM",
+              "MN",
+              "MO",
+              "MP",
+              "MQ",
+              "MR",
+              "MS",
+              "MT",
+              "MU",
+              "MV",
+              "MW",
+              "MX",
+              "MY",
+              "MZ",
+              "NA",
+              "NC",
+              "NE",
+              "NF",
+              "NG",
+              "NI",
+              "NL",
+              "NO",
+              "NP",
+              "NR",
+              "NU",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PF",
+              "PG",
+              "PH",
+              "PK",
+              "PL",
+              "PM",
+              "PN",
+              "PR",
+              "PS",
+              "PT",
+              "PW",
+              "PY",
+              "QA",
+              "RE",
+              "RO",
+              "RS",
+              "RU",
+              "RW",
+              "SA",
+              "SB",
+              "SC",
+              "SD",
+              "SE",
+              "SG",
+              "SH",
+              "SI",
+              "SJ",
+              "SK",
+              "SL",
+              "SM",
+              "SN",
+              "SO",
+              "SR",
+              "SS",
+              "ST",
+              "SV",
+              "SX",
+              "SY",
+              "SZ",
+              "TC",
+              "TD",
+              "TF",
+              "TG",
+              "TH",
+              "TJ",
+              "TK",
+              "TL",
+              "TM",
+              "TN",
+              "TO",
+              "TR",
+              "TT",
+              "TV",
+              "TW",
+              "TZ",
+              "UA",
+              "UG",
+              "UM",
+              "US",
+              "UY",
+              "UZ",
+              "VA",
+              "VC",
+              "VE",
+              "VG",
+              "VI",
+              "VN",
+              "VU",
+              "WF",
+              "WS",
+              "XK",
+              "YE",
+              "YT",
+              "ZA",
+              "ZM",
+              "ZW"
+            ]
+          },
+          "codelist": "country.csv",
+          "openCodelist": false,
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the person.",
+          "$ref": "#/definitions/Address"
+        },
+        "email": {
+          "title": "Email",
+          "description": "The e-mail address of the person.",
+          "type": [
+            "string"
+          ],
+          "format": "email",
+          "minLength": 1
+        },
+        "faxNumber": {
+          "title": "Fax number",
+          "description": "The fax number of the person. This must include the international dialing code.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "telephone": {
+          "title": "Telephone",
+          "description": "The telephone number of the person. This must include the international dialing code.",
+          "type": [
+            "string"
+          ],
           "minLength": 1
         },
         "jobTitle": {
@@ -1722,15 +2385,12 @@
           "minLength": 1
         }
       },
-      "required": [
-        "id"
-      ],
       "minProperties": 1
     },
     "Transaction": {
       "type": "object",
       "title": "Transaction information",
-      "description": "A spending transaction related to the contracting process. Draws upon the data models of the [Fiscal Data Package](https://frictionlessdata.io/specs/fiscal-data-package/) and the [International Aid Transparency Initiative](http://iatistandard.org/activity-standard/iati-activities/iati-activity/transaction/) and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional spending data.",
+      "description": "A financial transaction related to a project or contracting process. Draws upon the data models of the Fiscal Data Package and the International Aid Transparency Initiative and should be used to cross-reference to more detailed information held using a Fiscal Data Package, IATI file, or to provide enough information to allow a user to manually or automatically cross-reference with some other published source of transactional data.",
       "required": [
         "id"
       ],
@@ -1779,6 +2439,755 @@
             "string"
           ],
           "format": "uri"
+        },
+        "relatedImplementationMilestone": {
+          "title": "Related implementation milestone",
+          "description": "A link to the milestone in the implementation section of OCDS to which this transaction relates.",
+          "$ref": "#/definitions/MilestoneReference"
+        }
+      },
+      "minProperties": 1
+    },
+    "SimpleIdentifier": {
+      "title": "Simple identifier",
+      "description": "An unambiguous reference to a resource within a given context.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "The identifier taken from the scheme.",
+          "type": "string",
+          "minLength": 1
+        },
+        "scheme": {
+          "title": "Scheme",
+          "description": "The list, register or system from which the identifier is taken.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "Milestone": {
+      "title": "Milestone",
+      "description": "An event in the lifetime of a project or contracting process.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "A local identifier for this milestone, unique within this block.",
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "title": "Title",
+          "description": "Milestone title",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "type": {
+          "title": "Milestone type",
+          "description": "The nature of the milestone, using the open [milestoneType](https://standard.open-contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonetype) codelist.",
+          "type": [
+            "string"
+          ],
+          "codelist": "milestoneType.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A description of the milestone.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        },
+        "code": {
+          "title": "Milestone code",
+          "description": "Milestone codes can be used to track specific events that take place for a particular kind of project or contracting process. For example, a code of 'approvalLetter' can be used to allow applications to understand this milestone represents the date an approvalLetter is due or signed.",
+          "type": [
+            "string"
+          ],
+          "codelist": "milestoneCode.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "dueDate": {
+          "title": "Due date",
+          "description": "The date the milestone is due.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "dateMet": {
+          "format": "date-time",
+          "title": "Date met",
+          "description": "The date on which the milestone was met.",
+          "type": [
+            "string"
+          ]
+        },
+        "dateModified": {
+          "title": "Date modified",
+          "description": "The date the milestone was last reviewed or modified and the status was altered or confirmed to still be correct.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "status": {
+          "title": "Status",
+          "description": "The status that was realized on the date provided in `dateModified`, from the closed [milestoneStatus](https://standard.open-contracting.org/1.1/en/schema/codelists/#milestone-status) codelist.",
+          "type": [
+            "string"
+          ],
+          "enum": [
+            "scheduled",
+            "met",
+            "notMet",
+            "partiallyMet"
+          ],
+          "codelist": "milestoneStatus.csv",
+          "openCodelist": false
+        },
+        "value": {
+          "title": "Value",
+          "description": "The payment's value, if the milestone represents a planned payment.",
+          "$ref": "#/definitions/Value"
+        }
+      },
+      "minProperties": 1
+    },
+    "MilestoneReference": {
+      "title": "Milestone Reference",
+      "description": "A block used to reference a milestone, including the ID and title of the milestone being referenced.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "Milestone ID",
+          "description": "The ID of the milestone being referenced, this must match the ID of a milestone in this project or contracting process's `.milestones`.",
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "title": "Milestone title",
+          "description": "The title of the milestone being referenced, this must match the title of a milestone in this project or contracting process's `.milestones`.",
+          "type": [
+            "string"
+          ],
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "ConservationMeasure": {
+      "title": "Conservation measure",
+      "description": "A measure adopted by the project to protect and enhance biodiversity.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of conservation measure, using the open [conservationMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "type": "string",
+          "codelist": "conservationMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the conservation measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Finance": {
+      "title": "Financing arrangement",
+      "description": "An arrangement between two parties for raising money.",
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "An identifier for the financing arrangement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "title": "Title",
+          "description": "A short title for the financing arrangement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the financing arrangement. This may include details of service fees, commitment fees, lender rights, step in arrangements, exchange rate guarantees, and for syndicated loans, details of syndication and any members of the syndicate.",
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "title": "Value",
+          "description": "The total value of the finance.",
+          "$ref": "#/definitions/Value"
+        },
+        "financingParty": {
+          "title": "Financing organization",
+          "description": "The organization providing the financing arrangement.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "financingPartyType": {
+          "title": "Financing organization type",
+          "description": "The type of the financing organization, using the closed [financingPartyType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#financingPartyType) codelist.",
+          "type": "string",
+          "codelist": "financingPartyType.csv",
+          "openCodelist": false,
+          "enum": [
+            "institutional",
+            "commercial",
+            "bilateral",
+            "multilateral",
+            "vendor",
+            "other"
+          ]
+        },
+        "source": {
+          "title": "Funding source",
+          "description": "The source of funds for the financing arrangement. For example, the Green Climate Fund.",
+          "type": "string",
+          "minLength": 1
+        },
+        "assetClass": {
+          "title": "Asset class",
+          "description": "The asset classes used in the financing arrangement, using the closed [assetClass](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#assetClass) codelist.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "debt",
+              "equity"
+            ],
+            "minLength": 1
+          },
+          "codelist": "assetClass.csv",
+          "openCodelist": false,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "type": {
+          "title": "Type",
+          "description": "The type of the financing arrangement, using the closed [financingArrangementType](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#financingArrangementType) codelist.",
+          "type": "string",
+          "codelist": "financingArrangementType.csv",
+          "openCodelist": false,
+          "enum": [
+            "bond",
+            "loan",
+            "hybrid",
+            "shares.listed",
+            "shares.unlisted",
+            "grant",
+            "guarantee"
+          ]
+        },
+        "repaymentPriority": {
+          "title": "Repayment priority",
+          "description": "The order in which the debt in the financing arrangement will be repaid in case of default, using the closed [debtRepaymentPriority](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#debtRepaymentPriority) codelist.",
+          "type": "string",
+          "codelist": "debtRepaymentPriority.csv",
+          "openCodelist": false,
+          "enum": [
+            "senior",
+            "subordinated"
+          ]
+        },
+        "concessional": {
+          "title": "Concessional",
+          "description": "Whether the financing arrangement is provided below market rate in order to accelerate climate or development objectives. Also called soft financing and subsidized funding.",
+          "type": "boolean"
+        },
+        "resultsBased": {
+          "title": "Results based",
+          "description": "Whether payments under the financing arrangement are contingent on the achievement of pre-defined results.",
+          "type": "boolean"
+        },
+        "period": {
+          "title": "Finance period",
+          "description": "The period covered by the financing arrangement. Also called maturity.",
+          "$ref": "#/definitions/Period"
+        },
+        "paymentPeriod": {
+          "title": "Payment period",
+          "description": "The period over which the borrower in the financing arrangement is obliged to make payments.",
+          "$ref": "#/definitions/Period"
+        },
+        "paymentFrequency": {
+          "title": "Payment frequency (days)",
+          "description": "The average payment frequency (in days) of the financing arrangement. For example, 365 for yearly, 30.4 for monthly, or 1 for daily.",
+          "type": "number",
+          "minimum": 0
+        },
+        "interestRate": {
+          "title": "Interest rate",
+          "description": "The interest rate associated with the finance.",
+          "type": "object",
+          "properties": {
+            "base": {
+              "title": "Base",
+              "description": "The variable to which an additional margin amount is added to get the Interest amount. This can be specified as a fixed number, as a known variable (e.g. LIBOR or LIBOR+1%), or can be omitted if margin specifies the entire interest rate.",
+              "type": [
+                "string",
+                "number"
+              ],
+              "minLength": 1
+            },
+            "margin": {
+              "title": "Margin",
+              "description": "The variable added to the base to give the Interest amount expressed as a decimal fraction (e.g. 12.5% = 0.125).",
+              "type": [
+                "number"
+              ]
+            },
+            "fixed": {
+              "title": "Fixed rate",
+              "description": "A boolean field. If the interest rate of fixed, set to true. Otherwise, set to false.",
+              "type": [
+                "boolean"
+              ]
+            },
+            "notes": {
+              "title": "Notes",
+              "description": "Any explanatory notes concerning the interest rate.",
+              "type": [
+                "string"
+              ],
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
+        },
+        "exchangeRateGuarantee": {
+          "title": "Exchange rate guarantees",
+          "description": "Whether there is an associated exchange rate guarantee with the source of finance.",
+          "type": [
+            "boolean"
+          ]
+        },
+        "stepInRights": {
+          "title": "Step in rights",
+          "description": "Whether provision of the finance confers any step in rights to the financing organization.",
+          "type": [
+            "boolean"
+          ]
+        },
+        "relatedLots": {
+          "title": "Related lot(s)",
+          "description": "The identifiers of the lots to which the financing arrangement relates.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "CostMeasurement": {
+      "title": "Cost measurement",
+      "description": "A measurement of costs for a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost measurement.",
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date on which the cost measurement was reported.",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lifeCycleCosting": {
+          "title": "Life-cycle costing",
+          "description": "Information about life-cycle costing for the cost measurement.",
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "Life-cycle cost",
+              "description": "The life-cycle cost of the project.",
+              "$ref": "#/definitions/Value"
+            }
+          },
+          "minProperties": 1
+        },
+        "costGroups": {
+          "title": "Cost groups",
+          "description": "The cost groups included in the cost measurement.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostGroup"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "CostGroup": {
+      "title": "Cost group",
+      "description": "A group of costs relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local identifier",
+          "description": "A local identifier for the cost group.",
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "title": "Category",
+          "description": "The category of costs included in the cost group, using the open [costCategory](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#costcategory) codelist.",
+          "type": "string",
+          "codelist": "costCategory.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "costs": {
+          "title": "Costs",
+          "description": "The costs included in the cost group.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Cost"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "Cost": {
+      "title": "Cost",
+      "description": "A cost relating to a project.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Local Identifier",
+          "description": "A local identifier for the cost.",
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "title": "Classification",
+          "description": "A classification of the cost.",
+          "$ref": "#/definitions/Classification"
+        },
+        "value": {
+          "title": "Value",
+          "description": "The monetary value of the cost.",
+          "$ref": "#/definitions/Value"
+        }
+      },
+      "minProperties": 1
+    },
+    "LaborObligations": {
+      "title": "Labor obligations",
+      "description": "Information about labor obligations stipulated in the construction contract(s).",
+      "type": "object",
+      "properties": {
+        "obligations": {
+          "title": "Obligations",
+          "description": "The labor obligations stipulated in the construction contract(s), using the open [laborObligations codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations).",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "laborObligations.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the labor obligations.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Benefit": {
+      "title": "Benefit",
+      "description": "A benefit or intended benefit of the project.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "description": "A title for the benefit.",
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the benefit.",
+          "type": "string",
+          "minLength": 1
+        },
+        "beneficiaries": {
+          "title": "Beneficiaries",
+          "description": "Whom the benefit will aid.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Beneficiary"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Beneficiary": {
+      "title": "Beneficiary",
+      "description": "Information about a beneficiary of the project.",
+      "type": "object",
+      "properties": {
+        "location": {
+          "title": "Location",
+          "description": "The location of the beneficiary.",
+          "$ref": "#/definitions/Location"
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the beneficiary.",
+          "type": "string",
+          "minLength": 1
+        },
+        "numberOfPeople": {
+          "title": "Number of people",
+          "description": "The total size of the beneficiary population.",
+          "type": "integer"
+        }
+      },
+      "minProperties": 1
+    },
+    "Sustainability": {
+      "title": "Sustainability",
+      "description": "Information about how the contracting process incorporates sustainable public procurement.",
+      "type": "object",
+      "properties": {
+        "strategies": {
+          "title": "Strategies",
+          "description": "The strategies used to pursue the sustainability goal(s), using the open [sustainabilityStrategy](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "sustainabilityStrategy.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "minProperties": 1
+    },
+    "Meeting": {
+      "title": "Meeting",
+      "description": "Information about a meeting.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "ID",
+          "description": "The locally unique identifier for the meeting.",
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "title": "Date",
+          "description": "The date of the meeting.",
+          "type": [
+            "string"
+          ],
+          "format": "date-time"
+        },
+        "address": {
+          "title": "Address",
+          "description": "The address of the meeting.",
+          "$ref": "#/definitions/Address"
+        },
+        "numberOfParticipants": {
+          "title": "Number of participants",
+          "description": "The number of people in attendance at the meeting.",
+          "type": "integer"
+        },
+        "publicOffice": {
+          "title": "Public office",
+          "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+          "$ref": "#/definitions/PublicOffice"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "minProperties": 1
+    },
+    "PublicOffice": {
+      "title": "Public office",
+      "description": "A position held by a person (or advisor to a person) with decision-making powers, who is elected, appointed or employed within the executive or legislative branches of power at national, sub-national, or supra-national levels; within private bodies performing public functions; and within public international organizations domiciled or operational in the country concerned.",
+      "type": "object",
+      "properties": {
+        "person": {
+          "title": "Person",
+          "description": "The person holding the public office.",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "description": "The full name of the person.",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
+        },
+        "organization": {
+          "title": "Organization",
+          "description": "The organization in which the public office exists.",
+          "$ref": "#/definitions/OrganizationReference"
+        },
+        "jobTitle": {
+          "title": "Job title",
+          "description": "The job title of the person holding the public office.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "Social": {
+      "title": "Social",
+      "description": "Information about the social impacts of the project and the actions the project will take to mitigate potentially negative impacts on adjacent populations and project workers.",
+      "type": "object",
+      "properties": {
+        "consultationMeetings": {
+          "title": "Public consultation meetings",
+          "description": "Information about public consultation meetings held during the project preparation stage.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Meeting"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "landCompensationBudget": {
+          "title": "Land compensation budget",
+          "description": "The budget allocated for land compensation.",
+          "$ref": "#/definitions/Value"
+        },
+        "inIndigenousLand": {
+          "title": "In indigenous land",
+          "description": "Whether the project is located in or cuts through indigenous land.",
+          "type": "boolean"
+        },
+        "healthAndSafety": {
+          "title": "Health and safety",
+          "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+          "$ref": "#/definitions/HealthAndSafety"
+        }
+      },
+      "minProperties": 1
+    },
+    "HealthAndSafety": {
+      "title": "Health and safety",
+      "description": "Information about health and safety in regards to the construction and ongoing use of the project asset.",
+      "type": "object",
+      "properties": {
+        "materialTests": {
+          "title": "Material tests",
+          "description": "Information about tests conducted on materials used in the construction of the assets.",
+          "type": "object",
+          "properties": {
+            "tests": {
+              "title": "Tests",
+              "description": "The construction materials that were tested, using the open [constructionMaterial](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#constructionMaterial) codelist.",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "codelist": "constructionMaterial.csv",
+              "openCodelist": true,
+              "minItems": 1,
+              "uniqueItems": true
+            },
+            "description": {
+              "title": "Description",
+              "description": "A short description of the tests conducted on the construction materials.",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "minProperties": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "ClimateMeasure": {
+      "title": "Climate measure",
+      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "climateMeasures.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
         }
       },
       "minProperties": 1

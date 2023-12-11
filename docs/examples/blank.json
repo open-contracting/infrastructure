@@ -1,10 +1,52 @@
 {
   "id": "",
+  "identifiers": [
+    {
+      "id": "",
+      "scheme": ""
+    }
+  ],
   "updated": "",
   "title": "",
   "description": "",
   "status": "string from projectStatus codelist",
   "period": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "identificationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "preparationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "implementationPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "completionPeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "maintenancePeriod": {
+    "startDate": "string",
+    "endDate": "string",
+    "maxExtentDate": "string",
+    "durationInDays": "integer"
+  },
+  "decommissioningPeriod": {
     "startDate": "string",
     "endDate": "string",
     "maxExtentDate": "string",
@@ -60,34 +102,102 @@
     }
   ],
   "budget": {
+    "description": "",
     "amount": {
       "amount": "number",
       "currency": "string from currency codelist"
     },
     "requestDate": "",
     "approvalDate": "",
-    "budgetBreakdown": [
+    "budgetBreakdowns": [
       {
-        "id": "",
+        "id": "string",
         "description": "string",
-        "amount": {
+        "budgetBreakdown": [
+          {
+            "id": "",
+            "description": "string",
+            "amount": {
+              "amount": "number",
+              "currency": "string from currency codelist"
+            },
+            "uri": "string",
+            "period": {
+              "startDate": "string",
+              "endDate": "string",
+              "maxExtentDate": "string",
+              "durationInDays": "integer"
+            },
+            "sourceParty": {
+              "name": "string",
+              "id": ""
+            }
+          }
+        ]
+      }
+    ],
+    "finance": [
+      {
+        "id": "string",
+        "assetClass": "string from assetClass codelist",
+        "type": "string from financingArrangementType codelist",
+        "concessional": "boolean",
+        "value": {
           "amount": "number",
-          "currency": "string from currency codelist"
+          "currency": "string"
         },
-        "uri": "string",
+        "source": "string",
+        "financingParty": {
+          "id": "string",
+          "name": "string"
+        },
         "period": {
           "startDate": "string",
-          "endDate": "string",
-          "maxExtentDate": "string",
-          "durationInDays": "integer"
+          "endDate": "string"
         },
-        "sourceParty": {
-          "name": "string",
-          "id": ""
-        }
+        "paymentPeriod": {
+          "startDate": "string",
+          "endDate": "string"
+        },
+        "interestRate": {
+          "margin": "number"
+        },
+        "description": "string"
       }
     ]
   },
+  "costMeasurements": [
+    {
+      "id": "string",
+      "date": "string",
+      "lifeCycleCosting": {
+        "value": {
+          "amount": "number",
+          "currency": "string from currency codelist"
+        }
+      },
+      "costGroups": [
+        {
+          "id": "string",
+          "category": "string",
+          "costs": [
+            {
+              "id": "string",
+              "value": {
+                "amount": "number",
+                "currency": "string from currency codelist"
+              },
+              "classification": {
+                "id": "string",
+                "scheme": "string",
+                "description": "string"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "forecasts": [
     {
       "id": "",
@@ -158,6 +268,35 @@
           "name": "",
           "jobTitle": ""
         }
+      ],
+      "beneficialOwners": [
+        {
+          "id": "string",
+          "name": "string",
+          "identifier": {
+            "scheme": "string",
+            "id": "string"
+          },
+          "nationalities": [
+            "string"
+          ],
+          "address": {
+            "streetAddress": "string",
+            "locality": "string",
+            "region": "string",
+            "postalCode": "string",
+            "countryName": "string"
+          },
+          "email": "string",
+          "faxNumber": "string",
+          "telephone": "string"
+        }
+      ],
+      "classifications": [
+        {
+          "id": "string",
+          "scheme": "string"
+        }
       ]
     }
   ],
@@ -195,6 +334,7 @@
         "tender": {
           "procurementMethod": "string from method codelist",
           "procurementMethodDetails": "",
+          "datePublished": "string",
           "costEstimate": {
             "amount": "number",
             "currency": "string from currency codelist"
@@ -213,7 +353,14 @@
           "administrativeEntity": {
             "name": "string",
             "id": ""
-          }
+          },
+          "sustainability": [
+            {
+              "strategies": [
+                "string"
+              ]
+            }
+          ]
         },
         "suppliers": [
           {
@@ -301,7 +448,40 @@
             },
             "uri": "string"
           }
-        ]
+        ],
+        "milestones": [
+          {
+            "id": "string",
+            "title": "string",
+            "type": "string from milestoneType codelist",
+            "description": "string",
+            "code": "string from milestoneCode codelist",
+            "dueDate": "string",
+            "dateMet": "string",
+            "dateModified": "string",
+            "status": "string from milestoneStatus codelist",
+            "relatedImplementationMilestone": {
+              "id": "string",
+              "title": "title"
+            },
+            "value": {
+              "amount": "number",
+              "currency": "string from currency codelist"
+            }
+          }
+        ],
+        "social": {
+          "laborBudget": {
+            "amount": "number",
+            "currency": "string from currency codelist"
+          },
+          "laborObligations": {
+            "obligations": [
+              "string from laborObligations codelist"
+            ],
+            "description": "string"
+          }
+        }
       },
       "releases": [
         {
@@ -344,6 +524,47 @@
       ]
     }
   ],
+  "transactions": [
+    {
+      "id": "",
+      "source": "string",
+      "date": "string",
+      "value": {
+        "amount": "number",
+        "currency": "string from currency codelist"
+      },
+      "payer": {
+        "name": "string",
+        "id": ""
+      },
+      "payee": {
+        "name": "string",
+        "id": ""
+      },
+      "uri": "string"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "string",
+      "title": "string",
+      "type": "string from milestoneType codelist",
+      "description": "string",
+      "code": "string from milestoneCode codelist",
+      "dueDate": "string",
+      "dateMet": "string",
+      "dateModified": "string",
+      "status": "string from milestoneStatus codelist",
+      "relatedImplementationMilestone": {
+        "id": "string",
+        "title": "title"
+      },
+      "value": {
+        "amount": "number",
+        "currency": "string from currency codelist"
+      }
+    }
+  ],
   "completion": {
     "endDate": "",
     "endDateDetails": "",
@@ -354,5 +575,119 @@
     "finalValueDetails": "",
     "finalScope": "",
     "finalScopeDetails": ""
+  },
+  "lobbyingMeetings": [
+    {
+      "id": "string",
+      "address": {
+        "streetAddress": "string",
+        "locality": "string",
+        "region": "string",
+        "postalCode": "string",
+        "countryName": "string"
+      },
+      "date": "date-time",
+      "numberOfParticipants": "integer",
+      "publicOffice": {
+        "person": {
+          "name": "string"
+        },
+        "organization": {
+          "id": "string",
+          "name": "string"
+        },
+        "jobTitle": "string"
+      }
+    }
+  ],
+  "social": {
+    "consultationMeetings": [
+      {
+        "id": "string",
+        "address": {
+          "streetAddress": "string",
+          "locality": "string",
+          "region": "string",
+          "postalCode": "string",
+          "countryName": "string"
+        },
+        "date": "date-time",
+        "numberOfParticipants": "integer",
+        "publicOffice": {
+          "person": {
+            "name": "string"
+          },
+          "organization": {
+            "id": "string",
+            "name": "string"
+          },
+          "jobTitle": "string"
+        }
+      }
+    ],
+    "landCompensationBudget": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    },
+    "inIndigenousLand": "boolean",
+    "healthAndSafety": {
+      "materialTests": {
+        "test": [
+          "string from constructionMaterial codelist"
+        ],
+        "description": "string"
+      }
+    }
+  },
+  "environment": {
+    "goals": [
+      "string"
+    ],
+    "conservationMeasures": [
+      {
+        "type": "string from conservationMeasure codelist",
+        "description": "string"
+      }
+    ],
+    "climateOversightTypes": [
+      "string"
+    ],
+    "hasImpactAssessment": "boolean",
+    "impactCategories": [
+      {
+        "scheme": "string",
+        "id": "string"
+      }
+    ],
+    "abatementCost": {
+      "amount": "number",
+      "currency": "string from currency codelist"
+    },
+    "inProtectedArea": "boolean",
+    "climateMeasures": [
+      {
+        "type": "string from climateMeasures codelist",
+        "description": "string"
+      }
+    ]
+  },
+  "benefits": [
+    {
+      "title": "string",
+      "description": "string",
+      "beneficiaries": [
+        {
+          "description": "string",
+          "location": {},
+          "numberOfPeople": "integer"
+        }
+      ]
+    }
+  ],
+  "policyAlignment": {
+    "policies": [
+      "string"
+    ],
+    "description": "string"
   }
 }

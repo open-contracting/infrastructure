@@ -1,0 +1,10 @@
+Code,Title,Description,Extension
+projectApproval,Project approval,The dates of approvals from relevant authorities.,OCDS for PPPs Extension
+commercialClose,Commercial close,"In a financing, the point at which the commercial documentation has been executed but before conditions precedent have been satisfied or waived; before financial close.",OCDS for PPPs Extension
+financialClose,Financial close,"In a financing, the point at which the documentation has been executed and conditions precedent have been satisfied or waived. Drawdowns become permissible after this point.",OCDS for PPPs Extension
+commencement,Commencement of construction or development,The date of commencement of construction or development,OCDS for PPPs Extension
+completion,Completion of construction of development,The date of completion of construction or development,OCDS for PPPs Extension
+commissioning,Commissioning,The testing and inspection of the completed works to verify that the works are ready for commercial operation.,OCDS for PPPs Extension
+enquiryPeriodStart,Enquiry period start,"For processes with multiple enquiry periods, the start date of a period during which enquiries can be made and responded to which is not provided in the tender/enquiryPeriod block. Sometimes known as clarification periods.",OCDS for PPPs Extension
+enquiryPeriodEnd,Enquiry period end,"For processes with multiple enquiry periods, the end date of a period during which enquiries can be made and responded to which is not provided in the tender/enquiryPeriod block. Sometimes known as clarification periods.",OCDS for PPPs Extension
+draftFinalTender,Submission of draft final bid,"For competitive dialogue processes, the deadline for submission of draft final bids",OCDS for PPPs Extension
