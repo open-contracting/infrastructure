@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.9.4] - YYYY-MM-DD
+## [0.9.4] - 2023-12-12
 
 ### Documentation
 
