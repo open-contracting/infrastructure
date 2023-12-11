@@ -55,7 +55,7 @@ In addition to the documents listed in the mapping table, you can use OC4IDS to 
 
 Choose from the following options, depending on the data you collect and the data needed by your use cases.
 
-**Actual progress over time**
+###### Actual progress over time
 
 * Add a `Metric` object to the `metrics` array and:
   * For financial progress, set its `id` to 'financialProgress' and set its title to 'Financial progress', or the equivalent in the language of your publication.
@@ -120,7 +120,7 @@ Choose from the following options, depending on the data you collect and the dat
 }
 ```
 
-**A single progress figure**
+###### A single progress figure
 
 If your implementation does not store a change history, you can publish a single `Observation` object for each `Metric` and update the `Observation` object's `.measure` each time there is a progress update.
 
@@ -152,7 +152,7 @@ If your implementation does not store a change history, you can publish a single
 }
 ```
 
-**Planned progress over time**
+###### Planned progress over time
 
 You can use the `forecasts` array to publish progress forecasts for different points in time.
 

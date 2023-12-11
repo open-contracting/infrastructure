@@ -24,7 +24,6 @@ The mapping for each element covers only the fields needed to satisfy the specif
 
 ## Economic and fiscal
 
-
 (economic-and-fiscal-procurement-strategy)=
 
 `````{grid} 2
@@ -58,7 +57,6 @@ Project Level:
 ````
 
 `````
-
 
 (economic-and-fiscal-life-cycle-cost)=
 
@@ -97,7 +95,6 @@ Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to t
 
 `````
 
-
 (economic-and-fiscal-life-cycle-cost-calculation-methodology)=
 
 `````{grid} 2
@@ -130,7 +127,6 @@ Project Level:
 ````
 
 `````
-
 
 (economic-and-fiscal-funding-source-for-preparation-implementation-and-operation)=
 
@@ -201,7 +197,6 @@ Project level:
 
 `````
 
-
 (economic-and-fiscal-budget-for-preparation-implementation-and-operation)=
 
 `````{grid} 2
@@ -260,7 +255,6 @@ Project level:
 
 `````
 
-
 (economic-and-fiscal-cost-benefit-analysis)=
 
 `````{grid} 2
@@ -294,7 +288,6 @@ Project Level:
 
 `````
 
-
 (economic-and-fiscal-value-for-money)=
 
 `````{grid} 2
@@ -325,7 +318,6 @@ Project Level: [Add a project document](../common.md#add-a-project-document) and
 ````
 
 `````
-
 
 (economic-and-fiscal-budget-projections)=
 
@@ -393,7 +385,6 @@ Project level:
 
 `````
 
-
 (economic-and-fiscal-budget-shortfall)=
 
 `````{grid} 2
@@ -440,7 +431,6 @@ Project level:
 `````
 
 ## Environment and climate
-
 
 (environment-and-climate-environmental-impact-category)=
 
@@ -490,7 +480,6 @@ If an environmental impact assessment was not conducted, set [`environment.hasIm
 
 `````
 
-
 (environment-and-climate-environmental-measures)=
 
 `````{grid} 2
@@ -525,7 +514,6 @@ Project level:
 
 `````
 
-
 (environment-and-climate-environmental-exceptions)=
 
 `````{grid} 2
@@ -558,7 +546,6 @@ Project Level:
 ````
 
 `````
-
 
 (environment-and-climate-protected-area)=
 
@@ -605,7 +592,6 @@ If the project is not located in a protected area, set [`environment.inProtected
 ````
 
 `````
-
 
 (environment-and-climate-conservation-measures)=
 
@@ -663,7 +649,6 @@ Project level:
 
 `````
 
-
 (environment-and-climate-climate-and-disaster-risk-assessment)=
 
 `````{grid} 2
@@ -697,7 +682,6 @@ Project level:
 ````
 
 `````
-
 
 (environment-and-climate-climate-measures)=
 
@@ -757,7 +741,6 @@ Project level:
 ````
 
 `````
-
 
 (environment-and-climate-forecast-of-greenhouse-gas-emissions)=
 
@@ -824,7 +807,6 @@ Project level:
 
 `````
 
-
 (environment-and-climate-environmental-certifications)=
 
 `````{grid} 2
@@ -865,7 +847,6 @@ Contracting process level:
 
 `````
 
-
 (environment-and-climate-decommissioning-plans)=
 
 `````{grid} 2
@@ -898,7 +879,6 @@ Project level:
 ````
 
 `````
-
 
 (environment-and-climate-decommissioning-cost-forecast)=
 
@@ -952,7 +932,6 @@ Project level:
 
 ## Climate finance
 
-
 (climate-finance-climate-objective)=
 
 `````{grid} 2
@@ -991,7 +970,6 @@ Map to [`environment.goals`](project-schema.json,,environment/goals) using the c
 ````
 
 `````
-
 
 (climate-finance-financial-instrument)=
 
@@ -1049,7 +1027,6 @@ guarantee | | 'guarantee'
 
 `````
 
-
 (climate-finance-climate-transformation)=
 
 `````{grid} 2
@@ -1082,7 +1059,6 @@ Project level:
 ````
 
 `````
-
 
 (climate-finance-climate-finance-decision-maker)=
 
@@ -1119,7 +1095,6 @@ Project level:
 
 `````
 
-
 (climate-finance-nationally-determined-contributions-ndc)=
 
 `````{grid} 2
@@ -1140,7 +1115,6 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 
 `````
 
-
 (climate-finance-paris-agreement)=
 
 `````{grid} 2
@@ -1160,7 +1134,6 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
 `````
-
 
 (climate-finance-beneficiaries)=
 
@@ -1183,7 +1156,6 @@ See [number of beneficiaries (social module)](social-number-of-beneficiaries)
 ````
 
 `````
-
 
 (climate-finance-amount-of-investment)=
 
@@ -1221,7 +1193,6 @@ OC4IDS mapping
 
 `````
 
-
 (climate-finance-funding-source)=
 
 `````{grid} 2
@@ -1254,7 +1225,6 @@ OC4IDS mapping
 ````
 
 `````
-
 
 (climate-finance-green-climate-fund-accredited-entity)=
 
@@ -1301,7 +1271,6 @@ OC4IDS mapping
 ````
 
 `````
-
 
 (climate-finance-accredited-entity-type)=
 
@@ -1356,7 +1325,6 @@ OC4IDS mapping
 
 `````
 
-
 (climate-finance-project-preparation-costs)=
 
 `````{grid} 2
@@ -1376,7 +1344,6 @@ See [budget for preparation, implementation and operation (economic and fiscal m
 ````
 
 `````
-
 
 (climate-finance-project-preparation-period)=
 
@@ -1407,7 +1374,6 @@ Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 ````
 
 `````
-
 
 (climate-finance-project-approval-period)=
 
@@ -1452,7 +1418,6 @@ For each date:
 ````
 
 `````
-
 
 (climate-finance-ratio-of-co-finance)=
 
@@ -1501,7 +1466,6 @@ The OC4IDS data model provides the information needed to calculate co-finance ra
 ````
 
 `````
-
 
 (climate-finance-terms-of-climate-finance)=
 
@@ -1561,7 +1525,6 @@ OC4IDS mapping
 
 `````
 
-
 (climate-finance-carbon-efficiency)=
 
 `````{grid} 2
@@ -1600,7 +1563,6 @@ Map to [`environment.abatementCost`](project-schema.json,,environment/abatementC
 ````
 
 `````
-
 
 (climate-finance-non-climate-co-benefits)=
 
@@ -1641,7 +1603,6 @@ For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object
 
 `````
 
-
 (climate-finance-public-consultation-meetings)=
 
 `````{grid} 2
@@ -1661,7 +1622,6 @@ See [public consultation meetings (social module)](social-public-consultation-me
 ````
 
 `````
-
 
 (climate-finance-disbursement-records)=
 
@@ -1758,7 +1718,6 @@ For each actual disbursement:
 
 `````
 
-
 (climate-finance-type-of-project-monitoring)=
 
 `````{grid} 2
@@ -1795,7 +1754,6 @@ Map to [`environment.climateOversightTypes`](project-schema.json,,environment/cl
 
 `````
 
-
 (climate-finance-performance-monitoring)=
 
 `````{grid} 2
@@ -1827,7 +1785,6 @@ For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [
 ````
 
 `````
-
 
 (climate-finance-reporting-period)=
 
@@ -1862,7 +1819,6 @@ Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](p
 
 `````
 
-
 (climate-finance-oversight-reports)=
 
 `````{grid} 2
@@ -1896,7 +1852,6 @@ Project level:
 
 `````
 
-
 (climate-finance-independent-monitoring)=
 
 `````{grid} 2
@@ -1916,7 +1871,6 @@ See [independent monitoring (institutional module)](institutional-independent-mo
 ````
 
 `````
-
 
 (climate-finance-independent-evaluation)=
 
@@ -1954,7 +1908,6 @@ For each audit report, [add a project document](../common.md#add-a-project-docum
 
 `````
 
-
 (climate-finance-impact-measurement)=
 
 `````{grid} 2
@@ -1988,7 +1941,6 @@ Project level:
 ````
 
 `````
-
 
 (climate-finance-carbon-footprint)=
 
@@ -2055,7 +2007,6 @@ Project level:
 
 `````
 
-
 (climate-finance-infrastructure-assets-to-be-decommissioned)=
 
 `````{grid} 2
@@ -2101,7 +2052,6 @@ For each set of decommissioned assets in a specified location, create a new OC4I
 
 `````
 
-
 (climate-finance-decommission-period)=
 
 `````{grid} 2
@@ -2132,7 +2082,6 @@ Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
 
 `````
 
-
 (climate-finance-decommission-plan)=
 
 `````{grid} 2
@@ -2152,7 +2101,6 @@ See [decommissioning plans (environment and social)](environment-and-climate-dec
 ````
 
 `````
-
 
 (climate-finance-carbon-decommission-savings)=
 
@@ -2220,7 +2168,6 @@ Project level:
 
 `````
 
-
 (climate-finance-decommission-mitigation-plan)=
 
 `````{grid} 2
@@ -2258,7 +2205,6 @@ Project level:
 `````
 
 ## Social
-
 
 (social-number-of-beneficiaries)=
 
@@ -2302,7 +2248,6 @@ Project level:
 
 `````
 
-
 (social-inclusive-design-and-implementation)=
 
 `````{grid} 2
@@ -2345,7 +2290,6 @@ Project level:
 
 `````
 
-
 (social-indigenous-land)=
 
 `````{grid} 2
@@ -2385,7 +2329,6 @@ If the project is not located in and does not cut through indigenous land, set [
 ````
 
 `````
-
 
 (social-public-consultation-meetings)=
 
@@ -2452,7 +2395,6 @@ For each meeting:
 
 `````
 
-
 (social-land-compensation-budget)=
 
 `````{grid} 2
@@ -2484,7 +2426,6 @@ Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social
 ````
 
 `````
-
 
 (social-labour-obligations)=
 
@@ -2564,7 +2505,6 @@ Contracting process level:
 
 `````
 
-
 (social-labour-budget)=
 
 `````{grid} 2
@@ -2603,7 +2543,6 @@ Map to [`summary.social.laborBudget`](project-schema.json,/definitions/Contracti
 ````
 
 `````
-
 
 (social-workers-accidents)=
 
@@ -2684,7 +2623,6 @@ Publish summary statistics on worker fatalities:
 
 `````
 
-
 (social-health-and-safety-certifications)=
 
 `````{grid} 2
@@ -2724,7 +2662,6 @@ Contracting process level:
 ````
 
 `````
-
 
 (social-construction-materials-testing)=
 
@@ -2796,7 +2733,6 @@ Publish test results: For each test result, [add a project document](../common.m
 
 `````
 
-
 (social-building-inspections)=
 
 `````{grid} 2
@@ -2829,7 +2765,6 @@ Project Level:
 ````
 
 `````
-
 
 (social-jobs-generated)=
 
@@ -2959,7 +2894,6 @@ Publish actual jobs created:
 
 ## Institutional
 
-
 (institutional-policy-coherence)=
 
 `````{grid} 2
@@ -3037,7 +2971,6 @@ Project level:
 
 `````
 
-
 (institutional-freedom-of-information-requests)=
 
 `````{grid} 2
@@ -3071,7 +3004,6 @@ For each freedom of information request, [add a project document](../common.md#a
 
 `````
 
-
 (institutional-answers-to-freedom-of-information-requests)=
 
 `````{grid} 2
@@ -3104,7 +3036,6 @@ For each freedom of information request response, [add a project document](../co
 ````
 
 `````
-
 
 (institutional-lobbying-transparency)=
 
@@ -3180,7 +3111,6 @@ Publish the meeting minutes: [add a project document](../common.md#add-a-project
 
 `````
 
-
 (institutional-beneficial-ownership)=
 
 `````{grid} 2
@@ -3230,7 +3160,6 @@ For each beneficial owner:
 
 `````
 
-
 (institutional-sustainability-criteria)=
 
 `````{grid} 2
@@ -3273,7 +3202,6 @@ Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the
 
 `````
 
-
 (institutional-anti-corruption-certifications)=
 
 `````{grid} 2
@@ -3306,7 +3234,6 @@ Project Level:
 ````
 
 `````
-
 
 (institutional-independent-monitoring)=
 
@@ -3343,7 +3270,6 @@ Project level:
 
 `````
 
-
 (institutional-performance-monitoring)=
 
 `````{grid} 2
@@ -3363,7 +3289,6 @@ See [performance monitoring (climate finance)](climate-finance-performance-monit
 ````
 
 `````
-
 
 (institutional-risk-management-plans)=
 
@@ -3397,7 +3322,6 @@ Project Level:
 ````
 
 `````
-
 
 (institutional-sustainable-sub-sectors)=
 
@@ -3442,4 +3366,3 @@ Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector co
 ````
 
 `````
-

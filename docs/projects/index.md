@@ -31,43 +31,49 @@ The CoST IDS and OC4IDS cover project-level data and summary contracting process
 
 ### What is project-level data?
 
-% Image source: https://docs.google.com/drawings/d/1aV2iBjxeVFR8JRZRPY80mVS3C57uolk1sEDrn8vKuhA
+% Image source: <https://docs.google.com/drawings/d/1aV2iBjxeVFR8JRZRPY80mVS3C57uolk1sEDrn8vKuhA>
 ![Project-level data covers a number of stages](../_static/images/diagram-project-phases.png)
 
 Project-level data relates to the project as a whole and covers the following stages:
 
 **Identification**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv identification
   ```
 
 **Preparation**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv preparation
   ```
 
 **Implementation**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv implementation
   ```
 
 **Completion**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv completion
   ```
 
 **Maintenance**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv maintenance
   ```
 
 **Decommissioning**
-: 
+:
+
   ```{eval-rst}
   .. code-description:: ../../build/current_lang/codelists/projectStatus.csv decommissioning
   ```
@@ -81,14 +87,14 @@ Summary contracting process data relates to the contracts used to deliver the pr
 **Procurement**
 : The procuring entity and process; contract type and status; number of bidders; cost estimate and contract price; suppliers; scope of work and start date and duration of the contract.
 
-**Implementation** 
+**Implementation**
 : Variations to contract price, duration and scope, and reasons for these changes.
 
 CoST recommends disclosing data on contracts for the design, construction and supervision of a project and any other significant contract outsourced by the procuring entity.
 
 ## How is OC4IDS structured?
 
-% Image source: https://docs.google.com/drawings/d/1VnV44NY_WR02jRouWaLYc0dVVZRojbkrUJyqlfrKUSQ
+% Image source: <https://docs.google.com/drawings/d/1VnV44NY_WR02jRouWaLYc0dVVZRojbkrUJyqlfrKUSQ>
 ![OC4IDS is structured in three parts](../_static/images/diagram-toplevel-summary.png)
 
 The top-level of the OC4IDS data model is used for project-level data, covering the following stages: identification, preparation, implementation, completion, maintenance and decommissioning.
@@ -109,7 +115,7 @@ Where detailed contracting data is published using the [Open Contracting Data St
 
 OCDS is used to disclose detailed data on contracting processes for goods, works and services. It covers all stages of a contracting process: planning, initiation, award, contract and implementation.
 
-% Image source: https://docs.google.com/drawings/d/1Nx45CtOXMjv7yRWXoB7kXklZiP4VvZM7RecnQuR23lk
+% Image source: <https://docs.google.com/drawings/d/1Nx45CtOXMjv7yRWXoB7kXklZiP4VvZM7RecnQuR23lk>
 ![Project-level data three stages](../_static/images/diagram-project-level-data-spec-update.png)
 
 OCDS data can be used to identify and monitor infrastructure projects. It can also be used to produce OC4IDS data. Converting OCDS data to OC4IDS data can reduce the amount of manual data entry necessary for infrastructure project monitoring.
@@ -126,7 +132,7 @@ Infrastructure projects can be procured in different ways, including through Pub
 
 Where data on PPP projects is published using OCDS for PPPs, the `contractingProcesses/releases` array in OC4IDS can be used to link to OCDS for PPPs releases.
 
-% Image source: https://docs.google.com/drawings/d/1g6jN2XIuECNxp_jdDa7-gbnZBe4oz1IpIbDEzDkue28
+% Image source: <https://docs.google.com/drawings/d/1g6jN2XIuECNxp_jdDa7-gbnZBe4oz1IpIbDEzDkue28>
 ![What about PPPs](../_static/images/diagram-ppp.png)
 
 ## Why use OC4IDS?
@@ -139,17 +145,17 @@ OC4IDS is designed to help you collect well-structured data, comparable across c
 
 OC4IDS can be used in the following scenarios:
 
-**Publishing structured data from an infrastructure transparency portal**
+### Publishing structured data from an infrastructure transparency portal
 
 OC4IDS describes a standardized format for publishing structured data on infrastructure projects.
 
 Read the guidance on [publishing data from an infrastructure transparency portal](https://standard.open-contracting.org/infrastructure/latest/en/guidance/publishing/).
 
-**Designing a new infrastructure transparency portal**
+### Designing a new infrastructure transparency portal
 
 OC4IDS describes the best practice information you ought to collect and disclose to support infrastructure project monitoring.
 
-**Using OCDS data for whole life-cycle infrastructure project monitoring**
+### Using OCDS data for whole life-cycle infrastructure project monitoring
 
 OC4IDS can be used to:
 
@@ -159,15 +165,15 @@ OC4IDS can be used to:
 
 Read the guidance on [using data from procurement systems for infrastructure project monitoring](https://standard.open-contracting.org/infrastructure/latest/en/guidance/using/).
 
-**Collecting data on infrastructure projects using a spreadsheet**
+### Collecting data on infrastructure projects using a spreadsheet
 
 The OC4IDS schema can be used to generate a spreadsheet template for collecting data.
 
-**Designing other data collection tools**
+### Designing other data collection tools
 
 OC4IDS provides definitions for fields and codelists which can be used to collect consistent data.
 
-**Publishing data that complies with the CoST IDS**
+### Publishing data that complies with the CoST IDS
 
 OC4IDS describes how to structure and format the disclosures described by the CoST IDS.
 

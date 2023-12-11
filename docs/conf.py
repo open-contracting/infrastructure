@@ -30,7 +30,7 @@ copyright = 'Open Contracting Partnership'
 author = 'Open Contracting Partnership'
 
 version = '0.9'
-release = '0.9.3'
+release = '0.9.4'
 
 
 # -- General configuration ---------------------------------------------------
