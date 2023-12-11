@@ -151,7 +151,7 @@
 ### Documentation
 
 * [#210](https://github.com/open-contracting/infrastructure/issues/210):
-  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-from-cods](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds).
+  * update the 'Mapping from OCDS' column to reflect the logic used in [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds).
   * remove references to the PPP profile, reference individual extensions instead.
   * update project identification mapping for sector.
   * replace reference to Budget and projects extension with Projects extension.
