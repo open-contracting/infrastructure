@@ -17,7 +17,7 @@ import yaml
 from colorama import Fore
 from docutils import nodes
 from jsonschema import FormatChecker
-from jsonschema.validators import Draft4Validator as validator
+from jsonschema.validators import Draft4Validator
 from ocdsextensionregistry import ProfileBuilder
 from ocdskit.mapping_sheet import mapping_sheet
 from ocdskit.schema import add_validation_properties
@@ -906,7 +906,7 @@ def lint(filename, additional_properties, link_fields):
     # Disallow additional properties
     _set_additional_properties(schema, additional_properties)
 
-    format_checker = FormatChecker()
+    validator = Draft4Validator(schema, format_checker=FormatChecker())
 
     # Load sustainability modules mapping
     with open(filename) as f:
@@ -950,7 +950,7 @@ def lint(filename, additional_properties, link_fields):
                 release = deepcopy(minimal_project)
                 json_merge_patch.merge(release, data)
 
-                for e in validator(schema, format_checker=format_checker).iter_errors(release):
+                for e in validator.iter_errors(release):
                     if e.validator == "additionalProperties":
                         e.absolute_schema_path[-1] = "properties"
                         e.absolute_schema_path.append("")
