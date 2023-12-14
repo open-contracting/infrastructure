@@ -945,12 +945,11 @@ def lint(filename, additional_properties, link_fields):
         if example and example != "N/A":
             try:
                 data = json.loads(example)
-                element["example"] = json.dumps(data, indent=2).replace("Infinity", "1e9999")
 
-                release = deepcopy(minimal_project)
-                json_merge_patch.merge(release, data)
+                project = deepcopy(minimal_project)
+                json_merge_patch.merge(project, data)
 
-                for e in validator.iter_errors(release):
+                for e in validator.iter_errors(project):
                     if e.validator == "additionalProperties":
                         e.absolute_schema_path[-1] = "properties"
                         e.absolute_schema_path.append("")
