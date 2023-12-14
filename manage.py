@@ -935,8 +935,6 @@ def lint(filename, additional_properties, link_fields):
                 global matches
                 matches = defaultdict(int)
                 value = unlinked_backticked_field.sub(lambda match: _make_link(match.group(0), fields, value), value)
-                element[key] = value
-                write_yaml_file(filename, elements)
 
             element[key] = mdformat.text(value, options={"number": True}).rstrip()
 
