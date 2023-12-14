@@ -14,7 +14,6 @@ import json_merge_patch
 import mdformat
 import requests
 import yaml
-from colorama import Fore
 from docutils import nodes
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator
@@ -822,72 +821,59 @@ def lint(filename, additional_properties, link_fields):
             for value in data.values():
                 _set_additional_properties(value, additional_properties)
 
-    def _get_properties(schema, parents=None):
+    def _get_fields(schema, parents=()):
         """
-        Return a list of property names from a JSON Schema object.
+        Generate field names (as tuples) in the JSON Schema.
         """
-        properties = []
-
         for name, value in schema.get('properties', {}).items():
-            if parents:
-                path = (*parents, name)
-            else:
-                path = (name,)
-
+            path = (*parents, name)
             if 'properties' in value:
-                properties.extend(_get_properties(value, path))
+                yield from _get_fields(value, path)
             else:
-                properties.append(path)
+                yield path
 
-        return properties
-
-    def _make_link(name, fields, text):
+    def _link(name, fields, text):
         """
         Generate a link to a field in a jsonschema directive HTML table. Prompt if the field's name is ambiguous.
 
         :param name: The property name
-        :param fields: A list of fields in the JSON schema
+        :param fields: A list of fields (as tuples) in the JSON schema
         :param text: The text in which the property name appears
         """
-
-        # Ignore boolean literals
         if name[1:] in {"`true`", "`false`"}:
             return name
 
-        # Track the number of matches so the current match can be highlighted
+        path = tuple(part for part in name[2:-1].split(".") if part != '')
+        occurrences = [field for field in fields if field[-len(path):] == path]
+
+        # Track the match index to highlight the current match.
         global matches
         matches[name] += 1
         match_number = matches[name]
 
-        leading_period = name[2] == '.'
-        path = tuple(part for part in name[2:-1].split(".") if part != '')
+        match len(occurrences):
+            case 0:
+                raise ValueError(f"Field {name} not in schema")
+            case 1:
+                choice = 0
+            # Resolve ambiguous field names, like `title`.
+            case _:
+                click.secho(f"{name[1:]} is ambiguous in:\n", fg="yellow")
 
-        # Identify occurrences of name in fields
-        occurrences = []
-        for field in fields:
-            if field[-len(path):] == path:
-                occurrences.append(field)
+                splits = text.split(name, match_number)
+                click.echo(f"{name.join(splits[:match_number])}{click.style(name, fg='red')}{splits[-1]}\n")
 
-        if not occurrences:
-            raise ValueError(f"Field {name} not in schema")
-        if len(occurrences) > 1:
-            # Prompt user to resolve ambiguous field names
-            text = text.split(name)
-            click.echo(f"{name} is ambiguous in:\n")
-            click.echo(
-                f"{Fore.RED}{name}{Fore.RESET}".join([name.join(text[:match_number]), name.join(text[match_number:])])
-            )
-            click.echo("\n")
+                occurrences.sort()
+                for i, field in enumerate(occurrences, 1):
+                    click.secho(f"    {i}: {'.'.join(field)}", fg="blue")
+                prompt = click.style(f"\nChoose the field to link to (1-{len(occurrences)}):", fg="yellow")
+                choices = click.Choice([str(i) for i in range(1, len(occurrences) + 1)])
+                choice = int(click.prompt(prompt, type=choices, prompt_suffix="", show_choices=False)) - 1
 
-            choices = "\n".join(f"{i}: {'.'.join(field)}" for i, field in enumerate(occurrences))
-            chosen_field = occurrences[int(input(f"Choose a field to link to:\n\n{choices}\n\nYour choice: "))]
-        else:
-            chosen_field = occurrences[0]
-
-        definition = chosen_field[0] if chosen_field[0][0].isupper() else None
+        definition = occurrences[choice][0] if occurrences[choice][0][0].isupper() else None
 
         url = f"project-schema.json,{f'/definitions/{definition}' if definition else ''},{'/'.join(path)}"
-        return f"{name[0]}[`{'.' if leading_period else ''}{'.'.join(path)}`]({url})"
+        return f"{name[0]}[`{'.' if name[2] == '.' else ''}{'.'.join(path)}`]({url})"
 
     minimal_project = {
         "id": "oc4ids-bu3kcz-1",
@@ -895,26 +881,22 @@ def lint(filename, additional_properties, link_fields):
 
     unlinked_backticked_field = re.compile(r"[^\[]`[A-Za-z.]+`")
 
-    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
-        schema = json.load(f)
-
-    # Get list of fields in schema
-    fields = _get_properties(schema)
-    for name, definition in schema['definitions'].items():
-        fields.extend(_get_properties(definition, (name,)))
-
-    # Disallow additional properties
-    _set_additional_properties(schema, additional_properties)
-
-    validator = Draft4Validator(schema, format_checker=FormatChecker())
-
-    # Load sustainability modules mapping
     with open(filename) as f:
         elements = yaml.safe_load(f)
 
+    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
+        schema = json.load(f)
+
+    _set_additional_properties(schema, additional_properties)
+
+    fields = set(_get_fields(schema))
+    for name, definition in schema['definitions'].items():
+        fields.update(_get_fields(definition, (name,)))
+
+    validator = Draft4Validator(schema, format_checker=FormatChecker())
+
     additional_fields = defaultdict(list)
     missing_data = defaultdict(list)
-
     for element in elements:
         identifier = element["id"]
         title = element["title"]
@@ -926,15 +908,14 @@ def lint(filename, additional_properties, link_fields):
                 if key != 'example' and 'See [' not in value:
                     missing_data[key].append(f"{identifier} {title}")
 
-        # Format Markdown
-        for key in ["title", "module", "indicator", "disclosure format", "mapping"]:
+        # Format Markdown.
+        for key in ("title", "module", "indicator", "disclosure format", "mapping"):
             value = element.get(key, "")
 
-            # Link fields to jsonschema directives
             if link_fields and key == "mapping":
                 global matches
                 matches = defaultdict(int)
-                value = unlinked_backticked_field.sub(lambda match: _make_link(match.group(0), fields, value), value)
+                value = unlinked_backticked_field.sub(lambda match: _link(match.group(0), fields, value), value)
 
             element[key] = mdformat.text(value, options={"number": True}).rstrip()
 
