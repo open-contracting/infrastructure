@@ -65,7 +65,6 @@ This section lists each sub-schema in the OC4IDS schema. Sub-schemas are parts o
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`contractingProcesses`](project-schema.json,,contractingProcesses)
 
 Each `ContractingProcess` has the following fields:
@@ -101,7 +100,6 @@ Each `ContractingProcess` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`ContractingProcess/summary`](project-schema.json,/definitions/ContractingProcess,summary)
 
 Each `ContractingProcessSummary` has the following fields:
@@ -137,7 +135,6 @@ Each `ContractingProcessSummary` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`ContractingProcess/releases`](project-schema.json,/definitions/ContractingProcess,releases)
 
 Each `LinkedRelease` has the following fields:
@@ -173,7 +170,6 @@ Each `LinkedRelease` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`ContractingProcessSummary/modifications`](project-schema.json,/definitions/ContractingProcessSummary,modifications)
 
 Each `Modification` has the following fields:
@@ -215,7 +211,6 @@ Where the source system does not contain time information, a judgment ought to b
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`period`](project-schema.json,,period)
 * [`assetLifetime`](project-schema.json,,assetLifetime)
 * [`identificationPeriod`](project-schema.json,,identificationPeriod)
@@ -340,7 +335,6 @@ Each `Period` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`additionalClassifications`](project-schema.json,,additionalClassifications)
 * [`environment/impactCategories`](project-schema.json,,environment/impactCategories)
 * [`Organization/classifications`](project-schema.json,/definitions/Organization,classifications)
@@ -394,7 +388,6 @@ Each `Classification` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`locations`](project-schema.json,,locations)
 * [`Beneficiary/location`](project-schema.json,/definitions/Beneficiary,location)
 
@@ -436,7 +429,6 @@ Each `Location` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`budget/amount`](project-schema.json,,budget/amount)
 * [`completion/finalValue`](project-schema.json,,completion/finalValue)
 * [`environment/abatementCost`](project-schema.json,,environment/abatementCost)
@@ -573,7 +565,6 @@ Each `Value` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`parties`](project-schema.json,,parties)
 
 Each `Organization` has the following fields:
@@ -609,7 +600,6 @@ Each `Organization` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`publicAuthority`](project-schema.json,,publicAuthority)
 * [`ContractingProcessSummary/tender/tenderers`](project-schema.json,/definitions/ContractingProcessSummary,tender/tenderers)
 * [`ContractingProcessSummary/tender/procuringEntity`](project-schema.json,/definitions/ContractingProcessSummary,tender/procuringEntity)
@@ -713,7 +703,6 @@ When working with data, users ought to be aware that addresses might not always 
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Location/address`](project-schema.json,/definitions/Location,address)
 * [`Organization/address`](project-schema.json,/definitions/Organization,address)
 * [`Person/address`](project-schema.json,/definitions/Person,address)
@@ -772,7 +761,6 @@ Each `Address` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Organization/contactPoint`](project-schema.json,/definitions/Organization,contactPoint)
 
 Each `ContactPoint` has the following fields:
@@ -808,7 +796,6 @@ Each `ContactPoint` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`budget/budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns)
 
 Each `BudgetBreakdowns` has the following fields:
@@ -846,7 +833,6 @@ For more information about this sub-schema, see the [OCDS Budget Breakdown exten
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`BudgetBreakdowns/budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown)
 
 Each `BudgetBreakdown` has the following fields:
@@ -882,7 +868,6 @@ Each `BudgetBreakdown` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`documents`](project-schema.json,,documents)
 * [`ContractingProcessSummary/documents`](project-schema.json,/definitions/ContractingProcessSummary,documents)
 
@@ -930,7 +915,6 @@ For example, if identifying a company in Colombia, look up its identifier in the
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Organization/identifier`](project-schema.json,/definitions/Organization,identifier)
 * [`Organization/additionalIdentifiers`](project-schema.json,/definitions/Organization,additionalIdentifiers)
 * [`Person/identifier`](project-schema.json,/definitions/Person,identifier)
@@ -973,7 +957,6 @@ Each `Identifier` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`relatedProjects`](project-schema.json,,relatedProjects)
 
 Each `RelatedProject` has the following fields:
@@ -1009,7 +992,6 @@ Each `RelatedProject` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`forecasts`](project-schema.json,,forecasts)
 * [`metrics`](project-schema.json,,metrics)
 
@@ -1051,7 +1033,6 @@ Each `Metric` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Metric/observations`](project-schema.json,/definitions/Metric,observations)
 
 Each `Observation` has the following fields:
@@ -1094,7 +1075,6 @@ Use this object when you need to disclose the details of people associated with,
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Organization/beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners)
 * [`Organization/people`](project-schema.json,/definitions/Organization,people)
 
@@ -1133,7 +1113,6 @@ A spending transaction related to a contracting process.
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`transactions`](project-schema.json,,transactions)
 * [`ContractingProcessSummary/transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions)
 
@@ -1175,7 +1154,6 @@ Each `Transaction` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`identifiers`](project-schema.json,,identifiers)
 
 Each `SimpleIdentifier` has the following fields:
@@ -1211,7 +1189,6 @@ Each `SimpleIdentifier` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`milestones`](project-schema.json,,milestones)
 * [`ContractingProcessSummary/milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones)
 
@@ -1253,7 +1230,6 @@ Each `Milestone` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Transaction/relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone)
 
 Each `MilestoneReference` has the following fields:
@@ -1294,7 +1270,6 @@ Each `MilestoneReference` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`environment/conservationMeasures`](project-schema.json,,environment/conservationMeasures)
 
 Each `ConservationMeasure` has the following fields:
@@ -1330,7 +1305,6 @@ Each `ConservationMeasure` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`budget/finance`](project-schema.json,,budget/finance)
 * [`ContractingProcessSummary/finance`](project-schema.json,/definitions/ContractingProcessSummary,finance)
 
@@ -1367,7 +1341,6 @@ Each `Finance` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`costMeasurements`](project-schema.json,,costMeasurements)
 
 Each `CostMeasurement` has the following fields:
@@ -1403,7 +1376,6 @@ Each `CostMeasurement` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`CostMeasurement/costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups)
 
 Each `CostGroup` has the following fields:
@@ -1439,7 +1411,6 @@ Each `CostGroup` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)
 
 Each `Cost` has the following fields:
@@ -1475,7 +1446,6 @@ Each `Cost` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`ContractingProcessSummary/social/laborObligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations)
 
 Each `LaborObligations` has the following fields:
@@ -1511,7 +1481,6 @@ Each `LaborObligations` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`benefits`](project-schema.json,,benefits)
 
 Each `Benefit` has the following fields:
@@ -1547,7 +1516,6 @@ Each `Benefit` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Benefit/beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries)
 
 Each `Beneficiary` has the following fields:
@@ -1583,7 +1551,6 @@ Each `Beneficiary` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`ContractingProcessSummary/tender/sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability)
 
 Each `Sustainability` has the following fields:
@@ -1619,7 +1586,6 @@ Each `Sustainability` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)
 * [`Social/consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings)
 
@@ -1661,7 +1627,6 @@ Each `Meeting` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Meeting/publicOffice`](project-schema.json,/definitions/Meeting,publicOffice)
 
 Each `PublicOffice` has the following fields:
@@ -1697,7 +1662,6 @@ Each `PublicOffice` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`social`](project-schema.json,,social)
 
 Each `Social` has the following fields:
@@ -1733,7 +1697,6 @@ Each `Social` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`Social/healthAndSafety`](project-schema.json,/definitions/Social,healthAndSafety)
 
 Each `HealthAndSafety` has the following fields:
@@ -1769,7 +1732,6 @@ Each `HealthAndSafety` has the following fields:
 ```
 
 This sub-schema is referenced by the following properties:
-
 * [`environment/climateMeasures`](project-schema.json,,environment/climateMeasures)
 
 Each `ClimateMeasure` has the following fields:
