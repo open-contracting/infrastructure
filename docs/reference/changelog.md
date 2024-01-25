@@ -141,6 +141,9 @@
     * 'transport.lowCarbon'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType:
     * 'decommissioning'
+  * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
+    * 'airManagement'
+    * 'waterManagement'
 
 ### Other
 
