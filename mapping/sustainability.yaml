@@ -1,5 +1,5 @@
 -   id: '1.1'
-    title: 'Procurement strategy '
+    title: Procurement strategy
     module: Economic and fiscal
     indicator: Procurement viability
     disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision.
@@ -469,7 +469,7 @@
     title: Climate and disaster risk assessment
     module: Environment and climate
     indicator: Climate and disaster risk
-    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to. This tends to be part of the appraisal documents.
+    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed. This tends to be part of the appraisal documents.
     mapping: |-
         Project level:
 
@@ -662,7 +662,7 @@
           ]
         }
 -   id: '3.1'
-    title: 'Climate objective '
+    title: Climate objective
     module: Climate finance
     indicator: Project theme
     disclosure format: |-
@@ -685,7 +685,7 @@
           }
         }
 -   id: '3.2'
-    title: 'Financial instrument '
+    title: Financial instrument
     module: Climate finance
     indicator: Financial mechanism
     disclosure format: |-
@@ -728,7 +728,7 @@
           }
         }
 -   id: '3.3'
-    title: 'Climate transformation '
+    title: Climate transformation
     module: Climate finance
     indicator: Model of change
     disclosure format: Clarify the theory of change, systemic transition or transformation that is intended.
@@ -747,7 +747,7 @@
           ]
         }
 -   id: '3.4'
-    title: 'Climate finance decision-maker '
+    title: Climate finance decision-maker
     module: Climate finance
     indicator: Decision-making process
     disclosure format: Identify who approved the climate finance investment in the country.
@@ -768,21 +768,21 @@
           ]
         }
 -   id: '3.5'
-    title: 'Nationally Determined Contributions (NDC) '
+    title: Nationally Determined Contributions (NDC)
     module: Climate finance
     indicator: Policy coherence
     disclosure format: Clarify how the investment is aligned with the country's nationally determined contributions.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
 -   id: '3.6'
-    title: 'Paris Agreement '
+    title: Paris Agreement
     module: Climate finance
     indicator: Policy coherence
     disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
 -   id: '3.7'
-    title: 'Beneficiaries '
+    title: Beneficiaries
     module: Climate finance
     indicator: Beneficiary population
     disclosure format: Disclose who the climate finance investment is intended to benefit and number of beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
@@ -811,7 +811,7 @@
           }
         }
 -   id: '3.9'
-    title: 'Funding source '
+    title: Funding source
     module: Climate finance
     indicator: Economic viability
     disclosure format: Disclose who is providing the finance.
@@ -830,7 +830,7 @@
           }
         }
 -   id: '3.10'
-    title: 'Green Climate Fund Accredited Entity '
+    title: Green Climate Fund Accredited Entity
     module: Climate finance
     indicator: Accessibility
     disclosure format: For projects financed by the Green Climate Fund, disclose the accredited entities through which GCF resources are accessed.
@@ -862,7 +862,7 @@
           ]
         }
 -   id: '3.11'
-    title: 'Accredited Entity Type '
+    title: Accredited Entity Type
     module: Climate finance
     indicator: Accessibility
     disclosure format: |-
@@ -902,14 +902,14 @@
           ]
         }
 -   id: '3.12'
-    title: 'Project preparation costs '
+    title: Project preparation costs
     module: Climate finance
     indicator: Accessibility/ Project viability
     disclosure format: Disclose the amounts invested in project preparation.
     mapping: See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
     example: ''
 -   id: '3.13'
-    title: 'Project preparation period '
+    title: Project preparation period
     module: Climate finance
     indicator: Accessibility/ efficiency
     disclosure format: Disclose dates for project preparation.
@@ -925,10 +925,14 @@
           }
         }
 -   id: '3.14'
-    title: 'Project approval period '
+    title: Project approval period
     module: Climate finance
     indicator: Accessibility
-    disclosure format: "Disclose dates for project approval:\n\n- submission date \n- approval date"
+    disclosure format: |-
+        Disclose dates for project approval:
+
+        - submission date
+        - approval date
     mapping: |-
         Project level:
 
@@ -955,7 +959,7 @@
           ]
         }
 -   id: '3.15'
-    title: 'Ratio of co-finance '
+    title: Ratio of co-finance
     module: Climate finance
     indicator: Economic viability
     disclosure format: |-
@@ -988,7 +992,7 @@
           }
         }
 -   id: '3.16'
-    title: 'Terms of climate finance '
+    title: Terms of climate finance
     module: Climate finance
     indicator: Economic viability
     disclosure format: |-
@@ -1033,7 +1037,7 @@
           }
         }
 -   id: '3.17'
-    title: 'Carbon efficiency '
+    title: Carbon efficiency
     module: Climate finance
     indicator: Climate impact
     disclosure format: Disclose the cost per tonne of CO2 equivalent reduction attributed to the project.
@@ -1058,7 +1062,7 @@
           ]
         }
 -   id: '3.18'
-    title: 'Non-climate co-benefits '
+    title: Non-climate co-benefits
     module: Climate finance
     indicator: Non-climate impact
     disclosure format: |-
@@ -1082,7 +1086,7 @@
           ]
         }
 -   id: '3.19'
-    title: 'Public consultation meetings '
+    title: Public consultation meetings
     module: Climate finance
     indicator: Public participation
     disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the meeting invite, the number of participants, dates and location of these meetings.
@@ -1193,7 +1197,7 @@
           }
         }
 -   id: '3.22'
-    title: 'Performance monitoring '
+    title: Performance monitoring
     module: Climate finance
     indicator: KPIs
     disclosure format: Disclose Key Performance Indicators adopted by the project.
@@ -1214,7 +1218,7 @@
     title: Reporting period
     module: Climate finance
     indicator: KPIs
-    disclosure format: Clarify the project reporting period, it could be quarterly, annually, biannually.
+    disclosure format: Clarify the project reporting period. It could be quarterly, annually, biannually.
     mapping: |-
         Project level:
 
@@ -1230,7 +1234,7 @@
           ]
         }
 -   id: '3.24'
-    title: 'Oversight reports '
+    title: Oversight reports
     module: Climate finance
     indicator: Anti-corruption impact
     disclosure format: Disclose oversight reports.
@@ -1256,7 +1260,7 @@
     mapping: See [independent monitoring (institutional module)](institutional-independent-monitoring).
     example: ''
 -   id: '3.26'
-    title: 'Independent evaluation '
+    title: Independent evaluation
     module: Climate finance
     indicator: Long-term project impact
     disclosure format: Disclose technical audits produced at end of the project.
@@ -1278,7 +1282,7 @@
           ]
         }
 -   id: '3.27'
-    title: 'Impact measurement '
+    title: Impact measurement
     module: Climate finance
     indicator: Long-term project impact
     disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution.
@@ -1396,14 +1400,14 @@
           }
         }
 -   id: '3.31'
-    title: 'Decommission plan '
+    title: Decommission plan
     module: Climate finance
     indicator: Climate management
     disclosure format: Disclose the technical plan for decommissioning.
     mapping: See [decommissioning plans (environment and social)](environment-and-climate-decommissioning-plans).
     example: ''
 -   id: '3.33'
-    title: 'Carbon decommission savings '
+    title: Carbon decommission savings
     module: Climate finance
     indicator: Climate management
     disclosure format: Disclose the evaluation of CO2 savings as a result of decommissioning.
@@ -1477,7 +1481,7 @@
           ]
         }
 -   id: '4.1'
-    title: 'Number of beneficiaries '
+    title: Number of beneficiaries
     module: Social
     indicator: Beneficiary population
     disclosure format: Indicate the number of direct and indirect project beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
@@ -1533,7 +1537,7 @@
           ]
         }
 -   id: '4.3'
-    title: 'Indigenous land '
+    title: Indigenous land
     module: Social
     indicator: Indigenous populations
     disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.

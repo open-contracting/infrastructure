@@ -742,7 +742,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the type of climate and disaster risks to which the project is exposed to. This tends to be part of the appraisal documents.
+Clarify the type of climate and disaster risks to which the project is exposed. This tends to be part of the appraisal documents.
 ````
 
 ````{grid-item-card}
@@ -1900,7 +1900,7 @@ For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the project reporting period, it could be quarterly, annually, biannually.
+Clarify the project reporting period. It could be quarterly, annually, biannually.
 ````
 
 ````{grid-item-card}
