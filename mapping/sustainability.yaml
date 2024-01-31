@@ -2,7 +2,7 @@
     title: Procurement strategy
     module: Economic and fiscal
     indicator: Procurement viability
-    disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision. (E.g. \[Document\]).
+    disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision.
     mapping: |-
         Project Level:
 
@@ -22,7 +22,7 @@
     title: Life cycle cost
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017) (E.g. \[value\]).
+    disclosure format: Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017).
     mapping: |-
         Project Level:
 
@@ -61,10 +61,10 @@
           ]
         }
 -   id: '1.4'
-    title: Funding source for preparation, implementation and operation
+    title: Funding source for preparation, implementation and maintenance
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Name the funding organization(s)/sources of funding for Preparation, Implementation and Operation. If the information is not available for any of the stages, select \['funding/budget source not specified'\] for the respective stage where the nature of the funding/budget source could not be identified.
+    disclosure format: Name the funding organization(s) / sources of funding for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
     mapping: |-
         Project level:
 
@@ -116,10 +116,10 @@
           ]
         }
 -   id: '1.5'
-    title: Budget for preparation, implementation and operation
+    title: Budget for preparation, implementation and maintenance
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Specify the allocated budget for preparation, implementation, operation. If no amount is allocated for each of the stages, select the option 'amount not allocated" (E.g. Preparation \[currency and amount\], Implementation\[currency and amount\], Operation \[currency and amount\]
+    disclosure format: Specify the allocated budget for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
     mapping: |-
         Project level:
 
@@ -163,18 +163,31 @@
     title: Cost benefit analysis
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the project cost-benefit analysis. This information tends to be part of the appraisal documents. (E.g. \[Document\]).
-    mapping: |-
-        Project Level:
+    disclosure format: |-
+        Economic assessment that tends to be part of the appraisal documents and provides information on economic net benefits and costs ("ex ante" cost benefit analysis). A revised assessment can be prepared during the operational phase of the project to update the information on net benefits and costs ("ex post" cost benefit analysis). Disclose both:
 
-        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis'.
+        - Ex ante cost benefit analysis
+        - Ex post cost benefit analysis
+    mapping: |-
+        Project level:
+
+        1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex ante cost benefit analysis".
+
+        2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex post cost benefit analysis".
     example: |-
         {
           "documents": [
             {
               "id": "1",
               "documentType": "costBenefitAnalysis",
-              "url": "http://example.com/documents/costBenefitAnalysis.pdf"
+              "description": "ex ante cost benefit analysis",
+              "url": "http://example.com/documents/exAnteCostBenefitAnalysis.pdf"
+            },
+            {
+              "id": "2",
+              "documentType": "costBenefitAnalysis",
+              "description": "ex post cost benefit analysis",
+              "url": "http://example.com/documents/exPostCostBenefitAnalysis.pdf"
             }
           ]
         }
@@ -182,7 +195,7 @@
     title: Value for money
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents. (E.g. \[Document\]).
+    disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents.
     mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''valueForMoneyAnalysis''.'
     example: |-
         {
@@ -198,7 +211,7 @@
     title: Budget projections
     module: Economic and fiscal
     indicator: Multi-year implementation
-    disclosure format: 'In case of multiyear project implementation, disclose information on budget projection for all years of implementation (E.g. Y1: \[currency and amount\], Y2: \[currency and amount\], etc).'
+    disclosure format: In case of multiyear project implementation, disclose information on budget projection for all years of implementation.
     mapping: |-
         Project level:
 
@@ -250,7 +263,7 @@
     title: Budget shortfall
     module: Economic and fiscal
     indicator: Budget execution
-    disclosure format: 'Disclose any shortfall in the allocated budget (E.g. \[currency and amount\] and \[free text: reasons for the funding shortfall\]'
+    disclosure format: Disclose any shortfall in the allocated budget, including reasons for it.
     mapping: |-
         Project level:
 
@@ -277,6 +290,34 @@
             }
           ]
         }
+-   id: '1.10'
+    title: Maintenance plan or program
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the maintenance plan or program.
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''maintenancePlan''.'
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "maintenancePlan",
+              "url": "http://example.com/documents/maintenancePlan.pdf"
+            }
+          ]
+        }
+-   id: '1.11'
+    title: Asset lifetime
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the expected lifetime of the asset. This tends to be part of the design report.
+    mapping: 'Project Level: Convert to days and map to `assetLifetime.durationInDays`.'
+    example: |-
+        {
+          "assetLifetime": {
+            "durationInDays": 3650
+          }
+        }
 -   id: '2.1'
     title: Environmental impact category
     module: Environment and climate
@@ -289,8 +330,6 @@
         - Category B: projects with potential limited adverse environmental or social risks and/or impacts that are few in number, generally site-specific, largely reversible, and readily addressed through mitigation measures.
 
         - Category C: projects with minimal or no adverse environmental or social risks and/or impacts.
-
-        (Select from a list: A/B/C - Specify list as IFC's Environmental and Social Categorization).
     mapping: |-
         Project level:
 
@@ -316,7 +355,7 @@
     title: Environmental measures
     module: Environment and climate
     indicator: Environmental impact
-    disclosure format: Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document).
+    disclosure format: Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact.
     mapping: |-
         Project level:
 
@@ -333,10 +372,10 @@
           ]
         }
 -   id: '2.3'
-    title: Environmental exceptions
+    title: Environmental licenses and exemptions
     module: Environment and climate
     indicator: Environmental impact
-    disclosure format: Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Document\]). This can be planning, environmental, construction and/or operational related.
+    disclosure format: Disclose all licenses, exemptions and/or amnesties obtained for the project. This can be related to Preparation, Implementation and/or Maintenance. These stages are also known as Planning, Construction and Operation respectively.
     mapping: |-
         Project Level:
 
@@ -355,7 +394,7 @@
     title: Protected area
     module: Environment and climate
     indicator: Biodiversity impact
-    disclosure format: Identify whether the project is located in a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
+    disclosure format: Identify whether the project is located in, or provides access to a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
     mapping: |-
         Project level:
 
@@ -399,8 +438,8 @@
         - management of wildlife mortality risk
         - reduce habitat loss
         - pollution reduction
-        - soil management
-        - hazardous material management\])
+        - land, water and air management
+        - hazardous material management
         - others (explain)
     mapping: |-
         Project level:
@@ -430,7 +469,7 @@
     title: Climate and disaster risk assessment
     module: Environment and climate
     indicator: Climate and disaster risk
-    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.
+    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed. This tends to be part of the appraisal documents.
     mapping: |-
         Project level:
 
@@ -451,21 +490,19 @@
     module: Environment and climate
     indicator: Climate risk
     disclosure format: |-
-        Clarify whether the project design considered climate change mitigation and/or adaptation measures,. disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
+        Clarify whether the project design considered climate change mitigation and/or adaptation measures, disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
 
-        use of lower-emission sources of energy
-        use of lower-emission materials
-        use of recycled and reused materials
-        regenerative design
-        retrofitting design
-        use of carbon capture technology
-        assessment of extreme weather events
-        assessment of precipitation patterns
-        assessment of rising temperatures
-        assessment of rising sea levels
-        others (explain)
-
-        And \[Document\]).
+        - use of lower-emission sources of energy
+        - use of lower-emission materials
+        - use of recycled and reused materials
+        - regenerative design
+        - retrofitting design
+        - use of carbon capture technology
+        - assessment of extreme weather events
+        - assessment of precipitation patterns
+        - assessment of rising temperatures
+        - assessment of rising sea levels
+        - others (explain).
     mapping: |-
         Project level:
 
@@ -496,7 +533,7 @@
     title: Forecast of greenhouse gas emissions
     module: Environment and climate
     indicator: Climate risk
-    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]).
+    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, including the calculation, the methodology applied and where the calculation can be found.
     mapping: |-
         Project level:
 
@@ -547,7 +584,7 @@
     title: Environmental certifications
     module: Environment and climate
     indicator: Climate management
-    disclosure format: Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management (E.g. \[Document\]).
+    disclosure format: Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management.
     mapping: |-
         Contracting process level:
 
@@ -573,7 +610,7 @@
     title: Decommissioning plans
     module: Environment and climate
     indicator: Climate management
-    disclosure format: Disclose the decommissioning plans for the project assets \[document\]..
+    disclosure format: Disclose the decommissioning plans for the project assets.
     mapping: |-
         Project level:
 
@@ -592,7 +629,7 @@
     title: Decommissioning cost forecast
     module: Environment and climate
     indicator: Climate management
-    disclosure format: Disclose the forecast decommissioning costs for the project assets \[value, currency\].
+    disclosure format: Disclose the forecast decommissioning costs for the project assets.
     mapping: |-
         Project level:
 
@@ -629,10 +666,7 @@
     module: Climate finance
     indicator: Project theme
     disclosure format: |-
-        Disclose the main climate objective that the project addresses.
-
-        Select from a list:
-        Eg:
+        Disclose the main climate objective that the project addresses from the list:
 
         - mitigation
         - adaptation
@@ -697,7 +731,7 @@
     title: Climate transformation
     module: Climate finance
     indicator: Model of change
-    disclosure format: Clarify the theory of change, systemic transition or transformation that is intended \[free text to explain\].
+    disclosure format: Clarify the theory of change, systemic transition or transformation that is intended.
     mapping: |-
         Project level:
 
@@ -716,7 +750,7 @@
     title: Climate finance decision-maker
     module: Climate finance
     indicator: Decision-making process
-    disclosure format: Identify who approved the climate finance investment in the country (organization, party, role)
+    disclosure format: Identify who approved the climate finance investment in the country.
     mapping: |-
         Project level:
 
@@ -737,31 +771,28 @@
     title: Nationally Determined Contributions (NDC)
     module: Climate finance
     indicator: Policy coherence
-    disclosure format: Clarify how the investment is aligned with the country's nationally determined contributions. \[codelist, free text to explain\].
+    disclosure format: Clarify how the investment is aligned with the country's nationally determined contributions.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
 -   id: '3.6'
     title: Paris Agreement
     module: Climate finance
     indicator: Policy coherence
-    disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments. \[codelist, free text to explain\].
+    disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
 -   id: '3.7'
     title: Beneficiaries
     module: Climate finance
     indicator: Beneficiary population
-    disclosure format: |-
-        Disclose who is the climate finance investment intended to benefit \[free text to explain the beneficiaries\] and number of beneficiaries. \[Select from the list:
-        Direct
-        Indirect\]
+    disclosure format: Disclose who the climate finance investment is intended to benefit and number of beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
     mapping: See [number of beneficiaries (social module)](social-number-of-beneficiaries)
     example: ''
 -   id: '3.8'
     title: Amount of investment
     module: Climate finance
     indicator: Economic viability
-    disclosure format: Disclose the quantum of the climate finance investment \[value, currency\].
+    disclosure format: Disclose the quantum of the climate finance investment.
     mapping: |-
         1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
         2. Map to the financing arrangement's [`.value`](project-schema.json,/definitions/Finance,value).
@@ -783,7 +814,7 @@
     title: Funding source
     module: Climate finance
     indicator: Economic viability
-    disclosure format: Disclose who is providing the finance \[party/organization/role\].
+    disclosure format: Disclose who is providing the finance.
     mapping: |-
         1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
         2. Map to the financing arrangement's [`.source`](project-schema.json,/definitions/Finance,source).
@@ -835,10 +866,10 @@
     module: Climate finance
     indicator: Accessibility
     disclosure format: |-
-        Select from the lists:
+        Disclose the type of accredited entity, from the list:
 
-        - Private
-        - Public
+        - private
+        - public
         - non-governmental
         - sub-national
         - national
@@ -874,14 +905,14 @@
     title: Project preparation costs
     module: Climate finance
     indicator: Accessibility/ Project viability
-    disclosure format: Disclose the amounts invested in project preparation \[value, currency\].
-    mapping: See [budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
+    disclosure format: Disclose the amounts invested in project preparation.
+    mapping: See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
     example: ''
 -   id: '3.13'
     title: Project preparation period
     module: Climate finance
     indicator: Accessibility/ efficiency
-    disclosure format: Disclose dates for project preparation \[start date, end date\].
+    disclosure format: Disclose dates for project preparation.
     mapping: |-
         Project level:
 
@@ -897,7 +928,11 @@
     title: Project approval period
     module: Climate finance
     indicator: Accessibility
-    disclosure format: Disclose dates for project approval \[submission date, approval date\].
+    disclosure format: |-
+        Disclose dates for project approval:
+
+        - submission date
+        - approval date
     mapping: |-
         Project level:
 
@@ -928,11 +963,10 @@
     module: Climate finance
     indicator: Economic viability
     disclosure format: |-
-        Disclose the ratio of co-finance. Select from a list to specify amounts.
+        Disclose the ratio of co-finance. Select from a list to specify amounts:
 
-        Eg:\
-        Domestic mobilisations \[value or NA\]
-        Private Finance \[value or NA\]
+        - domestic mobilisations
+        - private finance
     mapping: The OC4IDS data model provides the information needed to calculate co-finance ratios by modeling a project's individual financing arrangements. For more information, see the mappings for [amount of investment](climate-finance-amount-of-investment), [funding source](climate-finance-funding-source), [Green Climate Fund Accredited Entity](climate-finance-green-climate-fund-accredited-entity) and [Accredited Entity Type](climate-finance-accredited-entity-type).
     example: |-
         {
@@ -962,14 +996,14 @@
     module: Climate finance
     indicator: Economic viability
     disclosure format: |-
-        This includes several financial terms:
+        Disclose the financial instrument and on what terms is the finance being provided. This includes several financial terms:
 
         - maturity (years)
-        - Grace period (years)
+        - grace period (years)
         - annual principal repayment years (% of initial principle)
-        - Interest (%)
-        - Service fee (per annum)
-        - Commitment fee (per annum)
+        - interest (%)
+        - service fee (per annum)
+        - commitment fee (per annum)
     mapping: |-
         1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
         2. Map the terms to the financing arrangement's properties:
@@ -1006,7 +1040,7 @@
     title: Carbon efficiency
     module: Climate finance
     indicator: Climate impact
-    disclosure format: Disclose the cost per tonne of CO2 equivalent \[value, currency\].
+    disclosure format: Disclose the cost per tonne of CO2 equivalent reduction attributed to the project.
     mapping: |-
         Project level:
 
@@ -1037,9 +1071,7 @@
         - economic
         - social
         - environmental
-        - gender empowerment
-
-        \[add free text to explain the co-benefits\].
+        - gender empowerment.
     mapping: |-
         Project level:
 
@@ -1057,14 +1089,14 @@
     title: Public consultation meetings
     module: Climate finance
     indicator: Public participation
-    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the minutes, number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\], \[Document\]).
+    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the meeting invite, the number of participants, dates and location of these meetings.
     mapping: See [public consultation meetings (social module)](social-public-consultation-meetings).
     example: ''
 -   id: '3.20'
     title: Disbursement records
     module: Climate finance
     indicator: Efficiency
-    disclosure format: Disbursements dates according to financial agreement versus actual disbursements dates \[value, currency, date\].
+    disclosure format: Disbursements dates according to financial agreement versus actual disbursements dates.
     mapping: |-
         For each planned disbursement:
 
@@ -1146,7 +1178,7 @@
     module: Climate finance
     indicator: KPIs
     disclosure format: |-
-        Select from a list:
+        Disclose the type of monitoring from the list:
 
         - internal
         - external
@@ -1168,7 +1200,7 @@
     title: Performance monitoring
     module: Climate finance
     indicator: KPIs
-    disclosure format: Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
+    disclosure format: Disclose Key Performance Indicators adopted by the project.
     mapping: |-
         Project level:
 
@@ -1186,7 +1218,7 @@
     title: Reporting period
     module: Climate finance
     indicator: KPIs
-    disclosure format: It could be quarterly, annually, biannually, etc. \[free text\].
+    disclosure format: Clarify the project reporting period. It could be quarterly, annually, biannually.
     mapping: |-
         Project level:
 
@@ -1205,7 +1237,7 @@
     title: Oversight reports
     module: Climate finance
     indicator: Anti-corruption impact
-    disclosure format: Disclose oversight reports.\[document\].
+    disclosure format: Disclose oversight reports.
     mapping: |-
         Project level:
 
@@ -1224,14 +1256,14 @@
     title: Independent monitoring
     module: Climate finance
     indicator: Anti-corruption impact
-    disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
+    disclosure format: Identify the entities acting as independent monitors of the project.
     mapping: See [independent monitoring (institutional module)](institutional-independent-monitoring).
     example: ''
 -   id: '3.26'
     title: Independent evaluation
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: Disclose technical audits produced at end of the project (E.g. \[free text\].
+    disclosure format: Disclose technical audits produced at end of the project.
     mapping: |-
         Project level:
 
@@ -1253,7 +1285,7 @@
     title: Impact measurement
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution (E.g. \[free text\].
+    disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution.
     mapping: |-
         Project level:
 
@@ -1265,7 +1297,7 @@
               "id": "1",
               "documentType": "impactMethodology",
               "description": "The long term impact of this project will be measured according to...",
-              "url": " http://example.com/impactMethodology.pdf "
+              "url": "http://example.com/impactMethodology.pdf"
             }
           ]
         }
@@ -1273,7 +1305,7 @@
     title: Carbon footprint
     module: Climate finance
     indicator: Long-term project impact
-    disclosure format: Disclose the carbon footprint of the project, informing the calculation, the methodology applied, and where the calculation can be found. \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\].
+    disclosure format: Disclose the carbon footprint of the project, including the calculation, the methodology applied, and where the calculation can be found.
     mapping: |-
         Project level:
 
@@ -1316,7 +1348,7 @@
             {
               "id": "1",
               "documentType": "ghgEmissions",
-              "url": " http://example.com/ghgEmissions.pdf "
+              "url": "http://example.com/ghgEmissions.pdf"
             }
           ]
         }
@@ -1324,7 +1356,7 @@
     title: Infrastructure assets to be decommissioned
     module: Climate finance
     indicator: Stranded assets
-    disclosure format: Identify the asset for disposal purpose \[free text\].
+    disclosure format: Identify the asset for disposal purpose.
     mapping: |-
         For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
@@ -1371,14 +1403,14 @@
     title: Decommission plan
     module: Climate finance
     indicator: Climate management
-    disclosure format: 'Disclose the technical plan for decommissioning (E.g.: \[Doc\]).'
+    disclosure format: Disclose the technical plan for decommissioning.
     mapping: See [decommissioning plans (environment and social)](environment-and-climate-decommissioning-plans).
     example: ''
 -   id: '3.33'
     title: Carbon decommission savings
     module: Climate finance
     indicator: Climate management
-    disclosure format: Disclose the evaluation of CO2 savings as a result of decommissioning \[value, tons CO2 equivalent\].
+    disclosure format: Disclose the evaluation of CO2 savings as a result of decommissioning.
     mapping: |-
         Project level:
 
@@ -1422,7 +1454,7 @@
             {
               "id": "1",
               "documentType": "ghgEmissionsReduction",
-              "url": " http://example.com/GhgEmissionsReduction.pdf "
+              "url": "http://example.com/GhgEmissionsReduction.pdf"
             }
           ]
         }
@@ -1430,7 +1462,7 @@
     title: Decommission mitigation plan
     module: Climate finance
     indicator: Climate management
-    disclosure format: 'Disclose mitigation plan for people and communities affected by decommissioning (E.g.: \[Doc\]).'
+    disclosure format: Disclose mitigation plan for people and communities affected by decommissioning.
     mapping: |-
         Project level:
 
@@ -1452,7 +1484,7 @@
     title: Number of beneficiaries
     module: Social
     indicator: Beneficiary population
-    disclosure format: 'Indicate the number of direct and indirect project beneficiaries (E.g. direct: \[number\]; indirect: "number"). Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.'
+    disclosure format: Indicate the number of direct and indirect project beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
     mapping: |-
         Project level:
 
@@ -1480,7 +1512,7 @@
     title: Inclusive design and implementation
     module: Social
     indicator: Gender and inclusion
-    disclosure format: Clarify whether gender, people with disabilities and vulnerable and disadvantaged populations were considered in the project design (e.g. "free text to explain how the design meets inclusion goals" and document to support - the project design) and project implementation (e.g. "free text to explain implementation practices targeting inclusion goals" and document to support - contractor policy and procedures).
+    disclosure format: Clarify whether gender, people with disabilities, and vulnerable and disadvantaged populations were considered in the project design and project implementation, providing details on how the design and implementation practices meet inclusion goals.
     mapping: |-
         Project level:
 
@@ -1585,7 +1617,7 @@
     title: Land compensation budget
     module: Social
     indicator: Land issues
-    disclosure format: Disclose budget allocated to fund land compensation (E.g. \[value\]).
+    disclosure format: Disclose budget allocated to fund land compensation.
     mapping: |-
         Project Level:
 
@@ -1606,22 +1638,22 @@
     disclosure format: |-
         Disclose labour obligations in the construction contract. This can include, without limitation, the following:
 
-        - Minimum wage
-        - Overtime
-        - Prohibition of forced labour
-        - Prohibition of child labour
-        - Equal opportunity
-        - Non-discrimination
-        - Freedom of association
-        - Grievance mechanism
-        - Working at height
-        - Underground work
-        - Handling of materials/equipment
-        - Monitoring of accidents
-        - Traffic management
-        - Accommodation
-        - Protective equipment
-        - Others (explain)
+        - minimum wage
+        - overtime
+        - prohibition of forced labour
+        - prohibition of child labour
+        - equal opportunity
+        - non-discrimination
+        - freedom of association
+        - grievance mechanism
+        - working at height
+        - underground work
+        - handling of materials/equipment
+        - monitoring of accidents
+        - traffic management
+        - accommodation
+        - protective equipment
+        - others (explain)
     mapping: |-
         Contracting process level:
 
@@ -1668,7 +1700,7 @@
     title: Labour budget
     module: Social
     indicator: Labour compliance
-    disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs (E.g. \[value\]).
+    disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs.
     mapping: |-
         Contracting process level:
 
@@ -1758,7 +1790,7 @@
     title: Health and safety certifications
     module: Social
     indicator: Health and Safety
-    disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety (E.g. \[Document\]).
+    disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
     mapping: |-
         Contracting process level:
 
@@ -1787,25 +1819,21 @@
     disclosure format: |-
         Disclose construction materials tests performed during project implementation. This can include, without limitation, the following:
 
-        - Asphalt
-        - Aggregate and rock
-        - Bricks
-        - Cement
-        - Concrete
-        - Coarse and fine aggregate
-        - Masonry
-        - Metallic materials
-        - Mortar
-        - Plywood
-        - Timber
-        - Resin and polymer
-        - Soil
-        - Stone
-        - Others (explain).
-
-        \[Free text to add not mentioned tests\]
-
-        Document
+        - asphalt
+        - aggregate and rock
+        - bricks
+        - cement
+        - concrete
+        - coarse and fine aggregate
+        - masonry
+        - metallic materials
+        - mortar
+        - plywood
+        - timber
+        - resin and polymer
+        - soil
+        - stone
+        - others (explain).
     mapping: |-
         Project level:
 
@@ -1841,7 +1869,7 @@
     title: Building inspections
     module: Social
     indicator: Health and Safety
-    disclosure format: Disclose building inspections during project implementation (E.g. \[Document\]).
+    disclosure format: Disclose building inspections during project implementation.
     mapping: |-
         Project Level:
 
@@ -1860,7 +1888,7 @@
     title: Jobs generated
     module: Social
     indicator: Growth impact
-    disclosure format: 'Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (E.g. \[direct: value\] \[indirect: value\]).'
+    disclosure format: Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (direct/indirect).
     mapping: |-
         Project level:
 
@@ -1984,8 +2012,6 @@
         - Nationally Determined Contributions (NDCs)
         - National Adaptation Plans
         - Medium-term fiscal frameworks/targets
-
-        \[free text\]
     mapping: |-
         Project level:
 
@@ -2036,7 +2062,7 @@
     title: Freedom of information requests
     module: Institutional
     indicator: Access to information
-    disclosure format: Disclose Freedom of Information (FoI) requests that have been presented in relation to the project \[E.g. Document\]. Note that FoI requests can also be known as access to information requests.
+    disclosure format: Disclose Freedom of Information (FoI) requests that have been presented in relation to the project. Note that FoI requests can also be known as access to information requests.
     mapping: |-
         Project level:
 
@@ -2055,7 +2081,7 @@
     title: Answers to Freedom of information requests
     module: Institutional
     indicator: Access to information
-    disclosure format: Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project (Eg. \[Document\]). Note that FoI requests may also be known as access to information requests.
+    disclosure format: Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project. Note that FoI requests may also be known as access to information requests.
     mapping: |-
         Project level:
 
@@ -2074,7 +2100,7 @@
     title: Lobbying transparency
     module: Institutional
     indicator: Access to information
-    disclosure format: Disclose the occurrence of meetings with interest groups, including the meeting agenda and minutes, the number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\] \[Document\]).
+    disclosure format: Disclose the occurrence of meetings with interested groups, including the number of participants, date, location and minutes of these meetings, as well as the name and job title of the person representing the public office present at the meeting.
     mapping: |-
         Project Level:
 
@@ -2134,7 +2160,7 @@
     title: Beneficial ownership
     module: Institutional
     indicator: Access to information
-    disclosure format: Disclose the beneficial owners of the contractors and suppliers appointed in the project (E.g. \[name, identifier\]).
+    disclosure format: Disclose the beneficial owners of the contractors and suppliers appointed in the project.
     mapping: |-
         Project level:
 
@@ -2197,7 +2223,7 @@
     title: Anti-corruption certifications
     module: Institutional
     indicator: Anti-corruption impact
-    disclosure format: Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard (E.g. \[Document\]).
+    disclosure format: Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard.
     mapping: |-
         Project Level:
 
@@ -2216,7 +2242,7 @@
     title: Independent monitoring
     module: Institutional
     indicator: Anti-corruption impact
-    disclosure format: Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
+    disclosure format: Identify the entities acting as independent monitors of the project.
     mapping: |-
         Project level:
 
@@ -2237,14 +2263,14 @@
     title: Performance monitoring
     module: Institutional
     indicator: KPIs
-    disclosure format: Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
+    disclosure format: Disclose Key Performance Indicators adopted by the project.
     mapping: See [performance monitoring (climate finance)](climate-finance-performance-monitoring).
     example: ''
 -   id: '5.10'
     title: Risk management plans
     module: Institutional
     indicator: Risk management
-    disclosure format: Disclose risk management plans prepared for the project (E.g. \[Document\]).
+    disclosure format: Disclose risk management plans prepared for the project.
     mapping: |-
         Project Level:
 

@@ -24,15 +24,16 @@ The mapping for each element covers only the fields needed to satisfy the specif
 
 ## Economic and fiscal
 
+
 (economic-and-fiscal-procurement-strategy)=
 
 `````{grid} 2
 
-````{grid-item-card} Procurement strategy
+````{grid-item-card} Procurement strategy 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision. (E.g. \[Document\]).
+Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision.
 ````
 
 ````{grid-item-card}
@@ -58,6 +59,7 @@ Project Level:
 
 `````
 
+
 (economic-and-fiscal-life-cycle-cost)=
 
 `````{grid} 2
@@ -66,7 +68,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017) (E.g. \[value\]).
+Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017).
 ````
 
 ````{grid-item-card}
@@ -94,6 +96,7 @@ Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to t
 ````
 
 `````
+
 
 (economic-and-fiscal-life-cycle-cost-calculation-methodology)=
 
@@ -128,15 +131,16 @@ Project Level:
 
 `````
 
-(economic-and-fiscal-funding-source-for-preparation-implementation-and-operation)=
+
+(economic-and-fiscal-funding-source-for-preparation-implementation-and-maintenance)=
 
 `````{grid} 2
 
-````{grid-item-card} Funding source for preparation, implementation and operation
+````{grid-item-card} Funding source for preparation, implementation and maintenance
 :columns: 4
 CoST IDS element
 ^^^
-Name the funding organization(s)/sources of funding for Preparation, Implementation and Operation. If the information is not available for any of the stages, select \['funding/budget source not specified'\] for the respective stage where the nature of the funding/budget source could not be identified.
+Name the funding organization(s) / sources of funding for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
 ````
 
 ````{grid-item-card}
@@ -197,15 +201,16 @@ Project level:
 
 `````
 
-(economic-and-fiscal-budget-for-preparation-implementation-and-operation)=
+
+(economic-and-fiscal-budget-for-preparation-implementation-and-maintenance)=
 
 `````{grid} 2
 
-````{grid-item-card} Budget for preparation, implementation and operation
+````{grid-item-card} Budget for preparation, implementation and maintenance
 :columns: 4
 CoST IDS element
 ^^^
-Specify the allocated budget for preparation, implementation, operation. If no amount is allocated for each of the stages, select the option 'amount not allocated" (E.g. Preparation \[currency and amount\], Implementation\[currency and amount\], Operation \[currency and amount\]
+Specify the allocated budget for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
 ````
 
 ````{grid-item-card}
@@ -255,6 +260,7 @@ Project level:
 
 `````
 
+
 (economic-and-fiscal-cost-benefit-analysis)=
 
 `````{grid} 2
@@ -263,23 +269,35 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the project cost-benefit analysis. This information tends to be part of the appraisal documents. (E.g. \[Document\]).
+Economic assessment that tends to be part of the appraisal documents and provides information on economic net benefits and costs ("ex ante" cost benefit analysis). A revised assessment can be prepared during the operational phase of the project to update the information on net benefits and costs ("ex post" cost benefit analysis). Disclose both:
+
+- Ex ante cost benefit analysis
+- Ex post cost benefit analysis
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+Project level:
 
-[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis'.
+1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex ante cost benefit analysis".
+
+2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex post cost benefit analysis".
 ```json
 {
   "documents": [
     {
       "id": "1",
       "documentType": "costBenefitAnalysis",
-      "url": "http://example.com/documents/costBenefitAnalysis.pdf"
+      "description": "ex ante cost benefit analysis",
+      "url": "http://example.com/documents/exAnteCostBenefitAnalysis.pdf"
+    },
+    {
+      "id": "2",
+      "documentType": "costBenefitAnalysis",
+      "description": "ex post cost benefit analysis",
+      "url": "http://example.com/documents/exPostCostBenefitAnalysis.pdf"
     }
   ]
 }
@@ -287,6 +305,7 @@ Project Level:
 ````
 
 `````
+
 
 (economic-and-fiscal-value-for-money)=
 
@@ -296,7 +315,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents. (E.g. \[Document\]).
+A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents.
 ````
 
 ````{grid-item-card}
@@ -319,6 +338,7 @@ Project Level: [Add a project document](../common.md#add-a-project-document) and
 
 `````
 
+
 (economic-and-fiscal-budget-projections)=
 
 `````{grid} 2
@@ -327,7 +347,7 @@ Project Level: [Add a project document](../common.md#add-a-project-document) and
 :columns: 4
 CoST IDS element
 ^^^
-In case of multiyear project implementation, disclose information on budget projection for all years of implementation (E.g. Y1: \[currency and amount\], Y2: \[currency and amount\], etc).
+In case of multiyear project implementation, disclose information on budget projection for all years of implementation.
 ````
 
 ````{grid-item-card}
@@ -385,6 +405,7 @@ Project level:
 
 `````
 
+
 (economic-and-fiscal-budget-shortfall)=
 
 `````{grid} 2
@@ -393,7 +414,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose any shortfall in the allocated budget (E.g. \[currency and amount\] and \[free text: reasons for the funding shortfall\]
+Disclose any shortfall in the allocated budget, including reasons for it.
 ````
 
 ````{grid-item-card}
@@ -430,7 +451,68 @@ Project level:
 
 `````
 
+
+(economic-and-fiscal-maintenance-plan-or-program)=
+
+`````{grid} 2
+
+````{grid-item-card} Maintenance plan or program
+:columns: 4
+CoST IDS element
+^^^
+Disclose the maintenance plan or program.
+````
+
+````{grid-item-card}
+:columns: 8
+OC4IDS mapping
+^^^
+Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'maintenancePlan'.
+```json
+{
+  "documents": [
+    {
+      "id": "1",
+      "documentType": "maintenancePlan",
+      "url": "http://example.com/documents/maintenancePlan.pdf"
+    }
+  ]
+}
+```
+````
+
+`````
+
+
+(economic-and-fiscal-asset-lifetime)=
+
+`````{grid} 2
+
+````{grid-item-card} Asset lifetime
+:columns: 4
+CoST IDS element
+^^^
+Disclose the expected lifetime of the asset. This tends to be part of the design report.
+````
+
+````{grid-item-card}
+:columns: 8
+OC4IDS mapping
+^^^
+Project Level: Convert to days and map to `assetLifetime.durationInDays`.
+```json
+{
+  "assetLifetime": {
+    "durationInDays": 3650
+  }
+}
+```
+````
+
+`````
+
 ## Environment and climate
+
 
 (environment-and-climate-environmental-impact-category)=
 
@@ -447,8 +529,6 @@ Indicate the category that reflects the magnitude of environmental impact. Consi
 - Category B: projects with potential limited adverse environmental or social risks and/or impacts that are few in number, generally site-specific, largely reversible, and readily addressed through mitigation measures.
 
 - Category C: projects with minimal or no adverse environmental or social risks and/or impacts.
-
-(Select from a list: A/B/C - Specify list as IFC's Environmental and Social Categorization).
 ````
 
 ````{grid-item-card}
@@ -480,6 +560,7 @@ If an environmental impact assessment was not conducted, set [`environment.hasIm
 
 `````
 
+
 (environment-and-climate-environmental-measures)=
 
 `````{grid} 2
@@ -488,7 +569,7 @@ If an environmental impact assessment was not conducted, set [`environment.hasIm
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact (E.g. \[free text justification/explaining the measures adopted\] and document).
+Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact.
 ````
 
 ````{grid-item-card}
@@ -514,15 +595,16 @@ Project level:
 
 `````
 
-(environment-and-climate-environmental-exceptions)=
+
+(environment-and-climate-environmental-licenses-and-exemptions)=
 
 `````{grid} 2
 
-````{grid-item-card} Environmental exceptions
+````{grid-item-card} Environmental licenses and exemptions
 :columns: 4
 CoST IDS element
 ^^^
-Disclose all exemptions and/or amnesties obtained for the project. (E.g. \[Document\]). This can be planning, environmental, construction and/or operational related.
+Disclose all licenses, exemptions and/or amnesties obtained for the project. This can be related to Preparation, Implementation and/or Maintenance. These stages are also known as Planning, Construction and Operation respectively.
 ````
 
 ````{grid-item-card}
@@ -547,6 +629,7 @@ Project Level:
 
 `````
 
+
 (environment-and-climate-protected-area)=
 
 `````{grid} 2
@@ -555,7 +638,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify whether the project is located in a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
+Identify whether the project is located in, or provides access to a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
 ````
 
 ````{grid-item-card}
@@ -593,6 +676,7 @@ If the project is not located in a protected area, set [`environment.inProtected
 
 `````
 
+
 (environment-and-climate-conservation-measures)=
 
 `````{grid} 2
@@ -612,8 +696,8 @@ Disclose and provide further details on the measures adopted by the project to p
 - management of wildlife mortality risk
 - reduce habitat loss
 - pollution reduction
-- soil management
-- hazardous material management\])
+- land, water and air management
+- hazardous material management
 - others (explain)
 ````
 
@@ -649,6 +733,7 @@ Project level:
 
 `````
 
+
 (environment-and-climate-climate-and-disaster-risk-assessment)=
 
 `````{grid} 2
@@ -657,7 +742,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the type of climate and disaster risks to which the project is exposed to (E.g. \[document or free text to list and explain risks\]). This tends to be part of the appraisal documents.
+Clarify the type of climate and disaster risks to which the project is exposed. This tends to be part of the appraisal documents.
 ````
 
 ````{grid-item-card}
@@ -683,6 +768,7 @@ Project level:
 
 `````
 
+
 (environment-and-climate-climate-measures)=
 
 `````{grid} 2
@@ -691,21 +777,19 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Clarify whether the project design considered climate change mitigation and/or adaptation measures,. disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
+Clarify whether the project design considered climate change mitigation and/or adaptation measures, disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
 
-use of lower-emission sources of energy
-use of lower-emission materials
-use of recycled and reused materials
-regenerative design
-retrofitting design
-use of carbon capture technology
-assessment of extreme weather events
-assessment of precipitation patterns
-assessment of rising temperatures
-assessment of rising sea levels
-others (explain)
-
-And \[Document\]).
+- use of lower-emission sources of energy
+- use of lower-emission materials
+- use of recycled and reused materials
+- regenerative design
+- retrofitting design
+- use of carbon capture technology
+- assessment of extreme weather events
+- assessment of precipitation patterns
+- assessment of rising temperatures
+- assessment of rising sea levels
+- others (explain).
 ````
 
 ````{grid-item-card}
@@ -742,6 +826,7 @@ Project level:
 
 `````
 
+
 (environment-and-climate-forecast-of-greenhouse-gas-emissions)=
 
 `````{grid} 2
@@ -750,7 +835,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the forecast greenhouse gas emissions related to the project, informing the calculation, the methodology applied and where the calculation can be found (E.g. \[amount\] and \[free text for methodology clarification\]).
+Disclose the forecast greenhouse gas emissions related to the project, including the calculation, the methodology applied and where the calculation can be found.
 ````
 
 ````{grid-item-card}
@@ -807,6 +892,7 @@ Project level:
 
 `````
 
+
 (environment-and-climate-environmental-certifications)=
 
 `````{grid} 2
@@ -815,7 +901,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management (E.g. \[Document\]).
+Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management.
 ````
 
 ````{grid-item-card}
@@ -847,6 +933,7 @@ Contracting process level:
 
 `````
 
+
 (environment-and-climate-decommissioning-plans)=
 
 `````{grid} 2
@@ -855,7 +942,7 @@ Contracting process level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the decommissioning plans for the project assets \[document\]..
+Disclose the decommissioning plans for the project assets.
 ````
 
 ````{grid-item-card}
@@ -880,6 +967,7 @@ Project level:
 
 `````
 
+
 (environment-and-climate-decommissioning-cost-forecast)=
 
 `````{grid} 2
@@ -888,7 +976,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the forecast decommissioning costs for the project assets \[value, currency\].
+Disclose the forecast decommissioning costs for the project assets.
 ````
 
 ````{grid-item-card}
@@ -932,18 +1020,16 @@ Project level:
 
 ## Climate finance
 
+
 (climate-finance-climate-objective)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate objective
+````{grid-item-card} Climate objective 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the main climate objective that the project addresses.
-
-Select from a list:
-Eg:
+Disclose the main climate objective that the project addresses from the list:
 
 - mitigation
 - adaptation
@@ -971,11 +1057,12 @@ Map to [`environment.goals`](project-schema.json,,environment/goals) using the c
 
 `````
 
+
 (climate-finance-financial-instrument)=
 
 `````{grid} 2
 
-````{grid-item-card} Financial instrument
+````{grid-item-card} Financial instrument 
 :columns: 4
 CoST IDS element
 ^^^
@@ -1027,15 +1114,16 @@ guarantee | | 'guarantee'
 
 `````
 
+
 (climate-finance-climate-transformation)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate transformation
+````{grid-item-card} Climate transformation 
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the theory of change, systemic transition or transformation that is intended \[free text to explain\].
+Clarify the theory of change, systemic transition or transformation that is intended.
 ````
 
 ````{grid-item-card}
@@ -1060,15 +1148,16 @@ Project level:
 
 `````
 
+
 (climate-finance-climate-finance-decision-maker)=
 
 `````{grid} 2
 
-````{grid-item-card} Climate finance decision-maker
+````{grid-item-card} Climate finance decision-maker 
 :columns: 4
 CoST IDS element
 ^^^
-Identify who approved the climate finance investment in the country (organization, party, role)
+Identify who approved the climate finance investment in the country.
 ````
 
 ````{grid-item-card}
@@ -1095,15 +1184,16 @@ Project level:
 
 `````
 
+
 (climate-finance-nationally-determined-contributions-ndc)=
 
 `````{grid} 2
 
-````{grid-item-card} Nationally Determined Contributions (NDC)
+````{grid-item-card} Nationally Determined Contributions (NDC) 
 :columns: 4
 CoST IDS element
 ^^^
-Clarify how the investment is aligned with the country's nationally determined contributions. \[codelist, free text to explain\].
+Clarify how the investment is aligned with the country's nationally determined contributions.
 ````
 
 ````{grid-item-card}
@@ -1114,16 +1204,17 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
 `````
+
 
 (climate-finance-paris-agreement)=
 
 `````{grid} 2
 
-````{grid-item-card} Paris Agreement
+````{grid-item-card} Paris Agreement 
 :columns: 4
 CoST IDS element
 ^^^
-Clarify how the investment is aligned with the country's Paris Agreement commitments. \[codelist, free text to explain\].
+Clarify how the investment is aligned with the country's Paris Agreement commitments.
 ````
 
 ````{grid-item-card}
@@ -1135,17 +1226,16 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 
 `````
 
+
 (climate-finance-beneficiaries)=
 
 `````{grid} 2
 
-````{grid-item-card} Beneficiaries
+````{grid-item-card} Beneficiaries 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose who is the climate finance investment intended to benefit \[free text to explain the beneficiaries\] and number of beneficiaries. \[Select from the list:
-Direct
-Indirect\]
+Disclose who the climate finance investment is intended to benefit and number of beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
 ````
 
 ````{grid-item-card}
@@ -1157,6 +1247,7 @@ See [number of beneficiaries (social module)](social-number-of-beneficiaries)
 
 `````
 
+
 (climate-finance-amount-of-investment)=
 
 `````{grid} 2
@@ -1165,7 +1256,7 @@ See [number of beneficiaries (social module)](social-number-of-beneficiaries)
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the quantum of the climate finance investment \[value, currency\].
+Disclose the quantum of the climate finance investment.
 ````
 
 ````{grid-item-card}
@@ -1193,15 +1284,16 @@ OC4IDS mapping
 
 `````
 
+
 (climate-finance-funding-source)=
 
 `````{grid} 2
 
-````{grid-item-card} Funding source
+````{grid-item-card} Funding source 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose who is providing the finance \[party/organization/role\].
+Disclose who is providing the finance.
 ````
 
 ````{grid-item-card}
@@ -1226,11 +1318,12 @@ OC4IDS mapping
 
 `````
 
+
 (climate-finance-green-climate-fund-accredited-entity)=
 
 `````{grid} 2
 
-````{grid-item-card} Green Climate Fund Accredited Entity
+````{grid-item-card} Green Climate Fund Accredited Entity 
 :columns: 4
 CoST IDS element
 ^^^
@@ -1272,18 +1365,19 @@ OC4IDS mapping
 
 `````
 
+
 (climate-finance-accredited-entity-type)=
 
 `````{grid} 2
 
-````{grid-item-card} Accredited Entity Type
+````{grid-item-card} Accredited Entity Type 
 :columns: 4
 CoST IDS element
 ^^^
-Select from the lists:
+Disclose the type of accredited entity, from the list:
 
-- Private
-- Public
+- private
+- public
 - non-governmental
 - sub-national
 - national
@@ -1325,35 +1419,37 @@ OC4IDS mapping
 
 `````
 
+
 (climate-finance-project-preparation-costs)=
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation costs
+````{grid-item-card} Project preparation costs 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the amounts invested in project preparation \[value, currency\].
+Disclose the amounts invested in project preparation.
 ````
 
 ````{grid-item-card}
 :columns: 8
 OC4IDS mapping
 ^^^
-See [budget for preparation, implementation and operation (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-operation).
+See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
 ````
 
 `````
+
 
 (climate-finance-project-preparation-period)=
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation period
+````{grid-item-card} Project preparation period 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose dates for project preparation \[start date, end date\].
+Disclose dates for project preparation.
 ````
 
 ````{grid-item-card}
@@ -1375,15 +1471,19 @@ Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 
 `````
 
+
 (climate-finance-project-approval-period)=
 
 `````{grid} 2
 
-````{grid-item-card} Project approval period
+````{grid-item-card} Project approval period 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose dates for project approval \[submission date, approval date\].
+Disclose dates for project approval:
+
+- submission date 
+- approval date
 ````
 
 ````{grid-item-card}
@@ -1419,19 +1519,19 @@ For each date:
 
 `````
 
+
 (climate-finance-ratio-of-co-finance)=
 
 `````{grid} 2
 
-````{grid-item-card} Ratio of co-finance
+````{grid-item-card} Ratio of co-finance 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the ratio of co-finance. Select from a list to specify amounts.
+Disclose the ratio of co-finance. Select from a list to specify amounts:
 
-Eg:\
-Domestic mobilisations \[value or NA\]
-Private Finance \[value or NA\]
+- domestic mobilisations
+- private finance
 ````
 
 ````{grid-item-card}
@@ -1467,22 +1567,23 @@ The OC4IDS data model provides the information needed to calculate co-finance ra
 
 `````
 
+
 (climate-finance-terms-of-climate-finance)=
 
 `````{grid} 2
 
-````{grid-item-card} Terms of climate finance
+````{grid-item-card} Terms of climate finance 
 :columns: 4
 CoST IDS element
 ^^^
-This includes several financial terms:
+Disclose the financial instrument and on what terms is the finance being provided. This includes several financial terms:
 
 - maturity (years)
-- Grace period (years)
+- grace period (years)
 - annual principal repayment years (% of initial principle)
-- Interest (%)
-- Service fee (per annum)
-- Commitment fee (per annum)
+- interest (%)
+- service fee (per annum)
+- commitment fee (per annum)
 ````
 
 ````{grid-item-card}
@@ -1525,15 +1626,16 @@ OC4IDS mapping
 
 `````
 
+
 (climate-finance-carbon-efficiency)=
 
 `````{grid} 2
 
-````{grid-item-card} Carbon efficiency
+````{grid-item-card} Carbon efficiency 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the cost per tonne of CO2 equivalent \[value, currency\].
+Disclose the cost per tonne of CO2 equivalent reduction attributed to the project.
 ````
 
 ````{grid-item-card}
@@ -1564,11 +1666,12 @@ Map to [`environment.abatementCost`](project-schema.json,,environment/abatementC
 
 `````
 
+
 (climate-finance-non-climate-co-benefits)=
 
 `````{grid} 2
 
-````{grid-item-card} Non-climate co-benefits
+````{grid-item-card} Non-climate co-benefits 
 :columns: 4
 CoST IDS element
 ^^^
@@ -1577,9 +1680,7 @@ Identify potential non-climate impacts that have been factored into the project 
 - economic
 - social
 - environmental
-- gender empowerment
-
-\[add free text to explain the co-benefits\].
+- gender empowerment.
 ````
 
 ````{grid-item-card}
@@ -1603,15 +1704,16 @@ For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object
 
 `````
 
+
 (climate-finance-public-consultation-meetings)=
 
 `````{grid} 2
 
-````{grid-item-card} Public consultation meetings
+````{grid-item-card} Public consultation meetings 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the occurrence of public meetings with communities and impacted groups including the minutes, number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\], \[Document\]).
+Disclose the occurrence of public meetings with communities and impacted groups including the meeting invite, the number of participants, dates and location of these meetings.
 ````
 
 ````{grid-item-card}
@@ -1623,6 +1725,7 @@ See [public consultation meetings (social module)](social-public-consultation-me
 
 `````
 
+
 (climate-finance-disbursement-records)=
 
 `````{grid} 2
@@ -1631,7 +1734,7 @@ See [public consultation meetings (social module)](social-public-consultation-me
 :columns: 4
 CoST IDS element
 ^^^
-Disbursements dates according to financial agreement versus actual disbursements dates \[value, currency, date\].
+Disbursements dates according to financial agreement versus actual disbursements dates.
 ````
 
 ````{grid-item-card}
@@ -1718,6 +1821,7 @@ For each actual disbursement:
 
 `````
 
+
 (climate-finance-type-of-project-monitoring)=
 
 `````{grid} 2
@@ -1726,7 +1830,7 @@ For each actual disbursement:
 :columns: 4
 CoST IDS element
 ^^^
-Select from a list:
+Disclose the type of monitoring from the list:
 
 - internal
 - external
@@ -1754,15 +1858,16 @@ Map to [`environment.climateOversightTypes`](project-schema.json,,environment/cl
 
 `````
 
+
 (climate-finance-performance-monitoring)=
 
 `````{grid} 2
 
-````{grid-item-card} Performance monitoring
+````{grid-item-card} Performance monitoring 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
+Disclose Key Performance Indicators adopted by the project.
 ````
 
 ````{grid-item-card}
@@ -1786,6 +1891,7 @@ For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [
 
 `````
 
+
 (climate-finance-reporting-period)=
 
 `````{grid} 2
@@ -1794,7 +1900,7 @@ For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [
 :columns: 4
 CoST IDS element
 ^^^
-It could be quarterly, annually, biannually, etc. \[free text\].
+Clarify the project reporting period. It could be quarterly, annually, biannually.
 ````
 
 ````{grid-item-card}
@@ -1819,15 +1925,16 @@ Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](p
 
 `````
 
+
 (climate-finance-oversight-reports)=
 
 `````{grid} 2
 
-````{grid-item-card} Oversight reports
+````{grid-item-card} Oversight reports 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose oversight reports.\[document\].
+Disclose oversight reports.
 ````
 
 ````{grid-item-card}
@@ -1852,6 +1959,7 @@ Project level:
 
 `````
 
+
 (climate-finance-independent-monitoring)=
 
 `````{grid} 2
@@ -1860,7 +1968,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
+Identify the entities acting as independent monitors of the project.
 ````
 
 ````{grid-item-card}
@@ -1872,15 +1980,16 @@ See [independent monitoring (institutional module)](institutional-independent-mo
 
 `````
 
+
 (climate-finance-independent-evaluation)=
 
 `````{grid} 2
 
-````{grid-item-card} Independent evaluation
+````{grid-item-card} Independent evaluation 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose technical audits produced at end of the project (E.g. \[free text\].
+Disclose technical audits produced at end of the project.
 ````
 
 ````{grid-item-card}
@@ -1908,15 +2017,16 @@ For each audit report, [add a project document](../common.md#add-a-project-docum
 
 `````
 
+
 (climate-finance-impact-measurement)=
 
 `````{grid} 2
 
-````{grid-item-card} Impact measurement
+````{grid-item-card} Impact measurement 
 :columns: 4
 CoST IDS element
 ^^^
-Clarify the methodology or system to measure the long-term impact of the project solution (E.g. \[free text\].
+Clarify the methodology or system to measure the long-term impact of the project solution.
 ````
 
 ````{grid-item-card}
@@ -1933,7 +2043,7 @@ Project level:
       "id": "1",
       "documentType": "impactMethodology",
       "description": "The long term impact of this project will be measured according to...",
-      "url": " http://example.com/impactMethodology.pdf "
+      "url": "http://example.com/impactMethodology.pdf"
     }
   ]
 }
@@ -1941,6 +2051,7 @@ Project level:
 ````
 
 `````
+
 
 (climate-finance-carbon-footprint)=
 
@@ -1950,7 +2061,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the carbon footprint of the project, informing the calculation, the methodology applied, and where the calculation can be found. \[value, tons CO2 equivalent, free text to describe the methodology used to measure the carbon footprint\].
+Disclose the carbon footprint of the project, including the calculation, the methodology applied, and where the calculation can be found.
 ````
 
 ````{grid-item-card}
@@ -1998,7 +2109,7 @@ Project level:
     {
       "id": "1",
       "documentType": "ghgEmissions",
-      "url": " http://example.com/ghgEmissions.pdf "
+      "url": "http://example.com/ghgEmissions.pdf"
     }
   ]
 }
@@ -2006,6 +2117,7 @@ Project level:
 ````
 
 `````
+
 
 (climate-finance-infrastructure-assets-to-be-decommissioned)=
 
@@ -2015,7 +2127,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the asset for disposal purpose \[free text\].
+Identify the asset for disposal purpose.
 ````
 
 ````{grid-item-card}
@@ -2052,6 +2164,7 @@ For each set of decommissioned assets in a specified location, create a new OC4I
 
 `````
 
+
 (climate-finance-decommission-period)=
 
 `````{grid} 2
@@ -2082,15 +2195,16 @@ Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
 
 `````
 
+
 (climate-finance-decommission-plan)=
 
 `````{grid} 2
 
-````{grid-item-card} Decommission plan
+````{grid-item-card} Decommission plan 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the technical plan for decommissioning (E.g.: \[Doc\]).
+Disclose the technical plan for decommissioning.
 ````
 
 ````{grid-item-card}
@@ -2102,15 +2216,16 @@ See [decommissioning plans (environment and social)](environment-and-climate-dec
 
 `````
 
+
 (climate-finance-carbon-decommission-savings)=
 
 `````{grid} 2
 
-````{grid-item-card} Carbon decommission savings
+````{grid-item-card} Carbon decommission savings 
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the evaluation of CO2 savings as a result of decommissioning \[value, tons CO2 equivalent\].
+Disclose the evaluation of CO2 savings as a result of decommissioning.
 ````
 
 ````{grid-item-card}
@@ -2159,7 +2274,7 @@ Project level:
     {
       "id": "1",
       "documentType": "ghgEmissionsReduction",
-      "url": " http://example.com/GhgEmissionsReduction.pdf "
+      "url": "http://example.com/GhgEmissionsReduction.pdf"
     }
   ]
 }
@@ -2167,6 +2282,7 @@ Project level:
 ````
 
 `````
+
 
 (climate-finance-decommission-mitigation-plan)=
 
@@ -2176,7 +2292,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose mitigation plan for people and communities affected by decommissioning (E.g.: \[Doc\]).
+Disclose mitigation plan for people and communities affected by decommissioning.
 ````
 
 ````{grid-item-card}
@@ -2206,15 +2322,16 @@ Project level:
 
 ## Social
 
+
 (social-number-of-beneficiaries)=
 
 `````{grid} 2
 
-````{grid-item-card} Number of beneficiaries
+````{grid-item-card} Number of beneficiaries 
 :columns: 4
 CoST IDS element
 ^^^
-Indicate the number of direct and indirect project beneficiaries (E.g. direct: \[number\]; indirect: "number"). Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
+Indicate the number of direct and indirect project beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
 ````
 
 ````{grid-item-card}
@@ -2248,6 +2365,7 @@ Project level:
 
 `````
 
+
 (social-inclusive-design-and-implementation)=
 
 `````{grid} 2
@@ -2256,7 +2374,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Clarify whether gender, people with disabilities and vulnerable and disadvantaged populations were considered in the project design (e.g. "free text to explain how the design meets inclusion goals" and document to support - the project design) and project implementation (e.g. "free text to explain implementation practices targeting inclusion goals" and document to support - contractor policy and procedures).
+Clarify whether gender, people with disabilities, and vulnerable and disadvantaged populations were considered in the project design and project implementation, providing details on how the design and implementation practices meet inclusion goals.
 ````
 
 ````{grid-item-card}
@@ -2290,11 +2408,12 @@ Project level:
 
 `````
 
+
 (social-indigenous-land)=
 
 `````{grid} 2
 
-````{grid-item-card} Indigenous land
+````{grid-item-card} Indigenous land 
 :columns: 4
 CoST IDS element
 ^^^
@@ -2329,6 +2448,7 @@ If the project is not located in and does not cut through indigenous land, set [
 ````
 
 `````
+
 
 (social-public-consultation-meetings)=
 
@@ -2395,6 +2515,7 @@ For each meeting:
 
 `````
 
+
 (social-land-compensation-budget)=
 
 `````{grid} 2
@@ -2403,7 +2524,7 @@ For each meeting:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose budget allocated to fund land compensation (E.g. \[value\]).
+Disclose budget allocated to fund land compensation.
 ````
 
 ````{grid-item-card}
@@ -2427,6 +2548,7 @@ Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social
 
 `````
 
+
 (social-labour-obligations)=
 
 `````{grid} 2
@@ -2437,22 +2559,22 @@ CoST IDS element
 ^^^
 Disclose labour obligations in the construction contract. This can include, without limitation, the following:
 
-- Minimum wage
-- Overtime
-- Prohibition of forced labour
-- Prohibition of child labour
-- Equal opportunity
-- Non-discrimination
-- Freedom of association
-- Grievance mechanism
-- Working at height
-- Underground work
-- Handling of materials/equipment
-- Monitoring of accidents
-- Traffic management
-- Accommodation
-- Protective equipment
-- Others (explain)
+- minimum wage
+- overtime
+- prohibition of forced labour
+- prohibition of child labour
+- equal opportunity
+- non-discrimination
+- freedom of association
+- grievance mechanism
+- working at height
+- underground work
+- handling of materials/equipment
+- monitoring of accidents
+- traffic management
+- accommodation
+- protective equipment
+- others (explain)
 ````
 
 ````{grid-item-card}
@@ -2505,6 +2627,7 @@ Contracting process level:
 
 `````
 
+
 (social-labour-budget)=
 
 `````{grid} 2
@@ -2513,7 +2636,7 @@ Contracting process level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the amount allocated by the main contractor to cover for labour costs (E.g. \[value\]).
+Disclose the amount allocated by the main contractor to cover for labour costs.
 ````
 
 ````{grid-item-card}
@@ -2543,6 +2666,7 @@ Map to [`summary.social.laborBudget`](project-schema.json,/definitions/Contracti
 ````
 
 `````
+
 
 (social-workers-accidents)=
 
@@ -2623,6 +2747,7 @@ Publish summary statistics on worker fatalities:
 
 `````
 
+
 (social-health-and-safety-certifications)=
 
 `````{grid} 2
@@ -2631,7 +2756,7 @@ Publish summary statistics on worker fatalities:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety (E.g. \[Document\]).
+Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
 ````
 
 ````{grid-item-card}
@@ -2663,6 +2788,7 @@ Contracting process level:
 
 `````
 
+
 (social-construction-materials-testing)=
 
 `````{grid} 2
@@ -2673,25 +2799,21 @@ CoST IDS element
 ^^^
 Disclose construction materials tests performed during project implementation. This can include, without limitation, the following:
 
-- Asphalt
-- Aggregate and rock
-- Bricks
-- Cement
-- Concrete
-- Coarse and fine aggregate
-- Masonry
-- Metallic materials
-- Mortar
-- Plywood
-- Timber
-- Resin and polymer
-- Soil
-- Stone
-- Others (explain).
-
-\[Free text to add not mentioned tests\]
-
-Document
+- asphalt
+- aggregate and rock
+- bricks
+- cement
+- concrete
+- coarse and fine aggregate
+- masonry
+- metallic materials
+- mortar
+- plywood
+- timber
+- resin and polymer
+- soil
+- stone
+- others (explain).
 ````
 
 ````{grid-item-card}
@@ -2733,6 +2855,7 @@ Publish test results: For each test result, [add a project document](../common.m
 
 `````
 
+
 (social-building-inspections)=
 
 `````{grid} 2
@@ -2741,7 +2864,7 @@ Publish test results: For each test result, [add a project document](../common.m
 :columns: 4
 CoST IDS element
 ^^^
-Disclose building inspections during project implementation (E.g. \[Document\]).
+Disclose building inspections during project implementation.
 ````
 
 ````{grid-item-card}
@@ -2766,6 +2889,7 @@ Project Level:
 
 `````
 
+
 (social-jobs-generated)=
 
 `````{grid} 2
@@ -2774,7 +2898,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (E.g. \[direct: value\] \[indirect: value\]).
+Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (direct/indirect).
 ````
 
 ````{grid-item-card}
@@ -2894,6 +3018,7 @@ Publish actual jobs created:
 
 ## Institutional
 
+
 (institutional-policy-coherence)=
 
 `````{grid} 2
@@ -2913,8 +3038,6 @@ Disclose documentation that evidences that the project is part of, or aligned wi
 - Nationally Determined Contributions (NDCs)
 - National Adaptation Plans
 - Medium-term fiscal frameworks/targets
-
-\[free text\]
 ````
 
 ````{grid-item-card}
@@ -2971,6 +3094,7 @@ Project level:
 
 `````
 
+
 (institutional-freedom-of-information-requests)=
 
 `````{grid} 2
@@ -2979,7 +3103,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose Freedom of Information (FoI) requests that have been presented in relation to the project \[E.g. Document\]. Note that FoI requests can also be known as access to information requests.
+Disclose Freedom of Information (FoI) requests that have been presented in relation to the project. Note that FoI requests can also be known as access to information requests.
 ````
 
 ````{grid-item-card}
@@ -3004,6 +3128,7 @@ For each freedom of information request, [add a project document](../common.md#a
 
 `````
 
+
 (institutional-answers-to-freedom-of-information-requests)=
 
 `````{grid} 2
@@ -3012,7 +3137,7 @@ For each freedom of information request, [add a project document](../common.md#a
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project (Eg. \[Document\]). Note that FoI requests may also be known as access to information requests.
+Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project. Note that FoI requests may also be known as access to information requests.
 ````
 
 ````{grid-item-card}
@@ -3037,6 +3162,7 @@ For each freedom of information request response, [add a project document](../co
 
 `````
 
+
 (institutional-lobbying-transparency)=
 
 `````{grid} 2
@@ -3045,7 +3171,7 @@ For each freedom of information request response, [add a project document](../co
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the occurrence of meetings with interest groups, including the meeting agenda and minutes, the number of the participants, dates and location of these meetings (E.g. Meeting 1 \[date\] \[location\] \[number of participants\] \[Document\], Meeting 2 \[date\] \[location\] \[number of participants\] \[Document\]).
+Disclose the occurrence of meetings with interested groups, including the number of participants, date, location and minutes of these meetings, as well as the name and job title of the person representing the public office present at the meeting.
 ````
 
 ````{grid-item-card}
@@ -3111,6 +3237,7 @@ Publish the meeting minutes: [add a project document](../common.md#add-a-project
 
 `````
 
+
 (institutional-beneficial-ownership)=
 
 `````{grid} 2
@@ -3119,7 +3246,7 @@ Publish the meeting minutes: [add a project document](../common.md#add-a-project
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the beneficial owners of the contractors and suppliers appointed in the project (E.g. \[name, identifier\]).
+Disclose the beneficial owners of the contractors and suppliers appointed in the project.
 ````
 
 ````{grid-item-card}
@@ -3159,6 +3286,7 @@ For each beneficial owner:
 ````
 
 `````
+
 
 (institutional-sustainability-criteria)=
 
@@ -3202,6 +3330,7 @@ Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the
 
 `````
 
+
 (institutional-anti-corruption-certifications)=
 
 `````{grid} 2
@@ -3210,7 +3339,7 @@ Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the
 :columns: 4
 CoST IDS element
 ^^^
-Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard (E.g. \[Document\]).
+Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard.
 ````
 
 ````{grid-item-card}
@@ -3235,6 +3364,7 @@ Project Level:
 
 `````
 
+
 (institutional-independent-monitoring)=
 
 `````{grid} 2
@@ -3243,7 +3373,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Identify the entities acting as independent monitors of the project (E.g. \[free text\]).
+Identify the entities acting as independent monitors of the project.
 ````
 
 ````{grid-item-card}
@@ -3270,6 +3400,7 @@ Project level:
 
 `````
 
+
 (institutional-performance-monitoring)=
 
 `````{grid} 2
@@ -3278,7 +3409,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose Key Performance Indicators adopted by the project (E.g. \[free text\]).
+Disclose Key Performance Indicators adopted by the project.
 ````
 
 ````{grid-item-card}
@@ -3290,6 +3421,7 @@ See [performance monitoring (climate finance)](climate-finance-performance-monit
 
 `````
 
+
 (institutional-risk-management-plans)=
 
 `````{grid} 2
@@ -3298,7 +3430,7 @@ See [performance monitoring (climate finance)](climate-finance-performance-monit
 :columns: 4
 CoST IDS element
 ^^^
-Disclose risk management plans prepared for the project (E.g. \[Document\]).
+Disclose risk management plans prepared for the project.
 ````
 
 ````{grid-item-card}
@@ -3322,6 +3454,7 @@ Project Level:
 ````
 
 `````
+
 
 (institutional-sustainable-sub-sectors)=
 
@@ -3366,3 +3499,4 @@ Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector co
 ````
 
 `````
+

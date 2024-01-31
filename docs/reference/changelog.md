@@ -121,6 +121,7 @@
     * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
+    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
     * 'WDPA'
   * partyRole:
@@ -140,6 +141,9 @@
     * 'transport.lowCarbon'
   * [#440](https://github.com/open-contracting/infrastructure/pull/440) - projectType:
     * 'decommissioning'
+  * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
+    * 'airManagement'
+    * 'waterManagement'
 
 ### Other
 
