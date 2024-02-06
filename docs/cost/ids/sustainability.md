@@ -577,7 +577,6 @@ Identify the measures adopted by the project to mitigate and/or remedy the envir
 - environmentally responsible use of land, water and air
 - water contamination management
 - others (explain)
-
 ````
 
 ````{grid-item-card}
@@ -586,7 +585,7 @@ OC4IDS mapping
 ^^^
 Project level:
 
-1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.conservationMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasures](../../reference/codelists.md#environmentalmeasures) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).
+1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.environmentalMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasures](../../reference/codelists.md#environmentalmeasures) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).
 
 2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures'.
 ```json

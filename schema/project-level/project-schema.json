@@ -3209,9 +3209,9 @@
       "properties": {
         "type": {
           "title": "Type",
-          "description": "The type of environmental measure, using the open [environmentalMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "description": "The type of environmental measure, using the open [environmentalMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalMeasures) codelist.",
           "type": "string",
-          "codelist": "environmentalMeasure.csv",
+          "codelist": "environmentalMeasures.csv",
           "openCodelist": true,
           "minLength": 1
         },
