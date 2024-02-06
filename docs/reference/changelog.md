@@ -62,6 +62,7 @@
   * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - `environment.environmentalMeasures`
 
 ### Codelists
 
@@ -89,6 +90,7 @@
     * debtRepaymentPriority
     * financingArrangementType
     * financingPartyType
+  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - environmentalMeasures
 * Add codes:
   * documentType:
     * [#446](https://github.com/open-contracting/infrastructure/pull/446)
