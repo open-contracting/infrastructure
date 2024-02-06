@@ -1758,3 +1758,38 @@ Each `ClimateMeasure` has the following fields:
 ````
 
 `````
+
+### EnvironmentalMeasure
+
+`EnvironmentalMeasure` is defined as:
+
+```{field-description} ../../build/current_lang/project-schema.json /definitions/EnvironmentalMeasure
+```
+
+This sub-schema is referenced by the following properties:
+* [`environment/environmentalMeasures`](project-schema.json,,environment/environmentalMeasures)
+
+Each `EnvironmentalMeasure` has the following fields:
+
+`````{tab-set}
+
+````{tab-item} Schema
+
+```{jsonschema} ../../build/current_lang/project-schema.json
+:pointer: /definitions/EnvironmentalMeasure
+:collapse: type,description
+:addtargets:
+```
+
+````
+
+````{tab-item} Examples
+
+```{jsoninclude} ../../docs/examples/example.json
+:jsonpointer: /projects/0/environment/environmentalMeasures
+:title: environment/environmentalMeasures
+```
+
+````
+
+`````

@@ -1176,6 +1176,12 @@
             "description": "Detailed GIS analysis was undertaken comparing multiple potential locations to select the final project site with the lowest potentially negative ecological impact."
           }
         ],
+        "environmentalMeasures": [
+          {
+            "type": "wasteManagement",
+            "description": "Waste management plans will be incorporated into all stages of the project to minimize waste produced and ensure unavoidable waste is disposed of in an environmentally responsible manner."
+          }
+        ],
         "climateOversightTypes": [
           "internal"
         ],

@@ -29,7 +29,7 @@ The mapping for each element covers only the fields needed to satisfy the specif
 
 `````{grid} 2
 
-````{grid-item-card} Procurement strategy 
+````{grid-item-card} Procurement strategy
 :columns: 4
 CoST IDS element
 ^^^
@@ -569,7 +569,15 @@ If an environmental impact assessment was not conducted, set [`environment.hasIm
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the measures adopted by the project to mitigate and/or remedy the environmental impact.
+Identify the measures adopted by the project to mitigate and/or remedy the environmental impact, disclosing the corresponding document that describes the project's environmental measures. This can include, without limitation, the following:
+
+- waste management
+- disposal of construction by-products
+- environmentally responsible sourcing of materials
+- environmentally responsible use of land, water and air
+- water contamination management
+- others (explain)
+
 ````
 
 ````{grid-item-card}
@@ -578,9 +586,19 @@ OC4IDS mapping
 ^^^
 Project level:
 
-[Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures' and map the justification and explanation to its [`.description`](project-schema.json,/definitions/Document,description).
+1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.conservationMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasures](../../reference/codelists.md#environmentalmeasures) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).
+
+2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures'.
 ```json
 {
+  "environment": {
+    "environmentalMeasures": [
+      {
+        "type": "wasteManagement",
+        "description": "Waste management measures for the project include..."
+      }
+    ]
+  },
   "documents": [
     {
       "id": "1",
@@ -1025,7 +1043,7 @@ Project level:
 
 `````{grid} 2
 
-````{grid-item-card} Climate objective 
+````{grid-item-card} Climate objective
 :columns: 4
 CoST IDS element
 ^^^
@@ -1062,7 +1080,7 @@ Map to [`environment.goals`](project-schema.json,,environment/goals) using the c
 
 `````{grid} 2
 
-````{grid-item-card} Financial instrument 
+````{grid-item-card} Financial instrument
 :columns: 4
 CoST IDS element
 ^^^
@@ -1119,7 +1137,7 @@ guarantee | | 'guarantee'
 
 `````{grid} 2
 
-````{grid-item-card} Climate transformation 
+````{grid-item-card} Climate transformation
 :columns: 4
 CoST IDS element
 ^^^
@@ -1153,7 +1171,7 @@ Project level:
 
 `````{grid} 2
 
-````{grid-item-card} Climate finance decision-maker 
+````{grid-item-card} Climate finance decision-maker
 :columns: 4
 CoST IDS element
 ^^^
@@ -1189,7 +1207,7 @@ Project level:
 
 `````{grid} 2
 
-````{grid-item-card} Nationally Determined Contributions (NDC) 
+````{grid-item-card} Nationally Determined Contributions (NDC)
 :columns: 4
 CoST IDS element
 ^^^
@@ -1210,7 +1228,7 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 
 `````{grid} 2
 
-````{grid-item-card} Paris Agreement 
+````{grid-item-card} Paris Agreement
 :columns: 4
 CoST IDS element
 ^^^
@@ -1231,7 +1249,7 @@ See [policy coherence (institutional module)](institutional-policy-coherence).
 
 `````{grid} 2
 
-````{grid-item-card} Beneficiaries 
+````{grid-item-card} Beneficiaries
 :columns: 4
 CoST IDS element
 ^^^
@@ -1289,7 +1307,7 @@ OC4IDS mapping
 
 `````{grid} 2
 
-````{grid-item-card} Funding source 
+````{grid-item-card} Funding source
 :columns: 4
 CoST IDS element
 ^^^
@@ -1323,7 +1341,7 @@ OC4IDS mapping
 
 `````{grid} 2
 
-````{grid-item-card} Green Climate Fund Accredited Entity 
+````{grid-item-card} Green Climate Fund Accredited Entity
 :columns: 4
 CoST IDS element
 ^^^
@@ -1370,7 +1388,7 @@ OC4IDS mapping
 
 `````{grid} 2
 
-````{grid-item-card} Accredited Entity Type 
+````{grid-item-card} Accredited Entity Type
 :columns: 4
 CoST IDS element
 ^^^
@@ -1424,7 +1442,7 @@ OC4IDS mapping
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation costs 
+````{grid-item-card} Project preparation costs
 :columns: 4
 CoST IDS element
 ^^^
@@ -1445,7 +1463,7 @@ See [budget for preparation, implementation and maintenance (economic and fiscal
 
 `````{grid} 2
 
-````{grid-item-card} Project preparation period 
+````{grid-item-card} Project preparation period
 :columns: 4
 CoST IDS element
 ^^^
@@ -1476,13 +1494,13 @@ Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 
 `````{grid} 2
 
-````{grid-item-card} Project approval period 
+````{grid-item-card} Project approval period
 :columns: 4
 CoST IDS element
 ^^^
 Disclose dates for project approval:
 
-- submission date 
+- submission date
 - approval date
 ````
 
@@ -1524,7 +1542,7 @@ For each date:
 
 `````{grid} 2
 
-````{grid-item-card} Ratio of co-finance 
+````{grid-item-card} Ratio of co-finance
 :columns: 4
 CoST IDS element
 ^^^
@@ -1572,7 +1590,7 @@ The OC4IDS data model provides the information needed to calculate co-finance ra
 
 `````{grid} 2
 
-````{grid-item-card} Terms of climate finance 
+````{grid-item-card} Terms of climate finance
 :columns: 4
 CoST IDS element
 ^^^
@@ -1631,7 +1649,7 @@ OC4IDS mapping
 
 `````{grid} 2
 
-````{grid-item-card} Carbon efficiency 
+````{grid-item-card} Carbon efficiency
 :columns: 4
 CoST IDS element
 ^^^
@@ -1671,7 +1689,7 @@ Map to [`environment.abatementCost`](project-schema.json,,environment/abatementC
 
 `````{grid} 2
 
-````{grid-item-card} Non-climate co-benefits 
+````{grid-item-card} Non-climate co-benefits
 :columns: 4
 CoST IDS element
 ^^^
@@ -1709,7 +1727,7 @@ For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object
 
 `````{grid} 2
 
-````{grid-item-card} Public consultation meetings 
+````{grid-item-card} Public consultation meetings
 :columns: 4
 CoST IDS element
 ^^^
@@ -1863,7 +1881,7 @@ Map to [`environment.climateOversightTypes`](project-schema.json,,environment/cl
 
 `````{grid} 2
 
-````{grid-item-card} Performance monitoring 
+````{grid-item-card} Performance monitoring
 :columns: 4
 CoST IDS element
 ^^^
@@ -1930,7 +1948,7 @@ Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](p
 
 `````{grid} 2
 
-````{grid-item-card} Oversight reports 
+````{grid-item-card} Oversight reports
 :columns: 4
 CoST IDS element
 ^^^
@@ -1985,7 +2003,7 @@ See [independent monitoring (institutional module)](institutional-independent-mo
 
 `````{grid} 2
 
-````{grid-item-card} Independent evaluation 
+````{grid-item-card} Independent evaluation
 :columns: 4
 CoST IDS element
 ^^^
@@ -2022,7 +2040,7 @@ For each audit report, [add a project document](../common.md#add-a-project-docum
 
 `````{grid} 2
 
-````{grid-item-card} Impact measurement 
+````{grid-item-card} Impact measurement
 :columns: 4
 CoST IDS element
 ^^^
@@ -2200,7 +2218,7 @@ Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
 
 `````{grid} 2
 
-````{grid-item-card} Decommission plan 
+````{grid-item-card} Decommission plan
 :columns: 4
 CoST IDS element
 ^^^
@@ -2221,7 +2239,7 @@ See [decommissioning plans (environment and social)](environment-and-climate-dec
 
 `````{grid} 2
 
-````{grid-item-card} Carbon decommission savings 
+````{grid-item-card} Carbon decommission savings
 :columns: 4
 CoST IDS element
 ^^^
@@ -2327,7 +2345,7 @@ Project level:
 
 `````{grid} 2
 
-````{grid-item-card} Number of beneficiaries 
+````{grid-item-card} Number of beneficiaries
 :columns: 4
 CoST IDS element
 ^^^
@@ -2413,7 +2431,7 @@ Project level:
 
 `````{grid} 2
 
-````{grid-item-card} Indigenous land 
+````{grid-item-card} Indigenous land
 :columns: 4
 CoST IDS element
 ^^^

@@ -460,6 +460,16 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "environmentalMeasures": {
+          "title": "Environmental measures",
+          "description": "The measures adopted by the project to mitigate and/or remedy environmental impacts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnvironmentalMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "abatementCost": {
           "title": "Abatement cost",
           "description": "The lifetime abatement cost of the project, measured in cost per tonne of CO2 equivalent emissions. That is, the additional cost of reducing greenhouse gas emissions by one tonne compared to the most likely alternative scenario.",
@@ -3186,6 +3196,28 @@
         "description": {
           "title": "Description",
           "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "EnvironmentalMeasure": {
+      "title": "Environmental measure",
+      "description": "A measure adopted by the project to mitigate and/or remedy environmental impacts.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of environmental measure, using the open [environmentalMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#conservationMeasure) codelist.",
+          "type": "string",
+          "codelist": "environmentalMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the environmental measure.",
           "type": "string",
           "minLength": 1
         }
