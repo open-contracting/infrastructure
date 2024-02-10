@@ -462,7 +462,7 @@
         },
         "environmentalMeasures": {
           "title": "Environmental measures",
-          "description": "The measures adopted by the project to mitigate and/or remedy environmental impacts.",
+          "description": "The measures adopted by the project to mitigate or remedy environmental impacts.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/EnvironmentalMeasure"
@@ -3180,7 +3180,7 @@
       "properties": {
         "type": {
           "title": "Type",
-          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
+          "description": "The type of climate measure, using the open [climateMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasure) codelist.",
           "type": [
             "array"
           ],
@@ -3188,7 +3188,7 @@
             "type": "string",
             "minLength": 1
           },
-          "codelist": "climateMeasures.csv",
+          "codelist": "climateMeasure.csv",
           "openCodelist": true,
           "minItems": 1,
           "uniqueItems": true
@@ -3204,14 +3204,14 @@
     },
     "EnvironmentalMeasure": {
       "title": "Environmental measure",
-      "description": "A measure adopted by the project to mitigate and/or remedy environmental impacts.",
+      "description": "A measure adopted by the project to mitigate or remedy environmental impacts.",
       "type": "object",
       "properties": {
         "type": {
           "title": "Type",
-          "description": "The type of environmental measure, using the open [environmentalMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalMeasures) codelist.",
+          "description": "The type of environmental measure, using the open [environmentalMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalMeasure) codelist.",
           "type": "string",
-          "codelist": "environmentalMeasures.csv",
+          "codelist": "environmentalMeasure.csv",
           "openCodelist": true,
           "minLength": 1
         },

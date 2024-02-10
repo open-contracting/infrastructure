@@ -651,7 +651,7 @@
     ],
     "environmentalMeasures": [
       {
-        "type": "string from environmentalMeasures codelist",
+        "type": "string from environmentalMeasure codelist",
         "description": "string"
       }
     ],
@@ -672,7 +672,7 @@
     "inProtectedArea": "boolean",
     "climateMeasures": [
       {
-        "type": "string from climateMeasures codelist",
+        "type": "string from climateMeasure codelist",
         "description": "string"
       }
     ]
