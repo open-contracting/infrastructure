@@ -119,7 +119,7 @@
       * 'minutes.consultationMeeting'
       * 'minutes.lobbyingMeeting'
     * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
-    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasure'
     * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
