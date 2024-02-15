@@ -71,7 +71,7 @@
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - rename 'completed' to 'maintenance' in the projectStatus codelist.
 * Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
-  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasure
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
   * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
@@ -124,6 +124,7 @@
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
     * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
+    * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
     * 'WDPA'
   * partyRole:
