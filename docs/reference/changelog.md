@@ -90,7 +90,7 @@
     * debtRepaymentPriority
     * financingArrangementType
     * financingPartyType
-  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - environmentalMeasures
+  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - environmentalMeasure
 * Add codes:
   * documentType:
     * [#446](https://github.com/open-contracting/infrastructure/pull/446)
@@ -119,7 +119,7 @@
       * 'minutes.consultationMeeting'
       * 'minutes.lobbyingMeeting'
     * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
-    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasure'
+    * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
     * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
