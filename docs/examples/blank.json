@@ -649,6 +649,12 @@
         "description": "string"
       }
     ],
+    "environmentalMeasures": [
+      {
+        "type": "string from environmentalMeasure codelist",
+        "description": "string"
+      }
+    ],
     "climateOversightTypes": [
       "string"
     ],
@@ -666,7 +672,7 @@
     "inProtectedArea": "boolean",
     "climateMeasures": [
       {
-        "type": "string from climateMeasures codelist",
+        "type": "string from climateMeasure codelist",
         "description": "string"
       }
     ]

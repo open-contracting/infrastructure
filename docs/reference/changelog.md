@@ -62,6 +62,7 @@
   * [#441](https://github.com/open-contracting/infrastructure/pull/441) - `environment.impactCategories`
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - `environment.inProtectedArea`
   * [#428](https://github.com/open-contracting/infrastructure/pull/428) - `lobbyingMeetings`
+  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - `environment.environmentalMeasures`
 
 ### Codelists
 
@@ -70,7 +71,7 @@
 * [#432](https://github.com/open-contracting/infrastructure/pull/432) - rename 'completed' to 'maintenance' in the projectStatus codelist.
 * Add codelists:
   * [#369](https://github.com/open-contracting/infrastructure/pull/369) - classificationScheme
-  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasures
+  * [#457](https://github.com/open-contracting/infrastructure/pull/457) - climateMeasure
   * [#451](https://github.com/open-contracting/infrastructure/pull/451) - climateOversightTypes
   * [#447](https://github.com/open-contracting/infrastructure/pull/447) - conservationMeasure
   * [#449](https://github.com/open-contracting/infrastructure/pull/449) - constructionMaterial
@@ -89,6 +90,7 @@
     * debtRepaymentPriority
     * financingArrangementType
     * financingPartyType
+  * [#476](https://github.com/open-contracting/infrastructure/pull/476) - environmentalMeasure
 * Add codes:
   * documentType:
     * [#446](https://github.com/open-contracting/infrastructure/pull/446)
@@ -119,9 +121,10 @@
     * [#442](https://github.com/open-contracting/infrastructure/pull/442) - 'abatementCostMethodology'
     * [#457](https://github.com/open-contracting/infrastructure/pull/457) - 'climateMeasures'
     * [#447](https://github.com/open-contracting/infrastructure/pull/447) - 'conservationMeasures'
+    * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
+    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
     * [#449](https://github.com/open-contracting/infrastructure/pull/449) - 'materialTestResults'
     * [#437](https://github.com/open-contracting/infrastructure/pull/437) - 'policyAlignment'
-    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
   * [#455](https://github.com/open-contracting/infrastructure/pull/455) - locationGazetteers:
     * 'WDPA'
   * partyRole:

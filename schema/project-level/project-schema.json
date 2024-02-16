@@ -450,12 +450,32 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "climateMeasures": {
+          "title": "Climate measures",
+          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClimateMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "conservationMeasures": {
           "title": "Conservation measures",
           "description": "The measures adopted by the project to protect and enhance biodiversity.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "environmentalMeasures": {
+          "title": "Environmental measures",
+          "description": "The measures adopted by the project to mitigate or remedy environmental impacts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnvironmentalMeasure"
           },
           "uniqueItems": true,
           "minItems": 1
@@ -469,16 +489,6 @@
           "title": "In protected area",
           "description": "Whether the project is located in a protected area.",
           "type": "boolean"
-        },
-        "climateMeasures": {
-          "title": "Climate measures",
-          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ClimateMeasure"
-          },
-          "uniqueItems": true,
-          "minItems": 1
         }
       },
       "minProperties": 1
@@ -2593,6 +2603,35 @@
       },
       "minProperties": 1
     },
+    "ClimateMeasure": {
+      "title": "Climate measure",
+      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of climate measure, using the open [climateMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasure) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "climateMeasure.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
     "ConservationMeasure": {
       "title": "Conservation measure",
       "description": "A measure adopted by the project to protect and enhance biodiversity.",
@@ -2609,6 +2648,28 @@
         "description": {
           "title": "Description",
           "description": "A short description of the conservation measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "EnvironmentalMeasure": {
+      "title": "Environmental measure",
+      "description": "A measure adopted by the project to mitigate or remedy environmental impacts.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of environmental measure, using the open [environmentalMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalMeasure) codelist.",
+          "type": "string",
+          "codelist": "environmentalMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the environmental measure.",
           "type": "string",
           "minLength": 1
         }
@@ -3159,35 +3220,6 @@
             }
           },
           "minProperties": 1
-        }
-      },
-      "minProperties": 1
-    },
-    "ClimateMeasure": {
-      "title": "Climate measure",
-      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
-      "type": "object",
-      "properties": {
-        "type": {
-          "title": "Type",
-          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
-          "type": [
-            "array"
-          ],
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "codelist": "climateMeasures.csv",
-          "openCodelist": true,
-          "minItems": 1,
-          "uniqueItems": true
-        },
-        "description": {
-          "title": "Description",
-          "description": "A short description of the climate measure.",
-          "type": "string",
-          "minLength": 1
         }
       },
       "minProperties": 1
