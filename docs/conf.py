@@ -100,12 +100,13 @@ html_theme_options = {
     'analytics_id': 'YEWDOOEQ',
     'display_version': True,
     'root_url': f'/{profile_identifier}' if profile_identifier else '',
-    'short_project': project.replace('Open Contracting Data Standard', 'OCDS'),
+    'short_project': 'OC4IDS',
     'copyright': copyright,
     'license_name': 'Apache License 2.0',
     'license_url': f'{repository_url}/blob/HEAD/LICENSE',
     'repository_url': repository_url,
 }
+html_short_title = f'{html_theme_options["short_project"]} v{release}'
 
 
 def setup(app):
