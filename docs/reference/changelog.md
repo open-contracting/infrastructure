@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.9.5] - YYYY-MM-DD
+
+### Documentation
+
+* [#478](https://github.com/open-contracting/infrastructure/pull/478) - Fix validation errors in `example.json`.
+
 ## [0.9.4] - 2023-12-12
 
 ### Documentation
