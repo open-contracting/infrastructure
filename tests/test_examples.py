@@ -53,12 +53,15 @@ def test_examples_valid():
 
     for path in paths:
         if 'blank.json' not in path:
-          with open(path) as f:
-              data = json.load(f)
+            with open(path) as f:
+                data = json.load(f)
 
-          errors = 0
-          for error in validator.iter_errors(data):
-              errors += 1
-              warnings.warn(f"{json.dumps(error.instance, indent=2)}\n{error.message} ({'/'.join(error.absolute_schema_path)})\n")
+            errors = 0
+            for error in validator.iter_errors(data):
+                errors += 1
+                warnings.warn(
+                    f"{json.dumps(error.instance, indent=2)}\n"
+                    f"{error.message} ({'/'.join(error.absolute_schema_path)})\n"
+                )
 
-          assert not errors, f'{path} is invalid. See warnings below.'
+            assert not errors, f'{path} is invalid. See warnings below.'
