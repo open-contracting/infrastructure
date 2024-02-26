@@ -198,7 +198,9 @@
         "finance": [
           {
             "id": "1",
-            "assetClass": ["debt"],
+            "assetClass": [
+              "debt"
+            ],
             "type": "loan",
             "concessional": true,
             "value": {
@@ -1197,7 +1199,9 @@
         "inProtectedArea": true,
         "climateMeasures": [
           {
-            "type": ["regenerativeDesign"],
+            "type": [
+              "regenerativeDesign"
+            ],
             "description": "Regenerative design measures for the project include biomimicry to imitate nature."
           }
         ]
