@@ -1158,7 +1158,7 @@
         "inIndigenousLand": false,
         "healthAndSafety": {
           "materialTests": {
-            "test": [
+            "tests": [
               "masonry",
               "metal"
             ],
