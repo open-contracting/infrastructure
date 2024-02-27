@@ -24,7 +24,7 @@ pytestmark = pytest.mark.filterwarnings('always')
 
 # See test_example_valid in standard-maintenance-scripts/tests/test_readme.py
 def test_examples_valid():
-    with (basedir / 'schema' / 'project-level' / 'project-package-schema.json').open() as f:
+    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
 
     set_additional_properties(schema, False)
@@ -39,6 +39,7 @@ def test_examples_valid():
         with open(path) as f:
             data = json.load(f)
 
-        errors += validate_schema(path, data, validator)
+        for project in data['projects']:
+            errors += validate_schema(path, project, validator)
 
     assert not errors, 'One or more JSON files are invalid. See warnings below.'
