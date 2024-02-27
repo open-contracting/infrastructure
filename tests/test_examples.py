@@ -2,12 +2,17 @@ import json
 import os
 import warnings
 from glob import glob
+from pathlib import Path
 
 import pytest
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator
+from jscc.testing.checks import validate_schema
+
+from manage import set_additional_properties
 
 cwd = os.getcwd()
+basedir = Path(__file__).resolve().parents[1]
 
 
 def formatwarning(message, category, filename, lineno, line=None):
@@ -18,50 +23,23 @@ warnings.formatwarning = formatwarning
 pytestmark = pytest.mark.filterwarnings('always')
 
 
-def disallow_additional(schema):
-    """
-    Disallows additional properties.
-    """
-
-    if schema.get('type') not in ['object', 'array']:
-        return schema
-
-    if schema.get('type') == 'array':
-        schema['items'] = disallow_additional(schema['items'])
-        return schema
-
-    for k, v in schema.get('properties', {}).items():
-        schema['properties'][k] = disallow_additional(v)
-
-    for k, v in schema.get('definitions', {}).items():
-        schema['definitions'][k] = disallow_additional(v)
-
-    schema['additionalProperties'] = False
-
-    return schema
-
-
+# See test_example_valid in standard-maintenance-scripts/tests/test_readme.py
 def test_examples_valid():
-    with open('schema/project-level/project-package-schema.json') as f:
+    with (basedir / 'schema' / 'project-level' / 'project-package-schema.json').open() as f:
         schema = json.load(f)
 
-    schema = disallow_additional(schema)
+    set_additional_properties(schema, False)
 
     validator = Draft4Validator(schema, format_checker=FormatChecker())
 
-    paths = glob('docs/examples/*.json')
+    errors = 0
+    for path in (basedir / 'docs' / 'examples').glob('**/*.json'):
+        if path.name == 'blank.json':
+            continue
 
-    for path in paths:
-        if 'blank.json' not in path:
-            with open(path) as f:
-                data = json.load(f)
+        with open(path) as f:
+            data = json.load(f)
 
-            errors = 0
-            for error in validator.iter_errors(data):
-                errors += 1
-                warnings.warn(
-                    f"{json.dumps(error.instance, indent=2)}\n"
-                    f"{error.message} ({'/'.join(error.absolute_schema_path)})\n"
-                )
+        errors += validate_schema(path, data, validator)
 
-            assert not errors, f'{path} is invalid. See warnings below.'
+    assert not errors, 'One or more JSON files are invalid. See warnings below.'

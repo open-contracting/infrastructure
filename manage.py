@@ -60,6 +60,18 @@ def write_yaml_file(filename, data):
         yaml.dump(data, f, Dumper=Dumper, indent=4, width=1000, sort_keys=False)
 
 
+# From standard-maintenance-scripts/tests/test_readme.py
+def set_additional_properties(data, additional_properties):
+    if isinstance(data, list):
+        for item in data:
+            set_additional_properties(item, additional_properties)
+    elif isinstance(data, dict):
+        if "properties" in data:
+            data["additionalProperties"] = additional_properties
+        for value in data.values():
+            set_additional_properties(value, additional_properties)
+
+
 def traverse(schema_action=None, object_action=None):
     """
     Common logic for walking through the schema.
@@ -810,17 +822,6 @@ def update(ppp_base_url):
 @click.option("-l", "--link-fields", is_flag=True, help="Link field names to jsonschema directives")
 def lint(filename, additional_properties, link_fields):
 
-    # From standard-maintenance-scripts/tests/test_readme.py
-    def _set_additional_properties(data, additional_properties):
-        if isinstance(data, list):
-            for item in data:
-                _set_additional_properties(item, additional_properties)
-        elif isinstance(data, dict):
-            if "properties" in data:
-                data["additionalProperties"] = additional_properties
-            for value in data.values():
-                _set_additional_properties(value, additional_properties)
-
     def _get_fields(schema, parents=()):
         """
         Generate field names (as tuples) in the JSON Schema.
@@ -887,7 +888,7 @@ def lint(filename, additional_properties, link_fields):
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
         schema = json.load(f)
 
-    _set_additional_properties(schema, additional_properties)
+    set_additional_properties(schema, additional_properties)
 
     fields = set(_get_fields(schema))
     for name, definition in schema['definitions'].items():
