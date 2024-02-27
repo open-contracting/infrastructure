@@ -1,13 +1,12 @@
 import json
 import os
 import warnings
-from glob import glob
 from pathlib import Path
 
 import pytest
+from jscc.testing.checks import validate_schema
 from jsonschema import FormatChecker
 from jsonschema.validators import Draft4Validator
-from jscc.testing.checks import validate_schema
 
 from manage import set_additional_properties
 
