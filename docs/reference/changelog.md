@@ -4,7 +4,7 @@
 
 ### Documentation
 
-* [#478](https://github.com/open-contracting/infrastructure/pull/478) - Fix validation errors in `example.json`.
+* [#478](https://github.com/open-contracting/infrastructure/pull/478), [#479](https://github.com/open-contracting/infrastructure/pull/479) - Fix validation errors in `example.json`.
 
 ### Schema
 
