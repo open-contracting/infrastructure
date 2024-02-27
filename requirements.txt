@@ -8,6 +8,7 @@ sphinxcontrib-opendataservices==0.5.0
 sphinx-design
 
 # Build
+jscc
 jsonref
 jsonschema
 mdformat
