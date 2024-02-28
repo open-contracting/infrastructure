@@ -18,7 +18,7 @@
   * documentType:
     * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
     * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
- * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
+  * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
     * 'airManagement'
     * 'waterManagement'
 
