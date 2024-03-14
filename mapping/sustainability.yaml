@@ -18,6 +18,13 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/title
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '1.2'
     title: Life cycle cost
     module: Economic and fiscal
@@ -41,6 +48,14 @@
             }
           ]
         }
+    fields:
+    - /costMeasurements
+    - /costMeasurements/id
+    - /costMeasurements/lifeCycleCosting
+    - /costMeasurements/lifeCycleCosting/value
+    - /costMeasurements/lifeCycleCosting/value/amount
+    - /costMeasurements/lifeCycleCosting/value/currency
+    refs: ''
 -   id: '1.3'
     title: Life cycle cost calculation methodology
     module: Economic and fiscal
@@ -60,6 +75,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '1.4'
     title: Funding source for preparation, implementation and maintenance
     module: Economic and fiscal
@@ -115,6 +136,22 @@
             }
           ]
         }
+    fields:
+    - /budget
+    - /budget/budgetBreakdowns
+    - /budget/budgetBreakdowns/id
+    - /budget/budgetBreakdowns/description
+    - /budget/budgetBreakdowns/budgetBreakdown
+    - /budget/budgetBreakdowns/budgetBreakdown/id
+    - /budget/budgetBreakdowns/budgetBreakdown/description
+    - /budget/budgetBreakdowns/budgetBreakdown/sourceParty
+    - /budget/budgetBreakdowns/budgetBreakdown/sourceParty/id
+    - /budget/budgetBreakdowns/budgetBreakdown/sourceParty/name
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    refs: ''
 -   id: '1.5'
     title: Budget for preparation, implementation and maintenance
     module: Economic and fiscal
@@ -159,6 +196,18 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/budgetBreakdowns
+    - /budget/budgetBreakdowns/id
+    - /budget/budgetBreakdowns/description
+    - /budget/budgetBreakdowns/budgetBreakdown
+    - /budget/budgetBreakdowns/budgetBreakdown/id
+    - /budget/budgetBreakdowns/budgetBreakdown/description
+    - /budget/budgetBreakdowns/budgetBreakdown/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/currency
+    refs: ''
 -   id: '1.6'
     title: Cost benefit analysis
     module: Economic and fiscal
@@ -191,6 +240,13 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    refs: ''
 -   id: '1.7'
     title: Value for money
     module: Economic and fiscal
@@ -207,6 +263,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '1.8'
     title: Budget projections
     module: Economic and fiscal
@@ -259,6 +321,20 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/budgetBreakdowns
+    - /budget/budgetBreakdowns/id
+    - /budget/budgetBreakdowns/description
+    - /budget/budgetBreakdowns/budgetBreakdown
+    - /budget/budgetBreakdowns/budgetBreakdown/id
+    - /budget/budgetBreakdowns/budgetBreakdown/period
+    - /budget/budgetBreakdowns/budgetBreakdown/period/startDate
+    - /budget/budgetBreakdowns/budgetBreakdown/period/endDate
+    - /budget/budgetBreakdowns/budgetBreakdown/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/currency
+    refs: ''
 -   id: '1.9'
     title: Budget shortfall
     module: Economic and fiscal
@@ -290,6 +366,17 @@
             }
           ]
         }
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    - /metrics/observations
+    - /metrics/observations/id
+    - /metrics/observations/value
+    - /metrics/observations/value/amount
+    - /metrics/observations/value/currency
+    - /metrics/observations/notes
+    refs: ''
 -   id: '1.10'
     title: Maintenance plan or program
     module: Economic and fiscal
@@ -306,6 +393,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '1.11'
     title: Asset lifetime
     module: Economic and fiscal
@@ -318,6 +411,10 @@
             "durationInDays": 3650
           }
         }
+    fields:
+    - /assetLifetime
+    - /assetLifetime/durationInDays
+    refs: ''
 -   id: '2.1'
     title: Environmental impact category
     module: Environment and climate
@@ -351,6 +448,13 @@
             ]
           }
         }
+    fields:
+    - /environment
+    - /environment/hasImpactAssessment
+    - /environment/impactCategories
+    - /environment/impactCategories/scheme
+    - /environment/impactCategories/id
+    refs: ''
 -   id: '2.2'
     title: Environmental measures
     module: Environment and climate
@@ -389,6 +493,17 @@
             }
           ]
         }
+    fields:
+    - /environment
+    - /environment/environmentalMeasures
+    - /environment/environmentalMeasures/type
+    - /environment/environmentalMeasures/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    refs: ''
 -   id: '2.3'
     title: Environmental licenses and exemptions
     module: Environment and climate
@@ -408,6 +523,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '2.4'
     title: Protected area
     module: Environment and climate
@@ -440,6 +561,15 @@
             }
           ]
         }
+    fields:
+    - /environment
+    - /environment/inProtectedArea
+    - /locations
+    - /locations/id
+    - /locations/gazetteer
+    - /locations/gazetteer/scheme
+    - /locations/gazetteer/identifiers
+    refs: ''
 -   id: '2.5'
     title: Conservation measures
     module: Environment and climate
@@ -483,6 +613,16 @@
             }
           ]
         }
+    fields:
+    - /environment
+    - /environment/conservationMeasures
+    - /environment/conservationMeasures/type
+    - /environment/conservationMeasures/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '2.6'
     title: Climate and disaster risk assessment
     module: Environment and climate
@@ -503,6 +643,13 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    refs: ''
 -   id: '2.7'
     title: Climate measures
     module: Environment and climate
@@ -547,6 +694,16 @@
             }
           ]
         }
+    fields:
+    - /environment
+    - /environment/climateMeasures
+    - /environment/climateMeasures/type
+    - /environment/climateMeasures/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '2.8'
     title: Forecast of greenhouse gas emissions
     module: Environment and climate
@@ -598,6 +755,26 @@
             }
           ]
         }
+    fields:
+    - /forecasts
+    - /forecasts/id
+    - /forecasts/title
+    - /forecasts/description
+    - /forecasts/observations
+    - /forecasts/observations/id
+    - /forecasts/observations/period
+    - /forecasts/observations/period/startDate
+    - /forecasts/observations/period/endDate
+    - /forecasts/observations/measure
+    - /forecasts/observations/unit
+    - /forecasts/observations/unit/name
+    - /forecasts/observations/unit/scheme
+    - /forecasts/observations/unit/id
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '2.9'
     title: Environmental certifications
     module: Environment and climate
@@ -624,6 +801,15 @@
             }
           ]
         }
+    fields:
+    - /contractingProcesses
+    - /contractingProcesses/id
+    - /contractingProcesses/summary
+    - /contractingProcesses/summary/documents
+    - /contractingProcesses/summary/documents/id
+    - /contractingProcesses/summary/documents/documentType
+    - /contractingProcesses/summary/documents/url
+    refs: ''
 -   id: '2.10'
     title: Decommissioning plans
     module: Environment and climate
@@ -643,6 +829,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '2.11'
     title: Decommissioning cost forecast
     module: Environment and climate
@@ -679,6 +871,18 @@
             }
           ]
         }
+    fields:
+    - /costMeasurements
+    - /costMeasurements/id
+    - /costMeasurements/costGroups
+    - /costMeasurements/costGroups/id
+    - /costMeasurements/costGroups/category
+    - /costMeasurements/costGroups/costs
+    - /costMeasurements/costGroups/costs/id
+    - /costMeasurements/costGroups/costs/value
+    - /costMeasurements/costGroups/costs/value/amount
+    - /costMeasurements/costGroups/costs/value/currency
+    refs: ''
 -   id: '3.1'
     title: Climate objective
     module: Climate finance
@@ -702,6 +906,10 @@
             ]
           }
         }
+    fields:
+    - /environment
+    - /environment/goals
+    refs: ''
 -   id: '3.2'
     title: Financial instrument
     module: Climate finance
@@ -745,6 +953,15 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/assetClass
+    - /budget/finance/type
+    - /budget/finance/concessional
+    - /budget/finance/resultsBased
+    refs: ''
 -   id: '3.3'
     title: Climate transformation
     module: Climate finance
@@ -764,6 +981,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '3.4'
     title: Climate finance decision-maker
     module: Climate finance
@@ -785,6 +1008,12 @@
             }
           ]
         }
+    fields:
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    refs: ''
 -   id: '3.5'
     title: Nationally Determined Contributions (NDC)
     module: Climate finance
@@ -792,6 +1021,19 @@
     disclosure format: Clarify how the investment is aligned with the country's nationally determined contributions.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
+    fields:
+    - /additionalClassifications
+    - /additionalClassifications/scheme
+    - /additionalClassifications/id
+    - /additionalClassifications/description
+    - /policyAlignment
+    - /policyAlignment/policies
+    - /policyAlignment/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: '5.1'
 -   id: '3.6'
     title: Paris Agreement
     module: Climate finance
@@ -799,6 +1041,8 @@
     disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
+    fields: []
+    refs: '5.1'
 -   id: '3.7'
     title: Beneficiaries
     module: Climate finance
@@ -806,6 +1050,12 @@
     disclosure format: Disclose who the climate finance investment is intended to benefit and number of beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
     mapping: See [number of beneficiaries (social module)](social-number-of-beneficiaries)
     example: ''
+    fields:
+    - /benefits
+    - /benefits/beneficiaries
+    - /benefits/beneficiaries/description
+    - /benefits/beneficiaries/numberOfPeople
+    refs: '4.1'
 -   id: '3.8'
     title: Amount of investment
     module: Climate finance
@@ -828,6 +1078,14 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/value
+    - /budget/finance/value/amount
+    - /budget/finance/value/currency
+    refs: ''
 -   id: '3.9'
     title: Funding source
     module: Climate finance
@@ -847,6 +1105,12 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/source
+    refs: ''
 -   id: '3.10'
     title: Green Climate Fund Accredited Entity
     module: Climate finance
@@ -879,6 +1143,18 @@
             }
           ]
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/financingParty
+    - /budget/finance/financingParty/id
+    - /budget/finance/financingParty/name
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    refs: ''
 -   id: '3.11'
     title: Accredited Entity Type
     module: Climate finance
@@ -919,6 +1195,15 @@
             }
           ]
         }
+    fields:
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    - /parties/classifications
+    - /parties/classifications/id
+    - /parties/classifications/scheme
+    refs: ''
 -   id: '3.12'
     title: Project preparation costs
     module: Climate finance
@@ -926,6 +1211,18 @@
     disclosure format: Disclose the amounts invested in project preparation.
     mapping: See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
     example: ''
+    fields:
+    - /budget
+    - /budget/budgetBreakdowns
+    - /budget/budgetBreakdowns/id
+    - /budget/budgetBreakdowns/description
+    - /budget/budgetBreakdowns/budgetBreakdown
+    - /budget/budgetBreakdowns/budgetBreakdown/id
+    - /budget/budgetBreakdowns/budgetBreakdown/description
+    - /budget/budgetBreakdowns/budgetBreakdown/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/amount
+    - /budget/budgetBreakdowns/budgetBreakdown/amount/currency
+    refs: '1.5'
 -   id: '3.13'
     title: Project preparation period
     module: Climate finance
@@ -942,6 +1239,11 @@
             "endDate": "2016-12-31T00:00:00Z"
           }
         }
+    fields:
+    - /preparationPeriod
+    - /preparationPeriod/startDate
+    - /preparationPeriod/endDate
+    refs: ''
 -   id: '3.14'
     title: Project approval period
     module: Climate finance
@@ -976,6 +1278,14 @@
             }
           ]
         }
+    fields:
+    - /milestones
+    - /milestones/id
+    - /milestones/title
+    - /milestones/type
+    - /milestones/dateMet
+    - /milestones/status
+    refs: ''
 -   id: '3.15'
     title: Ratio of co-finance
     module: Climate finance
@@ -1009,6 +1319,15 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/source
+    - /budget/finance/value
+    - /budget/finance/value/amount
+    - /budget/finance/value/currency
+    refs: ''
 -   id: '3.16'
     title: Terms of climate finance
     module: Climate finance
@@ -1054,6 +1373,20 @@
             ]
           }
         }
+    fields:
+    - /budget
+    - /budget/finance
+    - /budget/finance/id
+    - /budget/finance/period
+    - /budget/finance/period/startDate
+    - /budget/finance/period/endDate
+    - /budget/finance/paymentPeriod
+    - /budget/finance/paymentPeriod/startDate
+    - /budget/finance/paymentPeriod/endDate
+    - /budget/finance/interestRate
+    - /budget/finance/interestRate/margin
+    - /budget/finance/description
+    refs: ''
 -   id: '3.17'
     title: Carbon efficiency
     module: Climate finance
@@ -1079,6 +1412,16 @@
             }
           ]
         }
+    fields:
+    - /environment
+    - /environment/abatementCost
+    - /environment/abatementCost/amount
+    - /environment/abatementCost/currency
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '3.18'
     title: Non-climate co-benefits
     module: Climate finance
@@ -1103,6 +1446,11 @@
             }
           ]
         }
+    fields:
+    - /benefits
+    - /benefits/title
+    - /benefits/description
+    refs: ''
 -   id: '3.19'
     title: Public consultation meetings
     module: Climate finance
@@ -1110,6 +1458,23 @@
     disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the meeting invite, the number of participants, dates and location of these meetings.
     mapping: See [public consultation meetings (social module)](social-public-consultation-meetings).
     example: ''
+    fields:
+    - /social
+    - /social/consultationMeetings
+    - /social/consultationMeetings/id
+    - /social/consultationMeetings/date
+    - /social/consultationMeetings/address
+    - /social/consultationMeetings/address/streetAddress
+    - /social/consultationMeetings/address/locality
+    - /social/consultationMeetings/address/region
+    - /social/consultationMeetings/address/postalCode
+    - /social/consultationMeetings/address/countryName
+    - /social/consultationMeetings/numberOfParticipants
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: '4.4'
 -   id: '3.20'
     title: Disbursement records
     module: Climate finance
@@ -1191,6 +1556,33 @@
             }
           ]
         }
+    fields:
+    - /milestones
+    - /milestones/id
+    - /milestones/title
+    - /milestones/status
+    - /milestones/dueDate
+    - /milestones/dateMet
+    - /milestones/type
+    - /milestones/value
+    - /milestones/value/amount
+    - /milestones/value/currency
+    - /transactions
+    - /transactions/id
+    - /transactions/date
+    - /transactions/value
+    - /transactions/value/amount
+    - /transactions/value/currency
+    - /transactions/payer
+    - /transactions/payer/id
+    - /transactions/payer/name
+    - /transactions/payee
+    - /transactions/payee/id
+    - /transactions/payee/name
+    - /transactions/relatedImplementationMilestone
+    - /transactions/relatedImplementationMilestone/id
+    - /transactions/relatedImplementationMilestone/title
+    refs: ''
 -   id: '3.21'
     title: Type of project monitoring
     module: Climate finance
@@ -1214,6 +1606,10 @@
             ]
           }
         }
+    fields:
+    - /environment
+    - /environment/climateOversightTypes
+    refs: ''
 -   id: '3.22'
     title: Performance monitoring
     module: Climate finance
@@ -1232,6 +1628,11 @@
             }
           ]
         }
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    refs: ''
 -   id: '3.23'
     title: Reporting period
     module: Climate finance
@@ -1251,6 +1652,12 @@
             }
           ]
         }
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    - /metrics/description
+    refs: ''
 -   id: '3.24'
     title: Oversight reports
     module: Climate finance
@@ -1270,6 +1677,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '3.25'
     title: Independent monitoring
     module: Climate finance
@@ -1277,6 +1690,12 @@
     disclosure format: Identify the entities acting as independent monitors of the project.
     mapping: See [independent monitoring (institutional module)](institutional-independent-monitoring).
     example: ''
+    fields:
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    refs: '5.8'
 -   id: '3.26'
     title: Independent evaluation
     module: Climate finance
@@ -1299,6 +1718,15 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    - /documents/pageStart
+    - /documents/pageEnd
+    refs: ''
 -   id: '3.27'
     title: Impact measurement
     module: Climate finance
@@ -1319,6 +1747,13 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    refs: ''
 -   id: '3.28'
     title: Carbon footprint
     module: Climate finance
@@ -1370,6 +1805,26 @@
             }
           ]
         }
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    - /metrics/description
+    - /metrics/observations
+    - /metrics/observations/id
+    - /metrics/observations/period
+    - /metrics/observations/period/startDate
+    - /metrics/observations/period/endDate
+    - /metrics/observations/measure
+    - /metrics/observations/unit
+    - /metrics/observations/unit/name
+    - /metrics/observations/unit/scheme
+    - /metrics/observations/unit/id
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '3.29'
     title: Infrastructure assets to be decommissioned
     module: Climate finance
@@ -1401,6 +1856,16 @@
             }
           ]
         }
+    fields:
+    - /id
+    - /title
+    - /type
+    - /relatedProjects
+    - /relatedProjects/id
+    - /relatedProjects/scheme
+    - /relatedProjects/title
+    - /relatedProjects/relationship
+    refs: ''
 -   id: '3.30'
     title: Decommission period
     module: Climate finance
@@ -1417,6 +1882,11 @@
             "endDate": "2041-06-30T00:00:00Z"
           }
         }
+    fields:
+    - /decommissioningPeriod
+    - /decommissioningPeriod/startDate
+    - /decommissioningPeriod/endDate
+    refs: ''
 -   id: '3.31'
     title: Decommission plan
     module: Climate finance
@@ -1424,6 +1894,12 @@
     disclosure format: Disclose the technical plan for decommissioning.
     mapping: See [decommissioning plans (environment and social)](environment-and-climate-decommissioning-plans).
     example: ''
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: '2.10'
 -   id: '3.33'
     title: Carbon decommission savings
     module: Climate finance
@@ -1476,6 +1952,27 @@
             }
           ]
         }
+    fields:
+    - /id
+    - /forecasts
+    - /forecasts/id
+    - /forecasts/title
+    - /forecasts/description
+    - /forecasts/observations
+    - /forecasts/observations/id
+    - /forecasts/observations/period
+    - /forecasts/observations/period/startDate
+    - /forecasts/observations/period/endDate
+    - /forecasts/observations/measure
+    - /forecasts/observations/unit
+    - /forecasts/observations/unit/name
+    - /forecasts/observations/unit/scheme
+    - /forecasts/observations/unit/id
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '3.34'
     title: Decommission mitigation plan
     module: Climate finance
@@ -1498,6 +1995,15 @@
             }
           ]
         }
+    fields:
+    - /id
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    - /documents/pageStart
+    - /documents/pageEnd
+    refs: ''
 -   id: '4.1'
     title: Number of beneficiaries
     module: Social
@@ -1526,6 +2032,12 @@
             }
           ]
         }
+    fields:
+    - /benefits
+    - /benefits/beneficiaries
+    - /benefits/beneficiaries/description
+    - /benefits/beneficiaries/numberOfPeople
+    refs: ''
 -   id: '4.2'
     title: Inclusive design and implementation
     module: Social
@@ -1554,6 +2066,13 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/description
+    - /documents/url
+    refs: ''
 -   id: '4.3'
     title: Indigenous land
     module: Social
@@ -1580,6 +2099,13 @@
             }
           ]
         }
+    fields:
+    - /social
+    - /social/inIndigenousLand
+    - /locations
+    - /locations/id
+    - /locations/description
+    refs: ''
 -   id: '4.4'
     title: Public consultation meetings
     module: Social
@@ -1631,6 +2157,23 @@
             }
           ]
         }
+    fields:
+    - /social
+    - /social/consultationMeetings
+    - /social/consultationMeetings/id
+    - /social/consultationMeetings/date
+    - /social/consultationMeetings/address
+    - /social/consultationMeetings/address/streetAddress
+    - /social/consultationMeetings/address/locality
+    - /social/consultationMeetings/address/region
+    - /social/consultationMeetings/address/postalCode
+    - /social/consultationMeetings/address/countryName
+    - /social/consultationMeetings/numberOfParticipants
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '4.5'
     title: Land compensation budget
     module: Social
@@ -1649,6 +2192,12 @@
             }
           }
         }
+    fields:
+    - /social
+    - /social/landCompensationBudget
+    - /social/landCompensationBudget/amount
+    - /social/landCompensationBudget/currency
+    refs: ''
 -   id: '4.6'
     title: Labour obligations
     module: Social
@@ -1714,6 +2263,19 @@
             }
           ]
         }
+    fields:
+    - /contractingProcesses
+    - /contractingProcesses/id
+    - /contractingProcesses/summary
+    - /contractingProcesses/summary/social
+    - /contractingProcesses/summary/social/laborObligations
+    - /contractingProcesses/summary/social/laborObligations/obligations
+    - /contractingProcesses/summary/social/laborObligations/description
+    - /contractingProcesses/summary/documents
+    - /contractingProcesses/summary/documents/id
+    - /contractingProcesses/summary/documents/documentType
+    - /contractingProcesses/summary/documents/url
+    refs: ''
 -   id: '4.7'
     title: Labour budget
     module: Social
@@ -1739,6 +2301,15 @@
             }
           ]
         }
+    fields:
+    - /contractingProcesses
+    - /contractingProcesses/id
+    - /contractingProcesses/summary
+    - /contractingProcesses/summary/social
+    - /contractingProcesses/summary/social/laborBudget
+    - /contractingProcesses/summary/social/laborBudget/amount
+    - /contractingProcesses/summary/social/laborBudget/currency
+    refs: ''
 -   id: '4.8'
     title: Workers' accidents
     module: Social
@@ -1804,6 +2375,18 @@
             }
           ]
         }
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    - /metrics/observations
+    - /metrics/observations/id
+    - /metrics/observations/period
+    - /metrics/observations/period/startDate
+    - /metrics/observations/period/endDate
+    - /metrics/observations/measure
+    - /metrics/observations/notes
+    refs: ''
 -   id: '4.9'
     title: Health and safety certifications
     module: Social
@@ -1830,6 +2413,15 @@
             }
           ]
         }
+    fields:
+    - /contractingProcesses
+    - /contractingProcesses/id
+    - /contractingProcesses/summary
+    - /contractingProcesses/summary/documents
+    - /contractingProcesses/summary/documents/id
+    - /contractingProcesses/summary/documents/documentType
+    - /contractingProcesses/summary/documents/url
+    refs: ''
 -   id: '4.10'
     title: Construction materials testing
     module: Social
@@ -1883,6 +2475,17 @@
             }
           ]
         }
+    fields:
+    - /social
+    - /social/healthAndSafety
+    - /social/healthAndSafety/materialTests
+    - /social/healthAndSafety/materialTests/tests
+    - /social/healthAndSafety/materialTests/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '4.11'
     title: Building inspections
     module: Social
@@ -1902,6 +2505,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '4.12'
     title: Jobs generated
     module: Social
@@ -2014,6 +2623,26 @@
             }
           ]
         }
+    fields:
+    - /forecasts
+    - /forecasts/id
+    - /forecasts/title
+    - /forecasts/observations
+    - /forecasts/observations/id
+    - /forecasts/observations/measure
+    - /forecasts/observations/dimensions
+    - /forecasts/observations/dimensions/relationship
+    - /forecasts/observations/dimensions/stage
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    - /metrics/observations
+    - /metrics/observations/id
+    - /metrics/observations/measure
+    - /metrics/observations/dimensions
+    - /metrics/observations/dimensions/relationship
+    - /metrics/observations/dimensions/stage
+    refs: ''
 -   id: '5.1'
     title: Policy coherence
     module: Institutional
@@ -2076,6 +2705,19 @@
             }
           ]
         }
+    fields:
+    - /additionalClassifications
+    - /additionalClassifications/scheme
+    - /additionalClassifications/id
+    - /additionalClassifications/description
+    - /policyAlignment
+    - /policyAlignment/policies
+    - /policyAlignment/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.2'
     title: Freedom of information requests
     module: Institutional
@@ -2095,6 +2737,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.3'
     title: Answers to Freedom of information requests
     module: Institutional
@@ -2114,6 +2762,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.4'
     title: Lobbying transparency
     module: Institutional
@@ -2174,6 +2828,29 @@
             }
           ]
         }
+    fields:
+    - /lobbyingMeetings
+    - /lobbyingMeetings/id
+    - /lobbyingMeetings/date
+    - /lobbyingMeetings/address
+    - /lobbyingMeetings/address/streetAddress
+    - /lobbyingMeetings/address/locality
+    - /lobbyingMeetings/address/region
+    - /lobbyingMeetings/address/postalCode
+    - /lobbyingMeetings/address/countryName
+    - /lobbyingMeetings/numberOfParticipants
+    - /lobbyingMeetings/publicOffice
+    - /lobbyingMeetings/publicOffice/person
+    - /lobbyingMeetings/publicOffice/person/name
+    - /lobbyingMeetings/publicOffice/organization
+    - /lobbyingMeetings/publicOffice/organization/name
+    - /lobbyingMeetings/publicOffice/organization/id
+    - /lobbyingMeetings/publicOffice/jobTitle
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.5'
     title: Beneficial ownership
     module: Institutional
@@ -2209,6 +2886,16 @@
             }
           ]
         }
+    fields:
+    - /parties
+    - /parties/id
+    - /parties/beneficialOwners
+    - /parties/beneficialOwners/id
+    - /parties/beneficialOwners/name
+    - /parties/beneficialOwners/identifier
+    - /parties/beneficialOwners/identifier/scheme
+    - /parties/beneficialOwners/identifier/id
+    refs: ''
 -   id: '5.6'
     title: Sustainability criteria
     module: Institutional
@@ -2237,6 +2924,14 @@
             }
           ]
         }
+    fields:
+    - /contractingProcesses
+    - /contractingProcesses/id
+    - /contractingProcesses/summary
+    - /contractingProcesses/summary/tender
+    - /contractingProcesses/summary/tender/sustainability
+    - /contractingProcesses/summary/tender/sustainability/strategies
+    refs: ''
 -   id: '5.7'
     title: Anti-corruption certifications
     module: Institutional
@@ -2256,6 +2951,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.8'
     title: Independent monitoring
     module: Institutional
@@ -2277,6 +2978,12 @@
             }
           ]
         }
+    fields:
+    - /parties
+    - /parties/id
+    - /parties/name
+    - /parties/roles
+    refs: ''
 -   id: '5.9'
     title: Performance monitoring
     module: Institutional
@@ -2284,6 +2991,11 @@
     disclosure format: Disclose Key Performance Indicators adopted by the project.
     mapping: See [performance monitoring (climate finance)](climate-finance-performance-monitoring).
     example: ''
+    fields:
+    - /metrics
+    - /metrics/id
+    - /metrics/title
+    refs: '3.22'
 -   id: '5.10'
     title: Risk management plans
     module: Institutional
@@ -2303,6 +3015,12 @@
             }
           ]
         }
+    fields:
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
+    refs: ''
 -   id: '5.11'
     title: Sustainable sub-sectors
     module: Institutional
@@ -2334,3 +3052,6 @@
             "solar"
           ]
         }
+    fields:
+    - /sector
+    refs: ''
