@@ -1068,5 +1068,42 @@ def update_sustainability_docs():
         f.writelines(docs)
 
 
+@cli.command()
+def update_sustainability_fields():
+    """
+    Update the list of fields used in each elements example in mapping/sustainability.yaml.
+    """
+
+    def __get_paths(d):
+      """
+      Get a list of paths from a JSON object.
+      """
+      if isinstance(d, dict):
+          for key, value in d.items():
+              yield f'/{key}'
+              yield from (f'/{key}{p}' for p in __get_paths(value))
+          
+      elif isinstance(d, list):
+          for i, value in enumerate(d):
+              yield from (f'{p}' for p in __get_paths(value))
+
+    # Load sustainability modules mapping
+    filename = basedir / 'mapping' / 'sustainability.yaml'
+    with open(filename) as f:
+        mapping = yaml.safe_load(f)
+
+    mapping = {element["id"]: element for element in mapping}
+
+    # Get list of fields in example
+    for element in mapping.values():
+        if element["example"] != '':
+            fields = set()
+            element["fields"] = [fields.add(path) or path for path in __get_paths(json.loads(element["example"])) if path not in fields]
+        # Handle elements that reference another element and have a blank example
+        elif element["refs"] != '':
+            element["fields"] = [fields.add(path) or path for path in __get_paths(json.loads(mapping[element["refs"]]["example"])) if path not in fields]
+
+    write_yaml_file(filename, list(mapping.values()))
+
 if __name__ == '__main__':
     cli()
