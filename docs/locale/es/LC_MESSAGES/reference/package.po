@@ -40,12 +40,12 @@ msgstr ""
 #: ../../docs/reference/package.md:5
 msgid ""
 "You can view an interactive version of the project package schema below "
-"(requires JavaScript) or {download}`download it here "
-"<../../build/current_lang/project-package-schema.json>`."
+"(requires JavaScript) or [download it here"
+"](../../build/current_lang/project-package-schema.json)."
 msgstr ""
 "Puede ver una versión interactiva del esquema de paquete de proyectos más "
-"abajo (requiere JavaScript) o {download}`descárguelo aquí "
-"<../../build/current_lang/project-package-schema.json>`."
+"abajo (requiere JavaScript) o [descárguelo aquí"
+"](../../build/current_lang/project-package-schema.json)."
 
 #: ../../docs/reference/package.md:7
 msgid ""

@@ -8,7 +8,7 @@ Project identifiers can be used to join up data published at different times or 
 
 A common need is to access data about the contracting processes related to an infrastructure project. When contracting systems use consistent identifiers to refer to infrastructure projects, this becomes possible. An example use case is automatically checking which projects have related contracting data, and then manually filtering projects for further scrutiny, monitoring or data collection.
 
-Project identifiers in contracting data should be locally unique; this means that across all contracting data from a particular system or country, each project identifier refers to exactly one infrastructure project.
+Project identifiers in contracting data ought to be locally unique; this means that across all contracting data from a particular system or country, each project identifier refers to exactly one infrastructure project.
 
 There are different approaches to including project identifiers in contracting data, with the best solution depending on the context of an implementation:
 
@@ -30,17 +30,17 @@ There are different approaches to including project identifiers in contracting d
 
 ### Project identifiers in OCDS
 
-In OCDS, the identifier for the individual infrastructure project to which a contracting process is related should be disclosed using the `planning/project/id` field, introduced in the [Project extension](https://extensions.open-contracting.org/en/extensions/project/).
+In OCDS, the identifier for the individual infrastructure project to which a contracting process is related ought to be disclosed using the `planning/project/id` field, introduced in the [Project extension](https://extensions.open-contracting.org/en/extensions/project/).
 
-The `planning/budget/projectID` field in OCDS should **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier for a project in the national budget to which the contracting process is related. Since projects in the national budget might include many individual infrastructure projects, it is necessary to disclose these identifiers separately.
+The `planning/budget/projectID` field in OCDS ought **not** be used to disclose the identifier for an individual infrastructure project. This field is used to disclose the identifier for a project in the national budget to which the contracting process is related. Since projects in the national budget might include many individual infrastructure projects, it is necessary to disclose these identifiers separately.
 
 ## Project identifier prefixes
 
-Project identifiers in OC4IDS should be globally unique; this means that, across all the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
+Project identifiers in OC4IDS need to be globally unique; this means that, across all the data of all OC4IDS publishers, each project identifier refers to exactly one infrastructure project.
 
-If local project identifiers are available in existing systems or data, these should be re-used to create globally unique project identifiers for use in OC4IDS. Otherwise, if local project identifiers are not available, publishers may assign local identifiers to projects in the new systems used to generate OC4IDS data.
+If local project identifiers are available in existing systems or data, these ought to be re-used to create globally unique project identifiers for use in OC4IDS. Otherwise, if local project identifiers are not available, publishers are allowed to assign local identifiers to projects in the new systems used to generate OC4IDS data.
 
-To make local project identifiers globally unique for use in OC4IDS, a publisher requests a project identifier prefix from the [OC4IDS Helpdesk](mailto:data@open-contracting.org). The publisher must then use the assigned prefix in all its project identifiers, according to following structure: `[project identifier prefix]-[local project identifier]`.
+To make local project identifiers globally unique for use in OC4IDS, a publisher requests a project identifier prefix from the [OC4IDS Helpdesk](mailto:data@open-contracting.org). The publisher needs to then use the assigned prefix in all its project identifiers, according to following structure: `[project identifier prefix]-[local project identifier]`.
 
 For example: CoST Honduras requests a project identifier prefix from the OC4IDS Helpdesk. The OC4IDS Helpdesk assigns the randomly-generated prefix `oc4ids-qu8r7p`. CoST Honduras then creates globally unique project identifiers, by combining its assigned prefix with each local project identifier from its SISOCS system.
 
@@ -52,8 +52,4 @@ Project identifier prefixes are typically unique to each publisher. However, mul
 To request a project identifier prefix, please e-mail [data@open-contracting.org](mailto:data@open-contracting.org) with the name of your organization and a brief description of your OC4IDS implementation.
 ```
 
-### Existing prefixes
-
-The list below shows all registered prefixes. You can [download the list as CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single=true&output=csv).
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pubhtml?gid=506986894&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="500"></iframe>
+You can [view the list of registered prefixes](../reference/prefixes.md).

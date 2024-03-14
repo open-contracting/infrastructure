@@ -1,0 +1,2336 @@
+-   id: '1.1'
+    title: Procurement strategy
+    module: Economic and fiscal
+    indicator: Procurement viability
+    disclosure format: Disclose the procurement strategy risk assessment. This tends to be part of the decision-making strategy and likely includes discussions regarding capabilities, the delivery model and the rationale for the risk allocation decision.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'procurementStrategyRiskAssessment'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "title": "Procurement strategy risk assessment",
+              "documentType": "procurementStrategyRiskAssessment",
+              "url": "http://example.com/documents/procurementStrategyRiskAssessment.pdf"
+            }
+          ]
+        }
+-   id: '1.2'
+    title: Life cycle cost
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the life cycle cost of the project, which is the cost of an asset throughout its life cycle while fulfilling the performance requirements (ISO 15686-5:2017).
+    mapping: |-
+        Project Level:
+
+        Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and map to its [`.lifeCycleCosting.value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value).
+    example: |-
+        {
+          "costMeasurements": [
+            {
+              "id": "1",
+              "lifeCycleCosting": {
+                "value": {
+                  "amount": 10000000,
+                  "currency": "USD"
+                }
+              }
+            }
+          ]
+        }
+-   id: '1.3'
+    title: Life cycle cost calculation methodology
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the methodology used to calculate the life-cycle cost. The methodology ought to specify whether income and externalities are included in the calculation and the common date, discount rate and period of analysis used.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'lifeCycleCostMethodology'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "lifeCycleCostMethodology",
+              "url": "http://example.com/documents/lifeCycleCostMethodology.pdf"
+            }
+          ]
+        }
+-   id: '1.4'
+    title: Funding source for preparation, implementation and maintenance
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Name the funding organization(s) / sources of funding for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
+    mapping: |-
+        Project level:
+
+        1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is "Breakdown by stage". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by stage".
+
+        2. For each stage:
+
+           a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.
+
+           b. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
+
+           c. Set the budget breakdown's [`.sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the funding source.
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by stage",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "description": "Preparation",
+                    "sourceParty": {
+                      "id": "1",
+                      "name": "Agency for Agricultural Development of Morocco"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "description": "Implementation",
+                    "sourceParty": {
+                      "id": "1",
+                      "name": "Agency for Agricultural Development of Morocco"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "parties": [
+            {
+              "id": "1",
+              "name": "Agency for Agricultural Development of Morocco",
+              "roles": [
+                "funder"
+              ]
+            }
+          ]
+        }
+-   id: '1.5'
+    title: Budget for preparation, implementation and maintenance
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Specify the allocated budget for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
+    mapping: |-
+        Project level:
+
+        1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is "Breakdown by stage". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by stage".
+
+        2. For each stage:
+
+           a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.
+
+           b. Map to the budget breakdown's [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount).
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by stage",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "description": "Preparation",
+                    "amount": {
+                      "amount": 350000,
+                      "currency": "USD"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "description": "Implementation",
+                    "amount": {
+                      "amount": 300000,
+                      "currency": "USD"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+-   id: '1.6'
+    title: Cost benefit analysis
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: |-
+        Economic assessment that tends to be part of the appraisal documents and provides information on economic net benefits and costs ("ex ante" cost benefit analysis). A revised assessment can be prepared during the operational phase of the project to update the information on net benefits and costs ("ex post" cost benefit analysis). Disclose both:
+
+        - Ex ante cost benefit analysis
+        - Ex post cost benefit analysis
+    mapping: |-
+        Project level:
+
+        1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex ante cost benefit analysis".
+
+        2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex post cost benefit analysis".
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "costBenefitAnalysis",
+              "description": "ex ante cost benefit analysis",
+              "url": "http://example.com/documents/exAnteCostBenefitAnalysis.pdf"
+            },
+            {
+              "id": "2",
+              "documentType": "costBenefitAnalysis",
+              "description": "ex post cost benefit analysis",
+              "url": "http://example.com/documents/exPostCostBenefitAnalysis.pdf"
+            }
+          ]
+        }
+-   id: '1.7'
+    title: Value for money
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: A summary of the value for money analysis carried out for the project, along with supporting figures, calculations and business case, based on projected or actual procurement outcomes. This tends to include considerations of economy, efficiency, effectiveness and equity, and is part of the appraisal documents.
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''valueForMoneyAnalysis''.'
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "valueForMoneyAnalysis",
+              "url": "http://example.com/documents/valueForMoneyAnalysis.pdf"
+            }
+          ]
+        }
+-   id: '1.8'
+    title: Budget projections
+    module: Economic and fiscal
+    indicator: Multi-year implementation
+    disclosure format: In case of multiyear project implementation, disclose information on budget projection for all years of implementation.
+    mapping: |-
+        Project level:
+
+        1. Add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by year of implementation".
+
+        2. For each year:
+
+           1. Add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array and set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally.
+
+           2. Map the year's start and end dates to its [`.period`](project-schema.json,/definitions/BudgetBreakdown,period)
+
+           3. Map the budget projection to its [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount).
+    example: |-
+        {
+          "budget": {
+            "budgetBreakdowns": [
+              {
+                "id": "1",
+                "description": "Breakdown by year of implementation",
+                "budgetBreakdown": [
+                  {
+                    "id": "1",
+                    "period": {
+                      "startDate": "2024-01-01T00:00:00Z",
+                      "endDate": "2024-12-31T00:00:00Z"
+                    },
+                    "amount": {
+                      "amount": 350000,
+                      "currency": "USD"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "period": {
+                      "startDate": "2025-01-01T00:00:00Z",
+                      "endDate": "2025-12-31T00:00:00Z"
+                    },
+                    "amount": {
+                      "amount": 300000,
+                      "currency": "USD"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+-   id: '1.9'
+    title: Budget shortfall
+    module: Economic and fiscal
+    indicator: Budget execution
+    disclosure format: Disclose any shortfall in the allocated budget, including reasons for it.
+    mapping: |-
+        Project level:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Budget shortfall".
+        2. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its [`.id`](project-schema.json,/definitions/Observation,id) incrementally.
+        3. Map the shortfall's value to its [`.value`](project-schema.json,/definitions/Observation,value).
+        4. Map the reasons for the shortfall to its [`.notes`](project-schema.json,/definitions/Observation,notes).
+    example: |-
+        {
+          "metrics": [
+            {
+              "id": "1",
+              "title": "Budget shortfall",
+              "observations": [
+                {
+                  "id": "1",
+                  "value": {
+                    "amount": 2500000,
+                    "currency": "USD"
+                  },
+                  "notes": "Funding shortfall due to construction overruns and a lack of budgetary approval"
+                }
+              ]
+            }
+          ]
+        }
+-   id: '1.10'
+    title: Maintenance plan or program
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the maintenance plan or program.
+    mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''maintenancePlan''.'
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "maintenancePlan",
+              "url": "http://example.com/documents/maintenancePlan.pdf"
+            }
+          ]
+        }
+-   id: '1.11'
+    title: Asset lifetime
+    module: Economic and fiscal
+    indicator: Economic viability
+    disclosure format: Disclose the expected lifetime of the asset. This tends to be part of the design report.
+    mapping: 'Project Level: Convert to days and map to `assetLifetime.durationInDays`.'
+    example: |-
+        {
+          "assetLifetime": {
+            "durationInDays": 3650
+          }
+        }
+-   id: '2.1'
+    title: Environmental impact category
+    module: Environment and climate
+    indicator: Environmental impact
+    disclosure format: |-
+        Indicate the category that reflects the magnitude of environmental impact. Consider the following to rate the project:
+
+        - Category A: projects with potential significant adverse environmental or social risks and/or impacts that are diverse, irreversible, or unprecedented.
+
+        - Category B: projects with potential limited adverse environmental or social risks and/or impacts that are few in number, generally site-specific, largely reversible, and readily addressed through mitigation measures.
+
+        - Category C: projects with minimal or no adverse environmental or social risks and/or impacts.
+    mapping: |-
+        Project level:
+
+        If an environmental impact assessment was conducted:
+
+        1. Set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `true`.
+        2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'ifc-environmental-social' and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.
+
+        If an environmental impact assessment was not conducted, set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `false`.
+    example: |-
+        {
+          "environment": {
+            "hasImpactAssessment": true,
+            "impactCategories": [
+              {
+                "scheme": "ifc-environmental-social",
+                "id": "a"
+              }
+            ]
+          }
+        }
+-   id: '2.2'
+    title: Environmental measures
+    module: Environment and climate
+    indicator: Environmental impact
+    disclosure format: |-
+        Identify the measures adopted by the project to mitigate and/or remedy the environmental impact, disclosing the corresponding document that describes the project's environmental measures. This can include, without limitation, the following:
+
+        - waste management
+        - disposal of construction by-products
+        - environmentally responsible sourcing of materials
+        - environmentally responsible use of land, water and air
+        - water contamination management
+        - others (explain)
+    mapping: |-
+        Project level:
+
+        1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.environmentalMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasure](../../reference/codelists.md#environmentalmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).
+
+        2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures'.
+    example: |-
+        {
+          "environment": {
+            "environmentalMeasures": [
+              {
+                "type": "wasteManagement",
+                "description": "Waste management measures for the project include..."
+              }
+            ]
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "environmentalMeasures",
+              "description": "The following environmental measures are adopted by the project...",
+              "url": "http://example.com/documents/environmentalMeasures.pdf"
+            }
+          ]
+        }
+-   id: '2.3'
+    title: Environmental licenses and exemptions
+    module: Environment and climate
+    indicator: Environmental impact
+    disclosure format: Disclose all licenses, exemptions and/or amnesties obtained for the project. This can be related to Preparation, Implementation and/or Maintenance. These stages are also known as Planning, Construction and Operation respectively.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalExemption'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "environmentalExemption",
+              "url": "http://example.com/documents/environmentalExemption.pdf"
+            }
+          ]
+        }
+-   id: '2.4'
+    title: Protected area
+    module: Environment and climate
+    indicator: Biodiversity impact
+    disclosure format: Identify whether the project is located in, or provides access to a protected area. Use the project location/coordinates at the WDPA - World Database of Protected Areas to disclose the information.
+    mapping: |-
+        Project level:
+
+        If the project is located in a protected area:
+
+        1. Set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `true`.
+        2. Add a [`Location`](../../reference/schema.md#location) object to the [`.locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its [`.gazetteer.scheme`](project-schema.json,/definitions/Location,gazetteer/scheme) to 'WDPA'.
+        3. For each protected area in which the project is located, add the area's WDPA identifier to the [`.gazetteer.identifiers`](project-schema.json,/definitions/Location,gazetteer/identifiers) array.
+
+        If the project is not located in a protected area, set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `false`.
+    example: |-
+        {
+          "environment": {
+            "inProtectedArea": true
+          },
+          "locations": [
+            {
+              "id": "1",
+              "gazetteer": {
+                "scheme": "WDPA",
+                "identifiers": [
+                  "555566673"
+                ]
+              }
+            }
+          ]
+        }
+-   id: '2.5'
+    title: Conservation measures
+    module: Environment and climate
+    indicator: Biodiversity impact
+    disclosure format: |-
+        Disclose and provide further details on the measures adopted by the project to protect and enhance biodiversity. This can comprise, without limitation the following:
+
+        - avoidance of ecological sitting
+        - buffers for ecological land
+        - nature-based solutions
+        - land restoration
+        - protection to landscape and historical sites
+        - invasive species management
+        - management of wildlife mortality risk
+        - reduce habitat loss
+        - pollution reduction
+        - land, water and air management
+        - hazardous material management
+        - others (explain)
+    mapping: |-
+        Project level:
+
+        1. For each measure, add a [`ConservationMeasure`](../../reference/schema.md#conservationmeasure) object to the [`environment.conservationMeasures`](project-schema.json,,environment/conservationMeasures) array, set its [`.type`](project-schema.json,/definitions/ConservationMeasure,type) according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/ConservationMeasure,description).
+
+        2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'conservationMeasures'.
+    example: |-
+        {
+          "environment": {
+            "conservationMeasures": [
+              {
+                "type": "habitatRestoration",
+                "description": "Habitat restoration measures for the project include..."
+              }
+            ]
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "conservationMeasures",
+              "url": "http://example.com/conservationMeasures.pdf"
+            }
+          ]
+        }
+-   id: '2.6'
+    title: Climate and disaster risk assessment
+    module: Environment and climate
+    indicator: Climate and disaster risk
+    disclosure format: Clarify the type of climate and disaster risks to which the project is exposed. This tends to be part of the appraisal documents.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateAndDisasterRiskAssessment' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "climateAndDisasterRiskAssessment",
+              "description": "The project is exposed to the following climate and disaster risks...",
+              "url": "http://example.com/documents/climateAndDisasterRiskAssessment.pdf"
+            }
+          ]
+        }
+-   id: '2.7'
+    title: Climate measures
+    module: Environment and climate
+    indicator: Climate risk
+    disclosure format: |-
+        Clarify whether the project design considered climate change mitigation and/or adaptation measures, disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:
+
+        - use of lower-emission sources of energy
+        - use of lower-emission materials
+        - use of recycled and reused materials
+        - regenerative design
+        - retrofitting design
+        - use of carbon capture technology
+        - assessment of extreme weather events
+        - assessment of precipitation patterns
+        - assessment of rising temperatures
+        - assessment of rising sea levels
+        - others (explain).
+    mapping: |-
+        Project level:
+
+        1. For each measure, add a [`ClimateMeasure`](../../reference/schema.md#climatemeasure) object to the [`environment.climateMeasures`](project-schema.json,,environment/climateMeasures) array, set its [`.type`](project-schema.json,/definitions/ClimateMeasure,type) according to the open [climateMeasure](../../reference/codelists.md#climatemeasure) codelist and map any further explanation to its [`.description`](project-schema.json,/definitions/ClimateMeasure,description).
+
+        2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateMeasures'.
+    example: |-
+        {
+          "environment": {
+            "climateMeasures": [
+              {
+                "type": [
+                  "regenerativeDesign"
+                ],
+                "description": "Regenerative design measures for the project include biomimicry to imitate nature."
+              }
+            ]
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "climateMeasures",
+              "url": "http://example.com/climateMeasures.pdf"
+            }
+          ]
+        }
+-   id: '2.8'
+    title: Forecast of greenhouse gas emissions
+    module: Environment and climate
+    indicator: Climate risk
+    disclosure format: Disclose the forecast greenhouse gas emissions related to the project, including the calculation, the methodology applied and where the calculation can be found.
+    mapping: |-
+        Project level:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.forecasts`](project-schema.json,,forecasts) array.
+
+        2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to "Greenhouse gas emissions (carbon dioxide equivalent)" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).
+
+        3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:
+
+        - Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)
+        - Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to "Tonne (metric ton)", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to "TNE"
+        - Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the forecast.
+
+        4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissionsForecast'.
+    example: |-
+        {
+          "forecasts": [
+            {
+              "id": "1",
+              "title": "Greenhouse gas emissions (carbon dioxide equivalent)",
+              "description": "Emission forecasts are calculated using the following methodology...",
+              "observations": [
+                {
+                  "id": "1",
+                  "period": {
+                    "startDate": "2024-01-01T00:00:00Z",
+                    "endDate": "2049-12-31T00:00:00Z"
+                  },
+                  "measure": 1000000,
+                  "unit": {
+                    "name": "Tonne (metric ton)",
+                    "scheme": "UNCEFACT",
+                    "id": "TNE"
+                  }
+                }
+              ]
+            }
+          ],
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "ghgEmissionsForecast",
+              "url": "http://example.com/GhgEmissionForecast.pdf"
+            }
+          ]
+        }
+-   id: '2.9'
+    title: Environmental certifications
+    module: Environment and climate
+    indicator: Climate management
+    disclosure format: Disclose environmental and/or climate related certifications issued for contractors and subcontractors such as ISO 14001 for environmental management.
+    mapping: |-
+        Contracting process level:
+
+        [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierEnvironmentalCertification'.
+    example: |-
+        {
+          "contractingProcesses": [
+            {
+              "id": "1",
+              "summary": {
+                "documents": [
+                  {
+                    "id": "1",
+                    "documentType": "supplierEnvironmentalCertification",
+                    "url": "http://example.com/documents/contractorEnvironmentalCertification.pdf"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+-   id: '2.10'
+    title: Decommissioning plans
+    module: Environment and climate
+    indicator: Climate management
+    disclosure format: Disclose the decommissioning plans for the project assets.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'decommissioningPlans'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "decommissioningPlans",
+              "url": "http://example.com/documents/decommissioningPlans.pdf"
+            }
+          ]
+        }
+-   id: '2.11'
+    title: Decommissioning cost forecast
+    module: Environment and climate
+    indicator: Climate management
+    disclosure format: Disclose the forecast decommissioning costs for the project assets.
+    mapping: |-
+        Project level:
+
+        1. Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and set its [`.id`](project-schema.json,/definitions/CostMeasurement,id) incrementally.
+
+        2. Add a [`CostGroup`](../../reference/schema.md#costgroup) object to the cost measurement's [`.costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups) array, set its [`.id`](project-schema.json,/definitions/CostGroup,id) incrementally and set its [`.category`](project-schema.json,/definitions/CostGroup,category) to 'endOfLife'.
+
+        3. Add a [`Cost`](../../reference/schema.md#cost) object to the cost group's [`.costs`](project-schema.json,/definitions/CostGroup,costs) array, set its [`.id`](project-schema.json,/definitions/Cost,id) incrementally and map to its [`.value`](project-schema.json,/definitions/Cost,value).
+    example: |-
+        {
+          "costMeasurements": [
+            {
+              "id": "1",
+              "costGroups": [
+                {
+                  "id": "1",
+                  "category": "endOfLife",
+                  "costs": [
+                    {
+                      "id": "1",
+                      "value": {
+                        "amount": 50000000,
+                        "currency": "USD"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+-   id: '3.1'
+    title: Climate objective
+    module: Climate finance
+    indicator: Project theme
+    disclosure format: |-
+        Disclose the main climate objective that the project addresses from the list:
+
+        - mitigation
+        - adaptation
+        - cross-cutting
+    mapping: |-
+        Project level:
+
+        Map to [`environment.goals`](project-schema.json,,environment/goals) using the closed [environmentalGoal](../../reference/codelists.md#environmentalgoal) codelist.
+    example: |-
+        {
+          "environment": {
+            "goals": [
+              "climateChangeMitigation",
+              "climateChangeAdaptation"
+            ]
+          }
+        }
+-   id: '3.2'
+    title: Financial instrument
+    module: Climate finance
+    indicator: Financial mechanism
+    disclosure format: |-
+        Disclose the financial instrument type from the list:
+
+        - loan
+          - concessional
+          - non-concessional
+        - grant
+        - equity
+        - guarantees
+    mapping: |-
+        1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.udget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+        2. Set the the financing arrangement's [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) and [`.type`](project-schema.json,/definitions/Finance,type) according to the instrument type:
+
+        Instrument type | [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) | [`.type`](project-schema.json,/definitions/Finance,type)
+        -- | -- | --
+        loan | 'debt' | 'loan'
+        grant | | 'grant'
+        equity | 'equity' | 'shares.listed' or 'shares.unlisted'
+        guarantee | | 'guarantee'
+
+        3. If the instrument is a concessional loan, set [`.concessional`](project-schema.json,/definitions/Finance,concessional) to `true`.
+        4. If the instrument is a non-concessional loan, set [`.concessional`](project-schema.json,/definitions/Finance,concessional) to `false`.
+        5. If the instrument is results-based, set [`.resultsBased`](project-schema.json,/definitions/Finance,resultsBased) to `true`.
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "assetClass": [
+                  "debt"
+                ],
+                "type": "loan",
+                "concessional": false,
+                "resultsBased": true
+              }
+            ]
+          }
+        }
+-   id: '3.3'
+    title: Climate transformation
+    module: Climate finance
+    indicator: Model of change
+    disclosure format: Clarify the theory of change, systemic transition or transformation that is intended.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateTransformation' and map any free text to [`.description`](project-schema.json,/definitions/Document,description).
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "climateTransformation",
+              "url": "http://example.com/climateTransformation.pdf"
+            }
+          ]
+        }
+-   id: '3.4'
+    title: Climate finance decision-maker
+    module: Climate finance
+    indicator: Decision-making process
+    disclosure format: Identify who approved the climate finance investment in the country.
+    mapping: |-
+        Project level:
+
+        [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "name": "Presidential Climate Commission",
+              "roles": [
+                "climateFinanceFocalPoint"
+              ]
+            }
+          ]
+        }
+-   id: '3.5'
+    title: Nationally Determined Contributions (NDC)
+    module: Climate finance
+    indicator: Policy coherence
+    disclosure format: Clarify how the investment is aligned with the country's nationally determined contributions.
+    mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
+    example: ''
+-   id: '3.6'
+    title: Paris Agreement
+    module: Climate finance
+    indicator: Policy coherence
+    disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments.
+    mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
+    example: ''
+-   id: '3.7'
+    title: Beneficiaries
+    module: Climate finance
+    indicator: Beneficiary population
+    disclosure format: Disclose who the climate finance investment is intended to benefit and number of beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
+    mapping: See [number of beneficiaries (social module)](social-number-of-beneficiaries)
+    example: ''
+-   id: '3.8'
+    title: Amount of investment
+    module: Climate finance
+    indicator: Economic viability
+    disclosure format: Disclose the quantum of the climate finance investment.
+    mapping: |-
+        1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+        2. Map to the financing arrangement's [`.value`](project-schema.json,/definitions/Finance,value).
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "value": {
+                  "amount": 3000000,
+                  "currency": "EUR"
+                }
+              }
+            ]
+          }
+        }
+-   id: '3.9'
+    title: Funding source
+    module: Climate finance
+    indicator: Economic viability
+    disclosure format: Disclose who is providing the finance.
+    mapping: |-
+        1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+        2. Map to the financing arrangement's [`.source`](project-schema.json,/definitions/Finance,source).
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "source": "Green Climate Fund"
+              }
+            ]
+          }
+        }
+-   id: '3.10'
+    title: Green Climate Fund Accredited Entity
+    module: Climate finance
+    indicator: Accessibility
+    disclosure format: For projects financed by the Green Climate Fund, disclose the accredited entities through which GCF resources are accessed.
+    mapping: |-
+        1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+        2. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
+        3. Set the financing arrangement's [`.financingParty`](project-schema.json,/definitions/Finance,financingParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "financingParty": {
+                  "id": "1",
+                  "name": "Agency for Agricultural Development of Morocco"
+                }
+              }
+            ]
+          },
+          "parties": [
+            {
+              "id": "1",
+              "name": "Agency for Agricultural Development of Morocco",
+              "roles": [
+                "funder"
+              ]
+            }
+          ]
+        }
+-   id: '3.11'
+    title: Accredited Entity Type
+    module: Climate finance
+    indicator: Accessibility
+    disclosure format: |-
+        Disclose the type of accredited entity, from the list:
+
+        - private
+        - public
+        - non-governmental
+        - sub-national
+        - national
+        - regional
+        - international
+    mapping: |-
+        1. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the accredited entity. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
+        2. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its [`.id`](project-schema.json,/definitions/Classification,id).
+        3. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its [`.id`](project-schema.json,/definitions/Classification,id).
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "name": "Development Bank of South Africa",
+              "roles": [
+                "funder"
+              ],
+              "classifications": [
+                {
+                  "id": "public",
+                  "scheme": "costIdsLegalType"
+                },
+                {
+                  "id": "national",
+                  "scheme": "costIdsAdministrativeLevel"
+                }
+              ]
+            }
+          ]
+        }
+-   id: '3.12'
+    title: Project preparation costs
+    module: Climate finance
+    indicator: Accessibility/ Project viability
+    disclosure format: Disclose the amounts invested in project preparation.
+    mapping: See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
+    example: ''
+-   id: '3.13'
+    title: Project preparation period
+    module: Climate finance
+    indicator: Accessibility/ efficiency
+    disclosure format: Disclose dates for project preparation.
+    mapping: |-
+        Project level:
+
+        Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
+    example: |-
+        {
+          "preparationPeriod": {
+            "startDate": "2016-07-01T00:00:00Z",
+            "endDate": "2016-12-31T00:00:00Z"
+          }
+        }
+-   id: '3.14'
+    title: Project approval period
+    module: Climate finance
+    indicator: Accessibility
+    disclosure format: |-
+        Disclose dates for project approval:
+
+        - submission date
+        - approval date
+    mapping: |-
+        Project level:
+
+        For each date:
+
+        1. Add a [`Milestone`](../../reference/schema.md#milestone) to the [`milestones`](project-schema.json,,milestones) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/Milestone,id) incrementally
+        - [`.type`](project-schema.json,/definitions/Milestone,type) to 'financing'
+        - [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'
+
+        2. If disclosing the submission date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to "Climate finance submission" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the submission.
+        3. If disclosing the approval date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to "Climate finance approval" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the approval.
+    example: |-
+        {
+          "milestones": [
+            {
+              "id": "1",
+              "title": "Climate finance submission",
+              "type": "financing",
+              "dateMet": "2023-06-01T00:00:00Z",
+              "status": "met"
+            }
+          ]
+        }
+-   id: '3.15'
+    title: Ratio of co-finance
+    module: Climate finance
+    indicator: Economic viability
+    disclosure format: |-
+        Disclose the ratio of co-finance. Select from a list to specify amounts:
+
+        - domestic mobilisations
+        - private finance
+    mapping: The OC4IDS data model provides the information needed to calculate co-finance ratios by modeling a project's individual financing arrangements. For more information, see the mappings for [amount of investment](climate-finance-amount-of-investment), [funding source](climate-finance-funding-source), [Green Climate Fund Accredited Entity](climate-finance-green-climate-fund-accredited-entity) and [Accredited Entity Type](climate-finance-accredited-entity-type).
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "source": "Green Climate Fund",
+                "value": {
+                  "amount": 3000000,
+                  "currency": "USD"
+                }
+              },
+              {
+                "id": "2",
+                "source": "GEF Trust Fund",
+                "value": {
+                  "amount": 150000,
+                  "currency": "USD"
+                }
+              }
+            ]
+          }
+        }
+-   id: '3.16'
+    title: Terms of climate finance
+    module: Climate finance
+    indicator: Economic viability
+    disclosure format: |-
+        Disclose the financial instrument and on what terms is the finance being provided. This includes several financial terms:
+
+        - maturity (years)
+        - grace period (years)
+        - annual principal repayment years (% of initial principle)
+        - interest (%)
+        - service fee (per annum)
+        - commitment fee (per annum)
+    mapping: |-
+        1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+        2. Map the terms to the financing arrangement's properties:
+
+        - Maturity: [`.period`](project-schema.json,,period)
+        - Grace period: Map the period over which payments will be made to [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod). The grace period is the difference between [`.period`](project-schema.json,,period) and [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod).
+        - Annual principal repayment years: [`.description`](project-schema.json,/definitions/Finance,description)
+        - Interest: [`.interestRate`](project-schema.json,/definitions/Finance,interestRate)
+        - Service fee: [`.description`](project-schema.json,/definitions/Finance,description)
+        - Commitment fee: [`.description`](project-schema.json,/definitions/Finance,description)
+    example: |-
+        {
+          "budget": {
+            "finance": [
+              {
+                "id": "1",
+                "period": {
+                  "startDate": "2024-01-01T00:00:00Z",
+                  "endDate": "2043-12-31T00:00:00Z"
+                },
+                "paymentPeriod": {
+                  "startDate": "2029-01-01T00:00:00Z",
+                  "endDate": "2043-12-31T00:00:00Z"
+                },
+                "interestRate": {
+                  "margin": 0.0075
+                },
+                "description": "Annual principal repayment years 11-20 (% of initial principal): 6.7%. Service fee (per annum): 0.50%. Commitment fee (per annum): Up to 0.75%."
+              }
+            ]
+          }
+        }
+-   id: '3.17'
+    title: Carbon efficiency
+    module: Climate finance
+    indicator: Climate impact
+    disclosure format: Disclose the cost per tonne of CO2 equivalent reduction attributed to the project.
+    mapping: |-
+        Project level:
+
+        Map to [`environment.abatementCost`](project-schema.json,,environment/abatementCost). If a document that describes the methodology used to calculate the cost is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'abatementCostMethodology'.
+    example: |-
+        {
+          "environment": {
+            "abatementCost": {
+              "amount": 12.29,
+              "currency": "USD"
+            }
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "abatementCostMethodology",
+              "url": "http://example.com/abatementCostMethodology.pdf"
+            }
+          ]
+        }
+-   id: '3.18'
+    title: Non-climate co-benefits
+    module: Climate finance
+    indicator: Non-climate impact
+    disclosure format: |-
+        Identify potential non-climate impacts that have been factored into the project planning. Select from the list:
+
+        - economic
+        - social
+        - environmental
+        - gender empowerment.
+    mapping: |-
+        Project level:
+
+        For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array, map the option from the list to its [`.title`](project-schema.json,/definitions/Benefit,title) and map the explanation to its [`.description`](project-schema.json,/definitions/Benefit,description).
+    example: |-
+        {
+          "benefits": [
+            {
+              "title": "environmental",
+              "description": "The new water management plant will mean less water is removed from the delta meaning more is left in place for use by the local biome."
+            }
+          ]
+        }
+-   id: '3.19'
+    title: Public consultation meetings
+    module: Climate finance
+    indicator: Public participation
+    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including the meeting invite, the number of participants, dates and location of these meetings.
+    mapping: See [public consultation meetings (social module)](social-public-consultation-meetings).
+    example: ''
+-   id: '3.20'
+    title: Disbursement records
+    module: Climate finance
+    indicator: Efficiency
+    disclosure format: Disbursements dates according to financial agreement versus actual disbursements dates.
+    mapping: |-
+        For each planned disbursement:
+
+        1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.
+        2. Set the milestone's:
+
+        - [`.id`](project-schema.json,/definitions/Milestone,id) incrementally
+        - [`.status`](project-schema.json,/definitions/Milestone,status) to 'scheduled'
+        - [`.dueDate`](project-schema.json,/definitions/Milestone,dueDate) to the date on which the disbursement is planned to occur
+        - [`.type`](project-schema.json,/definitions/Milestone,type) to 'payment'
+        - [`.value`](project-schema.json,/definitions/Milestone,value) to the amount and currency of the planned disbursement
+
+        For each actual disbursement:
+
+        1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`transactions`](project-schema.json,,transactions) array.
+
+        2. Set the transaction's:
+
+        - [`.id`](project-schema.json,/definitions/Transaction,id) incrementally
+        - [`.date`](project-schema.json,/definitions/Transaction,date) to the date of the disbursement
+        - [`.value`](project-schema.json,/definitions/Transaction,value) to the amount and currency of the disbursement.
+
+        3. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:
+
+        - Add 'payer' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array
+        - Set the transaction's [`.payer`](project-schema.json,/definitions/Transaction,payer) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
+
+        4. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:
+
+        - Add 'payee' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array.
+        - Set the transaction's [`.payee`](project-schema.json,/definitions/Transaction,payee) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
+
+        5. Get the [`Milestone`](../../reference/schema.md#milestone) in [`milestones`](project-schema.json,,milestones) that represents that planned disbursement:
+
+        - Set its [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'
+        - Set its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the disbursement
+        - Set the transaction's [`.relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone) to the [`.id`](project-schema.json,/definitions/Milestone,id) and [`.title`](project-schema.json,/definitions/Milestone,title) of the milestone.
+    example: |-
+        {
+          "milestones": [
+            {
+              "id": "1",
+              "title": "Grant disbursement",
+              "status": "met",
+              "dueDate": "2023-07-01T00:00:00Z",
+              "dateMet": "2023-08-01T00:00:00Z",
+              "type": "payment",
+              "value": {
+                "amount": 5000000,
+                "currency": "USD"
+              }
+            }
+          ],
+          "transactions": [
+            {
+              "id": "1",
+              "date": "2023-08-01T00:00:00Z",
+              "value": {
+                "amount": 5000000,
+                "currency": "USD"
+              },
+              "payer": {
+                "id": "1",
+                "name": "United Nations Development Programme"
+              },
+              "payee": {
+                "id": "2",
+                "name": "Ministry of works"
+              },
+              "relatedImplementationMilestone": {
+                "id": "1",
+                "title": "Grant disbursement"
+              }
+            }
+          ]
+        }
+-   id: '3.21'
+    title: Type of project monitoring
+    module: Climate finance
+    indicator: KPIs
+    disclosure format: |-
+        Disclose the type of monitoring from the list:
+
+        - internal
+        - external
+        - mixed
+    mapping: |-
+        Project level:
+
+        Map to [`environment.climateOversightTypes`](project-schema.json,,environment/climateOversightTypes) using the closed [climateOversightTypes](../../reference/codelists.md#climateoversighttypes) codelist.
+    example: |-
+        {
+          "environment": {
+            "climateOversightTypes": [
+              "internal",
+              "external"
+            ]
+          }
+        }
+-   id: '3.22'
+    title: Performance monitoring
+    module: Climate finance
+    indicator: KPIs
+    disclosure format: Disclose Key Performance Indicators adopted by the project.
+    mapping: |-
+        Project level:
+
+        For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its fields according to the schema. Prefix the metric's [`.title`](project-schema.json,/definitions/Metric,title) with "KPI: ".
+    example: |-
+        {
+          "metrics": [
+            {
+              "id": "1",
+              "title": "KPI: Capacity utilization"
+            }
+          ]
+        }
+-   id: '3.23'
+    title: Reporting period
+    module: Climate finance
+    indicator: KPIs
+    disclosure format: Clarify the project reporting period. It could be quarterly, annually, biannually.
+    mapping: |-
+        Project level:
+
+        Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](project-schema.json,,metrics) array that represents the KPI and map to its [`.description`](project-schema.json,/definitions/Metric,description) using the format "Reporting period: {period}".
+    example: |-
+        {
+          "metrics": [
+            {
+              "id": "1",
+              "title": "KPI: Capacity utilization",
+              "description": "Reporting period: Annual"
+            }
+          ]
+        }
+-   id: '3.24'
+    title: Oversight reports
+    module: Climate finance
+    indicator: Anti-corruption impact
+    disclosure format: Disclose oversight reports.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'oversightReport'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "oversightReport",
+              "url": "http://example.com/oversightReport"
+            }
+          ]
+        }
+-   id: '3.25'
+    title: Independent monitoring
+    module: Climate finance
+    indicator: Anti-corruption impact
+    disclosure format: Identify the entities acting as independent monitors of the project.
+    mapping: See [independent monitoring (institutional module)](institutional-independent-monitoring).
+    example: ''
+-   id: '3.26'
+    title: Independent evaluation
+    module: Climate finance
+    indicator: Long-term project impact
+    disclosure format: Disclose technical audits produced at end of the project.
+    mapping: |-
+        Project level:
+
+        For each audit report, [add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'technicalAuditReport' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "technicalAuditReport",
+              "description": "The project has been constructed as specified...",
+              "url": "http://example.com/technicalAuditReport.pdf",
+              "pageStart": "13",
+              "pageEnd": "14"
+            }
+          ]
+        }
+-   id: '3.27'
+    title: Impact measurement
+    module: Climate finance
+    indicator: Long-term project impact
+    disclosure format: Clarify the methodology or system to measure the long-term impact of the project solution.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'impactMethodology' and map any free text to its [`.description`](project-schema.json,,description).
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "impactMethodology",
+              "description": "The long term impact of this project will be measured according to...",
+              "url": "http://example.com/impactMethodology.pdf"
+            }
+          ]
+        }
+-   id: '3.28'
+    title: Carbon footprint
+    module: Climate finance
+    indicator: Long-term project impact
+    disclosure format: Disclose the carbon footprint of the project, including the calculation, the methodology applied, and where the calculation can be found.
+    mapping: |-
+        Project level:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array.
+
+        2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to "Greenhouse gas emissions (carbon dioxide equivalent)" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).
+
+        3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:
+
+        - Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)
+        - Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to "Tonne (metric ton)", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to "TNE"
+        - Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the calculation.
+
+        4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissions'.
+    example: |-
+        {
+          "metrics": [
+            {
+              "id": "1",
+              "title": "Greenhouse gas emissions (carbon dioxide equivalent)",
+              "description": "Emissions are calculated using the following methodology...",
+              "observations": [
+                {
+                  "id": "1",
+                  "period": {
+                    "startDate": "2024-01-01T00:00:00Z",
+                    "endDate": "2049-12-31T00:00:00Z"
+                  },
+                  "measure": 1000000,
+                  "unit": {
+                    "name": "Tonne (metric ton)",
+                    "scheme": "UNCEFACT",
+                    "id": "TNE"
+                  }
+                }
+              ]
+            }
+          ],
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "ghgEmissions",
+              "url": "http://example.com/ghgEmissions.pdf"
+            }
+          ]
+        }
+-   id: '3.29'
+    title: Infrastructure assets to be decommissioned
+    module: Climate finance
+    indicator: Stranded assets
+    disclosure format: Identify the asset for disposal purpose.
+    mapping: |-
+        For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
+
+        1. Set its [`type`](project-schema.json,,type) to 'decommissioning'.
+
+        2. Set its [`title`](project-schema.json,,title) to the name of the asset.
+
+        3. Add a [`RelatedProject`](../../reference/schema.md#relatedproject) object to the [`relatedProjects`](project-schema.json,,relatedProjects) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/RelatedProject,id) and [`.title`](project-schema.json,/definitions/RelatedProject,title) to the [`.id`](project-schema.json,,id) and [`.title`](project-schema.json,,title) of the OC4IDS project for the replacement of the asset
+        - [`.scheme`](project-schema.json,/definitions/RelatedProject,scheme) to 'oc4ids'
+        - [`.relationship`](project-schema.json,/definitions/RelatedProject,relationship) to 'replacement'.
+    example: |-
+        {
+          "id": "oc4ids-bu3kcz-123456789",
+          "title": "Otahuhu B Power Station",
+          "type": "decommissioning",
+          "relatedProjects": [
+            {
+              "id": "oc4ids-bu3kcz-987654321",
+              "scheme": "oc4ids",
+              "title": "Otahuhu C Power Station",
+              "relationship": "replacement"
+            }
+          ]
+        }
+-   id: '3.30'
+    title: Decommission period
+    module: Climate finance
+    indicator: Stranded assets
+    disclosure format: Intended start and end dates of decommissioning.
+    mapping: |-
+        Project level:
+
+        Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
+    example: |-
+        {
+          "decommissioningPeriod": {
+            "startDate": "2040-07-01T00:00:00Z",
+            "endDate": "2041-06-30T00:00:00Z"
+          }
+        }
+-   id: '3.31'
+    title: Decommission plan
+    module: Climate finance
+    indicator: Climate management
+    disclosure format: Disclose the technical plan for decommissioning.
+    mapping: See [decommissioning plans (environment and social)](environment-and-climate-decommissioning-plans).
+    example: ''
+-   id: '3.33'
+    title: Carbon decommission savings
+    module: Climate finance
+    indicator: Climate management
+    disclosure format: Disclose the evaluation of CO2 savings as a result of decommissioning.
+    mapping: |-
+        Project level:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array.
+
+        2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to "Greenhouse gas emissions reduction (carbon dioxide equivalent)" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).
+
+        3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:
+
+        - Map the amount of greenhouse gas emission savings in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)
+        - Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to "Tonne (metric ton)", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to "TNE"
+        - Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the calculation.
+
+        4. If supporting documentation is available, [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissionsReduction'.
+    example: |-
+        {
+          "id": "oc4ids-bu3kcz-123456789",
+          "forecasts": [
+            {
+              "id": "1",
+              "title": "Greenhouse gas emissions reduction (carbon dioxide equivalent)",
+              "description": "Emission reduction forecasts are calculated using the following methodology...",
+              "observations": [
+                {
+                  "id": "1",
+                  "period": {
+                    "startDate": "2024-01-01T00:00:00Z",
+                    "endDate": "2049-12-31T00:00:00Z"
+                  },
+                  "measure": 1000000,
+                  "unit": {
+                    "name": "Tonne (metric ton)",
+                    "scheme": "UNCEFACT",
+                    "id": "TNE"
+                  }
+                }
+              ]
+            }
+          ],
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "ghgEmissionsReduction",
+              "url": "http://example.com/GhgEmissionsReduction.pdf"
+            }
+          ]
+        }
+-   id: '3.34'
+    title: Decommission mitigation plan
+    module: Climate finance
+    indicator: Climate management
+    disclosure format: Disclose mitigation plan for people and communities affected by decommissioning.
+    mapping: |-
+        Project level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'socialImpact'.
+    example: |-
+        {
+          "id": "oc4ids-bu3kcz-123456789",
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "socialImpact",
+              "url": "http://example.com/socialImpact.pdf",
+              "pageStart": "13",
+              "pageEnd": "14"
+            }
+          ]
+        }
+-   id: '4.1'
+    title: Number of beneficiaries
+    module: Social
+    indicator: Beneficiary population
+    disclosure format: Indicate the number of direct and indirect project beneficiaries. Beneficiaries are the individuals who benefit directly or indirectly from the project; they are the target group of the infrastructure project and their needs are addressed by the intervention.
+    mapping: |-
+        Project level:
+
+        1. Add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array.
+        2. Add a [`Beneficiary`](../../reference/schema.md#beneficiary) object to the benefit's [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) array, set its [`.description`](project-schema.json,/definitions/Beneficiary,description) to "Direct beneficiaries" and set its [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) to the number of direct beneficiaries.
+        3. Add a [`Beneficiary`](../../reference/schema.md#beneficiary) object to the benefit's [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) array, set its [`.description`](project-schema.json,/definitions/Beneficiary,description) to "Indirect beneficiaries" and set its [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) to the number of indirect beneficiaries.
+    example: |-
+        {
+          "benefits": [
+            {
+              "beneficiaries": [
+                {
+                  "description": "Direct beneficiaries",
+                  "numberOfPeople": 1000
+                },
+                {
+                  "description": "Indirect beneficiaries",
+                  "numberOfPeople": 2000
+                }
+              ]
+            }
+          ]
+        }
+-   id: '4.2'
+    title: Inclusive design and implementation
+    module: Social
+    indicator: Gender and inclusion
+    disclosure format: Clarify whether gender, people with disabilities, and vulnerable and disadvantaged populations were considered in the project design and project implementation, providing details on how the design and implementation practices meet inclusion goals.
+    mapping: |-
+        Project level:
+
+        1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveDesign' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
+
+        2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveImplementation' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "inclusiveDesign",
+              "description": "The project's design meets its inclusion goals by...",
+              "url": "http://example.com/documents/inclusiveDesign.pdf"
+            },
+            {
+              "id": "2",
+              "documentType": "inclusiveImplementation",
+              "description": "The project's implementation practices target inclusion goals by...",
+              "url": "http://example.com/documents/inclusiveImplementation.pdf"
+            }
+          ]
+        }
+-   id: '4.3'
+    title: Indigenous land
+    module: Social
+    indicator: Indigenous populations
+    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
+    mapping: |-
+        Project level:
+
+        If the project is located in or cuts through indigenous land:
+
+        1. Set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `true`.
+        2. Add a [`Location`](../../reference/schema.md#location) object to the [`locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its description to "Indigenous land: <Name> (<Category>)" substituting <Name> and <Category> for the name and land category from the Landmark database.
+
+        If the project is not located in and does not cut through indigenous land, set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `false`.
+    example: |-
+        {
+          "social": {
+            "inIndigenousLand": true
+          },
+          "locations": [
+            {
+              "id": "1",
+              "description": "Indigenous land: Section 1 Block III Rowallan Survey District (Maori Freehold Land)"
+            }
+          ]
+        }
+-   id: '4.4'
+    title: Public consultation meetings
+    module: Social
+    indicator: Public participation
+    disclosure format: Disclose the occurrence of public meetings with communities and impacted groups including meeting invite, the number of the participants, dates and location of these meetings.
+    mapping: |-
+        Project Level:
+
+        For each meeting:
+
+        1. Publish the meeting invite: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'consultationMeetingInvitation'.
+
+        2. Publish the meeting details: add a [`Meeting`](../../reference/schema.md#meeting) object to the [`social.consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/Meeting,id) incrementally
+        - [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting
+        - [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting
+        - [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people that participated in the meeting.
+
+        3. Publish the meeting minutes: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'minutes.consultationMeeting'.
+    example: |-
+        {
+          "social": {
+            "consultationMeetings": [
+              {
+                "id": "1",
+                "date": "2024-01-01T00:00:00Z",
+                "address": {
+                  "streetAddress": "1600 Amphitheatre Pkwy",
+                  "locality": "Mountain View",
+                  "region": "CA",
+                  "postalCode": "94043",
+                  "countryName": "United States"
+                },
+                "numberOfParticipants": 12
+              }
+            ]
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "consultationMeetingInvitation",
+              "url": "http://example.com/consultationMeetingInvitation.pdf"
+            },
+            {
+              "id": "2",
+              "documentType": "minutes.consultationMeeting",
+              "url": "http://example.com/consultationMeetingMinutes.pdf"
+            }
+          ]
+        }
+-   id: '4.5'
+    title: Land compensation budget
+    module: Social
+    indicator: Land issues
+    disclosure format: Disclose budget allocated to fund land compensation.
+    mapping: |-
+        Project Level:
+
+        Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget).
+    example: |-
+        {
+          "social": {
+            "landCompensationBudget": {
+              "amount": 1000000,
+              "currency": "USD"
+            }
+          }
+        }
+-   id: '4.6'
+    title: Labour obligations
+    module: Social
+    indicator: Labour compliance
+    disclosure format: |-
+        Disclose labour obligations in the construction contract. This can include, without limitation, the following:
+
+        - minimum wage
+        - overtime
+        - prohibition of forced labour
+        - prohibition of child labour
+        - equal opportunity
+        - non-discrimination
+        - freedom of association
+        - grievance mechanism
+        - working at height
+        - underground work
+        - handling of materials/equipment
+        - monitoring of accidents
+        - traffic management
+        - accommodation
+        - protective equipment
+        - others (explain)
+    mapping: |-
+        Contracting process level:
+
+        1. Publish a summary of the labor obligations:
+
+           1. For each labor obligation, add the relevant code from the open [laborObligations](../../reference/codelists.md#laborobligations) codelist to the [`.summary.social.laborObligations.obligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/obligations) array.
+           2. Optionally, add a further explanation of the labor obligations to [`summary.social.laborObligations.description`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/description).
+
+        2. Publish the bidding documents that specify labor obligations: [add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'biddingDocuments'.
+
+        3. Publish the signed contract that includes labor obligations:  [add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'contractSigned'.
+    example: |-
+        {
+          "contractingProcesses": [
+            {
+              "id": "1",
+              "summary": {
+                "social": {
+                  "laborObligations": {
+                    "obligations": [
+                      "minimumWage",
+                      "paidOvertime"
+                    ],
+                    "description": "The contract's labor obligations include a minimum wage of $20 per hour and an overtime limit of 10 hours per week."
+                  }
+                },
+                "documents": [
+                  {
+                    "id": "1",
+                    "documentType": "biddingDocuments",
+                    "url": "http://example.com/biddingDocuments.pdf"
+                  },
+                  {
+                    "id": "2",
+                    "documentType": "contractSigned",
+                    "url": "http://example.com/contractSigned.pdf"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+-   id: '4.7'
+    title: Labour budget
+    module: Social
+    indicator: Labour compliance
+    disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs.
+    mapping: |-
+        Contracting process level:
+
+        Map to [`summary.social.laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget).
+    example: |-
+        {
+          "contractingProcesses": [
+            {
+              "id": "1",
+              "summary": {
+                "social": {
+                  "laborBudget": {
+                    "amount": 10000000,
+                    "currency": "USD"
+                  }
+                }
+              }
+            }
+          ]
+        }
+-   id: '4.8'
+    title: Workers' accidents
+    module: Social
+    indicator: Health and Safety
+    disclosure format: Disclose summary statistics on accidents and fatalities involving construction workers, and an explanation of these events.
+    mapping: |-
+        Project level:
+
+        Publish summary statistics on worker accidents:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker accidents".
+
+        2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
+        - [`.period`](project-schema.json,/definitions/Observation,period) to the reporting period
+        - [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of accidents.
+
+        3. If further details are available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field.
+
+        Publish summary statistics on worker fatalities:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Worker fatalities".
+
+        2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array set its:
+
+        - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
+        - [`.period`](project-schema.json,/definitions/Observation,period) to the reporting period
+        - [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of fatalities.
+
+        3. If further details available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field.
+    example: |-
+        {
+          "metrics": [
+            {
+              "id": "1",
+              "title": "Worker accidents",
+              "observations": [
+                {
+                  "id": "1",
+                  "period": {
+                    "startDate": "2024-01-01T00:00:00Z",
+                    "endDate": "2024-06-30T00:00:00Z"
+                  },
+                  "measure": 12,
+                  "notes": "In H1 2024, most accidents were related to..."
+                }
+              ]
+            },
+            {
+              "id": "2",
+              "title": "Worker fatalities",
+              "observations": [
+                {
+                  "id": "1",
+                  "period": {
+                    "startDate": "2024-01-01T00:00:00Z",
+                    "endDate": "2024-06-30T00:00:00Z"
+                  },
+                  "measure": 0
+                }
+              ]
+            }
+          ]
+        }
+-   id: '4.9'
+    title: Health and safety certifications
+    module: Social
+    indicator: Health and Safety
+    disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
+    mapping: |-
+        Contracting process level:
+
+        [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierHealthAndSafetyCertification'.
+    example: |-
+        {
+          "contractingProcesses": [
+            {
+              "id": "1",
+              "summary": {
+                "documents": [
+                  {
+                    "id": "1",
+                    "documentType": "supplierHealthAndSafetyCertification",
+                    "url": "http://example.com/documents/contractorHealthAndSafetyCertification.pdf"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+-   id: '4.10'
+    title: Construction materials testing
+    module: Social
+    indicator: Health and Safety
+    disclosure format: |-
+        Disclose construction materials tests performed during project implementation. This can include, without limitation, the following:
+
+        - asphalt
+        - aggregate and rock
+        - bricks
+        - cement
+        - concrete
+        - coarse and fine aggregate
+        - masonry
+        - metallic materials
+        - mortar
+        - plywood
+        - timber
+        - resin and polymer
+        - soil
+        - stone
+        - others (explain).
+    mapping: |-
+        Project level:
+
+        Publish a summary of the material tests:
+
+        1. For each material test, add a code from the open [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests) array.
+
+        2. Add any further explanation of the tests to [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests), including the international or national standards that the tests conform to.
+
+        Publish test results: For each test result, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'materialTestResults'.
+    example: |-
+        {
+          "social": {
+            "healthAndSafety": {
+              "materialTests": {
+                "tests": [
+                  "metal",
+                  "masonry"
+                ],
+                "description": "Tests were conducted of the steel frame and masonry of each structure according to ASTM International standards..."
+              }
+            }
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "materialTestResults",
+              "url": "http://example.com/materialTestResults.pdf"
+            }
+          ]
+        }
+-   id: '4.11'
+    title: Building inspections
+    module: Social
+    indicator: Health and Safety
+    disclosure format: Disclose building inspections during project implementation.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'buildingInspectionReport'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "buildingInspectionReport",
+              "url": "http://example.com/buildingInspectionReport.pdf"
+            }
+          ]
+        }
+-   id: '4.12'
+    title: Jobs generated
+    module: Social
+    indicator: Growth impact
+    disclosure format: Disclose estimated and actual jobs (direct/indirect) during project implementation and estimated and actual jobs during operation (direct/indirect).
+    mapping: |-
+        Project level:
+
+        Publish job creation estimates:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Jobs created".
+
+        2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
+        - [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship ("direct" or "indirect")
+        - [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) to the stage ("implementation" or "operation")
+        - [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs.
+
+        Publish actual jobs created:
+
+        1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to 'Jobs created'.
+
+        2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:
+
+        - [`.id`](project-schema.json,/definitions/Observation,id) incrementally
+        - [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship ("direct" or "indirect")
+        - [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) to the stage ("implementation" or "operation")
+        - [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs
+    example: |-
+        {
+          "forecasts": [
+            {
+              "id": "1",
+              "title": "Jobs created",
+              "observations": [
+                {
+                  "id": "1",
+                  "measure": 1000,
+                  "dimensions": {
+                    "relationship": "direct",
+                    "stage": "implementation"
+                  }
+                },
+                {
+                  "id": "2",
+                  "measure": 5000,
+                  "dimensions": {
+                    "relationship": "indirect",
+                    "stage": "implementation"
+                  }
+                },
+                {
+                  "id": "3",
+                  "measure": 300,
+                  "dimensions": {
+                    "relationship": "direct",
+                    "stage": "operation"
+                  }
+                },
+                {
+                  "id": "4",
+                  "measure": 2000,
+                  "dimensions": {
+                    "relationship": "indirect",
+                    "stage": "operation"
+                  }
+                }
+              ]
+            }
+          ],
+          "metrics": [
+            {
+              "id": "1",
+              "title": "Jobs created",
+              "observations": [
+                {
+                  "id": "1",
+                  "measure": 979,
+                  "dimensions": {
+                    "relationship": "direct",
+                    "stage": "implementation"
+                  }
+                },
+                {
+                  "id": "2",
+                  "measure": 4120,
+                  "dimensions": {
+                    "relationship": "indirect",
+                    "stage": "implementation"
+                  }
+                },
+                {
+                  "id": "3",
+                  "measure": 295,
+                  "dimensions": {
+                    "relationship": "direct",
+                    "stage": "operation"
+                  }
+                },
+                {
+                  "id": "4",
+                  "measure": 1875,
+                  "dimensions": {
+                    "relationship": "indirect",
+                    "stage": "operation"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+-   id: '5.1'
+    title: Policy coherence
+    module: Institutional
+    indicator: Investment transparency
+    disclosure format: |-
+        Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment. Consider alignment with:
+
+        - SDGs
+        - National plan or strategy
+        - Infrastructure plan or strategy
+        - Sector plan or strategy
+        - Procuring entity plan or strategy
+        - Paris Agreement
+        - Nationally Determined Contributions (NDCs)
+        - National Adaptation Plans
+        - Medium-term fiscal frameworks/targets
+    mapping: |-
+        Project level:
+
+        1. For each plan or policy to which the project is aligned, add a code from the open [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the [`policyAlignment.policies`](project-schema.json,,policyAlignment/policies) array and add a further explanation of the alignment to [`policyAlignment.description`](project-schema.json,,policyAlignment/description).
+
+        2. For each United Nations Sustainable Development Goal to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
+
+        - [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdg'
+        - [`.id`](project-schema.json,/definitions/Classification,id) to the goal's number
+        - [`.description`](project-schema.json,/definitions/Classification,description) to the goal's title.
+
+        3. For each United Nations Sustainable Development Goal Target to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:
+
+        - [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdgTarget'
+        - [`.id`](project-schema.json,/definitions/Classification,id) to the target's number
+        - [`.description`](project-schema.json,/definitions/Classification,description) to the target's title.
+
+        4. If further documentation of the project's policy alignment is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'policyAlignment'.
+    example: |-
+        {
+          "additionalClassifications": [
+            {
+              "scheme": "sdg",
+              "id": "6",
+              "description": "Ensure availability and sustainable management of water and sanitation for all"
+            },
+            {
+              "scheme": "sdgTarget",
+              "id": "6.3",
+              "description": "By 2030, improve water quality by reducing pollution, eliminating dumping and minimizing release of hazardous chemicals and materials, halving the proportion of untreated wastewater and substantially increasing recycling and safe reuse globally"
+            }
+          ],
+          "policyAlignment": {
+            "policies": [
+              "infrastructurePlan"
+            ],
+            "description": "The project is intended to contribute towards the goals set out in the 2021 Australian Infrastructure Plan."
+          },
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "policyAlignment",
+              "url": "http://example.com/infrastructurePlanAlignment.pdf"
+            }
+          ]
+        }
+-   id: '5.2'
+    title: Freedom of information requests
+    module: Institutional
+    indicator: Access to information
+    disclosure format: Disclose Freedom of Information (FoI) requests that have been presented in relation to the project. Note that FoI requests can also be known as access to information requests.
+    mapping: |-
+        Project level:
+
+        For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequest'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "informationRequest",
+              "url": "http://example.com/foiRequest-1.pdf"
+            }
+          ]
+        }
+-   id: '5.3'
+    title: Answers to Freedom of information requests
+    module: Institutional
+    indicator: Access to information
+    disclosure format: Disclose the responses provided by authorities to Freedom of Information (FoI) requests related to the project. Note that FoI requests may also be known as access to information requests.
+    mapping: |-
+        Project level:
+
+        For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequestResponse'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "informationRequestResponse",
+              "url": "http://example.com/foiRequest-1.pdf"
+            }
+          ]
+        }
+-   id: '5.4'
+    title: Lobbying transparency
+    module: Institutional
+    indicator: Access to information
+    disclosure format: Disclose the occurrence of meetings with interested groups, including the number of participants, date, location and minutes of these meetings, as well as the name and job title of the person representing the public office present at the meeting.
+    mapping: |-
+        Project Level:
+
+        For each meeting:
+
+        Publish the meeting details:
+
+        1. Add a [`Meeting`](../../reference/schema.md#meeting) object to the [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings) array and set:
+
+        - [`.id`](project-schema.json,/definitions/Meeting,id) incrementally
+        - [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting
+        - [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting
+        - [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people present at the meeting
+        - [`.publicOffice.person.name`](project-schema.json,/definitions/PublicOffice,person/name) to the name of the person representing the public office present at the meeting
+        - [`.publicOffice.jobTitle`](project-schema.json,/definitions/PublicOffice,jobTitle) to the job title of the person representing the public office present at the meeting.
+
+        2. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the public office. If none exists yet, [add an organization](../common.md#add-an-organization).
+
+        3. Set the meeting's [`.publicOffice.organization`](project-schema.json,/definitions/PublicOffice,organization) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
+
+        Publish the meeting minutes: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'minutes.lobbyingMeeting'.
+    example: |-
+        {
+          "lobbyingMeetings": [
+            {
+              "id": "1",
+              "date": "2024-01-01T00:00:00Z",
+              "address": {
+                "streetAddress": "1600 Amphitheatre Pkwy",
+                "locality": "London",
+                "region": "London",
+                "postalCode": "WC1 8HG",
+                "countryName": "United Kingdom"
+              },
+              "numberOfParticipants": 4,
+              "publicOffice": {
+                "person": {
+                  "name": "Brett Gliddon"
+                },
+                "organization": {
+                  "name": "Motorways UK",
+                  "id": "GB-GOR-XX1234"
+                },
+                "jobTitle": "Group General Manager Transport Services"
+              }
+            }
+          ],
+          "documents": [
+            {
+              "id": "2",
+              "documentType": "minutes.lobbyingMeeting",
+              "url": "http://example.com/lobbyingMeetingMinutes.pdf"
+            }
+          ]
+        }
+-   id: '5.5'
+    title: Beneficial ownership
+    module: Institutional
+    indicator: Access to information
+    disclosure format: Disclose the beneficial owners of the contractors and suppliers appointed in the project.
+    mapping: |-
+        Project level:
+
+        For each beneficial owner:
+
+        1. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the contractor or supplier.
+        2. Add a [`Person`](../../reference/schema.md#person) object to the organization's [`.beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners) array.
+        3. Set the person's:
+
+        - [`.id`](project-schema.json,/definitions/Person,id) incrementally
+        - [`.name`](project-schema.json,/definitions/Person,name) to the beneficial owner's name
+        - [`.identifier`](project-schema.json,/definitions/Person,identifier) to the beneficial owner's identifier
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "beneficialOwners": [
+                {
+                  "id": "1",
+                  "name": "Juan Perez",
+                  "identifier": {
+                    "scheme": "PRY-IDCARD",
+                    "id": "12345"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+-   id: '5.6'
+    title: Sustainability criteria
+    module: Institutional
+    indicator: Award criteria
+    disclosure format: Identify the presence of sustainability and non-price attributes in the award criteria.
+    mapping: |-
+        Contracting process level:
+
+        Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the [`summary.tender.sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability) array and add 'awardCriteria' to its [`.strategies`](project-schema.json,/definitions/Sustainability,strategies) array.
+    example: |-
+        {
+          "contractingProcesses": [
+            {
+              "id": "1",
+              "summary": {
+                "tender": {
+                  "sustainability": [
+                    {
+                      "strategies": [
+                        "awardCriteria"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+-   id: '5.7'
+    title: Anti-corruption certifications
+    module: Institutional
+    indicator: Anti-corruption impact
+    disclosure format: Disclose anti-corruption certifications of the project, such as ISO 37001 on Anti-Bribery Management Systems Standard.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'antiCorruptionCertification'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "antiCorruptionCertification",
+              "url": "http://example.com/ISO37001Certification.pdf"
+            }
+          ]
+        }
+-   id: '5.8'
+    title: Independent monitoring
+    module: Institutional
+    indicator: Anti-corruption impact
+    disclosure format: Identify the entities acting as independent monitors of the project.
+    mapping: |-
+        Project level:
+
+        [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
+    example: |-
+        {
+          "parties": [
+            {
+              "id": "1",
+              "name": "Transparency International New Zealand",
+              "roles": [
+                "independentMonitor"
+              ]
+            }
+          ]
+        }
+-   id: '5.9'
+    title: Performance monitoring
+    module: Institutional
+    indicator: KPIs
+    disclosure format: Disclose Key Performance Indicators adopted by the project.
+    mapping: See [performance monitoring (climate finance)](climate-finance-performance-monitoring).
+    example: ''
+-   id: '5.10'
+    title: Risk management plans
+    module: Institutional
+    indicator: Risk management
+    disclosure format: Disclose risk management plans prepared for the project.
+    mapping: |-
+        Project Level:
+
+        [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'riskProvisions'.
+    example: |-
+        {
+          "documents": [
+            {
+              "id": "1",
+              "documentType": "riskProvisions",
+              "url": "http://example.com/riskManagementPlan.pdf"
+            }
+          ]
+        }
+-   id: '5.11'
+    title: Sustainable sub-sectors
+    module: Institutional
+    indicator: Subsectors
+    disclosure format: |-
+        Identify relevant sub-sectors related to the project scope.
+        Select from a list (non-exhaustive):
+
+        - Renewable energy
+          - Solar
+          - Wind
+          - Hydropower
+          - Biomass
+          - Geothermal
+        - Water and wastewater management
+        - Transport
+          - Low carbon transport
+        - Natural resource management
+          - Flood protection
+
+        Free text to add not mentioned sub-sectors
+    mapping: |-
+        Project Level:
+
+        Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector codelist](../../reference/codelists.md#projectsector).
+    example: |-
+        {
+          "sector": [
+            "solar"
+          ]
+        }

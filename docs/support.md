@@ -1,20 +1,21 @@
 # Support
 
-If you are planning to publish or use data using the OC4IDS then the OC4IDS Helpdesk team are on hand to offer advice and input.
+If you are planning to publish or use data using the OC4IDS then the Open Contracting Partnership and CoST - the Infrastructure Transparency Initiative can provide free-of-charge support.
 
 We can:
 
 * Help you identify approaches for converting data from your existing systems to OC4IDS;
-* Suggest existing tools and services which may help you publish or use OC4IDS data;
+* Suggest existing tools and services which might help you publish or use OC4IDS data;
 * Provide guidance on mapping your data structures to the standard;
 * Give you feedback on draft data files, and support with validation of your data;
 
-Through funding from the Open Contracting Partnership and CoST - the Infrastructure Transparency Initiative, this support is provided free of charge.
+Use the following email addresses to request support:
 
-E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with your questions, and a member of the OC4IDS Helpdesk will be in touch with you soon.
+* [opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org) for support from CoST - the Infrastructure Transparency Initiative
+* [data@open-contracting.org](mailto:data@open-contracting.org) for support from the Open Contracting Partnership.
 
 ```{admonition} Contributing
 :class: hint
 
-Developers, or those wishing to provide technical input to OC4IDS, may wish to go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure).
+Developers, or those wishing to provide technical input to OC4IDS, can go straight to the [GitHub repository](https://github.com/open-contracting/infrastructure).
 ```

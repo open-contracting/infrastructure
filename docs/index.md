@@ -1,6 +1,6 @@
 # Open Contracting for Infrastructure Data Standards Toolkit
 
-The Open Contracting Data Standard (OCDS) is already used to describe millions of procurement processes around the world relating to goods, services and public works. The CoST Infrastructure Data Standard (CoST IDS) has been used to guide what data and information should be disclosed at each stage of the project cycle on over 25,000 infrastructure projects.
+The Open Contracting Data Standard (OCDS) is already used to describe millions of procurement processes around the world relating to goods, services and public works. The CoST Infrastructure Data Standard (CoST IDS) has been used to guide what data and information ought to be disclosed at each stage of the project cycle on over 25,000 infrastructure projects.
 
 This site describes how to combine **contract level disclosures using OCDS** with **project-level disclosure based on the CoST IDS**, in order to support scalable disclosure and monitoring of infrastructure project identification, preparation, implementation and delivery.
 

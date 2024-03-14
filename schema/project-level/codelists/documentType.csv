@@ -19,7 +19,7 @@ marketStudies,Market studies,Documentation of any market studies that took place
 eligibilityCriteria,Eligibility criteria,Detailed documents about the eligibility of bidders.,OCDS for PPPs
 clarifications,Clarifications to bidders questions,Documentation that provides replies to issues raised in pre-bid conferences or an enquiry processes.,OCDS for PPPs
 shortlistedFirms,Shortlisted firms,Documentation providing information on shortlisted firms. Structured versions of this information can be provided using the bids extension.,OCDS for PPPs
-environmentalImpact,Environmental impact assessment,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for this contracting process or project.",OC4IDS
+environmentalImpact,Environmental impact,"Documentation of assessments of the environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) and mitigation measures (e.g. pollution control, low carbon solutions, sustainable timber etc.) for the contracting process or project.",OC4IDS
 assetAndLiabilityAssessment,Assessment of government's assets and liabilities,Documentation covering assessments of the government's assets and liabilities related to this contracting process.,OCDS for PPPs
 riskProvisions,Provisions for management of risks and liabilities,Documentation covering how risks will be managed as part of this contracting process.,OCDS for PPPs
 winningBid,Winning bid,"Documentation of the winning bid, including, wherever applicable, a full copy of the proposal received.",OCDS for PPPs
@@ -64,3 +64,33 @@ contractAmendment,Contract amendment,A legal document that changes or adds to th
 designReport,Project design report,"A record of the justification for the design approach adopted in the project, typically issued before the works start, by the consultant or firm that will supervise the works.",OC4IDS
 paymentCertificate,Payment certificate,A document certifying that the work specified on a supplier's estimate or invoice is complete and that payment to the supplier is approved.,OC4IDS
 escalationApproval,Escalation approval,Documentation of one or more approved escalations of the contract price during the project life-cycle.,OC4IDS
+climateMeasures,Climate measures,Documentation of the measures adopted by the project to adapt to or mitigate against climate change.,OC4IDS
+conservationMeasures,Conservation measures,Documentation of the measures adopted by the project to protect and enhance biodiversity.,OC4IDS
+environmentalMeasures,Environmental measures,Documentation of the measures adopted by the project to mitigate or remedy environmental impacts.,OC4IDS
+policyAlignment,Policy alignment,"Documentation detailing how a project aligns with an international, national, sector, or procuring entity policy, plan or strategy.",OC4IDS
+procurementStrategyRiskAssessment,Procurement strategy risk assessment,"Documentation of the strategic risk assessment carried out for this contracting process addressing in-house capabilities, contract packaging decisions and risk allocation decisions.",OC4IDS
+lifeCycleCostMethodology,Life cycle cost methodology,Documentation of the methodology for calculating the life cycle cost of the assets.,OC4IDS
+costBenefitAnalysis,Cost-benefit analysis,Documentation of the economic cost-benefit analysis carried out for the project.,OC4IDS
+environmentalExemption,Environmental exemption,Documentation of any environmental exemptions or amnesties granted to the project by a relevant authority.,OC4IDS
+climateAndDisasterRiskAssessment,Climate and disaster risk assessment,Documentation of assessments of the project's risk in relation to climate change and natural disasters.,OC4IDS
+climateTransformation,Climate transformation,"Documentation of the theory of change, systemic transition or transformation in relation to the climate that is intended as an outcome of the project.",OC4IDS
+decommissioningPlans,Decommissioning plans,Documentation of plans for the decommissioning of the assets at the end of their lifetime.,OC4IDS
+impactMethodology,Impact methodology,Documentation of the methodology for measuring the long-term impact of the project.,OC4IDS
+inclusiveDesign,Inclusive design,"Documentation of how issues relating to gender, people with disabilities and vulnerable and disadvantaged populations were incorporated into the project's design.",OC4IDS
+inclusiveImplementation,Inclusive implementation,"Documentation of how issues relating to gender, people with disabilities and vulnerable and disadvantaged populations were incorporated into the project's implementation.",OC4IDS
+supplierEnvironmentalCertification,Supplier environmental certification,A certificate issued by a relevant authority confirming the supplier conforms to relevant environmental policies.,OC4IDS
+supplierHealthAndSafetyCertification,Supplier health and safety certification,A certificate issued by a relevant authority confirming the supplier conforms to relevant health and safety policies.,OC4IDS
+antiCorruptionCertification,Anti-corruption certification,"A certificate issued by a relevant authority confirming the named party conforms to an anti-corruption standard, such as the ISO 37001 on Anti-Bribery Management Systems Standard.",OC4IDS
+oversightReport,Oversight report,Documentation of checks that the governance and management of the project owner or procuring entity comply with all relevant legislative mandates and policies.,OC4IDS
+informationRequest,Freedom of information request,A request for information in relation to the project submitted under relevant freedom of information legislation.,OC4IDS
+informationRequestResponse,Freedom of information request response,The formal response in answer to a request for information in relation to the project submitted under relevant freedom of information legislation.,OC4IDS
+buildingInspectionReport,Building inspection report,Documentation of checks that the assets meet building code requirements.,OC4IDS
+ghgEmissionsForecast,Greenhouse gas emissions forecast,"Documentation of the forecast greenhouse gases that the project will emit, including the methodology and calculation method used.",OC4IDS
+ghgEmissionsReduction,Greenhouse gas emissions reduction forecast,"Documentation of the forecast reduction in greenhouse gas emissions resulting from the project, including the methodology and calculation method used.",OC4IDS
+ghgEmissions,Greenhouse gas emissions,"Documentation of the actual greenhouse gases that the project emitted, including the methodology and calculation method used.",OC4IDS
+abatementCostMethodology,Abatement cost methodology,Documentation of the methodology for calculating the project's abatement cost.,OC4IDS
+minutes.lobbyingMeeting,Lobbying meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a lobbying meeting.",OC4IDS
+minutes.consultationMeeting,Consultation meeting minutes,"A record of the issues discussed, agreements reached and decisions taken at a public consultation meeting.",OC4IDS
+consultationMeetingInvitation,Consultation meeting invitation,A notice about an upcoming public consultation meeting relating to the project.,OC4IDS
+materialTestResults,Material test results,Documentation of results of tests conducted on construction materials.,OC4IDS
+maintenancePlan,Maintenance plan,Documentation that describes work to prevent the breakdown or malfunctioning of an asset.,OC4IDS

@@ -4,9 +4,9 @@ An increasing number of procurement portals now publish data using the Open Cont
 
 * Each contracting process is given a unique identifier (`ocid`);
 
-* Every update to that process, from planning through to implementation, should be published under the same `ocid`, and in a structured open data format;
+* Every update to that process, from planning through to implementation, ought to be published under the same `ocid`, and in a structured open data format;
 
-* It should be possible to download bulk data in OCDS format, or access this structured data via an API.
+* It ought to be possible to download bulk data in OCDS format, or access this structured data via an API.
 
 Even when an OCDS publisher does not provide data for every stage of the contracting process, it is still possible to use OCDS data to:
 
@@ -16,14 +16,14 @@ Even when an OCDS publisher does not provide data for every stage of the contrac
 
 ## Getting started
 
-*The following steps may require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
+*The following steps might require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
 
 ### (1) Evaluate the Open Contracting Data
 
 Check that the data you plan to analyze is in OCDS format
 
 ```{tip}
-You can use the [OCDS Data Review Tool](https://standard.open-contracting.org/review/) to check whether your data is in the correct format
+You can use the [OCDS Data Review Tool](https://review.standard.open-contracting.org/) to check whether your data is in the correct format
 ```
 
 Check which stages of the contracting process the data covers.
@@ -50,14 +50,14 @@ Ideally, the procurement data source will include some sort of project or budget
 If the procurement data you are working with is in OCDS format, refer to the guidance on [project identifiers in OCDS](identifiers) for more information on where to find identifiers for projects.
 ```
 
-However, where this is not the case, it may be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
+However, where this is not the case, it might be possible to search for tenders with a particular set of item classifications, or from a particular buyer.
 
-This may be possible by downloading and filtering spreadsheets of the data, or may require queries written against your chosen data storage tool.
+This might be possible by downloading and filtering spreadsheets of the data, or might involve queries written against your chosen data storage tool.
 
 ````{admonition} Worked example
 :class: Tip
 
-Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
+Using the UK Contracts Finder dataset in OCDS format, and [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the following query to fetch contracting processes classified under the ['Architectural, construction, engineering and inspection services'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) hierarchy of the EU Common Procurement Vocabulary.
 
 ```sql
 -- The following query runs against a filtered set of data in Kingfisher.
@@ -85,7 +85,7 @@ FROM (
 ORDER BY cast(data -> 'tender' -> 'value' ->> 'amount' as float) DESC;
 ```
 
-This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it should be subject to monitoring.
+This returns over 11,000 procurement processes related to infrastructure, covering frameworks and procurements, with a value of up to £25bn a year. These processes include design work, construction and monitoring, and each needs to be reviewed to identify if it ought to be subject to monitoring.
 ````
 
 ### (4) Populate project-level data
@@ -97,10 +97,10 @@ If your analysis of OCDS data reveals infrastructure projects to monitor, you ca
 * Search for **related contracts** in order to link any other design, construction or monitoring contracts to this project;
 
 ```{tip}
-When searching for related contracts, you may be looking for contracts from the same buyer, mentioning similar words or localities.
+When searching for related contracts, you might be looking for contracts from the same buyer, mentioning similar words or localities.
 ```
 
-You may not be able to fill all the project-level details from the contracts, and may need to undertake additional research to find:
+You might not be able to fill all the project-level details from the contracts, and might need to undertake additional research to find:
 
 * The project owner and name
 * The full scope of the project
@@ -108,12 +108,12 @@ You may not be able to fill all the project-level details from the contracts, an
 * Any environmental impact or land and settlement impact studies that have been undertaken
 
 ```{tip}
-You can use a {download}`blank example OC4IDS JSON file <../examples/blank.json>` to get started.
+You can use a [blank example OC4IDS JSON file](../examples/blank.json) to get started.
 ```
 
 ### (5) Monitoring contracting process updates
 
-When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same `ocid`, you should be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.
+When a publisher is using OCDS correctly, and is providing updates on a contracting process under the same `ocid`, you ought to be able to regularly fetch the latest data for each contracting process you are monitoring, and to compare it with the existing data you have, looking for changes.
 
 Keep a copy each time the data changes, and if you see modifications to:
 
@@ -129,9 +129,9 @@ You can use OC4IDS to record each time a change is detected, and the reasons tha
 
 When there is evidence that a project has reached completion, it is important to further update the **project-level disclosure**.
 
-If the OCDS data includes implementation data, including transactions or final spending information, then it may be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It may also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible modifications that are in need to explanation.
+If the OCDS data includes implementation data, including transactions or final spending information, then it might be possible to compare the total sum of all contract spending against the original anticipated contract spend, and overall project budget. It might also be possible to compare final contract delivery dates with originally planned dates. This can be used to identify possible modifications that are in need to explanation.
 
-In other cases, you may need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.
+In other cases, you might need to identify other data sources (such as treasury or public spending data) that you can draw upon to check whether a project spend was as anticipated or not.
 
 ## Tools and platform
 

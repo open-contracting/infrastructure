@@ -107,11 +107,11 @@ msgstr "Verifique que los datos que planea analizar están en formato OCDS"
 
 #: ../../docs/guidance/using.md:1
 msgid ""
-"You can use the [OCDS Data Review Tool](https://standard.open-"
-"contracting.org/review/) to check whether your data is in the correct format"
+"You can use the [OCDS Data Review Tool](https://review.standard.open-"
+"contracting.org/) to check whether your data is in the correct format"
 msgstr ""
-"Puede usar la [Herramienta de revisión de datos OCDS](https://standard.open-"
-"contracting.org/review/) para verificar si sus datos están en el formato "
+"Puede usar la [Herramienta de revisión de datos OCDS](https://review.standard.open-"
+"contracting.org/) para verificar si sus datos están en el formato "
 "correcto."
 
 #: ../../docs/guidance/using.md:29
@@ -223,14 +223,14 @@ msgid ""
 "Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the"
 " following query to fetch contracting processes classified under the "
 "['Architectural, construction, engineering and inspection "
-"services'](http://cpv.data.ac.uk/code-71000000.html) hierarchy of the EU "
+"services'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) hierarchy of the EU "
 "Common Procurement Vocabulary."
 msgstr ""
 "Usando el conjunto de datos en formato OCDS de UK Contracts Finder y [OCDS "
 "Kingfisher](https://github.com/open-contracting/kingfisher/), podemos usar "
 "la siguiente consulta para obtener procesos de contratación clasificados "
 "bajo la jerarquía ['Servicios de arquitectura, construcción, ingeniería e "
-"inspección'](http://cpv.data.ac.uk/code-71000000.html) del Vocabulario Común"
+"inspección'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) del Vocabulario Común"
 " de Adquisiciones de la UE (CPV, por sus siglas en inglés)."
 
 #: ../../docs/guidance/using.md:29
@@ -313,8 +313,8 @@ msgstr ""
 
 #: ../../docs/guidance/using.md:1
 msgid ""
-"You can use a {download}`blank example OC4IDS JSON file "
-"<../examples/blank.json>` to get started."
+"You can use a [blank example OC4IDS JSON file"
+"](../examples/blank.json) to get started."
 msgstr ""
 "Puede usar un {archivo de ejemplo}`OC4IDS JSON en blanco "
 "<../examples/blank.json>` para empezar."

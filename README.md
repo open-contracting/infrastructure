@@ -4,4 +4,4 @@ Visit [standard.open-contracting.org/infrastructure](https://standard.open-contr
 
 The documentation is built using sphinx, building on the [standard profile template](https://github.com/open-contracting/standard_profile_template)
 
-Visit the [OCDS Standard Development Handbook](http://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/) for developer documentation about the standard.
+Visit the [OCDS Standard Development Handbook](https://ocds-standard-development-handbook.readthedocs.io/en/latest/standard/) for developer documentation about the standard.

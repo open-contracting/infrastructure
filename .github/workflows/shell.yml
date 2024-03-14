@@ -1,0 +1,13 @@
+name: Lint Shell
+on: [push, pull_request]
+jobs:
+  build:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          sudo apt update
+          sudo apt install shellcheck shfmt
+      - run: shellcheck $(shfmt -f .)
+      - run: shfmt -d -i 4 -sr $(shfmt -f .)
