@@ -159,7 +159,7 @@ def setup(app):
                     reader = csv.reader(i)
                     writer = csv.writer(o, lineterminator='\n')
                     for row in reader:
-                        del row[column_index] # Mapping column
-                        row = row[0:3] # Drop OC4IDS Fields and OC4IDS Codes columns
+                        del row[column_index]  # Drop mapping column
+                        row = row[0:3]  # Drop OC4IDS Fields and OC4IDS Codes columns
                         writer.writerow(row)
             path.unlink()
