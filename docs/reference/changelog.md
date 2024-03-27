@@ -5,6 +5,7 @@
 ### Documentation
 
 * [#478](https://github.com/open-contracting/infrastructure/pull/478), [#479](https://github.com/open-contracting/infrastructure/pull/479) - Fix validation errors in `example.json`.
+* [#483](https://github.com/open-contracting/infrastructure/pull/483) - Update core CoST IDS mapping to reflect latest schema.
 
 ### Schema
 
@@ -21,6 +22,10 @@
   * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
     * 'airManagement'
     * 'waterManagement'
+
+### Other
+
+* [#483](https://github.com/open-contracting/infrastructure/pull/483) - Add field lists to CoST IDS mappings.
 
 ## [0.9.4] - 2023-12-12
 
