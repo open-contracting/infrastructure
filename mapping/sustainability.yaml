@@ -1041,7 +1041,18 @@
     disclosure format: Clarify how the investment is aligned with the country's Paris Agreement commitments.
     mapping: See [policy coherence (institutional module)](institutional-policy-coherence).
     example: ''
-    fields: []
+    fields:
+    - /additionalClassifications
+    - /additionalClassifications/scheme
+    - /additionalClassifications/id
+    - /additionalClassifications/description
+    - /policyAlignment
+    - /policyAlignment/policies
+    - /policyAlignment/description
+    - /documents
+    - /documents/id
+    - /documents/documentType
+    - /documents/url
     refs: '5.1'
 -   id: '3.7'
     title: Beneficiaries
