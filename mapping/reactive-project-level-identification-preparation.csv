@@ -1,5 +1,5 @@
 CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS,OC4IDS Fields
-Multi-year programme & Budget,A detailed breakdown of the budget by period and/or participating funders.,"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` incrementally and set its `.description` to "Breakdown by year". For each year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set its fields as follows:
+Multi-year programme & Budget,A detailed breakdown of the budget by period and/or participating funders.,"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` incrementally and set its `.description` to 'Breakdown by year'. For each year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set its fields as follows:
 
 * Set its `id` to the year, e.g. '2020'
 * Set its `.amount.amount` to the amount of the budget allocated to the year and set `.amount.currency` to the currency of the budget
