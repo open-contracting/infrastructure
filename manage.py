@@ -343,7 +343,7 @@ def pre_commit():
               default='https://standard.open-contracting.org/profiles/ppp/latest/en/_static/patched/')
 def update(ppp_base_url):
     """
-    Align OC4IDS with OCDS.
+    Align OC4IDS with OCDS
 
     It uses OCDS for PPPs as a basis, because it includes most definitions and codelists needed in OC4IDS. It copies
     definitions, properties and codelists across, making modifications as required.
@@ -882,7 +882,7 @@ def lint(filename, additional_properties, link_fields):
 
     unlinked_backticked_field = re.compile(r"[^\[]`[A-Za-z.]+`")
 
-    with open(filename) as f:
+    with filename.open() as f:
         elements = yaml.safe_load(f)
 
     with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
@@ -975,7 +975,7 @@ def update_sustainability_elements():
     source = {element["id"]: element for element in source}
 
     # Load sustainability modules mapping
-    with open(filename) as f:
+    with filename.open() as f:
         mapping = yaml.safe_load(f)
 
     mapping = {element["id"]: element for element in mapping}
@@ -1071,39 +1071,36 @@ def update_sustainability_docs():
 @cli.command()
 def update_sustainability_fields():
     """
-    Update the list of fields used in each element's example in mapping/sustainability.yaml.
+    Update the list of fields used in each element's example in mapping/sustainability.yaml
     """
 
-    def __get_paths(d):
+    def _get_paths(d, path=""):
         """
         Get a list of paths from a JSON object.
         """
         if isinstance(d, dict):
             for key, value in d.items():
-                yield f'/{key}'
-                yield from (f'/{key}{p}' for p in __get_paths(value))
+                new_path = f"{path}/{key}"
+                yield new_path
+                yield from _get_paths(value, new_path)
 
         elif isinstance(d, list):
-            for i, value in enumerate(d):
-                yield from (f'{p}' for p in __get_paths(value))
+            for value in d:
+                yield from _get_paths(value, path)
 
-    # Load sustainability modules mapping
-    filename = basedir / 'mapping' / 'sustainability.yaml'
-    with open(filename) as f:
+    filename = basedir / "mapping" / "sustainability.yaml"
+    with filename.open() as f:
         mapping = yaml.safe_load(f)
 
     mapping = {element["id"]: element for element in mapping}
 
-    # Get list of fields in example
     for element in mapping.values():
-        if element["example"] != '':
-            fields = set()
-            element["fields"] = [fields.add(path) or path for path in __get_paths(
-                json.loads(element["example"])) if path not in fields]
-        # Handle elements that reference another element and have a blank example
-        elif element["refs"] != '':
-            element["fields"] = [fields.add(path) or path for path in __get_paths(
-                json.loads(mapping[element["refs"]]["example"])) if path not in fields]
+        if element["example"] != "":
+            example = element["example"]
+        elif element["refs"] != "":  # elements that reference another element and have a blank example
+            example = mapping[element["refs"]]["example"]
+        # A dict is used to preserve order (unlike a set).
+        element["fields"] = list({path: 0 for path in _get_paths(json.loads(example))})
 
     write_yaml_file(filename, list(mapping.values()))
 
