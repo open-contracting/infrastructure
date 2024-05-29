@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: biomejs/setup-biome@v2
-      - run: biome ci docs/_static/json-example-format.js --indent-style=space --line-width=119
+      - run: biome ci --indent-style=space --line-width=119 docs/_static/json-example-format.js
