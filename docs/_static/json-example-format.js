@@ -1,16 +1,16 @@
 /* global renderjson */
 
-document.querySelectorAll('.expandjson').forEach(element => {
+for (const element of document.querySelectorAll('.expandjson')) {
   const defaultOpen = []
   let fileClassName
-  element.classList.forEach(className => {
+  for (const className of element.classList) {
     if (className.substring(0, 7) === 'expand-' && className.length > 7) {
       defaultOpen.push(className.substring(7))
     }
     if (className.substring(0, 5) === 'file-') {
       fileClassName = className
     }
-  })
+  }
 
   let data = JSON.parse(element.textContent)
   // If the jsoninclude directive indexed to a JSON array (a common mistake), only display the first entry.
@@ -24,7 +24,7 @@ document.querySelectorAll('.expandjson').forEach(element => {
 
   const container = element.previousElementSibling
   let select
-  if (container && container.classList.contains('selection-container')) {
+  if (container?.classList.contains('selection-container')) {
     // Hide additional examples.
     element.style.display = 'none'
     container.appendChild(element)
@@ -44,9 +44,9 @@ document.querySelectorAll('.expandjson').forEach(element => {
     // Hide the select element if there is one option.
     select.style.display = 'none'
     select.addEventListener('change', () => {
-      div.querySelectorAll('.expandjson').forEach(child => {
+      for (const child of div.querySelectorAll('.expandjson')) {
         child.style.display = 'none'
-      })
+      }
       div.querySelector(`.${select.value}`).style.display = ''
     })
   }
@@ -55,4 +55,4 @@ document.querySelectorAll('.expandjson').forEach(element => {
   option.value = fileClassName
   option.textContent = fileClassName.replace('file-', '')
   select.appendChild(option)
-})
+}
