@@ -592,7 +592,8 @@
           "enum": [
             "preAward",
             "active",
-            "closed"
+            "closed",
+            "pre-award"
           ],
           "codelist": "contractingProcessStatus.csv",
           "openCodelist": false
