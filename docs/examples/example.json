@@ -1188,7 +1188,7 @@
         "hasImpactAssessment": true,
         "impactCategories": [
           {
-            "scheme": "ifc-environmental-social",
+            "scheme": "ifcEnvironmentalSocial",
             "id": "a"
           }
         ],

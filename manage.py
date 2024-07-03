@@ -1100,7 +1100,7 @@ def update_sustainability_fields():
         elif element["refs"] != "":  # elements that reference another element and have a blank example
             example = mapping[element["refs"]]["example"]
         # A dict is used to preserve order (unlike a set).
-        element["fields"] = list({path: 0 for path in _get_paths(json.loads(example))})
+        element["fields"] = list(dict.fromkeys(_get_paths(json.loads(example)), 0))
 
     write_yaml_file(filename, list(mapping.values()))
 

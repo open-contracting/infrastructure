@@ -590,9 +590,10 @@
           "description": "The status of this contracting process. Drawn from the [contractingProcessStatus codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
-            "pre-award",
+            "preAward",
             "active",
-            "closed"
+            "closed",
+            "pre-award"
           ],
           "codelist": "contractingProcessStatus.csv",
           "openCodelist": false

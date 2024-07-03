@@ -433,7 +433,7 @@
         If an environmental impact assessment was conducted:
 
         1. Set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `true`.
-        2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'ifc-environmental-social' and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.
+        2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'ifcEnvironmentalSocial' and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.
 
         If an environmental impact assessment was not conducted, set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `false`.
     example: |-
@@ -442,7 +442,7 @@
             "hasImpactAssessment": true,
             "impactCategories": [
               {
-                "scheme": "ifc-environmental-social",
+                "scheme": "ifcEnvironmentalSocial",
                 "id": "a"
               }
             ]
