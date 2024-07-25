@@ -460,7 +460,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the maintenance plan or program.
+Disclose the maintenance plan or program. This is the documentation that describes work to prevent the breakdown or malfunctioning of an asset.
 ````
 
 ````{grid-item-card}
@@ -1499,7 +1499,7 @@ CoST IDS element
 ^^^
 Disclose dates for project approval:
 
-- submission date
+- submission date 
 - approval date
 ````
 
@@ -1692,12 +1692,13 @@ Map to [`environment.abatementCost`](project-schema.json,,environment/abatementC
 :columns: 4
 CoST IDS element
 ^^^
-Identify potential non-climate impacts that have been factored into the project planning. Select from the list:
+Disclose and provide further details on the potential non-climate impacts that have been factored into the project planning. This can comprise, without limitation the following:
 
 - economic
 - social
 - environmental
 - gender empowerment.
+- others (explain)
 ````
 
 ````{grid-item-card}
@@ -1751,7 +1752,7 @@ See [public consultation meetings (social module)](social-public-consultation-me
 :columns: 4
 CoST IDS element
 ^^^
-Disbursements dates according to financial agreement versus actual disbursements dates.
+Disclose disbursements dates according to financial agreement versus actual disbursements dates.
 ````
 
 ````{grid-item-card}
@@ -2566,20 +2567,20 @@ Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social
 `````
 
 
-(social-labour-obligations)=
+(social-labor-obligations)=
 
 `````{grid} 2
 
-````{grid-item-card} Labour obligations
+````{grid-item-card} Labor obligations
 :columns: 4
 CoST IDS element
 ^^^
-Disclose labour obligations in the construction contract. This can include, without limitation, the following:
+Disclose labor obligations in the construction contract. This can include, without limitation, the following:
 
 - minimum wage
 - overtime
-- prohibition of forced labour
-- prohibition of child labour
+- prohibition of forced labor
+- prohibition of child labor
 - equal opportunity
 - non-discrimination
 - freedom of association
@@ -2645,15 +2646,15 @@ Contracting process level:
 `````
 
 
-(social-labour-budget)=
+(social-labor-budget)=
 
 `````{grid} 2
 
-````{grid-item-card} Labour budget
+````{grid-item-card} Labor budget
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the amount allocated by the main contractor to cover for labour costs.
+Disclose the amount allocated by the main contractor to cover for labor costs.
 ````
 
 ````{grid-item-card}
@@ -2773,7 +2774,7 @@ Publish summary statistics on worker fatalities:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
+Disclose labor related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
 ````
 
 ````{grid-item-card}
