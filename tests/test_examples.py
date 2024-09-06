@@ -15,31 +15,31 @@ basedir = Path(__file__).resolve().parents[1]
 
 
 def formatwarning(message, category, filename, lineno, line=None):
-    return str(message).replace(cwd + os.sep, '')
+    return str(message).replace(cwd + os.sep, "")
 
 
 warnings.formatwarning = formatwarning
-pytestmark = pytest.mark.filterwarnings('always')
+pytestmark = pytest.mark.filterwarnings("always")
 
 
 # See test_example_valid in standard-maintenance-scripts/tests/test_readme.py
 def test_examples_valid():
-    with (basedir / 'schema' / 'project-level' / 'project-schema.json').open() as f:
+    with (basedir / "schema" / "project-level" / "project-schema.json").open() as f:
         schema = json.load(f)
 
-    set_additional_properties(schema, False)
+    set_additional_properties(schema, additional_properties=False)
 
     validator = Draft4Validator(schema, format_checker=FormatChecker())
 
     errors = 0
-    for path in (basedir / 'docs' / 'examples').glob('**/*.json'):
-        if path.name == 'blank.json':
+    for path in (basedir / "docs" / "examples").glob("**/*.json"):
+        if path.name == "blank.json":
             continue
 
         with open(path) as f:
             data = json.load(f)
 
-        for project in data['projects']:
+        for project in data["projects"]:
             errors += validate_schema(path, project, validator)
 
-    assert not errors, 'One or more JSON files are invalid. See warnings below.'
+    assert not errors, "One or more JSON files are invalid. See warnings below."
