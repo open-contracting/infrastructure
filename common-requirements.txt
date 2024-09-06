@@ -2,6 +2,10 @@
 #    uv pip compile common-requirements.in -o common-requirements.txt
 alabaster==0.7.12
     # via sphinx
+anyio==4.4.0
+    # via
+    #   starlette
+    #   watchfiles
 async-generator==1.10
     # via
     #   trio
@@ -31,6 +35,9 @@ click==8.1.3
     #   -r common-requirements.in
     #   ocdsindex
     #   sphinx-intl
+    #   uvicorn
+colorama==0.4.6
+    # via sphinx-autobuild
 docutils==0.18
     # via
     #   myst-parser
@@ -40,9 +47,12 @@ elastic-transport==8.4.0
 elasticsearch==8.6.2
     # via ocdsindex
 h11==0.13.0
-    # via wsproto
+    # via
+    #   uvicorn
+    #   wsproto
 idna==3.7
     # via
+    #   anyio
     #   requests
     #   trio
 imagesize==1.4.1
@@ -116,7 +126,9 @@ setuptools==74.1.2
 six==1.16.0
     # via url-normalize
 sniffio==1.2.0
-    # via trio
+    # via
+    #   anyio
+    #   trio
 snowballstemmer==2.1.0
     # via sphinx
 sortedcontainers==2.4.0
@@ -125,7 +137,10 @@ sphinx==5.3.0
     # via
     #   -r common-requirements.in
     #   myst-parser
+    #   sphinx-autobuild
     #   sphinx-intl
+sphinx-autobuild==2024.9.3
+    # via -r common-requirements.in
 sphinx-intl==2.2.0
     # via -r common-requirements.in
 sphinxcontrib-applehelp==1.0.2
@@ -142,6 +157,8 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 standard-theme @ git+https://github.com/open-contracting/standard_theme.git@0d9d89f7b150105fd366a7f626e57d3103090230#egg=standard_theme
     # via -r common-requirements.in
+starlette==0.38.4
+    # via sphinx-autobuild
 trio==0.20.0
     # via
     #   selenium
@@ -160,5 +177,11 @@ urllib3==1.26.19
     #   requests
     #   requests-cache
     #   selenium
+uvicorn==0.30.6
+    # via sphinx-autobuild
+watchfiles==0.24.0
+    # via sphinx-autobuild
+websockets==13.0.1
+    # via sphinx-autobuild
 wsproto==1.1.0
     # via trio-websocket
