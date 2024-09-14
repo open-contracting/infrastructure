@@ -266,7 +266,7 @@ def pre_commit():
                     "````{tab-item} Schema\n\n",
                     "```{jsonschema} ../../build/current_lang/project-schema.json\n",
                     f":pointer: /definitions/{defn}\n",
-                    f":collapse: {','.join(properties_to_collapse)}\n" ":addtargets:\n" "```\n\n",
+                    f":collapse: {','.join(properties_to_collapse)}\n:addtargets:\n```\n\n",
                     "````\n\n",
                     "````{tab-item} Examples\n\n",
                 ]
