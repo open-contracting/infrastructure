@@ -17,6 +17,7 @@ ignore = [
   "C901", "PLR091",  # complexity preferences
   "D1",  # docstrings
   "PTH",  # pathlib
+  "TRY003",
 ]
 
 [tool.ruff.lint.flake8-builtins]

@@ -925,7 +925,7 @@ def lint(filename, additional_properties, link_fields):
 
         match len(occurrences):
             case 0:
-                raise ValueError(f"Field {name} not in schema")  # noqa: TRY003
+                raise ValueError(f"Field {name} not in schema")
             case 1:
                 choice = 0
             # Resolve ambiguous field names, like `title`.
