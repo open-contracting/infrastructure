@@ -39,18 +39,14 @@ Dumper.add_representer(str, str_representer)
 
 
 def get(url):
-    """
-    GET a URL and returns the response. Raises an exception if the status code is not successful.
-    """
+    """GET a URL and returns the response. Raises an exception if the status code is not successful."""
     response = requests.get(url, timeout=10)
     response.raise_for_status()
     return response
 
 
 def csv_reader(url):
-    """
-    Read a CSV from a URL and returns a ``csv.DictReader`` object.
-    """
+    """Read a CSV from a URL and returns a ``csv.DictReader`` object."""
     return csv.DictReader(StringIO(get(url).text))
 
 
@@ -73,9 +69,7 @@ def set_additional_properties(data, additional_properties):
 
 
 def traverse(schema_action=None, object_action=None):
-    """
-    Walk through the schema, performing actions.
-    """
+    """Walk through the schema, performing actions."""
     if object_action is None:
 
         def object_action(value):
@@ -129,9 +123,7 @@ def cli():
 
 @cli.command()
 def pre_commit():
-    """
-    Update docs/reference/schema.md and _static/i8n.csv.
-    """
+    """Update docs/reference/schema.md and _static/i8n.csv."""
 
     def _get_definition_references(schema, defn, parents=None, project_schema=None, *, include_nested=True):
         """
@@ -191,9 +183,7 @@ def pre_commit():
         return references
 
     def _update_sub_schema_reference(schema):
-        """
-        Update docs/reference/schema.md.
-        """
+        """Update docs/reference/schema.md."""
         with (referencedir / "schema.md").open() as f:
             schema_reference = f.readlines()
 
@@ -428,9 +418,7 @@ def update(ppp_base_url):
 
     # Similar in structure to `add_versioned` in the standard's `make_versioned_release_schema.py`.
     def _remove_null_and_pattern_properties(*args):
-        """
-        Remove the "patternProperties" key, ``"null"`` from the "type" key, and ``None`` from the "enum" key.
-        """
+        """Remove the "patternProperties" key, ``"null"`` from the "type" key, and ``None`` from the "enum" key."""
 
         def __schema_action(schema, _pointer):
             schema.pop("patternProperties", None)
@@ -444,9 +432,7 @@ def update(ppp_base_url):
         traverse(__schema_action, __object_action)(*args)
 
     def _remove_deprecated_properties(*args):
-        """
-        Remove "deprecated" properties.
-        """
+        """Remove "deprecated" properties."""
 
         def __schema_action(schema, pointer):
             if "properties" in schema:
@@ -459,9 +445,7 @@ def update(ppp_base_url):
         traverse(__schema_action)(*args)
 
     def _remove_integer_identifier_types(*args):
-        """
-        Set all ``id`` fields to allow only strings, not integers.
-        """
+        """Set all ``id`` fields to allow only strings, not integers."""
 
         def __schema_action(schema, pointer):
             if "properties" in schema:
@@ -895,9 +879,7 @@ def update(ppp_base_url):
 @click.option("-l", "--link-fields", is_flag=True, help="Link field names to jsonschema directives")
 def lint(filename, additional_properties, link_fields):
     def _get_fields(schema, parents=()):
-        """
-        Generate field names (as tuples) in the JSON Schema.
-        """
+        """Generate field names (as tuples) in the JSON Schema."""
         for name, value in schema.get("properties", {}).items():
             path = (*parents, name)
             if "properties" in value:
@@ -1036,9 +1018,7 @@ def lint(filename, additional_properties, link_fields):
 
 @cli.command()
 def update_sustainability_elements():
-    """
-    Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet.
-    """
+    """Update mapping/sustainability.yaml from CoST IDS sustainability elements spreadsheet."""
     # CoST IDS sustainability elements are maintained in https://docs.google.com/spreadsheets/d/165epI69oQ5YyL4-2q8VubFn9VuNham2Pi1u0P49id9o
     source = csv_reader(
         "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHlHTshFw7PMbPsNz5ecYZsIy7aEHl0pN4sENGgesTT7kR8eZ0GjJjPVf54iMA6eK3ZpQZ2k5e6rQn/pub?gid=0&single=true&output=csv"
@@ -1079,9 +1059,7 @@ def update_sustainability_elements():
 
 @cli.command()
 def update_sustainability_docs():
-    """
-    Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml.
-    """
+    """Update docs/cost/ids/sustainability.md from mapping/sustainability.yaml."""
     # Load sustainability mapping documentation
     with (basedir / "docs" / "cost" / "ids" / "sustainability.md").open() as f:
         docs = f.readlines()
@@ -1133,14 +1111,10 @@ def update_sustainability_docs():
 
 @cli.command()
 def update_sustainability_fields():
-    """
-    Update the list of fields used in each element's example in mapping/sustainability.yaml.
-    """
+    """Update the list of fields used in each element's example in mapping/sustainability.yaml."""
 
     def _get_paths(d, path=""):
-        """
-        Get a list of paths from a JSON object.
-        """
+        """Get a list of paths from a JSON object."""
         if isinstance(d, dict):
             for key, value in d.items():
                 new_path = f"{path}/{key}"
