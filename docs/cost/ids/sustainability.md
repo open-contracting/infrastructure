@@ -460,7 +460,7 @@ Project level:
 :columns: 4
 CoST IDS element
 ^^^
-Disclose the maintenance plan or program. This is the documentation that describes work to prevent the breakdown or malfunctioning of an asset.
+Disclose the maintenance plan or program. This is the documentation that describes work to slow the deterioration of the asset.
 ````
 
 ````{grid-item-card}

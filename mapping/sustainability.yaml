@@ -381,7 +381,7 @@
     title: Maintenance plan or program
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the maintenance plan or program. This is the documentation that describes work to prevent the breakdown or malfunctioning of an asset.
+    disclosure format: Disclose the maintenance plan or program. This is the documentation that describes work to slow the deterioration of the asset.
     mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''maintenancePlan''.'
     example: |-
         {
