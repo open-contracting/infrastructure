@@ -88,15 +88,15 @@ mdurl==0.1.2
     # via markdown-it-py
 myst-parser==0.18.1
     # via -r common-requirements.in
-ocds-babel==0.3.1
+ocds-babel==0.3.6
     # via -r common-requirements.in
-ocdsextensionregistry==0.3.8
+ocdsextensionregistry==0.4.0
     # via -r common-requirements.in
 ocdsindex==0.2.0
     # via -r common-requirements.in
 outcome==1.1.0
     # via trio
-packaging==21.3
+packaging==24.1
     # via
     #   pytest
     #   sphinx
@@ -106,8 +106,6 @@ pluggy==0.13.1
     # via pytest
 pygments==2.15.1
     # via sphinx
-pyparsing==2.4.7
-    # via packaging
 pysocks==1.7.1
     # via urllib3
 pytest==7.2.0
@@ -160,7 +158,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@0d9d89f7b150105fd366a7f626e57d3103090230#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@07ca0e39979a244656dd6df0658f2ead428184b9#egg=standard_theme
     # via -r common-requirements.in
 starlette==0.38.4
     # via sphinx-autobuild

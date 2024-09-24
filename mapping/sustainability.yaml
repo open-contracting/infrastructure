@@ -381,7 +381,7 @@
     title: Maintenance plan or program
     module: Economic and fiscal
     indicator: Economic viability
-    disclosure format: Disclose the maintenance plan or program.
+    disclosure format: Disclose the maintenance plan or program. This is the documentation that describes work to slow the deterioration of the asset.
     mapping: 'Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to ''maintenancePlan''.'
     example: |-
         {
@@ -1259,11 +1259,7 @@
     title: Project approval period
     module: Climate finance
     indicator: Accessibility
-    disclosure format: |-
-        Disclose dates for project approval:
-
-        - submission date
-        - approval date
+    disclosure format: "Disclose dates for project approval:\n\n- submission date \n- approval date"
     mapping: |-
         Project level:
 
@@ -1438,12 +1434,13 @@
     module: Climate finance
     indicator: Non-climate impact
     disclosure format: |-
-        Identify potential non-climate impacts that have been factored into the project planning. Select from the list:
+        Disclose and provide further details on the potential non-climate impacts that have been factored into the project planning. This can comprise, without limitation the following:
 
         - economic
         - social
         - environmental
         - gender empowerment.
+        - others (explain)
     mapping: |-
         Project level:
 
@@ -1490,7 +1487,7 @@
     title: Disbursement records
     module: Climate finance
     indicator: Efficiency
-    disclosure format: Disbursements dates according to financial agreement versus actual disbursements dates.
+    disclosure format: Disclose disbursements dates according to financial agreement versus actual disbursements dates.
     mapping: |-
         For each planned disbursement:
 
@@ -2088,7 +2085,7 @@
     title: Indigenous land
     module: Social
     indicator: Indigenous populations
-    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
+    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/map/#x=-102.46&y=13.47&l=3&a=community_FormalDoc%2Ccommunity_NoDoc%2Ccommunity_FormalClaim%2Ccommunity_Occupied%2Cindigenous_FormalDoc%2Cindigenous_NoDoc%2Cindigenous_FormalClaim%2Cindigenous_Occupied) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
     mapping: |-
         Project level:
 
@@ -2210,16 +2207,16 @@
     - /social/landCompensationBudget/currency
     refs: ''
 -   id: '4.6'
-    title: Labour obligations
+    title: Labor obligations
     module: Social
-    indicator: Labour compliance
+    indicator: Labor compliance
     disclosure format: |-
-        Disclose labour obligations in the construction contract. This can include, without limitation, the following:
+        Disclose labor obligations in the construction contract. This can include, without limitation, the following:
 
         - minimum wage
         - overtime
-        - prohibition of forced labour
-        - prohibition of child labour
+        - prohibition of forced labor
+        - prohibition of child labor
         - equal opportunity
         - non-discrimination
         - freedom of association
@@ -2288,10 +2285,10 @@
     - /contractingProcesses/summary/documents/url
     refs: ''
 -   id: '4.7'
-    title: Labour budget
+    title: Labor budget
     module: Social
-    indicator: Labour compliance
-    disclosure format: Disclose the amount allocated by the main contractor to cover for labour costs.
+    indicator: Labor compliance
+    disclosure format: Disclose the amount allocated by the main contractor to cover for labor costs.
     mapping: |-
         Contracting process level:
 
@@ -2402,7 +2399,7 @@
     title: Health and safety certifications
     module: Social
     indicator: Health and Safety
-    disclosure format: Disclose labour related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
+    disclosure format: Disclose labor related certifications issued in relation to project contractors and subcontractors such as ISO 45001 for Health and Safety.
     mapping: |-
         Contracting process level:
 

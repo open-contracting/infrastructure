@@ -155,7 +155,7 @@ def pre_commit():
                                 defn,
                                 [*parents, key, "0"],
                                 project_schema,
-                                include_nested,
+                                include_nested=include_nested,
                             )
                         )
                 elif "$ref" in value:
@@ -168,17 +168,21 @@ def pre_commit():
                                 defn,
                                 [*parents, key],
                                 project_schema,
-                                include_nested,
+                                include_nested=include_nested,
                             )
                         )
                 elif "properties" in value:
                     references.extend(
-                        _get_definition_references(value, defn, [*parents, key], project_schema, include_nested)
+                        _get_definition_references(
+                            value, defn, [*parents, key], project_schema, include_nested=include_nested
+                        )
                     )
 
         if "definitions" in schema:
             for key, value in schema["definitions"].items():
-                references.extend(_get_definition_references(value, defn, [key], project_schema, include_nested))
+                references.extend(
+                    _get_definition_references(value, defn, [key], project_schema, include_nested=include_nested)
+                )
 
         return references
 
