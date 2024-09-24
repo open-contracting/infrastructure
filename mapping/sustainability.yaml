@@ -2085,7 +2085,7 @@
     title: Indigenous land
     module: Social
     indicator: Indigenous populations
-    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
+    disclosure format: Identify whether the project is located or cut through indigenous land. Use the information at the [LandMark - Global Platform of Indigenous and Community Lands](https://www.landmarkmap.org/map/#x=-102.46&y=13.47&l=3&a=community_FormalDoc%2Ccommunity_NoDoc%2Ccommunity_FormalClaim%2Ccommunity_Occupied%2Cindigenous_FormalDoc%2Cindigenous_NoDoc%2Cindigenous_FormalClaim%2Cindigenous_Occupied) on both databases Indigenous Lands Acknowledged by Government and Not Acknowledged by Government (customary tenure or with formal land claim submitted) to disclose the information.
     mapping: |-
         Project level:
 
