@@ -499,7 +499,7 @@ Disclose the expected lifetime of the asset. This tends to be part of the design
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Convert to days and map to `assetLifetime.durationInDays`.
+Project Level: Convert to days and map to [`assetLifetime.durationInDays`](project-schema.json,/definitions/Period,durationInDays).
 ```json
 {
   "assetLifetime": {
@@ -1499,7 +1499,7 @@ CoST IDS element
 ^^^
 Disclose dates for project approval:
 
-- submission date 
+- submission date
 - approval date
 ````
 

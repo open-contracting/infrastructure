@@ -404,7 +404,7 @@
     module: Economic and fiscal
     indicator: Economic viability
     disclosure format: Disclose the expected lifetime of the asset. This tends to be part of the design report.
-    mapping: 'Project Level: Convert to days and map to `assetLifetime.durationInDays`.'
+    mapping: 'Project Level: Convert to days and map to [`assetLifetime.durationInDays`](project-schema.json,/definitions/Period,durationInDays).'
     example: |-
         {
           "assetLifetime": {
@@ -1259,7 +1259,11 @@
     title: Project approval period
     module: Climate finance
     indicator: Accessibility
-    disclosure format: "Disclose dates for project approval:\n\n- submission date \n- approval date"
+    disclosure format: |-
+        Disclose dates for project approval:
+
+        - submission date
+        - approval date
     mapping: |-
         Project level:
 
