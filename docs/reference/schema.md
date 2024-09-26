@@ -18,7 +18,7 @@ The top-level object in OC4IDS is a project.
 
 A project is defined as:
 
-> The development of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus.
+> The development, maintenance, rehabilitation, expansion, replacement and/or decommissioning of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus. Development covers project identification, preparation, implementation and completion.
 
 A project's fields include:
 

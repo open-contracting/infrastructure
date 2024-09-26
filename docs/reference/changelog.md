@@ -22,6 +22,12 @@
   * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
     * 'airManagement'
     * 'waterManagement'
+  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
+    * 'maintenance'
+* Update code definitions:
+  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
+    * 'rehabilitation'
+    * 'expansion'
 
 ### Other
 
