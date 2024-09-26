@@ -24,6 +24,9 @@
     * 'waterManagement'
   * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
     * 'maintenance'
+  * [#494](https://github.com/open-contracting/infrastructure/pull/494) - policyAlignment:
+    * 'annualBudget'
+    * 'infrastructureProjectPipeline'
 * Update code definitions:
   * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
     * 'rehabilitation'
