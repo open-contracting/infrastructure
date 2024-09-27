@@ -145,7 +145,7 @@ def pre_commit():
 
         if "properties" in schema:
             for key, value in schema["properties"].items():
-                if value.get("type") in ["array", ["array"]] and "$ref" in value["items"]:
+                if value.get("type") in {"array", ["array"]} and "$ref" in value["items"]:
                     if value["items"]["$ref"] == f"#/definitions/{defn}":
                         references.append([*parents, key, "0"])
                     elif include_nested:
@@ -250,7 +250,7 @@ def pre_commit():
             # Add schema table
             properties_to_collapse = []
             for key, value in definition["properties"].items():
-                if value.get("type") not in ["object", ["object"]]:
+                if value.get("type") not in {"object", ["object"]}:
                     properties_to_collapse.append(key)
 
             definition["content"].extend(
@@ -337,9 +337,9 @@ def pre_commit():
         for row in rows:
             row["translatable"] = row["type"] == "string" and not row["values"] and not row["codelist"]
 
-            if row["path"] in ("id", "contractingProcesses/id", "contractingProcesses/summary/ocid"):
+            if row["path"] in {"id", "contractingProcesses/id", "contractingProcesses/summary/ocid"}:
                 row["notes"] = "Only the part of the identifier following the prefix can be internationalized."
-            elif row["path"] in ("forecasts/observations/measure", "metrics/observation/measure"):
+            elif row["path"] in {"forecasts/observations/measure", "metrics/observation/measure"}:
                 row["notes"] = "Only string measures can be internationalized."
 
             writer.writerow(row)
@@ -629,7 +629,7 @@ def update(ppp_base_url):
     for basename in ocds_codelists:
         path = schema_dir / "codelists" / basename
 
-        if basename in ("documentType.csv", "locationGazetteers.csv", "partyRole.csv"):
+        if basename in {"documentType.csv", "locationGazetteers.csv", "partyRole.csv"}:
             with open(path) as f:
                 reader = csv.DictReader(f)
                 fieldnames = reader.fieldnames
