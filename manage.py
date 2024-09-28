@@ -390,8 +390,7 @@ def update(ppp_base_url):
         seen = []
 
         for source in sources:
-            reader = csv_reader(f"{ocds_base_url if source == 'OCDS' else ppp_base_url}codelists/{basename}")
-            for row in reader:
+            for row in csv_reader(f"{ocds_base_url if source == 'OCDS' else ppp_base_url}codelists/{basename}"):
                 if row["Code"] not in seen and row["Code"] not in ignore:
                     seen.append(row["Code"])
                     _edit_code(row, oc4ids_codes, source)
@@ -1134,7 +1133,6 @@ def update_sustainability_fields():
         mapping = yaml.safe_load(f)
 
     mapping = {element["id"]: element for element in mapping}
-
     for element in mapping.values():
         if element["example"] != "":
             example = element["example"]
