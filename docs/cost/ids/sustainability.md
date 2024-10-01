@@ -140,7 +140,7 @@ Project Level:
 :columns: 4
 CoST IDS element
 ^^^
-Name the funding organization(s) / sources of funding for preparation, implementation and maintenance. Maintenance covers any preventative or corrective maintenance and the day-to-day running of the assets. This stage is also called operation.
+Name the funding organization(s) or funding source(s) for the preparation, implementation and maintenance stages, and disclose the budget line(s) to which the project belongs. The maintenance stage covers any preventative or corrective maintenance and the day-to-day running of the assets; this stage is also called operation.
 ````
 
 ````{grid-item-card}
@@ -153,7 +153,7 @@ Project level:
 
 2. For each stage:
 
-   a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.
+   a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage and whose [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) is the identifier of the budget line. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) to the budget line identifier and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.
 
    b. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
 
@@ -167,7 +167,7 @@ Project level:
         "description": "Breakdown by stage",
         "budgetBreakdown": [
           {
-            "id": "1",
+            "id": "2024/ED01/ED01-FAC/EQ01",
             "description": "Preparation",
             "sourceParty": {
               "id": "1",
@@ -175,7 +175,7 @@ Project level:
             }
           },
           {
-            "id": "2",
+            "id": "2024/ED01/ED01-FAC/SE01",
             "description": "Implementation",
             "sourceParty": {
               "id": "1",
@@ -3055,7 +3055,9 @@ Disclose documentation that evidences that the project is part of, or aligned wi
 - Paris Agreement
 - Nationally Determined Contributions (NDCs)
 - National Adaptation Plans
-- Medium-term fiscal frameworks/targets
+- Medium-term fiscal/budget frameworks
+- Annual budgets
+- Pipeline of infrastructure projects
 ````
 
 ````{grid-item-card}
