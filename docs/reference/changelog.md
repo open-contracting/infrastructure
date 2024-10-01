@@ -16,17 +16,17 @@
 * [#476](https://github.com/open-contracting/infrastructure/pull/476) - Add environmentalMeasure codelist.
 * [#476](https://github.com/open-contracting/infrastructure/pull/476) - Rename climateMeasures codelist to climateMeasure.
 * Add codes:
-  * documentType:
-    * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
-    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
   * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
     * 'airManagement'
     * 'waterManagement'
-  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
-    * 'maintenance'
+  * documentType:
+    * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
+    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
   * [#494](https://github.com/open-contracting/infrastructure/pull/494) - policyAlignment:
     * 'annualBudget'
     * 'infrastructureProjectPipeline'
+  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
+    * 'maintenance'
 * Update code definitions:
   * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
     * 'rehabilitation'
