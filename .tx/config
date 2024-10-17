@@ -2,140 +2,281 @@
 host = https://www.transifex.com
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:404]
-file_filter = docs/locale/<lang>/LC_MESSAGES/404.po
-source_file = build/locale/404.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/404.po
+source_file            = build/locale/404.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = 404
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:about]
-file_filter = docs/locale/<lang>/LC_MESSAGES/about.po
-source_file = build/locale/about.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/about.po
+source_file            = build/locale/about.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = about
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:cost--common]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/common.po
+source_file            = build/locale/cost/common.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--common
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:cost--ids--core]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/ids/core.po
+source_file            = build/locale/cost/ids/core.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--ids--core
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:cost--ids--index]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/ids/index.po
+source_file            = build/locale/cost/ids/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--ids--index
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:cost--ids--sustainability]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/ids/sustainability.po
+source_file            = build/locale/cost/ids/sustainability.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--ids--sustainability
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:cost--index]
-file_filter = docs/locale/<lang>/LC_MESSAGES/cost/index.po
-source_file = build/locale/cost/index.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/index.po
+source_file            = build/locale/cost/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--index
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:cost--ocds]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/cost/ocds.po
+source_file            = build/locale/cost/ocds.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = cost--ocds
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--data_user_guide]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/data_user_guide.po
-source_file = build/locale/guidance/data_user_guide.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/data_user_guide.po
+source_file            = build/locale/guidance/data_user_guide.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--data_user_guide
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--evaluating]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/evaluating.po
-source_file = build/locale/guidance/evaluating.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/evaluating.po
+source_file            = build/locale/guidance/evaluating.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--evaluating
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--example]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/example.po
-source_file = build/locale/guidance/example.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/example.po
+source_file            = build/locale/guidance/example.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--example
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--identifiers]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/identifiers.po
-source_file = build/locale/guidance/identifiers.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/identifiers.po
+source_file            = build/locale/guidance/identifiers.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--identifiers
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--implementation]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/implementation.po
+source_file            = build/locale/guidance/implementation.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--implementation
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--index]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/index.po
-source_file = build/locale/guidance/index.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/index.po
+source_file            = build/locale/guidance/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--index
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--language]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/language.po
+source_file            = build/locale/guidance/language.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--language
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--publishing]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/publishing.po
-source_file = build/locale/guidance/publishing.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/publishing.po
+source_file            = build/locale/guidance/publishing.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--publishing
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:guidance--using]
-file_filter = docs/locale/<lang>/LC_MESSAGES/guidance/using.po
-source_file = build/locale/guidance/using.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/guidance/using.po
+source_file            = build/locale/guidance/using.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = guidance--using
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:index]
-file_filter = docs/locale/<lang>/LC_MESSAGES/index.po
-source_file = build/locale/index.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/index.po
+source_file            = build/locale/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = index
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:infrastructure-codelists]
-file_filter = docs/locale/<lang>/LC_MESSAGES/infrastructure-codelists.po
-source_file = build/locale/infrastructure-codelists.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/infrastructure-codelists.po
+source_file            = build/locale/infrastructure-codelists.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = infrastructure-codelists
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:infrastructure-mappings]
-file_filter = docs/locale/<lang>/LC_MESSAGES/infrastructure-mappings.po
-source_file = build/locale/infrastructure-mappings.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/infrastructure-mappings.po
+source_file            = build/locale/infrastructure-mappings.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = infrastructure-mappings
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:infrastructure-schema]
-file_filter = docs/locale/<lang>/LC_MESSAGES/infrastructure-schema.po
-source_file = build/locale/infrastructure-schema.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/infrastructure-schema.po
+source_file            = build/locale/infrastructure-schema.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = infrastructure-schema
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:projects--index]
-file_filter = docs/locale/<lang>/LC_MESSAGES/projects/index.po
-source_file = build/locale/projects/index.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/projects/index.po
+source_file            = build/locale/projects/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = projects--index
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--browser]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/browser.po
-source_file = build/locale/reference/browser.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/browser.po
+source_file            = build/locale/reference/browser.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--browser
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--changelog]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/changelog.po
-source_file = build/locale/reference/changelog.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/changelog.po
+source_file            = build/locale/reference/changelog.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--changelog
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--codelists]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/codelists.po
-source_file = build/locale/reference/codelists.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/codelists.po
+source_file            = build/locale/reference/codelists.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--codelists
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--index]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/index.po
-source_file = build/locale/reference/index.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/index.po
+source_file            = build/locale/reference/index.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--index
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--package]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/package.po
-source_file = build/locale/reference/package.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/package.po
+source_file            = build/locale/reference/package.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--package
+replace_edited_strings = false
+keep_translations      = false
+
+[o:open-contracting-partnership-1:p:oc4ids-09:r:reference--prefixes]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/prefixes.po
+source_file            = build/locale/reference/prefixes.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--prefixes
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:reference--schema]
-file_filter = docs/locale/<lang>/LC_MESSAGES/reference/schema.po
-source_file = build/locale/reference/schema.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/reference/schema.po
+source_file            = build/locale/reference/schema.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = reference--schema
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:sphinx]
-file_filter = docs/locale/<lang>/LC_MESSAGES/sphinx.po
-source_file = build/locale/sphinx.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/sphinx.po
+source_file            = build/locale/sphinx.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = sphinx
+replace_edited_strings = false
+keep_translations      = false
 
 [o:open-contracting-partnership-1:p:oc4ids-09:r:support]
-file_filter = docs/locale/<lang>/LC_MESSAGES/support.po
-source_file = build/locale/support.pot
-source_lang = en
-type        = PO
+file_filter            = docs/locale/<lang>/LC_MESSAGES/support.po
+source_file            = build/locale/support.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = support
+replace_edited_strings = false
+keep_translations      = false
 
