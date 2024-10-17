@@ -6,21 +6,22 @@
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2020-05-13 23:48+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/data_user_guide.md:1
 msgid "Data user guide"
@@ -69,11 +70,11 @@ msgstr "cómo se puede contactar con el publicador"
 
 #: ../../docs/guidance/data_user_guide.md:13
 msgid ""
-"Publishers should link to this data user guide from the project package's "
+"Publishers ought to link to this data user guide from the project package's "
 "`publicationPolicy` field."
 msgstr ""
-"Los publicadores deberían incluir un enlace a esta guía de usuarios de datos"
-" en el campo `publicationPolicy` del paquete de proyectos."
+"Los editores deben vincular esta guía de usuario de datos del campo "
+"`publicationPolicy` del paquete del proyecto."
 
 #: ../../docs/guidance/data_user_guide.md:15
 msgid ""

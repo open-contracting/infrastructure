@@ -1,0 +1,328 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Francis C. Bennaton, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/guidance/implementation.md:1
+msgid "Implementation models"
+msgstr "Modelos de implementación"
+
+#: ../../docs/guidance/implementation.md:3
+msgid ""
+"OC4IDS implementation involves combining data on infrastructure projects and"
+" contracting processes. This guidance describes some examples of "
+"implementation models used by OC4IDS publishers. It is not an exhaustive "
+"list, but it can be used to inform your implementation."
+msgstr ""
+"La implementación de OC4IDS implica combinar datos sobre proyectos de "
+"infraestructura y procesos de contratación. Esta guía describe algunos "
+"ejemplos de modelos de implementación utilizados por los editores de OC4IDS."
+" No es una lista exhaustiva, pero puede utilizarse para informar su "
+"implementación."
+
+#: ../../docs/guidance/implementation.md:5
+msgid ""
+"Sources of data can include infrastructure transparency portals, procurement"
+" systems and project administration systems. OC4IDS implementation can also "
+"involve using contracting data published in OCDS format."
+msgstr ""
+"Las fuentes de datos pueden incluir portales de transparencia de "
+"infraestructura, sistemas de adquisiciones y sistemas de administración de "
+"proyectos. La implementación de OC4IDS también puede implicar el uso de "
+"datos de contratación publicados en formato OCDS."
+
+#: ../../docs/guidance/implementation.md:7
+msgid ""
+"In this guidance we discuss options for the collection of data, the flow of "
+"data between systems and the publication of data. For more information about"
+" the design of the system architecture to support this process, see the "
+"[System Architectures](https://standard.open-"
+"contracting.org/latest/en/guidance/build/system_architectures/) guidance in "
+"the OCDS documentation."
+msgstr ""
+"En esta guía analizamos opciones para la recopilación de datos, el flujo de "
+"datos entre sistemas y la publicación de datos. Para obtener más información"
+" sobre el diseño de la arquitectura del sistema para respaldar este proceso,"
+" consulte la guía [Arquitecturas del sistema](https://standard.open-"
+"contracting.org/latest/en/guidance/build/system_architectures/) en la "
+"documentación de OCDS. "
+
+#: ../../docs/guidance/implementation.md:9
+#: ../../docs/guidance/implementation.md:11
+msgid "Standalone infrastructure transparency portal"
+msgstr "Portal independiente de transparencia de infraestructura"
+
+#: ../../docs/guidance/implementation.md:11
+msgid ""
+"![Standalone infrastructure transparency "
+"portal](../_static/images/implementation_scenario_1.png)"
+msgstr ""
+"![Portal de transparencia de infraestructura "
+"independiente](../_static/images/implementation_scenario_1.png)"
+
+#: ../../docs/guidance/implementation.md:13
+msgid ""
+"In this model, procuring entities enter project and contract level data "
+"directly into an infrastructure transparency portal. The portal publishes "
+"project data and summary contracting process data in OC4IDS format. CoST "
+"Honduras uses this model as does CoST West Lombok."
+msgstr ""
+"En este modelo, las entidades contratantes ingresan datos a nivel de "
+"proyecto y contrato directamente en un portal de transparencia de "
+"infraestructura. El portal publica datos del proyecto y datos resumidos del "
+"proceso de contratación en formato OC4IDS. CoST Honduras utiliza este modelo"
+" al igual que CoST West Lombok."
+
+#: ../../docs/guidance/implementation.md:15
+msgid ""
+"The main benefit of this approach is that it is relatively simple because it"
+" does not involve integrating data from different systems. The downside of "
+"this approach is that it can increase the data entry burden on procuring "
+"entities who might also need to enter contracting process data into a "
+"separate procurement system."
+msgstr ""
+"El principal beneficio de este enfoque es que es relativamente simple porque"
+" no implica la integración de datos de diferentes sistemas. La desventaja de"
+" este enfoque es que puede aumentar la carga de ingreso de datos para las "
+"entidades contratantes que también podrían necesitar ingresar datos del "
+"proceso de contratación en un sistema de adquisiciones separado."
+
+#: ../../docs/guidance/implementation.md:17
+#: ../../docs/guidance/implementation.md:19
+msgid "Integrated infrastructure transparency portal and procurement system"
+msgstr ""
+"Portal integrado de transparencia de infraestructura y sistema de "
+"adquisiciones"
+
+#: ../../docs/guidance/implementation.md:19
+msgid ""
+"![Integrated infrastructure transparency portal and procurement "
+"system](../_static/images/implementation_scenario_4.png)"
+msgstr ""
+"![Portal integrado de transparencia de infraestructura y sistema de "
+"adquisiciones](../_static/images/implementation_scenario_4.png)"
+
+#: ../../docs/guidance/implementation.md:21
+msgid ""
+"In this model, procuring entities enter project data directly into an "
+"infrastructure transparency portal, whilst contracting process data is "
+"imported from an existing procurement system. The portal then publishes "
+"project data and summary contracting process data in OC4IDS format."
+msgstr ""
+"En este modelo, las entidades contratantes introducen los datos del proyecto"
+" directamente en un portal de transparencia de infraestructuras, mientras "
+"que los datos del proceso de contratación se importan de un sistema de "
+"contratación existente. A continuación, el portal publica los datos del "
+"proyecto y los datos resumidos del proceso de contratación en formato "
+"OC4IDS."
+
+#: ../../docs/guidance/implementation.md:23
+msgid ""
+"For each project, the infrastructure transparency portal needs to join up "
+"the project data entered by the procuring entity with contracting data "
+"imported from the procurement system. If the contracting data includes "
+"[project identifiers](https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/identifiers/#local-"
+"project-identifiers-in-contracting-data), this process can be automated. "
+"Otherwise, procuring entities need to manually associate contracts with "
+"projects."
+msgstr ""
+"Para cada proyecto, el portal de transparencia de infraestructura necesita "
+"unir los datos del proyecto introducidos por la entidad contratante con los "
+"datos de contratación importados del sistema de contratación. Si los datos "
+"de contratación incluyen [identificadores de "
+"proyecto](https://standard.open-"
+"contracting.org/infrastructure/latest/en/guidance/identifiers/#local-"
+"project-identifiers-in-contracting-data), este proceso puede automatizarse. "
+"De lo contrario, las entidades contratantes tienen que asociar manualmente "
+"los contratos con los proyectos."
+
+#: ../../docs/guidance/implementation.md:25
+msgid ""
+"CoST Ukraine uses this model in its infrastructure transparency portal, "
+"which imports data from [Prozorro](https://prozorro.gov.ua/en), the national"
+" procurement system. Project identifiers are not captured in Prozorro so "
+"procuring entities manually match contracts to projects."
+msgstr ""
+"CoST Ucrania utiliza este modelo en su portal de transparencia de "
+"infraestructura, que importa datos de "
+"[Prozorro](https://prozorro.gov.ua/en), el sistema nacional de "
+"adquisiciones. Los identificadores de proyectos no se capturan en Prozorro, "
+"por lo que las entidades contratantes relacionan manualmente los contratos "
+"con los proyectos."
+
+#: ../../docs/guidance/implementation.md:27
+msgid ""
+"The main benefit of this approach is reducing the data entry burden on "
+"procuring entities, who need only enter contracting data in one system. When"
+" the data from the procurement system includes project identifiers, the "
+"burden is further reduced since the transparency portal can match contracts "
+"to projects without manual intervention. The downsides of this approach are "
+"increased complexity of the transparency portal and the potential need for "
+"development work on the procurement system to enable access to its data."
+msgstr ""
+"El principal beneficio de este enfoque es la reducción de la carga de "
+"introducción de datos para las entidades contratantes, que sólo tienen que "
+"introducir los datos de contratación en un sistema. Cuando los datos del "
+"sistema de contratación incluyen identificadores de proyectos, la carga se "
+"reduce aún más, ya que el portal de transparencia puede cotejar los "
+"contratos con los proyectos sin intervención manual. Los inconvenientes de "
+"este enfoque son la mayor complejidad del portal de transparencia y la "
+"posible necesidad de realizar trabajos de desarrollo en el sistema de "
+"contratación para permitir el acceso a sus datos."
+
+#: ../../docs/guidance/implementation.md:29
+msgid ""
+"When the procurement system publishes OCDS data, there are two further "
+"benefits:"
+msgstr ""
+"Cuando el sistema de adquisiciones publica datos OCDS, hay dos beneficios "
+"adicionales:"
+
+#: ../../docs/guidance/implementation.md:31
+msgid ""
+"OC4IDS Kit’s [convert-from-"
+"ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds)"
+" command can be used to generate OC4IDS data using the OCDS data as an "
+"input, reducing the amount of software development needed."
+msgstr ""
+"El comando [convert-from-"
+"ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds)"
+" del kit OC4IDS puede utilizarse para generar datos OC4IDS utilizando los "
+"datos OCDS como entrada, lo que reduce la cantidad de desarrollo de software"
+" necesario."
+
+#: ../../docs/guidance/implementation.md:32
+msgid ""
+"The published OC4IDS data can be linked to the OCDS data from the "
+"procurement system, allowing users to dig deeper into detailed data about "
+"the contracting processes related to each project."
+msgstr ""
+"Los datos OC4IDS publicados se pueden vincular a los datos OCDS del sistema "
+"de adquisiciones, lo que permite a los usuarios profundizar en datos "
+"detallados sobre los procesos de contratación relacionados con cada "
+"proyecto."
+
+#: ../../docs/guidance/implementation.md:34
+msgid ""
+"![Infrastructure transparency portal with existing source of OCDS "
+"data](../_static/images/implementation_scenario_2.png)"
+msgstr ""
+"![Portal de transparencia de infraestructura con fuente existente de datos "
+"OCDS](../_static/images/implementation_scenario_2.png)"
+
+#: ../../docs/guidance/implementation.md:34
+msgid "Infrastructure transparency portal with existing source of OCDS data"
+msgstr ""
+"Portal de transparencia de infraestructura con fuente existente de datos "
+"OCDS"
+
+#: ../../docs/guidance/implementation.md:36
+msgid ""
+"Nuevo León’s [Infraestructura Abierta "
+"platform](https://smpu.nl.gob.mx/transparencia/) implements a similar model:"
+msgstr ""
+"La [plataforma Infraestructura Abierta] de Nuevo León "
+"(https://smpu.nl.gob.mx/transparencia/) implementa un modelo similar:"
+
+#: ../../docs/guidance/implementation.md:38
+msgid ""
+"Internal systems collect, combine and publish project and contracting data "
+"using OC4IDS and OCDS."
+msgstr ""
+"Los sistemas internos recopilan, combinan y publican datos de proyectos y "
+"contrataciones utilizando OC4IDS y OCDS."
+
+#: ../../docs/guidance/implementation.md:39
+msgid ""
+"The Infraestructura Abierta platform consumes the OC4IDS and OCDS data and "
+"provides an interface for users to explore and analyze the data."
+msgstr ""
+"La plataforma Infraestructura Abierta consume los datos OC4IDS y OCDS y "
+"proporciona una interfaz para que los usuarios exploren y analicen los "
+"datos."
+
+#: ../../docs/guidance/implementation.md:41
+msgid ""
+"For more information on Nuevo León’s implementation, read the [Technical "
+"case "
+"study](https://docs.google.com/document/d/1oIBk9gnpiq5dcZkahiZ2kI1v5kwt9NTlRkdKNm4LhVA/edit#)."
+msgstr ""
+"Para obtener más información sobre la implementación de Nuevo León, lea el "
+"[Estudio de caso "
+"técnico](https://docs.google.com/document/d/1oIBk9gnpiq5dcZkahiZ2kI1v5kwt9NTlRkdKNm4LhVA/edit#)."
+
+#: ../../docs/guidance/implementation.md:43
+#: ../../docs/guidance/implementation.md:45
+msgid "Standalone procurement system"
+msgstr "Sistema de adquisiciones independiente"
+
+#: ../../docs/guidance/implementation.md:45
+msgid ""
+"![Standalone procurement "
+"system](../_static/images/implementation_scenario_3.png)"
+msgstr ""
+"![Sistema de adquisiciones "
+"independiente](../_static/images/implementation_scenario_3.png)"
+
+#: ../../docs/guidance/implementation.md:47
+msgid ""
+"In this model, rather than implementing a separate infrastructure "
+"transparency portal, an existing procurement system is extended to collect "
+"project data. Procuring entities enter project data and contracting data "
+"directly into the procurement system and associate contracts with projects. "
+"The system publishes project data and summary contracting data in OC4IDS "
+"format and detailed contracting data in OCDS format. The OC4IDS data meets "
+"the needs of users with an interest in infrastructure projects and the OCDS "
+"data meets the needs of users with an interest in all types of contracting "
+"process."
+msgstr ""
+"En este modelo, en lugar de implementar un portal de transparencia de "
+"infraestructura independiente, se amplía un sistema de contratación "
+"existente para recopilar los datos de los proyectos. Las entidades "
+"contratantes introducen los datos de los proyectos y los datos de "
+"contratación directamente en el sistema de contratación y asocian los "
+"contratos a los proyectos. El sistema publica los datos de los proyectos y "
+"los datos resumidos de contratación en formato OC4IDS y los datos detallados"
+" de contratación en formato OCDS. Los datos OC4IDS satisfacen las "
+"necesidades de los usuarios interesados en proyectos de infraestructura y "
+"los datos OCDS satisfacen las necesidades de los usuarios interesados en "
+"todo tipo de procesos de contratación."
+
+#: ../../docs/guidance/implementation.md:49
+msgid ""
+"Uganda’s Public Procurement and Disposal of Public Assets Authority uses "
+"this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/)."
+msgstr ""
+"La Autoridad de Contratación Pública y Enajenación de Activos Públicos de "
+"Uganda utiliza este modelo en su [Portal de Contratación Pública] "
+"(https://gpp.ppda.go.ug/)."
+
+#: ../../docs/guidance/implementation.md:51
+msgid ""
+"The main benefit of this model is that it does not require the development "
+"of a separate infrastructure transparency portal. The downside of this model"
+" is that it might involve significant changes to legacy procurement systems."
+msgstr ""
+"El principal beneficio de este modelo es que no requiere el desarrollo de un"
+" portal de transparencia de infraestructura separado. La desventaja de este "
+"modelo es que podría implicar cambios significativos en los sistemas de "
+"adquisiciones heredados."

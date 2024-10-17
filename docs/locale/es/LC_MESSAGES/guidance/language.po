@@ -1,0 +1,3383 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Transifex Bot <>, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-01 15:05+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Transifex Bot <>, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/guidance/language.md:1
+msgid "Publishing data in your own language"
+msgstr ""
+
+#: ../../docs/guidance/language.md:3
+msgid ""
+"You can publish the values of free-text fields – like `title`, `description`"
+" and `parties/name` – in your own language. You ought to set the `language` "
+"field to the language used in these free-text fields. For example:"
+msgstr ""
+
+#: ../../docs/guidance/language.md:14
+msgid ""
+"In order for your data to be interoperable and compatible with OC4IDS tools "
+"and methodologies:"
+msgstr ""
+
+#: ../../docs/guidance/language.md:16
+msgid ""
+"Do not translate codes from codelists. For example, the value of the `type` "
+"field needs to be a code from the [ProjectType "
+"codelist](../reference/codelists.md#projecttype), like 'construction'. You "
+"cannot translate 'construction' to 'การก่อสร้าง':"
+msgstr ""
+
+#: ../../docs/guidance/language.md:25
+msgid ""
+"Do not translate field names (object keys). For example, you cannot "
+"translate `title` to `ชื่อ`:"
+msgstr ""
+
+#: ../../docs/guidance/language.md:34
+msgid ""
+"The fields whose values can be translated are listed in the "
+"[internationalization lookup table](#internationalization-lookup-table)."
+msgstr ""
+
+#: ../../docs/guidance/language.md:36
+msgid "Translating headers in spreadsheets/CSVs"
+msgstr ""
+
+#: ../../docs/guidance/language.md:38
+msgid ""
+"In order to ease access for non-English speakers, instead of using the field"
+" *names* as column headers (which are always in English), you can use the "
+"field *titles*."
+msgstr ""
+
+#: ../../docs/guidance/language.md:40
+msgid ""
+"The titles are currently available in English and Spanish. If you would like"
+" to translate the titles to your own language, please [contact the OC4IDS "
+"Helpdesk](mailto:data@open-contracting.org)."
+msgstr ""
+
+#: ../../docs/guidance/language.md:42
+msgid ""
+"For example, this CSV excerpt uses field titles from the Spanish translation"
+" of OC4IDS:"
+msgstr ""
+
+#: ../../docs/guidance/language.md:0
+msgid "Identificador o Referencia"
+msgstr ""
+
+#: ../../docs/guidance/language.md:0
+msgid "Título del Proyecto"
+msgstr ""
+
+#: ../../docs/guidance/language.md:0
+msgid "1"
+msgstr ""
+
+#: ../../docs/guidance/language.md:0
+msgid "proyecto de ejemplo"
+msgstr ""
+
+#: ../../docs/guidance/language.md:48
+msgid ""
+"You can use [Flatten Tool](https://flatten-tool.readthedocs.io/en/latest/) "
+"to generate files with translated field titles. For example, this command "
+"converts the example OC4IDS JSON file to XLSX format, using field titles "
+"from the Spanish schema:"
+msgstr ""
+
+#: ../../docs/guidance/language.md:54
+msgid "Publishing in multiple languages"
+msgstr ""
+
+#: ../../docs/guidance/language.md:56
+msgid ""
+"To publish data in multiple languages, follow the above guidance and publish"
+" a separate [project package](../../reference/package.md) for each language."
+" You need to ensure that the values of `id` fields are consistent across "
+"packages, so that users can find the translations of objects."
+msgstr ""
+
+#: ../../docs/guidance/language.md:58
+msgid "Internationalization lookup table"
+msgstr ""
+
+#: ../../docs/guidance/language.md:60
+msgid ""
+"Use the following table to check whether a field can be published in your "
+"own language. You can download the table as a [CSV "
+"spreadsheet](../_static/i18n.csv)."
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "path"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "translatable"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Identifier or Reference"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "True"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"Only the part of the identifier following the prefix can be "
+"internationalized."
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "updated"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Last updated"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "False"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "language"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Language"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Identifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Simple identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identifiers/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identifiers/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "publicAuthority"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Public authority"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Organization reference"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "publicAuthority/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Organization name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "publicAuthority/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Organization ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Total project value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/amount/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/amount/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/requestDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Request date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/approvalDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Approval date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Budget breakdowns"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Budget breakdown group"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Budget breakdown"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Detailed budget breakdown"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/amount/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/amount/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Linked budget information"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Budget period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Start date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "End date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Maximum extent"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Duration (days)"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Source organization"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/budgetBreakdowns/budgetBreakdown/approvalDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Finance"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Financing arrangement"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/financingParty"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Financing organization"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/financingParty/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/financingParty/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/financingPartyType"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Financing organization type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Funding source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/assetClass"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Asset class"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/repaymentPriority"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Repayment priority"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/concessional"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Concessional"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/resultsBased"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Results based"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Finance period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Payment period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/paymentFrequency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Payment frequency (days)"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/interestRate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Interest rate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/interestRate/base"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Base"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/interestRate/margin"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Margin"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/interestRate/fixed"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Fixed rate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/interestRate/notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/exchangeRateGuarantee"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Exchange rate guarantees"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/stepInRights"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Step in rights"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "budget/finance/relatedLots"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related lot(s)"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project locations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Delivery Location"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/geometry"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Geometry"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/geometry/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/geometry/coordinates"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Coordinates"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/gazetteer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Gazetteer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/gazetteer/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Gazetteer scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/gazetteer/identifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "URI"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Street address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Postal code"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "locations/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Country name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "status"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Status"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "sector"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project sector"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "purpose"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Project purpose"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "additionalClassifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Additional classifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Classification"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "additionalClassifications/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "additionalClassifications/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "additionalClassifications/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "additionalClassifications/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Parties"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Organization"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Common name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Entity ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Primary identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/identifier/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/identifier/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/identifier/legalName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Legal Name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/identifier/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/additionalIdentifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Additional identifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/additionalIdentifiers/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/additionalIdentifiers/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/additionalIdentifiers/legalName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/additionalIdentifiers/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Contact point"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint/email"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Email"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint/telephone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Telephone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint/faxNumber"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Fax number"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/contactPoint/url"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "URL"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/roles"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Party roles"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Beneficial owners"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Person"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/identifier/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/identifier/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/identifier/legalName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/identifier/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/nationalities"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Nationalities"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/email"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/faxNumber"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/telephone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/beneficialOwners/jobTitle"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Job title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/classifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Organization classifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/classifications/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/classifications/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/classifications/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/classifications/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "People"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/identifier/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/identifier/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/identifier/legalName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/identifier/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/nationalities"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/email"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/faxNumber"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/telephone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "parties/people/jobTitle"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "assetLifetime"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Asset lifetime"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "assetLifetime/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "assetLifetime/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "assetLifetime/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "assetLifetime/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identificationPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Identification period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identificationPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identificationPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identificationPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "identificationPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "preparationPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Preparation period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "preparationPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "preparationPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "preparationPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "preparationPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "implementationPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Implementation period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "implementationPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "implementationPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "implementationPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "implementationPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completionPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Completion period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completionPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completionPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completionPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completionPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "maintenancePeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Maintenance period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "maintenancePeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "maintenancePeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "maintenancePeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "maintenancePeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "decommissioningPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Decommissioning period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "decommissioningPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "decommissioningPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "decommissioningPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "decommissioningPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Forecasts"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Metric"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Observations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Observation"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Only string measures can be internationalized."
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/unit"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Unit"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/unit/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Unit name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/unit/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/unit/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/unit/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/dimensions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Dimensions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "forecasts/observations/notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Metrics"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/unit"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/unit/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/unit/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/unit/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/unit/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/dimensions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "metrics/observations/notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestones"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/code"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone code"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/dueDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Due date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/dateMet"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Date met"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/dateModified"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Date modified"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/status"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "milestones/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Completion"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/endDateDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "End date details"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalValue"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Final value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalValue/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalValue/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalValueDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Final value details"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalScope"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Final scope"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "completion/finalScopeDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Final scope details"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost measurements"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost measurement"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Local identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/lifeCycleCosting"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Life-cycle costing"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/lifeCycleCosting/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Life-cycle cost"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/lifeCycleCosting/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/lifeCycleCosting/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost groups"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost group"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/category"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Category"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Costs"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Local Identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/classification"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/classification/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/classification/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/classification/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/classification/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "costMeasurements/costGroups/costs/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Transactions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Transaction information"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Data source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Payer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payer/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payer/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payee"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Payee"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payee/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/payee/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Linked spending information"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/relatedImplementationMilestone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related implementation milestone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone Reference"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/relatedImplementationMilestone/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "transactions/relatedImplementationMilestone/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Milestone title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Documents"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Document"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/documentType"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Document type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/url"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/datePublished"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Date published"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/dateModified"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/format"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Format"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/language"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/pageStart"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Page start"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/pageEnd"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Page end"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/accessDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Access details"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "documents/author"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Author"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Contracting processes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Contracting process"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Summary"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/ocid"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Open Contracting Identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/externalReference"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "External reference"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/nature"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Nature"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/status"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Tender"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/procurementMethod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Procurement method"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/procurementMethodDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Procurement method details"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/datePublished"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/costEstimate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Cost estimate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/costEstimate/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/costEstimate/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/numberOfTenderers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Number of tenderers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/tenderers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Tenderers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/tenderers/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/tenderers/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/procuringEntity"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Procuring entity"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/procuringEntity/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/procuringEntity/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/administrativeEntity"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Administrative entity"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/administrativeEntity/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/administrativeEntity/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/sustainability"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Sustainability"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/tender/sustainability/strategies"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Strategies"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/suppliers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Suppliers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/suppliers/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/suppliers/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractValue"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Contract value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractValue/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractValue/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Contract period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/contractPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finalValue"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finalValue/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finalValue/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/documentType"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/url"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/datePublished"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/dateModified"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/format"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/language"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/pageStart"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/pageEnd"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/accessDetails"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/documents/author"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Modifications"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Modification"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/rationale"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Rationale"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/releaseID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Release ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractValue"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Old contract value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractValue/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractValue/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractValue"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "New contract value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractValue/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractValue/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Old contract period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/oldContractPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/modifications/oldContractPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/modifications/oldContractPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "New contract period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/modifications/newContractPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/modifications/newContractPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/modifications/newContractPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payer/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payer/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payee"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payee/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/payee/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/transactions/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/code"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/dueDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/dateMet"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/dateModified"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/status"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/milestones/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/value"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/value/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/value/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/financingParty"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/financingParty/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/financingParty/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/financingPartyType"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/source"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/assetClass"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/repaymentPriority"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/concessional"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/resultsBased"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/period"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/period/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/period/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/period/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/period/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentPeriod"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentPeriod/startDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentPeriod/endDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentPeriod/maxExtentDate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentPeriod/durationInDays"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/paymentFrequency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/interestRate"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/interestRate/base"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/interestRate/margin"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/interestRate/fixed"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/interestRate/notes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/exchangeRateGuarantee"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/stepInRights"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/finance/relatedLots"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Social"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborBudget"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Labor budget"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborBudget/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborBudget/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborObligations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Labor obligations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborObligations/obligations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Obligations"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/summary/social/laborObligations/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/releases"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Linked releases"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Release"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/releases/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/releases/tag"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Release tag"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/releases/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "contractingProcesses/releases/url"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related projects"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related project"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Relationship ID"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/identifier"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/relationship"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Relationship"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related project title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "relatedProjects/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Related project URI"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "policyAlignment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Policy alignment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "policyAlignment/policies"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Policies"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "policyAlignment/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Benefits"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Benefit"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/title"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Beneficiaries"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Beneficiary"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Location"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/geometry"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/geometry/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/geometry/coordinates"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/gazetteer"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/gazetteer/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/gazetteer/identifiers"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/location/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "benefits/beneficiaries/numberOfPeople"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Number of people"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Public consultation meetings"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Meeting"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/numberOfParticipants"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Number of participants"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Public office"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/person"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/person/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/organization"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/organization/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/organization/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/consultationMeetings/publicOffice/jobTitle"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/landCompensationBudget"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Land compensation budget"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/landCompensationBudget/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/landCompensationBudget/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/inIndigenousLand"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "In indigenous land"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/healthAndSafety"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Health and safety"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/healthAndSafety/materialTests"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Material tests"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/healthAndSafety/materialTests/tests"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Tests"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "social/healthAndSafety/materialTests/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Environment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/goals"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Environmental goals"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/climateOversightTypes"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Climate oversight types"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/hasImpactAssessment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Has impact assessment"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/impactCategories"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Impact categories"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/impactCategories/scheme"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/impactCategories/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/impactCategories/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/impactCategories/uri"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/climateMeasures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Climate measures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Climate measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/climateMeasures/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/climateMeasures/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/conservationMeasures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Conservation measures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Conservation measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/conservationMeasures/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/conservationMeasures/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/environmentalMeasures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Environmental measures"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Environmental measure"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/environmentalMeasures/type"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/environmentalMeasures/description"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/abatementCost"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Abatement cost"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/abatementCost/amount"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/abatementCost/currency"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "environment/inProtectedArea"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "In protected area"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "Lobbying meetings"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/date"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address/streetAddress"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address/locality"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address/region"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address/postalCode"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/address/countryName"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/numberOfParticipants"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/person"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/person/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/organization"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/organization/name"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/organization/id"
+msgstr ""
+
+#: ../../docs/guidance/language.md:65
+msgid "lobbyingMeetings/publicOffice/jobTitle"
+msgstr ""

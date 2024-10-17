@@ -1,0 +1,1894 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Francis C. Bennaton, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/cost/ocds.md:1
+msgid "OCDS to OC4IDS mapping"
+msgstr "Mapeo de OCDS a OC4IDS"
+
+#: ../../docs/cost/ocds.md:9
+msgid ""
+"This page provides guidance and documents a mapping from OCDS fields and "
+"codes to OC4IDS fields and codes. The organization of the mapping tables "
+"reflects the structure of the CoST IDS."
+msgstr ""
+"Esta página proporciona orientación y documenta un mapeo de campos y códigos"
+" OCDS a campos y códigos OC4IDS. La organización de las tablas de mapeo "
+"refleja la estructura del IDS de CoST."
+
+#: ../../docs/cost/ocds.md:11
+msgid ""
+"The CoST IDS sets out a number of disclosure requirements under the heading "
+"of \"information for disclosure upon request,\" also known as \"reactive "
+"disclosure.\" You can disclose these elements proactively using OC4IDS. "
+"Separate tables are provided for project-level and process-level reactive "
+"disclosures."
+msgstr ""
+"El IDS de CoST establece una serie de requisitos de divulgación bajo el "
+"título de \"información para divulgación previa solicitud\", también "
+"conocida como \"divulgación reactiva\". Estos elementos se pueden divulgar "
+"de forma proactiva utilizando OC4IDS. Se proporcionan tablas individuales "
+"para divulgaciones reactivas a nivel de proyecto y a nivel de proceso."
+
+#: ../../docs/cost/ocds.md:13
+msgid "Guidance"
+msgstr "Guía"
+
+#: ../../docs/cost/ocds.md:15
+msgid "Command-line tool and reference implementation"
+msgstr "Herramienta de línea de comandos e implementación de referencia"
+
+#: ../../docs/cost/ocds.md:17
+msgid ""
+"OC4IDS Kit's [convert-from-"
+"ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds)"
+" command is a command-line tool and reference implementation for converting "
+"OCDS data to OC4IDS format."
+msgstr ""
+"El comando [convert-from-"
+"ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds)"
+" del kit OC4IDS es una herramienta de línea de comandos y una implementación"
+" de referencia para convertir datos OCDS a formato OC4IDS."
+
+#: ../../docs/cost/ocds.md:19
+msgid "`convert-from-ocds` covers most mappings in the following categories:"
+msgstr ""
+"`convert-from-ocds` cubre la mayoría de los mapeos en las siguientes "
+"categorías:"
+
+#: ../../docs/cost/ocds.md:21
+msgid "project-level identification"
+msgstr "identificación a nivel de proyecto"
+
+#: ../../docs/cost/ocds.md:22
+msgid "project-level preparation"
+msgstr "preparación a nivel de proyecto"
+
+#: ../../docs/cost/ocds.md:23
+msgid "process-level procurement"
+msgstr "adquisiciones a nivel de proceso"
+
+#: ../../docs/cost/ocds.md:25
+msgid ""
+"However, `convert-from-ocds` does not cover all mappings, nor does it "
+"perform currency conversions. Mappings that `convert-from-ocds` does not "
+"cover are shown in *italics*."
+msgstr ""
+"Sin embargo,  `convert-from-ocds`  no cubre todos los mapeos ni realiza "
+"conversiones de moneda. Los mapeos que `convert-from-ocds` no cubre se "
+"muestran en *cursiva*."
+
+#: ../../docs/cost/ocds.md:27
+msgid "Mapping codelists"
+msgstr "Listas de códigos de mapeo"
+
+#: ../../docs/cost/ocds.md:29
+msgid ""
+"Mappings that depend on the specific classification or codelist used in the "
+"OCDS data are not documented in detail, as they can differ by publisher. For"
+" example, mapping to the OC4IDS projectSector codelist."
+msgstr ""
+"Las asignaciones que dependen de la clasificación o lista de códigos "
+"específica utilizada en los datos OCDS no están documentadas en detalle, ya "
+"que pueden diferir según el editor. Por ejemplo, mapeando a la lista de "
+"códigos del sector del proyecto OC4IDS."
+
+#: ../../docs/cost/ocds.md:31
+msgid "Alternative mappings"
+msgstr "Mapeos alternativos"
+
+#: ../../docs/cost/ocds.md:33
+msgid ""
+"Some mappings offer alternatives in case the primary mapping isn't "
+"available. For example, for OCDS data in which `planning.project.title` "
+"isn't available, you can set the project `title` based on the "
+"`tender.title`."
+msgstr ""
+"Algunos mapeos ofrecen alternativas en caso de que el mapeo principal no "
+"esté disponible. Por ejemplo, para los datos OCDS en los que "
+"`planning.project.title`no está disponible, puede configurar el `title`  del"
+" proyecto basándose en \"tender.title\"."
+
+#: ../../docs/cost/ocds.md:35
+msgid ""
+"In order to provide analysts with additional context, some alternative "
+"mappings copy additional fields which don't appear in OC4IDS schema. You "
+"ought to remove these fields if you plan to publish your OC4IDS data."
+msgstr ""
+"Para proporcionar a los analistas contexto adicional, algunas asignaciones "
+"alternativas copian campos adicionales que no aparecen en el esquema OC4IDS."
+" Debe eliminar estos campos si planea publicar sus datos de OC4IDS."
+
+#: ../../docs/cost/ocds.md:37
+msgid "OCDS extensions"
+msgstr "Extensiones OCDS"
+
+#: ../../docs/cost/ocds.md:39
+msgid ""
+"Some mappings use fields from [OCDS extensions](https://standard.open-"
+"contracting.org/latest/en/guidance/map/extensions/#extensions). In these "
+"cases, the names of extensions are noted in parentheses; where possible, "
+"alternative mappings are provided that use only fields from the core OCDS "
+"schema."
+msgstr ""
+"Algunos mapeos utilizan campos de [extensiones OCDS](https://standard.open-"
+"contracting.org/latest/en/guidance/map/extensions/#extensions). En estos "
+"casos, los nombres de las extensiones se indican entre paréntesis; cuando "
+"sea posible, se proporcionan mapeos alternativos que utilizan solo campos "
+"del esquema central OCDS."
+
+#: ../../docs/cost/ocds.md:41
+msgid "Handling conflicts and duplicates"
+msgstr "Manejo de conflictos y duplicados"
+
+#: ../../docs/cost/ocds.md:43
+msgid "Implementations of the mapping ought to give consideration to:"
+msgstr "Las implementaciones del mapeo deben considerar:"
+
+#: ../../docs/cost/ocds.md:45
+msgid ""
+"OCDS data that contains fields that differ between contracting processes but"
+" map to a single field in OC4IDS: for example, where "
+"`planning.project.title` differs for two contracting processes that relate "
+"to the same project, but OC4IDS has a single `title` field at the project "
+"level."
+msgstr ""
+"Datos OCDS que contienen campos que difieren entre los procesos de "
+"contratación pero que se mapean a un solo campo en OC4IDS: por ejemplo, "
+"donde `planning.project.title` difiere para dos procesos de contratación que"
+" se relacionan con el mismo proyecto, pero OC4IDS tiene un `title`  de campo"
+" único a nivel de proyecto."
+
+#: ../../docs/cost/ocds.md:46
+msgid ""
+"OCDS data that contains multiple `Organization` objects with the same "
+"`.role` that map to a single field in OC4IDS: for example, where a "
+"contracting process has two `Organization`s with the 'procuringEntity' role,"
+" but OC4IDS has a single `.summary.tender.procuringEntity` field at the "
+"contract level."
+msgstr ""
+"Datos OCDS que contienen múltiples objetos `Organization` con el mismo "
+"`.role` que se mapean a un solo campo en OC4IDS: por ejemplo, cuando un "
+"proceso de contratación tiene dos  `Organization`s con el rol "
+"'procuringEntity', pero OC4IDS tiene un campo único "
+"`.summary.tender.procuringEntity` a nivel de contrato."
+
+#: ../../docs/cost/ocds.md:47
+msgid ""
+"Checking for duplicates when copying objects from OCDS. For example, "
+"checking whether an `Organization` object has already been copied before "
+"copying it again."
+msgstr ""
+"Comprobación de duplicados al copiar objetos de OCDS. Por ejemplo, comprobar"
+" si un objeto `Organization`  ya se ha copiado antes de volver a copiarlo."
+
+#: ../../docs/cost/ocds.md:48
+msgid ""
+"Handling identifier conflicts when copying objects from OCDS. For example, "
+"where two contracting processes both contain a ``Document`` with the same "
+"`.id`."
+msgstr ""
+"Manejo de conflictos de identificadores al copiar objetos de OCDS. Por "
+"ejemplo, cuando dos procesos de contratación contienen un ``Document`` con "
+"el mismo \".id\"."
+
+#: ../../docs/cost/ocds.md:50
+msgid ""
+"Read the `convert-from-ocds` [transformation "
+"notes](https://oc4idskit.readthedocs.io/en/latest/cli.html#transformation-"
+"notes) to learn about how OC4IDS Kit handles the above scenarios."
+msgstr ""
+"Lea las [notas de transformación] `convert-from-ocds` "
+"(https://oc4idskit.readthedocs.io/en/latest/cli.html#transformation-notes) "
+"para conocer cómo el kit OC4IDS maneja los escenarios anteriores."
+
+#: ../../docs/cost/ocds.md:52
+msgid "Handling multiple currencies"
+msgstr "Manejo de múltiples monedas"
+
+#: ../../docs/cost/ocds.md:54
+msgid ""
+"Some mappings involve converting values in OCDS, which can be in different "
+"currencies, to a base currency."
+msgstr ""
+"Algunos mapeos implican convertir valores en OCDS, que pueden estar en "
+"diferentes monedas, a una moneda base."
+
+#: ../../docs/cost/ocds.md:56
+msgid ""
+"Implementations which include multiple currencies ought to give "
+"consideration to [value dating](https://en.wikipedia.org/wiki/Value_date). "
+"One approach is to use the compiled release's `date`."
+msgstr ""
+"Las implementaciones que incluyen múltiples monedas deben considerar la "
+"[fecha de valor](https://en.wikipedia.org/wiki/Value_date). Un enfoque es "
+"utilizar la \"fecha\" de la versión compilada."
+
+#: ../../docs/cost/ocds.md:58
+msgid "Mapping"
+msgstr "Mapeo"
+
+#: ../../docs/cost/ocds.md:60
+msgid "Project level"
+msgstr "Nivel de proyecto"
+
+#: ../../docs/cost/ocds.md:62
+msgid "Identification"
+msgstr "Identificación"
+
+#: ../../docs/cost/ocds.md:67 ../../docs/cost/ocds.md:74
+#: ../../docs/cost/ocds.md:81 ../../docs/cost/ocds.md:90
+#: ../../docs/cost/ocds.md:97 ../../docs/cost/ocds.md:108
+#: ../../docs/cost/ocds.md:121 ../../docs/cost/ocds.md:130
+#: ../../docs/cost/ocds.md:137 ../../docs/cost/ocds.md:144
+msgid "CoST IDS element"
+msgstr "Elemento IDS de CoST"
+
+#: ../../docs/cost/ocds.md:67 ../../docs/cost/ocds.md:74
+#: ../../docs/cost/ocds.md:81 ../../docs/cost/ocds.md:108
+#: ../../docs/cost/ocds.md:121
+msgid "CoST IDS draft definition"
+msgstr "Borrador de definición del IDS de CoST"
+
+#: ../../docs/cost/ocds.md:67 ../../docs/cost/ocds.md:74
+#: ../../docs/cost/ocds.md:81 ../../docs/cost/ocds.md:90
+#: ../../docs/cost/ocds.md:97 ../../docs/cost/ocds.md:108
+#: ../../docs/cost/ocds.md:121 ../../docs/cost/ocds.md:130
+#: ../../docs/cost/ocds.md:137 ../../docs/cost/ocds.md:144
+msgid "Mapping from OCDS"
+msgstr "Mapeo desde OCDS"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Project owner"
+msgstr "Dueño del proyecto"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Name of the sponsoring Government department"
+msgstr "Nombre del departamento gubernamental patrocinador"
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Check the `/parties` array for `Organization` objects with 'buyer' in "
+"`/roles`. Copy each object to the `parties` array in OC4IDS and add "
+"'publicAuthority' to its `.roles`. *If there is more than one public "
+"authority, do not set `publicAuthority.name` and `publicAuthority.id`; "
+"otherwise, set them to the public authority's `.name` and `.id`.*"
+msgstr ""
+"Verificar la matriz `/parties` para ver los objetos `Organization` con "
+"'buyer' en `/roles`. Copiar cada objeto en la matriz `parties` en OC4IDS y "
+"agregue 'publicAuthority' a sus `.roles`. *Si hay más de una autoridad "
+"pública, no configurar `publicAuthority.name` y `publicAuthority.id`; de lo "
+"contrario, configurarlos en `.name` y `.id` de la autoridad pública.*"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Sector"
+msgstr "Sector"
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Develop a list of sectors relevant to country e.g. housing, transport, "
+"energy, water etc."
+msgstr ""
+"Desarrollar una lista de sectores relevantes para el país, p.e. vivienda, "
+"transporte, energía, agua, etc."
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"*Copy the `Classification` object from `/planning/project/sector` (Project "
+"extension) to the `additionalClassifications` array. Additionally, map the "
+"classification used in OCDS to the projectSector codelist and publish one or"
+" more values in `sector`.*"
+msgstr ""
+"*Copie el objeto `Classification` de `/planning/project/sector` (extensión "
+"del proyecto) a la matriz `additionalClassifications`. Además, mapear la "
+"clasificación utilizada en OCDS a la lista de códigos del sector del "
+"proyecto y publicar uno o más valores en `sector`.*"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Subsector"
+msgstr "Subsector"
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Develop a subset for each sector e.g. Transport could be subdivided into "
+"national highway, local road, railway, port, airport etc."
+msgstr ""
+"Desarrollar un subconjunto para cada sector, por ejemplo el transporte "
+"podría subdividirse en carretera nacional, carretera local, ferrocarril, "
+"puerto, aeropuerto, etc."
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Copy each `Classification` object from the "
+"`/planning/project/additionalClassifications` array (Project extension) to "
+"the `additionalClassifications` array."
+msgstr ""
+"Copiar cada objeto `Classification` de la matriz "
+"`/planning/project/additionalClassifications` (extensión del proyecto) a la "
+"matriz `additionalClassifications`."
+
+#: ../../docs/cost/ocds.md:67
+msgid "Project name"
+msgstr "Nombre del proyecto"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Specify the project name"
+msgstr "Especificar el nombre del proyecto"
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Set `title` to the value of `/planning/project/title` (Project extension); "
+"if not available, optionally use `/tender/title`."
+msgstr ""
+"Configurar `title` al valor de `/planning/project/title`  (extensión del "
+"proyecto); si no está disponible, utilizar opcionalmente `/tender/title`."
+
+#: ../../docs/cost/ocds.md:67
+msgid "Project Location"
+msgstr "Ubicación del proyecto"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Briefly specify location of the project"
+msgstr "Especifique brevemente la ubicación del proyecto."
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Copy each `Location` object from `/planning/project/locations` (Project "
+"extension) to the `locations` array; if not available, optionally use "
+"`/tender/items/deliveryLocation` or `/tender/items/deliveryAddress` "
+"(Location extension). Add an `.id` to each `Location` object."
+msgstr ""
+"Copiar cada objeto `Location`  de `/planning/project/locations` (extensión "
+"del proyecto) a la matriz `locations`; si no está disponible, utilizar como "
+"opción `/tender/items/deliveryLocation` o `/tender/items/deliveryAddress` "
+"(extensión de ubicación). Agregar un `.id` a cada objeto `Location`."
+
+#: ../../docs/cost/ocds.md:67
+msgid "Purpose"
+msgstr "Objetivo"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Specify the socio-economic purpose of the project"
+msgstr "Especificar el propósito socioeconómico del proyecto."
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Set `purpose` to the value of `/planning/rationale`; if not available, "
+"optionally check the `/planning/documents` array for `Document` objects  "
+"with `/type` set to 'needsAssessment' and copy each object to the "
+"`documents` array."
+msgstr ""
+"Establecer `purpose`  en el valor de `/planning/rationale`; si no está "
+"disponible,como opción  verificar la matriz `/planning/documents` para ver "
+"los objetos `Document` con `/type` establecido en 'needsAssessment' y copiar"
+" cada objeto en la matriz `documents`."
+
+#: ../../docs/cost/ocds.md:67
+msgid "Project description"
+msgstr "Descripción del Proyecto"
+
+#: ../../docs/cost/ocds.md:67
+msgid "Concise description and details of the project"
+msgstr "Descripción concisa y detalles del proyecto."
+
+#: ../../docs/cost/ocds.md:67
+msgid ""
+"Set `description` to the value of `/planning/project/description` (Project "
+"extension); if not available, optionally use `/tender/description`."
+msgstr ""
+"Configurar `descripción` en el valor de  `/planning/project/description` "
+"(extensión del proyecto); si no está disponible, utilice como opción "
+"`/tender/description`."
+
+#: ../../docs/cost/ocds.md:69
+msgid "Preparation"
+msgstr "Preparación"
+
+#: ../../docs/cost/ocds.md:74
+msgid "Project Scope (main output)"
+msgstr "Alcance del proyecto (producto principal)"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Main outputs from the project that are being taken forward into construction"
+" (type, quantity, unit)"
+msgstr ""
+"Principales resultados del proyecto que se están llevando a cabo en "
+"construcción (tipo, cantidad, unidad)"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/planning/documents` array for `Document` objects with `/type` "
+"set to 'projectScope' and copy each object to the `documents` array; if not "
+"available, optionally copy `Item` objects from `/tender/items` to "
+"`contractingProcesses.summary.tender.items` and copy `Milestone` objects "
+"from `/tender/milestones` to "
+"`contractingProcesses.summary.tender.milestones`."
+msgstr ""
+"Verifique la matriz `/planning/documents` para ver si hay objetos `Document`"
+" con `/type` configurado a 'projectScope' y copiar cada objeto en la matriz "
+"`documents`; si no está disponible, como opción copiar los objetos `Item` de"
+" `/tender/items` a `contractingProcesses.summary.tender.items` y copiar los "
+"objetos `Milestone` de `/tender/milestones` a "
+"`contractingProcesses.summary.tender.milestones` ."
+
+#: ../../docs/cost/ocds.md:74
+msgid "Environmental impact"
+msgstr "Impacto al medioambiente"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Briefly describe the environmental impacts and mitigation measures for this "
+"project e.g. impacts on flora, fauna & woodlands, areas of natural beauty, "
+"carbon emissions etc. and mitigation measures e.g. pollution control, low "
+"carbon solutions, sustainable timber etc."
+msgstr ""
+"Describa brevemente los impactos ambientales y las medidas de mitigación "
+"para este proyecto, por ejemplo, impactos en la flora, fauna y bosques, "
+"áreas de belleza natural, emisiones de carbono, etc. y medidas de "
+"mitigación, p.ej. control de la contaminación, soluciones bajas en carbono, "
+"madera sostenible, etc."
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/planning/documents` array for `Document` objects with `/type` "
+"set to 'environmentalImpact'. Copy each object to the `documents` array."
+msgstr ""
+"Verificar la matriz `/planning/documents` para ver si hay objetos `Document`"
+" con `/type` configurado en 'environmentalImpact'. Copiar cada objeto a la "
+"matriz `documentos`."
+
+#: ../../docs/cost/ocds.md:74
+msgid "Land and settlement impact"
+msgstr "Impacto sobre la tierra y los asentamientos"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"State the amount of land and property that was acquired for the project e.g."
+" 25km2 land, and related impacts e.g. archaeological issues (moved Saxon "
+"burial site), local/indigenous settlements (relocated 5 indigenous villages "
+"of 500 villagers each), impacts on local businesses e.g. (30 business "
+"properties purchased)."
+msgstr ""
+"Indicar la cantidad de terreno y propiedad que se adquirió para el proyecto,"
+" por ejemplo 25 km2 de tierra e impactos relacionados, p. ej. cuestiones "
+"arqueológicas (se trasladó el lugar de entierro sajón), asentamientos "
+"locales/indígenas (se reubicaron 5 aldeas indígenas de 500 aldeanos cada "
+"una), impactos en las empresas locales, por ejemplo (30 propiedades "
+"comerciales compradas)."
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/planning/documents` array for `Document` objects with `/type` "
+"set to 'landAndSettlementImpact'. Copy each object to the `documents`."
+msgstr ""
+"Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Documento` con `/type` configurado en 'landAndSettlementImpact'. Copiar "
+"cada objeto a los `documents`."
+
+#: ../../docs/cost/ocds.md:74
+msgid "Contact details"
+msgstr "Detalles de contacto"
+
+#: ../../docs/cost/ocds.md:74
+msgid "Postal and electronic address of the Project Owner"
+msgstr "Dirección postal y electrónica del Titular del Proyecto"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/parties` array for `Organization` objects with  `/role` set to "
+"'buyer'. Copy each object to the `parties` array in OC4IDS and add "
+"'publicAuthority' to its `.roles`."
+msgstr ""
+"Verificar la matriz `/parties` para los objetos `Organization` con `/role` "
+"establecido en 'buyer'. Copiar cada objeto en la matriz `parties` en OC4IDS "
+"y agregar 'publicAuthority' a sus `.roles`."
+
+#: ../../docs/cost/ocds.md:74
+msgid "Funding sources"
+msgstr "Fuentes de financiamiento"
+
+#: ../../docs/cost/ocds.md:74
+msgid "Name the funding organization(s)/sources of funding"
+msgstr "Nombre la organización(es) de financiación/fuentes de financiamiento"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/parties` array for `Organization` objects referenced in "
+"`/planning/budgetBreakdown/sourceParty` (Budget breakdown extension), copy "
+"each object to the `parties` array in OC4IDS and add 'funder' to its "
+"`.roles`; if not available, check the `/parties` array for parties with "
+"'funder' in `/roles` and copy each object to the `parties` array in OC4IDS."
+msgstr ""
+"Verificar la matriz `/parties` para los objetos `Organization` a los que se "
+"hace referencia en `/planning/budgetBreakdown/sourceParty` (extensión de "
+"desglose del presupuesto), copiar cada objeto en la matriz `parties` en "
+"OC4IDS y agregar 'funder' a su `.roles` ; si no está disponible, verificar "
+"la matriz `/parties` para ver las partes con 'funder' en `/roles` y copiar "
+"cada objeto en la matriz `parties` en OC4IDS."
+
+#: ../../docs/cost/ocds.md:74
+msgid "Project Budget"
+msgstr "Presupuesto del proyecto"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Specify the projected costs/allocated budget for the project (currency and "
+"amount). The budget includes land / property acquisition, environmental "
+"mitigation measures, H&S provisions, client, consultant & contractor costs, "
+"VAT etc."
+msgstr ""
+"Especifique los costos proyectados/presupuesto asignado para el proyecto "
+"(moneda y monto). El presupuesto incluye la adquisición de "
+"terrenos/propiedades, medidas de mitigación ambiental, disposiciones de "
+"salud y seguridad, costos de clientes, consultores y contratistas, IVA, etc."
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"If the project has only one contracting process, set `budget.amount` and "
+"`budget.currency` in OC4IDS to the values of `/budget/amount` and "
+"`/budget/currency`. If the project has more than one contracting process and"
+" the value of `/budget/currency` is the same in all contracting processes, "
+"set `budget.amount` in OC4IDS to the sum of the value of `/budget/amount` in"
+" each contracting process and set `budget.currency` in OC4IDS to the value "
+"of `/budget/currency`.  *Otherwise, convert the values of `/budget/amount` "
+"in each contracting process to a base currency, set `budget.amount` in "
+"OC4IDS to the sum of the converted values and set `budget.currency` in "
+"OC4IDS to the base currency.*"
+msgstr ""
+"Si el proyecto tiene solo un proceso de contratación, configurar "
+"`budget.amount` y `budget.currency`  en OC4IDS con los valores de "
+"`/budget/currency`. y  `/budget/currency`. Si el proyecto tiene más de un "
+"proceso de contratación y el valor de `/budget/currency` es el mismo en "
+"todos los procesos de contratación, establecer `/budget/amount`en OC4IDS a "
+"la suma del valor de `/budget/amount` en cada proceso de contratación y "
+"establecer `/budget/currency` en OC4IDS al valor de `/budget/currency`. *En "
+"caso contrario, convertir los valores de  `/budget/amount` en cada proceso "
+"de contratación a una moneda base, establecer `budget.amount`  en OC4IDS a "
+"la suma de los valores convertidos y configurar `budget.currency` en OC4IDS "
+"a la moneda base .*"
+
+#: ../../docs/cost/ocds.md:74
+msgid "Project budget approval date"
+msgstr "Fecha de aprobación del presupuesto del proyecto"
+
+#: ../../docs/cost/ocds.md:74
+msgid "Date project budget was authorized"
+msgstr "Fecha en que se autorizó el presupuesto del proyecto"
+
+#: ../../docs/cost/ocds.md:74
+msgid ""
+"Check the `/planning/documents` array for `Document` objects with `/type` "
+"set to 'budgetApproval' and copy each object to the `documents` array; *if "
+"not available, optionally check `/planning/milestones` for `Milestone` "
+"objects with `/type` set to 'approval' and set `budget/approvalDate` to the "
+"value of `/dateMet`.*"
+msgstr ""
+"Verificar la matriz `/planning/documents` para ver si hay objetos `Document`"
+" con `/type` configurado en 'budgetApproval' y copiar cada objeto en la "
+"matriz `documents`; *si no está disponible, como opción verificar "
+"`/planning/milestones` para ver los objetos `Milestone` con `/type` "
+"configurado en 'approval' y establecer`budget/approvalDate` en el valor de "
+"`/dateMet`.*"
+
+#: ../../docs/cost/ocds.md:76
+msgid "Project completion"
+msgstr "Finalización del proyecto"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Project status (current)"
+msgstr "Estado del proyecto (actual)"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"The current stage of the project. Select from identification, preparation, "
+"construction, completion, completed or cancelled."
+msgstr ""
+"La etapa actual del proyecto. Seleccione entre identificación, preparación, "
+"construcción, finalización, completado o cancelado."
+
+#: ../../docs/cost/ocds.md:81
+msgid "*Infer from `/tag` of most recent release.*"
+msgstr "*Inferir de `/tag` de la versión más reciente.*"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Project completion cost"
+msgstr "Costo de finalización del proyecto"
+
+#: ../../docs/cost/ocds.md:81
+msgid "State projected or actual completion cost (currency and amount)"
+msgstr "Indicar el costo de finalización proyectado o real (moneda y monto)"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"*Infer projected cost from `/contracts/value` and infer actual cost from "
+"`/contracts/implementation/finalValue` (Contract completion extension); if "
+"not available, infer from total of "
+"`/contracts/implementation/transactions/value`.*"
+msgstr ""
+"*Inferir el costo proyectado de `/contracts/value` e inferir el costo real "
+"de `/contracts/implementation/finalValue` (extensión de finalización del "
+"contrato); si no está disponible, inferir del total de "
+"`/contracts/implementation/transactions/value`.*"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Completion date"
+msgstr "Fecha de finalización"
+
+#: ../../docs/cost/ocds.md:81
+msgid "State projected or actual completion date"
+msgstr "Indicar la fecha de finalización proyectada o real"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"*Infer from `/contracts/implementation/endDate` (Contract completion "
+"extension); if not available, infer from `/contracts/period/endDate`.*"
+msgstr ""
+"*Inferir de `/contracts/implementation/endDate` (Extensión de finalización "
+"del contrato); si no está disponible, inferir de "
+"`/contracts/period/endDate`.*"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Project Scope at completion (projected)"
+msgstr "Alcance del proyecto al finalizar (proyectado)"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"Indicate projected or actual scope of project. Aim is to show if the "
+"completed project scope differs from the original project scope. Specify "
+"main outputs (type, quantity, unit)"
+msgstr ""
+"Indicar el alcance proyectado o real del proyecto. El objetivo es mostrar si"
+" el alcance del proyecto finalizado difiere del alcance del proyecto "
+"original. Especificar los principales productos (tipo, cantidad, unidad)"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"*Check `/planning/documents` for documents with `/type` set to "
+"`projectScope` or infer from `/contracts/items` or "
+"`/contracts/implementation/milestones`.*"
+msgstr ""
+"*Verificar `/planning/documents` para ver los documentos con `/type` "
+"configurado en `projectScope` o inferir de `/contracts/items` o "
+"`/contracts/implementation/milestones`.*"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Reasons for project changes"
+msgstr "Razones para los cambios en el proyecto."
+
+#: ../../docs/cost/ocds.md:81
+msgid "Summary of primary reasons for any changes in scope, time and cost"
+msgstr ""
+"Resumen de los motivos principales de cualquier cambio en el alcance, el "
+"tiempo y el costo."
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"*Infer from `/contracts/implementation/endDateDetails` and "
+"`/contracts/implementation/finalValueDetails` (Contract completion "
+"extension); if not available, infer from `/contracts/amendments`.*"
+msgstr ""
+"*Inferir de `/contracts/implementation/endDateDetails` y "
+"`/contracts/implementation/finalValueDetails` (extensión de finalización del"
+" contrato); si no está disponible, inferir de `/contratos/enmiendas`.*"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Reference to audit and evaluation reports"
+msgstr "Referencia a informes de auditoría y evaluación"
+
+#: ../../docs/cost/ocds.md:81
+msgid "Reference to publicly available technical and financial audits"
+msgstr "Referencia a auditorías técnicas y financieras disponibles al público"
+
+#: ../../docs/cost/ocds.md:81
+msgid ""
+"Check the `/contracts/implementation/documents` array for `Document` objects"
+" with `/type` set to 'finalAudit'. Copy each such object to the `documents` "
+"array."
+msgstr ""
+"Verificar la matriz `/contracts/implementation/documents` para ver si hay "
+"objetos `Document` con `/type` configurado en 'finalAudit'. Copiar cada uno "
+"de estos objetos en la matriz `documents`."
+
+#: ../../docs/cost/ocds.md:83 ../../docs/cost/ocds.md:123
+msgid "Reactive disclosures"
+msgstr "Divulgaciones reactivas"
+
+#: ../../docs/cost/ocds.md:85
+msgid "Identification and preparation"
+msgstr "Identificación y preparación"
+
+#: ../../docs/cost/ocds.md:90 ../../docs/cost/ocds.md:97
+#: ../../docs/cost/ocds.md:130 ../../docs/cost/ocds.md:137
+#: ../../docs/cost/ocds.md:144
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Multi-year programme & Budget"
+msgstr "Programa y presupuesto plurianual"
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"A detailed breakdown of the budget by period and/or participating funders."
+msgstr ""
+"Un desglose detallado del presupuesto por período y/o financiadores "
+"participantes."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Copy the contents of `/planning/budget/budgetBreakdown` in each contracting"
+" process to `budget.BudgetBreakdown`.*"
+msgstr ""
+"*Copiar el contenido de `/planning/budget/budgetBreakdown` en cada proceso "
+"de contratación a `budget.BudgetBreakdown`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Project brief or Feasibility study"
+msgstr "Resumen del proyecto o estudio de factibilidad"
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"Documentation of feasibility studies carried out for this contracting "
+"process or project, providing information on net benefits or costs of the "
+"proposed goods, works or services."
+msgstr ""
+"Documentación de los estudios de factibilidad realizados para este proceso "
+"de contratación o proyecto, que proporcionen información sobre los "
+"beneficios o costos netos de los bienes, obras o servicios propuestos."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘feasibilityStudy’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘feasibilityStudy’  y copiar "
+"cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Environmental and social impact assessment"
+msgstr "Evaluación de impacto ambiental y social"
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"**Environmental impact assessment** Documentation of assessments of the "
+"environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of "
+"natural beauty, carbon emissions etc.) and mitigation measures (e.g. "
+"pollution control, low carbon solutions, sustainable timber etc.) for this "
+"contracting process or project."
+msgstr ""
+"**Evaluación de impacto ambiental** Documentación de evaluaciones de los "
+"impactos ambientales (por ejemplo, impactos en la flora, fauna y bosques, "
+"áreas de belleza natural, emisiones de carbono, etc.) y medidas de "
+"mitigación (por ejemplo, control de la contaminación, soluciones bajas en "
+"carbono, madera sostenible, etc. ) para este proceso de contratación o "
+"proyecto."
+
+#: ../../docs/cost/ocds.md:93
+msgid ""
+"**Social impact assessment** Documentation of assessments of the intended "
+"and unintended social consequences of this project, and documentation of "
+"mitigation measures for those social consequences. Social impacts are "
+"changes that affect people, directly or indirectly (e.g. changes to people’s"
+" way of life, culture, community, health and well-being etc.)."
+msgstr ""
+"**Evaluación del impacto social** Documentación de las evaluaciones de las "
+"consecuencias sociales previstas y no deseadas de este proyecto, y "
+"documentación de las medidas de mitigación de esas consecuencias sociales. "
+"Los impactos sociales son cambios que afectan a las personas, directa o "
+"indirectamente (por ejemplo, cambios en el modo de vida, la cultura, la "
+"comunidad, la salud y el bienestar de las personas, etc.)."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘environmentalImpact’ or ‘socialImpact’ and copy each"
+" object to the `documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en 'environmentalImpact' o "
+"'socialImpact' y copie cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Resettlement and compensation plan"
+msgstr "Plan de reasentamiento y compensación."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"Documentation of the procedures and actions to mitigate adverse effects, "
+"compensate losses, and provide development benefits to people and "
+"communities affected by the contracting process or project."
+msgstr ""
+"Documentación de los procedimientos y acciones para mitigar efectos "
+"adversos, compensar pérdidas y proporcionar beneficios de desarrollo a las "
+"personas y comunidades afectadas por el proceso de contratación o proyecto."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘resettlementPlan’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘resettlementPlan’ y copiar "
+"cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Project officials and roles"
+msgstr "Funcionarios y roles del proyecto"
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"Name and position of the highest authority in the procuring entity where the"
+" budget for this project is allocated (project owner)"
+msgstr ""
+"Nombre y cargo de la máxima autoridad en la entidad contratante donde se "
+"asigna el presupuesto para este proyecto (propietario del proyecto)"
+
+#: ../../docs/cost/ocds.md:90 ../../docs/cost/ocds.md:108
+msgid ""
+"Check the `/parties` array for `Organization` objects with 'procuringEntity'"
+" in `/roles`. Copy each object to the `parties` array in OC4IDS. If there is"
+" more than one procuring entity, do not set "
+"`.summary.tender.procuringEntity.name` and "
+"`.summary.tender.procuringEntity.id`; otherwise, set them to the procuring "
+"entity's `.name` and `.id`."
+msgstr ""
+"Verificar la matriz `/parties` para objetos `Organization` con "
+"'procuringEntity' en `/roles`. Copiar cada objeto en la matriz `parties` en "
+"OC4IDS. Si hay más de una entidad contratante, no configurar "
+"`.summary.tender.procuringEntity.name` y "
+"`.summary.tender.procuringEntity.id`; de lo contrario, configurarlos con el "
+"`.name` y el `.id` de la entidad contratante."
+
+#: ../../docs/cost/ocds.md:90
+msgid "Financial agreement"
+msgstr "Contrato financiero"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Loan or donation agreement with financing conditions."
+msgstr "Contrato de préstamo o donación con condiciones de financiamiento."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘financialAgreement’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en `financialAgreement’ y copiar "
+"cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Procurement plan"
+msgstr "Plan de adquisiciones"
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"Documentation that sets out the basis for this particular contracting "
+"process."
+msgstr ""
+"Documentación que establece las bases de este proceso de contratación en "
+"particular."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘procurementPlan’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘procurementPlan’ y copiar "
+"cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Project approval decision"
+msgstr "Decisión de aprobación del proyecto"
+
+#: ../../docs/cost/ocds.md:90
+msgid "Additional details about the approval of the budget."
+msgstr "Detalles adicionales sobre la aprobación del presupuesto."
+
+#: ../../docs/cost/ocds.md:90
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘budgetApproval’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘budgetApproval’ y copiar cada"
+" objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:92
+msgid "Completion"
+msgstr "Finalización"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Implementation progress reports"
+msgstr "Informes de progreso de implementación"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Planned and actual physical and financial progress over time."
+msgstr ""
+"Progreso físico y financiero planificado y real a lo largo del tiempo."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Optionally, check the `/contracts/implementation` array for `Document` "
+"objects with `.documentType` set to ‘physicalProgressReport’ or "
+"‘financialProgressReport and copy each object to the `.summary.documents` "
+"array.*"
+msgstr ""
+"*Como opción, verificar la matriz `/contracts/implementation` para ver los "
+"objetos `Document` con `.documentType` configurado en "
+"‘physicalProgressReport’ o ‘financialProgressReport’ y copia cada objeto en "
+"la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:99
+msgid ""
+"*Optionally, copy the contents of the `/planning/forecasts` array to "
+"`forecasts` and copy the contents of the `/contracts/implementation/metrics`"
+" array to `metrics`.*"
+msgstr ""
+"*Como opción, copiar el contenido de la matriz `/planning/forecasts` en "
+"`forecasts` y copiar el contenido de la matriz "
+"`/contracts/implementation/metrics` en `metrics`.*"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Budget amendment decision"
+msgstr "Decisión de modificación del presupuesto"
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"Document accrediting the approval of budget expansion or extension for this "
+"project."
+msgstr ""
+"Documento que acredita la aprobación de la ampliación o incremento del "
+"presupuesto de este proyecto."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘budgetAmendmentApproval’ and copy each object to the"
+" `documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘budgetAmendmentApproval’ y "
+"copiar cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Project completion report"
+msgstr "Informe de finalización del proyecto"
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"A completion certificate issued by a relevant authority providing evidence "
+"that works were completed to a certain level of quality. Completion "
+"certificates might only be relevant for particular kinds of contracting "
+"processes or projects."
+msgstr ""
+"Un certificado de finalización emitido por una autoridad pertinente que "
+"proporciona evidencia de que las obras se completaron con un cierto nivel de"
+" calidad. Es posible que los certificados de finalización solo sean "
+"relevantes para tipos específicos de procesos o proyectos de contratación."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Check the `/contracts/implementation` array for `Document` objects with "
+"`.documentType` set to ‘projectCompletionReport’ and copy each object to the"
+" `documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/implementation` para ver si hay objetos "
+"`Document` con `.documentType` configurado en `projectCompletionReport’ y "
+"copiar cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Project evaluation report"
+msgstr "Informe de evaluación del proyecto"
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"Generally published at the conclusion of a project, providing a technical "
+"and financial summary of delivery"
+msgstr ""
+"Generalmente se publica al finalizar un proyecto y proporciona un resumen "
+"técnico y financiero de la entrega."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Check the `/contracts/implementation` array for `Document` objects with "
+"`.documentType` set to ‘projectEvaluation’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/implementation` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘projectEvaluación’ y copiar "
+"cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Technical audit reports"
+msgstr "Informes de auditoría técnica"
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"Documentation of checks that construction work has been undertaken as "
+"specified."
+msgstr ""
+"Documentación de las verificaciones de que los trabajos de construcción se "
+"han realizado según las especificaciones."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Check the `/contracts/implementation` array for `Document` objects with "
+"`.documentType` set to ‘technicalAuditReport’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/implementation` para ver si hay objetos "
+"`Document` con `.documentType` configurado en `technicalAuditReport’ y "
+"copiar cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:97
+msgid "Financial audit reports"
+msgstr "Informes de auditoría financiera"
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"Documentation of checks that a project's financial statements are correct "
+"and complete."
+msgstr ""
+"Documentación de controles de que los estados financieros de un proyecto son"
+" correctos y completos."
+
+#: ../../docs/cost/ocds.md:97
+msgid ""
+"*Check the `/contracts/implementation` array for `Document` objects with "
+"`.documentType` set to ‘financialAuditReport’ and copy each object to the "
+"`documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/implementation` para ver si hay objetos "
+"`Document` con `.documentType` configurado en `financialAuditReport’ y "
+"copiar cada objeto en la matriz `documents`.*"
+
+#: ../../docs/cost/ocds.md:99
+msgid "Process level"
+msgstr "Nivel de proceso"
+
+#: ../../docs/cost/ocds.md:101
+msgid ""
+"The mappings in this section relate to the `contractingProcesses` section of"
+" the OC4IDS schema, unless otherwise specified."
+msgstr ""
+"Los mapeos en esta sección se relacionan con la sección "
+"`contractingProcesses` del esquema OC4IDS, a menos que se especifique lo "
+"contrario."
+
+#: ../../docs/cost/ocds.md:103 ../../docs/cost/ocds.md:125
+msgid "Procurement"
+msgstr "Adquisiciones y contrataciones"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Procuring entity"
+msgstr "entidad contratante"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Enter name of the organization carrying out the procurement"
+msgstr "Ingrese el nombre de la organización que realiza la adquisición."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Procuring entity contact details"
+msgstr "Datos de contacto de la entidad contratante"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Postal and Electronic address"
+msgstr "Dirección postal y electrónica"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract administrative entity"
+msgstr "Entidad administrativa del contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Enter name of the organization carrying out the contract administrative "
+"entity if different from the Procuring Entity"
+msgstr ""
+"Ingresar el nombre de la organización que lleva a cabo la entidad "
+"administrativa del contrato si es diferente de la entidad contratante."
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Check the `/parties` array for `Organization` objects with "
+"'administrativeEntity' in `/roles`. Copy each object to the `parties` array "
+"in OC4IDS. If there is more than one procuring entity, do not set "
+"`.summary.tender.administrativeEntity.name` and "
+"`.summary.tender.administrativeEntity.id`; otherwise, set them to the "
+"procuring entity's `.name` and `.id`."
+msgstr ""
+"Verificar la matriz `/parties` para objetos `Organization` con "
+"'administrativeEntity' en `/roles`. Copiar cada objeto en la matriz "
+"`parties` en OC4IDS. Si hay más de una entidad contratante, no establecer "
+"`.summary.tender.administrativeEntity.name` y "
+"`.summary.tender.administrativeEntity.id`; de lo contrario, configurarlos en"
+" `.name` y `.id` a la entidad contratante."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract status"
+msgstr "Estado del contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Select from pre-award, active or closed"
+msgstr "Seleccionar entre preadjudicación, activa o cerrada"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Set `.summary.status` to a value from the contractingProcessStatus codelist "
+"according to the business logic in the codelist."
+msgstr ""
+"Configurar `.summary.status` a un valor de la lista de códigos "
+"contractingProcessStatus de acuerdo con la lógica empresarial de la lista de"
+" códigos."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Procurement process"
+msgstr "Proceso de adquisición"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Develop a list such as International Competitive Bidding, National "
+"Competitive Bidding, Donor Procurement Rules, Framework, Direct Award"
+msgstr ""
+"Desarrollar una lista como Licitación Pública Internacional, Licitación "
+"Pública Nacional, Reglas de Adquisición de Donantes, Marco, Adjudicación "
+"Directa."
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Set `.summary.tender.procurementMethod` and "
+"`.summary.tender.procurementMethodDetails`to the values of "
+"`/tender/procurementMethod` and `/tender/procurementMethodDetails` "
+"respectively."
+msgstr ""
+"Configurar `.summary.tender.procurementMethod` y "
+"`.summary.tender.procurementMethodDetails` en los valores de "
+"`/tender/procurementMethod` y `/tender/procurementMethodDetails` "
+"respectivamente."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Develop a list such as Design, Supervision, Design & Supervision, Design & "
+"Build, Construction"
+msgstr ""
+"Desarrollar una lista como Diseño, Supervisión, Diseño y Supervisión, Diseño"
+" y Construcción, Construcción."
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"*Map from `/tender/items/classification` or "
+"`/tender/items/additionalClassifications` or infer from "
+"`/tender/description`.*"
+msgstr ""
+"*Mapa de `/tender/items/classification` o "
+"`/tender/items/additionalClassifications` o inferir de "
+"`/tender/description`.*"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Number of firms tendering"
+msgstr "Número de empresas que licitan"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Number of firms who submit a tender"
+msgstr "Número de empresas que presentan una oferta"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Set `.summary.numberOfTenderers` to the value of "
+"`/tender/numberOfTenderers`."
+msgstr ""
+"Configurar `.summary.numberOfTenderers` al valor de "
+"`/tender/numberOfTenderers`."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Cost estimate"
+msgstr "Estimación del costo"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Currency and amount of the original pre-tender estimate of the contract"
+msgstr ""
+"Moneda e importe del presupuesto original  previo a la licitación del "
+"contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Check the individual releases for the contracting process and set "
+"`.summary.tender.costEstimate` to the value of `/tender/value` in the most "
+"recent release with `/tender/status` set to 'planning'."
+msgstr ""
+"Verificar las versiones individuales para el proceso de contratación y "
+"configurar `.summary.tender.costEstimate` en el valor de `/tender/value` en "
+"la versión más reciente con `/tender/status` establecido en 'planning'."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract title"
+msgstr "Título del contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid "The formal name of the contract"
+msgstr "El nombre formal del contrato."
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"If the contracting process has only one `Contract` object in `/contracts`, "
+"set `.summary.title` to the value of the contract's `/title`; if not "
+"available and the contracting process has only one `Award` object in "
+"`/awards`, use its `/title`. Otherwise, use `/tender/title`."
+msgstr ""
+"Si el proceso de contratación tiene solo un objeto `Contract` en  "
+"`/contracts`, establecer `.summary.title` en el valor del `/title` del "
+"contrato; si no está disponible y el proceso de contratación tiene solo un "
+"objeto `Award` en `/awards`, utilice su `/title`. De lo contrario, utilice "
+"`/tender/title`."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract firm(s)"
+msgstr "Empresa(s) contratada(s)"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Legal name of supplier"
+msgstr "Nombre legal del proveedor"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Check the `/parties` array for `Organization` objects with 'supplier' in "
+"`/roles`. For each such object, copy it to the `parties` array in OC4IDS, "
+"add an `OrganizationReference` object to `.summary.suppliers` and set the "
+"`.name` and `.id` of the `OrganizationReference` to the `.name` and `.id` of"
+" the `Organization`."
+msgstr ""
+"Verificar la matriz `/parties` para objetos `Organization` con 'supplier' en"
+" `/roles`. Para cada uno de estos objetos, copiarlo en la matriz `parties` "
+"en OC4IDS, agregar un objeto `OrganizationReference` a `.summary.suppliers` "
+"y establecer `.name` y `.id` de `OrganizationReference` en `.name` y `.id` "
+"de la `Organización`."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract price"
+msgstr "Precio de contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Currency and price at contract award"
+msgstr "Moneda y precio en el momento de la adjudicación del contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"If the value of `/value/currency` is the same for all `Award` objects in "
+"`/awards`, set `.summary.contractValue.amount` to the sum of `/value/amount`"
+" in each `Award` object and set `.summary.contractValue.currency` to the "
+"value of `/value/currency`.  *Otherwise, convert `/value/amount` in each "
+"`Award` object to a base currency, set `.summary.contractValue.amount` to "
+"the sum of the converted values and set `.summary.contractValue.currency` to"
+" the base currency.*"
+msgstr ""
+"Si el valor de `/value/currency` es el mismo para todos los objetos `Award` "
+"en `/awards`, configurar `.summary.contractValue.amount` al monto de "
+"`/value/amount` en cada objeto `Award` y establecer "
+"`.summary.contractValue.currency` al valor de `/value/currency`. *De lo "
+"contrario, convertir `/value/amount` en cada objeto `Award` a una moneda "
+"base, configurar `.summary.contractValue.amount` al monto de los valores "
+"convertidos y configurar `.summary.contractValue.currency` a la divisa de "
+"base.*"
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract scope of work"
+msgstr "Alcance de las obras del contrato"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Main outputs from the contract e.g. detailed design, supervision, project "
+"management and or type, quantity, unit for construction"
+msgstr ""
+"Principales productos del contrato, por ejemplo diseño detallado, "
+"supervisión, gestión de proyecto y/o tipo, cantidad, unidad de construcción"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"If there is more than one `Contract` object in `/contracts` or more than one"
+" `Award` object in `/awards`, set `.summary.description` to the value of "
+"`/tender/description`; if unavailable and if there is only one `Item` object"
+" in `/tender/items`, then set `.summary.description` to the value of the "
+"item's `/description`."
+msgstr ""
+"Si hay más de un objeto `Contract` en `/contracts` o más de un objeto "
+"`Award` en `/awards`, configurar `.summary.description` en el valor de "
+"`/tender/description`; si no está disponible y si solo hay un objeto `Item` "
+"en `/tender/items`, configurar `.summary.description` al valor de "
+"`/description` del artículo."
+
+#: ../../docs/cost/ocds.md:110
+msgid ""
+"Otherwise, if there is only one `Award` or `Contract` object with a "
+"`/description` field, set `.summary.description` to the value of the "
+"object's `/description`."
+msgstr ""
+"De lo contrario, si solo hay un objeto `Award` o `Contract` con una "
+"`/description` field, set `.summary.description` al valor de la "
+"`/description` del objeto."
+
+#: ../../docs/cost/ocds.md:112
+msgid ""
+"Otherwise, if there is only one `Item` with a `/description` field in "
+"`/awards/items` and `/contracts/items`, set `.summary.description` to the "
+"value of the item's `/description`."
+msgstr ""
+"De lo contrario, si solo hay un `Item` con un campo `/description` en "
+"`/awards/items` y `/contracts/items`, configurar `.summary.description` al "
+"valor de la `/description` del item."
+
+#: ../../docs/cost/ocds.md:108
+msgid "Contract start date and contract period (duration)"
+msgstr "Fecha de inicio del contrato y periodo contractual (duración)"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Enter dates and Number of weeks from contract start date to (anticipated) "
+"completion date"
+msgstr ""
+"Ingresar fechas y número de semanas desde la fecha de inicio hasta la fecha "
+"de finalización (anticipada)"
+
+#: ../../docs/cost/ocds.md:108
+msgid ""
+"Set `.summary.contractPeriod.startDate` to the earliest "
+"`/contractPeriod/startDate` of all `Award` objects in `/awards` and set "
+"`.summary.contractPeriod.endDate` to the latest `/contractPeriod/endDate` of"
+" all `Award` objects in `/awards`; if not available,  set "
+"`.summary.contractPeriod` to the value of `/tender/contractPeriod`."
+msgstr ""
+"Configurar`.summary.contractPeriod.startDate` a la primera "
+"`/contractPeriod/startDate` de todos los objetos `Award` en `/awards` y "
+"configurar `.summary.contractPeriod.endDate` a la última "
+"`/contractPeriod/endDate` de todos los objetos `Award` en `/awards`; Si no "
+"está disponible, configurar`.summary.contractPeriod` al valor del "
+"`/tender/contractPeriod`."
+
+#: ../../docs/cost/ocds.md:110 ../../docs/cost/ocds.md:139
+msgid "Implementation"
+msgstr "Implementación"
+
+#: ../../docs/cost/ocds.md:112
+msgid ""
+"Disclosures in the implementation section of the CoST IDS relate to changes "
+"to a contract's value, duration or scope that were made after the contract "
+"was awarded."
+msgstr ""
+"Las divulgaciones en la sección de implementación del IDS de CoST se "
+"refieren a los cambios en el valor, la duración o el alcance de un contrato "
+"que se realizaron después de la adjudicación del mismo."
+
+#: ../../docs/cost/ocds.md:114
+msgid ""
+"If OCDS data is available, these changes can be determined by comparing the "
+"most recent OCDS release to a compiled release created from all prior "
+"releases (to better understand these concepts, refer to the [OCDS "
+"documentation](https://standard.open-"
+"contracting.org/1.1/en/getting_started/releases_and_records/)). The specific"
+" fields to monitor for changes between releases are described in the mapping"
+" table below."
+msgstr ""
+"Si se dispone de datos OCDS, estos cambios pueden determinarse comparando la"
+" versión OCDS más reciente con una versión compilada creada a partir de "
+"todas las versiones anteriores (para entender mejor estos conceptos, "
+"consulte la [documentación OCDS](https://standard.open-"
+"contracting.org/1.1/en/getting_started/releases_and_records/)). Los campos "
+"específicos que deben supervisarse para detectar cambios entre versiones se "
+"describen en la tabla de mapeo que figura a continuación."
+
+#: ../../docs/cost/ocds.md:116
+msgid ""
+"In some cases, OCDS data might include an explanation of changes in the "
+"relevant `amendments` block. In other cases, the reason might need to be "
+"manually entered."
+msgstr ""
+"En algunos casos, los datos de la OCDS podrían incluir una explicación de "
+"los cambios en el bloque de `amendments` pertinente. En otros casos, podría "
+"ser necesario introducir el motivo de forma manual."
+
+#: ../../docs/cost/ocds.md:121
+msgid "Variation to contract price"
+msgstr "Variaciones al precio del contrato"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Difference between the price at contract award and the current projected "
+"price"
+msgstr ""
+"Diferencia entre el precio de adjudicación del contrato y el precio actual "
+"proyectado"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"*Monitor `/contracts/value` for changes. Copy "
+"`/contracts/amendments/description` to `.description` and `/date` to "
+"`.date`.*"
+msgstr ""
+"*Monitorear  `/contracts/value` en busca de cambios. Copiar "
+"`/contracts/amendments/description` a `.descripción` y `/date` a `.date`.*"
+
+#: ../../docs/cost/ocds.md:121
+msgid "Escalation of contract price"
+msgstr "Incremento del precio de contrato"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Escalation to date of the price of materials, labour, equipment etc. due to "
+"fluctuations in inflation, currency etc."
+msgstr ""
+"Aumento hasta la fecha del precio de los materiales, la mano de obra, el "
+"equipo, etc. debido a las fluctuaciones de la inflación, la moneda, etc."
+
+#: ../../docs/cost/ocds.md:121
+msgid "Variation to contract duration"
+msgstr "Variaciones en la duración del contrato"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Difference between original duration at contract award and the current "
+"projected duration in weeks."
+msgstr ""
+"Diferencia entre la duración original en el momento de la adjudicación del "
+"contrato y la duración actual proyectada en semanas."
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"*Monitor `/contracts/period` for changes. Copy "
+"`/contracts/amendments/description` to `.description` and `/date` to "
+"`.date`.*"
+msgstr ""
+"*Monitorear `/contracts/period` en busca de cambios. Copiar "
+"`/contracts/amendments/description` a `.description` y `/date` a`.date`.*"
+
+#: ../../docs/cost/ocds.md:121
+msgid "Variation to contract scope"
+msgstr "Modificación del alcance del contrato"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Any changes between original scope at contract award and the current scope"
+msgstr ""
+"Cualquier cambio entre el alcance original al momento de la adjudicación del"
+" contrato y el alcance actual"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"*Monitor `/contracts/description`, `/contracts/items` and "
+"`/contracts/implementation/milestones` for changes. Copy "
+"`/contracts/amendments/description` to `.description` and `/date` to "
+"`.date`.*"
+msgstr ""
+"*Monitorear `/contracts/description`, `/contracts/items` y "
+"`/contracts/implementation/milestones` en busca de cambios. Copiar "
+"`/contracts/amendments/description` a `.description` y `/date` a `.date`."
+
+#: ../../docs/cost/ocds.md:121
+msgid "Reasons for price changes"
+msgstr "Razones de los cambios en los precios"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead to "
+"changes in contract price, major price fluctuations and accumulative "
+"increase or decrease in price."
+msgstr ""
+"Resumen de las razones de los cambios primarios (por ejemplo, variaciones) "
+"que luego conducen a cambios en el precio del contrato, las principales "
+"fluctuaciones de precios y el aumento o disminución acumulativos del precio."
+
+#: ../../docs/cost/ocds.md:121
+msgid "*Copy `contracts/amendments/rationale` to `.rationale`.*"
+msgstr "*Copiar `contracts/amendments/rationale` a `.rationale`.*"
+
+#: ../../docs/cost/ocds.md:121
+msgid "Reasons for scope and duration changes"
+msgstr "Razones de cambios en el alcance y la duración"
+
+#: ../../docs/cost/ocds.md:121
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead to "
+"changes in the scope and duration."
+msgstr ""
+"Resumen de las razones de los cambios principales (por ejemplo "
+"modificaciones) que luego conducen a cambios en el alcance y la duración"
+
+#: ../../docs/cost/ocds.md:130
+msgid "Contract officials and roles"
+msgstr "Oficiales de contrato y roles"
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"Name and position of the public official in charge of administration of the "
+"contract(s)."
+msgstr ""
+"Nombre y posición del oficial público a cargo de la administración del "
+"contrato(s)."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"*Check the `/parties` array for `Organization` objects with "
+"'administrativeEntity' in `/roles`. Copy each object to the `parties` array "
+"in OC4IDS. If there is more than one procuring entity, do not set "
+"`.summary.tender.procuringEntity.name` and "
+"`.summary.tender.procuringEntity.id`; otherwise, set them to the procuring "
+"entity's `.name` and `.id`.*"
+msgstr ""
+"*Verificar la matriz `/parties` en busca de objetos `Organization` con ` "
+"administrativeEntity` en `/roles`. Copiar cada objeto en la matriz `parties`"
+" de OC4IDS. Si hay más de una entidad adjudicadora, no poner "
+"`.summary.tender.procuringEntity.name` y "
+"`.summary.tender.procuringEntity.id`; en caso contrario, configurarlos a los"
+" `.name` e `.id` de la entidad de adquisiciones.*"
+
+#: ../../docs/cost/ocds.md:130
+msgid "Procurement method"
+msgstr "Método de adquición"
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"Specify tendering method using the method codelist (open, selective, "
+"limited, direct)."
+msgstr ""
+"Especificar el método de licitación utilizando la lista de códigos de "
+"métodos (abierta, selectiva, limitada, directa)."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"Set `.summary.tender.procurementMethod` to the value of "
+"`/tender/procurementMethod`."
+msgstr ""
+"Configurar `.summary.tender.procurementMethod` al valor de "
+"`/tender/procurementMethod`."
+
+#: ../../docs/cost/ocds.md:130
+msgid "Tender documents"
+msgstr "Documentos de licitación"
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"Documentation for potential suppliers, describing the goals of the contract "
+"(e.g. goods and services to be procured), and the bidding process."
+msgstr ""
+"Documentación para proveedores potenciales, que describe los objetivos del "
+"contrato (por ejemplo, bienes y servicios que se adquirirán) y el proceso de"
+" licitación."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"*Check the `/tender/documents` array for `Document` objects with "
+"`.documentType` set to ‘biddingDocuments’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/tender/documents` para ver si hay objetos `Document` "
+"con `.documentType` configurado en ‘biddingDocuments’ y copiar cada objeto a"
+" la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:130
+msgid "Tender evaluation results"
+msgstr "Resultados de la evaluación de la licitación"
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"Documentation on the evaluation of the bids and the application of the "
+"evaluation criteria, including the justification for the award."
+msgstr ""
+"Documentación sobre la evaluación de las ofertas y la aplicación de los "
+"criterios de evaluación, incluida la justificación de la adjudicación."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"*Check the `/tender/documents` array for `Document` objects with "
+"`.documentType` set to ‘evaluationReports’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/tender/documents` para ver si hay objetos `Document` "
+"con `.documentType` configurado en ‘evaluationReports’ y copiar cada objeto "
+"en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:130
+msgid "Project design report"
+msgstr "Informe de diseño del proyecto."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"A record of the justification for the design approach adopted in the "
+"project, typically issued before the works start, by the consultant or firm "
+"that will supervise the works."
+msgstr ""
+"Un registro de la justificación del enfoque de diseño adoptado en el "
+"proyecto, generalmente emitido antes del inicio de las obras, por el "
+"consultor o empresa que supervisará las obras."
+
+#: ../../docs/cost/ocds.md:130
+msgid ""
+"*Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to ‘projectDesignReport’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/planning/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘projectDesignReport’ y copiar"
+" cada objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:132
+msgid "Contract"
+msgstr "Contrato"
+
+#: ../../docs/cost/ocds.md:137
+msgid "Contract agreement and conditions"
+msgstr "Acuerdo de contrato y condiciones."
+
+#: ../../docs/cost/ocds.md:137
+msgid ""
+"A copy of the signed contract. Consider providing both machine-readable "
+"(e.g. original PDF, Word or Open Document format files), and a separate "
+"document entry for scanned-signed pages where this is required."
+msgstr ""
+"Una copia del contrato firmado. Considere proporcionar archivos legibles por"
+" máquina (por ejemplo, archivos originales en formato PDF, Word o Open "
+"Document) y un registro de documento separado para las páginas escaneadas y "
+"firmadas cuando sea necesario."
+
+#: ../../docs/cost/ocds.md:137
+msgid ""
+"*Check the `/contracts/documents` array for `Document` objects with "
+"`.documentType` set to ‘contractSigned’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘contractSigned’ y copiar cada"
+" objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:137
+msgid "Registration and ownership of firms"
+msgstr "Registro y propiedad de empresas."
+
+#: ../../docs/cost/ocds.md:137
+msgid ""
+"A document issued by the relevant government registry as confirmation of the"
+" due incorporation and valid existence of the organization."
+msgstr ""
+"Un documento emitido por el registro gubernamental correspondiente como "
+"confirmación de la debida constitución y existencia válida de la "
+"organización."
+
+#: ../../docs/cost/ocds.md:137
+msgid ""
+"*Check the `/contracts/documents` array for `Document` objects with `/type` "
+"set to ‘incorporationCertificate’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/documents` para ver si hay objetos "
+"`Document` con `/type` configurado en ‘incorporationCertificate’ y copiar "
+"cada objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:139
+msgid ""
+"Check the `/parties` array for `Organization` objects with 'supplier' in "
+"`/roles`. For each such object, copy it to the `parties` array in OC4IDS, "
+"add an `OrganizationReference` object to `.summary.suppliers` and set the "
+"`OrganizationReference`'s `.name` and `.id` to the `Organization`'s `.name` "
+"and `.id`."
+msgstr ""
+"Verificar la matriz `/parties` para objetos `Organization`  con 'supplier' "
+"en `/roles`. Para cada uno de estos objetos, copiarlo en la matriz `parties`"
+" en OC4IDS, agregar un objeto `OrganizationReference` a `.summary.suppliers`"
+" y establecer el `.name` y la `.id` de `OrganizationReference` a "
+"`Organization `'s `.name` y `.id`."
+
+#: ../../docs/cost/ocds.md:137
+msgid "Specifications and drawings"
+msgstr "Especificaciones y planos."
+
+#: ../../docs/cost/ocds.md:137
+msgid "Detailed technical information about goods or services to be provided."
+msgstr ""
+"Información técnica detallada sobre los bienes o servicios a proporcionarse."
+
+#: ../../docs/cost/ocds.md:137
+msgid ""
+"*Check the `/contracts/documents` array for `Document` objects with `/type` "
+"set to ‘technicalSpecifications’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/documents` para ver si hay objetos "
+"`Document` con `/type` configurado en ‘technicalSpecifications’ y copiar "
+"cada objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:144
+msgid "List of variations, changes, amendments"
+msgstr "Lista de variaciones, cambios, modificaciones."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"Details of changes to the duration, price, scope or other significant "
+"features of the contracting process"
+msgstr ""
+"Detalles de cambios en la duración, precio, alcance u otras características "
+"significativas del proceso de contratación."
+
+#: ../../docs/cost/ocds.md:144
+msgid "*Monitor the following fields for changes:*"
+msgstr "*Monitorear los siguientes campos para detectar cambios:*"
+
+#: ../../docs/cost/ocds.md:146
+msgid "`/contracts/value`"
+msgstr "`/contracts/value`"
+
+#: ../../docs/cost/ocds.md:147
+msgid "`/contracts/period`"
+msgstr "`/contracts/period`"
+
+#: ../../docs/cost/ocds.md:148
+msgid "`/contracts/description`"
+msgstr "`/contracts/description`"
+
+#: ../../docs/cost/ocds.md:149
+msgid "`/contracts/items`"
+msgstr "`/contracts/items`"
+
+#: ../../docs/cost/ocds.md:150
+msgid "`/contracts/implementation/milestones`"
+msgstr "`/contracts/implementation/milestones`"
+
+#: ../../docs/cost/ocds.md:152
+msgid ""
+"*Copy `/contracts/amendments/description` to "
+"`summary.modifications.description` and `/date` to "
+"`.summary.modifications.date`.*"
+msgstr ""
+"*Copiar `/contracts/amendments/description` a "
+"`summary.modifications.description` y `/date` a "
+"`.summary.modifications.date`.*"
+
+#: ../../docs/cost/ocds.md:144
+msgid "List of escalation approvals"
+msgstr "Lista de aprobaciones de incrementos"
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"Documentation of one or more approved escalations of the contract price "
+"during the project life-cycle."
+msgstr ""
+"Documentación de uno o más incrementos aprobados del precio del contrato "
+"durante el ciclo de vida del proyecto."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"*Check the `/contracts/documents` and `/contracts/implementation/documents` "
+"arrays for `Document` objects with `.documentType` set to "
+"‘escalationApprovals’ and copy each object to the `.summary.documents` "
+"array.*"
+msgstr ""
+"*Verificar las matrices `/contracts/documents` y "
+"`/contracts/implementation/documents` para ver si hay objetos `Document` con"
+" `.documentType` configurado en ‘escalationApprovals’ y copiar cada objeto "
+"en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:144
+msgid "Quality assurance reports"
+msgstr "Informes de aseguramiento de calidad."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"Documentation identifying deficiencies in designs, specifications, "
+"standards, methods, procedures and practices, and identifying best "
+"practices."
+msgstr ""
+"Documentación que identifique deficiencias en diseños, especificaciones, "
+"estándares, métodos, procedimientos y prácticas, e identifica mejores "
+"prácticas."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"*Check the `/contracts/documents` and `/contracts/implementation/documents` "
+"arrays for `Document` objects with `.documentType` set to "
+"‘qualityAssuranceReport’ and copy each object to the `.summary.documents` "
+"array.*"
+msgstr ""
+"*Verificar las matrices `/contracts/documents` y "
+"`/contracts/implementation/documents` para ver si hay objetos `Document` con"
+" `.documentType` configurado en ‘qualityAssuranceReport’ y copiar cada "
+"objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:144
+msgid "Disbursement records or payment certificates"
+msgstr "Registros de desembolso o certificados de pago"
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"A list of the spending transactions made against this contract and/or a "
+"document certifying that the work specified on a supplier's estimate or "
+"invoice is complete and that payment to the supplier is approved"
+msgstr ""
+"Una lista de las transacciones de gastos realizadas en virtud de este "
+"contrato y/o un documento que certifique que la obra especificada en el "
+"presupuesto o la factura de un proveedor está completa y que el pago al "
+"proveedor está aprobado."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"*Copy the contents of the `/contracts/implementation/transactions` array to "
+"`.summary.transactions`.*"
+msgstr ""
+"*Copiar el contenido de la matriz `/contracts/implementation/transactions` a"
+" `.summary.transactions`.*"
+
+#: ../../docs/cost/ocds.md:146
+msgid ""
+"*Check the `/contracts/implementation/documents` array for `Document` "
+"objects with `.documentType` set to ‘paymentCertificate’ and copy each "
+"object to the `.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/implementation/documents` para ver si hay "
+"objetos `Document` con `.documentType` establecido en ‘PagoCertificado’ y "
+"copiar cada objeto en la matriz `.summary.documents`.*"
+
+#: ../../docs/cost/ocds.md:144
+msgid "Contract amendments"
+msgstr "Enmiendas al contrato"
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"A legal document that changes or adds to the terms of an existing contract."
+msgstr ""
+"Un documento legal que enmienda o agrega términos a un contrato existente."
+
+#: ../../docs/cost/ocds.md:144
+msgid ""
+"*Check the `/contracts/documents` array for `Document` objects with "
+"`.documentType` set to ‘contractAmendment’ and copy each object to the "
+"`.summary.documents` array.*"
+msgstr ""
+"*Verificar la matriz `/contracts/documents` para ver si hay objetos "
+"`Document` con `.documentType` configurado en ‘contractAmendment’ y copiar "
+"cada objeto en la matriz `.summary.documents`.*"

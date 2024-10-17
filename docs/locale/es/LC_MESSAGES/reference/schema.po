@@ -4,27 +4,28 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Romina Fernandez <rfernandez@cds.com.py>, 2019
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # James McKinney, 2021
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-14 21:10-0400\n"
+"POT-Creation-Date: 2024-03-01 11:53-0500\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Cecilia Casco <ceciliacasco@cds.com.py>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/reference/schema.md:1
 msgid "Schema reference"
@@ -32,278 +33,317 @@ msgstr "Referencia del esquema"
 
 #: ../../docs/reference/schema.md:9
 msgid ""
-"The tables below describe each of the fields and objects in OC4IDS. To see "
-"how they fit together, consult the [schema browser](browser)."
+"This page presents the fields in the OC4IDS schema in tables with additional"
+" information in paragraphs. Required fields are indicated in the "
+"**Required** column."
 msgstr ""
-"Las tablas de abajo describen cada uno de los campos y objetos en OC4IDS. "
-"Para ver cómo estos encajan juntos, consulte el [navegador del "
-"esquema](browser)."
+"Esta página presenta los campos del esquema OC4IDS en tablas con información"
+" adicional en párrafos. Los campos obligatorios se indican en la columna "
+"**Requeridos**"
 
 #: ../../docs/reference/schema.md:11
+msgid ""
+"For fields that reference a sub-schema, a link is provided to a table with "
+"details of the sub-schema. To see how the fields and sub-schemas fit "
+"together, consult the [schema browser](browser)."
+msgstr ""
+"Para los campos que hacen referencia a un subesquema, se proporciona un "
+"enlace a una tabla con los detalles del subesquema. Para comprobar cómo "
+"encajan los campos y los subesquemas, consulte el [navegador de "
+"esquemas](browser)."
+
+#: ../../docs/reference/schema.md:13
+msgid ""
+"**Examples** are provided for each table, showing how to represent the "
+"fields in the table in JSON format. For more information on the examples, "
+"see [examples](../guidance/example)."
+msgstr ""
+"Se presentan **Ejemplos** para cada tabla, y se muestra como representar los"
+" campos en la tabla en formato JSON. Para más infomración sobre los "
+"ejemplos, véase [ejemplos](../guidance/example)."
+
+#: ../../docs/reference/schema.md:15
 msgid "Project"
 msgstr "Proyecto (Project)"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
+#: ../../docs/reference/schema.md:17
+msgid "The top-level object in OC4IDS is a project."
+msgstr "El objeto de nivel superior en OC4IDS es un proyecto."
+
+#: ../../docs/reference/schema.md:19
+msgid "A project is defined as:"
+msgstr "El proyecto está definido como:"
+
+#: ../../docs/reference/schema.md:21
+msgid ""
+"The development of a set of infrastructure assets in a specified location, "
+"generally the responsibility of a single procuring entity and budget "
+"authority: for example, a highway overpass or a university campus."
+msgstr ""
+"El desarrollo de un conjunto de activos de infraestructura en un lugar "
+"determinado, en general responsabilidad de una sola entidad contratante y "
+"autoridad presupuestaria: por ejemplo, un paso a desnivel de una autopista o"
+" un campus universitario."
+
+#: ../../docs/reference/schema.md:23
+msgid "A project's fields include:"
+msgstr "Los campos de un proyecto incluye:"
+
+#: ../../docs/reference/schema.md:25
+msgid "Metadata, such as the project's `title`, `description` and `status`."
+msgstr "Metadatos, como `title`, `description` y `status` del proyecto."
+
+#: ../../docs/reference/schema.md:26
+msgid ""
+"Budget data, which describes the projected costs or allocated budget for the"
+" project."
+msgstr ""
+"Datos de presupuesto, que describen los costos o la asignación del "
+"presupuesto del proyecto."
+
+#: ../../docs/reference/schema.md:27
+msgid ""
+"Data about the parties (organizations and other participants) involved in "
+"the project."
+msgstr ""
+"Datos sobre las partes (organizaciones y otros participantes) involucradas "
+"en el proyecto"
+
+#: ../../docs/reference/schema.md:28
+msgid ""
+"Links to documents relating to the project, such as needs assessments and "
+"project evaluations."
+msgstr ""
+"Enlaces a los documentos relacionados con el proyecto, como evaluaciones de "
+"necesidades y las evalua "
+
+#: ../../docs/reference/schema.md:29
+msgid ""
+"Data about contracting processes for different aspects of the project, such "
+"as design, construction and supervision."
+msgstr ""
+" Datos sobre los procesos de contratación de distintos aspectos del "
+"proyecto, como el diseño, la construcción y la supervisión."
+
+#: ../../docs/reference/schema.md:30
+msgid ""
+"Completion data, such as the final scope, duration and costs for the "
+"project."
+msgstr ""
+"Datos de la finalización, como el alcance, la duración y los costos finales "
+"del proyecto."
+
+#: ../../docs/reference/schema.md:32
+msgid "Each project has the following fields."
+msgstr "Cada proyecto tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:0
+msgid "Schema"
+msgstr "Esquema"
+
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Title"
 msgstr "Título"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Description"
 msgstr "Descripción"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Type"
 msgstr "Tipo"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Format"
 msgstr "Formato"
 
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
-#: ../../sphinxcontrib-jsonschema:1 ../../sphinxcontrib-jsonschema:1
 #: ../../sphinxcontrib-jsonschema:1
 msgid "Required"
 msgstr "Requerido"
 
-#: ../../docs/reference/schema.md:18
+#: ../../docs/reference/schema.md:0
+msgid "Examples"
+msgstr "Ejemplos"
+
+#: ../../docs/reference/schema.md:56
+msgid "Sub-schemas"
+msgstr "Sub-esquemas"
+
+#: ../../docs/reference/schema.md:58
+msgid ""
+"This section lists each sub-schema in the OC4IDS schema. Sub-schemas are "
+"parts of the schema that are represented as objects in OC4IDS data. Some "
+"sub-schemas are referenced from multiple places in the schema."
+msgstr ""
+"This section lists each sub-schema in the OC4IDS schema. Sub-schemas are "
+"parts of the schema that are represented as objects in OC4IDS data. Some "
+"sub-schemas are referenced from multiple places in the schema."
+
+#: ../../docs/reference/schema.md:60
 msgid "ContractingProcess"
 msgstr "Proceso de Contratación (ContractingProcess)"
 
-#: ../../docs/reference/schema.md:26
+#: ../../docs/reference/schema.md:62
+msgid "`ContractingProcess` is defined as:"
+msgstr "El `ContractingProcess` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Within OC4IDS, a contracting process provides both summary information, and "
+"a log of changes over time, either manually curated, or automatically "
+"generated through linked OCDS releases."
+msgstr ""
+"Dentro de OC4IDS, un proceso de contratación proporciona tanto información "
+"resumida, como un registro de los cambios a lo largo del tiempo, ya sea "
+"recopilada manualmente, o generada automáticamente a través de las versiones"
+" vinculadas de OCDS."
+
+#: ../../docs/reference/schema.md:67 ../../docs/reference/schema.md:102
+#: ../../docs/reference/schema.md:137 ../../docs/reference/schema.md:172
+#: ../../docs/reference/schema.md:213 ../../docs/reference/schema.md:337
+#: ../../docs/reference/schema.md:390 ../../docs/reference/schema.md:431
+#: ../../docs/reference/schema.md:567 ../../docs/reference/schema.md:602
+#: ../../docs/reference/schema.md:705 ../../docs/reference/schema.md:763
+#: ../../docs/reference/schema.md:798 ../../docs/reference/schema.md:835
+#: ../../docs/reference/schema.md:870 ../../docs/reference/schema.md:917
+#: ../../docs/reference/schema.md:959 ../../docs/reference/schema.md:994
+#: ../../docs/reference/schema.md:1035 ../../docs/reference/schema.md:1077
+#: ../../docs/reference/schema.md:1115 ../../docs/reference/schema.md:1156
+#: ../../docs/reference/schema.md:1191 ../../docs/reference/schema.md:1232
+#: ../../docs/reference/schema.md:1272 ../../docs/reference/schema.md:1307
+#: ../../docs/reference/schema.md:1342 ../../docs/reference/schema.md:1377
+#: ../../docs/reference/schema.md:1413 ../../docs/reference/schema.md:1448
+#: ../../docs/reference/schema.md:1483 ../../docs/reference/schema.md:1518
+#: ../../docs/reference/schema.md:1553 ../../docs/reference/schema.md:1588
+#: ../../docs/reference/schema.md:1623 ../../docs/reference/schema.md:1658
+#: ../../docs/reference/schema.md:1699 ../../docs/reference/schema.md:1734
+#: ../../docs/reference/schema.md:1769
+msgid "This sub-schema is referenced by the following properties:"
+msgstr ""
+"Este sub esquema está referenciado por las siguientes características:"
+
+#: ../../docs/reference/schema.md:68
+msgid "[`contractingProcesses`](project-schema.json,,contractingProcesses)"
+msgstr ""
+"[`Procesosdecontratación`](proyecto-esquema.json,,Procesosdecontratación)"
+
+#: ../../docs/reference/schema.md:70
+msgid "Each `ContractingProcess` has the following fields:"
+msgstr "Each `ContractingProcess` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:95
 msgid "ContractingProcessSummary"
 msgstr "Resumen de Proceso de Contratación (ContractingProcessSummary)"
 
-#: ../../docs/reference/schema.md:34
+#: ../../docs/reference/schema.md:97
+msgid "`ContractingProcessSummary` is defined as:"
+msgstr "`ContractingProcessSummary` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Summary information about a contracting process and any modifications to it."
+msgstr ""
+"Información resumida sobre un proceso de contratación y cualquier "
+"modificación del mismo."
+
+#: ../../notset:3
+msgid ""
+"Summary information can be manually entered and the `modifications` list can"
+" be used to manually record a log of changes, with the date and details of "
+"each modification."
+msgstr ""
+"La información resumida puede ingresarse manualmente y la lista de "
+"`modifications` puede utilizarse para registrar de forma manual los "
+"registros de los cambios , con las fechas y detalles de cada modificación"
+
+#: ../../notset:5
+msgid ""
+"Where OCDS data is available, most summary fields can be derived from OCDS "
+"releases, although the exact method to derive data might vary between "
+"implementations; and modifications can be identified by comparing a new "
+"release to previous releases to check for relevant changes, with the release"
+" identifier recorded in `modifications`."
+msgstr ""
+"Cuando se dispone de datos OCDS, la mayoría de los campos de resumen pueden "
+"derivarse de las versiones OCDS, aunque el método exacto para derivar los "
+"datos puede variar entre implementaciones; y las modificaciones pueden "
+"identificarse comparando una nueva versión con las anteriores para comprobar"
+" si hay cambios relevantes, con el identificador de la versión registrado en"
+" `modificaciones`."
+
+#: ../../docs/reference/schema.md:103
+msgid ""
+"[`ContractingProcess/summary`](project-"
+"schema.json,/definitions/ContractingProcess,summary)"
+msgstr ""
+"[`ContractingProcess/summary`](project-"
+"schema.json,/definitions/ContractingProcess,summary)"
+
+#: ../../docs/reference/schema.md:105
+msgid "Each `ContractingProcessSummary` has the following fields:"
+msgstr "Cada `ContractingProcessSummary` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:130
 msgid "LinkedRelease"
 msgstr "Entrega Enlazada (LinkedRelease)"
 
-#: ../../docs/reference/schema.md:41
-msgid "Components"
-msgstr "Componentes"
+#: ../../docs/reference/schema.md:132
+msgid "`LinkedRelease` is defined as:"
+msgstr "`LinkedRelease` se define como:"
 
-#: ../../docs/reference/schema.md:43
-msgid "Address"
-msgstr "Dirección"
-
-#: ../../docs/reference/schema.md:45
+#: ../../notset:1
 msgid ""
-"We use properties from schema.org and vCard for address components. In the "
-"event source data cannot be broken down into these parts, data SHOULD "
-"contain at least a streetAddress value and postal code."
+"A release of data represents the information known or updated at a "
+"particular point in time."
 msgstr ""
-"Usamos propiedades de schema.org y vCard para componentes de dirección. En "
-"el evento en que los datos fuente no puedan ser desglosados en estas partes,"
-" los datos DEBERÍAN contener al menos una calle (streetAddress) y código "
-"postal."
+"Una publicación de datos que representa la información conocida o "
+"actualizada en un momento determinado."
 
-#: ../../docs/reference/schema.md:47
+#: ../../docs/reference/schema.md:138
 msgid ""
-"When working with data, users should be aware that addresses may not always "
-"be broken down using all the properties the specification provides."
+"[`ContractingProcess/releases`](project-"
+"schema.json,/definitions/ContractingProcess,releases)"
 msgstr ""
-"Cuando se trabaja con los datos, los usuarios deben tener en cuenta que las "
-"direcciones no siempre están separadas en todas las propiedades que provee "
-"la especificación."
+"[`ContractingProcess/releases`](project-"
+"schema.json,/definitions/ContractingProcess,releases)"
 
-#: ../../docs/reference/schema.md:55
-msgid "BudgetBreakdown"
-msgstr "Desglose del Presupuesto (BudgetBreakdown)"
+#: ../../docs/reference/schema.md:140
+msgid "Each `LinkedRelease` has the following fields:"
+msgstr "Cada `LinkedRelease` tiene los siguientes campos:"
 
-#: ../../docs/reference/schema.md:57
-msgid ""
-"A budget breakdown is provided through an array of `BudgetBreakdown` "
-"objects, each of which represents budget for a particular period, from a "
-"particular source, or a combination of the two."
-msgstr ""
-"Un desglose del presupuesto se provee por medio de una lista de objetos "
-"`BudgetBreakdown`, cada una de las cuales representa un presupuesto para un "
-"período particular, de una fuente particular, o una combinación de ambos."
-
-#: ../../docs/reference/schema.md:59
-msgid ""
-"See the [documentation of the OCDS Budget Breakdown "
-"extension](https://extensions.open-"
-"contracting.org/en/extensions/budget/master/) for more details of this data "
-"model. BudgetBreakdown can also be extended further to include budget "
-"classifications data following the pattern described in the [OCDS Budgets "
-"and Spend extension](https://extensions.open-"
-"contracting.org/en/extensions/budget_and_spend/master/)."
-msgstr ""
-"Vea la [documentación de la extensión OCDS para desglose del "
-"presupuesto](https://extensions.open-"
-"contracting.org/en/extensions/budget/master/) para más detalles sobre este "
-"modelo de datos. El desglose del presupuesto (BudgetBreakdown) también puede"
-" ampliarse para incluir datos de clasificaciones presupuestarias siguiendo "
-"el patrón descrito en la [Extensión de presupuestos y gastos del "
-"OCDS](https://extensions.open-"
-"contracting.org/en/extensions/budget_and_spend/master/)."
-
-#: ../../docs/reference/schema.md:67
-msgid "Classification"
-msgstr "Clasificación"
-
-#: ../../docs/reference/schema.md:69
-msgid ""
-"A classification consists of an identifier for the codelist (the `scheme`) "
-"and a code from that codelist (the `id`), and then a human-readable label "
-"for the classification (the `description`)."
-msgstr ""
-"Una clasificación consiste en un identificador para la lista de códigos (el "
-"esquema -`scheme`- ) y un código de esa lista (el `id`), y una etiqueta de "
-"la clasificación legible por humanos (la descripción -`description`-)."
-
-#: ../../docs/reference/schema.md:77
-msgid "For example:"
-msgstr "Por ejemplo:"
-
-#: ../../docs/reference/schema.md:87
-msgid "ContactPoint"
-msgstr "Punto de Contacto"
-
-#: ../../docs/reference/schema.md:95
-msgid "Document"
-msgstr "Documento"
-
-#: ../../docs/reference/schema.md:97
-msgid ""
-"For each document the following structured information may be provided."
-msgstr ""
-"Se puede proveer la siguiente información estructurada por cada documento."
-
-#: ../../docs/reference/schema.md:105
-msgid "Identifier"
-msgstr "Identificador"
-
-#: ../../docs/reference/schema.md:107
-msgid ""
-"Use of stable official organization identifiers can help join up data "
-"between systems."
-msgstr ""
-"El uso de identificadores oficiales estables de la organización puede ayudar"
-" a unir los datos de diferentes sistemas."
-
-#: ../../docs/reference/schema.md:109
-msgid ""
-"Organization identifiers should be constructed by collecting an official "
-"company (or government body) registration number for the organization, and "
-"then finding the [org-id.guide list code](https://org-id.guide) for the "
-"list this identifier is taken from to use in the `scheme` field."
-msgstr ""
-"Los identificadores de la organización deberían ser construidos recogiendo "
-"el número de registro oficial de la compañía (o del ente gubernamental), y "
-"luego buscando el [código de lista de org-id.guide](https://org-id.guide)"
-" para la lista de la cual este identificador es tomado para utilizarlo en el"
-" campo `scheme`."
-
-#: ../../docs/reference/schema.md:111
-msgid ""
-"For example, if identifying a company in Colombia, look up its identifier in"
-" the [Unified Commercial and Social Registry](https://org-id.guide/list/CO-"
-"RUE) and use the list code `CO-RUE`."
-msgstr ""
-"Por ejemplo, si se quiere identificar una empresa en Colombia, busque su "
-"identificador en el [Registro Único Empresarial y Social](https://org-"
-"id.guide/list/CO-RUE) y use el código de lista `CO-RUE`."
-
-#: ../../docs/reference/schema.md:119
-msgid "Location"
-msgstr "Ubicación"
-
-#: ../../docs/reference/schema.md:121
-msgid ""
-"A project may have one or more locations. Locations may be expressed in a "
-"number of different ways, using one or more of:"
-msgstr ""
-"Un proyecto puede tener una o más ubicaciones. Las ubicaciones pueden "
-"expresarse de diferentes maneras, usando uno o más de los siguientes:"
-
-#: ../../docs/reference/schema.md:123
-msgid ""
-"A point location or geometry (e.g. trace of a road, or polygon giving the "
-"boundary of a site);"
-msgstr ""
-"Un punto de ubicación o una forma geométrica (ej. el trazo de una ruta, o un"
-" polígono que delimita un sitio);"
-
-#: ../../docs/reference/schema.md:124
-msgid "A gazetteer entry (e.g. town name);"
-msgstr "Una entrada en un diccionario geográfico (ej. nombre de un pueblo);"
-
-#: ../../docs/reference/schema.md:125
-msgid "An address."
-msgstr "Una dirección."
-
-#: ../../docs/reference/schema.md:133
+#: ../../docs/reference/schema.md:165
 msgid "Modification"
 msgstr "Modificación"
 
-#: ../../docs/reference/schema.md:135
+#: ../../docs/reference/schema.md:167
+msgid "`Modification` is defined as:"
+msgstr "`Modification` se define como:"
+
+#: ../../notset:1
 msgid ""
-"For each modification, the following structured information may be provided."
+"Contains a structured description of any changes, along with a free text "
+"justification."
 msgstr ""
-"Se puede proveer la siguiente información estructurada por cada "
-"modificación."
+"Contiene una descripción estructurada de cualquier cambio, junto con una "
+"justificación de texto libre."
 
-#: ../../docs/reference/schema.md:143
-msgid "Organization"
-msgstr "Organización"
+#: ../../docs/reference/schema.md:173
+msgid ""
+"[`ContractingProcessSummary/modifications`](project-"
+"schema.json,/definitions/ContractingProcessSummary,modifications)"
+msgstr ""
+"[`ContractingProcessSummary/modifications`](project-"
+"schema.json,/definitions/ContractingProcessSummary,modifications)"
 
-#: ../../docs/reference/schema.md:145
-msgid "For each organization, provide as much structured data as you can."
-msgstr "Para cada organización, provea tantos datos estructurados como pueda."
+#: ../../docs/reference/schema.md:175
+msgid "Each `Modification` has the following fields:"
+msgstr "Cada 'Modification' tiene los siguientes campos:"
 
-#: ../../docs/reference/schema.md:152
-msgid "OrganizationReference"
-msgstr "OrganizationReference"
-
-#: ../../docs/reference/schema.md:160
+#: ../../docs/reference/schema.md:200
 msgid "Period"
 msgstr "Periodo"
 
-#: ../../docs/reference/schema.md:162
+#: ../../docs/reference/schema.md:202
 msgid ""
 "Dates MUST be expressed using a full ISO 8601 date-time including a "
 "timezone. E.g.:"
@@ -311,25 +351,804 @@ msgstr ""
 "Fechas DEBEN ser expresadas usando el formato ISO 8601 de fecha y hora "
 "completos incluyendo una zona horaria. Ejemplo:"
 
-#: ../../docs/reference/schema.md:164
+#: ../../docs/reference/schema.md:204
 msgid "2018-09-18T11:26:04+01:00"
 msgstr "2018-09-18T11:26:04+01:00"
 
-#: ../../docs/reference/schema.md:166
+#: ../../docs/reference/schema.md:206
 msgid ""
-"Where the source system does not contain time information, a judgment should"
-" be made as to the relevant time to attach (e.g. start of the day; end of "
+"Where the source system does not contain time information, a judgment ought "
+"to be made as to the relevant time to attach (e.g. start of the day; end of "
 "the working day etc.)."
 msgstr ""
-"Cuando el sistema fuente no contenga información de hora, se debe decidir la"
-" hora pertinente a añadir (ej. inicio del día, final de la jornada laboral, "
-"etc.)."
+"Cuando el sistema de origen no contenga información horaria, deberá "
+"determinarse la hora pertinente (por ejemplo, inicio del día, fin de la "
+"jornada laboral, etc.)."
 
-#: ../../docs/reference/schema.md:174
+#: ../../docs/reference/schema.md:208
+msgid "`Period` is defined as:"
+msgstr "`Period` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Key events during a project or contracting process may have a known start "
+"date, end date, duration, or maximum extent (the latest date the period can "
+"extend to). In some cases, not all of these fields will have known or "
+"relevant values."
+msgstr ""
+" Los eventos más importantes de un proyecto o proceso de contratación pueden"
+" tener una fecha de inicio, una fecha de finalización, una duración o un "
+"alcance máximo (la fecha límite hasta la que puede extenderse el periodo) "
+"conocidos. En algunos casos, no todos estos campos tendrán valores conocidos"
+" o relevantes."
+
+#: ../../docs/reference/schema.md:214
+msgid "[`period`](project-schema.json,,period)"
+msgstr "[`period`](project-schema.json,,period)"
+
+#: ../../docs/reference/schema.md:215
+msgid "[`assetLifetime`](project-schema.json,,assetLifetime)"
+msgstr "[`assetLifetime`](project-schema.json,,assetLifetime)"
+
+#: ../../docs/reference/schema.md:216
+msgid "[`identificationPeriod`](project-schema.json,,identificationPeriod)"
+msgstr "[`identificationPeriod`](project-schema.json,,identificationPeriod)"
+
+#: ../../docs/reference/schema.md:217
+msgid "[`preparationPeriod`](project-schema.json,,preparationPeriod)"
+msgstr "[`preparationPeriod`](project-schema.json,,preparationPeriod)"
+
+#: ../../docs/reference/schema.md:218
+msgid "[`implementationPeriod`](project-schema.json,,implementationPeriod)"
+msgstr "[`implementationPeriod`](project-schema.json,,implementationPeriod)"
+
+#: ../../docs/reference/schema.md:219
+msgid "[`completionPeriod`](project-schema.json,,completionPeriod)"
+msgstr "[`completionPeriod`](project-schema.json,,completionPeriod)"
+
+#: ../../docs/reference/schema.md:220
+msgid "[`maintenancePeriod`](project-schema.json,,maintenancePeriod)"
+msgstr "[`maintenancePeriod`](project-schema.json,,maintenancePeriod)"
+
+#: ../../docs/reference/schema.md:221
+msgid "[`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)"
+msgstr "[`decommissioningPeriod`](project-schema.json,,decommissioningPeriod)"
+
+#: ../../docs/reference/schema.md:222
+msgid ""
+"[`ContractingProcessSummary/contractPeriod`](project-"
+"schema.json,/definitions/ContractingProcessSummary,contractPeriod)"
+msgstr ""
+"[`ContractingProcessSummary/contractPeriod`](project-"
+"schema.json,/definitions/ContractingProcessSummary,contractPeriod)"
+
+#: ../../docs/reference/schema.md:223
+msgid ""
+"[`Modification/oldContractPeriod`](project-"
+"schema.json,/definitions/Modification,oldContractPeriod)"
+msgstr ""
+"[`Modification/oldContractPeriod`](project-"
+"schema.json,/definitions/Modification,oldContractPeriod)"
+
+#: ../../docs/reference/schema.md:224
+msgid ""
+"[`Modification/newContractPeriod`](project-"
+"schema.json,/definitions/Modification,newContractPeriod)"
+msgstr ""
+"[`Modification/newContractPeriod`](project-"
+"schema.json,/definitions/Modification,newContractPeriod)"
+
+#: ../../docs/reference/schema.md:225
+msgid ""
+"[`BudgetBreakdown/period`](project-"
+"schema.json,/definitions/BudgetBreakdown,period)"
+msgstr ""
+"[`BudgetBreakdown/period`](project-"
+"schema.json,/definitions/BudgetBreakdown,period)"
+
+#: ../../docs/reference/schema.md:226
+msgid ""
+"[`Observation/period`](project-schema.json,/definitions/Observation,period)"
+msgstr ""
+"[`Observation/period`](project-schema.json,/definitions/Observation,period)"
+
+#: ../../docs/reference/schema.md:227
+msgid "[`Finance/period`](project-schema.json,/definitions/Finance,period)"
+msgstr "[`Finance/period`](project-schema.json,/definitions/Finance,period)"
+
+#: ../../docs/reference/schema.md:228
+msgid ""
+"[`Finance/paymentPeriod`](project-"
+"schema.json,/definitions/Finance,paymentPeriod)"
+msgstr ""
+"[`Finance/paymentPeriod`](project-"
+"schema.json,/definitions/Finance,paymentPeriod)"
+
+#: ../../docs/reference/schema.md:230
+msgid "Each `Period` has the following fields:"
+msgstr "Cada `Period` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:330
+msgid "Classification"
+msgstr "Clasificación"
+
+#: ../../docs/reference/schema.md:332
+msgid "`Classification` is defined as:"
+msgstr " `Classification` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A classification consists of at least two parts: an identifier for the list "
+"(scheme) from which the classification is taken, and an identifier for the "
+"category from that list being applied. It is useful to also publish a text "
+"label and/or URI that users can draw on to interpret the classification."
+msgstr ""
+" Una clasificación consta de al menos dos partes: un identificador para la "
+"lista (esquema) de la que se toma la clasificación y un identificador para "
+"la categoría de esa lista que se aplica. También es útil publicar una "
+"etiqueta de texto y/o URI a la que los usuarios puedan recurrir para "
+"interpretar la clasificación."
+
+#: ../../docs/reference/schema.md:338
+msgid ""
+"[`additionalClassifications`](project-"
+"schema.json,,additionalClassifications)"
+msgstr ""
+"[`additionalClassifications`](project-"
+"schema.json,,additionalClassifications)"
+
+#: ../../docs/reference/schema.md:339
+msgid ""
+"[`environment/impactCategories`](project-"
+"schema.json,,environment/impactCategories)"
+msgstr ""
+"[`environment/impactCategories`](project-"
+"schema.json,,environment/impactCategories)"
+
+#: ../../docs/reference/schema.md:340
+msgid ""
+"[`Organization/classifications`](project-"
+"schema.json,/definitions/Organization,classifications)"
+msgstr ""
+"[`Organization/classifications`](project-"
+"schema.json,/definitions/Organization,classifications)"
+
+#: ../../docs/reference/schema.md:341
+msgid ""
+"[`Cost/classification`](project-"
+"schema.json,/definitions/Cost,classification)"
+msgstr ""
+"[`Cost/classification`](project-"
+"schema.json,/definitions/Cost,classification)"
+
+#: ../../docs/reference/schema.md:343
+msgid "Each `Classification` has the following fields:"
+msgstr "Cada `Classification` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:383
+msgid "Location"
+msgstr "Ubicación"
+
+#: ../../docs/reference/schema.md:385
+msgid "`Location` is defined as:"
+msgstr "La \"Location\" se define como:"
+
+#: ../../notset:1
+msgid ""
+"The location where activity related to this project will be delivered, or "
+"will take place. A location may be described using a geometry (point "
+"location, line or polygon), a gazetteer entry, an address, or a combination "
+"of these."
+msgstr ""
+" Lugar en el que se llevará a cabo la actividad relacionada con este "
+"proyecto. Un lugar puede describirse mediante una geometría (punto, línea o "
+"polígono), una entrada de nomenclátor, una dirección o una combinación de "
+"estos elementos."
+
+#: ../../docs/reference/schema.md:391
+msgid "[`locations`](project-schema.json,,locations)"
+msgstr "[`locations`](project-schema.json,,locations)"
+
+#: ../../docs/reference/schema.md:392
+msgid ""
+"[`Beneficiary/location`](project-"
+"schema.json,/definitions/Beneficiary,location)"
+msgstr ""
+"[`Beneficiary/location`](project-"
+"schema.json,/definitions/Beneficiary,location)"
+
+#: ../../docs/reference/schema.md:394
+msgid "Each `Location` has the following fields:"
+msgstr "Cada `Location` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:424
+msgid "Value"
+msgstr "Valor"
+
+#: ../../docs/reference/schema.md:426
+msgid "`Value` is defined as:"
+msgstr "`Value` se define como:"
+
+#: ../../notset:1
+msgid "Financial values should be published with a currency attached."
+msgstr "Los valores financieros deben publicarse con una moneda adjunta."
+
+#: ../../docs/reference/schema.md:432
+msgid "[`budget/amount`](project-schema.json,,budget/amount)"
+msgstr "[`budget/amount`](project-schema.json,,budget/amount)"
+
+#: ../../docs/reference/schema.md:433
+msgid "[`completion/finalValue`](project-schema.json,,completion/finalValue)"
+msgstr "[`completion/finalValue`](project-schema.json,,completion/finalValue)"
+
+#: ../../docs/reference/schema.md:434
+msgid ""
+"[`environment/abatementCost`](project-"
+"schema.json,,environment/abatementCost)"
+msgstr ""
+"[`environment/abatementCost`](project-"
+"schema.json,,environment/abatementCost)"
+
+#: ../../docs/reference/schema.md:435
+msgid ""
+"[`ContractingProcessSummary/tender/costEstimate`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)"
+msgstr ""
+"[`ContractingProcessSummary/tender/costEstimate`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/costEstimate)"
+
+#: ../../docs/reference/schema.md:436
+msgid ""
+"[`ContractingProcessSummary/contractValue`](project-"
+"schema.json,/definitions/ContractingProcessSummary,contractValue)"
+msgstr ""
+"[`ContractingProcessSummary/contractValue`](project-"
+"schema.json,/definitions/ContractingProcessSummary,contractValue)"
+
+#: ../../docs/reference/schema.md:437
+msgid ""
+"[`ContractingProcessSummary/finalValue`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finalValue)"
+msgstr ""
+"[`ContractingProcessSummary/finalValue`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finalValue)"
+
+#: ../../docs/reference/schema.md:438
+msgid ""
+"[`ContractingProcessSummary/social/laborBudget`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborBudget)"
+msgstr ""
+"[`ContractingProcessSummary/social/laborBudget`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborBudget)"
+
+#: ../../docs/reference/schema.md:439
+msgid ""
+"[`Modification/oldContractValue`](project-"
+"schema.json,/definitions/Modification,oldContractValue)"
+msgstr ""
+"[`Modification/oldContractValue`](project-"
+"schema.json,/definitions/Modification,oldContractValue)"
+
+#: ../../docs/reference/schema.md:440
+msgid ""
+"[`Modification/newContractValue`](project-"
+"schema.json,/definitions/Modification,newContractValue)"
+msgstr ""
+"[`Modification/newContractValue`](project-"
+"schema.json,/definitions/Modification,newContractValue)"
+
+#: ../../docs/reference/schema.md:441
+msgid ""
+"[`BudgetBreakdown/amount`](project-"
+"schema.json,/definitions/BudgetBreakdown,amount)"
+msgstr ""
+"[`BudgetBreakdown/amount`](project-"
+"schema.json,/definitions/BudgetBreakdown,amount)"
+
+#: ../../docs/reference/schema.md:442
+msgid ""
+"[`Observation/value`](project-schema.json,/definitions/Observation,value)"
+msgstr ""
+"[`Observation/value`](project-schema.json,/definitions/Observation,value)"
+
+#: ../../docs/reference/schema.md:443
+msgid ""
+"[`Transaction/value`](project-schema.json,/definitions/Transaction,value)"
+msgstr ""
+"[`Transaction/value`](project-schema.json,/definitions/Transaction,value)"
+
+#: ../../docs/reference/schema.md:444
+msgid "[`Milestone/value`](project-schema.json,/definitions/Milestone,value)"
+msgstr "[`Milestone/value`](project-schema.json,/definitions/Milestone,value)"
+
+#: ../../docs/reference/schema.md:445
+msgid "[`Finance/value`](project-schema.json,/definitions/Finance,value)"
+msgstr "[`Finance/value`](project-schema.json,/definitions/Finance,value)"
+
+#: ../../docs/reference/schema.md:446
+msgid ""
+"[`CostMeasurement/lifeCycleCosting/value`](project-"
+"schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)"
+msgstr ""
+"[`CostMeasurement/lifeCycleCosting/value`](project-"
+"schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)"
+
+#: ../../docs/reference/schema.md:447
+msgid "[`Cost/value`](project-schema.json,/definitions/Cost,value)"
+msgstr "[`Cost/value`](project-schema.json,/definitions/Cost,value)"
+
+#: ../../docs/reference/schema.md:448
+msgid ""
+"[`Social/landCompensationBudget`](project-"
+"schema.json,/definitions/Social,landCompensationBudget)"
+msgstr ""
+"[`Social/landCompensationBudget`](project-"
+"schema.json,/definitions/Social,landCompensationBudget)"
+
+#: ../../docs/reference/schema.md:450
+msgid "Each `Value` has the following fields:"
+msgstr "Calda `Value` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:560
+msgid "Organization"
+msgstr "Organización"
+
+#: ../../docs/reference/schema.md:562
+msgid "`Organization` is defined as:"
+msgstr "`Organization` se define como:"
+
+#: ../../notset:1
+msgid "A party (organization)"
+msgstr "Una parte (organización)"
+
+#: ../../docs/reference/schema.md:568
+msgid "[`parties`](project-schema.json,,parties)"
+msgstr "[`parties`](project-schema.json,,parties)"
+
+#: ../../docs/reference/schema.md:570
+msgid "Each `Organization` has the following fields:"
+msgstr "Cada `Organization` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:595
+msgid "OrganizationReference"
+msgstr "OrganizationReference"
+
+#: ../../docs/reference/schema.md:597
+msgid "`OrganizationReference` is defined as:"
+msgstr "`OrganizationReference` se define como:"
+
+#: ../../notset:1
+msgid ""
+"The id and name of the party being referenced. Used to cross-reference to "
+"the parties section"
+msgstr ""
+"La Id y el nombre de la parte a la que se hace referencia. Se utiliza para "
+"hacer referencias cruzadas a la sección de partes."
+
+#: ../../docs/reference/schema.md:603
+msgid "[`publicAuthority`](project-schema.json,,publicAuthority)"
+msgstr "[`publicAuthority`](project-schema.json,,publicAuthority)"
+
+#: ../../docs/reference/schema.md:604
+msgid ""
+"[`ContractingProcessSummary/tender/tenderers`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/tenderers)"
+msgstr ""
+"[`ContractingProcessSummary/tender/tenderers`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/tenderers)"
+
+#: ../../docs/reference/schema.md:605
+msgid ""
+"[`ContractingProcessSummary/tender/procuringEntity`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/procuringEntity)"
+msgstr ""
+"[`ContractingProcessSummary/tender/procuringEntity`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/procuringEntity)"
+
+#: ../../docs/reference/schema.md:606
+msgid ""
+"[`ContractingProcessSummary/tender/administrativeEntity`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/administrativeEntity)"
+msgstr ""
+"[`ContractingProcessSummary/tender/administrativeEntity`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/administrativeEntity)"
+
+#: ../../docs/reference/schema.md:607
+msgid ""
+"[`ContractingProcessSummary/suppliers`](project-"
+"schema.json,/definitions/ContractingProcessSummary,suppliers)"
+msgstr ""
+"[`ContractingProcessSummary/suppliers`](project-"
+"schema.json,/definitions/ContractingProcessSummary,suppliers)"
+
+#: ../../docs/reference/schema.md:608
+msgid ""
+"[`BudgetBreakdown/sourceParty`](project-"
+"schema.json,/definitions/BudgetBreakdown,sourceParty)"
+msgstr ""
+"[`BudgetBreakdown/sourceParty`](project-"
+"schema.json,/definitions/BudgetBreakdown,sourceParty)"
+
+#: ../../docs/reference/schema.md:609
+msgid ""
+"[`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)"
+msgstr ""
+"[`Transaction/payer`](project-schema.json,/definitions/Transaction,payer)"
+
+#: ../../docs/reference/schema.md:610
+msgid ""
+"[`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)"
+msgstr ""
+"[`Transaction/payee`](project-schema.json,/definitions/Transaction,payee)"
+
+#: ../../docs/reference/schema.md:611
+msgid ""
+"[`Finance/financingParty`](project-"
+"schema.json,/definitions/Finance,financingParty)"
+msgstr ""
+"[`Finance/financingParty`](project-"
+"schema.json,/definitions/Finance,financingParty)"
+
+#: ../../docs/reference/schema.md:612
+msgid ""
+"[`PublicOffice/organization`](project-"
+"schema.json,/definitions/PublicOffice,organization)"
+msgstr ""
+"[`PublicOffice/organization`](project-"
+"schema.json,/definitions/PublicOffice,organization)"
+
+#: ../../docs/reference/schema.md:614
+msgid "Each `OrganizationReference` has the following fields:"
+msgstr "Cada `OrganizationReference` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:694
+msgid "Address"
+msgstr "Dirección"
+
+#: ../../docs/reference/schema.md:696
+msgid ""
+"The address sub-schema re-uses fields from schema.org and vCard. In the "
+"event source data cannot be broken down into these parts, data should "
+"contain at least a `streetAddress` and `postalCode`."
+msgstr ""
+" El subesquema de direcciones reutiliza campos de schema.org y vCard. En "
+"caso de que los datos de origen no puedan desglosarse en estas partes, los "
+"datos deben contener al menos `streetAddress` y `postalCode`."
+
+#: ../../docs/reference/schema.md:698
+msgid ""
+"When working with data, users ought to be aware that addresses might not "
+"always be broken down using all the fields the schema provides."
+msgstr ""
+"Al trabajar con datos, los usuarios deben tener en cuenta que es posible que"
+" las direcciones no siempre se desglosen utilizando todos los campos que "
+"proporciona el esquema."
+
+#: ../../docs/reference/schema.md:700
+msgid "`Address` is defined as:"
+msgstr "`Address` se define como:"
+
+#: ../../notset:1
+msgid "An address."
+msgstr "Una dirección."
+
+#: ../../docs/reference/schema.md:706
+msgid ""
+"[`Location/address`](project-schema.json,/definitions/Location,address)"
+msgstr ""
+"[`Location/address`](project-schema.json,/definitions/Location,address)"
+
+#: ../../docs/reference/schema.md:707
+msgid ""
+"[`Organization/address`](project-"
+"schema.json,/definitions/Organization,address)"
+msgstr ""
+"[`Organization/address`](project-"
+"schema.json,/definitions/Organization,address)"
+
+#: ../../docs/reference/schema.md:708
+msgid "[`Person/address`](project-schema.json,/definitions/Person,address)"
+msgstr "[`Person/address`](project-schema.json,/definitions/Person,address)"
+
+#: ../../docs/reference/schema.md:709
+msgid "[`Meeting/address`](project-schema.json,/definitions/Meeting,address)"
+msgstr "[`Meeting/address`](project-schema.json,/definitions/Meeting,address)"
+
+#: ../../docs/reference/schema.md:711
+msgid "Each `Address` has the following fields:"
+msgstr "Cada `Address` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:756
+msgid "ContactPoint"
+msgstr "Punto de Contacto"
+
+#: ../../docs/reference/schema.md:758
+msgid "`ContactPoint` is defined as:"
+msgstr "`ContactPoint` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A person, contact point or department to contact in relation to this "
+"contracting process."
+msgstr ""
+"Una persona, punto de contacto o departamento a contactar en relación con "
+"este proceso de contratación."
+
+#: ../../docs/reference/schema.md:764
+msgid ""
+"[`Organization/contactPoint`](project-"
+"schema.json,/definitions/Organization,contactPoint)"
+msgstr ""
+"[`Organization/contactPoint`](project-"
+"schema.json,/definitions/Organization,contactPoint)"
+
+#: ../../docs/reference/schema.md:766
+msgid "Each `ContactPoint` has the following fields:"
+msgstr "Cada `ContactPoint` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:791
+msgid "BudgetBreakdowns"
+msgstr "Desgloses presupuestarios"
+
+#: ../../docs/reference/schema.md:793
+msgid "`BudgetBreakdowns` is defined as:"
+msgstr "`BudgetBreakdowns` se define como:"
+
+#: ../../notset:1
+msgid "Details of a breakdown of the budget grouped by a common dimension."
+msgstr ""
+"Detalle de un desglose del presupuesto agrupado por una dimensión común."
+
+#: ../../docs/reference/schema.md:799
+msgid ""
+"[`budget/budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns)"
+msgstr ""
+"[`budget/budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns)"
+
+#: ../../docs/reference/schema.md:801
+msgid "Each `BudgetBreakdowns` has the following fields:"
+msgstr "Cada `BudgetBreakdowns` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:826
+msgid "BudgetBreakdown"
+msgstr "Desglose del Presupuesto (BudgetBreakdown)"
+
+#: ../../docs/reference/schema.md:828
+msgid ""
+"For more information about this sub-schema, see the [OCDS Budget Breakdown "
+"extension documentation](https://extensions.open-"
+"contracting.org/en/extensions/budget/master/). `BudgetBreakdown` can also be"
+" extended further to include budget classifications data following the "
+"pattern described in the [OCDS Budgets and Spend "
+"extension](https://extensions.open-"
+"contracting.org/en/extensions/budget_and_spend/master/)."
+msgstr ""
+" Para más información sobre este subesquema, consulte la [Documentación de "
+"la extensión OCDS Budget Breakdown](https://extensions.open-"
+"contracting.org/en/extensions/budget/master/). `BudgetBreakdown` también "
+"puede ampliarse para incluir datos de clasificaciones presupuestarias "
+"siguiendo el patrón descrito en la [OCDS Budgets and Spend "
+"extension](https://extensions.open-"
+"contracting.org/en/extensions/budget_and_spend/master/)."
+
+#: ../../docs/reference/schema.md:830
+msgid "`BudgetBreakdown` is defined as:"
+msgstr "`BudgetBreakdown` se define como:"
+
+#: ../../notset:1
+msgid ""
+"This section allows a detailed budget breakdown to be expressed, covering "
+"multiple budget sources and multiple periods"
+msgstr ""
+" Esta sección permite expresar un desglose presupuestario detallado, que "
+"abarca múltiples fuentes presupuestarias y múltiples periodos"
+
+#: ../../docs/reference/schema.md:836
+msgid ""
+"[`BudgetBreakdowns/budgetBreakdown`](project-"
+"schema.json,/definitions/BudgetBreakdowns,budgetBreakdown)"
+msgstr ""
+"[`BudgetBreakdowns/budgetBreakdown`](project-"
+"schema.json,/definitions/BudgetBreakdowns,budgetBreakdown)"
+
+#: ../../docs/reference/schema.md:838
+msgid "Each `BudgetBreakdown` has the following fields:"
+msgstr "Cada `BudgetBreakdown` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:863
+msgid "Document"
+msgstr "Documento"
+
+#: ../../docs/reference/schema.md:865
+msgid "`Document` is defined as:"
+msgstr "`Document` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Links to, or descriptions of, external documents can be attached at various "
+"locations within the standard. Documents can be supporting information, "
+"formal notices, downloadable forms, or any other kind of resource that ought"
+" to be made public as part of full open contracting."
+msgstr ""
+" Se pueden adjuntar enlaces o descripciones de documentos externos en varios"
+" lugares de la norma. Los documentos pueden ser información de apoyo, "
+"anuncios formales, formularios descargables o cualquier otro tipo de recurso"
+" que deba hacerse público como parte de una contratación totalmente abierta."
+
+#: ../../docs/reference/schema.md:871
+msgid "[`documents`](project-schema.json,,documents)"
+msgstr "[`documents`](project-schema.json,,documents)"
+
+#: ../../docs/reference/schema.md:872
+msgid ""
+"[`ContractingProcessSummary/documents`](project-"
+"schema.json,/definitions/ContractingProcessSummary,documents)"
+msgstr ""
+"[`ContractingProcessSummary/documents`](project-"
+"schema.json,/definitions/ContractingProcessSummary,documents)"
+
+#: ../../docs/reference/schema.md:874
+msgid "Each `Document` has the following fields:"
+msgstr "Cada 'Document' tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:904
+msgid "Identifier"
+msgstr "Identificador"
+
+#: ../../docs/reference/schema.md:906
+msgid ""
+"Use of stable official organization identifiers can help join up data "
+"between systems."
+msgstr ""
+"El uso de identificadores oficiales estables de la organización puede ayudar"
+" a unir los datos de diferentes sistemas."
+
+#: ../../docs/reference/schema.md:908
+msgid ""
+"Organization identifiers should be constructed by collecting an official "
+"company (or government body) registration number for the organization, and "
+"then finding the [org-id.guide list code](https://org-id.guide) for the list"
+" this identifier is taken from to use in the `scheme` field."
+msgstr ""
+"Los identificadores de organización deben construirse recopilando un número "
+"de registro oficial de la empresa (u organismo gubernamental) para la "
+"organización y, a continuación, encontrando el [org-id.guide list "
+"code](https://org-id.guide) de la lista de la que se toma este identificador"
+" para utilizarlo en el campo `scheme`."
+
+#: ../../docs/reference/schema.md:910
+msgid ""
+"For example, if identifying a company in Colombia, look up its identifier in"
+" the [Unified Commercial and Social Registry](https://org-id.guide/list/CO-"
+"RUE) and use the list code `CO-RUE`."
+msgstr ""
+"Por ejemplo, si desea identificar una empresa en Colombia, busque su "
+"identificador en el [Registro Unificado Mercantil y Social](https://org-"
+"id.guide/list/CO-RUE) y utilice el código de lista `CO-RUE`."
+
+#: ../../docs/reference/schema.md:912
+msgid "`Identifier` is defined as:"
+msgstr "`Identifier` se define como:"
+
+#: ../../notset:1
+msgid "A unique identifier for a party (organization)."
+msgstr "Un identificador único para una parte (organización)."
+
+#: ../../docs/reference/schema.md:918
+msgid ""
+"[`Organization/identifier`](project-"
+"schema.json,/definitions/Organization,identifier)"
+msgstr ""
+"[`Organization/identifier`](project-"
+"schema.json,/definitions/Organization,identifier)"
+
+#: ../../docs/reference/schema.md:919
+msgid ""
+"[`Organization/additionalIdentifiers`](project-"
+"schema.json,/definitions/Organization,additionalIdentifiers)"
+msgstr ""
+"[`Organization/additionalIdentifiers`](project-"
+"schema.json,/definitions/Organization,additionalIdentifiers)"
+
+#: ../../docs/reference/schema.md:920
+msgid ""
+"[`Person/identifier`](project-schema.json,/definitions/Person,identifier)"
+msgstr ""
+"[`Person/identifier`](project-schema.json,/definitions/Person,identifier)"
+
+#: ../../docs/reference/schema.md:922
+msgid "Each `Identifier` has the following fields:"
+msgstr "Cada `Identifier` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:952
+msgid "RelatedProject"
+msgstr "RelatedProject"
+
+#: ../../docs/reference/schema.md:954
+msgid "`RelatedProject` is defined as:"
+msgstr "`RelatedProject` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A reference to a project related to the same set of infrastructure assets as"
+" this project. Generally, related projects either precede or follow on from "
+"the current project."
+msgstr ""
+" Referencia a un proyecto relacionado con el mismo conjunto de activos de "
+"infraestructura que este proyecto. Por lo general, los proyectos "
+"relacionados son anteriores o posteriores al proyecto actual."
+
+#: ../../docs/reference/schema.md:960
+msgid "[`relatedProjects`](project-schema.json,,relatedProjects)"
+msgstr "[`relatedProjects`](project-schema.json,,relatedProjects)"
+
+#: ../../docs/reference/schema.md:962
+msgid "Each `RelatedProject` has the following fields:"
+msgstr "Cada `RelatedProject` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:987
+msgid "Metric"
+msgstr "Métrica"
+
+#: ../../docs/reference/schema.md:989
+msgid "`Metric` is defined as:"
+msgstr "`Metric` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Metrics are used to set out forecast and actual metrics targets for a "
+"project: for example, planned and actual physical and financial progress "
+"over time."
+msgstr ""
+"Las métricas se utilizan para establecer objetivos de métricas proyectados y"
+" reales para un proyecto: por ejemplo, progreso físico y financiero "
+"planificado y real a lo largo del tiempo."
+
+#: ../../docs/reference/schema.md:995
+msgid "[`forecasts`](project-schema.json,,forecasts)"
+msgstr "[`forecasts`](project-schema.json,,forecasts)"
+
+#: ../../docs/reference/schema.md:996
+msgid "[`metrics`](project-schema.json,,metrics)"
+msgstr "[`metrics`](project-schema.json,,metrics)"
+
+#: ../../docs/reference/schema.md:998
+msgid "Each `Metric` has the following fields:"
+msgstr "Cada `Metric` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1028
+msgid "Observation"
+msgstr "Observación"
+
+#: ../../docs/reference/schema.md:1030
+msgid "`Observation` is defined as:"
+msgstr "`Observation` se define como:"
+
+#: ../../notset:1
+msgid ""
+"An actual or target observation. Observations should include either a value "
+"(for financial metrics) or measure (for other metrics)."
+msgstr ""
+"Una observación real u objetivo. Las observaciones deben incluir un valor "
+"(para las métricas financieras) o una medida (para otras métricas)."
+
+#: ../../docs/reference/schema.md:1036
+msgid ""
+"[`Metric/observations`](project-"
+"schema.json,/definitions/Metric,observations)"
+msgstr ""
+"[`Metric/observations`](project-"
+"schema.json,/definitions/Metric,observations)"
+
+#: ../../docs/reference/schema.md:1038
+msgid "Each `Observation` has the following fields:"
+msgstr "Cada `Observation` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1068
 msgid "Person"
 msgstr "Persona"
 
-#: ../../docs/reference/schema.md:176
+#: ../../docs/reference/schema.md:1070
 msgid ""
 "Use this object when you need to disclose the details of people associated "
 "with, representing or working on behalf of an organization involved in the "
@@ -339,34 +1158,545 @@ msgstr ""
 "asociadas, que representan o trabajan en nombre de una organización "
 "involucrada en el proyecto."
 
-#: ../../docs/reference/schema.md:184
-msgid "RelatedProject"
-msgstr "RelatedProject"
+#: ../../docs/reference/schema.md:1072
+msgid "`Person` is defined as:"
+msgstr "`Person` se define como:"
 
-#: ../../docs/reference/schema.md:186
+#: ../../notset:1
+msgid "A natural person."
+msgstr "Una persona natural."
+
+#: ../../docs/reference/schema.md:1078
 msgid ""
-"A reference to a project related to the same set of infrastructure assets as"
-" the current project."
+"[`Organization/beneficialOwners`](project-"
+"schema.json,/definitions/Organization,beneficialOwners)"
 msgstr ""
-"Una referencia a un proyecto relacionado al mismo conjunto de activos de "
-"infraestructura del proyecto actual."
+"[`Organization/beneficialOwners`](project-"
+"schema.json,/definitions/Organization,beneficialOwners)"
 
-#: ../../docs/reference/schema.md:194
+#: ../../docs/reference/schema.md:1079
+msgid ""
+"[`Organization/people`](project-"
+"schema.json,/definitions/Organization,people)"
+msgstr ""
+"[`Organization/people`](project-"
+"schema.json,/definitions/Organization,people)"
+
+#: ../../docs/reference/schema.md:1081
+msgid "Each `Person` has the following fields:"
+msgstr "Cada `Person` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1106
 msgid "Transaction"
 msgstr "Transacción"
 
-#: ../../docs/reference/schema.md:196
+#: ../../docs/reference/schema.md:1108
 msgid "A spending transaction related to a contracting process."
 msgstr "Una transacción de gasto relacionada a un proceso de contratación."
 
-#: ../../docs/reference/schema.md:204
-msgid "Value"
-msgstr "Valor"
+#: ../../docs/reference/schema.md:1110
+msgid "`Transaction` is defined as:"
+msgstr "`Transaction` se define como:"
 
-#: ../../docs/reference/schema.md:206
+#: ../../notset:1
 msgid ""
-"All values should be published along with their currency using the following"
-" structure."
+"A financial transaction related to a project or contracting process. Draws "
+"upon the data models of the Fiscal Data Package and the International Aid "
+"Transparency Initiative and should be used to cross-reference to more "
+"detailed information held using a Fiscal Data Package, IATI file, or to "
+"provide enough information to allow a user to manually or automatically "
+"cross-reference with some other published source of transactional data."
 msgstr ""
-"Todos los valores deberían ser publicados junto con su moneda usando la "
-"estructura que sigue."
+" Transacción financiera relacionada con un proyecto o proceso de "
+"contratación. Se basa en los modelos de datos del Paquete de Datos Fiscales "
+"y de la Iniciativa Internacional para la Transparencia de la Ayuda y debe "
+"utilizarse para establecer referencias cruzadas con información más "
+"detallada contenida en un Paquete de Datos Fiscales, un archivo IATI, o para"
+" proporcionar información suficiente que permita al usuario establecer "
+"referencias cruzadas manual o automáticamente con alguna otra fuente "
+"publicada de datos transaccionales."
+
+#: ../../docs/reference/schema.md:1116
+msgid "[`transactions`](project-schema.json,,transactions)"
+msgstr "[`transactions`](project-schema.json,,transactions)"
+
+#: ../../docs/reference/schema.md:1117
+msgid ""
+"[`ContractingProcessSummary/transactions`](project-"
+"schema.json,/definitions/ContractingProcessSummary,transactions)"
+msgstr ""
+"[`ContractingProcessSummary/transactions`](project-"
+"schema.json,/definitions/ContractingProcessSummary,transactions)"
+
+#: ../../docs/reference/schema.md:1119
+msgid "Each `Transaction` has the following fields:"
+msgstr "Cada `Transaction` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1149
+msgid "SimpleIdentifier"
+msgstr "Identificador simple"
+
+#: ../../docs/reference/schema.md:1151
+msgid "`SimpleIdentifier` is defined as:"
+msgstr "`SimpleIdentifier` se define como:"
+
+#: ../../notset:1
+msgid "An unambiguous reference to a resource within a given context."
+msgstr ""
+"Una referencia inequívoca a un recurso dentro de un contexto determinado."
+
+#: ../../docs/reference/schema.md:1157
+msgid "[`identifiers`](project-schema.json,,identifiers)"
+msgstr "[`identifiers`](project-schema.json,,identifiers)"
+
+#: ../../docs/reference/schema.md:1159
+msgid "Each `SimpleIdentifier` has the following fields:"
+msgstr "Cada `SimpleIdentifier` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1184
+msgid "Milestone"
+msgstr "Hito"
+
+#: ../../docs/reference/schema.md:1186
+msgid "`Milestone` is defined as:"
+msgstr "`Milestone` se define como:"
+
+#: ../../notset:1
+msgid "An event in the lifetime of a project or contracting process."
+msgstr "Un evento en la vida de un proyecto o proceso de contratación."
+
+#: ../../docs/reference/schema.md:1192
+msgid "[`milestones`](project-schema.json,,milestones)"
+msgstr "[`milestones`](project-schema.json,,milestones)"
+
+#: ../../docs/reference/schema.md:1193
+msgid ""
+"[`ContractingProcessSummary/milestones`](project-"
+"schema.json,/definitions/ContractingProcessSummary,milestones)"
+msgstr ""
+"[`ContractingProcessSummary/milestones`](project-"
+"schema.json,/definitions/ContractingProcessSummary,milestones)"
+
+#: ../../docs/reference/schema.md:1195
+msgid "Each `Milestone` has the following fields:"
+msgstr "Cada `Milestone` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1225
+msgid "MilestoneReference"
+msgstr "Referencia de hito"
+
+#: ../../docs/reference/schema.md:1227
+msgid "`MilestoneReference` is defined as:"
+msgstr "`MilestoneReference` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A block used to reference a milestone, including the ID and title of the "
+"milestone being referenced."
+msgstr ""
+"Un bloque utilizado para hacer referencia a un hito, incluido la ID y el "
+"título del hito al que se hace referencia."
+
+#: ../../docs/reference/schema.md:1233
+msgid ""
+"[`Transaction/relatedImplementationMilestone`](project-"
+"schema.json,/definitions/Transaction,relatedImplementationMilestone)"
+msgstr ""
+"[`Transaction/relatedImplementationMilestone`](project-"
+"schema.json,/definitions/Transaction,relatedImplementationMilestone)"
+
+#: ../../docs/reference/schema.md:1235
+msgid "Each `MilestoneReference` has the following fields:"
+msgstr "Cada `MilestoneReference` los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1265
+msgid "ClimateMeasure"
+msgstr "Medida climática"
+
+#: ../../docs/reference/schema.md:1267
+msgid "`ClimateMeasure` is defined as:"
+msgstr "`ClimateMeasure` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A measure adopted by the project to adapt to or mitigate against climate "
+"change."
+msgstr ""
+"Una medida adoptada por el proyecto para adaptarse o mitigar el cambio "
+"climático."
+
+#: ../../docs/reference/schema.md:1273
+msgid ""
+"[`environment/climateMeasures`](project-"
+"schema.json,,environment/climateMeasures)"
+msgstr ""
+"[`environment/climateMeasures`](project-"
+"schema.json,,environment/climateMeasures)"
+
+#: ../../docs/reference/schema.md:1275
+msgid "Each `ClimateMeasure` has the following fields:"
+msgstr "Cada `ClimateMeasure` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1300
+msgid "ConservationMeasure"
+msgstr "Medida de conservación"
+
+#: ../../docs/reference/schema.md:1302
+msgid "`ConservationMeasure` is defined as:"
+msgstr "`ConservationMeasure` se define como:"
+
+#: ../../notset:1
+msgid "A measure adopted by the project to protect and enhance biodiversity."
+msgstr ""
+"Una medida adoptada por el proyecto para proteger y mejorar la "
+"biodiversidad."
+
+#: ../../docs/reference/schema.md:1308
+msgid ""
+"[`environment/conservationMeasures`](project-"
+"schema.json,,environment/conservationMeasures)"
+msgstr ""
+"[`environment/conservationMeasures`](project-"
+"schema.json,,environment/conservationMeasures)"
+
+#: ../../docs/reference/schema.md:1310
+msgid "Each `ConservationMeasure` has the following fields:"
+msgstr "Cada `ConservationMeasure` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1335
+msgid "EnvironmentalMeasure"
+msgstr "Medida ambiental"
+
+#: ../../docs/reference/schema.md:1337
+msgid "`EnvironmentalMeasure` is defined as:"
+msgstr "`EnvironmentalMeasure` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A measure adopted by the project to mitigate or remedy environmental "
+"impacts."
+msgstr ""
+"Una medida adoptada por el proyecto para mitigar o remediar los impactos "
+"ambientales."
+
+#: ../../docs/reference/schema.md:1343
+msgid ""
+"[`environment/environmentalMeasures`](project-"
+"schema.json,,environment/environmentalMeasures)"
+msgstr ""
+"[`environment/environmentalMeasures`](project-"
+"schema.json,,environment/environmentalMeasures)"
+
+#: ../../docs/reference/schema.md:1345
+msgid "Each `EnvironmentalMeasure` has the following fields:"
+msgstr "Cada `EnvironmentalMeasure` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1370
+msgid "Finance"
+msgstr "Finanzas"
+
+#: ../../docs/reference/schema.md:1372
+msgid "`Finance` is defined as:"
+msgstr "`Finance` se define como:"
+
+#: ../../notset:1
+msgid "An arrangement between two parties for raising money."
+msgstr "Un arreglo entre dos partes para recaudar dinero."
+
+#: ../../docs/reference/schema.md:1378
+msgid "[`budget/finance`](project-schema.json,,budget/finance)"
+msgstr "[`budget/finance`](project-schema.json,,budget/finance)"
+
+#: ../../docs/reference/schema.md:1379
+msgid ""
+"[`ContractingProcessSummary/finance`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finance)"
+msgstr ""
+"[`ContractingProcessSummary/finance`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finance)"
+
+#: ../../docs/reference/schema.md:1381
+msgid "Each `Finance` has the following fields:"
+msgstr "Cada `Finance` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1406
+msgid "CostMeasurement"
+msgstr "Medición de costos"
+
+#: ../../docs/reference/schema.md:1408
+msgid "`CostMeasurement` is defined as:"
+msgstr "`CostMeasurement` se define como:"
+
+#: ../../notset:1
+msgid "A measurement of costs for a project."
+msgstr "Una medida de los costos de un proyecto."
+
+#: ../../docs/reference/schema.md:1414
+msgid "[`costMeasurements`](project-schema.json,,costMeasurements)"
+msgstr "[`costMeasurements`](project-schema.json,,costMeasurements)"
+
+#: ../../docs/reference/schema.md:1416
+msgid "Each `CostMeasurement` has the following fields:"
+msgstr "Cada `CostMeasurement` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1441
+msgid "CostGroup"
+msgstr "Grupo de costos"
+
+#: ../../docs/reference/schema.md:1443
+msgid "`CostGroup` is defined as:"
+msgstr "`CostGroup` se define como:"
+
+#: ../../notset:1
+msgid "A group of costs relating to a project."
+msgstr "Un grupo de costos relacionados con un proyecto."
+
+#: ../../docs/reference/schema.md:1449
+msgid ""
+"[`CostMeasurement/costGroups`](project-"
+"schema.json,/definitions/CostMeasurement,costGroups)"
+msgstr ""
+"[`CostMeasurement/costGroups`](project-"
+"schema.json,/definitions/CostMeasurement,costGroups)"
+
+#: ../../docs/reference/schema.md:1451
+msgid "Each `CostGroup` has the following fields:"
+msgstr "Cada `CostGroup` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1476
+msgid "Cost"
+msgstr "Costo"
+
+#: ../../docs/reference/schema.md:1478
+msgid "`Cost` is defined as:"
+msgstr "`Cost` se define como:"
+
+#: ../../notset:1
+msgid "A cost relating to a project."
+msgstr "Un costo relacionado con un proyecto."
+
+#: ../../docs/reference/schema.md:1484
+msgid "[`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)"
+msgstr "[`CostGroup/costs`](project-schema.json,/definitions/CostGroup,costs)"
+
+#: ../../docs/reference/schema.md:1486
+msgid "Each `Cost` has the following fields:"
+msgstr "Cada `Cost` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1511
+msgid "LaborObligations"
+msgstr "Obligaciones laborales"
+
+#: ../../docs/reference/schema.md:1513
+msgid "`LaborObligations` is defined as:"
+msgstr "`LaborObligations` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Information about labor obligations stipulated in the construction "
+"contract(s)."
+msgstr ""
+"Información sobre las obligaciones laborales estipuladas en el(los) "
+"contrato(s) de construcción."
+
+#: ../../docs/reference/schema.md:1519
+msgid ""
+"[`ContractingProcessSummary/social/laborObligations`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborObligations)"
+msgstr ""
+"[`ContractingProcessSummary/social/laborObligations`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborObligations)"
+
+#: ../../docs/reference/schema.md:1521
+msgid "Each `LaborObligations` has the following fields:"
+msgstr "Cada `LaborObligations` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1546
+msgid "Benefit"
+msgstr "Beneficio"
+
+#: ../../docs/reference/schema.md:1548
+msgid "`Benefit` is defined as:"
+msgstr "`Benefit` se define como:"
+
+#: ../../notset:1
+msgid "A benefit or intended benefit of the project."
+msgstr "Un beneficio o beneficio previsto del proyecto."
+
+#: ../../docs/reference/schema.md:1554
+msgid "[`benefits`](project-schema.json,,benefits)"
+msgstr "[`benefits`](project-schema.json,,benefits)"
+
+#: ../../docs/reference/schema.md:1556
+msgid "Each `Benefit` has the following fields:"
+msgstr "Cada `Benefit` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1581
+msgid "Beneficiary"
+msgstr "Beneficiario"
+
+#: ../../docs/reference/schema.md:1583
+msgid "`Beneficiary` is defined as:"
+msgstr "Por `Beneficiary` se entiende:"
+
+#: ../../notset:1
+msgid "Information about a beneficiary of the project."
+msgstr "Información sobre un beneficiario del proyecto."
+
+#: ../../docs/reference/schema.md:1589
+msgid ""
+"[`Benefit/beneficiaries`](project-"
+"schema.json,/definitions/Benefit,beneficiaries)"
+msgstr ""
+"[`Benefit/beneficiaries`](project-"
+"schema.json,/definitions/Benefit,beneficiaries)"
+
+#: ../../docs/reference/schema.md:1591
+msgid "Each `Beneficiary` has the following fields:"
+msgstr "Cada `Beneficiary`  tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1616
+msgid "Sustainability"
+msgstr "Sostenibilidad"
+
+#: ../../docs/reference/schema.md:1618
+msgid "`Sustainability` is defined as:"
+msgstr "`Sustainability` se define como:"
+
+#: ../../notset:1
+msgid ""
+"Information about how the contracting process incorporates sustainable "
+"public procurement."
+msgstr ""
+"Información sobre cómo el proceso de contratación incorpora las "
+"adquisiciones y contrataciones públicas sostenibles."
+
+#: ../../docs/reference/schema.md:1624
+msgid ""
+"[`ContractingProcessSummary/tender/sustainability`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/sustainability)"
+msgstr ""
+"[`ContractingProcessSummary/tender/sustainability`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/sustainability)"
+
+#: ../../docs/reference/schema.md:1626
+msgid "Each `Sustainability` has the following fields:"
+msgstr "Cada `Sustainability` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1651
+msgid "Meeting"
+msgstr "Reunión"
+
+#: ../../docs/reference/schema.md:1653
+msgid "`Meeting` is defined as:"
+msgstr "\"Meeting\" se define como:"
+
+#: ../../notset:1
+msgid "Information about a meeting."
+msgstr "Información sobre una meeting"
+
+#: ../../docs/reference/schema.md:1659
+msgid "[`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)"
+msgstr "[`lobbyingMeetings`](project-schema.json,,lobbyingMeetings)"
+
+#: ../../docs/reference/schema.md:1660
+msgid ""
+"[`Social/consultationMeetings`](project-"
+"schema.json,/definitions/Social,consultationMeetings)"
+msgstr ""
+"[`Social/consultationMeetings`](project-"
+"schema.json,/definitions/Social,consultationMeetings)"
+
+#: ../../docs/reference/schema.md:1662
+msgid "Each `Meeting` has the following fields:"
+msgstr "Cada  `Meeting` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1692
+msgid "PublicOffice"
+msgstr "Oficina pública"
+
+#: ../../docs/reference/schema.md:1694
+msgid "`PublicOffice` is defined as:"
+msgstr "`PublicOffice` se define como:"
+
+#: ../../notset:1
+msgid ""
+"A position held by a person (or advisor to a person) with decision-making "
+"powers, who is elected, appointed or employed within the executive or "
+"legislative branches of power at national, sub-national, or supra-national "
+"levels; within private bodies performing public functions; and within public"
+" international organizations domiciled or operational in the country "
+"concerned."
+msgstr ""
+" Cargo ocupado por una persona (o asesor de una persona) con poder de "
+"decisión, que es elegida, nombrada o empleada dentro de los poderes "
+"ejecutivo o legislativo a nivel nacional, subnacional o supranacional; "
+"dentro de organismos privados que desempeñan funciones públicas; y dentro de"
+" organizaciones internacionales públicas domiciliadas u operativas en el "
+"país en cuestión."
+
+#: ../../docs/reference/schema.md:1700
+msgid ""
+"[`Meeting/publicOffice`](project-"
+"schema.json,/definitions/Meeting,publicOffice)"
+msgstr ""
+"[`Meeting/publicOffice`](project-"
+"schema.json,/definitions/Meeting,publicOffice)"
+
+#: ../../docs/reference/schema.md:1702
+msgid "Each `PublicOffice` has the following fields:"
+msgstr "Cada `PublicOffice` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1727
+msgid "Social"
+msgstr "Social"
+
+#: ../../docs/reference/schema.md:1729
+msgid "`Social` is defined as:"
+msgstr "«Social» se define como:"
+
+#: ../../notset:1
+msgid ""
+"Information about the social impacts of the project and the actions the "
+"project will take to mitigate potentially negative impacts on adjacent "
+"populations and project workers."
+msgstr ""
+" Información sobre las repercusiones sociales del proyecto y las medidas que"
+" adoptará para mitigar los posibles efectos negativos sobre las poblaciones "
+"aledañas y los trabajadores del proyecto."
+
+#: ../../docs/reference/schema.md:1735
+msgid "[`social`](project-schema.json,,social)"
+msgstr "[`social`](project-schema.json,,social)"
+
+#: ../../docs/reference/schema.md:1737
+msgid "Each `Social` has the following fields:"
+msgstr "Cada `Social` tiene los siguientes campos:"
+
+#: ../../docs/reference/schema.md:1762
+msgid "HealthAndSafety"
+msgstr "Salud y seguridad"
+
+#: ../../docs/reference/schema.md:1764
+msgid "`HealthAndSafety` is defined as:"
+msgstr "`HealthAndSafety`  se define como:"
+
+#: ../../notset:1
+msgid ""
+"Information about health and safety in regards to the construction and "
+"ongoing use of the project asset."
+msgstr ""
+" Información sobre salud y seguridad en relación con la construcción y el "
+"uso continuado del activo del proyecto."
+
+#: ../../docs/reference/schema.md:1770
+msgid ""
+"[`Social/healthAndSafety`](project-"
+"schema.json,/definitions/Social,healthAndSafety)"
+msgstr ""
+"[`Social/healthAndSafety`](project-"
+"schema.json,/definitions/Social,healthAndSafety)"
+
+#: ../../docs/reference/schema.md:1772
+msgid "Each `HealthAndSafety` has the following fields:"
+msgstr "Cada `HealthAndSafety` tiene los siguientes campos:"

@@ -1,7 +1,7 @@
 # Translations template for PROJECT.
-# Copyright (C) 2021 ORGANIZATION
+# Copyright (C) 2024 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
 # James McKinney, 2021
@@ -9,81 +9,811 @@
 # Juan Pane <juanpane@idatosabiertos.org>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-09-14 21:10-0400\n"
+"POT-Creation-Date: 2024-03-08 09:07+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
+#: schema/project-level/codelists/assetClass.csv
+#: schema/project-level/codelists/classificationScheme.csv
+#: schema/project-level/codelists/climateMeasure.csv
+#: schema/project-level/codelists/climateOversightTypes.csv
+#: schema/project-level/codelists/conservationMeasure.csv
+#: schema/project-level/codelists/constructionMaterial.csv
 #: schema/project-level/codelists/contractNature.csv
 #: schema/project-level/codelists/contractingProcessStatus.csv
+#: schema/project-level/codelists/costCategory.csv
+#: schema/project-level/codelists/country.csv
 #: schema/project-level/codelists/currency.csv
+#: schema/project-level/codelists/debtRepaymentPriority.csv
 #: schema/project-level/codelists/documentType.csv
+#: schema/project-level/codelists/environmentalGoal.csv
+#: schema/project-level/codelists/environmentalMeasure.csv
+#: schema/project-level/codelists/financingArrangementType.csv
+#: schema/project-level/codelists/financingPartyType.csv
 #: schema/project-level/codelists/geometryType.csv
+#: schema/project-level/codelists/laborObligations.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
 #: schema/project-level/codelists/metricID.csv
+#: schema/project-level/codelists/milestoneCode.csv
+#: schema/project-level/codelists/milestoneStatus.csv
+#: schema/project-level/codelists/milestoneType.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
+#: schema/project-level/codelists/policyAlignment.csv
 #: schema/project-level/codelists/projectSector.csv
 #: schema/project-level/codelists/projectStatus.csv
 #: schema/project-level/codelists/projectType.csv
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/sustainabilityStrategy.csv
 #: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Code"
 msgstr "Código"
 
+#: schema/project-level/codelists/assetClass.csv
+#: schema/project-level/codelists/classificationScheme.csv
+#: schema/project-level/codelists/climateMeasure.csv
+#: schema/project-level/codelists/climateOversightTypes.csv
+#: schema/project-level/codelists/conservationMeasure.csv
+#: schema/project-level/codelists/constructionMaterial.csv
 #: schema/project-level/codelists/contractNature.csv
 #: schema/project-level/codelists/contractingProcessStatus.csv
+#: schema/project-level/codelists/costCategory.csv
+#: schema/project-level/codelists/country.csv
 #: schema/project-level/codelists/currency.csv
+#: schema/project-level/codelists/debtRepaymentPriority.csv
 #: schema/project-level/codelists/documentType.csv
+#: schema/project-level/codelists/environmentalGoal.csv
+#: schema/project-level/codelists/environmentalMeasure.csv
+#: schema/project-level/codelists/financingArrangementType.csv
+#: schema/project-level/codelists/financingPartyType.csv
 #: schema/project-level/codelists/geometryType.csv
+#: schema/project-level/codelists/laborObligations.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
 #: schema/project-level/codelists/metricID.csv
+#: schema/project-level/codelists/milestoneCode.csv
+#: schema/project-level/codelists/milestoneStatus.csv
+#: schema/project-level/codelists/milestoneType.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
+#: schema/project-level/codelists/policyAlignment.csv
 #: schema/project-level/codelists/projectSector.csv
 #: schema/project-level/codelists/projectStatus.csv
 #: schema/project-level/codelists/projectType.csv
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/sustainabilityStrategy.csv
 #: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Title"
 msgstr "Título"
 
+#: schema/project-level/codelists/assetClass.csv
+#: schema/project-level/codelists/classificationScheme.csv
+#: schema/project-level/codelists/climateMeasure.csv
+#: schema/project-level/codelists/climateOversightTypes.csv
+#: schema/project-level/codelists/conservationMeasure.csv
+#: schema/project-level/codelists/constructionMaterial.csv
 #: schema/project-level/codelists/contractNature.csv
 #: schema/project-level/codelists/contractingProcessStatus.csv
+#: schema/project-level/codelists/costCategory.csv
+#: schema/project-level/codelists/debtRepaymentPriority.csv
 #: schema/project-level/codelists/documentType.csv
+#: schema/project-level/codelists/environmentalGoal.csv
+#: schema/project-level/codelists/environmentalMeasure.csv
+#: schema/project-level/codelists/financingArrangementType.csv
+#: schema/project-level/codelists/financingPartyType.csv
 #: schema/project-level/codelists/geometryType.csv
+#: schema/project-level/codelists/laborObligations.csv
 #: schema/project-level/codelists/locationGazetteers.csv
 #: schema/project-level/codelists/method.csv
 #: schema/project-level/codelists/metricID.csv
+#: schema/project-level/codelists/milestoneCode.csv
+#: schema/project-level/codelists/milestoneStatus.csv
+#: schema/project-level/codelists/milestoneType.csv
 #: schema/project-level/codelists/modificationType.csv
 #: schema/project-level/codelists/partyRole.csv
+#: schema/project-level/codelists/policyAlignment.csv
 #: schema/project-level/codelists/projectSector.csv
 #: schema/project-level/codelists/projectStatus.csv
 #: schema/project-level/codelists/projectType.csv
 #: schema/project-level/codelists/relatedProject.csv
 #: schema/project-level/codelists/relatedProjectScheme.csv
 #: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/sustainabilityStrategy.csv
 #: schema/project-level/codelists/unitClassificationScheme.csv
 msgid "Description"
 msgstr "Descripción"
+
+#: schema/project-level/codelists/assetClass.csv
+#: schema/project-level/codelists/currency.csv
+#: schema/project-level/codelists/debtRepaymentPriority.csv
+#: schema/project-level/codelists/financingArrangementType.csv
+#: schema/project-level/codelists/financingPartyType.csv
+#: schema/project-level/codelists/geometryType.csv
+#: schema/project-level/codelists/locationGazetteers.csv
+#: schema/project-level/codelists/method.csv
+#: schema/project-level/codelists/milestoneCode.csv
+#: schema/project-level/codelists/milestoneStatus.csv
+#: schema/project-level/codelists/milestoneType.csv
+#: schema/project-level/codelists/releaseTag.csv
+#: schema/project-level/codelists/unitClassificationScheme.csv
+msgid "Extension"
+msgstr "Extensión"
+
+#. Title
+#: schema/project-level/codelists/assetClass.csv:1
+msgid "Debt"
+msgstr "Deuda"
+
+#. Description
+#: schema/project-level/codelists/assetClass.csv:1
+msgid ""
+"A contract that obliges a borrower to repay a lender by a maturity date."
+msgstr ""
+" Contrato que obliga a un prestatario a reembolsar a un prestamista en una "
+"fecha de vencimiento."
+
+#. Extension
+#: schema/project-level/codelists/assetClass.csv:1
+#: schema/project-level/codelists/assetClass.csv:2
+#: schema/project-level/codelists/debtRepaymentPriority.csv:1
+#: schema/project-level/codelists/debtRepaymentPriority.csv:2
+#: schema/project-level/codelists/financingArrangementType.csv:1
+#: schema/project-level/codelists/financingArrangementType.csv:2
+#: schema/project-level/codelists/financingArrangementType.csv:3
+#: schema/project-level/codelists/financingArrangementType.csv:4
+#: schema/project-level/codelists/financingArrangementType.csv:5
+#: schema/project-level/codelists/financingArrangementType.csv:6
+#: schema/project-level/codelists/financingArrangementType.csv:7
+#: schema/project-level/codelists/financingPartyType.csv:1
+#: schema/project-level/codelists/financingPartyType.csv:2
+#: schema/project-level/codelists/financingPartyType.csv:3
+#: schema/project-level/codelists/financingPartyType.csv:4
+#: schema/project-level/codelists/financingPartyType.csv:5
+#: schema/project-level/codelists/financingPartyType.csv:6
+msgid "Finance"
+msgstr "Finanzas"
+
+#. Title
+#: schema/project-level/codelists/assetClass.csv:2
+msgid "Equity"
+msgstr "Patrimonio"
+
+#. Description
+#: schema/project-level/codelists/assetClass.csv:2
+msgid "A contract that acts as evidence of ownership rights in a company."
+msgstr " Contrato que acredita los derechos de propiedad de una empresa."
+
+#: schema/project-level/codelists/classificationScheme.csv
+#: schema/project-level/codelists/climateMeasure.csv
+#: schema/project-level/codelists/climateOversightTypes.csv
+#: schema/project-level/codelists/documentType.csv
+#: schema/project-level/codelists/environmentalGoal.csv
+#: schema/project-level/codelists/laborObligations.csv
+#: schema/project-level/codelists/partyRole.csv
+#: schema/project-level/codelists/policyAlignment.csv
+#: schema/project-level/codelists/sustainabilityStrategy.csv
+msgid "Source"
+msgstr "Fuente"
+
+#: schema/project-level/codelists/classificationScheme.csv
+msgid "Category"
+msgstr "Categoría"
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:1
+msgid "Sustainable Development Goals"
+msgstr "Objetivos de Desarrollo Sostenible"
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:1
+#: schema/project-level/codelists/policyAlignment.csv:1
+msgid ""
+"The Sustainable Development Goals are a collection of 17 interlinked goals "
+"set by the United Nations General Assembly and designed to be a \"blueprint "
+"to achieve a better and more sustainable future for all\"."
+msgstr ""
+"Los Objetivos de Desarrollo Sostenible son un conjunto de 17 objetivos "
+"interrelacionados establecidos por la Asamblea General de las Naciones "
+"Unidas y concebidos como un \"plan para lograr un futuro mejor y más "
+"sostenible para todos\"."
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:2
+msgid "Sustainable Development Goal Targets"
+msgstr "Metas de los Objetivos de Desarrollo Sostenible"
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:2
+msgid ""
+"The Sustainable Development Goal Targets are specific targets for each "
+"Sustainable Development Goal."
+msgstr ""
+"Las Metas de los Objetivos de Desarrollo Sostenible son metas específicas "
+"para cada Objetivo de Desarrollo Sostenible."
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:3
+msgid "International Cost Measurement Standard"
+msgstr "Estándar internacional de medición de costos"
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:3
+msgid ""
+"The International Cost Measurement Standard provides a single methodology "
+"for reporting, grouping and classifying construction project costs."
+msgstr ""
+"El Estándar Internacional de Medición de Costos proporciona una metodología "
+"única para informar, agrupar y clasificar los costos de proyectos de "
+"construcción."
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:4
+msgid "CoST IDS Legal Type"
+msgstr "Tipo legal de los IDS de CoST "
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:4
+msgid "The CoST IDS classification of an organization's legal type."
+msgstr ""
+"La clasificación de los IDS de CoST del tipo legal de una organización."
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:5
+msgid "CoST IDS Administrative Level"
+msgstr "Nivel Administrativo de los IDS de CoST"
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:5
+msgid "The CoST IDS classification of an organization's administrative level."
+msgstr ""
+"Clasificación de los IDS de CoST del nivel administrativo de una "
+"organización."
+
+#. Title
+#: schema/project-level/codelists/classificationScheme.csv:6
+msgid ""
+"International Finance Corporation’s Policy on environmental and social "
+"sustainability"
+msgstr ""
+" Política de sostenibilidad medioambiental y social de la Corporación "
+"Financiera Internacional"
+
+#. Description
+#: schema/project-level/codelists/classificationScheme.csv:6
+msgid ""
+"As part of the review of environmental and social risks and impacts of a "
+"proposed investment, IFC uses a process of environmental and social "
+"categorization to reflect the magnitude of risks and impacts."
+msgstr ""
+" Como parte de la revisión de los riesgos e impactos ambientales y sociales "
+"de una inversión propuesta, la CFI utiliza un proceso de categorización "
+"ambiental y social para reflejar la magnitud de los riesgos e impactos."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:1
+msgid "Reduction of embodied energy"
+msgstr "Reducción de la energía incorporada."
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:1
+msgid ""
+"Measures that reduce the sum of energy required to produce, transport and "
+"repair or replace the materials used by the project."
+msgstr ""
+"Medidas que reducen la cantidad de energía requerida para producir, "
+"transportar y reparar o remplazar los materiales utilizados por el proyecto"
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:2
+msgid "Reduction of embodied emissions"
+msgstr "Reducción de emisiones integradas"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:2
+msgid ""
+"Measures that reduce the sum of emissions generated by the production, "
+"transportation and replacements or repair of materials used by the project."
+msgstr ""
+"Medidas que reducen la suma de emisiones generadas por la producción, el "
+"transporte y los remplazos o reparación de materiales utilizados por el "
+"proyecto"
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:3
+msgid "Reduction of fugitive emissions"
+msgstr "Reducción de emisiones fugitivas"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:3
+msgid ""
+"Measures that reduce greenhouse gas and air pollutant emissions from "
+"intentional or unintentional releases, such as methane during transport of "
+"natural gas or HFC emission from refrigeration equipment."
+msgstr ""
+" Medidas que reducen las emisiones de gases de efecto invernadero y "
+"contaminantes atmosféricos procedentes de emisiones intencionadas o no "
+"intencionadas, como el metano durante el transporte de gas natural o la "
+"emisión de HFC de los equipos de refrigeración."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:4
+msgid "Use of renewable energy sources"
+msgstr "Uso de fuentes de energía renovable"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:4
+msgid ""
+"The project adopts renewable energy sources and minimizes the use of fossil "
+"fuels as an energy source."
+msgstr ""
+"El proyecto adopta fuentes de energía renovable y minimiza el uso de "
+"combustibles fósiles como fuente de energía."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:5
+msgid "Use of carbon capture technology"
+msgstr "Uso de tecnología de captura de carbono"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:5
+msgid "The project incorporates carbon capture and storage technologies."
+msgstr "El proyecto incorpora tecnologías de captura y almacenaje de carbono."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:6
+msgid "Use of recycled and/or reused materials"
+msgstr "Uso de materiales reciclados  y/o reutilizados"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:6
+msgid ""
+"Measures that reduce the use of virgin natural resources and avoid sending "
+"useful materials to landfills by specifying reused materials, including "
+"structures, and material with recycled content."
+msgstr ""
+"Medidas que reducen el uso de recursos naturales en estado virgen y evitan "
+"el envío de materiales útiles a los vertederos mediante la especificación de"
+" materiales reutilizados, incluidas las estructuras, y materiales con "
+"contenido reciclado."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:7
+msgid "Regenerative design"
+msgstr "Diseño Regenerativo"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:7
+msgid ""
+"The project has used a regenerative design approach. A regenerative design "
+"approach aims to regenerate, rather than deplete, life support systems and "
+"resources within socio-ecological systems."
+msgstr ""
+" El proyecto ha utilizado un enfoque de diseño regenerativo. Un enfoque de "
+"diseño regenerativo pretende regenerar, en lugar de agotar, los sistemas de "
+"soporte a la vida y los recursos de los sistemas socioecológicos."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:8
+#: schema/project-level/codelists/conservationMeasure.csv:1
+msgid "Location analysis"
+msgstr "Análisis de ubicación"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:8
+msgid ""
+"Location analysis was performed to select the site, in order to avoid or "
+"mitigate future climate-related risks."
+msgstr ""
+"Para la selección del sitió se realizó un análisis de la ubicación, con el "
+"fin de evitar o mitigar riesgos futuros relacionados con el clima."
+
+#. Title
+#: schema/project-level/codelists/climateMeasure.csv:9
+msgid "Climate risk analysis"
+msgstr "Análisis de riesgo climático"
+
+#. Description
+#: schema/project-level/codelists/climateMeasure.csv:9
+msgid ""
+"Assessments have been carried out based on the best practicable available "
+"information to ensure the project is designed and built to withstand future "
+"climate conditions, taking into account elements including rising sea "
+"levels, rising temperatures, extreme weather events and changing "
+"precipitation patterns."
+msgstr ""
+" Se han realizado evaluaciones basadas en la mejor información práctica "
+"disponible para garantizar que el proyecto se diseñe y construya de forma "
+"que resista las condiciones climáticas futuras, teniendo en cuenta elementos"
+" como la subida del nivel del mar, el aumento de las temperaturas, los "
+"fenómenos meteorológicos extremos y los cambios en los patrones de "
+"precipitaciones."
+
+#. Title
+#: schema/project-level/codelists/climateOversightTypes.csv:1
+msgid "Internal"
+msgstr "Interno"
+
+#. Description
+#: schema/project-level/codelists/climateOversightTypes.csv:1
+msgid ""
+"Oversight that is functionally and managerially part of the project. "
+"Internal oversight functions typically report to management."
+msgstr ""
+"Supervisión que forma parte funcional y administrativa del proyecto. Las "
+"funciones de supervisión interna suelen depender de la administración."
+
+#. Title
+#: schema/project-level/codelists/climateOversightTypes.csv:2
+msgid "External"
+msgstr "Externa"
+
+#. Description
+#: schema/project-level/codelists/climateOversightTypes.csv:2
+msgid ""
+"Oversight that is functionally and managerially independent from the "
+"project. External oversight functions typically report to an external body."
+msgstr ""
+"Supervisión que es funcional y administrativamente independiente del "
+"proyecto. Las funciones de supervisión externa suelen depender de un "
+"organismo externo."
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:1
+msgid ""
+"Location analysis was performed to select the site with the minimum "
+"potentially negative ecological impacts as a result of the project."
+msgstr ""
+" Se realizó un análisis de ubicación para seleccionar el sitio con el mínimo"
+" impacto ecológico potencialmente negativo como resultado del proyecto."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:2
+msgid "Biological corridors"
+msgstr "Corredores biológicos"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:2
+msgid ""
+"Areas of habitat connecting wildlife populations, or different habitat types"
+" necessary for species lifecycles, separated by human activities or "
+"structures. Also known as wildlife or green corridors."
+msgstr ""
+" Zonas de hábitat que conectan poblaciones de fauna silvestre, o diferentes "
+"tipos de hábitat necesarios para los ciclos vitales de las especies, "
+"separadas por actividades o estructuras humanas. También se conocen como "
+"corredores verdes o de vida silvestre."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:3
+msgid "Nature based solutions"
+msgstr "Soluciones basadas en la naturaleza"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:3
+msgid ""
+"Measures that use solutions already found in nature, for example conserving "
+"mangrove forests to protect homes against storm damage."
+msgstr ""
+" Medidas que utilizan soluciones que ya se encuentran en la naturaleza, por "
+"ejemplo conservar los manglares para proteger las viviendas de los daños "
+"causados por las tormentas."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:4
+msgid "Habitat restoration"
+msgstr "Restauración del hábitat"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:4
+msgid ""
+"The restoration of ecosystems negatively impacted by human activities, both "
+"historically and as a direct result of the project."
+msgstr ""
+" La restauración de ecosistemas afectados de forma negativa por las "
+"actividades humanas, tanto históricamente como a consecuencia directa del "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:5
+msgid "Set-asides"
+msgstr "Reservas"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:5
+msgid ""
+"Identification of areas within the project boundaries that are excluded from"
+" development and targeted for conservation enhancement measures."
+msgstr ""
+" Identificación de zonas dentro de los límites del proyecto excluidas del "
+"desarrollo y destinadas a medidas de mejora de la conservación."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:6
+msgid "Invasive species management"
+msgstr "Gestión de especies invasoras"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:6
+msgid ""
+"Measures taken to prevent the introduction of alien, invasive or non-native "
+"species, and combat the presence of such species identified within the "
+"project boundaries."
+msgstr ""
+" Medidas adoptadas para prevenir la introducción de especies exóticas, "
+"invasoras o alóctonas, y combatir la presencia de tales especies "
+"identificadas dentro de los límites del proyecto."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:7
+msgid "Habitat loss reduction"
+msgstr "Reducción de la pérdida de hábitat"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:7
+msgid ""
+"Measures that reduce the ecological habitats lost as a direct result of the "
+"project."
+msgstr ""
+"Medidas que reduzcan los hábitats ecológicos perdidos como consecuencia "
+"directa del proyecto."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:8
+msgid "Pollution reduction"
+msgstr "Reducción de la contaminación"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:8
+msgid ""
+"Measures that reduce the pollution generated as a direct result of the "
+"project. Pollution can include leakage into water courses or soil as well as"
+" noise, light, aerosol and gaseous emissions or vibrational nuisance to "
+"nearby wildlife populations."
+msgstr ""
+" Medidas que reducen la contaminación generada como consecuencia directa del"
+" proyecto. La contaminación puede incluir las filtraciones a los cursos de "
+"agua o al suelo, así como el ruido, la luz, las emisiones de aerosoles y "
+"gases o las molestias por vibraciones a las poblaciones silvestres cercanas."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:9
+msgid "Soil management"
+msgstr "Manejo del suelo"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:9
+msgid ""
+"Measures that integrate sustainable soil management practices. For example, "
+"the Food and Agriculture Organization's Charter and Sustainable Soil "
+"Management Criteria."
+msgstr ""
+"Medidas que integren prácticas de gestión sostenible del suelo. Por ejemplo,"
+" la Carta y los Criterios de Gestión Sostenible del Suelo de la Organización"
+" de las Naciones Unidas para la Agricultura y la Alimentación."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:10
+msgid "Water management"
+msgstr "Gestión del agua"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:10
+msgid ""
+"Measures that ensure water is extracted for the project responsibly and in a"
+" manner that maintains environmental flows, minimizes aquifer drawdown, or "
+"mitigates other potentially negative impacts on the quality or quantity of "
+"source water."
+msgstr ""
+" Medidas que garanticen que el agua que se extrae para el proyecto se extrae"
+" de forma responsable y de manera que se mantengan los caudales ambientales,"
+" se minimice la reducción del acuífero o se mitiguen otros impactos "
+"potencialmente negativos sobre la calidad o la cantidad del agua de origen."
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:11
+msgid "Air management"
+msgstr "Gestión del aire"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:11
+msgid ""
+"Measures that control air pollutant emissions. For example, the World Health"
+" Organization (WHO) Air Quality Guidelines."
+msgstr ""
+" Medidas que controlan las emisiones contaminantes a la atmósfera. Por "
+"ejemplo, las Directrices de la Organización Mundial de la Salud (OMS) sobre "
+"la calidad del aire"
+
+#. Title
+#: schema/project-level/codelists/conservationMeasure.csv:12
+msgid "Biodiversity offsets"
+msgstr "Compensaciones de biodiversidad"
+
+#. Description
+#: schema/project-level/codelists/conservationMeasure.csv:12
+msgid ""
+"Measurable outcomes as a result of actions designed to compensate for "
+"adverse biological impacts due to the project that persist after avoidance, "
+"minimization and restoration measures have been taken."
+msgstr ""
+" Resultados mensurables producto de las acciones diseñadas para compensar "
+"los impactos biológicos adversos debidos al proyecto que persisten tras la "
+"adopción de medidas de prevención, minimización y restauración."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:1
+msgid "Asphalt"
+msgstr "Asfalto"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:1
+msgid ""
+"A composite of bitumen and aggregate, used to surface, for example roads, "
+"airports and parking lots."
+msgstr ""
+"Compuesto de betún y áridos, utilizado para pavimentar, por ejemplo, "
+"carreteras, aeropuertos y aparcamientos."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:2
+msgid "Aggregate"
+msgstr "Áridos"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:2
+msgid ""
+"Coarse to fine-grained particulate mineral material, including sand, gravel,"
+" crushed stone, slag and recycled concrete."
+msgstr ""
+" Material mineral particulado de grano grueso a fino, incluyendo arena, "
+"grava, piedra triturada, escoria y hormigón reciclado."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:3
+msgid "Brick"
+msgstr "Ladrillo"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:3
+msgid ""
+"Mass-produced rectangular unit, used to construct, for example, paving, "
+"walls and other building elements. Commonly used in masonry."
+msgstr ""
+"Unidad rectangular fabricada en serie, utilizada para construir, por "
+"ejemplo, pavimentos, muros y otros elementos de construcción. Se utiliza "
+"habitualmente en albañilería."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:4
+msgid "Cement"
+msgstr "Cemento"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:4
+msgid "Substance used for binding and hardening other construction materials."
+msgstr ""
+" Sustancia utilizada para aglutinar y endurecer otros materiales de "
+"construcción."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:5
+msgid "Concrete"
+msgstr "Concreto"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:5
+msgid "A composite of cement, water and aggregate."
+msgstr "Un compuesto de cemento, agua y áridos."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:6
+msgid "Metal"
+msgstr "Metal"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:6
+msgid ""
+"Metal, including steel, aluminium, iron, copper, lead and other alloys and "
+"naturally occurring metals."
+msgstr ""
+"Metal, incluido acero, aluminio, hierro, cobre, plomo y otras aleaciones y "
+"metales naturales."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:7
+msgid "Mortar"
+msgstr "Mortero"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:7
+msgid "A composite paste, used to seal and bind masonry units."
+msgstr ""
+"Una pasta compuesta, utilizada para sellar y unir unidades de mampostería."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:8
+msgid "Plywood"
+msgstr "Madera contrachapada"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:8
+msgid ""
+"A composite manufactured material composed of thin layers of wood veneer "
+"glued together."
+msgstr ""
+"Un material manufacturado compuesto formado por finas capas de chapa de "
+"madera pegadas entre sí."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:9
+msgid "Resin and polymer"
+msgstr "Resina y polímero"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:9
+msgid ""
+"Natural or synthetic material made up of large repeatable molecular chains, "
+"including epoxy resin, plastic, rubber, vinyl and sealant."
+msgstr ""
+"Material natural o sintético formado por grandes cadenas moleculares "
+"repetibles, que incluye resina epoxi, plástico, caucho, vinilo y sellador."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:10
+msgid "Soil"
+msgstr "Suelo"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:10
+msgid ""
+"The upper layer of the earth's surface composed of organic matter, minerals,"
+" liquids, organisms and gases. Also known as earth."
+msgstr ""
+"Capa superior de la superficie terrestre compuesta por materia orgánica, "
+"minerales, líquidos, organismos y gases. También se conoce como tierra."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:11
+msgid "Stone"
+msgstr "Piedra"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:11
+msgid ""
+"Naturally occurring mineral material that has been quarried, extracted and "
+"worked to create a solid unit. Commonly used in masonry."
+msgstr ""
+"Material mineral natural que ha sido extraído y trabajado para crear una "
+"unidad sólida. Se utiliza habitualmente en albañilería."
+
+#. Title
+#: schema/project-level/codelists/constructionMaterial.csv:12
+msgid "Timber"
+msgstr "Madera"
+
+#. Description
+#: schema/project-level/codelists/constructionMaterial.csv:12
+msgid "Wood processed into uniform sizes and shapes."
+msgstr "Madera procesada en tamaños y formas uniformes."
 
 #. Title
 #: schema/project-level/codelists/contractNature.csv:1
@@ -164,19 +894,1396 @@ msgstr ""
 "El proceso terminó sin adjudicar ningún contrato, o todos los contratos han "
 "terminado."
 
-#: schema/project-level/codelists/currency.csv
-#: schema/project-level/codelists/geometryType.csv
-#: schema/project-level/codelists/locationGazetteers.csv
-#: schema/project-level/codelists/method.csv
-#: schema/project-level/codelists/releaseTag.csv
-#: schema/project-level/codelists/unitClassificationScheme.csv
-msgid "Extension"
-msgstr "Extensión"
+#. Title
+#: schema/project-level/codelists/costCategory.csv:1
+msgid "Acquisition costs"
+msgstr "Costos de adquisición"
 
-#: schema/project-level/codelists/documentType.csv
-#: schema/project-level/codelists/partyRole.csv
-msgid "Source"
-msgstr "Fuente"
+#. Description
+#: schema/project-level/codelists/costCategory.csv:1
+msgid ""
+"All payments or considerations required to acquire/lease/purchase the land, "
+"property or existing asset, and all other expenses associated with the "
+"acquisition, excluding physical construction."
+msgstr ""
+" Todos los pagos o contraprestaciones necesarios para "
+"adquirir/arrendar/comprar el terreno, propiedad o activo existente, y todos "
+"los demás gastos asociados a la adquisición, excluida la construcción "
+"física."
+
+#. Title
+#: schema/project-level/codelists/costCategory.csv:2
+msgid "Construction costs"
+msgstr "Costos de construcción"
+
+#. Description
+#: schema/project-level/codelists/costCategory.csv:2
+msgid ""
+"Expenditures incurred as a direct result of construction including labor, "
+"materials, plant, equipment, site and head office overheads and profits as "
+"well as taxes and levies. They are the total price payable for all permanent"
+" and temporary works normally included in construction contracts, including "
+"goods or materials supplied by the public authority for the supplier to "
+"install."
+msgstr ""
+" Gastos en los que se incurre como consecuencia directa de la construcción, "
+"incluyendo mano de obra, materiales, instalaciones, equipos, gastos "
+"generales y utilidades de la obra y de la oficina central, así como "
+"impuestos y gravámenes. Son el precio total a pagar por todas las obras "
+"permanentes y temporales normalmente incluidas en los contratos de "
+"construcción, incluidos los bienes o materiales suministrados por la "
+"autoridad pública para que el proveedor los instale."
+
+#. Title
+#: schema/project-level/codelists/costCategory.csv:3
+msgid "Renewal costs"
+msgstr "Costos de renovación"
+
+#. Description
+#: schema/project-level/codelists/costCategory.csv:3
+msgid ""
+"The costs of replacing an asset and/or major components once they reach the "
+"end of their life, and which the public authority decides are to be included"
+" in the capital rather than the revenue budget."
+msgstr ""
+" Los costos de sustitución de un activo y/o de sus componentes principales "
+"una vez que llegan al final de su vida útil, y que la autoridad pública "
+"decide que se incluyan en el presupuesto de capital y no en el de ingresos."
+
+#. Title
+#: schema/project-level/codelists/costCategory.csv:4
+msgid "Operation costs"
+msgstr "Costos de operación"
+
+#. Description
+#: schema/project-level/codelists/costCategory.csv:4
+msgid ""
+"Costs incurred in running and managing an asset during occupation, including"
+" administrative support services, rent, insurances, energy and other "
+"environmental/regulatory inspection costs, taxes and charges."
+msgstr ""
+" Gastos incurridos en el funcionamiento y la gestión de un activo durante su"
+" ocupación, incluidos los servicios de apoyo administrativo, alquiler, "
+"seguros, energía y otros gastos de inspección medioambiental/reglamentaria, "
+"impuestos y tasas."
+
+#. Title
+#: schema/project-level/codelists/costCategory.csv:5
+msgid "Maintenance costs"
+msgstr "Costos de mantenimiento"
+
+#. Description
+#: schema/project-level/codelists/costCategory.csv:5
+msgid ""
+"The total cost of labor, material and other related costs to retain an asset"
+" or its parts so that it can perform its required functions. Maintenance "
+"includes conducting corrective, responsive and preventative maintenance on "
+"an asset or its parts and all associated management, cleaning, services, "
+"repainting, repairing or replacing of parts as needed for the asset to be "
+"used for its intended purpose. It does not include renewal costs."
+msgstr ""
+" El costo total de mano de obra, materiales y otros costos relacionados para"
+" mantener un activo o sus partes de modo que pueda realizar sus funciones "
+"requeridas. El mantenimiento incluye la realización del mantenimiento "
+"correctivo, de respuesta y preventivo de un activo o sus piezas y toda la "
+"gestión, limpieza, servicios, repintado, reparación o sustitución de piezas "
+"asociados, según sea necesario para que el activo se utilice para el fin "
+"previsto. No incluye los costos de renovación."
+
+#. Title
+#: schema/project-level/codelists/costCategory.csv:6
+msgid "End-of-life costs"
+msgstr "Costos al final de la vida útil"
+
+#. Description
+#: schema/project-level/codelists/costCategory.csv:6
+msgid ""
+"The net costs or fees for disposing of an asset at the end of its service "
+"life after deducting the salvage value and other income due to disposal, "
+"including costs resulting from disposal inspection, decommissioning and "
+"decontamination, demolition and reclamation, reinstatement, asset transfer "
+"obligations, recycling, recovery, disposal of components and materials, and "
+"transport and regulatory costs."
+msgstr ""
+" Los costos o cargos netos por la enajenación de un activo al final de su "
+"vida útil, una vez deducido el valor de salvamento y otros ingresos debidos "
+"a la enajenación, incluidos los costos derivados de la inspección de la "
+"enajenación, el desmantelamiento y la descontaminación, la demolición y la "
+"recuperación, la reinstalación, las obligaciones de transferencia de "
+"activos, el reciclado, la recuperación, la eliminación de componentes y "
+"materiales, y los costos de transporte y reglamentarios."
+
+#. Title
+#: schema/project-level/codelists/country.csv:1
+msgid "Andorra"
+msgstr "Andorra"
+
+#. Title
+#: schema/project-level/codelists/country.csv:2
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:3
+msgid "Afghanistan"
+msgstr "Afganistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:4
+msgid "Antigua and Barbuda"
+msgstr "Antigua y Barbuda"
+
+#. Title
+#: schema/project-level/codelists/country.csv:5
+msgid "Anguilla"
+msgstr "Anguila"
+
+#. Title
+#: schema/project-level/codelists/country.csv:6
+msgid "Albania"
+msgstr "Albania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:7
+msgid "Armenia"
+msgstr "Armenia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:8
+msgid "Angola"
+msgstr "Angola"
+
+#. Title
+#: schema/project-level/codelists/country.csv:9
+msgid "Antarctica"
+msgstr "Antártida"
+
+#. Title
+#: schema/project-level/codelists/country.csv:10
+msgid "Argentina"
+msgstr "Argentina"
+
+#. Title
+#: schema/project-level/codelists/country.csv:11
+msgid "American Samoa"
+msgstr "Samoa Americana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:12
+msgid "Austria"
+msgstr "Austria"
+
+#. Title
+#: schema/project-level/codelists/country.csv:13
+msgid "Australia"
+msgstr "Australia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:14
+msgid "Aruba"
+msgstr "Aruba"
+
+#. Title
+#: schema/project-level/codelists/country.csv:15
+msgid "Åland Islands"
+msgstr "Islas Åland"
+
+#. Title
+#: schema/project-level/codelists/country.csv:16
+msgid "Azerbaijan"
+msgstr "Azerbaiyán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:17
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia y Herzegovina"
+
+#. Title
+#: schema/project-level/codelists/country.csv:18
+msgid "Barbados"
+msgstr "Barbados"
+
+#. Title
+#: schema/project-level/codelists/country.csv:19
+msgid "Bangladesh"
+msgstr "Bangladés"
+
+#. Title
+#: schema/project-level/codelists/country.csv:20
+msgid "Belgium"
+msgstr "Bélgica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:21
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#. Title
+#: schema/project-level/codelists/country.csv:22
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#. Title
+#: schema/project-level/codelists/country.csv:23
+msgid "Bahrain"
+msgstr "Bahréin"
+
+#. Title
+#: schema/project-level/codelists/country.csv:24
+msgid "Burundi"
+msgstr "Burundi"
+
+#. Title
+#: schema/project-level/codelists/country.csv:25
+msgid "Benin"
+msgstr "Benín"
+
+#. Title
+#: schema/project-level/codelists/country.csv:26
+msgid "Saint Barthélemy"
+msgstr "San Bartolomé"
+
+#. Title
+#: schema/project-level/codelists/country.csv:27
+msgid "Bermuda"
+msgstr "islas Bermudas"
+
+#. Title
+#: schema/project-level/codelists/country.csv:28
+msgid "Brunei Darussalam"
+msgstr "Brunéi Darussalam"
+
+#. Title
+#: schema/project-level/codelists/country.csv:29
+msgid "Bolivia (Plurinational State of)"
+msgstr "Bolivia (Estado Plurinacional de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:30
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr "Bonaire, San Eustaquio y Saba"
+
+#. Title
+#: schema/project-level/codelists/country.csv:31
+msgid "Brazil"
+msgstr "Brasil"
+
+#. Title
+#: schema/project-level/codelists/country.csv:32
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#. Title
+#: schema/project-level/codelists/country.csv:33
+msgid "Bhutan"
+msgstr "Bután"
+
+#. Title
+#: schema/project-level/codelists/country.csv:34
+msgid "Bouvet Island"
+msgstr "Isla Bouvet"
+
+#. Title
+#: schema/project-level/codelists/country.csv:35
+msgid "Botswana"
+msgstr "Botsuana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:36
+msgid "Belarus"
+msgstr "Bielorrusia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:37
+msgid "Belize"
+msgstr "Belice"
+
+#. Title
+#: schema/project-level/codelists/country.csv:38
+msgid "Canada"
+msgstr "Canadá"
+
+#. Title
+#: schema/project-level/codelists/country.csv:39
+msgid "Cocos (Keeling) Islands"
+msgstr "Islas Cocos (Keeling)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:40
+msgid "Congo (the Democratic Republic of the)"
+msgstr "Congo (República Democrática del)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:41
+msgid "Central African Republic"
+msgstr "República Centroafricana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:42
+msgid "Congo"
+msgstr "Congo"
+
+#. Title
+#: schema/project-level/codelists/country.csv:43
+msgid "Switzerland"
+msgstr "Suiza"
+
+#. Title
+#: schema/project-level/codelists/country.csv:44
+msgid "Côte d'Ivoire"
+msgstr "Costa de Marfil"
+
+#. Title
+#: schema/project-level/codelists/country.csv:45
+msgid "Cook Islands"
+msgstr "Islas Cook"
+
+#. Title
+#: schema/project-level/codelists/country.csv:46
+msgid "Chile"
+msgstr "Chile"
+
+#. Title
+#: schema/project-level/codelists/country.csv:47
+msgid "Cameroon"
+msgstr "Camerún"
+
+#. Title
+#: schema/project-level/codelists/country.csv:48
+msgid "China"
+msgstr "Porcelana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:49
+msgid "Colombia"
+msgstr "Colombia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:50
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:51
+msgid "Cuba"
+msgstr "Cuba"
+
+#. Title
+#: schema/project-level/codelists/country.csv:52
+msgid "Cabo Verde"
+msgstr "Cabo Verde"
+
+#. Title
+#: schema/project-level/codelists/country.csv:53
+msgid "Curaçao"
+msgstr "Curazao"
+
+#. Title
+#: schema/project-level/codelists/country.csv:54
+msgid "Christmas Island"
+msgstr "Isla de Navidad"
+
+#. Title
+#: schema/project-level/codelists/country.csv:55
+msgid "Cyprus"
+msgstr "Chipre"
+
+#. Title
+#: schema/project-level/codelists/country.csv:56
+msgid "Czechia"
+msgstr "Chequia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:57
+msgid "Germany"
+msgstr "Alemania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:58
+msgid "Djibouti"
+msgstr "Yibuti"
+
+#. Title
+#: schema/project-level/codelists/country.csv:59
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#. Title
+#: schema/project-level/codelists/country.csv:60
+msgid "Dominica"
+msgstr "Dominica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:61
+msgid "Dominican Republic"
+msgstr "República Dominicana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:62
+msgid "Algeria"
+msgstr "Argelia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:63
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#. Title
+#: schema/project-level/codelists/country.csv:64
+msgid "Estonia"
+msgstr "Estonia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:65
+msgid "Egypt"
+msgstr "Egipto"
+
+#. Title
+#: schema/project-level/codelists/country.csv:66
+msgid "Western Sahara"
+msgstr "Sahara Occidental"
+
+#. Title
+#: schema/project-level/codelists/country.csv:67
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#. Title
+#: schema/project-level/codelists/country.csv:68
+msgid "Spain"
+msgstr "España"
+
+#. Title
+#: schema/project-level/codelists/country.csv:69
+msgid "Ethiopia"
+msgstr "Etiopía"
+
+#. Title
+#: schema/project-level/codelists/country.csv:70
+msgid "Finland"
+msgstr "Finlandia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:71
+msgid "Fiji"
+msgstr "Fiyi"
+
+#. Title
+#: schema/project-level/codelists/country.csv:72
+msgid "Falkland Islands [Malvinas]"
+msgstr "Islas Malvinas [Falkland Islands]"
+
+#. Title
+#: schema/project-level/codelists/country.csv:73
+msgid "Micronesia (Federated States of)"
+msgstr "Micronesia (Estados Federados de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:74
+msgid "Faroe Islands"
+msgstr "Islas Feroe"
+
+#. Title
+#: schema/project-level/codelists/country.csv:75
+msgid "France"
+msgstr "Francia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:76
+msgid "Gabon"
+msgstr "Gabón"
+
+#. Title
+#: schema/project-level/codelists/country.csv:77
+msgid "United Kingdom of Great Britain and Northern Ireland"
+msgstr "Reino Unido de Gran Bretaña e Irlanda del Norte"
+
+#. Title
+#: schema/project-level/codelists/country.csv:78
+msgid "Grenada"
+msgstr "Granada"
+
+#. Title
+#: schema/project-level/codelists/country.csv:79
+msgid "Georgia"
+msgstr "Georgia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:80
+msgid "French Guiana"
+msgstr "Guayana Francesa"
+
+#. Title
+#: schema/project-level/codelists/country.csv:81
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#. Title
+#: schema/project-level/codelists/country.csv:82
+msgid "Ghana"
+msgstr "Ghana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:83
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#. Title
+#: schema/project-level/codelists/country.csv:84
+msgid "Greenland"
+msgstr "Groenlandia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:85
+msgid "Gambia"
+msgstr "Gambia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:86
+msgid "Guinea"
+msgstr "Guinea"
+
+#. Title
+#: schema/project-level/codelists/country.csv:87
+msgid "Guadeloupe"
+msgstr "Guadalupe"
+
+#. Title
+#: schema/project-level/codelists/country.csv:88
+msgid "Equatorial Guinea"
+msgstr "Guinea Ecuatorial"
+
+#. Title
+#: schema/project-level/codelists/country.csv:89
+msgid "Greece"
+msgstr "Grecia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:90
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Islas Georgias del Sur y Sandwich del Sur"
+
+#. Title
+#: schema/project-level/codelists/country.csv:91
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#. Title
+#: schema/project-level/codelists/country.csv:92
+msgid "Guam"
+msgstr "Guam"
+
+#. Title
+#: schema/project-level/codelists/country.csv:93
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#. Title
+#: schema/project-level/codelists/country.csv:94
+msgid "Guyana"
+msgstr "Guayana"
+
+#. Title
+#: schema/project-level/codelists/country.csv:95
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#. Title
+#: schema/project-level/codelists/country.csv:96
+msgid "Heard Island and McDonald Islands"
+msgstr "Islas Heard y McDonald"
+
+#. Title
+#: schema/project-level/codelists/country.csv:97
+msgid "Honduras"
+msgstr "Honduras"
+
+#. Title
+#: schema/project-level/codelists/country.csv:98
+msgid "Croatia"
+msgstr "Croacia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:99
+msgid "Haiti"
+msgstr "Haití"
+
+#. Title
+#: schema/project-level/codelists/country.csv:100
+msgid "Hungary"
+msgstr "Hungría"
+
+#. Title
+#: schema/project-level/codelists/country.csv:101
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:102
+msgid "Ireland"
+msgstr "Irlanda"
+
+#. Title
+#: schema/project-level/codelists/country.csv:103
+msgid "Israel"
+msgstr "Israel"
+
+#. Title
+#: schema/project-level/codelists/country.csv:104
+msgid "Isle of Man"
+msgstr "Isla de Man"
+
+#. Title
+#: schema/project-level/codelists/country.csv:105
+msgid "India"
+msgstr "India"
+
+#. Title
+#: schema/project-level/codelists/country.csv:106
+msgid "British Indian Ocean Territory"
+msgstr "Territorio Británico del Océano Índico"
+
+#. Title
+#: schema/project-level/codelists/country.csv:107
+msgid "Iraq"
+msgstr "Irak"
+
+#. Title
+#: schema/project-level/codelists/country.csv:108
+msgid "Iran (Islamic Republic of)"
+msgstr "Irán (República Islámica del)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:109
+msgid "Iceland"
+msgstr "Islandia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:110
+msgid "Italy"
+msgstr "Italia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:111
+msgid "Jersey"
+msgstr "Jersey"
+
+#. Title
+#: schema/project-level/codelists/country.csv:112
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:113
+msgid "Jordan"
+msgstr "Jordania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:114
+msgid "Japan"
+msgstr "Japón"
+
+#. Title
+#: schema/project-level/codelists/country.csv:115
+msgid "Kenya"
+msgstr "Kenia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:116
+msgid "Kyrgyzstan"
+msgstr "Kirguistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:117
+msgid "Cambodia"
+msgstr "Camboya"
+
+#. Title
+#: schema/project-level/codelists/country.csv:118
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#. Title
+#: schema/project-level/codelists/country.csv:119
+msgid "Comoros"
+msgstr "Comoras"
+
+#. Title
+#: schema/project-level/codelists/country.csv:120
+msgid "Saint Kitts and Nevis"
+msgstr "San Cristóbal y Nieves"
+
+#. Title
+#: schema/project-level/codelists/country.csv:121
+msgid "Korea (the Democratic People's Republic of)"
+msgstr "Corea (República Popular Democrática de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:122
+msgid "Korea (the Republic of)"
+msgstr "Corea (República de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:123
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#. Title
+#: schema/project-level/codelists/country.csv:124
+msgid "Cayman Islands"
+msgstr "Islas Caimán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:125
+msgid "Kazakhstan"
+msgstr "Kazajstán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:126
+msgid "Lao People's Democratic Republic"
+msgstr "República Democrática Popular Lao"
+
+#. Title
+#: schema/project-level/codelists/country.csv:127
+msgid "Lebanon"
+msgstr "Líbano"
+
+#. Title
+#: schema/project-level/codelists/country.csv:128
+msgid "Saint Lucia"
+msgstr "Santa Lucía"
+
+#. Title
+#: schema/project-level/codelists/country.csv:129
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#. Title
+#: schema/project-level/codelists/country.csv:130
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#. Title
+#: schema/project-level/codelists/country.csv:131
+msgid "Liberia"
+msgstr "Liberia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:132
+msgid "Lesotho"
+msgstr "Lesoto"
+
+#. Title
+#: schema/project-level/codelists/country.csv:133
+msgid "Lithuania"
+msgstr "Lituania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:134
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+#. Title
+#: schema/project-level/codelists/country.csv:135
+msgid "Latvia"
+msgstr "Letonia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:136
+msgid "Libya"
+msgstr "Libia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:137
+msgid "Morocco"
+msgstr "Marruecos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:138
+msgid "Monaco"
+msgstr "Mónaco"
+
+#. Title
+#: schema/project-level/codelists/country.csv:139
+msgid "Moldova (the Republic of)"
+msgstr "Moldavia (República de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:140
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#. Title
+#: schema/project-level/codelists/country.csv:141
+msgid "Saint Martin (French part)"
+msgstr "San Martín (parte francesa)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:142
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#. Title
+#: schema/project-level/codelists/country.csv:143
+msgid "Marshall Islands"
+msgstr "Islas Marshall"
+
+#. Title
+#: schema/project-level/codelists/country.csv:144
+msgid "North Macedonia"
+msgstr "Macedonia del Norte"
+
+#. Title
+#: schema/project-level/codelists/country.csv:145
+msgid "Mali"
+msgstr "Malí"
+
+#. Title
+#: schema/project-level/codelists/country.csv:146
+msgid "Myanmar"
+msgstr "Birmania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:147
+msgid "Mongolia"
+msgstr "Mongolia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:148
+msgid "Macao"
+msgstr "Macao"
+
+#. Title
+#: schema/project-level/codelists/country.csv:149
+msgid "Northern Mariana Islands"
+msgstr "Islas Marianas del Norte"
+
+#. Title
+#: schema/project-level/codelists/country.csv:150
+msgid "Martinique"
+msgstr "Martinica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:151
+msgid "Mauritania"
+msgstr "Mauritania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:152
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#. Title
+#: schema/project-level/codelists/country.csv:153
+msgid "Malta"
+msgstr "Malta"
+
+#. Title
+#: schema/project-level/codelists/country.csv:154
+msgid "Mauritius"
+msgstr "Mauricio"
+
+#. Title
+#: schema/project-level/codelists/country.csv:155
+msgid "Maldives"
+msgstr "Maldivas"
+
+#. Title
+#: schema/project-level/codelists/country.csv:156
+msgid "Malawi"
+msgstr "Malaui"
+
+#. Title
+#: schema/project-level/codelists/country.csv:157
+msgid "Mexico"
+msgstr "México"
+
+#. Title
+#: schema/project-level/codelists/country.csv:158
+msgid "Malaysia"
+msgstr "Malasia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:159
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#. Title
+#: schema/project-level/codelists/country.csv:160
+msgid "Namibia"
+msgstr "Namibia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:161
+msgid "New Caledonia"
+msgstr "Nueva Caledonia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:162
+msgid "Niger"
+msgstr "Níger"
+
+#. Title
+#: schema/project-level/codelists/country.csv:163
+msgid "Norfolk Island"
+msgstr "Isla Norfolk"
+
+#. Title
+#: schema/project-level/codelists/country.csv:164
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#. Title
+#: schema/project-level/codelists/country.csv:165
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#. Title
+#: schema/project-level/codelists/country.csv:166
+msgid "Netherlands"
+msgstr "Países Bajos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:167
+msgid "Norway"
+msgstr "Noruega"
+
+#. Title
+#: schema/project-level/codelists/country.csv:168
+msgid "Nepal"
+msgstr "Nepal"
+
+#. Title
+#: schema/project-level/codelists/country.csv:169
+msgid "Nauru"
+msgstr "Nauru"
+
+#. Title
+#: schema/project-level/codelists/country.csv:170
+msgid "Niue"
+msgstr "Niue"
+
+#. Title
+#: schema/project-level/codelists/country.csv:171
+msgid "New Zealand"
+msgstr "Nueva Zelanda"
+
+#. Title
+#: schema/project-level/codelists/country.csv:172
+msgid "Oman"
+msgstr "Omán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:173
+msgid "Panama"
+msgstr "Panamá"
+
+#. Title
+#: schema/project-level/codelists/country.csv:174
+msgid "Peru"
+msgstr "Perú"
+
+#. Title
+#: schema/project-level/codelists/country.csv:175
+msgid "French Polynesia"
+msgstr "Polinesia Francesa"
+
+#. Title
+#: schema/project-level/codelists/country.csv:176
+msgid "Papua New Guinea"
+msgstr "Papúa Nueva Guinea"
+
+#. Title
+#: schema/project-level/codelists/country.csv:177
+msgid "Philippines"
+msgstr "Filipinas"
+
+#. Title
+#: schema/project-level/codelists/country.csv:178
+msgid "Pakistan"
+msgstr "Pakistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:179
+msgid "Poland"
+msgstr "Polonia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:180
+msgid "Saint Pierre and Miquelon"
+msgstr "San Pedro y Miquelón"
+
+#. Title
+#: schema/project-level/codelists/country.csv:181
+msgid "Pitcairn"
+msgstr "Islas Pitcairn"
+
+#. Title
+#: schema/project-level/codelists/country.csv:182
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#. Title
+#: schema/project-level/codelists/country.csv:183
+msgid "Palestine, State of"
+msgstr "Palestina, Estado de"
+
+#. Title
+#: schema/project-level/codelists/country.csv:184
+msgid "Portugal"
+msgstr "Portugal"
+
+#. Title
+#: schema/project-level/codelists/country.csv:185
+msgid "Palau"
+msgstr "Palaos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:186
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#. Title
+#: schema/project-level/codelists/country.csv:187
+msgid "Qatar"
+msgstr "Katar"
+
+#. Title
+#: schema/project-level/codelists/country.csv:188
+msgid "Réunion"
+msgstr "Reunión"
+
+#. Title
+#: schema/project-level/codelists/country.csv:189
+msgid "Romania"
+msgstr "Rumania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:190
+msgid "Serbia"
+msgstr "Serbia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:191
+msgid "Russian Federation"
+msgstr "Federación Rusa"
+
+#. Title
+#: schema/project-level/codelists/country.csv:192
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#. Title
+#: schema/project-level/codelists/country.csv:193
+msgid "Saudi Arabia"
+msgstr "Arabia Saudita"
+
+#. Title
+#: schema/project-level/codelists/country.csv:194
+msgid "Solomon Islands"
+msgstr "Islas Salomón"
+
+#. Title
+#: schema/project-level/codelists/country.csv:195
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#. Title
+#: schema/project-level/codelists/country.csv:196
+msgid "Sudan"
+msgstr "Sudán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:197
+msgid "Sweden"
+msgstr "Suecia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:198
+msgid "Singapore"
+msgstr "Singapur"
+
+#. Title
+#: schema/project-level/codelists/country.csv:199
+msgid "Saint Helena, Ascension and Tristan da Cunha"
+msgstr "Santa Elena, Ascensión y Tristán de Acuña"
+
+#. Title
+#: schema/project-level/codelists/country.csv:200
+msgid "Slovenia"
+msgstr "Eslovenia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:201
+msgid "Svalbard and Jan Mayen"
+msgstr "Svalbard y Jan Mayen"
+
+#. Title
+#: schema/project-level/codelists/country.csv:202
+msgid "Slovakia"
+msgstr "Eslovaquia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:203
+msgid "Sierra Leone"
+msgstr "Sierra Leona"
+
+#. Title
+#: schema/project-level/codelists/country.csv:204
+msgid "San Marino"
+msgstr "San Marino"
+
+#. Title
+#: schema/project-level/codelists/country.csv:205
+msgid "Senegal"
+msgstr "Senegal"
+
+#. Title
+#: schema/project-level/codelists/country.csv:206
+msgid "Somalia"
+msgstr "Somalia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:207
+msgid "Suriname"
+msgstr "Surinam"
+
+#. Title
+#: schema/project-level/codelists/country.csv:208
+msgid "South Sudan"
+msgstr "Sudán del Sur"
+
+#. Title
+#: schema/project-level/codelists/country.csv:209
+msgid "Sao Tome and Principe"
+msgstr "Santo Tomé y Príncipe"
+
+#. Title
+#: schema/project-level/codelists/country.csv:210
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#. Title
+#: schema/project-level/codelists/country.csv:211
+msgid "Sint Maarten (Dutch part)"
+msgstr "Sint Maarten (parte holandesa)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:212
+msgid "Syrian Arab Republic"
+msgstr "República Árabe Siria"
+
+#. Title
+#: schema/project-level/codelists/country.csv:213
+msgid "Eswatini"
+msgstr "Eswatini"
+
+#. Title
+#: schema/project-level/codelists/country.csv:214
+msgid "Turks and Caicos Islands"
+msgstr "Islas Turcas y Caicos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:215
+msgid "Chad"
+msgstr "Chad"
+
+#. Title
+#: schema/project-level/codelists/country.csv:216
+msgid "French Southern Territories"
+msgstr "Territorios Australes Franceses"
+
+#. Title
+#: schema/project-level/codelists/country.csv:217
+msgid "Togo"
+msgstr "Togo"
+
+#. Title
+#: schema/project-level/codelists/country.csv:218
+msgid "Thailand"
+msgstr "Tailandia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:219
+msgid "Tajikistan"
+msgstr "Tayikistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:220
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#. Title
+#: schema/project-level/codelists/country.csv:221
+msgid "Timor-Leste"
+msgstr "Timor Oriental"
+
+#. Title
+#: schema/project-level/codelists/country.csv:222
+msgid "Turkmenistan"
+msgstr "Turkmenistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:223
+msgid "Tunisia"
+msgstr "Túnez"
+
+#. Title
+#: schema/project-level/codelists/country.csv:224
+msgid "Tonga"
+msgstr "Tonga"
+
+#. Title
+#: schema/project-level/codelists/country.csv:225
+msgid "Turkey"
+msgstr "Pavo"
+
+#. Title
+#: schema/project-level/codelists/country.csv:226
+msgid "Trinidad and Tobago"
+msgstr "Trinidad y Tobago"
+
+#. Title
+#: schema/project-level/codelists/country.csv:227
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#. Title
+#: schema/project-level/codelists/country.csv:228
+msgid "Taiwan (Province of China)"
+msgstr "Taiwán (provincia de China)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:229
+msgid "Tanzania, the United Republic of"
+msgstr "Tanzanía, República Unida de"
+
+#. Title
+#: schema/project-level/codelists/country.csv:230
+msgid "Ukraine"
+msgstr "Ucrania"
+
+#. Title
+#: schema/project-level/codelists/country.csv:231
+msgid "Uganda"
+msgstr "Uganda"
+
+#. Title
+#: schema/project-level/codelists/country.csv:232
+msgid "United States Minor Outlying Islands"
+msgstr "Islas menores alejadas de los Estados Unidos"
+
+#. Title
+#: schema/project-level/codelists/country.csv:233
+msgid "United States of America"
+msgstr "Estados Unidos de América"
+
+#. Title
+#: schema/project-level/codelists/country.csv:234
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#. Title
+#: schema/project-level/codelists/country.csv:235
+msgid "Uzbekistan"
+msgstr "Uzbekistán"
+
+#. Title
+#: schema/project-level/codelists/country.csv:236
+msgid "Holy See"
+msgstr "Santa Sede"
+
+#. Title
+#: schema/project-level/codelists/country.csv:237
+msgid "Saint Vincent and the Grenadines"
+msgstr "San Vicente y las Granadinas"
+
+#. Title
+#: schema/project-level/codelists/country.csv:238
+msgid "Venezuela (Bolivarian Republic of)"
+msgstr "Venezuela (República Bolivariana de)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:239
+msgid "Virgin Islands (British)"
+msgstr "Islas Vírgenes (Británicas)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:240
+msgid "Virgin Islands (U.S.)"
+msgstr "Islas Vírgenes (Estados Unidos)"
+
+#. Title
+#: schema/project-level/codelists/country.csv:241
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+#. Title
+#: schema/project-level/codelists/country.csv:242
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#. Title
+#: schema/project-level/codelists/country.csv:243
+msgid "Wallis and Futuna"
+msgstr "Wallis y Futuna"
+
+#. Title
+#: schema/project-level/codelists/country.csv:244
+msgid "Samoa"
+msgstr "Samoa"
+
+#. Title
+#: schema/project-level/codelists/country.csv:245
+msgid "Kosovo"
+msgstr "Kosovo"
+
+#. Title
+#: schema/project-level/codelists/country.csv:246
+msgid "Yemen"
+msgstr "Yemen"
+
+#. Title
+#: schema/project-level/codelists/country.csv:247
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#. Title
+#: schema/project-level/codelists/country.csv:248
+msgid "South Africa"
+msgstr "Sudáfrica"
+
+#. Title
+#: schema/project-level/codelists/country.csv:249
+msgid "Zambia"
+msgstr "Zambia"
+
+#. Title
+#: schema/project-level/codelists/country.csv:250
+msgid "Zimbabwe"
+msgstr "Zimbabue"
+
+#. Title
+#: schema/project-level/codelists/debtRepaymentPriority.csv:1
+msgid "Senior"
+msgstr "Sénior"
+
+#. Description
+#: schema/project-level/codelists/debtRepaymentPriority.csv:1
+msgid "Debt that needs to be repaid before subordinated debt is repaid."
+msgstr " Deuda que debe reembolsarse antes que la deuda subordinada."
+
+#. Title
+#: schema/project-level/codelists/debtRepaymentPriority.csv:2
+msgid "Subordinated"
+msgstr "Subordinada"
+
+#. Description
+#: schema/project-level/codelists/debtRepaymentPriority.csv:2
+msgid "Debt that needs to be repaid only after senior debt is repaid."
+msgstr ""
+" Deuda que debe reembolsarse sólo después de que se haya reembolsado la "
+"deuda principal."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:1
@@ -294,6 +2401,7 @@ msgstr ""
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:8
+#: schema/project-level/codelists/sustainabilityStrategy.csv:6
 msgid "Technical specifications"
 msgstr "Especificaciones técnicas"
 
@@ -473,8 +2581,8 @@ msgstr ""
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:21
-msgid "Environmental impact assessment"
-msgstr " Evaluación de impacto ambiental"
+msgid "Environmental impact"
+msgstr "Impacto ambiental"
 
 #. Description
 #: schema/project-level/codelists/documentType.csv:21
@@ -482,13 +2590,13 @@ msgid ""
 "Documentation of assessments of the environmental impacts (e.g. impacts on "
 "flora, fauna & woodlands, areas of natural beauty, carbon emissions etc.) "
 "and mitigation measures (e.g. pollution control, low carbon solutions, "
-"sustainable timber etc.) for this contracting process or project."
+"sustainable timber etc.) for the contracting process or project."
 msgstr ""
-"Documentación de las evaluaciones de impacto ambiental (ej. impacto en "
-"flora, fauna y bosques, áreas naturales, emisiones de carbono, etc.) y "
-"medidas de mitigación (ej. control de contaminación, soluciones de baja "
-"emisión de carbono, madera sustentable, etc.) para este proceso de "
-"contratación o proyecto."
+"Documentación de las evaluaciones del impacto medioambiental (por ejemplo, "
+"impacto en la flora, fauna y bosques, zonas de belleza natural, emisiones de"
+" carbono, etc.) y medidas de mitigación (por ejemplo, control de la "
+"contaminación, soluciones con bajas emisiones de carbono, madera sostenible,"
+" etc.) para el proceso de contratación o el proyecto."
 
 #. Title
 #: schema/project-level/codelists/documentType.csv:22
@@ -1113,6 +3221,742 @@ msgstr ""
 "durante el ciclo de vida del proyecto."
 
 #. Title
+#: schema/project-level/codelists/documentType.csv:66
+msgid "Climate measures"
+msgstr "Medidas climáticas"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:66
+msgid ""
+"Documentation of the measures adopted by the project to adapt to or mitigate"
+" against climate change."
+msgstr ""
+" Documentación de las medidas adoptadas por el proyecto para adaptarse al "
+"cambio climático o mitigarlo."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:67
+msgid "Conservation measures"
+msgstr "Medidas de conservación"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:67
+msgid ""
+"Documentation of the measures adopted by the project to protect and enhance "
+"biodiversity."
+msgstr ""
+" Documentación de las medidas adoptadas por el proyecto para proteger y "
+"mejorar la biodiversidad."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:68
+msgid "Environmental measures"
+msgstr "Medidas ambientales"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:68
+msgid ""
+"Documentation of the measures adopted by the project to mitigate or remedy "
+"environmental impacts."
+msgstr ""
+"Documentación de las medidas adoptadas por el proyecto para mitigar o "
+"remediar los impactos ambientales"
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:69
+msgid "Policy alignment"
+msgstr "Alineación de políticas"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:69
+msgid ""
+"Documentation detailing how a project aligns with an international, "
+"national, sector, or procuring entity policy, plan or strategy."
+msgstr ""
+"Documentación que detalla la forma en que el proyecto se alinea con una "
+"política, plan o estrategia  internacional, nacional, sectorial o de la "
+"entidad contratante."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:70
+msgid "Procurement strategy risk assessment"
+msgstr "Evaluación de riesgo de la política de adquisiciones y contrataciones"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:70
+msgid ""
+"Documentation of the strategic risk assessment carried out for this "
+"contracting process addressing in-house capabilities, contract packaging "
+"decisions and risk allocation decisions."
+msgstr ""
+" Documentación de la evaluación de riesgos estratégicos realizada para este "
+"proceso de contratación que aborde las capacidades internas, las decisiones "
+"de empaquetado de contratos y las decisiones de asignación de riesgos."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:71
+msgid "Life cycle cost methodology"
+msgstr "Metodología del costo del ciclo de vida"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:71
+msgid ""
+"Documentation of the methodology for calculating the life cycle cost of the "
+"assets."
+msgstr ""
+"Documentación de la metodología para calcular el costo del ciclo de vida de "
+"los activos."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:72
+msgid "Cost-benefit analysis"
+msgstr "Análisis costo-beneficio"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:72
+msgid ""
+"Documentation of the economic cost-benefit analysis carried out for the "
+"project."
+msgstr ""
+" Documentación del análisis económico de costo-beneficio realizado para el "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:73
+msgid "Environmental exemption"
+msgstr "Excepción medioambiental"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:73
+msgid ""
+"Documentation of any environmental exemptions or amnesties granted to the "
+"project by a relevant authority."
+msgstr ""
+" Documentación sobre cualquier excepción o amnistía medioambiental concedida"
+" al proyecto por una autoridad competente."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:74
+msgid "Climate and disaster risk assessment"
+msgstr "Evaluación del riesgo climático y de desastres"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:74
+msgid ""
+"Documentation of assessments of the project's risk in relation to climate "
+"change and natural disasters."
+msgstr ""
+"Documentación de evaluaciones de riesgo del proyecto en relación con el "
+"cambio climático y los desastres naturales."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:75
+msgid "Climate transformation"
+msgstr "Transformación climática"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:75
+msgid ""
+"Documentation of the theory of change, systemic transition or transformation"
+" in relation to the climate that is intended as an outcome of the project."
+msgstr ""
+" Documentación de la teoría del cambio, transición sistémica o "
+"transformación en relación con el clima que se pretende como resultado del "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:76
+msgid "Decommissioning plans"
+msgstr "Planes de desmantelamiento"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:76
+msgid ""
+"Documentation of plans for the decommissioning of the assets at the end of "
+"their lifetime."
+msgstr ""
+" Documentación de los planes de desmantelamiento de los activos al final de "
+"su vida útil."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:77
+msgid "Impact methodology"
+msgstr "Metodología de impacto"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:77
+msgid ""
+"Documentation of the methodology for measuring the long-term impact of the "
+"project."
+msgstr ""
+"Documentación de la metodología para medir el impacto a largo plazo del "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:78
+msgid "Inclusive design"
+msgstr "Diseño inclusivo"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:78
+msgid ""
+"Documentation of how issues relating to gender, people with disabilities and"
+" vulnerable and disadvantaged populations were incorporated into the "
+"project's design."
+msgstr ""
+" Documentación sobre cómo se incorporaron al diseño del proyecto las "
+"cuestiones relacionadas con el género, las personas con discapacidad y las "
+"poblaciones vulnerables y desfavorecidas."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:79
+msgid "Inclusive implementation"
+msgstr "Implementación inclusiva"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:79
+msgid ""
+"Documentation of how issues relating to gender, people with disabilities and"
+" vulnerable and disadvantaged populations were incorporated into the "
+"project's implementation."
+msgstr ""
+" Documentación sobre cómo se incorporaron a la implementación del proyecto "
+"las cuestiones relativas al género, las personas con discapacidad y las "
+"poblaciones vulnerables y desfavorecidas."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:80
+msgid "Supplier environmental certification"
+msgstr "Certificación ambiental de proveedores"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:80
+msgid ""
+"A certificate issued by a relevant authority confirming the supplier "
+"conforms to relevant environmental policies."
+msgstr ""
+" Certificado expedido por una autoridad competente que confirma que el "
+"proveedor cumple las políticas medioambientales pertinentes."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:81
+msgid "Supplier health and safety certification"
+msgstr "Certificación de salud y seguridad de proveedores"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:81
+msgid ""
+"A certificate issued by a relevant authority confirming the supplier "
+"conforms to relevant health and safety policies."
+msgstr ""
+" Un certificado expedido por una autoridad competente que confirme que el "
+"proveedor cumple las políticas de salud y seguridad pertinentes."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:82
+msgid "Anti-corruption certification"
+msgstr "Certificación anticorrupción"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:82
+msgid ""
+"A certificate issued by a relevant authority confirming the named party "
+"conforms to an anti-corruption standard, such as the ISO 37001 on Anti-"
+"Bribery Management Systems Standard."
+msgstr ""
+" Un certificado emitido por una autoridad competente que confirma que la "
+"parte mencionada cumple una norma anticorrupción, como la Norma ISO 37001 "
+"sobre Sistemas de Gestión Antisoborno."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:83
+msgid "Oversight report"
+msgstr "Informe de supervisión"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:83
+msgid ""
+"Documentation of checks that the governance and management of the project "
+"owner or procuring entity comply with all relevant legislative mandates and "
+"policies."
+msgstr ""
+" Documentación de las verificaciones de que la gobernanza y la gestión del "
+"propietario del proyecto o de la entidad adjudicadora cumplen todos los "
+"mandatos legislativos y políticas pertinentes."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:84
+msgid "Freedom of information request"
+msgstr "Solicitud de libertad de información"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:84
+msgid ""
+"A request for information in relation to the project submitted under "
+"relevant freedom of information legislation."
+msgstr ""
+" Una solicitud de información relacionada con el proyecto presentada en "
+"virtud de la legislación pertinente sobre libertad de información."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:85
+msgid "Freedom of information request response"
+msgstr "Respuesta a solicitud de libertad de información"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:85
+msgid ""
+"The formal response in answer to a request for information in relation to "
+"the project submitted under relevant freedom of information legislation."
+msgstr ""
+" La respuesta formal a una solicitud de información sobre el proyecto "
+"presentada en virtud de la legislación sobre libertad de información."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:86
+msgid "Building inspection report"
+msgstr "Informe de inspección del edificio"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:86
+msgid ""
+"Documentation of checks that the assets meet building code requirements."
+msgstr ""
+" Documentación de las inspecciones para comprobar que los activos cumplen "
+"los requisitos del código de edificación."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:87
+msgid "Greenhouse gas emissions forecast"
+msgstr "Proyección de emisiones de gases de efecto invernadero"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:87
+msgid ""
+"Documentation of the forecast greenhouse gases that the project will emit, "
+"including the methodology and calculation method used."
+msgstr ""
+" Documentación sobre las proyecciones de gases de efecto invernadero que "
+"emitirá el proyecto, incluida la metodología y el método de cálculo "
+"utilizados."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:88
+msgid "Greenhouse gas emissions reduction forecast"
+msgstr "Previsión de reducción de emisiones de gases de efecto invernadero"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:88
+msgid ""
+"Documentation of the forecast reduction in greenhouse gas emissions "
+"resulting from the project, including the methodology and calculation method"
+" used."
+msgstr ""
+"Documentación de la reducción prevista de las emisiones de gases de efecto "
+"invernadero resultantes del proyecto, incluida la metodología y el método de"
+" cálculo utilizados."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:89
+msgid "Greenhouse gas emissions"
+msgstr "Emisiones de gases de efecto invernadero"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:89
+msgid ""
+"Documentation of the actual greenhouse gases that the project emitted, "
+"including the methodology and calculation method used."
+msgstr ""
+" Documentación de los gases de efecto invernadero realmente emitidos por el "
+"proyecto, incluida la metodología y el método de cálculo utilizados."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:90
+msgid "Abatement cost methodology"
+msgstr "Metodología de los costos de reducción"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:90
+msgid ""
+"Documentation of the methodology for calculating the project's abatement "
+"cost."
+msgstr ""
+" Documentación de la metodología de cálculo del costo de reducción del "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:91
+msgid "Lobbying meeting minutes"
+msgstr " Actas de las reuniones de cabildeo"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:91
+msgid ""
+"A record of the issues discussed, agreements reached and decisions taken at "
+"a lobbying meeting."
+msgstr ""
+"Registro de los temas abordados, los acuerdos alcanzados y las decisiones "
+"tomadas en una reunión de cabildeo."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:92
+msgid "Consultation meeting minutes"
+msgstr "Actas de la reunión de consulta"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:92
+msgid ""
+"A record of the issues discussed, agreements reached and decisions taken at "
+"a public consultation meeting."
+msgstr ""
+" Registro de las cuestiones discutidas, los acuerdos alcanzados y las "
+"decisiones tomadas en una reunión de consulta pública."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:93
+msgid "Consultation meeting invitation"
+msgstr "Invitación a reunión de consulta"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:93
+msgid ""
+"A notice about an upcoming public consultation meeting relating to the "
+"project."
+msgstr ""
+"Un aviso sobre una próxima reunión de consulta pública relacionada con el "
+"proyecto."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:94
+msgid "Material test results"
+msgstr "Resultados de pruebas de materiales"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:94
+msgid "Documentation of results of tests conducted on construction materials."
+msgstr ""
+"Documentación sobre los resultados de las pruebas realizadas a materiales de"
+" construcción."
+
+#. Title
+#: schema/project-level/codelists/documentType.csv:95
+msgid "Maintenance plan"
+msgstr "Plan de mantenimiento"
+
+#. Description
+#: schema/project-level/codelists/documentType.csv:95
+msgid ""
+"Documentation that describes work to prevent the breakdown or malfunctioning"
+" of an asset."
+msgstr ""
+"Documentación que describe el trabajo para prevenir la avería o el mal "
+"funcionamiento de un activo."
+
+#. Title
+#: schema/project-level/codelists/environmentalGoal.csv:1
+msgid "Climate change adaptation"
+msgstr "Adaptación al cambio climático"
+
+#. Description
+#: schema/project-level/codelists/environmentalGoal.csv:1
+msgid ""
+"Adjustment to actual or expected climate and its effects, in order to "
+"moderate harm or exploit beneficial opportunities."
+msgstr ""
+" Adaptación al clima real o previsto y a sus efectos, con el fin de moderar "
+"los daños o aprovechar las oportunidades beneficiosas."
+
+#. Title
+#: schema/project-level/codelists/environmentalGoal.csv:2
+msgid "Climate change mitigation"
+msgstr "Mitigación del cambio climático"
+
+#. Description
+#: schema/project-level/codelists/environmentalGoal.csv:2
+msgid ""
+"Reduction of emissions or enhancement of the sinks of greenhouse gases."
+msgstr ""
+"Reducción de emisiones o mejora de los sumideros de gases de efecto "
+"invernadero."
+
+#. Title
+#: schema/project-level/codelists/environmentalMeasure.csv:1
+msgid "Waste Management"
+msgstr "Gestión de residuos"
+
+#. Description
+#: schema/project-level/codelists/environmentalMeasure.csv:1
+msgid ""
+"Measures that avoid, reduce, recycle and reuse waste generated as a direct "
+"result of the project. When waste is produced, it ought to be treated, "
+"destroyed or disposed of in a safe and environmentally sound manner."
+msgstr ""
+"Medidas que eviten, reduzcan, reciclen y reutilicen los residuos generados "
+"como consecuencia directa del proyecto. Cuando se producen residuos, deben "
+"tratarse, destruirse o eliminarse de forma segura y respetuosa con el medio "
+"ambiente."
+
+#. Title
+#: schema/project-level/codelists/environmentalMeasure.csv:2
+msgid "Disposal of construction by-products"
+msgstr "Eliminación de subproductos de la construcción"
+
+#. Description
+#: schema/project-level/codelists/environmentalMeasure.csv:2
+msgid ""
+"Measures that avoid, reduce, recycle and reuse construction by-products "
+"generated as a direct result of the project. When construction by-products "
+"are produced, they ought to be treated, destroyed or disposed of in a safe "
+"and environmentally sound manner."
+msgstr ""
+" Medidas que eviten, reduzcan, reciclen y reutilicen los subproductos de la "
+"construcción generados como resultado directo del proyecto. Cuando se "
+"generen subproductos de la construcción, deberán tratarse, destruirse o "
+"eliminarse de forma segura y respetuosa con el medio ambiente."
+
+#. Title
+#: schema/project-level/codelists/environmentalMeasure.csv:3
+msgid "Environmentally responsible sourcing of materials"
+msgstr "Abastecimiento de materiales respetuoso con el medio ambiente"
+
+#. Description
+#: schema/project-level/codelists/environmentalMeasure.csv:3
+msgid ""
+"Measures that ensure all project materials are sourced in an environmentally"
+" sustainable manner. For example, Leadership in Energy and Environmental "
+"Design (LEED) standards for building materials or Forest Stewardship Council"
+" (FSC) standards for wood."
+msgstr ""
+" Medidas que garanticen que todos los materiales del proyecto proceden de "
+"fuentes sostenibles desde el punto de vista medioambiental. Por ejemplo, las"
+" normas LEED (Leadership in Energy and Environmental Design) para los "
+"materiales de construcción o las normas FSC (Forest Stewardship Council) "
+"para la madera."
+
+#. Title
+#: schema/project-level/codelists/environmentalMeasure.csv:4
+msgid "Environmentally responsible use of land, water and air"
+msgstr "Uso ambientalmente responsable de la tierra, el agua y el aire"
+
+#. Description
+#: schema/project-level/codelists/environmentalMeasure.csv:4
+msgid ""
+"Measures that ensure the sustainable and environmentally responsible use of "
+"land, water and air by the project."
+msgstr ""
+" Medidas que garanticen el uso sostenible y ambientalmente responsable de la"
+" tierra, el agua y el aire por parte del proyecto."
+
+#. Title
+#: schema/project-level/codelists/environmentalMeasure.csv:5
+msgid "Water contamination management"
+msgstr "Gestión de la contaminación del agua"
+
+#. Description
+#: schema/project-level/codelists/environmentalMeasure.csv:5
+msgid ""
+"Measures that apply pollution prevention techniques to monitor and treat or "
+"recycle wastewater discharge in order to avoid pollution harmful to human "
+"health and the surrounding environment."
+msgstr ""
+" Medidas que aplican técnicas de prevención de la contaminación para "
+"controlar y tratar o reciclar los vertidos de aguas residuales con el fin de"
+" evitar la contaminación perjudicial para la salud humana y el medio "
+"ambiente circundante."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:1
+msgid "Bond"
+msgstr "Bono"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:1
+msgid ""
+"A debt instrument provided by an issuer, such as a government or company. A "
+"bond typically obliges the issuer to pay interest (coupons) to the "
+"bondholder over a specified period and to repay the principal (amount "
+"borrowed) at the maturity date."
+msgstr ""
+" Instrumento de deuda proporcionado por un emisor, como un gobierno o una "
+"empresa. Un bono suele obligar al emisor a pagar intereses (cupones) al "
+"tenedor del bono durante un periodo determinado y a devolver el principal "
+"(cantidad prestada) en la fecha de vencimiento."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:2
+msgid "Loan"
+msgstr "Préstamo"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:2
+msgid ""
+"A debt instrument provided by a lender, such as a commercial bank, multi-"
+"lateral financial institution, or development agency. A loan typically "
+"obliges the borrower to pay the principal (amount borrowed) and interest to "
+"the lender over a specified period."
+msgstr ""
+" Instrumento de deuda proporcionado por un prestamista, como un banco "
+"comercial, una institución financiera multilateral o una agencia de "
+"desarrollo. Un préstamo suele obligar al prestatario a pagar el principal "
+"(cantidad prestada) y los intereses al prestamista durante un período "
+"determinado."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:3
+msgid "Hybrid"
+msgstr "Híbrido"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:3
+msgid ""
+"A debt-based instrument with equity-like participation. Also called "
+"mezzanine finance."
+msgstr ""
+" Instrumento basado en la deuda con una participación similar a la de las "
+"acciones. También se denomina financiación intermedia."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:4
+msgid "Listed shares"
+msgstr "Acciones cotizadas en la bolsa"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:4
+msgid ""
+"An equity instrument representing ownership rights in a company that is "
+"listed in a stock exchange."
+msgstr ""
+" Instrumento de capital que representa derechos de propiedad en una empresa "
+"que cotiza en bolsa."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:5
+msgid "Unlisted shares"
+msgstr "Acciones no cotizadas en la bolsa"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:5
+msgid ""
+"An equity instrument representing ownership rights in a company that is not "
+"listed in a stock exchange."
+msgstr ""
+" Instrumento de capital que representa derechos de propiedad en una empresa "
+"que no cotiza en bolsa."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:6
+msgid "Grant"
+msgstr "Donación"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:6
+msgid "Money provided without expectation of repayment."
+msgstr "Dinero proporcionado sin expectativa de devolución."
+
+#. Title
+#: schema/project-level/codelists/financingArrangementType.csv:7
+msgid "Guarantee"
+msgstr "Garantía"
+
+#. Description
+#: schema/project-level/codelists/financingArrangementType.csv:7
+msgid ""
+"A promise by one party to assume the debt of another in case of default."
+msgstr ""
+"Promesa de una parte de asumir la deuda de otra en caso de incumplimiento."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:1
+msgid "Institutional"
+msgstr "Institucional"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:1
+msgid ""
+"This finance was provided by institutional investors: organizations that "
+"pool money to purchase securities, real property, and other investment "
+"assets or originate loans. Institutional investors include banks, insurance "
+"companies, pensions, hedge funds, REITs, investment advisors, endowments, "
+"and mutual funds."
+msgstr ""
+" Esta financiación fue proporcionada por inversores institucionales: "
+"organizaciones que reúnen dinero para comprar valores, bienes inmuebles y "
+"otros activos de inversión u originar préstamos. Entre los inversores "
+"institucionales figuran bancos, compañías de seguros, pensiones, fondos de "
+"cobertura, REIT, asesores de inversión, dotaciones y fondos de inversión."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:2
+msgid "Commercial"
+msgstr "Comercial"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:2
+msgid ""
+"This finance was provided by private parties who do not fall within the "
+"definition of institutional investor."
+msgstr ""
+" Este financiamiento fue aportado por particulares que no entran en la "
+"definición de inversor institucional."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:3
+msgid "Bilateral"
+msgstr "Bilateral"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:3
+msgid ""
+"This finance was provided by a bilateral institution: an agency of one "
+"specific government, usually a development agency or export-credit agency "
+"with a mandate to support domestic businesses in pursuing investments "
+"abroad."
+msgstr ""
+" Este financiamiento fue proporcionado por una institución bilateral: una "
+"agencia de un gobierno específico, generalmente una agencia de desarrollo o "
+"una agencia de crédito a la exportación con el mandato de apoyar a las "
+"empresas nacionales en la búsqueda de inversiones en el extranjero."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:4
+msgid "Multilateral"
+msgstr "Multilateral"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:4
+msgid ""
+"This finance was provided by a multilateral institution: a body created by a"
+" group of countries to provides financing and professional support, "
+"primarily for the purpose of development."
+msgstr ""
+" Este financiamiento fue otorgado por una institución multilateral: un "
+"organismo creado por un grupo de países para proporcionar financiación y "
+"apoyo profesional, principalmente con fines de desarrollo."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:5
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:5
+msgid ""
+"This finance was provided through a line of credit provided by a vendor."
+msgstr ""
+" Este financiamiento se realizó a través de una línea de crédito "
+"proporcionada por un proveedor."
+
+#. Title
+#: schema/project-level/codelists/financingPartyType.csv:6
+msgid "Other"
+msgstr "Otro"
+
+#. Description
+#: schema/project-level/codelists/financingPartyType.csv:6
+msgid "This finance was provided through some other source."
+msgstr "Este financiamiento fue otorgado a través de alguna otra fuente."
+
+#. Title
 #: schema/project-level/codelists/geometryType.csv:1
 msgid "Point"
 msgstr "Punto"
@@ -1208,6 +4052,235 @@ msgstr ""
 "coordenadas 'Polygon'"
 
 #. Title
+#: schema/project-level/codelists/laborObligations.csv:1
+msgid "Minimum wage"
+msgstr "Salario mínimo"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:1
+msgid ""
+"A minimum wage that an employer will pay their labor force for work "
+"performed, which cannot be reduced by collective or individual agreements or"
+" contracts."
+msgstr ""
+"Salario mínimo que un empresario pagará a su mano de obra por el trabajo "
+"realizado, que no puede reducirse mediante convenios o contratos colectivos "
+"o individuales."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:2
+msgid "Paid overtime"
+msgstr "Pago de horas extras"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:2
+msgid ""
+"Agreement that hours worked in addition to regular working hours will be "
+"paid at a specified level."
+msgstr ""
+"Acuerdo por el cual las horas trabajadas adicionalmente a las horas de "
+"trabajo regulares serán pagadas a un nivel específico."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:3
+msgid "Weekly rest protection"
+msgstr "Protección del descanso semanal"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:3
+msgid ""
+"Regular working hours and voluntary overtime are both capped to protect a "
+"minimum level of weekly rest."
+msgstr ""
+"Tanto las horas de trabajo regulares como las horas extra voluntarias están "
+"limitadas para proteger un nivel mínimo de descanso semanal."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:4
+msgid "Prohibition of forced labor"
+msgstr "Prohibición del trabajo forzoso"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:4
+msgid ""
+"The project will not resort to any form of forced labor and will comply with"
+" all applicable national and international laws regarding forced or "
+"compulsory labor."
+msgstr ""
+"El proyecto no recurrirá a ninguna forma de trabajo forzoso y cumplirá todas"
+" las leyes nacionales e internacionales aplicables en materia de trabajo "
+"forzoso u obligatorio."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:5
+msgid "Prohibition of child labor"
+msgstr "Prohibición del trabajo infantil"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:5
+msgid ""
+"The project will not resort to any form of child labor and will comply with "
+"all applicable national and international laws regarding employment of "
+"minors."
+msgstr ""
+" El proyecto no recurrirá a ninguna forma de trabajo infantil y cumplirá "
+"todas las leyes nacionales e internacionales aplicables en materia de empleo"
+" de menores."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:6
+msgid "Equal opportunities"
+msgstr "Igualdad de oportunidades"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:6
+msgid ""
+"Employment opportunities will not be based on personal characteristics "
+"unrelated to job requirements."
+msgstr ""
+" Las oportunidades de empleo no se basarán en características personales no "
+"relacionadas con los requisitos del puesto."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:7
+msgid "Non-discrimination"
+msgstr "No discriminación"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:7
+msgid ""
+"The project will not discriminate against any employees with respect to any "
+"aspects of employment, such as hiring, wages, access to training, job "
+"assignment, promotion, or termination of employment."
+msgstr ""
+" El proyecto no discriminará a ningún empleado con respecto a ningún aspecto"
+" del empleo, como la contratación, los salarios, el acceso a la formación, "
+"la asignación de puestos, la promoción o el despido."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:8
+msgid "Grievance mechanism"
+msgstr "Mecanismo de Quejas"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:8
+msgid ""
+"The project will provide accessible and transparent grievance mechanisms to "
+"enable all workers to raise workplace concerns."
+msgstr ""
+" El proyecto proporcionará mecanismos de quejas accesibles y transparentes "
+"para que todos los trabajadores puedan plantear sus reclamaciones en el "
+"lugar de trabajo."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:9
+msgid "Working at height"
+msgstr "Trabajos en altura"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:9
+msgid ""
+"Adequate fall prevention and protection measures will be implemented "
+"wherever workers are expected to work at height."
+msgstr ""
+" Se aplicarán medidas adecuadas de prevención y protección contra caídas "
+"siempre que se prevea que los trabajadores trabajen en altura."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:10
+msgid "Underground work"
+msgstr "Trabajos subterráneos"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:10
+msgid ""
+"The project will provide adequate occupational health and safety equipment, "
+"information and services appropriate for underground and excavation work "
+"such as drilling, blasting, rock bolting and soft soil work."
+msgstr ""
+"El proyecto proporcionará equipos, información y servicios adecuados de "
+"salud y seguridad en el trabajo apropiados para trabajos subterráneos y de "
+"excavación, como perforación, voladura, bulonado de rocas y trabajos en "
+"suelos blandos."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:11
+msgid "Handling of materials/equipment"
+msgstr "Manipulación de materiales/equipos"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:11
+msgid ""
+"The project will ensure that all workers engaged in handling of materials or"
+" equipment as part of their employment will receive at no cost to themselves"
+" adequate training and appropriate protective equipment."
+msgstr ""
+" El proyecto garantizará que todos los trabajadores que manipulen materiales"
+" o equipos como parte de su empleo reciban, sin coste alguno para ellos, la "
+"capacitación pertinente y el equipo de protección adecuado."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:12
+msgid "Monitoring of accidents"
+msgstr "Monitoreo de accidentes"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:12
+msgid ""
+"The project will monitor, document and report on all occupational accidents,"
+" diseases and incidents."
+msgstr ""
+"El proyecto monitoreará, documentará e informará sobre todos los accidentes,"
+" enfermedades e incidentes laborales."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:13
+msgid "Traffic management"
+msgstr "Gestión del tráfico"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:13
+msgid ""
+"The project will adopt road safety initiatives proportional to its scope and"
+" nature that are protective of project workers and other road users."
+msgstr ""
+" El proyecto adoptará iniciativas de seguridad vial proporcionales a su "
+"alcance y naturaleza que protejan a los trabajadores del proyecto y a otros "
+"usuarios de la carretera."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:14
+msgid "Accommodation"
+msgstr "Alojamiento"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:14
+msgid ""
+"The project will provide accommodation services to workers that accommodate "
+"their physical, social and cultural needs and protect and promote their "
+"health, safety and well-being."
+msgstr ""
+" El proyecto proporcionará a los trabajadores servicios de alojamiento que "
+"se adapten a sus necesidades físicas, sociales y culturales y protejan y "
+"promuevan su salud, seguridad y bienestar."
+
+#. Title
+#: schema/project-level/codelists/laborObligations.csv:15
+msgid "Protective personal equipment"
+msgstr "Equipo de protección personal"
+
+#. Description
+#: schema/project-level/codelists/laborObligations.csv:15
+msgid ""
+"The project will provide access to, training in, and maintenance of "
+"appropriate personal protective equipment at no additional cost to its "
+"workers."
+msgstr ""
+"El proyecto facilitará el acceso, la capacitación y el mantenimiento de "
+"equipos de protección personal adecuados sin coste adicional para sus "
+"trabajadores."
+
+#. Title
 #: schema/project-level/codelists/locationGazetteers.csv:1
 msgid "EU Nomenclature of Territorial Units for Statistics"
 msgstr "Nomenclatura de las Unidades Territoriales Estadísticas de la UE"
@@ -1300,6 +4373,47 @@ msgstr ""
 "cuadros delimitadores."
 
 #. Title
+#: schema/project-level/codelists/locationGazetteers.csv:7
+msgid "World Database of Protected Areas ID"
+msgstr "Base de datos mundial de áreas protegidas ID"
+
+#. Description
+#: schema/project-level/codelists/locationGazetteers.csv:7
+msgid ""
+"The World Database of Protected Areas (WDPA) is the most comprehensive "
+"global database of marine and terrestrial protected areas, updated on a "
+"monthly basis. It is a joint project between the UN Environment Programme "
+"and the International Union for Conservation of Nature (IUCN). The "
+"compilation and management of the WDPA is carried out by the UN Environment "
+"Programme World Conservation Monitoring Centre (UNEP-WCMC), in collaboration"
+" with governments, non-governmental organizations, academia and industry. "
+"The WDPA database uses unique identification numbers to track protected "
+"areas and other effective area-based conservation measures (OECMs) within "
+"the databases over time. UNEP-WCMC assigns a WDPA ID to each new protected "
+"area/OECM at its first listing. The WDPA ID is a persistent, globally unique"
+" identifier."
+msgstr ""
+" La Base de Datos Mundial de Áreas Protegidas (WDPA) es la base de datos "
+"mundial más completa de áreas protegidas marinas y terrestres, que se "
+"actualiza mensualmente. Es un proyecto conjunto del Programa de las Naciones"
+" Unidas para el Medio Ambiente y la Unión Internacional para la Conservación"
+" de la Naturaleza (UICN). La compilación y gestión de la WDPA corre a cargo "
+"del Centro Mundial de Vigilancia de la Conservación del Programa de las "
+"Naciones Unidas para el Medio Ambiente (PNUMA-WCMC), en colaboración con "
+"gobiernos, organizaciones no gubernamentales, el mundo académico y la "
+"industria. La base de datos de la WDPA utiliza números de identificación "
+"únicos para rastrear las áreas protegidas y otras medidas de conservación "
+"eficaces basadas en áreas (OECM) dentro de las bases de datos a lo largo del"
+" tiempo. El PNUMA-WCMC asigna una ID de la WDPA a cada nueva área protegida "
+"o OECM en su primera inclusión en la lista. La ID de la WDPA es un "
+"identificador persistente y único a nivel mundial."
+
+#. Extension
+#: schema/project-level/codelists/locationGazetteers.csv:7
+msgid "OC4IDS"
+msgstr "OC4IDS"
+
+#. Title
 #: schema/project-level/codelists/method.csv:1
 msgid "Open"
 msgstr "Abierta"
@@ -1314,6 +4428,18 @@ msgstr "Todos los proveedores interesados pueden hacer una oferta."
 #: schema/project-level/codelists/method.csv:2
 #: schema/project-level/codelists/method.csv:3
 #: schema/project-level/codelists/method.csv:4
+#: schema/project-level/codelists/milestoneStatus.csv:1
+#: schema/project-level/codelists/milestoneStatus.csv:2
+#: schema/project-level/codelists/milestoneStatus.csv:3
+#: schema/project-level/codelists/milestoneStatus.csv:4
+#: schema/project-level/codelists/milestoneType.csv:1
+#: schema/project-level/codelists/milestoneType.csv:2
+#: schema/project-level/codelists/milestoneType.csv:3
+#: schema/project-level/codelists/milestoneType.csv:4
+#: schema/project-level/codelists/milestoneType.csv:5
+#: schema/project-level/codelists/milestoneType.csv:6
+#: schema/project-level/codelists/milestoneType.csv:7
+#: schema/project-level/codelists/milestoneType.csv:8
 #: schema/project-level/codelists/releaseTag.csv:1
 #: schema/project-level/codelists/releaseTag.csv:2
 #: schema/project-level/codelists/releaseTag.csv:3
@@ -1395,6 +4521,338 @@ msgid ""
 msgstr ""
 "El progreso físico planificado o real de un proyecto. Por ejemplo, el "
 "porcentaje de avance de las obras físicas."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:1
+msgid "Project approval"
+msgstr "Aprobación del proyecto"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:1
+msgid "The dates of approvals from relevant authorities."
+msgstr "Las fechas de aprobaciones de las autoridades pertinentes."
+
+#. Extension
+#: schema/project-level/codelists/milestoneCode.csv:1
+#: schema/project-level/codelists/milestoneCode.csv:2
+#: schema/project-level/codelists/milestoneCode.csv:3
+#: schema/project-level/codelists/milestoneCode.csv:4
+#: schema/project-level/codelists/milestoneCode.csv:5
+#: schema/project-level/codelists/milestoneCode.csv:6
+#: schema/project-level/codelists/milestoneCode.csv:7
+#: schema/project-level/codelists/milestoneCode.csv:8
+#: schema/project-level/codelists/milestoneCode.csv:9
+#: schema/project-level/codelists/milestoneType.csv:9
+#: schema/project-level/codelists/milestoneType.csv:10
+msgid "OCDS for PPPs Extension"
+msgstr "Extensión del OCDS para las PPA"
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:2
+msgid "Commercial close"
+msgstr "Cierre comercial"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:2
+msgid ""
+"In a financing, the point at which the commercial documentation has been "
+"executed but before conditions precedent have been satisfied or waived; "
+"before financial close."
+msgstr ""
+" En un financiamiento, el punto en el que se ha ejecutado la documentación "
+"comercial pero antes de que se hayan satisfecho o renunciado a las "
+"condiciones precedentes; antes del cierre financiero."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:3
+msgid "Financial close"
+msgstr "Cierre financiero"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:3
+msgid ""
+"In a financing, the point at which the documentation has been executed and "
+"conditions precedent have been satisfied or waived. Drawdowns become "
+"permissible after this point."
+msgstr ""
+" En un financiamiento, el punto en el cual la documentación ha sido "
+"ejecutada y las condiciones precedentes han sido satisfechas o renunciadas. "
+"A partir de ese momento se puede disponer de fondos."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:4
+msgid "Commencement of construction or development"
+msgstr "Inicio de la construcción o desarrollo"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:4
+msgid "The date of commencement of construction or development"
+msgstr "La fecha de inicio de la construcción o desarrollo."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:5
+msgid "Completion of construction of development"
+msgstr "Finalización de la construcción del desarrollo"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:5
+msgid "The date of completion of construction or development"
+msgstr "La fecha de finalización de la construcción o desarrollo."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:6
+msgid "Commissioning"
+msgstr "Puesta en servicio"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:6
+msgid ""
+"The testing and inspection of the completed works to verify that the works "
+"are ready for commercial operation."
+msgstr ""
+" Las pruebas e inspecciones de las obras terminadas para verificar que están"
+" listas para su explotación comercial."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:7
+msgid "Enquiry period start"
+msgstr "Inicio del período de consulta"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:7
+msgid ""
+"For processes with multiple enquiry periods, the start date of a period "
+"during which enquiries can be made and responded to which is not provided in"
+" the tender/enquiryPeriod block. Sometimes known as clarification periods."
+msgstr ""
+" En los procesos con varios periodos de consulta, la fecha de inicio de un "
+"periodo durante el cual se pueden realizar y responder consultas que no se "
+"indique en el bloque tender/enquiryPeriod. A veces se denominan periodos de "
+"aclaración."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:8
+msgid "Enquiry period end"
+msgstr "Fin del período de consulta"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:8
+msgid ""
+"For processes with multiple enquiry periods, the end date of a period during"
+" which enquiries can be made and responded to which is not provided in the "
+"tender/enquiryPeriod block. Sometimes known as clarification periods."
+msgstr ""
+" En los procesos con varios periodos de consulta, la fecha de finalización "
+"de un periodo durante el cual se pueden realizar y responder consultas que "
+"no figura en el bloque tender/enquiryPeriod. A veces se denominan periodos "
+"de aclaración."
+
+#. Title
+#: schema/project-level/codelists/milestoneCode.csv:9
+msgid "Submission of draft final bid"
+msgstr "Presentación del proyecto de oferta final"
+
+#. Description
+#: schema/project-level/codelists/milestoneCode.csv:9
+msgid ""
+"For competitive dialogue processes, the deadline for submission of draft "
+"final bids"
+msgstr ""
+"Para los procesos de diálogo competitivo, la fecha límite para la "
+"presentación de los proyectos de ofertas finales"
+
+#. Title
+#: schema/project-level/codelists/milestoneStatus.csv:1
+msgid "Scheduled"
+msgstr "Programado"
+
+#. Description
+#: schema/project-level/codelists/milestoneStatus.csv:1
+msgid ""
+"This milestone has been scheduled for the date in milestone.dueDate. "
+"Progress towards the milestone has not yet been evaluated as of "
+"milestone.dateModified."
+msgstr ""
+" Este hito se ha programado para la fecha indicada en milestone.dueDate. El "
+"progreso hacia el hito aún no se ha evaluado a partir de "
+"milestone.dateModified."
+
+#. Title
+#: schema/project-level/codelists/milestoneStatus.csv:2
+msgid "Met"
+msgstr "Cumplido"
+
+#. Description
+#: schema/project-level/codelists/milestoneStatus.csv:2
+msgid ""
+"This milestone has been achieved. The date on which it was met should be "
+"placed in the milestone.dateMet field."
+msgstr ""
+"Se ha alcanzado este hito. La fecha en la que se cumplió debe colocarse en "
+"el campo milestone.dateMet."
+
+#. Title
+#: schema/project-level/codelists/milestoneStatus.csv:3
+msgid "Not met"
+msgstr "No cumplido"
+
+#. Description
+#: schema/project-level/codelists/milestoneStatus.csv:3
+msgid ""
+"This milestone had not been met at the date it was last reviewed (see "
+"milestone.dateModified)."
+msgstr ""
+"Este hito no se había cumplido en la fecha de su última revisión (ver "
+"milestone.dateModified)."
+
+#. Title
+#: schema/project-level/codelists/milestoneStatus.csv:4
+msgid "Partially met"
+msgstr "Parcialmente cumplido"
+
+#. Description
+#: schema/project-level/codelists/milestoneStatus.csv:4
+msgid ""
+"This milestone was judged to have been partially met at the date it was last"
+" reviewed (see milestone.dateModified)."
+msgstr ""
+"Se consideró que este hito se había cumplido parcialmente en la fecha de su "
+"última revisión (ver milestone.dateModified)."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:1
+msgid "Pre-procurement milestones"
+msgstr "Hitos previos a la contratación"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:1
+msgid ""
+"For events during the planning or pre-procurement phase of a process, such "
+"as the preparation of key studies."
+msgstr ""
+" Para eventos durante la fase de planificación o precontratación de un "
+"proceso, como la preparación de estudios clave."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:2
+msgid "Approval milestones"
+msgstr "Hitos de aprobación"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:2
+msgid "For events such as the sign-off of a contract or project."
+msgstr "Para eventos como la firma de un contrato o proyecto."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:3
+msgid "Engagement milestones"
+msgstr "Hitos del compromiso"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:3
+msgid "For engagement milestones, such as a public hearing."
+msgstr "Para hitos de compromiso, como una audiencia pública."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:4
+msgid "Assessment milestones"
+msgstr "Hitos de la evaluación"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:4
+msgid ""
+"For assessment and adjudication milestones, such as the meeting date of a "
+"committee."
+msgstr ""
+"Para hitos de evaluación y adjudicación, como la fecha de reunión de un "
+"comité."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:5
+msgid "Delivery milestones"
+msgstr "Hitos de entrega"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:5
+msgid ""
+"For delivery milestones, such as the date when a good or service is to be "
+"provided."
+msgstr ""
+"Para hitos de entrega, como la fecha en que se proporcionará un bien o "
+"servicio."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:6
+msgid "Reporting milestones"
+msgstr "Hitos de informes"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:6
+msgid "For reporting milestones, such as when key reports are to be provided."
+msgstr ""
+"Para informar hitos, como por ejemplo cuándo deben proporcionarse informes "
+"clave."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:7
+msgid "Financing milestones"
+msgstr "Hitos de financiamieto"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:7
+msgid ""
+"For events related to the funding of the project or contracting process. In "
+"public-private partnerships, such events might include, for example, planned"
+" payments and equity transfers."
+msgstr ""
+"Para eventos relacionados con el financiamiento del proyecto o el proceso de"
+" contratación. En las asociaciones público-privadas, estos eventos podrían "
+"incluir, por ejemplo, los pagos previstos y las transferencias de capital."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:8
+msgid "Payment milestones"
+msgstr "Hitos de pago"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:8
+msgid ""
+"For payment milestones, such as the date when a payment is expected to be "
+"made to a supplier. If the `status` of a project or contracting process's "
+"payment milestone is 'met', then the contract ought to have an entry for the"
+" payment under its `.transactions`."
+msgstr ""
+"Para hitos de pago, como la fecha en la que se espera realizar un pago a un "
+"proveedor. Si el 'estado' de un hito de pago de un proyecto o proceso de "
+"contratación es 'cumplido', entonces el contrato debe tener una entrada para"
+" el pago en sus 'transacciones'."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:9
+msgid "Procurement"
+msgstr "Adquisiciones y Contrataciones"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:9
+msgid ""
+"Events taking place during the procurement which are not captured by fields "
+"in core OCDS, such as additional enquiry periods or draft bid submissions in"
+" a competitive dialogue process"
+msgstr ""
+"Acontecimientos que tienen lugar durante la contratación y que no se recogen"
+" en los campos de la OCDS básica, como los periodos de consulta adicionales "
+"o los borradores de presentación de ofertas en un proceso de diálogo "
+"competitivo."
+
+#. Title
+#: schema/project-level/codelists/milestoneType.csv:10
+msgid "Contract close"
+msgstr "Cierre de contrato"
+
+#. Description
+#: schema/project-level/codelists/milestoneType.csv:10
+msgid "Events such as commercial and financial close"
+msgstr "Eventos como cierres comerciales y financieros"
 
 #. Title
 #: schema/project-level/codelists/modificationType.csv:1
@@ -1604,6 +5062,179 @@ msgid "The entity responsible for contract administration."
 msgstr "La entidad responsable de la administración de los contratos."
 
 #. Title
+#: schema/project-level/codelists/partyRole.csv:13
+msgid "Climate finance focal point"
+msgstr "Punto focal de financiamiento climático"
+
+#. Description
+#: schema/project-level/codelists/partyRole.csv:13
+msgid ""
+"An organization that serves as the interface between the government of the "
+"country in which the infrastructure project is located and climate finance "
+"funders. The focal point is responsible for identifying and/or endorsing "
+"project ideas prior to submission to a climate finance funder."
+msgstr ""
+"Organización que sirve de interfaz entre el gobierno del país en el que se "
+"ubica el proyecto de infraestructura y los financiadores del clima. El punto"
+" focal es responsable de identificar y/o respaldar las ideas de proyecto "
+"antes de su presentación a un financiador de la lucha contra el cambio "
+"climático."
+
+#. Title
+#: schema/project-level/codelists/partyRole.csv:14
+msgid "Independent monitor"
+msgstr "Monitor independiente"
+
+#. Description
+#: schema/project-level/codelists/partyRole.csv:14
+msgid ""
+"An independent organization appointed to monitor whether a project is being "
+"carried out in accordance with applicable anti-corruption laws and "
+"regulations."
+msgstr ""
+"Organización independiente designada para monitorear si un proyecto se lleva"
+" a cabo de acuerdo con las leyes y reglamentos anticorrupción aplicables."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:1
+msgid "Sustainable development goals"
+msgstr "Objetivos de desarrollo sostenible"
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:2
+msgid "National plan or strategy"
+msgstr "Plan o estrategia nacional"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:2
+msgid ""
+"National plans set out high-level goals and objectives, and the strategies "
+"by which these will be achieved. These are used to guide public investment "
+"at a national level."
+msgstr ""
+" Los planes nacionales establecen metas y objetivos de alto nivel, así como "
+"las estrategias para alcanzarlos. Sirven para orientar la inversión pública "
+"a escala nacional."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:3
+msgid "Infrastructure plan or strategy"
+msgstr "Plan o estrategia de infraestructura"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:3
+msgid ""
+"Infrastructure plans set out high-level goals and objectives, and the "
+"strategies by which these will be achieved. These are used to guide public "
+"investment in infrastructure."
+msgstr ""
+"Los planes de infraestructuras establecen metas y objetivos de alto nivel, "
+"así como las estrategias para alcanzarlos. Sirven para orientar la inversión"
+" pública en infraestructuras."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:4
+msgid "Sector plan or strategy"
+msgstr "Plan o estrategia sectorial"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:4
+msgid ""
+"Sector plans set out high-level goals and objectives, and the strategies by "
+"which these will be achieved. These are used to guide public investment in "
+"the named sector."
+msgstr ""
+"Los planes sectoriales establecen metas y objetivos de alto nivel, así como "
+"las estrategias para alcanzarlos. Sirven para orientar la inversión pública "
+"en el sector."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:5
+msgid "Procurement plan or strategy"
+msgstr "Plan o estrategia de adquisiciones"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:5
+msgid ""
+"Procurement plans set out the goods, services and works a procuring entity "
+"plans to procure over the defined time period."
+msgstr ""
+"Los planes de contratación establecen los bienes, servicios y obras que una "
+"entidad contratante tiene previsto adquirir durante el periodo de tiempo "
+"definido."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:6
+msgid "Paris agreement"
+msgstr "Acuerdo de París"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:6
+msgid ""
+"The Paris Agreement is a legally binding international treaty on climate "
+"change. It was adopted by 196 Parties at the UN Climate Change Conference "
+"(COP21) in Paris, France, on 12 December 2015."
+msgstr ""
+" El Acuerdo de París es un tratado internacional jurídicamente vinculante "
+"sobre el cambio climático. Fue adoptado por 196 Partes en la Conferencia de "
+"las Naciones Unidas sobre el Cambio Climático (COP21) celebrada en París, "
+"Francia el 12 de diciembre de 2015."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:7
+msgid "Nationally determined contribution"
+msgstr "Contribución determinada a nivel nacional"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:7
+msgid ""
+"A Nationally Determined Contribution (NDC) is a climate action plan to cut "
+"emissions and adapt to climate impacts. Each Party to the Paris Agreement is"
+" required to establish an NDC and update it every five years."
+msgstr ""
+" Una Contribución Determinada a Nivel Nacional (NDC por sus siglas en "
+"inglés) es un plan de acción climática para reducir las emisiones y "
+"adaptarse a los impactos climáticos. Cada una de las Partes del Acuerdo de "
+"París debe establecer una NDC y actualizarla cada cinco años."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:8
+msgid "National adaptation plan"
+msgstr "Plan nacional de adaptación"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:8
+msgid ""
+"The National Adaptation Plan (NAPs) process was established under the Cancun"
+" Adaptation Framework (2010) in order to prepare countries for addressing "
+"climate risk in the medium term. The main objectives of the NAPs are to "
+"reduce vulnerability to climate change, and to mainstream climate change "
+"adaptation in all levels of planning."
+msgstr ""
+" El proceso de los Planes Nacionales de Adaptación (PNA) se estableció en el"
+" Marco de Adaptación de Cancún (2010) con el fin de preparar a los países "
+"para hacer frente a los riesgos climáticos a medio plazo. Los principales "
+"objetivos de los PNA son reducir la vulnerabilidad al cambio climático e "
+"integrar la adaptación al cambio climático en todos los niveles de "
+"planificación."
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:9
+msgid "Medium-term fiscal framework"
+msgstr "Marco fiscal de mediano plazo"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:9
+msgid ""
+"A medium-term fiscal framework is a multiyear budget tool that combines "
+"expenditure ceilings, resource forecasts and baselines of ongoing "
+"expenditures."
+msgstr ""
+" Un marco fiscal a medio plazo es una herramienta presupuestaria plurianual "
+"que combina techos de gasto, previsiones de recursos y bases de referencia "
+"de los gastos en curso."
+
+#. Title
 #: schema/project-level/codelists/projectSector.csv:1
 msgid "Education"
 msgstr "Educación"
@@ -1639,19 +5270,70 @@ msgstr "Energía"
 msgid ""
 "Energy, including electric power generation, and the transmission and "
 "distribution of electricity, oil and gas, for example: power plants, power "
-"lines, gas pipelines"
+"lines, gas pipelines."
 msgstr ""
-"Energía, incluyendo generación de energía eléctrica, y la transmisión y "
-"distribución de la electricidad, combustible y gas, por ejemplo: plantas de "
-"energía, líneas eléctricas y gasoductos."
+" Energía, incluida la generación de energía eléctrica y la transmisión y "
+"distribución de electricidad, petróleo y gas, por ejemplo: centrales "
+"eléctricas, líneas eléctricas, gasoductos."
 
 #. Title
 #: schema/project-level/codelists/projectSector.csv:4
+msgid "Solar energy"
+msgstr "Energía solar"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:4
+msgid "Energy generated from electromagnetic radiation from the Sun."
+msgstr "Energía generada a partir de la radiación electromagnética del Sol."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:5
+msgid "Wind energy"
+msgstr "Energía eólica"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:5
+msgid "Energy generated from air movement in Earth's atmosphere."
+msgstr ""
+"Energía generada por el movimiento del aire en la atmósfera de la Tierra."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:6
+msgid "Hydropower energy"
+msgstr "Energía hidroeléctrica"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:6
+msgid "Energy generated from falling or running water."
+msgstr " Energía generada por el agua que cae o corre."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:7
+msgid "Biomass energy"
+msgstr "Energía de biomasa"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:7
+msgid "Energy generated from recently living organisms."
+msgstr "Energía generada a partir de organismos recientemente vivos."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:8
+msgid "Geothermal energy"
+msgstr "Energía geotérmica"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:8
+msgid "Thermal energy in Earth's crust."
+msgstr "Energía térmica en la corteza terrestre."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:9
 msgid "Communications"
 msgstr "Comunicaciones"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:4
+#: schema/project-level/codelists/projectSector.csv:9
 msgid ""
 "Communications, including ICT, IT, telecommunications, postal facilities, "
 "high-speed internet, broadband"
@@ -1660,22 +5342,22 @@ msgstr ""
 "postales, internet de alta velocidad, ancho de banda"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:5
+#: schema/project-level/codelists/projectSector.csv:10
 msgid "Water and waste"
 msgstr "Agua y residuos"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:5
+#: schema/project-level/codelists/projectSector.csv:10
 msgid "Water and waste, including sanitation and wastewater"
 msgstr "Agua y residuos, incluyendo saneamiento y aguas residuales"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:6
+#: schema/project-level/codelists/projectSector.csv:11
 msgid "Governance"
 msgstr "Gobernanza"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:6
+#: schema/project-level/codelists/projectSector.csv:11
 msgid ""
 "Governance, including government accommodations, public buildings, "
 "government offices; justice, courts; emergency services / response, local "
@@ -1687,34 +5369,34 @@ msgstr ""
 "correccionales; defensa, fuerzas armadas"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:7
+#: schema/project-level/codelists/projectSector.csv:12
 msgid "Economy"
 msgstr "Economía"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:7
+#: schema/project-level/codelists/projectSector.csv:12
 msgid "Economy, including agribusiness, agriculture, science and environment"
 msgstr "Economía, incluyendo agronegocios, agricultura, ciencia y ambiente"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:8
+#: schema/project-level/codelists/projectSector.csv:13
 msgid "Culture, sports and recreation"
 msgstr "Cultura, deportes y recreación"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:8
+#: schema/project-level/codelists/projectSector.csv:13
 msgid ""
 "Culture, sports and recreation, including tourism, parks and green areas"
 msgstr ""
 "Cultura, deportes y recreación, incluyendo turismo, parques y áreas verdes"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:9
+#: schema/project-level/codelists/projectSector.csv:14
 msgid "Transport"
 msgstr "Transporte"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:9
+#: schema/project-level/codelists/projectSector.csv:14
 msgid ""
 "Transport. A more detailed breakdown may be provided using the "
 "transport.[mode] codes"
@@ -1723,39 +5405,39 @@ msgstr ""
 "transport.[mode]."
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:10
+#: schema/project-level/codelists/projectSector.csv:15
 msgid "Air transport"
 msgstr "Transporte aéreo"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:10
+#: schema/project-level/codelists/projectSector.csv:15
 msgid "Air transport, including airports, airways and aviation"
 msgstr "Transporte aéreo, incluyendo aeropuertos, vías aéreas y aviación"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:11
+#: schema/project-level/codelists/projectSector.csv:16
 msgid "Water transport"
 msgstr "Transporte fluvial"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:11
+#: schema/project-level/codelists/projectSector.csv:16
 msgid "Water transport, including ports and inland waterways"
 msgstr ""
 "Transporte marítimo, incluidos los puertos y las vías navegables internas"
 
 #. Title
 #. Description
-#: schema/project-level/codelists/projectSector.csv:12
+#: schema/project-level/codelists/projectSector.csv:17
 msgid "Rail transport"
 msgstr "Transporte ferroviario"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:13
+#: schema/project-level/codelists/projectSector.csv:18
 msgid "Road transport"
 msgstr "Transporte terrestre"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:13
+#: schema/project-level/codelists/projectSector.csv:18
 msgid ""
 "Road transport, including roads, highways, streets, tunnels and bridges"
 msgstr ""
@@ -1763,12 +5445,12 @@ msgstr ""
 "puentes"
 
 #. Title
-#: schema/project-level/codelists/projectSector.csv:14
+#: schema/project-level/codelists/projectSector.csv:19
 msgid "Urban transport"
 msgstr "Transporte urbano"
 
 #. Description
-#: schema/project-level/codelists/projectSector.csv:14
+#: schema/project-level/codelists/projectSector.csv:19
 msgid ""
 "Urban transport, including mass transit, urban mobility, buses, cycling, "
 "walking and taxi"
@@ -1777,10 +5459,52 @@ msgstr ""
 "ciclismo, vías peatonales y taxis"
 
 #. Title
+#: schema/project-level/codelists/projectSector.csv:20
+msgid "Low-carbon transport"
+msgstr "Transporte bajo en carbono"
+
 #. Description
-#: schema/project-level/codelists/projectSector.csv:15
+#: schema/project-level/codelists/projectSector.csv:20
+msgid ""
+"Low-carbon sustainable transport, including urban mobility, cycling, air and"
+" water vehicles powered by renewable energy sources."
+msgstr ""
+" Transporte sostenible con bajas emisiones de carbono, incluida la movilidad"
+" urbana, la bicicleta y los vehículos aéreos y acuáticos propulsados por "
+"fuentes de energía renovables."
+
+#. Title
+#. Description
+#: schema/project-level/codelists/projectSector.csv:21
 msgid "Social housing"
 msgstr "Viviendas sociales"
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:22
+msgid "Natural resources"
+msgstr "Recursos naturales"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:22
+msgid ""
+"The management of natural resources including forests, land, water and soil."
+msgstr ""
+" La gestión de los recursos naturales, incluidos los bosques, la tierra, el "
+"agua y el suelo."
+
+#. Title
+#: schema/project-level/codelists/projectSector.csv:23
+msgid "Flood protection"
+msgstr "Protección contra inundaciones"
+
+#. Description
+#: schema/project-level/codelists/projectSector.csv:23
+msgid ""
+"Flood protection including hard infrastructure such as flood walls and flood"
+" gates, and soft infrastructure."
+msgstr ""
+"Protección contra inundaciones que incluye infraestructura dura, como muros "
+"y compuertas, e infraestructura blanda."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:1
@@ -1791,12 +5515,13 @@ msgstr "Identificación"
 #: schema/project-level/codelists/projectStatus.csv:1
 msgid ""
 "Identification refers to the decision to develop a project within the budget"
-" and programme of a project owner (the public entity responsible for "
-"executing the budget)."
+" and program of a project owner (the public entity responsible for executing"
+" the budget). This stage is also called definition."
 msgstr ""
-"Identificación se refiere a la decisión de desarrollar un proyecto dentro "
-"del presupuesto y programa de un dueño del proyecto (la entidad pública "
-"responsable de ejecutar el presupuesto)."
+"La identificación se refiere a la decisión de desarrollar un proyecto dentro"
+" del presupuesto y el programa del propietario del proyecto (la entidad "
+"pública responsable de ejecutar el presupuesto). Esta etapa también se "
+"denomina definición."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:2
@@ -1828,14 +5553,16 @@ msgid ""
 "Implementation covers the procurement and implementation of the group of "
 "works or services (such as design and supervision) to be delivered under the"
 " project, including works or services performed by the procuring entity. "
-"This differs from the definition of 'implementation' in OCDS, which covers "
-"the implementation but not the procurement."
+"This differs from the definition of implementation in OCDS, which covers the"
+" implementation but not the procurement. This stage is also called "
+"construction."
 msgstr ""
-"La implementación cubre las adquisiciones y la implementación del conjunto "
-"de trabajos o servicios (tales como diseño y supervisión) a ser entregados "
-"bajo el proyecto, incluyendo trabajos o servicios realizados por la entidad "
-"compradora. Esto difiere de la definición de 'implementación' en OCDS, que "
-"cubre la implementación pero no las adquisiciones."
+"La ejecución abarca la contratación y realización del grupo de obras o "
+"servicios (como el diseño y la supervisión) que deben prestarse en el marco "
+"del proyecto, incluidas las obras o servicios realizados por la entidad "
+"contratante. Esto difiere de la definición de ejecución de la OCDS, que "
+"cubre la ejecución pero no la contratación. Esta fase también se denomina "
+"construcción."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:4
@@ -1846,36 +5573,67 @@ msgstr "Finalización"
 #: schema/project-level/codelists/projectStatus.csv:4
 msgid ""
 "Completion covers the handover of the assets and close-out activities with "
-"details of the final scope, cost, and delivery time."
+"details of the final scope, cost, and delivery time before maintenance."
 msgstr ""
-"La finalización cubre el traspaso de los activos y las actividades de cierre"
-" con detalles del alcance, costo y fecha de entrega finales."
+" La finalización abarca la entrega de los activos y las actividades de "
+"cierre, con detalles sobre el alcance final, el coste y el plazo de entrega "
+"antes del mantenimiento."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:5
-msgid "Completed"
-msgstr "Completado"
+msgid "Maintenance"
+msgstr "Mantenimiento"
 
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:5
-msgid "Close-out activities were completed, and this project is inactive."
+msgid ""
+"Maintenance covers any preventative or corrective maintenance and the day-"
+"to-day running of the assets. This stage is also called operation."
 msgstr ""
-"Las actividades de cierre fueron completadas y este proyecto está inactivo."
+" El mantenimiento abarca todo el mantenimiento preventivo o correctivo y el "
+"funcionamiento cotidiano de los activos. Esta fase también se denomina "
+"explotación."
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:6
-msgid "Cancelled"
-msgstr "Cancelado"
+#: schema/project-level/codelists/projectType.csv:5
+msgid "Decommissioning"
+msgstr "Desmantelamiento"
 
 #. Description
 #: schema/project-level/codelists/projectStatus.csv:6
 msgid ""
-"This project was cancelled before close-out activities were completed, and "
-"is inactive. Cancellation can occur anytime after identification."
+"Decommissioning covers the disposal of the assets at the end of their "
+"service life. This stage is also called end of life."
 msgstr ""
-"Este proyecto fue cancelado antes de que las actividades de cierre fueran "
-"completadas, y está inactivo. La cancelación puede ocurrir en cualquier "
-"momento después de la identificación."
+"El desmantelamiento abarca la eliminación de los activos al final de su vida"
+" útil. Esta etapa también se denomina fin de vida útil."
+
+#. Title
+#: schema/project-level/codelists/projectStatus.csv:7
+msgid "Decommissioned"
+msgstr "Desmantelado"
+
+#. Description
+#: schema/project-level/codelists/projectStatus.csv:7
+msgid "Decommissioning is complete."
+msgstr "El desmantelamiento ha finalizado."
+
+#. Title
+#: schema/project-level/codelists/projectStatus.csv:8
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. Description
+#: schema/project-level/codelists/projectStatus.csv:8
+msgid ""
+"This project was cancelled before close-out activities were completed, and "
+"is inactive. Cancellation can occur anytime after identification and before "
+"maintenance."
+msgstr ""
+" Este proyecto se canceló antes de que se completaran las actividades de "
+"cierre y está inactivo. La cancelación puede producirse en cualquier momento"
+" después de la identificación y antes del mantenimiento."
 
 #. Description
 #: schema/project-level/codelists/projectType.csv:1
@@ -1923,6 +5681,15 @@ msgid ""
 "The primary focus of this project is the expansion of an existing asset."
 msgstr ""
 "El enfoque primario de este proyecto es la expansión de un activo existente."
+
+#. Description
+#: schema/project-level/codelists/projectType.csv:5
+msgid ""
+"The primary focus of this project is the decommissioning of an existing "
+"asset."
+msgstr ""
+" El objetivo principal de este proyecto es el desmantelamiento de un activo "
+"existente."
 
 #. Description
 #: schema/project-level/codelists/relatedProject.csv:1
@@ -2230,6 +5997,147 @@ msgid ""
 msgstr ""
 "Esta etiqueta se usa sólo en registros compilados, que han reunido múltiples"
 " entregas para proveer una captura del contrato y un historial de versiones."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:1
+msgid "Award criteria"
+msgstr "Criterios de adjudicación"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:1
+msgid ""
+"Award criteria are used to pursue sustainability goals: for example, "
+"allocating points relative to the percentage of recycled materials."
+msgstr ""
+" Los criterios de adjudicación se utilizan para perseguir objetivos de "
+"sostenibilidad: por ejemplo, asignar puntos en función del porcentaje de "
+"materiales reciclados."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:2
+msgid "Contract performance conditions"
+msgstr "Condiciones de ejecución del contrato"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:2
+msgid ""
+"Contract performance conditions are used to pursue sustainability goals: for"
+" example, requiring the supplier to monitor carbon emissions during the "
+"contract's implementation."
+msgstr ""
+"Las condiciones de ejecución del contrato se utilizan para conseguir "
+"objetivos de sostenibilidad: por ejemplo, exigir al proveedor que controle "
+"las emisiones de carbono durante la ejecución del contrato."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:3
+msgid "Margin of preference"
+msgstr "Margen de preferencia"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:3
+msgid ""
+"Margins of preference are used to pursue sustainability goals: for example, "
+"accepting the bid of a local supplier that is within a margin of the lowest "
+"bid."
+msgstr ""
+" Los márgenes de preferencia se utilizan para perseguir objetivos de "
+"sostenibilidad: por ejemplo, aceptar la oferta de un proveedor local que "
+"esté dentro de un margen de la oferta más baja."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:4
+msgid "Reserved participation"
+msgstr "Participación reservada"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:4
+msgid ""
+"Reserved participation is used to pursue sustainability goals: for example, "
+"allowing only SMEs to participate in the contracting process."
+msgstr ""
+"La participación reservada se utiliza para perseguir objetivos de "
+"sostenibilidad: por ejemplo, permitir que sólo las PYME participen en el "
+"proceso de contratación."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:5
+msgid "Selection criteria"
+msgstr "Criterios de selección"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:5
+msgid ""
+"Selection criteria are used to fulfill sustainability goals: for example, "
+"requiring a bidder to have a sustainability certificate."
+msgstr ""
+"Los criterios de selección se utilizan para cumplir objetivos de "
+"sostenibilidad: por ejemplo, exigir que un ofertante tenga un certificado de"
+" sostenibilidad."
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:6
+msgid ""
+"Items' technical specifications are used to pursue sustainability goals: for"
+" example, requiring a product to have an energy efficiency certificate."
+msgstr ""
+" Las especificaciones técnicas de los artículos se utilizan para perseguir "
+"objetivos de sostenibilidad: por ejemplo, exigir que un producto tenga un "
+"certificado de eficiencia energética."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:7
+msgid "EU GPP criteria"
+msgstr "Criterios de la CPE de la UE"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:7
+msgid ""
+"Green public procurement criteria established at the European Union-level "
+"are used to pursue sustainability goals. Criteria can include selection "
+"criteria, technical specifications, award criteria and contract performance "
+"clauses."
+msgstr ""
+" Los criterios de contratación pública ecológica establecidos a nivel de la "
+"Unión Europea se utilizan para perseguir objetivos de sostenibilidad. Los "
+"criterios pueden incluir criterios de selección, especificaciones técnicas, "
+"criterios de adjudicación y cláusulas de ejecución del contrato."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:8
+msgid "National GPP criteria"
+msgstr "Criterios nacionales de CPE"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:8
+msgid ""
+"Green public procurement criteria established at the national level are used"
+" to pursue sustainability goals. Criteria can include selection criteria, "
+"technical specifications, award criteria and contract performance clauses."
+msgstr ""
+" Los criterios de contratación pública ecológica establecidos a nivel "
+"nacional se utilizan para alcanzar objetivos de sostenibilidad. Los "
+"criterios pueden incluir criterios de selección, especificaciones técnicas, "
+"criterios de adjudicación y cláusulas de ejecución del contrato."
+
+#. Title
+#: schema/project-level/codelists/sustainabilityStrategy.csv:9
+msgid "Other GPP criteria"
+msgstr "Otros criterios CPE"
+
+#. Description
+#: schema/project-level/codelists/sustainabilityStrategy.csv:9
+msgid ""
+"Green public procurement criteria established at a level other than the "
+"European Union or national levels are used to pursue sustainability goals. "
+"Criteria can include selection criteria, technical specifications, award "
+"criteria and contract performance clauses."
+msgstr ""
+" Los criterios de contratación pública ecológica establecidos a un nivel "
+"distinto al de la Unión Europea o al nacional se utilizan para perseguir "
+"objetivos de sostenibilidad. Los criterios pueden incluir criterios de "
+"selección, especificaciones técnicas, criterios de adjudicación y cláusulas "
+"de ejecución del contrato."
 
 #. Title
 #: schema/project-level/codelists/unitClassificationScheme.csv:1

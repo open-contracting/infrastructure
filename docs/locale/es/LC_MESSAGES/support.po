@@ -5,23 +5,24 @@
 # 
 # Translators:
 # Charlie Pinder <charlie.pinder@opendataservices.coop>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2020
+# Romina Fernandez <rfernandez@cds.com.py>, 2019
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 11:14-0400\n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Cecilia Casco <ceciliacasco@cds.com.py>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/support.md:1
 msgid "Support"
@@ -29,11 +30,13 @@ msgstr "Apoyo"
 
 #: ../../docs/support.md:3
 msgid ""
-"If you are planning to publish or use data using the OC4IDS then the OC4IDS "
-"Helpdesk team are on hand to offer advice and input."
+"If you are planning to publish or use data using the OC4IDS then the Open "
+"Contracting Partnership and CoST - the Infrastructure Transparency "
+"Initiative can provide free-of-charge support."
 msgstr ""
-"Si planea publicar o usar datos que utilizan OC4IDS, el equipo del Helpdesk "
-"de OC4IDS está disponible para ofrecer consejos y sugerencias."
+"Si planea publicar o utilizar datos utilizando OC4IDS, Open Contracting "
+"Partnership y CoST, la Iniciativa de Transparencia de Infraestructura, "
+"pueden brindarle soporte gratuito."
 
 #: ../../docs/support.md:5
 msgid "We can:"
@@ -49,11 +52,11 @@ msgstr ""
 
 #: ../../docs/support.md:8
 msgid ""
-"Suggest existing tools and services which may help you publish or use OC4IDS"
-" data;"
+"Suggest existing tools and services which might help you publish or use "
+"OC4IDS data;"
 msgstr ""
-"Sugerir herramientas y servicios existentes que podrían ayudarte a publicar "
-"o usar datos OC4IDS;"
+"Sugerir herramientas y servicios existentes que podrían ayudarle a publicar "
+"o utilizar datos de OC4IDS;"
 
 #: ../../docs/support.md:9
 msgid "Provide guidance on mapping your data structures to the standard;"
@@ -68,35 +71,37 @@ msgstr ""
 "validar tus datos;"
 
 #: ../../docs/support.md:12
-msgid ""
-"Through funding from the Open Contracting Partnership and CoST - the "
-"Infrastructure Transparency Initiative, this support is provided free of "
-"charge."
+msgid "Use the following email addresses to request support:"
 msgstr ""
-"Gracias al financiamiento por parte de Open Contracting Partnership y CoST -"
-" la Iniciativa de Transparencia en Infraestructura, este soporte es proveído"
-" de forma gratuita."
+"Utilice las siguientes direcciones de correo electrónico para solicitar "
+"soporte:"
 
 #: ../../docs/support.md:14
 msgid ""
-"E-mail [data@open-contracting.org](mailto:data@open-contracting.org) with "
-"your questions, and a member of the OC4IDS Helpdesk will be in touch with "
-"you soon."
+"[opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org)"
+" for support from CoST - the Infrastructure Transparency Initiative"
 msgstr ""
-"Escriba un correo a [data@open-contracting.org](mailto:data@open-"
-"contracting.org) con sus preguntas, y un miembro del Helpdesk de OC4IDS se "
-"pondrá en contacto con usted."
+"[opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org)"
+" para el apoyo de CoST - la Iniciativa de Transparencia de Infraestructura"
 
-#: ../../docs/support.md:16
+#: ../../docs/support.md:15
+msgid ""
+"[data@open-contracting.org](mailto:data@open-contracting.org) for support "
+"from the Open Contracting Partnership."
+msgstr ""
+"[data@open-contracting.org](mailto:data@open-contracting.org) para el apoyo "
+"de Open Contracting Partnership."
+
+#: ../../docs/support.md:17
 msgid "Contributing"
 msgstr "Contribución"
 
-#: ../../docs/support.md:1
+#: ../../docs/support.md:20
 msgid ""
-"Developers, or those wishing to provide technical input to OC4IDS, may wish "
-"to go straight to the [GitHub repository](https://github.com/open-"
+"Developers, or those wishing to provide technical input to OC4IDS, can go "
+"straight to the [GitHub repository](https://github.com/open-"
 "contracting/infrastructure)."
 msgstr ""
-"Los desarrolladores, u otros interesados en brindar aporte técnico a OC4IDS,"
-" podrían desear ir directamente al  [repositorio de "
+"Los desarrolladores, o aquellos que deseen brindar información técnica a "
+"OC4IDS, pueden ir directamente al [repositorio de "
 "GitHub](https://github.com/open-contracting/infrastructure)."

@@ -1,0 +1,162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Francis C. Bennaton, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/cost/common.md:1
+msgid "Common operations"
+msgstr "Operaciones comunes"
+
+#: ../../docs/cost/common.md:3
+msgid ""
+"To avoid repetition in the mapping, we refer and link to the following "
+"common operations."
+msgstr ""
+"Para evitar repeticiones en el mapeo, nos referimos y enlazamos con las "
+"siguientes operaciones comunes."
+
+#: ../../docs/cost/common.md:5
+msgid "Add a project document"
+msgstr "Agregar un documento de proyecto"
+
+#: ../../docs/cost/common.md:7
+msgid ""
+"Add a [`Document`](../reference/schema.md#document) object to the "
+"[`documents`](project-schema.json,,documents) array and set its:"
+msgstr ""
+"Agregar un objeto [`Document`](../reference/schema.md#document) a la matriz "
+"[`documents`](project-schema.json,,documents) y establecer su:"
+
+#: ../../docs/cost/common.md:9 ../../docs/cost/common.md:18
+msgid "[`.id`](project-schema.json,/definitions/Document,id) incrementally"
+msgstr ""
+"[`.id`](project-schema.json,/definitions/Document,id) de forma incremental"
+
+#: ../../docs/cost/common.md:10 ../../docs/cost/common.md:19
+msgid ""
+"[`.url`](project-schema.json,/definitions/Document,url) to a direct link to "
+"the document"
+msgstr ""
+"[`.url`](project-schema.json,/definitions/Document,url) a un vínculo directo"
+" al documento"
+
+#: ../../docs/cost/common.md:11 ../../docs/cost/common.md:20
+msgid ""
+"[`.title`](project-schema.json,/definitions/Document,title) to the title of "
+"the document"
+msgstr ""
+"[`.títule`](project-schema.json,/definitions/Document,title) al título del "
+"documento"
+
+#: ../../docs/cost/common.md:12 ../../docs/cost/common.md:21
+msgid ""
+"[`.pageStart`](project-schema.json,/definitions/Document,pageStart) and "
+"[`.pageEnd`](project-schema.json,/definitions/Document,pageEnd) to the page "
+"range containing the information described in its [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType)"
+msgstr ""
+"[`.pageStart`](project-schema.json,/definitions/Document,pageStart) y "
+"[`.pageEnd`](project-schema.json,/definitions/Document,pageEnd) al intervalo"
+" de páginas que contiene la información descrita en su "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType)"
+
+#: ../../docs/cost/common.md:14
+msgid "Add a contracting process document"
+msgstr "Agregar un documento de proceso de contratación"
+
+#: ../../docs/cost/common.md:16
+msgid ""
+"Add a [`Document`](../reference/schema.md#document) object to the "
+"[`contractingProcesses.summary.documents`](project-"
+"schema.json,/definitions/ContractingProcessSummary,documents) array and set "
+"its:"
+msgstr ""
+"Agregar un objeto [`Document`](../reference/schema.md#document) a la matriz "
+"[`contractingProcesses.summary.documents`](project-"
+"schema.json,/definitions/ContractingProcessSummary,documents) y establecer "
+"su:"
+
+#: ../../docs/cost/common.md:23
+msgid "Add an organization"
+msgstr "Agregar una organización"
+
+#: ../../docs/cost/common.md:25
+msgid ""
+"Add an [`Organization`](../reference/schema.md#organization) object to the "
+"[`parties`](project-schema.json,,parties) array and set its "
+"[`.name`](project-schema.json,/definitions/Organization,name) to the name of"
+" the organization."
+msgstr ""
+"Agregar un objeto [`Organization`](../reference/schema.md#organization) a la"
+" matriz [`parties`](project-schema.json,,parties) y establecer su "
+"[`.name`](project-schema.json,/definitions/Organization,name) al nombre de "
+"la organización."
+
+#: ../../docs/cost/common.md:26
+msgid ""
+"If you collect organization identifiers, set [`.identifier`](project-"
+"schema.json,/definitions/Organization,identifier) according to the "
+"[identifier reference](../reference/schema.md#identifier) and set "
+"[`.id`](project-schema.json,/definitions/Organization,id) to "
+"`{identifier.scheme}-{identifier.id}(-{department-identifier})`. Otherwise, "
+"set [`.id`](project-schema.json,/definitions/Organization,id) incrementally."
+msgstr ""
+"Si recopila identificadores de organizaciones, establecer "
+"[`.identifier`](project-schema.json,/definitions/Organization,identifier) "
+"según la [referencia del identificador](../reference/schema.md#identifier) y"
+" establecer [`.id`](project-schema.json,/definitions/Organization,id) en "
+"`{identifier.scheme}-{identifier.id}(-{department-identifier})`. En caso "
+"contrario, establecer [`.id`](project-"
+"schema.json,/definitions/Organization,id) de forma incremental."
+
+#: ../../docs/cost/common.md:28
+msgid "Add a financing arrangement"
+msgstr "Añadir un arreglo de financiamiento"
+
+#: ../../docs/cost/common.md:30
+msgid ""
+"If the project is a public-private partnership (PPP), get the "
+"[`ContractingProcess`](../reference/schema.md#contractingprocess) in "
+"[`.contractingProcesses`](project-schema.json,,contractingProcesses) that "
+"represents the contracting process for the PPP contract and add a "
+"[`Finance`](../reference/schema.md#finance) object to its "
+"[`.summary.finance`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finance) array. "
+"Otherwise, add a [`Finance`](../reference/schema.md#finance) object to the "
+"[`.budget.finance`](project-schema.json,,budget/finance) array."
+msgstr ""
+"Si el proyecto es una Alianza Público Privada (APP), obtenga el "
+"[`ContractingProcess`](../reference/schema.md#contractingprocess) en "
+"[`.contractingProcesses`](project-schema.json,,contractingProcesses) que "
+"representa el proceso de contratación del contrato APP y añadir un "
+"[`Finance`](../reference/schema.md#finance) objeto a su matriz "
+"[`.summary.finance`](project-"
+"schema.json,/definitions/ContractingProcessSummary,finance). De lo "
+"contrario, agregar un [`Finance`](../reference/schema.md#finance) objeto a "
+"la matriz [`.budget.finance`](project-schema.json,,budget/finance)."
+
+#: ../../docs/cost/common.md:31
+msgid ""
+"Set the [`Finance`](../reference/schema.md#finance) object's "
+"[`.id`](project-schema.json,/definitions/Finance,id) incrementally."
+msgstr ""
+"Establecer el [`Finance`](../reference/schema.md#finance) del objeto "
+"[`.id`](project-schema.json,/definitions/Finance,id) de forma incremental."

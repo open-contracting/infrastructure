@@ -7,21 +7,22 @@
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # James McKinney, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: James McKinney, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/index.md:1
 msgid "Open Contracting for Infrastructure Data Standards Toolkit"
@@ -34,16 +35,15 @@ msgid ""
 "The Open Contracting Data Standard (OCDS) is already used to describe "
 "millions of procurement processes around the world relating to goods, "
 "services and public works. The CoST Infrastructure Data Standard (CoST IDS) "
-"has been used to guide what data and information should be disclosed at each"
-" stage of the project cycle on over 25,000 infrastructure projects."
+"has been used to guide what data and information ought to be disclosed at "
+"each stage of the project cycle on over 25,000 infrastructure projects."
 msgstr ""
-"El Estándar de Datos de Contrataciones Abiertas (OCDS, por sus siglas en "
-"inglés) es usado actualmente para describir millones de procesos de "
-"contratación alrededor del mundo relacionados a bienes, servicios y obras "
-"públicas. El Estándar de Datos sobre Infraestructura CoST (CoST IDS, por sus"
-" siglas en inglés) ha sido usado para establecer qué datos e información "
-"deberían ser divulgados en cada etapa del ciclo de un proyecto para más de "
-"25.000 proyectos de infraestructura."
+"El Estándar de Datos de Contratación Abierta (OCDS) ya se utiliza para "
+"describir millones de procesos de adquisiciones en todo el mundo "
+"relacionados con bienes, servicios y obras públicas. El Estándar de datos de"
+" infraestructura de CoST (IDS deCoST) se ha utilizado para guiar qué datos e"
+" información deben divulgarse en cada etapa del ciclo del proyecto en más de"
+" 25.000 proyectos de infraestructura."
 
 #: ../../docs/index.md:5
 msgid ""

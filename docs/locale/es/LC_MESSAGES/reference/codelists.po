@@ -9,21 +9,22 @@
 # James McKinney, 2021
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 11:14-0400\n"
+"POT-Creation-Date: 2024-03-01 11:53-0500\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Andres Aguilera <aaguilera@cds.com.py>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/reference/codelists.md:1
 msgid "Codelist reference"
@@ -40,16 +41,15 @@ msgstr ""
 
 #: ../../docs/reference/codelists.md:5
 msgid ""
-"Codelists can either be open or closed. **Closed codelists** are intended to"
+"Codelists are either be open or closed. **Closed codelists** are intended to"
 " be comprehensive; for example, the currency codelist covers all currencies "
 "in the world. **Open codelists** are intended to be representative, but not "
 "comprehensive."
 msgstr ""
-"Las listas de códigos pueden ser cerradas o abiertas. Las **listas de "
-"códigos cerradas** están pensadas para ser globales; por ejemplo, la lista "
-"de códigos de moneda cubre todas las monedas en el mundo. Las **listas de "
-"códigos abiertas** están pensadas para ser representativas, pero no "
-"globales."
+"Las listas de códigos pueden ser abiertas o cerradas. **Las listas de "
+"códigos cerradas** pretenden ser exhaustivas; por ejemplo, la lista de "
+"códigos de divisas abarca todas las divisas del mundo. **Las listas de "
+"códigos abiertas pretenden ser representativas, pero no exhaustivas."
 
 #: ../../docs/reference/codelists.md:7
 msgid ""
@@ -72,7 +72,7 @@ msgstr ""
 msgid "Extending open codelists"
 msgstr "Extendiendo las listas de código abiertas"
 
-#: ../../docs/reference/codelists.md:1
+#: ../../docs/reference/codelists.md:12
 msgid ""
 "If you use new codes outside those in an open codelist, please create an "
 "issue in the [OC4IDS GitHub repository](https://github.com/open-"
@@ -109,13 +109,45 @@ msgstr ""
 
 #: ../../docs/reference/codelists.md:21
 msgid ""
+"[Asset class](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#assetClass.csv)"
+msgstr ""
+"[Clase de activo](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#assetClass.csv)"
+
+#: ../../docs/reference/codelists.md:22
+msgid ""
 "[Currency](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#currency)"
 msgstr ""
 "[Moneda](https://standard.open-"
 "contracting.org/1.1/es/schema/codelists/#currency)"
 
-#: ../../docs/reference/codelists.md:22
+#: ../../docs/reference/codelists.md:23
+msgid ""
+"[Debt repayment priority](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#debtRepaymentPriority.csv)"
+msgstr ""
+"[Prioridad de reembolso de la deuda](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#debtRepaymentPriority.csv)"
+
+#: ../../docs/reference/codelists.md:24
+msgid ""
+"[Financing arrangement type](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#financingArrangementType.csv)"
+msgstr ""
+"[Tipo de acuerdo de financiación](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#financingArrangementType.csv)"
+
+#: ../../docs/reference/codelists.md:25
+msgid ""
+"[Financing party type](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#financingPartyType.csv)"
+msgstr ""
+"[Tipo de parte financiadora](https://extensions.open-"
+"contracting.org/en/extensions/finance/master/codelists/#financingPartyType.csv)"
+
+#: ../../docs/reference/codelists.md:26
 msgid ""
 "[Geometry type](https://extensions.open-"
 "contracting.org/en/extensions/location/master/codelists/#geometryType.csv)"
@@ -123,15 +155,7 @@ msgstr ""
 "[Tipo de Geometría](https://extensions.open-"
 "contracting.org/es/extensions/location/master/codelists/#geometryType.csv)"
 
-#: ../../docs/reference/codelists.md:23
-msgid ""
-"[Location gazetteers](https://extensions.open-"
-"contracting.org/en/extensions/location/master/codelists/#locationGazetteers.csv)"
-msgstr ""
-"[Diccionarios geográficos de ubicación](https://extensions.open-"
-"contracting.org/es/extensions/location/master/codelists/#locationGazetteers.csv)"
-
-#: ../../docs/reference/codelists.md:24
+#: ../../docs/reference/codelists.md:27
 msgid ""
 "[Method](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#method)"
@@ -139,7 +163,23 @@ msgstr ""
 "[Método](https://standard.open-"
 "contracting.org/1.1/es/schema/codelists/#method)"
 
-#: ../../docs/reference/codelists.md:25
+#: ../../docs/reference/codelists.md:28
+msgid ""
+"[Milestone code](https://standard.open-"
+"contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)"
+msgstr ""
+"[Código de hito](https://standard.open-"
+"contracting.org/profiles/ppp/latest/en/reference/codelists/#milestonecode)"
+
+#: ../../docs/reference/codelists.md:29
+msgid ""
+"[Milestone status](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#milestone-status)"
+msgstr ""
+"[Estado del hito](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#milestone-status)"
+
+#: ../../docs/reference/codelists.md:30
 msgid ""
 "[Organization identifier scheme](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#organization-identifier-scheme)"
@@ -147,15 +187,15 @@ msgstr ""
 "[Esquema de identificación de organizaciones](https://standard.open-"
 "contracting.org/1.1/es/schema/codelists/#organization-identifier-scheme)"
 
-#: ../../docs/reference/codelists.md:26
+#: ../../docs/reference/codelists.md:31
 msgid ""
-"[Release tag](https://standard.open-contracting.org/1.1/en/schema/codelists"
-"/#release-tag)"
+"[Release tag](https://standard.open-"
+"contracting.org/1.1/en/schema/codelists/#release-tag)"
 msgstr ""
 "[Etiqueta de release](https://standard.open-"
 "contracting.org/1.1/es/schema/codelists/#release-tag)"
 
-#: ../../docs/reference/codelists.md:27
+#: ../../docs/reference/codelists.md:32
 msgid ""
 "[Unit classification scheme](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)"
@@ -163,23 +203,47 @@ msgstr ""
 "[Esquema de identificación de organizaciones](https://standard.open-"
 "contracting.org/1.1/en/schema/codelists/#unit-classification-scheme)"
 
-#: ../../docs/reference/codelists.md:29
+#: ../../docs/reference/codelists.md:33
+msgid ""
+"[Sustainability strategy](https://extensions.open-"
+"contracting.org/en/extensions/sustainability/master/codelists/#sustainabilityStrategy.csv)"
+msgstr ""
+"[Estrategia de sostenibilidad](https://extensions.open-"
+"contracting.org/en/extensions/sustainability/master/codelists/#sustainabilityStrategy.csv)"
+
+#: ../../docs/reference/codelists.md:35
 msgid "Closed codelists"
 msgstr "Listas de códigos cerradas"
 
-#: ../../docs/reference/codelists.md:31
+#: ../../docs/reference/codelists.md:37
+msgid "ClimateOversightTypes"
+msgstr "ClimateOversightTypes"
+
+#: ../../docs/reference/codelists.md:44
 msgid "ContractingProcessStatus"
 msgstr "Estado del proceso de contratación"
 
-#: ../../docs/reference/codelists.md:39
+#: ../../docs/reference/codelists.md:51
 msgid "ContractNature"
 msgstr "ContractNature"
 
-#: ../../docs/reference/codelists.md:47
+#: ../../docs/reference/codelists.md:58
+msgid "Country"
+msgstr "País"
+
+#: ../../docs/reference/codelists.md:65
+msgid "EnvironmentalGoal"
+msgstr "EnvironmentalGoal"
+
+#: ../../docs/reference/codelists.md:72
+msgid "MilestoneType"
+msgstr "MilestoneType"
+
+#: ../../docs/reference/codelists.md:79
 msgid "ProjectStatus"
 msgstr "ProjectStatus"
 
-#: ../../docs/reference/codelists.md:55
+#: ../../docs/reference/codelists.md:86
 msgid ""
 "Projects with a `status` of 'completed' may be displayed in a list of "
 "archived projects."
@@ -187,34 +251,74 @@ msgstr ""
 "Proyectos con `estado` 'completed' pueden ser desplegados en una lista de "
 "proyectos archivados."
 
-#: ../../docs/reference/codelists.md:57
+#: ../../docs/reference/codelists.md:88
 msgid "ProjectType"
 msgstr "ProjectType"
 
-#: ../../docs/reference/codelists.md:65
+#: ../../docs/reference/codelists.md:95
 msgid "Open codelists"
 msgstr "Listas de códigos abiertas"
 
-#: ../../docs/reference/codelists.md:67
+#: ../../docs/reference/codelists.md:97
+msgid "ClassificationScheme"
+msgstr "ClassificationScheme"
+
+#: ../../docs/reference/codelists.md:104
+msgid "ClimateMeasure"
+msgstr "ClimateMeasure"
+
+#: ../../docs/reference/codelists.md:111
+msgid "ConservationMeasure"
+msgstr "ConservationMeasure"
+
+#: ../../docs/reference/codelists.md:118
+msgid "ConstructionMaterial"
+msgstr "ConstructionMaterial"
+
+#: ../../docs/reference/codelists.md:125
+msgid "CostCategory"
+msgstr "CostCategory"
+
+#: ../../docs/reference/codelists.md:132
 msgid "DocumentType"
 msgstr "DocumentType"
 
-#: ../../docs/reference/codelists.md:75
+#: ../../docs/reference/codelists.md:139
+msgid "EnvironmentalMeasure"
+msgstr "EnvironmentalMeasure"
+
+#: ../../docs/reference/codelists.md:146
+msgid "LaborObligations"
+msgstr "LaborObligations"
+
+#: ../../docs/reference/codelists.md:153
+msgid "LocationGazetteers"
+msgstr "LocationGazetteers"
+
+#: ../../docs/reference/codelists.md:160
 msgid "ModificationType"
 msgstr "ModificationType"
 
-#: ../../docs/reference/codelists.md:83
+#: ../../docs/reference/codelists.md:167
 msgid "PartyRole"
 msgstr "PartyRole"
 
-#: ../../docs/reference/codelists.md:91
+#: ../../docs/reference/codelists.md:174
+msgid "PolicyAlignment"
+msgstr "PolicyAlignment"
+
+#: ../../docs/reference/codelists.md:181
 msgid "ProjectSector"
 msgstr "ProjectSector"
 
-#: ../../docs/reference/codelists.md:99
+#: ../../docs/reference/codelists.md:188
 msgid "RelatedProject"
 msgstr "RelatedProject"
 
-#: ../../docs/reference/codelists.md:107
+#: ../../docs/reference/codelists.md:195
 msgid "RelatedProjectScheme"
 msgstr "RelatedProjectScheme"
+
+#: ../../docs/reference/codelists.md:202
+msgid "SustainabilityStrategy"
+msgstr "SustainabilityStrategy"
