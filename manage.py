@@ -101,10 +101,8 @@ def traverse(schema_action=None, object_action=None):
                     object_action(value["items"])
 
                     # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
-                    if (
-                        "object" in items_type
-                        or "array" in items_type
-                        and new_pointer != "/Location/geometry/coordinates"
+                    if "object" in items_type or (
+                        "array" in items_type and new_pointer != "/Location/geometry/coordinates"
                     ):
                         raise NotImplementedError(f"{new_pointer}/items has unexpected type {items_type}")
         elif pointer != "/Observation/dimensions":
