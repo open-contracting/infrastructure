@@ -3,7 +3,7 @@
 # Add your own requirements below.
 
 sphinxcontrib-opencontracting==0.0.8
-sphinxcontrib-opendataservices-jsonschema==0.5.1
+sphinxcontrib-opendataservices-jsonschema==0.7.1
 sphinxcontrib-opendataservices==0.5.0
 sphinx-design
 
