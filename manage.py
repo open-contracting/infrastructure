@@ -7,6 +7,7 @@ import warnings
 from collections import OrderedDict, defaultdict
 from copy import deepcopy
 from io import StringIO
+from operator import itemgetter
 from pathlib import Path
 
 import click
@@ -1005,7 +1006,7 @@ def lint(filename, additional_properties, link_fields):
     if additional_fields:
         click.echo(f"\nAdditional fields ({len(additional_fields)}):")
         click.echo("   field,id,title")
-        for field, occurrences in sorted(additional_fields.items(), key=lambda item: item[1]):
+        for field, occurrences in sorted(additional_fields.items(), key=itemgetter(1)):
             click.echo(f"   {field}{''.join(f',{identifier},{title}' for identifier, title in occurrences)}")
 
     if missing_data:
