@@ -1097,7 +1097,7 @@ Disclose the financial instrument type from the list:
 :columns: 8
 OC4IDS mapping
 ^^^
-1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.udget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
+1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Set the the financing arrangement's [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) and [`.type`](project-schema.json,/definitions/Finance,type) according to the instrument type:
 
 Instrument type | [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) | [`.type`](project-schema.json,/definitions/Finance,type)
