@@ -1088,6 +1088,7 @@ def update_sustainability_docs():
                 "\n\n`````{grid} 2",
                 f"\n\n````{{grid-item-card}} {title}",
                 "\n:columns: 4",
+                f"\n:link: '#{target}'",
                 "\nCoST IDS element",
                 "\n^^^\n",
                 element.get("disclosure format", ""),
