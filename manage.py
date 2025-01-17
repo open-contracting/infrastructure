@@ -144,7 +144,7 @@ def pre_commit():
 
         if "properties" in schema:
             for key, value in schema["properties"].items():
-                if value.get("type") in {"array", ["array"]} and "$ref" in value["items"]:
+                if value.get("type") in ["array", ["array"]] and "$ref" in value["items"]:
                     if value["items"]["$ref"] == f"#/definitions/{defn}":
                         references.append([*parents, key, "0"])
                     elif include_nested:
@@ -249,7 +249,7 @@ def pre_commit():
             # Add schema table
             properties_to_collapse = []
             for key, value in definition["properties"].items():
-                if value.get("type") not in {"object", ["object"]}:
+                if value.get("type") not in ["object", ["object"]]:
                     properties_to_collapse.append(key)
 
             definition["content"].extend(
