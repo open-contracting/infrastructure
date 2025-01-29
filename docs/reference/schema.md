@@ -693,7 +693,7 @@ Each `OrganizationReference` has the following fields:
 
 ### Address
 
-The address sub-schema re-uses fields from schema.org and vCard. In the event source data cannot be broken down into these parts, data should contain at least a `streetAddress` and `postalCode`.
+The address sub-schema reuses fields from schema.org and vCard. In the event source data cannot be broken down into these parts, data should contain at least a `streetAddress` and `postalCode`.
 
 When working with data, users ought to be aware that addresses might not always be broken down using all the fields the schema provides.
 

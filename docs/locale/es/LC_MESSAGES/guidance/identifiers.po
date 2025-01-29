@@ -233,7 +233,7 @@ msgstr ""
 #: ../../docs/guidance/identifiers.md:41
 msgid ""
 "If local project identifiers are available in existing systems or data, "
-"these should be re-used to create globally unique project identifiers for "
+"these should be reused to create globally unique project identifiers for "
 "use in OC4IDS. Otherwise, if local project identifiers are not available, "
 "publishers may assign local identifiers to projects in the new systems used "
 "to generate OC4IDS data."
