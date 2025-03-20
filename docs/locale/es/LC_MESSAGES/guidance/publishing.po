@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,7 +77,7 @@ msgstr ""
 "Los creadores de portales de transparencia sobre infraestructuras deberían "
 "considerar qué otros tipos de información podrían ser importantes para los "
 "ciudadanos, además de la información relacionada con el escrutinio detallado"
-" en OC4IDS."
+" en el OC4IDS."
 
 #: ../../docs/guidance/publishing.md:14
 msgid ""
@@ -100,9 +100,10 @@ msgid ""
 "contracting.org](mailto:data@open-contracting.org)) for guidance.*"
 msgstr ""
 "*Algunos de los siguientes pasos pueden requerir la ayuda de un experto "
-"técnico. También puede comunicarse con el servicio de asistencia técnica de "
-"OC4IDS ([data@open-contracting.org](mailto:data@open-contracting.org)) para "
-"obtener orientación.*"
+"técnico. También puede comunicarse con el servicio de asistencia técnica del"
+" OC4IDS "
+"([opencode@infrastructuretransparency.org](mailto:opencode@infrastructuretransparency.org))"
+" para obtener orientación.*"
 
 #: ../../docs/guidance/publishing.md:21
 msgid "(1) Make a commitment"
@@ -133,7 +134,7 @@ msgid ""
 "Government Partnership](https://www.opengovpartnership.org/), your National "
 "Action Plan is another great place to start."
 msgstr ""
-"Las solicitudes para unirse a "
+"Las solicitudes para aherise a "
 "[CoST](https://infrastructuretransparency.org/) se pueden utilizar para "
 "asumir un compromiso o, si su país es miembro de la [Open Government "
 "Partnership](https://www.opengovpartnership.org/), su Plan de Acción "
@@ -212,10 +213,10 @@ msgid ""
 "the schema](../reference/index.md#extending-the-schema) for information on "
 "including additional fields in your data."
 msgstr ""
-"**Brechas en OC4IDS** donde su sistema recopila datos pero no se asignan a "
-"OC4IDS. En lugar de excluirse de su publicación, dicha información debería "
-"incluirse como campos adicionales en sus datos. Consulte [ampliar el "
-"esquema](../reference/index.md#extending-the-schema) para obtener "
+"**Brechas en el OC4IDS** donde su sistema recopila datos pero no se asignan "
+"al OC4IDS. En lugar de excluirse de su publicación, dicha información "
+"debería incluirse como campos adicionales en sus datos. Consulte [ampliar el"
+" esquema](../reference/index.md#extending-the-schema) para obtener "
 "información sobre cómo incluir campos adicionales en sus datos."
 
 #: ../../docs/guidance/publishing.md:47
@@ -259,7 +260,7 @@ msgstr ""
 "Crear un archivo JSON OC4IDS para cada proyecto sobre el que su sistema "
 "tenga información y utilice la [Herramienta de revisión de datos "
 "OC4IDS](https://review-oc4ids.standard.open-contracting.org/) para verificar"
-" que los archivos sean estructuralmente correctos con respecto a OC4IDS. ."
+" que los archivos sean estructuralmente correctos con respecto al OC4IDS. ."
 
 #: ../../docs/guidance/publishing.md:58
 msgid ""
@@ -276,7 +277,7 @@ msgid ""
 "[OCDS Data Review Tool](https://review.standard.open-contracting.org/) to "
 "check your OCDS releases."
 msgstr ""
-"Si también publica datos de contratación utilizando OCDS, crear una versión "
+"Si también publica datos de contratación utilizando OCDS, cree una versión "
 "de OCDS cada vez que cambien los datos sobre un proceso de contratación y "
 "utilice la [Herramienta de revisión de datos de "
 "OCDS](https://review.standard.open-contracting.org/) para verificar sus "

@@ -8,9 +8,9 @@
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Juan Pane <juanpane@idatosabiertos.org>, 2021
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
 # Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,9 +38,8 @@ msgid ""
 "infrastructure projects."
 msgstr ""
 "La divulgación periódica de datos estructurados a lo largo del ciclo de vida"
-" del proyecto puede mejorar enormemente la transparencia y la "
-"responsabilidad de los proyectos de infraestructuras financiados con fondos "
-"públicos."
+" del proyecto puede mejorar enormemente la transparencia y la rendición de "
+"cuentas de los proyectos de infraestructura financiados con fondos públicos."
 
 #: ../../docs/projects/index.md:5
 msgid ""
@@ -62,10 +61,10 @@ msgid ""
 " part of a wider investment project or programme of work (e.g. a new rail "
 "station, as part of an extension to a railway line)."
 msgstr ""
-"Un proyecto de infraestructura puede ser independiente (por ejemplo, un "
-"nuevo hospital), o puede formar parte de un proyecto de inversión o programa"
-" de trabajo más amplio (por ejemplo, una nueva estación de trenes, como "
-"parte de la extensión de una línea ferroviaria). "
+"Un proyecto de infraestructura puede ser un activo independiente (por "
+"ejemplo, un nuevo hospital), o puede formar parte de un proyecto existente y"
+" que será más amplio (por ejemplo, una nueva estación de trenes, como parte "
+"de la extensión de una línea ferroviaria). "
 
 #: ../../docs/projects/index.md:16
 msgid ""
@@ -100,15 +99,15 @@ msgstr ""
 
 #: ../../docs/projects/index.md:24
 msgid "What is the scope of OC4IDS?"
-msgstr "¿Cuál es el alcance de OC4IDS?"
+msgstr "¿Cuál es el alcance del OC4IDS?"
 
 #: ../../docs/projects/index.md:26 ../../docs/projects/index.md:178
 msgid ""
 "OC4IDS describes how to structure and format the disclosures described by "
 "the CoST IDS."
 msgstr ""
-"OC4IDS describe cómo estructurar y dar formato a las divulgaciones descritas"
-" por el IDS de CoST"
+"El OC4IDS describe cómo estructurar y dar formato a las divulgaciones "
+"descritas por el IDS de CoST"
 
 #: ../../docs/projects/index.md:28
 msgid ""
@@ -180,9 +179,9 @@ msgid ""
 msgstr ""
 "La preparación comprende el estudio de factibilidad, la evaluación del "
 "impacto medioambiental y social, el alcance general del proyecto, el "
-"establecimiento de la estrategia de empaquetado y adquisición, los "
-"requisitos legales preliminares sobre el impacto medioambiental y "
-"territorial, y la autorización presupuestaria resultante."
+"establecimiento de la estrategia de adquisición, los requisitos legales "
+"preliminares sobre el impacto medioambiental y territorial, y la "
+"autorización presupuestaria resultante."
 
 #: ../../docs/projects/index.md:53
 msgid "**Implementation** :"
@@ -258,8 +257,8 @@ msgstr ""
 msgid ""
 "Design, build and supervision activities can be delivered using contracts"
 msgstr ""
-"Las actividades de diseño, construcción y supervisión se pueden realizar "
-"mediante contratos."
+"Las actividades de diseño, construcción, mantenimiento, supervisión y "
+"desmantelamiento se pueden realizar mediante contratos."
 
 #: ../../docs/projects/index.md:85
 msgid ""
@@ -301,7 +300,7 @@ msgstr ""
 
 #: ../../docs/projects/index.md:95
 msgid "How is OC4IDS structured?"
-msgstr "¿Cómo está estructurado OC4IDS?"
+msgstr "¿Cómo está estructurado el OC4IDS?"
 
 #: ../../docs/projects/index.md:98
 msgid ""
@@ -313,7 +312,7 @@ msgstr ""
 
 #: ../../docs/projects/index.md:98
 msgid "OC4IDS is structured in three parts"
-msgstr "OC4IDS se estructura en tres partes"
+msgstr "El OC4IDS se estructura en tres partes"
 
 #: ../../docs/projects/index.md:100
 msgid ""
@@ -422,7 +421,7 @@ msgid ""
 "project monitoring."
 msgstr ""
 "Los datos del OCDS pueden utilizarse para identificar y monitorear proyectos"
-" de infraestructuras. También pueden utilizarse para producir datos OC4IDS. "
+" de infraestructura. También pueden utilizarse para producir datos OC4IDS. "
 "La conversión de los datos de la OCDS en datos de la OC4IDS puede reducir la"
 " cantidad de introducción manual de datos necesaria para monitorearde los "
 "proyectos de infraestructura."
@@ -438,10 +437,11 @@ msgid ""
 " command can be used to generate an OC4IDS file from OCDS data about the "
 "contracting processes related to an infrastructure project."
 msgstr ""
-"OC4IDS Kit's [convert-from-"
+"El kit del OC4IDS  [convert-from-"
 "ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds)"
-" command can be used to generate an OC4IDS file from OCDS data about the "
-"contracting processes related to an infrastructure project."
+" contiene un comando que puede ser usado para generar un archivo OC4IDS "
+"desde datos del OCDS sobre las contrataciones en un proyecto de "
+"infraestructura."
 
 #: ../../docs/projects/index.md:129
 msgid "How do PPPs fit in?"
@@ -516,12 +516,12 @@ msgstr "¿Cuándo se puede utilizar OC4IDS?"
 
 #: ../../docs/projects/index.md:146
 msgid "OC4IDS can be used in the following scenarios:"
-msgstr "OC4IDS puede ser utilizado en los siguientes escenarios:"
+msgstr "El OC4IDS puede ser utilizado en los siguientes escenarios:"
 
 #: ../../docs/projects/index.md:148
 msgid "Publishing structured data from an infrastructure transparency portal"
 msgstr ""
-"Publicación de datos estructurados de un portal de transparencia de "
+"Publicación de datos estructurados desde un portal de transparencia de "
 "infraestructura"
 
 #: ../../docs/projects/index.md:150
@@ -529,8 +529,8 @@ msgid ""
 "OC4IDS describes a standardized format for publishing structured data on "
 "infrastructure projects."
 msgstr ""
-"OC4IDS describe un formato estandarizado para publicar datos estructurados "
-"sobre proyectos de infraestructura."
+"El OC4IDS describe un formato estandarizado para publicar datos "
+"estructurados sobre proyectos de infraestructura."
 
 #: ../../docs/projects/index.md:152
 msgid ""
@@ -551,7 +551,7 @@ msgid ""
 "OC4IDS describes the best practice information you ought to collect and "
 "disclose to support infrastructure project monitoring."
 msgstr ""
-"OC4IDS describe las mejores prácticas sobre la información que se debe "
+"El OC4IDS describe las mejores prácticas sobre la información que se debe "
 "recopilar y divulgar para respaldar el monitoreo de proyectos de "
 "infraestructura."
 
@@ -563,7 +563,7 @@ msgstr ""
 
 #: ../../docs/projects/index.md:160
 msgid "OC4IDS can be used to:"
-msgstr "OC4IDS puede ser utilizado para:"
+msgstr "El OC4IDS puede ser utilizado para:"
 
 #: ../../docs/projects/index.md:162
 msgid ""
@@ -620,7 +620,7 @@ msgid ""
 "OC4IDS provides definitions for fields and codelists which can be used to "
 "collect consistent data."
 msgstr ""
-"OC4IDS provee definiciones para campos y lista de códigos que pueden ser "
+"El OC4IDS provee definiciones para campos y lista de códigos que pueden ser "
 "utilizados para recolectar datos consistentes."
 
 #: ../../docs/projects/index.md:176
@@ -639,7 +639,7 @@ msgstr ""
 
 #: ../../docs/projects/index.md:182
 msgid "Are you ready to start using OC4IDS?"
-msgstr "¿Estás listo/a para comenzar a usar OC4IDS?"
+msgstr "¿Estás listo/a para comenzar a usar el OC4IDS?"
 
 #: ../../docs/projects/index.md:185
 msgid ""

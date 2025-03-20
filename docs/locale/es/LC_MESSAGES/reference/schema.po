@@ -6,11 +6,11 @@
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2019
 # Maria Esther Cervantes <mcervantes@cds.com.py>, 2019
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # James McKinney, 2021
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-01 11:53-0500\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,8 +114,8 @@ msgid ""
 "Links to documents relating to the project, such as needs assessments and "
 "project evaluations."
 msgstr ""
-"Enlaces a los documentos relacionados con el proyecto, como evaluaciones de "
-"necesidades y las evalua "
+"Enlaces a los documentos relacionados con el proyecto, como análisis de "
+"necesidades y evaluaciones del proyecto. "
 
 #: ../../docs/reference/schema.md:29
 msgid ""
@@ -175,9 +175,10 @@ msgid ""
 "parts of the schema that are represented as objects in OC4IDS data. Some "
 "sub-schemas are referenced from multiple places in the schema."
 msgstr ""
-"This section lists each sub-schema in the OC4IDS schema. Sub-schemas are "
-"parts of the schema that are represented as objects in OC4IDS data. Some "
-"sub-schemas are referenced from multiple places in the schema."
+"Esta sección enlista cada subesquema en el esquema del OC4IDS. Los "
+"subesquemas son partes del esquema que son presentados como objetos en los "
+"datos del OC4IDS. Algunos subesquemas son referenciados desde varios lugares"
+" en el esquema."
 
 #: ../../docs/reference/schema.md:60
 msgid "ContractingProcess"
@@ -193,7 +194,7 @@ msgid ""
 "a log of changes over time, either manually curated, or automatically "
 "generated through linked OCDS releases."
 msgstr ""
-"Dentro de OC4IDS, un proceso de contratación proporciona tanto información "
+"Dentro del OC4IDS, un proceso de contratación proporciona tanto información "
 "resumida, como un registro de los cambios a lo largo del tiempo, ya sea "
 "recopilada manualmente, o generada automáticamente a través de las versiones"
 " vinculadas de OCDS."
@@ -229,7 +230,7 @@ msgstr ""
 
 #: ../../docs/reference/schema.md:70
 msgid "Each `ContractingProcess` has the following fields:"
-msgstr "Each `ContractingProcess` tiene los siguientes campos:"
+msgstr "Cada `ContractingProcess` tiene los siguientes campos:"
 
 #: ../../docs/reference/schema.md:95
 msgid "ContractingProcessSummary"
@@ -254,7 +255,7 @@ msgid ""
 msgstr ""
 "La información resumida puede ingresarse manualmente y la lista de "
 "`modifications` puede utilizarse para registrar de forma manual los "
-"registros de los cambios , con las fechas y detalles de cada modificación"
+"registros de los cambios, con las fechas y detalles de cada modificación"
 
 #: ../../notset:5
 msgid ""
@@ -711,7 +712,7 @@ msgstr "Cada `Organization` tiene los siguientes campos:"
 
 #: ../../docs/reference/schema.md:595
 msgid "OrganizationReference"
-msgstr "OrganizationReference"
+msgstr "Referencia de la Organización"
 
 #: ../../docs/reference/schema.md:597
 msgid "`OrganizationReference` is defined as:"
@@ -722,7 +723,7 @@ msgid ""
 "The id and name of the party being referenced. Used to cross-reference to "
 "the parties section"
 msgstr ""
-"La Id y el nombre de la parte a la que se hace referencia. Se utiliza para "
+"El Id y el nombre de la parte a la que se hace referencia. Se utiliza para "
 "hacer referencias cruzadas a la sección de partes."
 
 #: ../../docs/reference/schema.md:603
@@ -1062,7 +1063,7 @@ msgstr "Cada `Identifier` tiene los siguientes campos:"
 
 #: ../../docs/reference/schema.md:952
 msgid "RelatedProject"
-msgstr "RelatedProject"
+msgstr "Proyecto Relacionado"
 
 #: ../../docs/reference/schema.md:954
 msgid "`RelatedProject` is defined as:"
@@ -1568,8 +1569,8 @@ msgid ""
 "Information about how the contracting process incorporates sustainable "
 "public procurement."
 msgstr ""
-"Información sobre cómo el proceso de contratación incorpora las "
-"adquisiciones y contrataciones públicas sostenibles."
+"Información sobre cómo el proyecto incorpora las adquisiciones y "
+"contrataciones públicas sostenibles."
 
 #: ../../docs/reference/schema.md:1624
 msgid ""

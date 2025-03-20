@@ -5,17 +5,16 @@
 # 
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
-# Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2020-05-13 23:48+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,9 +32,9 @@ msgid ""
 "documents to include and/or exclude, and how to map existing data elements "
 "to the fields in OC4IDS."
 msgstr ""
-"Publicar en OC4IDS involucra elegir qué proyectos, datos y documentos se "
+"Publicar en el OC4IDS involucra elegir qué proyectos, datos y documentos se "
 "incluyen o excluyen, y cómo mapear elementos de datos existentes a los "
-"campos en OC4IDS."
+"campos en el OC4IDS."
 
 #: ../../docs/guidance/data_user_guide.md:5
 msgid ""
@@ -73,7 +72,7 @@ msgid ""
 "Publishers ought to link to this data user guide from the project package's "
 "`publicationPolicy` field."
 msgstr ""
-"Los editores deben vincular esta guía de usuario de datos del campo "
+"Los publicadores deben vincular esta guía de usuario de datos del campo "
 "`publicationPolicy` del paquete del proyecto."
 
 #: ../../docs/guidance/data_user_guide.md:15

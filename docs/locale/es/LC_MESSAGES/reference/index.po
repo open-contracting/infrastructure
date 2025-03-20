@@ -5,10 +5,9 @@
 # 
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # James McKinney, 2021
-# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +46,7 @@ msgid ""
 "data. Some schema fields refer to codelists, to limit and standardize the "
 "possible values of the fields, in order to promote data interoperability."
 msgstr ""
-"OC4IDS comprende un [esquema](esquema) y [listas de códigos](listas de "
+"El OC4IDS comprende un [esquema](esquema) y [listas de códigos](listas de "
 "códigos). El esquema establece los campos, la estructura, los tipos de datos"
 " y las reglas de validación para los datos OC4IDS. Algunos campos del "
 "esquema hacen referencia a listas de códigos, para limitar y estandarizar "
@@ -126,7 +125,7 @@ msgid ""
 "extensions mechanism from the Open Contracting Data Standard should be used "
 "as a reference model if such a mechanism is required in the future."
 msgstr ""
-"Actualmente no existe un mecanismo formal de extensiones para OC4IDS. Sin "
-"embargo, el mecanismo de extensiones del Estándar de Datos para las "
+"Actualmente no existe un mecanismo formal de extensiones para el OC4IDS. Sin"
+" embargo, el mecanismo de extensiones del Estándar de Datos para las "
 "Contrataciones Abiertas debería ser usado como un modelo de referencia si se"
 " requiere de un mecanismo en el futuro."

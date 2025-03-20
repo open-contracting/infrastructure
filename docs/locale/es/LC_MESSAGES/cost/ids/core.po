@@ -5,15 +5,17 @@
 # 
 # Translators:
 # Francis C. Bennaton, 2024
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2023-12-14 22:18+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +25,7 @@ msgstr ""
 
 #: ../../docs/cost/ids/core.md:1
 msgid "Core standard"
-msgstr "Estandar principal"
+msgstr "Estándar principal"
 
 #: ../../docs/cost/ids/core.md:9
 msgid ""
@@ -63,13 +65,15 @@ msgstr "Identificación"
 #: ../../docs/cost/ids/core.md:238 ../../docs/cost/ids/core.md:247
 #: ../../docs/cost/ids/core.md:254 ../../docs/cost/ids/core.md:261
 msgid "CoST IDS element"
-msgstr "Elemento IDS CoST "
+msgstr "Elemento del IDS CoST "
 
 #: ../../docs/cost/ids/core.md:20 ../../docs/cost/ids/core.md:27
-#: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:231
-#: ../../docs/cost/ids/core.md:238
-msgid "CoST IDS draft definition"
-msgstr "Proyecto de definición del IDS de CoST"
+#: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:43
+#: ../../docs/cost/ids/core.md:50 ../../docs/cost/ids/core.md:231
+#: ../../docs/cost/ids/core.md:238 ../../docs/cost/ids/core.md:247
+#: ../../docs/cost/ids/core.md:254 ../../docs/cost/ids/core.md:261
+msgid "Description"
+msgstr "Descripción"
 
 #: ../../docs/cost/ids/core.md:20 ../../docs/cost/ids/core.md:27
 #: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:43
@@ -172,8 +176,8 @@ msgid "Purpose"
 msgstr "Propósito"
 
 #: ../../docs/cost/ids/core.md:20
-msgid "Specify the socio-economic purpose of the project"
-msgstr "Especificar el propósito socio económico del proyecto"
+msgid "Specify the socioeconomic purpose of the project"
+msgstr "Especificar el propósito socioeconómico del proyecto."
 
 #: ../../docs/cost/ids/core.md:20
 msgid ""
@@ -208,7 +212,7 @@ msgid ""
 "Main outputs from the project that are being taken forward into construction"
 " (type, quantity, unit)"
 msgstr ""
-"Principales resultados del proyecto que se incorporan a construcción (tipo, "
+"Principales resultados del proyecto que son parte de la construcción (tipo, "
 "cantidad, unidad)"
 
 #: ../../docs/cost/ids/core.md:27
@@ -298,7 +302,7 @@ msgstr "Fuentes de financiamiento"
 
 #: ../../docs/cost/ids/core.md:27
 msgid "Name the funding organization(s)/sources of funding"
-msgstr "Nombre la(s) organización(es)/fuente(s) de financiación"
+msgstr "Nombre la(s) organización(es)/fuente(s) de financiamiento"
 
 #: ../../docs/cost/ids/core.md:27
 msgid ""
@@ -306,14 +310,15 @@ msgid ""
 "to the `.roles` of the existing entry in `parties`. Otherwise, add a new "
 "entry to `parties` for each funding organization with 'funder' included in "
 "its `.roles`. When information on the amount provided by each funder is "
-"available, use `budget.budgetBreakdown` to provide details"
+"available, use `budget.budgetBreakdowns` to provide details"
 msgstr ""
 "Nivel de proyecto: Si una organización de financiamiento es la propietaria "
 "del proyecto, agregar 'funder' a los `.roles` del registro existente en "
 "`parties`. De lo contrario, agregar un nuevo registro en el campo `parties` "
 "para cada organización financiadora con 'funder' incluido en sus `.roles`. "
 "Cuando la información sobre la cantidad aportada por cada financiador esté "
-"disponible, utilizar `budget.budgetBreakdown` para proporcional más detalles"
+"disponible, utilizar `budget.budgetBreakdowns` para proporcional más "
+"detalles"
 
 #: ../../docs/cost/ids/core.md:27
 msgid "Project Budget"
@@ -458,17 +463,11 @@ msgstr ""
 
 #: ../../docs/cost/ids/core.md:36 ../../docs/cost/ids/core.md:240
 msgid "Reactive disclosures"
-msgstr "Divulgaciones reactivas"
+msgstr "Divulgación reactiva"
 
 #: ../../docs/cost/ids/core.md:38
 msgid "Identification and preparation"
 msgstr "Identificación y preparación"
-
-#: ../../docs/cost/ids/core.md:43 ../../docs/cost/ids/core.md:50
-#: ../../docs/cost/ids/core.md:247 ../../docs/cost/ids/core.md:254
-#: ../../docs/cost/ids/core.md:261
-msgid "Description"
-msgstr "Descripción"
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Multi-year programme & Budget"
@@ -483,15 +482,19 @@ msgstr ""
 
 #: ../../docs/cost/ids/core.md:43
 msgid ""
-"For each year, add a `BudgetBreakdown` object to the "
-"`budget.BudgetBreakdown` array and set its fields as follows:"
+"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` "
+"incrementally and set its `.description` to 'Breakdown by year'. For each "
+"year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set"
+" its fields as follows:"
 msgstr ""
-"Para cada año, agregar un objeto de `BudgetBreakdown` a la matriz "
-"`budget.BudgetBreakdown` y configurar sus campos de la siguiente forma:"
+"Agregar un objeto `BudgetBreakdowns`  a `budget/budgetBreaksdown`, definir "
+"el `.id` incrementalmente y definir la `.description` en 'Breakdown by "
+"year'. Para cada año, agregar un objeto `BudgetBreakdown` a cada matriz "
+"`.BudgetBreakdown`  y definir los campos siguientes:"
 
 #: ../../docs/cost/ids/core.md:45
-msgid "Set its `id` to the year, e.g. ‘2020’"
-msgstr "Establecer sus `id` al año, por ejemplo ‘2020’"
+msgid "Set its `id` to the year, e.g. '2020'"
+msgstr "Establecer sus `id` al año, por ejemplo '2020'"
 
 #: ../../docs/cost/ids/core.md:46
 msgid ""
@@ -504,22 +507,22 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:47
 msgid ""
 "Set its `.period.startDate` to the first day of the year, e.g. "
-"‘2020-01-01T00:00:00Z’"
+"'2020-01-01T00:00:00Z'"
 msgstr ""
 "Configurar su `.period.startDate` al primer día del año, ej. "
-"‘2020-01-01T00:00:00Z’"
+"'2020-01-01T00:00:00Z'"
 
 #: ../../docs/cost/ids/core.md:48
 msgid ""
 "Set its `.period.endDate` to the last day of the year, e.g "
-"‘2020-12-31T23:59:59Z"
+"'2020-12-31T23:59:59Z"
 msgstr ""
 "Configurar su `.period.endDate` al último día del año, ej. "
-"‘2020-12-31T23:59:59Z"
+"'2020-12-31T23:59:59Z'"
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Project brief or Feasibility study"
-msgstr "Proyecto corto o estudio de factibilidad"
+msgstr "Perfil del proyecto o estudio de factibilidad"
 
 #: ../../docs/cost/ids/core.md:43
 msgid ""
@@ -562,20 +565,20 @@ msgid ""
 "**Social impact assessment** Documentation of assessments of the intended "
 "and unintended social consequences of this project, and documentation of "
 "mitigation measures for those social consequences. Social impacts are "
-"changes that affect people, directly or indirectly (e.g. changes to people’s"
+"changes that affect people, directly or indirectly (e.g. changes to people's"
 " way of life, culture, community, health and well-being etc.)."
 msgstr ""
-"**Evaluación de impacto social** Documentación de las evaluaciones sobre las"
-" consecuencias previstas y no previstas de este proyecto y la documentación "
-"sobre las medidas de mitigación para esas consecuencias sociales. Los "
-"impactos sociales son cambios que afectan a las personas, directa o "
-"indirectamente (ej. cambios en la forma de vida, de las personas, la "
-"cultura, la comunidad,la salud y el bienestar etc.)."
+"**Evaluación del impacto social** Documentación de las evaluaciones de las "
+"consecuencias sociales previstas y no deseadas de este proyecto, y "
+"documentación de las medidas de mitigación de esas consecuencias sociales. "
+"Los impactos sociales son cambios que afectan a las personas, directa o "
+"indirectamente (por ejemplo, cambios en el modo de vida, la cultura, la "
+"comunidad, la salud y el bienestar de las personas, etc.)."
 
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "Environmental impact assessment: [Add a project document](../common.md#add-"
-"a-project-document) and set `.documentType` to ‘environmentalImpact’."
+"a-project-document) and set `.documentType` to 'environmentalImpact'."
 msgstr ""
 "Evaluación de impacto ambiental: [Agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y determinar `.documentType` "
@@ -584,8 +587,8 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:45
 msgid ""
 "Social impact assessment: [Add a project document](../common.md#add-a-"
-"project-document) and set `.documentType` to ‘environmentalImpact’ or "
-"‘socialImpact’."
+"project-document) and set `.documentType` to 'environmentalImpact' or "
+"'socialImpact'."
 msgstr ""
 "Evaluación de impacto social: [Agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y establecer `.documentType` "
@@ -594,9 +597,9 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:47
 msgid ""
 "If a single document covers both the environmental and social impact "
-"assessment, add two documents to `documents` and set the first document’s "
-"`.documentType` to ‘environmentalImpact’ and the second document’s "
-"`.documentType` to ‘socialImpact’."
+"assessment, add two documents to `documents` and set the first document's "
+"`.documentType` to 'environmentalImpact' and the second document's "
+"`.documentType` to 'socialImpact'."
 msgstr ""
 "Si un solo documento cubre tanto la evaluación de impacto ambiental como la "
 "de impacto social, agregar dos documentos a `documents` y configurar el "
@@ -622,10 +625,10 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
-"`.documentType` to ‘resettlementPlan’."
+"`.documentType` to 'resettlementPlan'."
 msgstr ""
-"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
-"establecer el `.documentType` del ‘resettlementPlan’."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` en 'resettlementPlan'."
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Project officials and roles"
@@ -643,7 +646,7 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "From the `parties` array, get the `Organization` object whose role is "
-"‘publicAuthority’. If none exists yet:"
+"'publicAuthority'. If none exists yet:"
 msgstr ""
 "De la matriz de las partes `parties`, obtener el objeto de la `Organization`"
 " cuyo rol es el de ‘publicAuthority’. Si aun no existe:"
@@ -657,14 +660,13 @@ msgid "Set its `.name` to the name of the procuring entity"
 msgstr "Establecer el `.name` al nombre de la entidad de adquisiciones"
 
 #: ../../docs/cost/ids/core.md:47
-msgid "Set its `.role` to ‘procuringEntity’"
+msgid "Set its `.role` to 'procuringEntity'"
 msgstr "Establecer el `.role` de la ‘procuringEntity’"
 
-#: ../../docs/cost/ids/core.md:49
-msgid "Add a `Person` object to the organization’s `.people` array and:"
+#: ../../docs/cost/ids/core.md:49 ../../docs/cost/ids/core.md:253
+msgid "Add a `Person` object to the organization's `.people` array and:"
 msgstr ""
-"Agregar el objeto de la `Person` a la matriz de las `.people` de la "
-"organización y:"
+"Agregar un objeto `Person` a la matriz de `.people` de la organización y:"
 
 #: ../../docs/cost/ids/core.md:51 ../../docs/cost/ids/core.md:64
 #: ../../docs/cost/ids/core.md:163 ../../docs/cost/ids/core.md:255
@@ -672,17 +674,17 @@ msgid "Set its `.id` incrementally"
 msgstr "Establecer su `.id` de forma incremental"
 
 #: ../../docs/cost/ids/core.md:52
-msgid "Set its `.name` to the project official’s name"
+msgid "Set its `.name` to the project official's name"
 msgstr "Establecer el `.name` del nombre del oficial de proyecto"
 
 #: ../../docs/cost/ids/core.md:53
-msgid "Set its `.jobTitle` to the project official’s job title"
+msgid "Set its `.jobTitle` to the project official's job title"
 msgstr ""
 "Establecer su `.jobTitle` en el título del cargo del oficial de proyecto"
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Financial agreement"
-msgstr "Acuerdo financiero"
+msgstr "Acuerdo de financiamiento"
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Loan or donation agreement with financing conditions."
@@ -691,10 +693,10 @@ msgstr "Contrato de préstamo o donación con condiciones financieras"
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
-"`.documentType` to ‘financialAgreement’."
+"`.documentType` to 'financialAgreement'."
 msgstr ""
-"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
-"establecer `.documentType` al ‘financialAgreement’."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` a 'financialAgreement'."
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Procurement plan"
@@ -711,10 +713,10 @@ msgstr ""
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
-"`.documentType` to ‘procurementPlan’."
+"`.documentType` to 'procurementPlan'."
 msgstr ""
-"[Agregar un documento del proyecto](../common.md#add-a-project-document) y "
-"establecer el `.documentType` del ‘procurementPlan’."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` como 'procurementPlan'."
 
 #: ../../docs/cost/ids/core.md:43
 msgid "Project approval decision"
@@ -727,10 +729,10 @@ msgstr "Detalles adicionales sobre la aprobación del presupuesto."
 #: ../../docs/cost/ids/core.md:43
 msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
-"`.documentType` to ‘budgetApproval’."
+"`.documentType` to 'budgetApproval'."
 msgstr ""
-"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
-"establecer el `.documentType`al ‘budgetApproval’."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` en 'budgetApproval'."
 
 #: ../../docs/cost/ids/core.md:45
 msgid "Completion"
@@ -779,7 +781,7 @@ msgstr ""
 
 #: ../../docs/cost/ids/core.md:50
 msgid "Budget amendment decision"
-msgstr "Decisión de enmienda en el presupuesto"
+msgstr "Decisión de enmienda al presupuesto"
 
 #: ../../docs/cost/ids/core.md:50
 msgid ""
@@ -1100,8 +1102,8 @@ msgid "Contract status"
 msgstr "Estado del contrato"
 
 #: ../../docs/cost/ids/core.md:231
-msgid "Select from pre-award, active or closed"
-msgstr "Seleccionar de pre adjudicación, activo o cerrado"
+msgid "Select from preAward, active or closed"
+msgstr "Seleccionar entre preadjudicación, activa o cerrada"
 
 #: ../../docs/cost/ids/core.md:231
 msgid ""
@@ -1424,11 +1426,6 @@ msgstr "Establecer el `.name` de nombre de la entidad administrativa"
 #: ../../docs/cost/ids/core.md:251
 msgid "Set its `.role` to 'administrativeEntity'"
 msgstr "Establecer el rol `.role` a la 'administrativeEntity'"
-
-#: ../../docs/cost/ids/core.md:253
-msgid "Add a `Person` object to the organization's `.people` array and:"
-msgstr ""
-"Agregar un objeto `Person` a la matriz de `.people` de la organización y:"
 
 #: ../../docs/cost/ids/core.md:256
 msgid "Set its `.name` to the contract official's name"

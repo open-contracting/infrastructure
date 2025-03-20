@@ -5,9 +5,9 @@
 # 
 # Translators:
 # Charlie Pinder <charlie.pinder@opendataservices.coop>, 2019
-# Romina Fernandez <rfernandez@cds.com.py>, 2019
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-15 11:03+1300\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,9 +34,9 @@ msgid ""
 "Contracting Partnership and CoST - the Infrastructure Transparency "
 "Initiative can provide free-of-charge support."
 msgstr ""
-"Si planea publicar o utilizar datos utilizando OC4IDS, Open Contracting "
-"Partnership y CoST, la Iniciativa de Transparencia de Infraestructura, "
-"pueden brindarle soporte gratuito."
+"Si planea publicar o utilizar datos utilizando el OC4IDS, la Alianza para "
+"las Contrataciones Abiertas y CoST, la Iniciativa de Transparencia de "
+"Infraestructura, pueden brindarle soporte gratuito."
 
 #: ../../docs/support.md:5
 msgid "We can:"
@@ -47,7 +47,7 @@ msgid ""
 "Help you identify approaches for converting data from your existing systems "
 "to OC4IDS;"
 msgstr ""
-"Ayudarte a identificar estrategias para convertir datos desde sus sistemas "
+"Ayudarle a identificar estrategias para convertir datos desde sus sistemas "
 "existentes a OC4IDS;"
 
 #: ../../docs/support.md:8
@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../../docs/support.md:9
 msgid "Provide guidance on mapping your data structures to the standard;"
-msgstr "Proveer guía sobre cómo mapear tus estructuras de datos al estándar;"
+msgstr "Proveer guía sobre cómo mapear sus estructuras de datos al estándar;"
 
 #: ../../docs/support.md:10
 msgid ""
@@ -68,7 +68,7 @@ msgid ""
 "data;"
 msgstr ""
 "Dar retroalimentación sobre borradores de archivos de datos y apoyo para "
-"validar tus datos;"
+"validar sus datos;"
 
 #: ../../docs/support.md:12
 msgid "Use the following email addresses to request support:"
@@ -90,7 +90,7 @@ msgid ""
 "from the Open Contracting Partnership."
 msgstr ""
 "[data@open-contracting.org](mailto:data@open-contracting.org) para el apoyo "
-"de Open Contracting Partnership."
+"de la Alianza para las Contrataciones Abiertas."
 
 #: ../../docs/support.md:17
 msgid "Contributing"

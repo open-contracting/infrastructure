@@ -4,12 +4,12 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # James McKinney, 2021
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-01 11:53-0500\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -217,15 +217,15 @@ msgstr "Listas de códigos cerradas"
 
 #: ../../docs/reference/codelists.md:37
 msgid "ClimateOversightTypes"
-msgstr "ClimateOversightTypes"
+msgstr "TiposSupervisiónClimática"
 
 #: ../../docs/reference/codelists.md:44
 msgid "ContractingProcessStatus"
-msgstr "Estado del proceso de contratación"
+msgstr "EstadoProcesoContratación"
 
 #: ../../docs/reference/codelists.md:51
 msgid "ContractNature"
-msgstr "ContractNature"
+msgstr "NaturalezaContrato"
 
 #: ../../docs/reference/codelists.md:58
 msgid "Country"
@@ -233,15 +233,15 @@ msgstr "País"
 
 #: ../../docs/reference/codelists.md:65
 msgid "EnvironmentalGoal"
-msgstr "EnvironmentalGoal"
+msgstr "ObjetivoAmbiental"
 
 #: ../../docs/reference/codelists.md:72
 msgid "MilestoneType"
-msgstr "MilestoneType"
+msgstr "TipoHito"
 
 #: ../../docs/reference/codelists.md:79
 msgid "ProjectStatus"
-msgstr "ProjectStatus"
+msgstr "EstatusProyecto"
 
 #: ../../docs/reference/codelists.md:86
 msgid ""
@@ -253,7 +253,7 @@ msgstr ""
 
 #: ../../docs/reference/codelists.md:88
 msgid "ProjectType"
-msgstr "ProjectType"
+msgstr "TipoProyecto"
 
 #: ../../docs/reference/codelists.md:95
 msgid "Open codelists"
@@ -261,64 +261,64 @@ msgstr "Listas de códigos abiertas"
 
 #: ../../docs/reference/codelists.md:97
 msgid "ClassificationScheme"
-msgstr "ClassificationScheme"
+msgstr "EsquemaClasificación"
 
 #: ../../docs/reference/codelists.md:104
 msgid "ClimateMeasure"
-msgstr "ClimateMeasure"
+msgstr "MedidasClimáticas"
 
 #: ../../docs/reference/codelists.md:111
 msgid "ConservationMeasure"
-msgstr "ConservationMeasure"
+msgstr "MedidasConservación"
 
 #: ../../docs/reference/codelists.md:118
 msgid "ConstructionMaterial"
-msgstr "ConstructionMaterial"
+msgstr "MaterialesConstrucción"
 
 #: ../../docs/reference/codelists.md:125
 msgid "CostCategory"
-msgstr "CostCategory"
+msgstr "CategoriaCostos"
 
 #: ../../docs/reference/codelists.md:132
 msgid "DocumentType"
-msgstr "DocumentType"
+msgstr "TipoDocumento"
 
 #: ../../docs/reference/codelists.md:139
 msgid "EnvironmentalMeasure"
-msgstr "EnvironmentalMeasure"
+msgstr "MedidasAmbientales"
 
 #: ../../docs/reference/codelists.md:146
 msgid "LaborObligations"
-msgstr "LaborObligations"
+msgstr "ObligacionesLaborales"
 
 #: ../../docs/reference/codelists.md:153
 msgid "LocationGazetteers"
-msgstr "LocationGazetteers"
+msgstr "UbicacionGazetteers"
 
 #: ../../docs/reference/codelists.md:160
 msgid "ModificationType"
-msgstr "ModificationType"
+msgstr "TipoModificación"
 
 #: ../../docs/reference/codelists.md:167
 msgid "PartyRole"
-msgstr "PartyRole"
+msgstr "RolParte"
 
 #: ../../docs/reference/codelists.md:174
 msgid "PolicyAlignment"
-msgstr "PolicyAlignment"
+msgstr "AlineamientoPolitico"
 
 #: ../../docs/reference/codelists.md:181
 msgid "ProjectSector"
-msgstr "ProjectSector"
+msgstr "SectorProyecto"
 
 #: ../../docs/reference/codelists.md:188
 msgid "RelatedProject"
-msgstr "RelatedProject"
+msgstr "ProyectoRelacionado"
 
 #: ../../docs/reference/codelists.md:195
 msgid "RelatedProjectScheme"
-msgstr "RelatedProjectScheme"
+msgstr "EsquemaProyectoRelacionado"
 
 #: ../../docs/reference/codelists.md:202
 msgid "SustainabilityStrategy"
-msgstr "SustainabilityStrategy"
+msgstr "EstrategiaSostenibilidad"

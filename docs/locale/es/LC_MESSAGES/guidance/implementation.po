@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2023-12-14 22:18+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +33,10 @@ msgid ""
 "implementation models used by OC4IDS publishers. It is not an exhaustive "
 "list, but it can be used to inform your implementation."
 msgstr ""
-"La implementación de OC4IDS implica combinar datos sobre proyectos de "
+"La implementación del OC4IDS implica combinar datos sobre proyectos de "
 "infraestructura y procesos de contratación. Esta guía describe algunos "
-"ejemplos de modelos de implementación utilizados por los editores de OC4IDS."
-" No es una lista exhaustiva, pero puede utilizarse para informar su "
+"ejemplos de modelos de implementación utilizados por los publicadores de "
+"OC4IDS. No es una lista exhaustiva, pero puede utilizarse para informar su "
 "implementación."
 
 #: ../../docs/guidance/implementation.md:5
@@ -46,7 +47,7 @@ msgid ""
 msgstr ""
 "Las fuentes de datos pueden incluir portales de transparencia de "
 "infraestructura, sistemas de adquisiciones y sistemas de administración de "
-"proyectos. La implementación de OC4IDS también puede implicar el uso de "
+"proyectos. La implementación del OC4IDS también puede implicar el uso de "
 "datos de contratación publicados en formato OCDS."
 
 #: ../../docs/guidance/implementation.md:7
@@ -63,7 +64,7 @@ msgstr ""
 " sobre el diseño de la arquitectura del sistema para respaldar este proceso,"
 " consulte la guía [Arquitecturas del sistema](https://standard.open-"
 "contracting.org/latest/en/guidance/build/system_architectures/) en la "
-"documentación de OCDS. "
+"documentación del OCDS. "
 
 #: ../../docs/guidance/implementation.md:9
 #: ../../docs/guidance/implementation.md:11
@@ -88,8 +89,8 @@ msgstr ""
 "En este modelo, las entidades contratantes ingresan datos a nivel de "
 "proyecto y contrato directamente en un portal de transparencia de "
 "infraestructura. El portal publica datos del proyecto y datos resumidos del "
-"proceso de contratación en formato OC4IDS. CoST Honduras utiliza este modelo"
-" al igual que CoST West Lombok."
+"proceso de contratación en formato del OC4IDS. CoST Honduras utiliza este "
+"modelo al igual que CoST West Lombok."
 
 #: ../../docs/guidance/implementation.md:15
 msgid ""
@@ -128,10 +129,10 @@ msgid ""
 "project data and summary contracting process data in OC4IDS format."
 msgstr ""
 "En este modelo, las entidades contratantes introducen los datos del proyecto"
-" directamente en un portal de transparencia de infraestructuras, mientras "
-"que los datos del proceso de contratación se importan de un sistema de "
+" directamente en un portal de transparencia de infraestructura, mientras que"
+" los datos del proceso de contratación se importan de un sistema de "
 "contratación existente. A continuación, el portal publica los datos del "
-"proyecto y los datos resumidos del proceso de contratación en formato "
+"proyecto y los datos resumidos del proceso de contratación en formato del "
 "OC4IDS."
 
 #: ../../docs/guidance/implementation.md:23

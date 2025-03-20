@@ -4,19 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # James McKinney, 2021
-# Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,10 +39,10 @@ msgid ""
 msgstr ""
 "El Estándar de Datos de Contratación Abierta (OCDS) ya se utiliza para "
 "describir millones de procesos de adquisiciones en todo el mundo "
-"relacionados con bienes, servicios y obras públicas. El Estándar de datos de"
-" infraestructura de CoST (IDS deCoST) se ha utilizado para guiar qué datos e"
-" información deben divulgarse en cada etapa del ciclo del proyecto en más de"
-" 25.000 proyectos de infraestructura."
+"relacionados con bienes, servicios y obras públicas. El Estándar de Datos "
+"sobre infraestructura de CoST (IDS de CoST) se ha utilizado para guiar qué "
+"datos e información deben divulgarse en cada etapa del ciclo del proyecto en"
+" más de 85.000 proyectos de infraestructura."
 
 #: ../../docs/index.md:5
 msgid ""

@@ -8,8 +8,8 @@
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Juan Pane <juanpane@idatosabiertos.org>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-08 09:07+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -247,13 +247,13 @@ msgid ""
 "The Sustainable Development Goal Targets are specific targets for each "
 "Sustainable Development Goal."
 msgstr ""
-"Las Metas de los Objetivos de Desarrollo Sostenible son metas específicas "
+"Las metas de los Objetivos de Desarrollo Sostenible son metas específicas "
 "para cada Objetivo de Desarrollo Sostenible."
 
 #. Title
 #: schema/project-level/codelists/classificationScheme.csv:3
 msgid "International Cost Measurement Standard"
-msgstr "Estándar internacional de medición de costos"
+msgstr "Estándar Internacional de Medición de Costos"
 
 #. Description
 #: schema/project-level/codelists/classificationScheme.csv:3
@@ -268,25 +268,23 @@ msgstr ""
 #. Title
 #: schema/project-level/codelists/classificationScheme.csv:4
 msgid "CoST IDS Legal Type"
-msgstr "Tipo legal de los IDS de CoST "
+msgstr "Tipo legal del IDS de CoST "
 
 #. Description
 #: schema/project-level/codelists/classificationScheme.csv:4
 msgid "The CoST IDS classification of an organization's legal type."
-msgstr ""
-"La clasificación de los IDS de CoST del tipo legal de una organización."
+msgstr "La clasificación del IDS de CoST del tipo legal de una organización."
 
 #. Title
 #: schema/project-level/codelists/classificationScheme.csv:5
 msgid "CoST IDS Administrative Level"
-msgstr "Nivel Administrativo de los IDS de CoST"
+msgstr "Nivel Administrativo del IDS de CoST"
 
 #. Description
 #: schema/project-level/codelists/classificationScheme.csv:5
 msgid "The CoST IDS classification of an organization's administrative level."
 msgstr ""
-"Clasificación de los IDS de CoST del nivel administrativo de una "
-"organización."
+"Clasificación del IDS de CoST del nivel administrativo de una organización."
 
 #. Title
 #: schema/project-level/codelists/classificationScheme.csv:6
@@ -294,7 +292,7 @@ msgid ""
 "International Finance Corporation’s Policy on environmental and social "
 "sustainability"
 msgstr ""
-" Política de sostenibilidad medioambiental y social de la Corporación "
+" Política de Sostenibilidad Medioambiental y Social de la Corporación "
 "Financiera Internacional"
 
 #. Description
@@ -5193,7 +5191,7 @@ msgid ""
 " required to establish an NDC and update it every five years."
 msgstr ""
 " Una Contribución Determinada a Nivel Nacional (NDC por sus siglas en "
-"inglés) es un plan de acción climática para reducir las emisiones y "
+"inglés) es un plan de acción climático para reducir las emisiones y "
 "adaptarse a los impactos climáticos. Cada una de las Partes del Acuerdo de "
 "París debe establecer una NDC y actualizarla cada cinco años."
 
@@ -5826,12 +5824,12 @@ msgid ""
 " legal amendments to a tender, for which the tenderAmendment tag should be "
 "used."
 msgstr ""
-"Una actualización a una entrega de licitación (tender) existente. Debe haber"
-" al menos una entrega de licitación con el mismo ocid, pero con una fecha de"
-" entrega anterior, antes de publicar un tenderUpdate. Una actualización "
-"puede añadir nueva información o hacer correcciones a información publicada "
-"previamente. No debe ser utilizada para enmiendas legales a una oferta, para"
-" lo cual se debe usar la etiqueta tenderAmendment. "
+"Una actualización a una entrega de licitación existente. Debe haber al menos"
+" una entrega de licitación con el mismo ocid, pero con una fecha de entrega "
+"anterior, antes de publicar un tenderUpdate. Una actualización puede añadir "
+"nueva información o hacer correcciones a información publicada previamente. "
+"No debe ser utilizada para enmiendas legales a una oferta, para lo cual se "
+"debe usar la etiqueta tenderAmendment. "
 
 #. Title
 #: schema/project-level/codelists/releaseTag.csv:6

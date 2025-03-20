@@ -10,6 +10,7 @@
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-03-08 09:07+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -231,10 +232,11 @@ msgid ""
 "Development covers project identification, preparation, implementation and "
 "completion.\""
 msgstr ""
-"El esquema Estándard de Datos para Contrataciones Abiertas (OC4IDS, por sus "
-"siglas en inglés) establece una estructura de datos para capturar e "
-"intercambiar información sobre proyectos de infraestructura en línea con los"
-" requisitos de divulgación del [Estándar de Datos de Infraestructura "
+"El esquema Contrataciones Abiertas para el Estándar de Datos sobre "
+"Infraestructura (OC4IDS, por sus siglas en inglés) establece una estructura "
+"de datos para capturar e intercambiar información sobre proyectos de "
+"infraestructura en línea con los requisitos de divulgación del [Estándar de "
+"Datos de Infraestructura "
 "CoST](https://infrastructuretransparency.org/resource/977/). OC4IDS define "
 "un \"proyecto de infraestructura\" como: \"el desarrollo, mantenimiento y "
 "desmantelamiento de un conjunto de activos de infraestructura en un lugar "
@@ -301,7 +303,7 @@ msgid ""
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is "
 "recommended."
 msgstr ""
-"El idioma predeterminado de los datos utiliza [ISO639-1] de dos letras "
+"El idioma predeterminado de los datos utiliza el [ISO639-1] de dos letras "
 "(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) o [etiquetas de "
 "idioma BCP47] extendidas (http://www.w3. "
 "org/International/articles/language-tags/). Se recomienda el uso de códigos "
@@ -384,7 +386,7 @@ msgid ""
 "profile of a budget over time, or the budget coming from different sources, "
 "the extended budgetBreakdown section may be used."
 msgstr ""
-"Especificar el presupuesto asignado al proyecto de infraestructura (moneda e"
+"Especifique el presupuesto asignado al proyecto de infraestructura (moneda e"
 " importe). Este costo debe incluir la adquisición de terrenos y propiedades,"
 " las medidas de mitigación medioambiental, las disposiciones de salud y "
 "seguridad, los costos de los clientes, consultores y proveedores, así como "
@@ -1185,7 +1187,7 @@ msgstr "Si el proyecto está ubicado en un área protegida."
 #. /properties/lobbyingMeetings/title
 #: schema/project-level/project-schema.json:1
 msgid "Lobbying meetings"
-msgstr "Reuniones de lobby"
+msgstr "Reuniones de cabildeo"
 
 #. /properties/lobbyingMeetings/description
 #: schema/project-level/project-schema.json:1
@@ -1539,8 +1541,8 @@ msgid ""
 "Information about how the contracting process incorporates sustainable "
 "public procurement."
 msgstr ""
-"Información sobre cómo el proceso de contratación incorpora la contratación "
-"pública sostenible."
+"Información sobre cómo el proyecto incorpora la contratación pública "
+"sostenible."
 
 #. /definitions/ContractingProcessSummary/properties/suppliers/title
 #: schema/project-level/project-schema.json:1
@@ -1556,7 +1558,7 @@ msgid ""
 msgstr ""
 "El nombre e identificador de cada proveedor para este proceso de "
 "contratación. Los detalles completos de cada proveedor deberían ser añadidos"
-" al array de `parties` a nivel de proyecto con el rol (`role`) de "
+" a la matriz de `parties` a nivel de proyecto con el rol (`role`) de "
 "'supplier'."
 
 #. /definitions/ContractingProcessSummary/properties/contractValue/title
@@ -1611,7 +1613,7 @@ msgid ""
 "found by looking at the published releases."
 msgstr ""
 "Aquí se puede proporcionar documentación adicional sobre este proceso de "
-"contratación, incluidos informes y evaluaciones elaborados a través de un "
+"contratación, incluidos informes y evaluaciones elaborados mediante un "
 "proceso de monitoreo, o enlaces a páginas web donde se puede encontrar más "
 "información sobre este proceso. En los casos en que se publiquen versiones "
 "de la OCDS, podrá encontrar más documentos consultando las versiones "
@@ -1698,8 +1700,8 @@ msgid ""
 "A release of data represents the information known or updated at a "
 "particular point in time."
 msgstr ""
-"Una entrega de datos (release) representa la información conocida o "
-"actualizada en un momento particular en el tiempo."
+"Una entrega de datos representa la información conocida o actualizada en un "
+"momento particular en el tiempo."
 
 #. /definitions/LinkedRelease/properties/id/title
 #. /definitions/Classification/properties/id/title
@@ -1985,11 +1987,11 @@ msgstr ""
 "El nivel máximo de duración de este período en días. Una interfaz de usuario"
 " puede recolectar o mostrar estos datos en meses o años (como sea "
 "apropiado), y luego convertirlo a días cuando se guarda este campo. Este "
-"campo puede usarse cuando no se sabe las fechas exactas. Si ya se fijaron "
-"los startDate y endDate, este campo, si se utiliza, debe de ser igual a la "
-"diferencia entre startDate y endDate. De otra manera, si se fija startDate y"
-" maxExtentDate, este campo, si se utiliza, debe ser igual a la diferencia "
-"entre startDate y maxExtentDate."
+"campo puede usarse cuando no se sabe las fechas exactas. Si ya se fijaron la"
+" fecha de inicio y fecha final, este campo, si se utiliza, debe ser igual a "
+"la diferencia entre fecha de inicio y fecha de fin. De otra manera, si se "
+"fija startDate y maxExtentDate, este campo, si se utiliza, debe ser igual a "
+"la diferencia entre startDate y maxExtentDate."
 
 #. /definitions/Period/properties/durationInDays/title
 #: schema/project-level/project-schema.json:1
@@ -3289,12 +3291,14 @@ msgstr ""
 #. /definitions/PublicOffice/properties/jobTitle/title
 #: schema/project-level/project-schema.json:1
 msgid "Job title"
-msgstr "Puesto de trabajo"
+msgstr "Título del puesto de trabajo"
 
 #. /definitions/Person/properties/jobTitle/description
 #: schema/project-level/project-schema.json:1
 msgid "The job title of the person (for example, Financial Manager)."
-msgstr "El puesto de trabajo de la persona (por ejemplo, gerente financiero)."
+msgstr ""
+"El título del puesto de trabajo de la persona (por ejemplo, gerente "
+"financiero)."
 
 #. /definitions/Transaction/title
 #: schema/project-level/project-schema.json:1
@@ -3334,7 +3338,7 @@ msgstr ""
 #. /definitions/Transaction/properties/source/title
 #: schema/project-level/project-schema.json:1
 msgid "Data source"
-msgstr "Fuente de los Datos"
+msgstr "Fuente de los datos"
 
 #. /definitions/Transaction/properties/source/description
 #: schema/project-level/project-schema.json:1
@@ -3343,10 +3347,10 @@ msgid ""
 "machine or human-readable source where users can find further information on"
 " the budget line item identifiers, or project identifiers, provided here."
 msgstr ""
-"Usado para apuntar a un Fiscal Data Package, un archivo IATI o una fuente "
-"legible por computadora o por un humano donde los usuarios puedan obtener "
-"más información sobre los identificadores de partida presupuestaria o "
-"identificadores de proyectos, provistos aquí. "
+"Usado para apuntar a un Paquete de Datos Fiscales, un archivo IATI o una "
+"fuente legible por computadora o por un humano donde los usuarios puedan "
+"obtener más información sobre los identificadores de partida presupuestaria "
+"o identificadores de proyectos, provistos aquí. "
 
 #. /definitions/Transaction/properties/date/description
 #: schema/project-level/project-schema.json:1
@@ -3948,7 +3952,7 @@ msgstr ""
 #. /definitions/Finance/properties/stepInRights/title
 #: schema/project-level/project-schema.json:1
 msgid "Step in rights"
-msgstr "Derechos de Step in"
+msgstr "Derechos de entrada"
 
 #. /definitions/Finance/properties/stepInRights/description
 #: schema/project-level/project-schema.json:1
@@ -4202,8 +4206,8 @@ msgid ""
 "contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy)"
 " codelist."
 msgstr ""
-"Las estrategias utilizadas para procurar el objetivo u objetivos de "
-"sostenibilidad, utilizando la codelista abierta "
+"Las estrategias utilizadas para perseguir el objetivo u objetivos de "
+"sostenibilidad, utilizando la lista de códigos abierta "
 "[sustainabilityStrategy](https://standard.open-"
 "contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#sustainabilityStrategy)."
 

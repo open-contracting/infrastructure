@@ -5,19 +5,19 @@
 # 
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2019-03-21 15:12+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,10 +40,10 @@ msgid ""
 msgstr ""
 "El Estándar de Datos sobre Infraestructura de CoST (IDS) es un marco para "
 "publicaciones que fue adaptado por programas nacionales CoST para satisfacer"
-" sus necesidades locales. Esta sección establece cómo usar **OC4IDS** y "
-"**OCDS** para evaluar la cobertura de los datos publicados de acuerdo al "
-"IDS. Por ejemplo, para monitorear qué elementos del IDS están siendo "
-"proveídos y si están disponibles para todos los proyectos o sólo para "
+" sus necesidades locales. Esta sección establece cómo usar el **OC4IDS** y "
+"el **OCDS** para evaluar la cobertura de los datos publicados de acuerdo con"
+" el IDS. Por ejemplo, para monitorear qué elementos del IDS están siendo "
+"publicados y si están disponibles para todos los proyectos o sólo para "
 "algunos."
 
 #: ../../docs/guidance/evaluating.md:6
@@ -54,11 +54,11 @@ msgid ""
 "determine whether documents linked to from the data contain the necessary "
 "information."
 msgstr ""
-"No es posible automatizar completamente la verificación de si las "
-"divulgaciones de un editor concreto, o las divulgaciones sobre un proyecto "
-"concreto, cumplen los requisitos del IDS de CoST. Por ejemplo, podría ser "
-"necesaria una comprobación humana para determinar si los documentos "
-"vinculados a partir de los datos contienen la información necesaria."
+"No es posible automatizar completamente la verificación de si los datos de "
+"un publicador concreto, o los datos sobre un proyecto concreto, cumplen los "
+"requisitos del IDS de CoST. Por ejemplo, podría ser necesaria una "
+"comprobación humana para determinar si los documentos vinculados a partir de"
+" los datos contienen la información necesaria."
 
 #: ../../docs/guidance/evaluating.md:9
 msgid "Getting started"
@@ -71,7 +71,7 @@ msgid ""
 "contracting.org](mailto:data@open-contracting.org)) for guidance.*"
 msgstr ""
 "*Los siguientes pasos pueden requerir la ayuda de un experto técnico. "
-"También puede comunicarse con el servicio de asistencia técnica de OC4IDS "
+"También puede comunicarse con el servicio de asistencia técnica del OC4IDS "
 "([data@open-contracting.org](mailto:data@open-contracting.org)) para obtener"
 " orientación.*"
 

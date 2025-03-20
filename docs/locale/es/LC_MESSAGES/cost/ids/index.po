@@ -1,46 +1,6 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) Open Contracting Partnership
-# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
-# Francis C. Bennaton, 2024
-# 
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 11:03+1300\n"
-"PO-Revision-Date: 2023-12-14 22:18+0000\n"
-"Last-Translator: Francis C. Bennaton, 2024\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
-
-#: ../../docs/cost/ids/index.md:1
-msgid "CoST IDS to OC4IDS mapping"
-msgstr "IDS de CoST a mapeo de OC4IDS"
-
-#: ../../docs/cost/ids/index.md:3
-msgid "This section contains mappings from the CoST IDS to OC4IDS:"
-msgstr "Esta sección contiene los mapeos del IDS de CoST a OC4IDS"
-
-#: ../../docs/cost/ids/index.md:5
-msgid ""
-"The [core standard mapping](core) describes a mapping of the proactive and "
-"reactive disclosure elements of the \"core\" CoST IDS."
-msgstr ""
-"El [mapeo estándar principal](core) describe un mapeo de los elementos de "
-"divulgación proactivos y reactivos del IDS de CoST \"básico\"."
-
-#: ../../docs/cost/ids/index.md:6
-msgid ""
-"The [sustainability modules mapping](sustainability) describes a mapping of "
-"the optional CoST IDS sustainability modules."
-msgstr ""
-"El [mapeo de los módulos de sostenibilidad](sostenibilidad) describe un "
-"mapeo opcional de los módulos de sostenibilidad del IDS de CoST."
