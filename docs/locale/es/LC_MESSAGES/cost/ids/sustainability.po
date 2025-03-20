@@ -50,7 +50,7 @@ msgstr ""
 "implementar el mapeo, le recomendamos que considere recopilar y publicar los"
 " demás campos descritos en el [esquema] OC4IDS (../../reference/schema.md) ."
 " Para ver los detalles de un campo, haga clic en su nombre, Ej. "
-"[`id`](proyecto-esquema.json,,id)."
+"[`id`](project-schema.json,,id)."
 
 #: ../../docs/cost/ids/sustainability.md:18
 msgid "Download this page in PDF format"
@@ -1635,8 +1635,8 @@ msgid ""
 "See [policy coherence (institutional module)](institutional-policy-"
 "coherence)."
 msgstr ""
-"Vea [coherencia de las políticas (módulo institucional)](coherencia-de-"
-"políticas-institucionales)."
+"Vea [coherencia de las políticas (módulo institucional)](institutional-policy-"
+"coherence)."
 
 #: ../../docs/cost/ids/sustainability.md:1230
 #: ../../docs/cost/ids/sustainability.md:3055
@@ -1672,8 +1672,8 @@ msgid ""
 "See [number of beneficiaries (social module)](social-number-of-"
 "beneficiaries)"
 msgstr ""
-"Vea [número de beneficiarios (módulo social)](social-número-de-"
-"beneficiarios)"
+"Vea [número de beneficiarios (módulo social)](social-number-of-"
+"beneficiaries)"
 
 #: ../../docs/cost/ids/sustainability.md:1272
 msgid "Amount of investment"
@@ -1829,8 +1829,8 @@ msgstr ""
 "establezca su [`.scheme`](project-"
 "schema.json,/definitions/Classification,scheme) a 'costIdsLegalType' y mapee"
 " el tipo legal de la organización ('privada', 'pública' o 'no "
-"gubernamental') a su [`. id`](proyecto-"
-"esquema.json,/definiciones/Clasificación,id)."
+"gubernamental') a su [`. id`](project-"
+"schema.json,/definitions/Classification,id)."
 
 #: ../../docs/cost/ids/sustainability.md:1411
 msgid ""
@@ -1867,8 +1867,8 @@ msgid ""
 "and-maintenance)."
 msgstr ""
 "Vea [presupuesto-de-elaboración-implementación-y-mantenimiento (módulo "
-"económico y fiscal)](presupuesto-económico-y-fiscal-para-preparación-"
-"implementación-y-mantenimiento)."
+"económico y fiscal)](economic-and-fiscal-budget-for-preparation-implementation-"
+"and-maintenance)."
 
 #: ../../docs/cost/ids/sustainability.md:1465
 msgid "Project preparation period"
@@ -1880,7 +1880,7 @@ msgstr "Fechas de inicio y final para la preparación del proyecto."
 
 #: ../../docs/cost/ids/sustainability.md:1478
 msgid "Map to [`preparationPeriod`](project-schema.json,,preparationPeriod)."
-msgstr "Mapee a [`preparationPeriod`](project-schema.json,preparationPeriod)."
+msgstr "Mapee a [`preparationPeriod`](project-schema.json,,preparationPeriod)."
 
 #: ../../docs/cost/ids/sustainability.md:1496
 msgid "Project approval period"
@@ -2043,10 +2043,10 @@ msgid ""
 "schema.json,/definitions/Finance,paymentPeriod)."
 msgstr ""
 "Período de gracia: Mapear el período durante el cual se realizarán los pagos"
-" a [`.paidPeriod`](project-schema.json,/definitions/Finance,paidPeriod). El "
+" a [`.paidPeriod`](project-schema.json,/definitions/Finance,paymentPeriod). El "
 "período de gracia es la diferencia entre el [`.period`](project-"
 "schema.json,,period) y el [`.paidPeriod`](project-"
-"schema.json,/definitions/Finance,paidPeriod)."
+"schema.json,/definitions/Finance,paymentPeriod)."
 
 #: ../../docs/cost/ids/sustainability.md:1615
 msgid ""
@@ -2101,7 +2101,7 @@ msgid ""
 " 'abatementCostMethodology'."
 msgstr ""
 "Mapee a [`environment.abatementCost`](project-"
-"schema.json,environment/abatementCost). Si está disponible un documento que "
+"schema.json,,environment/abatementCost). Si está disponible un documento que "
 "describe la metodología utilizada para calcular el costo, [agregue un "
 "documento de proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema .json,/definitions/Document,documentType) a"
@@ -2171,8 +2171,8 @@ msgid ""
 "See [public consultation meetings (social module)](social-public-"
 "consultation-meetings)."
 msgstr ""
-"Vea [reuniones de consulta pública (módulo social)](reuniones-de-consulta-"
-"publica-social)."
+"Vea [reuniones de consulta pública (módulo social)](social-public-"
+"consultation-meetings)."
 
 #: ../../docs/cost/ids/sustainability.md:1751
 msgid "Disbursement records"
@@ -2217,7 +2217,7 @@ msgstr ""
 " contrario, si el desembolso se relaciona con el proyecto, por ejemplo, un "
 "pago de un financiador a la autoridad pública, agregue un objeto "
 "[`Milestone`](../../reference/schema.md#milestone) a la matriz del nivel de "
-"proyecto [`milestones`](project-schema.json,,hitos)."
+"proyecto [`milestones`](project-schema.json,,milestones)."
 
 #: ../../docs/cost/ids/sustainability.md:1765
 msgid "Set the milestone's:"
@@ -2341,7 +2341,7 @@ msgstr ""
 "Establezca el [`.payer`](project-schema.json,/definitions/Transaction,payer)"
 " de la transacción en [`.id`](project-"
 "schema.json,/definitions/Organization,id) y [`.name `](project-"
-"schema.json,/definitions/Organization.name) nombre de la organización."
+"schema.json,/definitions/Organization,name) nombre de la organización."
 
 #: ../../docs/cost/ids/sustainability.md:1788
 msgid ""
@@ -2373,7 +2373,7 @@ msgstr ""
 "Establezca el [`.payee`](project-schema.json,/definitions/Transaction,payee)"
 " de la transacción en [`.id`](project-"
 "schema.json,/definitions/Organization,id) y [`.name `](project-"
-"schema.json,/definitions/Organization,nombre) de la organización."
+"schema.json,/definitions/Organization,name) de la organización."
 
 #: ../../docs/cost/ids/sustainability.md:1793
 msgid ""
@@ -2530,8 +2530,8 @@ msgid ""
 "See [independent monitoring (institutional module)](institutional-"
 "independent-monitoring)."
 msgstr ""
-"Vea [monitoreo independiente (módulo institucional)](monitoreo-"
-"independiente-institucional)."
+"Vea [monitoreo independiente (módulo institucional)](institutional-"
+"independent-monitoring)."
 
 #: ../../docs/cost/ids/sustainability.md:2006
 msgid "Independent evaluation"
@@ -2640,8 +2640,7 @@ msgstr ""
 #: ../../docs/cost/ids/sustainability.md:2157
 msgid "Set its [`type`](project-schema.json,,type) to 'decommissioning'."
 msgstr ""
-"Establezca su [`tipo`](project-schema.json,,tipo) en 'desmantelamiento'."
-
+"Establezca su [`tipo`](project-schema.json,,type
 #: ../../docs/cost/ids/sustainability.md:2159
 msgid ""
 "Set its [`title`](project-schema.json,,title) to the name of the asset."
@@ -2701,7 +2700,7 @@ msgid ""
 "schema.json,,decommissioningPeriod)."
 msgstr ""
 "Mapee a [`decommissioningPeriod`](project-"
-"schema.json,decommissioningPeriod)."
+"schema.json,,decommissioningPeriod)."
 
 #: ../../docs/cost/ids/sustainability.md:2221
 msgid "Decommission plan"
@@ -2716,8 +2715,8 @@ msgid ""
 "See [decommissioning plans (environment and social)](environment-and-"
 "climate-decommissioning-plans)."
 msgstr ""
-"Vea [planes de desmantelamiento (ambientales y sociales)](planes-de-"
-"desmantelamiento-ambientales-y-climáticos)."
+"Vea [planes de desmantelamiento (ambientales y sociales)](environment-and-"
+"climate-decommissioning-plans)."
 
 #: ../../docs/cost/ids/sustainability.md:2242
 msgid "Carbon decommission savings"

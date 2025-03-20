@@ -226,7 +226,7 @@ msgstr ""
 #: ../../docs/reference/schema.md:68
 msgid "[`contractingProcesses`](project-schema.json,,contractingProcesses)"
 msgstr ""
-"[`Procesosdecontratación`](proyecto-esquema.json,,Procesosdecontratación)"
+"[`Procesosdecontratación`](project-schema.json,,contractingProcesses)"
 
 #: ../../docs/reference/schema.md:70
 msgid "Each `ContractingProcess` has the following fields:"
