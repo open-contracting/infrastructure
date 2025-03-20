@@ -7,6 +7,7 @@ import warnings
 from collections import OrderedDict, defaultdict
 from copy import deepcopy
 from io import StringIO
+from operator import itemgetter
 from pathlib import Path
 
 import click
@@ -101,10 +102,8 @@ def traverse(schema_action=None, object_action=None):
                     object_action(value["items"])
 
                     # Recursing into arrays of arrays or arrays of objects hasn't been implemented.
-                    if (
-                        "object" in items_type
-                        or "array" in items_type
-                        and new_pointer != "/Location/geometry/coordinates"
+                    if "object" in items_type or (
+                        "array" in items_type and new_pointer != "/Location/geometry/coordinates"
                     ):
                         raise NotImplementedError(f"{new_pointer}/items has unexpected type {items_type}")
         elif pointer != "/Observation/dimensions":
@@ -145,7 +144,7 @@ def pre_commit():
 
         if "properties" in schema:
             for key, value in schema["properties"].items():
-                if value.get("type") in {"array", ["array"]} and "$ref" in value["items"]:
+                if value.get("type") in ["array", ["array"]] and "$ref" in value["items"]:
                     if value["items"]["$ref"] == f"#/definitions/{defn}":
                         references.append([*parents, key, "0"])
                     elif include_nested:
@@ -250,7 +249,7 @@ def pre_commit():
             # Add schema table
             properties_to_collapse = []
             for key, value in definition["properties"].items():
-                if value.get("type") not in {"object", ["object"]}:
+                if value.get("type") not in ["object", ["object"]]:
                     properties_to_collapse.append(key)
 
             definition["content"].extend(
@@ -1007,7 +1006,7 @@ def lint(filename, additional_properties, link_fields):
     if additional_fields:
         click.echo(f"\nAdditional fields ({len(additional_fields)}):")
         click.echo("   field,id,title")
-        for field, occurrences in sorted(additional_fields.items(), key=lambda item: item[1]):
+        for field, occurrences in sorted(additional_fields.items(), key=itemgetter(1)):
             click.echo(f"   {field}{''.join(f',{identifier},{title}' for identifier, title in occurrences)}")
 
     if missing_data:
@@ -1089,6 +1088,7 @@ def update_sustainability_docs():
                 "\n\n`````{grid} 2",
                 f"\n\n````{{grid-item-card}} {title}",
                 "\n:columns: 4",
+                f"\n:link: '#{target}'",
                 "\nCoST IDS element",
                 "\n^^^\n",
                 element.get("disclosure format", ""),
