@@ -28,17 +28,17 @@ The main benefit of this approach is reducing the data entry burden on procuring
 
 When the procurement system publishes OCDS data, there are two further benefits:
 
-* OC4IDS Kit’s [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds) command can be used to generate OC4IDS data using the OCDS data as an input, reducing the amount of software development needed.
+* OC4IDS Kit's [convert-from-ocds](https://oc4idskit.readthedocs.io/en/latest/cli.html#convert-from-ocds) command can be used to generate OC4IDS data using the OCDS data as an input, reducing the amount of software development needed.
 * The published OC4IDS data can be linked to the OCDS data from the procurement system, allowing users to dig deeper into detailed data about the contracting processes related to each project.
 
 ![Infrastructure transparency portal with existing source of OCDS data](../_static/images/implementation_scenario_2.png)
 
-Nuevo León’s [Infraestructura Abierta platform](https://smpu.nl.gob.mx/transparencia/) implements a similar model:
+Nuevo León's [Infraestructura Abierta platform](https://smpu.nl.gob.mx/transparencia/) implements a similar model:
 
 * Internal systems collect, combine and publish project and contracting data using OC4IDS and OCDS.
 * The Infraestructura Abierta platform consumes the OC4IDS and OCDS data and provides an interface for users to explore and analyze the data.
 
-For more information on Nuevo León’s implementation, read the [Technical case study](https://docs.google.com/document/d/1oIBk9gnpiq5dcZkahiZ2kI1v5kwt9NTlRkdKNm4LhVA/edit#).
+For more information on Nuevo León's implementation, read the [Technical case study](https://docs.google.com/document/d/1oIBk9gnpiq5dcZkahiZ2kI1v5kwt9NTlRkdKNm4LhVA/edit#).
 
 ## Standalone procurement system
 
@@ -46,6 +46,6 @@ For more information on Nuevo León’s implementation, read the [Technical case
 
 In this model, rather than implementing a separate infrastructure transparency portal, an existing procurement system is extended to collect project data. Procuring entities enter project data and contracting data directly into the procurement system and associate contracts with projects. The system publishes project data and summary contracting data in OC4IDS format and detailed contracting data in OCDS format. The OC4IDS data meets the needs of users with an interest in infrastructure projects and the OCDS data meets the needs of users with an interest in all types of contracting process.
 
-Uganda’s Public Procurement and Disposal of Public Assets Authority uses this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/).
+Uganda's Public Procurement and Disposal of Public Assets Authority uses this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/).
 
 The main benefit of this model is that it does not require the development of a separate infrastructure transparency portal. The downside of this model is that it might involve significant changes to legacy procurement systems.
