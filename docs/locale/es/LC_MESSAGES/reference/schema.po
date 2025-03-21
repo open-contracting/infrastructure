@@ -338,7 +338,7 @@ msgstr ""
 
 #: ../../docs/reference/schema.md:175
 msgid "Each `Modification` has the following fields:"
-msgstr "Cada 'Modification' tiene los siguientes campos:"
+msgstr "Cada `Modification` tiene los siguientes campos:"
 
 #: ../../docs/reference/schema.md:200
 msgid "Period"
@@ -990,7 +990,7 @@ msgstr ""
 
 #: ../../docs/reference/schema.md:874
 msgid "Each `Document` has the following fields:"
-msgstr "Cada 'Document' tiene los siguientes campos:"
+msgstr "Cada `Document` tiene los siguientes campos:"
 
 #: ../../docs/reference/schema.md:904
 msgid "Identifier"

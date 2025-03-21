@@ -629,8 +629,7 @@ msgid ""
 msgstr ""
 "Nivel de proyecto: [Agregue un documento de proyecto](../common.md#add-a-"
 "project-document) y establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) en ' análisis de valor por "
-"el dinero'."
+"schema.json,/definitions/Document,documentType) en 'valueForMoneyAnalysis'."
 
 #: ../../docs/cost/ids/sustainability.md:346
 msgid "Budget projections"
@@ -1828,8 +1827,8 @@ msgstr ""
 "schema.json,/definitions/Organization,classifications) de la organización, "
 "establezca su [`.scheme`](project-"
 "schema.json,/definitions/Classification,scheme) a 'costIdsLegalType' y mapee"
-" el tipo legal de la organización ('privada', 'pública' o 'no "
-"gubernamental') a su [`.id`](project-"
+" el tipo legal de la organización ('private', "
+"'public' or 'non-government') a su [`.id`](project-"
 "schema.json,/definitions/Classification,id)."
 
 #: ../../docs/cost/ids/sustainability.md:1411
@@ -1849,7 +1848,7 @@ msgstr ""
 "establezca su [`.scheme`](project-"
 "schema.json,/definitions/Classification,scheme) a "
 "'costIdsAdministrativeLevel' y mapee el nivel administrativo de la "
-"organización ('internacional', 'regional', 'nacional' o 'subnacional') a su "
+"organización ('international', 'regional', 'national' or 'sub-national') a su "
 "[`.id`](project-schema.json,/definitions/Classification,id)."
 
 #: ../../docs/cost/ids/sustainability.md:1444
@@ -2229,7 +2228,7 @@ msgid ""
 "'scheduled'"
 msgstr ""
 "[`.status`](project-schema.json,/definitions/Milestone,status) a "
-"'programado'"
+"'scheduled'"
 
 #: ../../docs/cost/ids/sustainability.md:1769
 msgid ""
@@ -2242,7 +2241,7 @@ msgstr ""
 #: ../../docs/cost/ids/sustainability.md:1770
 msgid ""
 "[`.type`](project-schema.json,/definitions/Milestone,type) to 'payment'"
-msgstr "[`.type`](project-schema.json,/definitions/Milestone,type) a 'pago'"
+msgstr "[`.type`](project-schema.json,/definitions/Milestone,type) a 'payment'"
 
 #: ../../docs/cost/ids/sustainability.md:1771
 msgid ""
@@ -2328,7 +2327,7 @@ msgid ""
 "Add 'payer' to the organization's [`.roles`](project-"
 "schema.json,/definitions/Organization,roles) array"
 msgstr ""
-"Agregue  'pagador' a la matriz [`.roles`](project-"
+"Agregue 'payer' a la matriz [`.roles`](project-"
 "schema.json,/definitions/Organization,roles) de la organización"
 
 #: ../../docs/cost/ids/sustainability.md:1786
@@ -2360,7 +2359,7 @@ msgid ""
 "Add 'payee' to the organization's [`.roles`](project-"
 "schema.json,/definitions/Organization,roles) array."
 msgstr ""
-"Agregue 'acreedor' a la matriz [`.roles`](project-"
+"Agregue 'payee' a la matriz [`.roles`](project-"
 "schema.json,/definitions/Organization,roles) de la organización."
 
 #: ../../docs/cost/ids/sustainability.md:1791
@@ -2391,7 +2390,7 @@ msgid ""
 "'met'"
 msgstr ""
 "Establezca su [`.status`](project-schema.json,/definitions/Milestone,status)"
-" en 'realizado'"
+" en 'met'"
 
 #: ../../docs/cost/ids/sustainability.md:1796
 msgid ""
@@ -2511,7 +2510,7 @@ msgid ""
 msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
 "establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) en 'informeSupervisión'."
+"schema.json,/definitions/Document,documentType) en 'oversightReport'."
 
 #: ../../docs/cost/ids/sustainability.md:1985
 #: ../../docs/cost/ids/sustainability.md:3392
@@ -2619,7 +2618,7 @@ msgstr ""
 "Si hay documentación de respaldo disponible, [agregue un documento de "
 "proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType ) a"
-" 'ghgEmisiones'."
+" 'ghgEmissions'."
 
 #: ../../docs/cost/ids/sustainability.md:2144
 msgid "Infrastructure assets to be decommissioned"
@@ -2684,7 +2683,7 @@ msgid ""
 "schema.json,/definitions/RelatedProject,relationship) to 'replacement'."
 msgstr ""
 "[`.relationship`](project-"
-"schema.json,/definitions/RelatedProject,relationship) a 'reemplazo'."
+"schema.json,/definitions/RelatedProject,relationship) a 'replacement'."
 
 #: ../../docs/cost/ids/sustainability.md:2190
 msgid "Decommission period"
@@ -2767,7 +2766,7 @@ msgstr ""
 "Si hay documentación de respaldo disponible, [Agregue un documento de "
 "proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType ) a"
-" 'ghgReduccionEmisiones'."
+" 'ghgEmissionsReduction'."
 
 #: ../../docs/cost/ids/sustainability.md:2309
 msgid "Decommission mitigation plan"
@@ -2789,7 +2788,7 @@ msgid ""
 msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
 "establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) en 'impactoSocial'."
+"schema.json,/definitions/Document,documentType) en 'socialImpact'."
 
 #: ../../docs/cost/ids/sustainability.md:2341
 msgid "Social"
@@ -2880,7 +2879,7 @@ msgid ""
 msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document), "
 "establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) en 'diseñoInclusivo' y mapee"
+"schema.json,/definitions/Document,documentType) en 'inclusiveDesign' y mapee"
 " cualquier texto libre a su [`.description`](project-"
 "schema.json,/definitions/Document,description)."
 
@@ -2893,7 +2892,7 @@ msgid ""
 msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document), "
 "establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) en 'implementaciónInclusiva'"
+"schema.json,/definitions/Document,documentType) en 'inclusiveImplementation'"
 " y mapee cualquier texto libre a su [`.description`](project-"
 "schema.json,/definitions/Document,description)."
 
@@ -2982,7 +2981,7 @@ msgstr ""
 "Publique la invitación a la reunión: [agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
-"'invitaciónReuniónConsulta'."
+"'consultationMeetingInvitation'."
 
 #: ../../docs/cost/ids/sustainability.md:2492
 msgid ""
@@ -3041,7 +3040,7 @@ msgstr ""
 "Publique las actas de la reunión: [agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
-"'minutas.ReunionesConsulta'."
+"'minutes.consultationMeeting'."
 
 #: ../../docs/cost/ids/sustainability.md:2541
 msgid "Land compensation budget"
@@ -3183,7 +3182,7 @@ msgstr ""
 "Publique el contrato firmado que incluye obligaciones laborales: [agregar un"
 " documento de proceso de contratación](../common.md#add-a-contracting-"
 "process-document) y establezca su [`.documentType`](project-"
-"schema.json,/definitions/Document,documentType) a 'contratoFirmado'."
+"schema.json,/definitions/Document,documentType) a 'contractSigned'."
 
 #: ../../docs/cost/ids/sustainability.md:2653
 msgid "Labor budget"
@@ -3351,7 +3350,7 @@ msgstr ""
 "[Agregue un documento de proceso de contratación](../common.md#add-a-"
 "contracting-process-document) y establezca su [`.documentType`](project-"
 "schema.json,/definitions/Document,documentType) en "
-"'certificaciónSaludYSeguridadProveedor'."
+"'supplierHealthAndSafetyCertification'."
 
 #: ../../docs/cost/ids/sustainability.md:2814
 msgid "Construction materials testing"
@@ -3481,7 +3480,7 @@ msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
 "establezca su [`.documentType`](project-"
 "schema.json,/definitions/Document,documentType) en "
-"'informeInspecciónEdificio'."
+"'buildingInspectionReport'."
 
 #: ../../docs/cost/ids/sustainability.md:2915
 msgid "Jobs generated"
@@ -3567,7 +3566,7 @@ msgid ""
 msgstr ""
 "Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz "
 "[`metrics`](project-schema.json,,metrics) y establezca su [`.title`](project-schema.json,/definitions/Metric,title)"
-" en 'Trabajos creados'."
+" en 'Jobs created'."
 
 #: ../../docs/cost/ids/sustainability.md:2948
 msgid ""
@@ -3707,7 +3706,7 @@ msgid ""
 "'sdgTarget'"
 msgstr ""
 "[`.scheme`](project-schema.json,/definitions/Classification,scheme) a "
-"'metaODS'"
+"'sdgTarget'"
 
 #: ../../docs/cost/ids/sustainability.md:3080
 msgid ""
@@ -3735,7 +3734,7 @@ msgstr ""
 "Si hay más documentación disponible sobre la alineación de políticas del "
 "proyecto, [agregar un documento de proyecto](../common.md#add-a-project-"
 "document) y establezca su [`.documentType`](project-schema.json,/"
-"definitions/Document,documentType) a 'alineamientoPolitico'."
+"definitions/Document,documentType) a 'policyAlignment'."
 
 #: ../../docs/cost/ids/sustainability.md:3122
 msgid "Freedom of information requests"
@@ -3762,7 +3761,7 @@ msgstr ""
 "Para cada solicitud de acceso a la información, [agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y establezca su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
-" 'solicitudInformación'."
+" 'informationRequest'."
 
 #: ../../docs/cost/ids/sustainability.md:3156
 msgid "Answers to Freedom of information requests"
@@ -3789,7 +3788,7 @@ msgstr ""
 "Para cada respuesta a una solicitud de libertad de información, [agregar un "
 "documento de proyecto](../common.md#add-a-project-document) y establecer su "
 "[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
-"'respuestaSolicitudesInformación'."
+"'informationRequestResponse'."
 
 #: ../../docs/cost/ids/sustainability.md:3190
 msgid "Lobbying transparency"
@@ -3995,7 +3994,7 @@ msgstr ""
 "[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
 "establezca su [`.documentType`](project-"
 "schema.json,/definitions/Document,documentType) a "
-"'certificaciónAntiCorrupción'."
+"'antiCorruptionCertification'."
 
 #: ../../docs/cost/ids/sustainability.md:3405
 msgid ""

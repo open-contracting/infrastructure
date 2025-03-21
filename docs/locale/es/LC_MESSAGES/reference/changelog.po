@@ -558,7 +558,7 @@ msgid ""
 " 'completed' to 'maintenance' in the projectStatus codelist."
 msgstr ""
 "[#432](https://github.com/open-contracting/infrastructure/pull/432) - "
-"cambiar el nombre de 'finalizado' a 'mantenimiento' en la lista de códigos "
+"cambiar el nombre de 'completed' a 'maintenance' en la lista de códigos "
 "projectStatus."
 
 #: ../../docs/reference/changelog.md:93
@@ -695,7 +695,7 @@ msgstr "[#446](https://github.com/open-contracting/infrastructure/pull/446)"
 
 #: ../../docs/reference/changelog.md:117
 msgid "'antiCorruptionCertification'"
-msgstr "'Certificación anticorrupción'"
+msgstr "'antiCorruptionCertification'"
 
 #: ../../docs/reference/changelog.md:118
 msgid "'buildingInspectionReport'"

@@ -1040,7 +1040,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/implementation` para ver si hay objetos "
-"`Document` con `.documentType` configurado en 'projectEvaluación' y copie "
+"`Document` con `.documentType` configurado en 'projectEvaluation' y copie "
 "cada objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:97
@@ -1868,7 +1868,7 @@ msgid ""
 "object to the `.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/implementation/documents` para ver si hay "
-"objetos `Document` con `.documentType` establecido en 'PagoCertificado' y "
+"objetos `Document` con `.documentType` establecido en 'paymentCertificate' y "
 "copie cada objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:144

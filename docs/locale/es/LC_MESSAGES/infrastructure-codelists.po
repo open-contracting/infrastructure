@@ -4821,9 +4821,9 @@ msgid ""
 " payment under its `.transactions`."
 msgstr ""
 "Para hitos de pago, como la fecha en la que se espera realizar un pago a un "
-"proveedor. Si el 'estado' de un hito de pago de un proyecto o proceso de "
-"contratación es 'cumplido', entonces el contrato debe tener una entrada para"
-" el pago en sus 'transacciones'."
+"proveedor. Si el `status` de un hito de pago de un proyecto o proceso de "
+"contratación es 'met', entonces el contrato debe tener una entrada para"
+" el pago en sus `.transactions`."
 
 #. Title
 #: schema/project-level/codelists/milestoneType.csv:9
