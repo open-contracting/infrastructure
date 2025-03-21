@@ -289,7 +289,7 @@ msgstr ""
 #. Title
 #: schema/project-level/codelists/classificationScheme.csv:6
 msgid ""
-"International Finance Corporation’s Policy on environmental and social "
+"International Finance Corporation's Policy on environmental and social "
 "sustainability"
 msgstr ""
 " Política de Sostenibilidad Medioambiental y Social de la Corporación "

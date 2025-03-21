@@ -113,7 +113,7 @@ msgstr ""
 
 #: ../../docs/guidance/evaluating.md:25
 msgid ""
-"If the data isn’t published using OC4IDS, use the [OC4IDS Field-Level "
+"If the data isn't published using OC4IDS, use the [OC4IDS Field-Level "
 "Mapping Template](https://www.open-contracting.org/resources/oc4ids-field-"
 "level-mapping-template/) to map the data to the specification and create an "
 "OC4IDS JSON file for each project."
@@ -163,7 +163,7 @@ msgstr ""
 
 #: ../../docs/guidance/evaluating.md:41
 msgid ""
-"If the data isn’t published using OCDS, use the [OC4IDS Field-Level Mapping "
+"If the data isn't published using OCDS, use the [OC4IDS Field-Level Mapping "
 "Template](https://www.open-contracting.org/resources/oc4ids-field-level-"
 "mapping-template/) to map the data to the [contracting "
 "processes](../reference/schema.md#contractingprocess) section of OC4IDS and "

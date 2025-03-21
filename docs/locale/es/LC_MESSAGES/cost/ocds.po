@@ -781,7 +781,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘feasibilityStudy’  y copie "
+"`Document` con `.documentType` configurado en 'feasibilityStudy'  y copie "
 "cada objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:90
@@ -849,7 +849,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘resettlementPlan’ y copie "
+"`Document` con `.documentType` configurado en 'resettlementPlan' y copie "
 "cada objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:90
@@ -917,7 +917,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘procurementPlan’ y copie cada"
+"`Document` con `.documentType` configurado en 'procurementPlan' y copie cada"
 " objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:90
@@ -935,7 +935,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘budgetApproval’ y copie cada "
+"`Document` con `.documentType` configurado en 'budgetApproval' y copie cada "
 "objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:92
@@ -960,7 +960,7 @@ msgid ""
 msgstr ""
 "*Como opción, verifique la matriz `/contracts/implementation` para ver los "
 "objetos `Document` con `.documentType` configurado en "
-"‘physicalProgressReport’ o ‘financialProgressReport’ y copie cada objeto en "
+"'physicalProgressReport' o 'financialProgressReport' y copie cada objeto en "
 "la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:99
@@ -992,7 +992,7 @@ msgid ""
 " `documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘budgetAmendmentApproval’ y "
+"`Document` con `.documentType` configurado en 'budgetAmendmentApproval' y "
 "copie cada objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:97
@@ -1040,7 +1040,7 @@ msgid ""
 "`documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/implementation` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘projectEvaluación’ y copie "
+"`Document` con `.documentType` configurado en 'projectEvaluación' y copie "
 "cada objeto en la matriz `documents`.*"
 
 #: ../../docs/cost/ocds.md:97
@@ -1608,7 +1608,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/tender/documents` para ver si hay objetos `Document` "
-"con `.documentType` configurado en ‘biddingDocuments’ y copie cada objeto a "
+"con `.documentType` configurado en 'biddingDocuments' y copie cada objeto a "
 "la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:130
@@ -1630,7 +1630,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/tender/documents` para ver si hay objetos `Document` "
-"con `.documentType` configurado en ‘evaluationReports’ y copie cada objeto "
+"con `.documentType` configurado en 'evaluationReports' y copie cada objeto "
 "en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:130
@@ -1654,7 +1654,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/planning/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘projectDesignReport’ y copie "
+"`Document` con `.documentType` configurado en 'projectDesignReport' y copie "
 "cada objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:132
@@ -1683,7 +1683,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘contractSigned’ y copie cada "
+"`Document` con `.documentType` configurado en 'contractSigned' y copie cada "
 "objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:137
@@ -1706,7 +1706,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/documents` para ver si hay objetos "
-"`Document` con `/type` configurado en ‘incorporationCertificate’ y copie "
+"`Document` con `/type` configurado en 'incorporationCertificate' y copie "
 "cada objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:139
@@ -1739,7 +1739,7 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/documents` para ver si hay objetos "
-"`Document` con `/type` configurado en ‘technicalSpecifications’ y copie cada"
+"`Document` con `/type` configurado en 'technicalSpecifications' y copie cada"
 " objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:144
@@ -1809,7 +1809,7 @@ msgid ""
 msgstr ""
 "*Verifique las matrices `/contracts/documents` y "
 "`/contracts/implementation/documents` para ver si hay objetos `Document` con"
-" `.documentType` configurado en ‘escalationApprovals’ y copie cada objeto en"
+" `.documentType` configurado en 'escalationApprovals' y copie cada objeto en"
 " la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:144
@@ -1835,7 +1835,7 @@ msgid ""
 msgstr ""
 "*Verifique las matrices `/contracts/documents` y "
 "`/contracts/implementation/documents` para ver si hay objetos `Document` con"
-" `.documentType` configurado en ‘qualityAssuranceReport’ y copie cada objeto"
+" `.documentType` configurado en 'qualityAssuranceReport' y copie cada objeto"
 " en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:144
@@ -1868,7 +1868,7 @@ msgid ""
 "object to the `.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/implementation/documents` para ver si hay "
-"objetos `Document` con `.documentType` establecido en ‘PagoCertificado’ y "
+"objetos `Document` con `.documentType` establecido en 'PagoCertificado' y "
 "copie cada objeto en la matriz `.summary.documents`.*"
 
 #: ../../docs/cost/ocds.md:144
@@ -1888,5 +1888,5 @@ msgid ""
 "`.summary.documents` array.*"
 msgstr ""
 "*Verifique la matriz `/contracts/documents` para ver si hay objetos "
-"`Document` con `.documentType` configurado en ‘contractAmendment’ y copie "
+"`Document` con `.documentType` configurado en 'contractAmendment' y copie "
 "cada objeto en la matriz `.summary.documents`.*"

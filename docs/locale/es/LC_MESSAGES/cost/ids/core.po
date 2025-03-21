@@ -582,7 +582,7 @@ msgid ""
 msgstr ""
 "Evaluación de impacto ambiental: [Agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y determinar `.documentType` "
-"al ‘environmentalImpact’."
+"al 'environmentalImpact'."
 
 #: ../../docs/cost/ids/core.md:45
 msgid ""
@@ -592,7 +592,7 @@ msgid ""
 msgstr ""
 "Evaluación de impacto social: [Agregar un documento de "
 "proyecto](../common.md#add-a-project-document) y establecer `.documentType` "
-"al ‘environmentalImpact’ o ‘socialImpact’."
+"al 'environmentalImpact' o 'socialImpact'."
 
 #: ../../docs/cost/ids/core.md:47
 msgid ""
@@ -603,8 +603,8 @@ msgid ""
 msgstr ""
 "Si un solo documento cubre tanto la evaluación de impacto ambiental como la "
 "de impacto social, agregar dos documentos a `documents` y configurar el "
-"`.documentType` del primer documento al ‘environmentalImpact’ y el "
-"`.documentType` del segundo documento al ‘socialImpact’."
+"`.documentType` del primer documento al 'environmentalImpact' y el "
+"`.documentType` del segundo documento al 'socialImpact'."
 "                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "
 
 #: ../../docs/cost/ids/core.md:43
@@ -649,7 +649,7 @@ msgid ""
 "'publicAuthority'. If none exists yet:"
 msgstr ""
 "De la matriz de las partes `parties`, obtener el objeto de la `Organization`"
-" cuyo rol es el de ‘publicAuthority’. Si aun no existe:"
+" cuyo rol es el de 'publicAuthority'. Si aun no existe:"
 
 #: ../../docs/cost/ids/core.md:45
 msgid "Add a party"
@@ -661,7 +661,7 @@ msgstr "Establecer el `.name` al nombre de la entidad de adquisiciones"
 
 #: ../../docs/cost/ids/core.md:47
 msgid "Set its `.role` to 'procuringEntity'"
-msgstr "Establecer el `.role` de la ‘procuringEntity’"
+msgstr "Establecer el `.role` de la 'procuringEntity'"
 
 #: ../../docs/cost/ids/core.md:49 ../../docs/cost/ids/core.md:253
 msgid "Add a `Person` object to the organization's `.people` array and:"
