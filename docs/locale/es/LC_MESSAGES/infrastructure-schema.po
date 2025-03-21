@@ -1302,7 +1302,7 @@ msgid ""
 msgstr ""
 "Información resumida sobre un proceso de contratación y cualquier modificación del mismo.\n"
 "\n"
-"La información resumida puede introducirse manualmente y la lista de `modificaciones` puede utilizarse para registrar manualmente un registro de cambios, con la fecha y los detalles de cada modificación.\n"
+"La información resumida puede introducirse manualmente y la lista de `modifications` puede utilizarse para registrar manualmente un registro de cambios, con la fecha y los detalles de cada modificación.\n"
 "\n"
 "Cuando se dispone de datos de la OCDS, la mayoría de los campos de resumen pueden derivarse de las versiones de la OCDS, aunque el método exacto para derivar los datos puede variar entre implementaciones; y las modificaciones pueden identificarse comparando una nueva versión con las anteriores para comprobar si hay cambios relevantes, con el identificador de la versión registrado en `modifications`."
 
@@ -2676,7 +2676,7 @@ msgid ""
 "`roles` array."
 msgstr ""
 "La organización que proporciona los fondos para esta línea presupuestaria. "
-"La partida correspondiente en la matriz `parties` debe tener `sourceParty` "
+"La partida correspondiente en la matriz `parties` debe tener 'sourceParty' "
 "en su matriz `roles`."
 
 #. /definitions/BudgetBreakdown/properties/approvalDate/description

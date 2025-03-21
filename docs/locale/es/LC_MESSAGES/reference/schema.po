@@ -226,7 +226,7 @@ msgstr ""
 #: ../../docs/reference/schema.md:68
 msgid "[`contractingProcesses`](project-schema.json,,contractingProcesses)"
 msgstr ""
-"[`Procesosdecontratación`](project-schema.json,,contractingProcesses)"
+"[`contractingProcesses`](project-schema.json,,contractingProcesses)"
 
 #: ../../docs/reference/schema.md:70
 msgid "Each `ContractingProcess` has the following fields:"
@@ -270,7 +270,7 @@ msgstr ""
 "datos puede variar entre implementaciones; y las modificaciones pueden "
 "identificarse comparando una nueva versión con las anteriores para comprobar"
 " si hay cambios relevantes, con el identificador de la versión registrado en"
-" `modificaciones`."
+" `modifications`."
 
 #: ../../docs/reference/schema.md:103
 msgid ""

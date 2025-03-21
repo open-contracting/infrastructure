@@ -98,7 +98,7 @@ msgid ""
 "`publicAuthority.id` to the `.name` and `.id` of the object."
 msgstr ""
 "A Nivel de Proyecto: Añadir un objeto `Organization` a `parties` con "
-"`publicAuthority` como parte de sus `.roles`. Establecer el "
+"'publicAuthority' como parte de sus `.roles`. Establecer el "
 "`publicAuthority.name` y la `publicAuthority.id` al `.name` y `.id` del "
 "objeto."
 
@@ -123,7 +123,7 @@ msgstr ""
 "Nivel de proyecto: Mapear a la lista de códigos de projectSector y publicar "
 "uno o más valores en el `sector`. Publicar cualquier clasificación sectorial"
 " adicional de las listas de códigos locales o de otras listas de códigos "
-"globales en `clasificacionesadicionales`."
+"globales en `additionalClassifications`."
 
 #: ../../docs/cost/ids/core.md:20
 msgid "Subsector"
@@ -152,7 +152,7 @@ msgstr "Especificar el nombre del proyecto"
 
 #: ../../docs/cost/ids/core.md:20
 msgid "Project Level: Publish in `title`"
-msgstr "Nivel de proyecto: Publicar en `título`"
+msgstr "Nivel de proyecto: Publicar en `title`"
 
 #: ../../docs/cost/ids/core.md:20
 msgid "Project Location"
@@ -440,7 +440,7 @@ msgid ""
 "Project Level: Publish using `completion.endDateDetails`, "
 "`completion.finalValueDetails` and `completion.finalScopeDetails`"
 msgstr ""
-"Nivel de proyecto: Publicar utilizando finalización.endDateDetails`, "
+"Nivel de proyecto: Publicar utilizando `completion.endDateDetails`, "
 "`completion.finalValueDetails` y `completion.finalScopeDetails`"
 
 #: ../../docs/cost/ids/core.md:34
@@ -958,7 +958,7 @@ msgid ""
 "Set its `period.startDate` and `period.endDate` to the date on which the "
 "financial progress was measured"
 msgstr ""
-"Establecer su`period.startDate` y `period.endDate` a la fecha en la cual se "
+"Establecer su `period.startDate` y `period.endDate` a la fecha en la cual se "
 "midió el avance financiero "
 
 #: ../../docs/cost/ids/core.md:69 ../../docs/cost/ids/core.md:127
@@ -1002,8 +1002,8 @@ msgid ""
 "For each forecast, add an `Observation` object to the `Metric` object's "
 "`.observations` array and:"
 msgstr ""
-"Para cada proyección, agregar un objeto de `Observación` a la matriz "
-"`.observaciones` del objeto `Metric` y:"
+"Para cada proyección, agregar un objeto de `Observation` a la matriz "
+"`.observations` del objeto `Metric` y:"
 
 #: ../../docs/cost/ids/core.md:164
 msgid ""
@@ -1358,7 +1358,7 @@ msgid ""
 " `.description` in `.summary.modifications` with `.type` of 'scope'"
 msgstr ""
 "Proceso de Contratación: Para cada variación, publicar un registro con "
-"una`.date` y `.description` en `.summary.modifications` con `.type` del "
+"una `.date` y `.description` en `.summary.modifications` con `.type` del "
 "'scope'"
 
 #: ../../docs/cost/ids/core.md:238
@@ -1646,11 +1646,11 @@ msgstr ""
 msgid ""
 "Set `.type` based on the type of change and provide the relevant "
 "before/after values in `.oldContractPeriod`, `.oldContractValue`, "
-"``.newContractPeriod and `.newContractValue`."
+"`.newContractPeriod` and `.newContractValue`."
 msgstr ""
 "Establecer `.type` basado en el tipo de cambio y proporcionar los valores "
 "antes/después pertinentes en `.oldContractPeriod`, `.oldContractValue`, "
-"``.newContractPeriod y `.newContractValue`."
+"`.newContractPeriod` y `.newContractValue`."
 
 #: ../../docs/cost/ids/core.md:261
 msgid "List of escalation approvals"

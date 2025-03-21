@@ -4888,7 +4888,7 @@ msgstr ""
 "ser identificado en base a cambios en la suma de `contract.value` "
 "(observando los casos en los que el valor de un contrato varía, o se firma "
 "un contrato de extensión adicional como parte de este proceso), o "
-"monitoreando `contract.implementation.transactions`."
+"monitoreando `contracts.implementation.transactions`."
 
 #. Title
 #: schema/project-level/codelists/modificationType.csv:3

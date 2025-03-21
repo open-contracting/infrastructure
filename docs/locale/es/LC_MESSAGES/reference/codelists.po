@@ -248,7 +248,7 @@ msgid ""
 "Projects with a `status` of 'completed' may be displayed in a list of "
 "archived projects."
 msgstr ""
-"Proyectos con `estado` 'completed' pueden ser desplegados en una lista de "
+"Proyectos con `status` 'completed' pueden ser desplegados en una lista de "
 "proyectos archivados."
 
 #: ../../docs/reference/codelists.md:88

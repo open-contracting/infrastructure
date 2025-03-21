@@ -274,7 +274,7 @@ msgid ""
 "`language`"
 msgstr ""
 "[#362](https://github.com/open-contracting/infrastructure/pull/362) - "
-"`lenguaje`"
+"`language`"
 
 #: ../../docs/reference/changelog.md:52
 msgid ""

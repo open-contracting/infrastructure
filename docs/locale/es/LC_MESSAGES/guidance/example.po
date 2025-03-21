@@ -80,7 +80,7 @@ msgid ""
 "[`modifications`](project-schema.json,,metrics) that describe changes to the"
 " duration, scope and value of contracting processes"
 msgstr ""
-"[`modificaciones`](project-schema.json,,metrics) que describen cambios en la"
+"[`modifications`](project-schema.json,,metrics) que describen cambios en la"
 " duración, alcance y valor de los procesos de contratación"
 
 #: ../../docs/guidance/example.md:13

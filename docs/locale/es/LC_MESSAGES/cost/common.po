@@ -64,7 +64,7 @@ msgid ""
 "[`.title`](project-schema.json,/definitions/Document,title) to the title of "
 "the document"
 msgstr ""
-"[`.títule`](project-schema.json,/definitions/Document,title) al título del "
+"[`.title`](project-schema.json,/definitions/Document,title) al título del "
 "documento"
 
 #: ../../docs/cost/common.md:12 ../../docs/cost/common.md:21
