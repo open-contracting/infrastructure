@@ -219,7 +219,7 @@ msgid ""
 "notes](https://oc4idskit.readthedocs.io/en/latest/cli.html#transformation-"
 "notes) to learn about how OC4IDS Kit handles the above scenarios."
 msgstr ""
-"Lea las [notas de transformación] `convert-from-ocds` "
+"Lea las [notas de transformación`convert-from-ocds`]"
 "(https://oc4idskit.readthedocs.io/en/latest/cli.html#transformation-notes) "
 "para conocer cómo el kit OC4IDS maneja los escenarios anteriores."
 

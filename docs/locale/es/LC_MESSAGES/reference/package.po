@@ -45,7 +45,7 @@ msgid ""
 "here](../../build/current_lang/project-package-schema.json)."
 msgstr ""
 "Puede ver una versión interactiva del esquema del paquete del proyecto a "
-"continuación (requiere JavaScript) o [descargarlo aquí] "
+"continuación (requiere JavaScript) o [descargarlo aquí]"
 "(../../build/current_lang/project-package-schema.json)."
 
 #: ../../docs/reference/package.md:7

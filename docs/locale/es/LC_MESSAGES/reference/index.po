@@ -82,7 +82,7 @@ msgid ""
 "Contracting Data Standard](https://standard.open-contracting.org)."
 msgstr ""
 "El esquema OC4IDS reutiliza muchos campos y estructuras del [Estándar de "
-"datos de contratación abierta] (https://standard.open-contracting.org)."
+"datos de contratación abierta](https://standard.open-contracting.org)."
 
 #: ../../docs/reference/index.md:25
 msgid "Data validation"

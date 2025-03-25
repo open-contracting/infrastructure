@@ -128,7 +128,7 @@ msgid ""
 "You can use a [blank example OC4IDS JSON file](../examples/blank.json) to "
 "get started."
 msgstr ""
-"Puede utilizar un [archivo JSON OC4IDS de ejemplo en blanco] "
+"Puede utilizar un [archivo JSON OC4IDS de ejemplo en blanco]"
 "(../examples/blank.json) para comenzar."
 
 #: ../../docs/guidance/evaluating.md:31

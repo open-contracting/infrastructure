@@ -241,7 +241,7 @@ msgid ""
 "Nuevo León's [Infraestructura Abierta "
 "platform](https://smpu.nl.gob.mx/transparencia/) implements a similar model:"
 msgstr ""
-"La [plataforma Infraestructura Abierta] de Nuevo León "
+"La [plataforma Infraestructura Abierta de Nuevo León]"
 "(https://smpu.nl.gob.mx/transparencia/) implementa un modelo similar:"
 
 #: ../../docs/guidance/implementation.md:38
@@ -314,7 +314,7 @@ msgid ""
 "this model in its [Government Procurement Portal](https://gpp.ppda.go.ug/)."
 msgstr ""
 "La Autoridad de Contratación Pública y Enajenación de Activos Públicos de "
-"Uganda utiliza este modelo en su [Portal de Contratación Pública] "
+"Uganda utiliza este modelo en su [Portal de Contratación Pública]"
 "(https://gpp.ppda.go.ug/)."
 
 #: ../../docs/guidance/implementation.md:51

@@ -539,7 +539,7 @@ msgid ""
 "contracting.org/infrastructure/latest/en/guidance/publishing/)."
 msgstr ""
 "Leer la guía sobre [publicar datos desde un portal de transparencia de "
-"infraestructura] (https://standard.open-"
+"infraestructura](https://standard.open-"
 "contracting.org/infrastructure/latest/es/guidance/publishing/)."
 
 #: ../../docs/projects/index.md:154
@@ -594,7 +594,7 @@ msgid ""
 "contracting.org/infrastructure/latest/en/guidance/using/)."
 msgstr ""
 "Leer la guía sobre [usar datos de sistemas de adquisiciones para monitoreo "
-"de proyectos de infraestructura] (https://standard.open-"
+"de proyectos de infraestructura](https://standard.open-"
 "contracting.org/infrastructure/latest/es/guidance/using/)."
 
 #: ../../docs/projects/index.md:168
@@ -633,7 +633,7 @@ msgid ""
 "contracting.org/infrastructure/latest/en/cost/) to learn how to publish each"
 " element of the CoST IDS using OC4IDS."
 msgstr ""
-"Revisar el [Mapeo IDS de CoST] (https://standard.open-"
+"Revisar el [Mapeo IDS de CoST](https://standard.open-"
 "contracting.org/infrastructure/latest/en/cost/) para aprender a publicar "
 "cada elemento del IDS de CoST utilizando OC4IDS."
 
