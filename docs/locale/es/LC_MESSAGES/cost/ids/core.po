@@ -5,17 +5,17 @@
 # 
 # Translators:
 # Francis C. Bennaton, 2024
-# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2024
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-18 09:20+1300\n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2023-12-14 22:18+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -958,8 +958,8 @@ msgid ""
 "Set its `period.startDate` and `period.endDate` to the date on which the "
 "financial progress was measured"
 msgstr ""
-"Establecer su `period.startDate` y `period.endDate` a la fecha en la cual se "
-"midió el avance financiero "
+"Establecer su `period.startDate` y `period.endDate` a la fecha en la cual se"
+" midió el avance financiero "
 
 #: ../../docs/cost/ids/core.md:69 ../../docs/cost/ids/core.md:127
 #: ../../docs/cost/ids/core.md:168
@@ -1357,9 +1357,8 @@ msgid ""
 "Contracting process: For each variation, publish an entry with a `.date` and"
 " `.description` in `.summary.modifications` with `.type` of 'scope'"
 msgstr ""
-"Proceso de Contratación: Para cada variación, publicar un registro con "
-"una `.date` y `.description` en `.summary.modifications` con `.type` del "
-"'scope'"
+"Proceso de Contratación: Para cada variación, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` del 'scope'"
 
 #: ../../docs/cost/ids/core.md:238
 msgid "Reasons for price changes"

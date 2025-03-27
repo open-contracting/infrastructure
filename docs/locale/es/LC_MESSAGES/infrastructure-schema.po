@@ -1,7 +1,7 @@
 # Translations template for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # 
 # Translators:
 # James McKinney, 2021
@@ -10,6 +10,7 @@
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
@@ -17,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-08 09:07+1300\n"
+"POT-Creation-Date: 2025-03-25 15:32+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
@@ -225,25 +226,25 @@ msgid ""
 "infrastructure projects in line with the disclosure requirements of the "
 "[CoST Infrastructure Data "
 "Standard](https://infrastructuretransparency.org/resource/977/). OC4IDS "
-"defines an \"infrastructure project\" as: \"the development, maintenance and"
-" decommissioning of a set of infrastructure assets in a specified location, "
-"generally the responsibility of a single procuring entity and budget "
-"authority: for example, a highway overpass or a university campus. "
-"Development covers project identification, preparation, implementation and "
-"completion.\""
+"defines an \"infrastructure project\" as: \"the development, maintenance, "
+"rehabilitation, expansion, replacement and/or decommissioning of a set of "
+"infrastructure assets in a specified location, generally the responsibility "
+"of a single procuring entity and budget authority: for example, a highway "
+"overpass or a university campus. Development covers project identification, "
+"preparation, implementation and completion.\""
 msgstr ""
-"El esquema Contrataciones Abiertas para el Estándar de Datos sobre "
-"Infraestructura (OC4IDS, por sus siglas en inglés) establece una estructura "
-"de datos para capturar e intercambiar información sobre proyectos de "
-"infraestructura en línea con los requisitos de divulgación del [Estándar de "
-"Datos de Infraestructura "
-"CoST](https://infrastructuretransparency.org/resource/977/). OC4IDS define "
-"un \"proyecto de infraestructura\" como: \"el desarrollo, mantenimiento y "
-"desmantelamiento de un conjunto de activos de infraestructura en un lugar "
-"determinado, generalmente responsabilidad de una única entidad contratante y"
-" autoridad presupuestaria: por ejemplo, un paso a desnivel de una autopista "
-"o un campus universitario. El desarrollo abarca la identificación, "
-"preparación, implementación y finalización del proyecto\"."
+"El esquema de Contrataciones Abiertas para el Estándar de Datos sobre "
+"Infraestructura  (OC4IDS) define una estructura de datos para capturar e "
+"intercambiar información acerca de proyectos de infraestructura en línea con"
+" los requerimientos de divulgación del [CoST Infrastructure Data "
+"Standard](https://infrastructuretransparency.org/resource/977/). El OC4IDS "
+"define un \"infrastructure project\" como: \"el desarrollo, mantenimiento, "
+"rehabilitación, expansión, reemplazo y/o desmantelamiento de un conjunto de "
+"activos de infraestructura en una ubicación especifica, generalmente "
+"responsabilidad de una sola entidad contratante y autoridad presupuestaria: "
+"por ejemplo, el paso elevado de una autopista o un campus universitario. "
+"Desarrollo cubre la identificación, preparación, implementación and "
+"finalización de un proyecto\""
 
 #. /properties/id/title
 #: schema/project-level/project-schema.json:1
@@ -303,11 +304,11 @@ msgid ""
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) is "
 "recommended."
 msgstr ""
-"El idioma predeterminado de los datos utiliza el [ISO639-1]"
-"(https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) de dos letras o [etiquetas de "
-"idioma BCP47](http://www.w3."
-"org/International/articles/language-tags/) extendidas. Se recomienda el uso de códigos "
-"de dos letras en minúscula de "
+"El idioma predeterminado de los datos utiliza el "
+"[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) de dos "
+"letras o [etiquetas de idioma "
+"BCP47](http://www.w3.org/International/articles/language-tags/) extendidas. "
+"Se recomienda el uso de códigos de dos letras en minúscula de "
 "[ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)."
 
 #. /properties/identifiers/title
@@ -2102,12 +2103,12 @@ msgid ""
 msgstr ""
 "Seguimos el [estándar GeoJSON](http://geojson.org/) para expresar "
 "información básica de ubicación, usando los valores de longitud, latitud y "
-"opcionalmente elevación en la proyección [WGS84]"
-"(https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG: 4326). Un punto"
-" de ubicación se puede identificar geocodificando una dirección de entrega. "
-"Para licencias de concesión, u otros contratos que cubran una ubicación en "
-"polígono que no esté contenida en un diccionario geográfico conocido, se "
-"pueden usar polígonos y polígonos múltiples."
+"opcionalmente elevación en la proyección "
+"[WGS84](https://en.wikipedia.org/wiki/World_Geodetic_System) (EPSG: 4326). "
+"Un punto de ubicación se puede identificar geocodificando una dirección de "
+"entrega. Para licencias de concesión, u otros contratos que cubran una "
+"ubicación en polígono que no esté contenida en un diccionario geográfico "
+"conocido, se pueden usar polígonos y polígonos múltiples."
 
 #. /definitions/Location/properties/geometry/properties/type/description
 #: schema/project-level/project-schema.json:1
@@ -3801,8 +3802,7 @@ msgstr ""
 "El orden en el que se reembolsará la deuda en el acuerdo de financiamiento "
 "en caso de incumplimiento, utilizando la lista de códigos cerrada "
 "[debtRepaymentPriority](https://standard.open-"
-"contracting.org/infrastructure/{{version}}/{{lang}}/codelists"
-"/reference/codelists/#debtRepaidPriority)."
+"contracting.org/infrastructure/{{version}}/{{lang}}/codelists/reference/codelists/#debtRepaidPriority)."
 
 #. /definitions/Finance/properties/concessional/title
 #: schema/project-level/project-schema.json:1
@@ -4119,9 +4119,10 @@ msgid ""
 "contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations)."
 msgstr ""
 "Las obligaciones laborales estipuladas en el/los contrato(s) de "
-"construcción, utilizando la [laborObligations codelist]"
-"(https://standard.open-"
-"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations) abierta."
+"construcción, utilizando la [laborObligations "
+"codelist](https://standard.open-"
+"contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#laborObligations)"
+" abierta."
 
 #. /definitions/LaborObligations/properties/description/description
 #: schema/project-level/project-schema.json:1

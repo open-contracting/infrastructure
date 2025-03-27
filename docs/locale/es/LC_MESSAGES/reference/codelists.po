@@ -10,15 +10,16 @@
 # Andres Aguilera <aaguilera@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 11:53-0500\n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

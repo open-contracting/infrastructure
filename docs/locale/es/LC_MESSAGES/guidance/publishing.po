@@ -7,18 +7,18 @@
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
-# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
 # Francis C. Bennaton, 2024
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-18 09:20+1300\n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -152,10 +152,10 @@ msgstr ""
 "Consulte el [viaje de implementación de OCDS](https://standard.open-"
 "contracting.org/latest/en/guidance/design/) para obtener información y "
 "recursos sobre cómo asumir compromisos relacionados con OCDS. Consulte la "
-"[nota de orientación de CoST y OGP]"
-"(https://infrastructuretransparency.org/wp-content/uploads/2018/07/Guidance-"
-"Note-CoST-and-OGP-.pdf) para obtener orientación sobre cómo asumir "
-"compromisos de OGP relacionados con CoST."
+"[nota de orientación de CoST y "
+"OGP](https://infrastructuretransparency.org/wp-"
+"content/uploads/2018/07/Guidance-Note-CoST-and-OGP-.pdf) para obtener "
+"orientación sobre cómo asumir compromisos de OGP relacionados con CoST."
 
 #: ../../docs/guidance/publishing.md:31
 msgid "(2a) Map project-level data and summary contracting process data"
@@ -267,8 +267,8 @@ msgid ""
 "You can use a [blank example OC4IDS JSON file](../examples/blank.json) to "
 "get started."
 msgstr ""
-"Puede utilizar un [archivo JSON OC4IDS de ejemplo en blanco]"
-"(../examples/blank.json) para comenzar."
+"Puede utilizar un [archivo JSON OC4IDS de ejemplo en "
+"blanco](../examples/blank.json) para comenzar."
 
 #: ../../docs/guidance/publishing.md:61
 msgid ""

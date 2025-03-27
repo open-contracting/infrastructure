@@ -1,7 +1,7 @@
 # Translations template for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # 
 # Translators:
 # James McKinney, 2021
@@ -9,6 +9,7 @@
 # Juan Pane <juanpane@idatosabiertos.org>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
@@ -16,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-08 09:07+1300\n"
+"POT-Creation-Date: 2025-03-25 15:32+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
@@ -292,7 +293,7 @@ msgid ""
 "International Finance Corporation's Policy on environmental and social "
 "sustainability"
 msgstr ""
-" Política de Sostenibilidad Medioambiental y Social de la Corporación "
+"Política de Sostenibilidad Medioambiental y Social de la Corporación "
 "Financiera Internacional"
 
 #. Description
@@ -857,8 +858,13 @@ msgstr ""
 msgid "Business Logic"
 msgstr "Lógica de negocio"
 
+#: schema/project-level/codelists/contractingProcessStatus.csv
+msgid "Deprecated"
+msgstr "Rechazado"
+
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:1
+#: schema/project-level/codelists/contractingProcessStatus.csv:4
 msgid "Pre-award"
 msgstr "Pre-adjudicación"
 
@@ -891,6 +897,15 @@ msgid ""
 msgstr ""
 "El proceso terminó sin adjudicar ningún contrato, o todos los contratos han "
 "terminado."
+
+#. Description
+#: schema/project-level/codelists/contractingProcessStatus.csv:4
+msgid ""
+"This code is deprecated in favour of 'preAward', to conform to the use of "
+"camelCase for codes."
+msgstr ""
+"Este código es rechazado en favor de 'preAward', para ajustarse al uso de "
+"camelCase para códigos."
 
 #. Title
 #: schema/project-level/codelists/costCategory.csv:1
@@ -4822,8 +4837,8 @@ msgid ""
 msgstr ""
 "Para hitos de pago, como la fecha en la que se espera realizar un pago a un "
 "proveedor. Si el `status` de un hito de pago de un proyecto o proceso de "
-"contratación es 'met', entonces el contrato debe tener una entrada para"
-" el pago en sus `.transactions`."
+"contratación es 'met', entonces el contrato debe tener una entrada para el "
+"pago en sus `.transactions`."
 
 #. Title
 #: schema/project-level/codelists/milestoneType.csv:9
@@ -5233,6 +5248,35 @@ msgstr ""
 "de los gastos en curso."
 
 #. Title
+#: schema/project-level/codelists/policyAlignment.csv:10
+msgid "Annual budget"
+msgstr "Presupuesto anual"
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:10
+msgid ""
+"The planned expenditure for a financial year. This may detail the "
+"infrastructure policies and projects that the budget will fund."
+msgstr ""
+"El gasto planificado para un año fiscal. Este puede detallar las políticas "
+"de infraestructura y los proyectos que el presupuesto va a financiar. "
+
+#. Title
+#: schema/project-level/codelists/policyAlignment.csv:11
+msgid "Pipeline of infrastructure projects"
+msgstr "Fuentes de información de proyectos de infraestructura "
+
+#. Description
+#: schema/project-level/codelists/policyAlignment.csv:11
+msgid ""
+"A list of planned infrastructure projects and programs. This may detail the "
+"policies each infrastructure project and program is a part of."
+msgstr ""
+"Una lista de proyectos de infraestructura y programas planificados. Esta "
+"puede detallar las políticas de cada proyecto de infraestructura y programas"
+" como parte de su contenido. "
+
+#. Title
 #: schema/project-level/codelists/projectSector.csv:1
 msgid "Education"
 msgstr "Educación"
@@ -5579,6 +5623,7 @@ msgstr ""
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:5
+#: schema/project-level/codelists/projectType.csv:2
 msgid "Maintenance"
 msgstr "Mantenimiento"
 
@@ -5594,7 +5639,7 @@ msgstr ""
 
 #. Title
 #: schema/project-level/codelists/projectStatus.csv:6
-#: schema/project-level/codelists/projectType.csv:5
+#: schema/project-level/codelists/projectType.csv:6
 msgid "Decommissioning"
 msgstr "Desmantelamiento"
 
@@ -5639,49 +5684,61 @@ msgid "The primary focus of this project is the construction of a new asset."
 msgstr ""
 "El foco principal de este proyecto es la construcción de un nuevo activo."
 
-#. Title
+#. Description
 #: schema/project-level/codelists/projectType.csv:2
+msgid ""
+"The primary focus of this project is proactively identifying and addressing "
+"deficiencies in an existing asset to slow the deterioration of the asset."
+msgstr ""
+"El enfoque principal de este proyecto es identificar y tratar proactivamente"
+" las deficiencias existentes en un activo para ralentizar el deterioro del "
+"mismo. "
+
+#. Title
+#: schema/project-level/codelists/projectType.csv:3
 #: schema/project-level/codelists/relatedProject.csv:2
 msgid "Rehabilitation"
 msgstr "Rehabilitación"
 
 #. Description
-#: schema/project-level/codelists/projectType.csv:2
+#: schema/project-level/codelists/projectType.csv:3
 msgid ""
-"The primary focus of this project is the rehabilitation of an existing "
-"asset."
+"The primary focus of this project is reactively addressing significant "
+"deficiencies in an existing asset to stop the deterioration of the asset."
 msgstr ""
-"El foco principal de este proyecto es la rehabilitación de un activo "
-"existente."
+"El enfoque principal de este proyecto es tratar reactivamente las "
+"deficiencias existentes en un activo para detener el deterioro del mismo. "
 
 #. Title
-#: schema/project-level/codelists/projectType.csv:3
+#: schema/project-level/codelists/projectType.csv:4
 #: schema/project-level/codelists/relatedProject.csv:3
 msgid "Replacement"
 msgstr "Reemplazo"
 
 #. Description
-#: schema/project-level/codelists/projectType.csv:3
+#: schema/project-level/codelists/projectType.csv:4
 msgid ""
 "The primary focus of this project is the replacement of an existing asset."
 msgstr ""
 "El foco principal de este proyecto es el reemplazo de un activo existente."
 
 #. Title
-#: schema/project-level/codelists/projectType.csv:4
+#: schema/project-level/codelists/projectType.csv:5
 #: schema/project-level/codelists/relatedProject.csv:4
 msgid "Expansion"
 msgstr "Expansión"
 
 #. Description
-#: schema/project-level/codelists/projectType.csv:4
+#: schema/project-level/codelists/projectType.csv:5
 msgid ""
-"The primary focus of this project is the expansion of an existing asset."
+"The primary focus of this project is the expansion or upgrade of an existing"
+" asset."
 msgstr ""
-"El enfoque primario de este proyecto es la expansión de un activo existente."
+"El enfoque primario de este proyecto es la expansión o la actualización de "
+"un activo existente. "
 
 #. Description
-#: schema/project-level/codelists/projectType.csv:5
+#: schema/project-level/codelists/projectType.csv:6
 msgid ""
 "The primary focus of this project is the decommissioning of an existing "
 "asset."

@@ -10,6 +10,7 @@
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
 # Cecilia Casco <ceciliacasco@cds.com.py>, 2021
 # Francis C. Bennaton, 2024
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
@@ -17,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 11:53-0500\n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
@@ -76,14 +77,19 @@ msgstr "El proyecto está definido como:"
 
 #: ../../docs/reference/schema.md:21
 msgid ""
-"The development of a set of infrastructure assets in a specified location, "
+"The development, maintenance, rehabilitation, expansion, replacement and/or "
+"decommissioning of a set of infrastructure assets in a specified location, "
 "generally the responsibility of a single procuring entity and budget "
-"authority: for example, a highway overpass or a university campus."
+"authority: for example, a highway overpass or a university campus. "
+"Development covers project identification, preparation, implementation and "
+"completion."
 msgstr ""
-"El desarrollo de un conjunto de activos de infraestructura en un lugar "
-"determinado, en general responsabilidad de una sola entidad contratante y "
-"autoridad presupuestaria: por ejemplo, un paso a desnivel de una autopista o"
-" un campus universitario."
+"El desarrollo, mantenimiento, rehabilitación, expansión, reemplazo y/o el "
+"desmantelamiento de un conjunto de activos en una ubicación especifica, "
+"generalmente responsabilidad de una sola entidad contratante y autoridad "
+"presupuestaria: por ejemplo el paso elevado de una autopista o un campus "
+"universitario. El desarrollo cubre la identificación, preparación, "
+"implementación y finalización."
 
 #: ../../docs/reference/schema.md:23
 msgid "A project's fields include:"
@@ -225,8 +231,7 @@ msgstr ""
 
 #: ../../docs/reference/schema.md:68
 msgid "[`contractingProcesses`](project-schema.json,,contractingProcesses)"
-msgstr ""
-"[`contractingProcesses`](project-schema.json,,contractingProcesses)"
+msgstr "[`contractingProcesses`](project-schema.json,,contractingProcesses)"
 
 #: ../../docs/reference/schema.md:70
 msgid "Each `ContractingProcess` has the following fields:"
@@ -808,13 +813,13 @@ msgstr "Dirección"
 
 #: ../../docs/reference/schema.md:696
 msgid ""
-"The address sub-schema re-uses fields from schema.org and vCard. In the "
-"event source data cannot be broken down into these parts, data should "
-"contain at least a `streetAddress` and `postalCode`."
+"The address sub-schema reuses fields from schema.org and vCard. In the event"
+" source data cannot be broken down into these parts, data should contain at "
+"least a `streetAddress` and `postalCode`."
 msgstr ""
-" El subesquema de direcciones reutiliza campos de schema.org y vCard. En "
-"caso de que los datos de origen no puedan desglosarse en estas partes, los "
-"datos deben contener al menos `streetAddress` y `postalCode`."
+"El sub-esquema de dirección re-usa los campos de schema.org y vCard. En el "
+"caso de que la fuente de datos no pueda descomponerse en estas partes, los "
+"datos deberían contener por lo menos `streetAddress` y `postalCode`."
 
 #: ../../docs/reference/schema.md:698
 msgid ""

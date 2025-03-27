@@ -1,13 +1,13 @@
 # Translations template for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 # 
 # Translators:
 # James McKinney, 2021
 # Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2024
 # Francis C. Bennaton, 2024
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
 # 
 #, fuzzy
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-03-08 09:08+1300\n"
+"POT-Creation-Date: 2025-03-25 15:32+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
@@ -42,8 +42,13 @@ msgstr "Elemento del CoST IDS"
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
 #: mapping/project-level-identification.csv
 #: mapping/project-level-preparation.csv
-msgid "CoST IDS draft definition"
-msgstr "Definiciones del CoST IDS"
+#: mapping/reactive-process-level-contract.csv
+#: mapping/reactive-process-level-implementation.csv
+#: mapping/reactive-process-level-procurement.csv
+#: mapping/reactive-project-level-completion.csv
+#: mapping/reactive-project-level-identification-preparation.csv
+msgid "Description"
+msgstr "Descripción"
 
 #: mapping/process-level-implementation.csv
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
@@ -69,19 +74,34 @@ msgstr "Mapeo a OC4IDS"
 msgid "Mapping from OCDS"
 msgstr "Mapeo desde OCDS"
 
+#: mapping/process-level-implementation.csv
+#: mapping/process-level-procurement.csv mapping/project-level-completion.csv
+#: mapping/project-level-identification.csv
+#: mapping/project-level-preparation.csv
+#: mapping/reactive-process-level-contract.csv
+#: mapping/reactive-process-level-implementation.csv
+#: mapping/reactive-process-level-procurement.csv
+#: mapping/reactive-project-level-completion.csv
+#: mapping/reactive-project-level-identification-preparation.csv
+msgid "OC4IDS Fields"
+msgstr "Campos OC4IDS"
+
+#: mapping/process-level-implementation.csv
+#: mapping/process-level-procurement.csv mapping/project-level-completion.csv
+#: mapping/project-level-identification.csv
+#: mapping/project-level-preparation.csv
+#: mapping/reactive-process-level-contract.csv
+#: mapping/reactive-process-level-implementation.csv
+#: mapping/reactive-process-level-procurement.csv
+#: mapping/reactive-project-level-completion.csv
+#: mapping/reactive-project-level-identification-preparation.csv
+msgid "OC4IDS Codes"
+msgstr "Códigos OC4IDS"
+
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:1
 msgid "Variation to contract price"
 msgstr "Variación del precio del contrato"
-
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:1
-msgid ""
-"Difference between the price at contract award and the current projected "
-"price"
-msgstr ""
-"Diferencia entre el precio de adjudicación del contrato y el precio "
-"proyectado actual"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:1
@@ -113,15 +133,6 @@ msgstr ""
 msgid "Escalation of contract price"
 msgstr "Aumento en el precio del contrato"
 
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:2
-msgid ""
-"Escalation to date of the price of materials, labour, equipment etc. due to "
-"fluctuations in inflation, currency etc."
-msgstr ""
-"Aumento hasta la fecha del precio de los materiales, mano de obra, equipos, "
-"etc. debido a fluctuaciones en la inflación, la moneda, etc."
-
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:2
 msgid ""
@@ -140,15 +151,6 @@ msgstr ""
 #: mapping/process-level-implementation.csv:3
 msgid "Variation to contract duration"
 msgstr "Variación en la duración del contrato"
-
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:3
-msgid ""
-"Difference between original duration at contract award and the current "
-"projected duration in weeks."
-msgstr ""
-"Diferencia entre la duración original en el momento de la adjudicación del "
-"contrato y la duración proyectada actual en semanas."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:3
@@ -179,14 +181,6 @@ msgstr ""
 msgid "Variation to contract scope"
 msgstr "Variación en el alcance del contrato"
 
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:4
-msgid ""
-"Any changes between original scope at contract award and the current scope"
-msgstr ""
-"Cualquier cambio entre el alcance original en el momento de la adjudicación "
-"del contrato y el alcance actual"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:4
 msgid ""
@@ -213,18 +207,6 @@ msgstr ""
 msgid "Reasons for price changes"
 msgstr "Razones de los cambios de precios"
 
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:5
-msgid ""
-"Summary of reasons for primary changes (e.g. variations) that then lead to "
-"changes in contract price, major price fluctuations and accumulative "
-"increase or decrease in price."
-msgstr ""
-"Resumen de las razones de los cambios principales (por ejemplo, variaciones)"
-" que posteriormente conducen a cambios en el precio del contrato, "
-"fluctuaciones importantes del precio y aumento o disminución acumulativos "
-"del precio."
-
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:5
 #: mapping/process-level-implementation.csv:6
@@ -247,26 +229,10 @@ msgstr ""
 msgid "Reasons for scope and duration changes"
 msgstr "Razones de los cambios en el alcance y la duración"
 
-#. CoST IDS draft definition
-#: mapping/process-level-implementation.csv:6
-msgid ""
-"Summary of reasons for primary changes (e.g. variations) that then lead to "
-"changes in the scope and duration."
-msgstr ""
-"Resumen de los motivos de los cambios principales (por ejemplo, variaciones)"
-" que posteriormente conducen a cambios en el alcance y la duración."
-
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:1
 msgid "Procuring entity"
 msgstr "Entidad contratante"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:1
-msgid "Enter name of the organization carrying out the procurement"
-msgstr ""
-"Ingrese el nombre de la organización que realiza la las adquisiciones "
-"públicas."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:1
@@ -303,11 +269,6 @@ msgstr ""
 msgid "Procuring entity contact details"
 msgstr "Datos de contacto de la entidad contratante"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:2
-msgid "Postal and Electronic address"
-msgstr "Dirección postal y electrónica"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:2
 msgid ""
@@ -321,15 +282,6 @@ msgstr ""
 #: mapping/process-level-procurement.csv:3
 msgid "Contract administrative entity"
 msgstr "Entidad administrativa del contrato"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:3
-msgid ""
-"Enter name of the organization carrying out the contract administrative "
-"entity if different from the Procuring Entity"
-msgstr ""
-"Ingrese el nombre de la organización que lleva a cabo la entidad "
-"administrativa del contrato si es diferente de la entidad contratante."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:3
@@ -357,18 +309,13 @@ msgstr ""
 "'administrativeEntity' en `/roles`. Copiar cada uno de los objetos a la "
 "lista `parties` en OC4IDS. Si hay más de una entidad contratante, no "
 "establecer `.summary.tender.administrativeEntity.name` y "
-"`.summary.tender.administrativeEntity.id`; caso contrario establecer `.name` y "
-"`.id`. de las entidades contratantes.*"
+"`.summary.tender.administrativeEntity.id`; caso contrario establecer `.name`"
+" y `.id`. de las entidades contratantes.*"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:4
 msgid "Contract status"
 msgstr "Estado del contrato"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:4
-msgid "Select from pre-award, active or closed"
-msgstr "Seleccionar entre preadjudicación, activa o cerrada"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:4
@@ -393,16 +340,6 @@ msgstr ""
 #: mapping/process-level-procurement.csv:5
 msgid "Procurement process"
 msgstr "Proceso de adquisición"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:5
-msgid ""
-"Develop a list such as International Competitive Bidding, National "
-"Competitive Bidding, Donor Procurement Rules, Framework, Direct Award"
-msgstr ""
-"Desarrolle una lista como Licitación Pública Internacional, Licitación "
-"Pública Nacional, Reglas de Adquisición de Donantes, Marco, Adjudicación "
-"Directa."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:5
@@ -432,15 +369,6 @@ msgstr ""
 msgid "Contract type"
 msgstr "Tipo de contrato"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:6
-msgid ""
-"Develop a list such as Design, Supervision, Design & Supervision, Design & "
-"Build, Construction"
-msgstr ""
-"Desarrolle una lista como Diseño, Supervisión, Diseño y Supervisión, Diseño "
-"y Construcción, Construcción."
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:6
 msgid ""
@@ -467,11 +395,6 @@ msgstr ""
 msgid "Number of firms tendering"
 msgstr "Número de empresas que participan en la licitación"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:7
-msgid "Number of firms who submit a tender"
-msgstr "Número de empresas que presentan una oferta"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:7
 msgid "Contracting process: Publish in `.summary.tender.numberOfTenderers`"
@@ -492,14 +415,6 @@ msgstr ""
 #: mapping/process-level-procurement.csv:8
 msgid "Cost estimate"
 msgstr "Estimación del costo"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:8
-msgid ""
-"Currency and amount of the original pre-tender estimate of the contract"
-msgstr ""
-"Moneda e importe del presupuesto previo a la licitación original del "
-"contrato"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:8
@@ -522,11 +437,6 @@ msgstr ""
 #: mapping/process-level-procurement.csv:9
 msgid "Contract title"
 msgstr "Título del contrato"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:9
-msgid "The formal name of the contract"
-msgstr "El nombre formal del contrato."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:9
@@ -551,11 +461,6 @@ msgstr ""
 #: mapping/process-level-procurement.csv:10
 msgid "Contract firm(s)"
 msgstr "Empresa(s) contratada(s)"
-
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:10
-msgid "Legal name of supplier"
-msgstr "Nombre legal del proveedor"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:10
@@ -588,11 +493,6 @@ msgstr ""
 msgid "Contract price"
 msgstr "Precio de contrato"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:11
-msgid "Currency and price at contract award"
-msgstr "Moneda y precio en el momento de la adjudicación del contrato"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:11
 msgid "Contracting process: Publish in `.summary.contractValue`"
@@ -624,15 +524,6 @@ msgstr ""
 msgid "Contract scope of work"
 msgstr "Alcance del trabajo del contrato"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:12
-msgid ""
-"Main outputs from the contract e.g. detailed design, supervision, project "
-"management and or type, quantity, unit for construction"
-msgstr ""
-"Principales resultados del contrato, por ejemplo diseño detallado, "
-"supervisión, gestión de proyecto y/o tipo, cantidad, unidad de construcción"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:12
 msgid ""
@@ -663,15 +554,6 @@ msgstr ""
 msgid "Contract start date and contract period (duration)"
 msgstr "Fecha de inicio del contrato y período del contrato (duración)"
 
-#. CoST IDS draft definition
-#: mapping/process-level-procurement.csv:13
-msgid ""
-"Enter dates and Number of weeks from contract start date to (anticipated) "
-"completion date"
-msgstr ""
-"Ingrese las fechas y el número de semanas desde la fecha de inicio del "
-"contrato hasta la fecha de finalización (anticipada)"
-
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:13
 msgid "Contracting process: Publish in `.summary.contractPeriod`"
@@ -699,15 +581,6 @@ msgstr ""
 msgid "Project status (current)"
 msgstr "Estado del proyecto (actual)"
 
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:1
-msgid ""
-"The current stage of the project. Select from identification, preparation, "
-"construction, completion, completed or cancelled."
-msgstr ""
-"La etapa actual del proyecto. Seleccione entre identificación, preparación, "
-"construcción, finalización, completado o cancelado."
-
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:1
 msgid "Project Level: Publish in `status`"
@@ -722,11 +595,6 @@ msgstr " *Inferir a partir de `/tag` de la entrega más reciente.*"
 #: mapping/project-level-completion.csv:2
 msgid "Project completion cost"
 msgstr "Costo de finalización del proyecto"
-
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:2
-msgid "State projected or actual completion cost (currency and amount)"
-msgstr "Indique el costo de finalización proyectado o real (moneda y monto)"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:2
@@ -751,11 +619,6 @@ msgstr ""
 msgid "Completion date"
 msgstr "Fecha de finalización"
 
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:3
-msgid "State projected or actual completion date"
-msgstr "Indique la fecha de finalización proyectada o real"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:3
 msgid "Project Level: Publish in `completion.endDate`"
@@ -775,17 +638,6 @@ msgstr ""
 #: mapping/project-level-completion.csv:4
 msgid "Project Scope at completion (projected)"
 msgstr "Alcance del proyecto al finalizar (proyectado)"
-
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:4
-msgid ""
-"Indicate projected or actual scope of project. Aim is to show if the "
-"completed project scope differs from the original project scope. Specify "
-"main outputs (type, quantity, unit)"
-msgstr ""
-"Indique el alcance proyectado o real del proyecto. El objetivo es mostrar si"
-" el alcance del proyecto ya finalizado difiere del alcance del proyecto "
-"original. Especificar los principales productos (tipo, cantidad, unidad)"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:4
@@ -815,13 +667,6 @@ msgstr ""
 msgid "Reasons for project changes"
 msgstr "Razones para los cambios en el proyecto."
 
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:5
-msgid "Summary of primary reasons for any changes in scope, time and cost"
-msgstr ""
-"Resumen de los motivos principales de cualquier cambio en el alcance, el "
-"tiempo y el costo."
-
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:5
 msgid ""
@@ -848,11 +693,6 @@ msgstr ""
 #: mapping/project-level-completion.csv:6
 msgid "Reference to audit and evaluation reports"
 msgstr "Referencia a informes de auditoría y evaluación"
-
-#. CoST IDS draft definition
-#: mapping/project-level-completion.csv:6
-msgid "Reference to publicly available technical and financial audits"
-msgstr "Referencia a auditorías técnicas y financieras disponibles al público"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:6
@@ -881,11 +721,6 @@ msgstr ""
 msgid "Project owner"
 msgstr "Dueño del proyecto"
 
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:1
-msgid "Name of the sponsoring Government department"
-msgstr "Nombre del departamento gubernamental patrocinador"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:1
 msgid ""
@@ -909,22 +744,13 @@ msgstr ""
 "Valide la lista `/parties` para los objetos `Organization` con  'buyer' en "
 "`/roles`. Copiar cada uno de los objetos a la lista `parties` en OC4IDS y "
 "agregar 'publicAuthority' a sus `.roles`.  Si hay más de una autoridad "
-"pública, no establecer `publicAuthority.name`  y `publicAuthority.id`; caso"
-" contrario, establecer `.name` y `.id`.* de las autoridades públicas. "
+"pública, no establecer `publicAuthority.name`  y `publicAuthority.id`; caso "
+"contrario, establecer `.name` y `.id`.* de las autoridades públicas. "
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:2
 msgid "Sector"
 msgstr "Sector"
-
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:2
-msgid ""
-"Develop a list of sectors relevant to country e.g. housing, transport, "
-"energy, water etc."
-msgstr ""
-"Desarrolle una lista de sectores relevantes para el país, por ejemplo, "
-"vivienda, transporte, energía, agua, etc."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:2
@@ -956,16 +782,6 @@ msgstr ""
 msgid "Subsector"
 msgstr "Subsector"
 
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:3
-msgid ""
-"Develop a subset for each sector e.g. Transport could be subdivided into "
-"national highway, local road, railway, port, airport etc."
-msgstr ""
-"Desarrolle un subconjunto para cada sector, por ejemplo, el transporte "
-"podría subdividirse en carretera nacional, carretera local, ferrocarril, "
-"puerto, aeropuerto, etc."
-
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:3
 msgid "Project Level: Publish in `additionalClassifications`"
@@ -987,11 +803,6 @@ msgstr ""
 msgid "Project name"
 msgstr "Nombre del proyecto"
 
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:4
-msgid "Specify the project name"
-msgstr "Especificar el nombre del proyecto"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:4
 msgid "Project Level: Publish in `title`"
@@ -1010,11 +821,6 @@ msgstr ""
 #: mapping/project-level-identification.csv:5
 msgid "Project Location"
 msgstr "Ubicación del proyecto"
-
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:5
-msgid "Briefly specify location of the project"
-msgstr "Especificar brevemente la ubicación del proyecto."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:5
@@ -1044,11 +850,6 @@ msgstr ""
 msgid "Purpose"
 msgstr "Propósito"
 
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:6
-msgid "Specify the socio-economic purpose of the project"
-msgstr "Especifique el propósito socioeconómico del proyecto."
-
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:6
 msgid ""
@@ -1076,11 +877,6 @@ msgstr ""
 msgid "Project description"
 msgstr "Descripción del proyecto"
 
-#. CoST IDS draft definition
-#: mapping/project-level-identification.csv:7
-msgid "Concise description and details of the project"
-msgstr "Descripción concisa y detalles del proyecto."
-
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:7
 msgid "Project Level: Publish in `description`"
@@ -1101,15 +897,6 @@ msgstr ""
 msgid "Project Scope (main output)"
 msgstr "Alcance del proyecto (producto principal)"
 
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:1
-msgid ""
-"Main outputs from the project that are being taken forward into construction"
-" (type, quantity, unit)"
-msgstr ""
-"Productos principales del proyecto que se están llevando a cabo en "
-"construcción (tipo, cantidad, unidad)"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:1
 msgid ""
@@ -1124,39 +911,24 @@ msgstr ""
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:1
 msgid ""
-"Check the `/planning/documents` array for `Document` objects with `/type` "
-"set to 'projectScope' and copy each object to the `documents` array; if not "
-"available, optionally copy `Item` objects from `/tender/items` to "
-"`contractingProcesses.summary.tender.items` and copy `Milestone` objects "
-"from `/tender/milestones` to "
+"Check the `/planning/documents` array for `Document` objects with "
+"`.documentType` set to 'projectScope' and copy each object to the "
+"`documents` array; if not available, optionally copy `Item` objects from "
+"`/tender/items` to `contractingProcesses.summary.tender.items` and copy "
+"`Milestone` objects from `/tender/milestones` to "
 "`contractingProcesses.summary.tender.milestones`."
 msgstr ""
-"Valide la lista `/planning/documents` para objetos `Document` con `/type` "
-"establecidos a 'projectScope' y copiar cada uno de los objetos a la lista  "
-"`documents`, si no está disponible, opcionalmente copie objetos `Item` de "
-"`/tender/items` a `contractingProcesses.summary.tender.items` y copie "
-"objetos `Milestone` de `/tender/milestones` a "
+"Revise la secuencia `/planning/documents` para objetos `Document` con "
+"`.documentType` empezando por 'projectScope'  y copie cada objeto a la "
+"secuencia `documents` ; sino está disponible, copie opcionalmente objetos "
+"`Item` desde `/tender/items` to `contractingProcesses.summary.tender.items` "
+"y copie objetos `Milestone` desde `/tender/milestones` a "
 "`contractingProcesses.summary.tender.milestones`."
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:2
 msgid "Environmental impact"
 msgstr "Impacto al medio ambiente"
-
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:2
-msgid ""
-"Briefly describe the environmental impacts and mitigation measures for this "
-"project e.g. impacts on flora, fauna & woodlands, areas of natural beauty, "
-"carbon emissions etc. and mitigation measures e.g. pollution control, low "
-"carbon solutions, sustainable timber etc."
-msgstr ""
-"Describa brevemente los impactos medioambientales y las medidas de "
-"mitigación de este proyecto, por ejemplo, los impactos sobre la flora, la "
-"fauna y los bosques, las zonas de belleza natural, las emisiones de carbono,"
-" etc. y las medidas de mitigación, por ejemplo, el control de la "
-"contaminación, las soluciones con bajas emisiones de carbono, la madera "
-"sostenible, etc."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:2
@@ -1172,7 +944,7 @@ msgstr ""
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:2
 msgid ""
-"Check the `/planning/documents` array for `Document` objects with `.documentType` "
+"Check the `/planning/documents` array for `Document` objects with `/type` "
 "set to 'environmentalImpact'. Copy each object to the `documents` array."
 msgstr ""
 "Valide la lista `/planning/documents` para objetos `Document` con "
@@ -1183,22 +955,6 @@ msgstr ""
 #: mapping/project-level-preparation.csv:3
 msgid "Land and settlement impact"
 msgstr "Impacto sobre la tierra y los asentamientos"
-
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:3
-msgid ""
-"State the amount of land and property that was acquired for the project e.g."
-" 25km2 land, and related impacts e.g. archaeological issues (moved Saxon "
-"burial site), local/indigenous settlements (relocated 5 indigenous villages "
-"of 500 villagers each), impacts on local businesses e.g. (30 business "
-"properties purchased)."
-msgstr ""
-"Indique la cantidad de tierra y propiedades que se adquirieron para el "
-"proyecto, por ejemplo, 25 km2 de tierra, y los impactos relacionados, por "
-"ejemplo, cuestiones arqueológicas (se trasladó un cementerio sajón), "
-"asentamientos locales/indígenas (se trasladaron 5 aldeas indígenas de 500 "
-"aldeanos cada una), impactos en los negocios locales, por ejemplo (se "
-"adquirieron 30 propiedades comerciales)."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:3
@@ -1225,11 +981,6 @@ msgstr ""
 msgid "Contact details"
 msgstr "Detalles de contacto"
 
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:4
-msgid "Postal and electronic address of the Project Owner"
-msgstr "Dirección postal y electrónica del Titular del Proyecto"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:4
 msgid ""
@@ -1255,12 +1006,6 @@ msgstr ""
 msgid "Funding sources"
 msgstr "Fuentes de financiamiento"
 
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:5
-msgid "Name the funding organization(s)/sources of funding"
-msgstr ""
-"Nombre la(s) organización(es) de financiación/fuentes de financiamiento"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:5
 msgid ""
@@ -1268,14 +1013,14 @@ msgid ""
 "to the `.roles` of the existing entry in `parties`. Otherwise, add a new "
 "entry to `parties` for each funding organization with 'funder' included in "
 "its `.roles`. When information on the amount provided by each funder is "
-"available, use `budget.budgetBreakdown` to provide details"
+"available, use `budget.budgetBreakdowns` to provide details"
 msgstr ""
-"Nivel del proyecto: Si una organización de financiación es la propietaria "
-"del proyecto, agregar 'funder' a `.roles` de la entrada existente en "
-"`parties`. En caso contrario, agregar una nueva entrada a `parties` para "
-"cada organización de financiación con 'funder' incluido en sus `.roles`. "
-"Cuando se disponga de información sobre el importe aportado por cada "
-"financiador, utilice `budget.budgetBreakdown` para proporcionar detalles"
+"Nivel de proyecto: Si una organización financiadora es la dueña del proyecto"
+" agregue 'funder' a `.roles` de la entrada existente en `parties`. De lo "
+"contrario, agregue una nueva entrada a `parties` para cada organización "
+"financiadora con 'funder' incluido en los `.roles`. Cuando la información "
+"sobre las cantidades proveídas por cada ente financiador esté disponible, "
+"use  `budget.budgetBreakdowns` para dar los detalles. "
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:5
@@ -1297,20 +1042,6 @@ msgstr ""
 #: mapping/project-level-preparation.csv:6
 msgid "Project Budget"
 msgstr "Presupuesto del proyecto"
-
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:6
-msgid ""
-"Specify the projected costs/allocated budget for the project (currency and "
-"amount). The budget includes land / property acquisition, environmental "
-"mitigation measures, H&S provisions, client, consultant & contractor costs, "
-"VAT etc."
-msgstr ""
-"Especifique los costos proyectados / presupuesto asignado para el proyecto "
-"(moneda e importe). El presupuesto incluye la adquisición de "
-"terrenos/propiedades, las medidas de mitigación medioambiental, las "
-"disposiciones de salud y seguridad, los costos de los clientes, consultores "
-"y contratistas, el IVA, etc."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:6
@@ -1348,11 +1079,6 @@ msgstr ""
 msgid "Project budget approval date"
 msgstr "Fecha de aprobación del presupuesto del proyecto"
 
-#. CoST IDS draft definition
-#: mapping/project-level-preparation.csv:7
-msgid "Date project budget was authorized"
-msgstr "Fecha en que se autorizó el presupuesto del proyecto"
-
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:7
 msgid ""
@@ -1376,14 +1102,6 @@ msgstr ""
 "`documents`; *si no está disponible, opcionalmente verifique "
 "`/planning/milestones` para objetos `Milestone` con `/type` establecidos a "
 "'approval' y establezca `budget/approvalDate` al valor de `/dateMet`.*"
-
-#: mapping/reactive-process-level-contract.csv
-#: mapping/reactive-process-level-implementation.csv
-#: mapping/reactive-process-level-procurement.csv
-#: mapping/reactive-project-level-completion.csv
-#: mapping/reactive-project-level-identification-preparation.csv
-msgid "Description"
-msgstr "Descripción"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-contract.csv:1
@@ -1959,19 +1677,19 @@ msgstr "Programa y presupuesto plurianual"
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:1
 msgid ""
-"For each year, add a `BudgetBreakdown` object to the `budget.BudgetBreakdown` array and set its fields as follows:\n"
+"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` incrementally and set its `.description` to 'Breakdown by year'. For each year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set its fields as follows:\n"
 "\n"
 "* Set its `id` to the year, e.g. '2020'\n"
 "* Set its `.amount.amount` to the amount of the budget allocated to the year and set `.amount.currency` to the currency of the budget\n"
 "* Set its `.period.startDate` to the first day of the year, e.g. '2020-01-01T00:00:00Z'\n"
 "* Set its `.period.endDate` to the last day of the year, e.g '2020-12-31T23:59:59Z"
 msgstr ""
-"Por cada año, agregue un objeto `BudgetBreakdown` a la lista `budget.BudgetBreakdown` y establezca sus campos como sigue:\n"
+"Agregue un objeto `BudgetBreakdowns` a `budget/budgetBreaksdown`, establezca el `.id` incrementalmente y establezca `.description` a 'Breakdown by year'. Para cada año, agregue un objeto `BudgetBreakdown` a su secuencia `.BudgetBreakdown`  y establezca los campos como sigue:\n"
 "\n"
-"* Establezca su `id` al del año, por ejemplo '2020'\n"
-"* Establezca su `.amount.amount` a la cantidad del presupuesto asignado al año y establecer `.amount.currency` a la moneda del presupuesto\n"
-"* Establezca su `.period.startDate` al primer día del año, por ejemplo '2020-01-01T00:00:00Z'\n"
-"* Establezca su `.period.endDate` al último día del año, por ejemplo '2020-12-31T23:59:59Z"
+"* Establezca su `id` al año, e.g. '2020'\n"
+"* Establezca su `.amount.amount` a la cantidad del presupuesto asignado al año y establezca  `.amount.currency` a la moneda del presupuesto \n"
+"* Establezca su `.period.startDate` al primer día del año, e.g. '2020-01-01T00:00:00Z'\n"
+"* Establezca su `.period.endDate` al último día del año, e.g '2020-12-31T23:59:59Z"
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:1
