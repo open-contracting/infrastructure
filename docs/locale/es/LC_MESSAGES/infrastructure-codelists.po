@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-25 15:32+1300\n"
+"POT-Creation-Date: 2025-03-28 09:59+1300\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
@@ -873,6 +873,15 @@ msgstr "Pre-adjudicación"
 msgid "No contract has yet been awarded, and the process has not ended."
 msgstr "Ningún contrato ha sido adjudicado aún, y el proceso no ha terminado."
 
+#. Business Logic
+#: schema/project-level/codelists/contractingProcessStatus.csv:1
+msgid ""
+"`tender.status` is not 'cancelled', 'unsuccessful' or 'withdrawn', and one "
+"of: There are no awards or contracts; All `Award.status` and "
+"`Contract.status` are 'pending'; All award dates (in order of preference: "
+"`Award.date`, `tender.awardPeriod`) are in the future."
+msgstr ""
+
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:2
 msgid "Active"
@@ -883,6 +892,14 @@ msgstr "Activo"
 msgid "A contract was awarded, but not all contracts have ended."
 msgstr ""
 "Un contrato fue adjudicado, pero no todos los contratos han terminado."
+
+#. Business Logic
+#: schema/project-level/codelists/contractingProcessStatus.csv:2
+msgid ""
+"One of: There is at least one `Contract.status` of 'active'; At least one "
+"contract period (in order of preference: `Contract.period`, "
+"`Award.contractPeriod`, `tender.contractPeriod`) includes the present date."
+msgstr ""
 
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:3
@@ -897,6 +914,17 @@ msgid ""
 msgstr ""
 "El proceso terminó sin adjudicar ningún contrato, o todos los contratos han "
 "terminado."
+
+#. Business Logic
+#: schema/project-level/codelists/contractingProcessStatus.csv:3
+msgid ""
+"One of: `tender.status` is 'cancelled', 'unsuccessful' or 'withdrawn'; There"
+" is at least one award, and all `Award.status` are 'cancelled' or "
+"'unsuccessful'; There is at least one contract, and all `Contract.status` "
+"are 'terminated' or 'cancelled'; The `.endDate` of all contract periods (in "
+"order of preference: `Contract.period`, `Award.contractPeriod`, "
+"`tender.contractPeriod`), are in the past."
+msgstr ""
 
 #. Description
 #: schema/project-level/codelists/contractingProcessStatus.csv:4
