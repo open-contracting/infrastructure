@@ -881,6 +881,11 @@ msgid ""
 "`Contract.status` are 'pending'; All award dates (in order of preference: "
 "`Award.date`, `tender.awardPeriod`) are in the future."
 msgstr ""
+"`tender.status` no es 'cancelled', 'unsuccessful' or 'withdrawn', y uno de: "
+"No hay adjudicaciones o contratos; Todos los `Award.status` y "
+"`Contract.status` están 'pending'; Todas las fechas de la adjudicación (en "
+"orden de preferencia: `Award.date`, `tender.awardPeriod`) están en el "
+"futuro."
 
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:2
@@ -900,6 +905,9 @@ msgid ""
 "contract period (in order of preference: `Contract.period`, "
 "`Award.contractPeriod`, `tender.contractPeriod`) includes the present date."
 msgstr ""
+"Uno de: Hay al menos un `Contract.status` de 'active'; Al menos un período "
+"del contrato (en orden de preferencia: `Contract.period`, "
+"`Award.contractPeriod`, `tender.contractPeriod`) incluye la fecha actual."
 
 #. Title
 #: schema/project-level/codelists/contractingProcessStatus.csv:3
@@ -925,6 +933,12 @@ msgid ""
 "order of preference: `Contract.period`, `Award.contractPeriod`, "
 "`tender.contractPeriod`), are in the past."
 msgstr ""
+"Uno de: `tender.status` es 'cancelled', 'unsuccessful' or 'withdrawn'; Hay "
+"al menos una adjudicación y todos los  `Award.status` están en 'cancelled' o"
+" 'unsuccessful'; Hay al menos un contrato, y todos los `Contract.status` "
+"están 'terminated' o 'cancelled'; La `.endDate` de todos los períodos de los"
+" contratos (en orden de preferencia `Contract.period`, "
+"`Award.contractPeriod`, `tender.contractPeriod`), están en el pasado. "
 
 #. Description
 #: schema/project-level/codelists/contractingProcessStatus.csv:4

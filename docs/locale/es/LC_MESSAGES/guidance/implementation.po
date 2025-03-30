@@ -78,7 +78,7 @@ msgid ""
 "portal](../_static/images/implementation_scenario_1.png)"
 msgstr ""
 "![Portal de transparencia de infraestructura "
-"independiente](../_static/images/implementation_scenario_1.png)"
+"independiente](../_static/images/es/implementation_scenario_1.png)"
 
 #: ../../docs/guidance/implementation.md:13
 msgid ""
@@ -120,7 +120,7 @@ msgid ""
 "system](../_static/images/implementation_scenario_4.png)"
 msgstr ""
 "![Portal integrado de transparencia de infraestructura y sistema de "
-"adquisiciones](../_static/images/implementation_scenario_4.png)"
+"adquisiciones](../_static/images/es/implementation_scenario_4.png)"
 
 #: ../../docs/guidance/implementation.md:21
 msgid ""
@@ -229,7 +229,7 @@ msgid ""
 "data](../_static/images/implementation_scenario_2.png)"
 msgstr ""
 "![Portal de transparencia de infraestructura con fuente existente de datos "
-"OCDS](../_static/images/implementation_scenario_2.png)"
+"OCDS](../_static/images/es/implementation_scenario_2.png)"
 
 #: ../../docs/guidance/implementation.md:34
 msgid "Infrastructure transparency portal with existing source of OCDS data"
@@ -283,7 +283,7 @@ msgid ""
 "system](../_static/images/implementation_scenario_3.png)"
 msgstr ""
 "![Sistema de adquisiciones "
-"independiente](../_static/images/implementation_scenario_3.png)"
+"independiente](../_static/images/es/implementation_scenario_3.png)"
 
 #: ../../docs/guidance/implementation.md:47
 msgid ""

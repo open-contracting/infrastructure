@@ -3,6 +3,10 @@
 # This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +24,7 @@ msgstr ""
 
 #: ../../docs/guidance/language.md:1
 msgid "Publishing data in your own language"
-msgstr ""
+msgstr "Publicando datos en su propio idioma"
 
 #: ../../docs/guidance/language.md:3
 msgid ""
@@ -27,12 +32,18 @@ msgid ""
 " and `parties/name` – in your own language. You ought to set the `language` "
 "field to the language used in these free-text fields. For example:"
 msgstr ""
+" Puede publicar los valores de los campos que son texto libre – como "
+"`title`, `description` y `parties/name` – en su propio idioma. Para ello "
+"debe establecer el campo `language` field al lenguaje usado en esos campos "
+"de texto libre. Por ejemplo:"
 
 #: ../../docs/guidance/language.md:14
 msgid ""
 "In order for your data to be interoperable and compatible with OC4IDS tools "
 "and methodologies:"
 msgstr ""
+"Para que sus datos sean interoperables y compatibles con las herramientas y "
+"metodologías del OC4IDS:"
 
 #: ../../docs/guidance/language.md:16
 msgid ""
@@ -41,22 +52,30 @@ msgid ""
 "codelist](../reference/codelists.md#projecttype), like 'construction'. You "
 "cannot translate 'construction' to 'การก่อสร้าง':"
 msgstr ""
+"No traduzca los códigos de las listas de código. Por ejemplo:  el valor del "
+"campo `type` necesita ser un código del [ProjectType "
+"codelist](../reference/codelists.md#projecttype), como 'construction'. No "
+"puede traducir 'construction' a 'การก่อสร้าง':"
 
 #: ../../docs/guidance/language.md:25
 msgid ""
 "Do not translate field names (object keys). For example, you cannot "
 "translate `title` to `ชื่อ`:"
 msgstr ""
+" No traduzca los nombres de los campos (objetos clave). Por ejemplo, no "
+"puede traducir `title` a `ชื่อ`:"
 
 #: ../../docs/guidance/language.md:34
 msgid ""
 "The fields whose values can be translated are listed in the "
 "[internationalization lookup table](#internationalization-lookup-table)."
 msgstr ""
+"Los campos cuyos valores pueden traducirse están enumerados en la "
+"[internationalization lookup table](#internationalization-lookup-table)."
 
 #: ../../docs/guidance/language.md:36
 msgid "Translating headers in spreadsheets/CSVs"
-msgstr ""
+msgstr "Traduciendo los encabezados en hojas de cálculo/CSV"
 
 #: ../../docs/guidance/language.md:38
 msgid ""
@@ -64,6 +83,9 @@ msgid ""
 " *names* as column headers (which are always in English), you can use the "
 "field *titles*."
 msgstr ""
+"Para un acceso fácil a personas que no hablan inglés, en lugar de usar el "
+"campo *names* como los encabezados de las columnas (los cuales están siempre"
+" en inglés), puede usar los campos *titles*."
 
 #: ../../docs/guidance/language.md:40
 msgid ""
@@ -71,28 +93,33 @@ msgid ""
 " to translate the titles to your own language, please [contact the OC4IDS "
 "Helpdesk](mailto:data@open-contracting.org)."
 msgstr ""
+"Los títulos están actualmente disponibles en inglés y español. Si usted "
+"quiere traducir los títulos a su propio idioma, por favor [contact the "
+"OC4IDS Helpdesk](mailto:data@open-contracting.org)."
 
 #: ../../docs/guidance/language.md:42
 msgid ""
 "For example, this CSV excerpt uses field titles from the Spanish translation"
 " of OC4IDS:"
 msgstr ""
+"Por ejemplo, este extracto del CSV usa los títulos de los campos de la "
+"traducción al español del OC4IDS:"
 
 #: ../../docs/guidance/language.md:0
 msgid "Identificador o Referencia"
-msgstr ""
+msgstr "Identifier or Reference"
 
 #: ../../docs/guidance/language.md:0
 msgid "Título del Proyecto"
-msgstr ""
+msgstr "Project title"
 
 #: ../../docs/guidance/language.md:0
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../../docs/guidance/language.md:0
 msgid "proyecto de ejemplo"
-msgstr ""
+msgstr "project example"
 
 #: ../../docs/guidance/language.md:48
 msgid ""
@@ -101,10 +128,15 @@ msgid ""
 "converts the example OC4IDS JSON file to XLSX format, using field titles "
 "from the Spanish schema:"
 msgstr ""
+"Puede usar la siguiente [Flatten Tool](https://flatten-"
+"tool.readthedocs.io/en/latest/) para generar archivos con los títulos de los"
+" campos traducidos. Por ejemplo, este comando convierte un archivo de "
+"ejemplo del JSON en el OC4IDS al formato XLSX, usando los títulos de los "
+"campos del esquema en español:"
 
 #: ../../docs/guidance/language.md:54
 msgid "Publishing in multiple languages"
-msgstr ""
+msgstr "Publicando en múltiples idiomas"
 
 #: ../../docs/guidance/language.md:56
 msgid ""
@@ -113,10 +145,15 @@ msgid ""
 " You need to ensure that the values of `id` fields are consistent across "
 "packages, so that users can find the translations of objects."
 msgstr ""
+"Para publicar datos en varios idiomas, siga la guía de arriba y publique un "
+"[project package](../../reference/package.md) separado para cada idioma. "
+"Tiene que asegurar que los valores de los campos del `id` sean consistentes "
+"entre los paquetes, para que los usuarios puedan encontrar las traducciones "
+"de los objetos. "
 
 #: ../../docs/guidance/language.md:58
 msgid "Internationalization lookup table"
-msgstr ""
+msgstr "Tabla de búsqueda para la internacionalización"
 
 #: ../../docs/guidance/language.md:60
 msgid ""
@@ -124,3256 +161,3270 @@ msgid ""
 "own language. You can download the table as a [CSV "
 "spreadsheet](../_static/i18n.csv)."
 msgstr ""
+"Use la siguiente tabla para verificar cuando un campo puede ser publicado en"
+" su propio idioma. Puede descargar la tabla en  [CSV "
+"spreadsheet](../_static/i18n.csv)."
 
 #: ../../docs/guidance/language.md:65
 msgid "path"
-msgstr ""
+msgstr "camino"
 
 #: ../../docs/guidance/language.md:65
 msgid "title"
-msgstr ""
+msgstr "título"
 
 #: ../../docs/guidance/language.md:65
 msgid "translatable"
-msgstr ""
+msgstr "traducible"
 
 #: ../../docs/guidance/language.md:65
 msgid "notes"
-msgstr ""
+msgstr "notas"
 
 #: ../../docs/guidance/language.md:65
 msgid "id"
-msgstr ""
+msgstr "id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Identifier or Reference"
-msgstr ""
+msgstr "Identifier or Reference"
 
 #: ../../docs/guidance/language.md:65
 msgid "True"
-msgstr ""
+msgstr "Verdadero"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "Only the part of the identifier following the prefix can be "
 "internationalized."
 msgstr ""
+"Solo la parte del identificador que sigue al prefijo puede ser "
+"internacionalizado. "
 
 #: ../../docs/guidance/language.md:65
 msgid "updated"
-msgstr ""
+msgstr "updated"
 
 #: ../../docs/guidance/language.md:65
 msgid "Last updated"
-msgstr ""
+msgstr "Last updated"
 
 #: ../../docs/guidance/language.md:65
 msgid "False"
-msgstr ""
+msgstr "Falso"
 
 #: ../../docs/guidance/language.md:65
 msgid "language"
-msgstr ""
+msgstr "language"
 
 #: ../../docs/guidance/language.md:65
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: ../../docs/guidance/language.md:65
 msgid "identifiers"
-msgstr ""
+msgstr "identifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Identifiers"
-msgstr ""
+msgstr "Identifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Simple identifier"
-msgstr ""
+msgstr "Simple identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "identifiers/id"
-msgstr ""
+msgstr "identifiers/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "identifiers/scheme"
-msgstr ""
+msgstr "identifiers/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "Scheme"
-msgstr ""
+msgstr "Scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "publicAuthority"
-msgstr ""
+msgstr "publicAuthority"
 
 #: ../../docs/guidance/language.md:65
 msgid "Public authority"
-msgstr ""
+msgstr "Public authority"
 
 #: ../../docs/guidance/language.md:65
 msgid "Organization reference"
-msgstr ""
+msgstr "Organization reference"
 
 #: ../../docs/guidance/language.md:65
 msgid "publicAuthority/name"
-msgstr ""
+msgstr "publicAuthority/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "Organization name"
-msgstr ""
+msgstr "Organization name"
 
 #: ../../docs/guidance/language.md:65
 msgid "publicAuthority/id"
-msgstr ""
+msgstr "publicAuthority/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Organization ID"
-msgstr ""
+msgstr "Organization ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project title"
-msgstr ""
+msgstr "Project title"
 
 #: ../../docs/guidance/language.md:65
 msgid "description"
-msgstr ""
+msgstr "description"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project description"
-msgstr ""
+msgstr "Project description"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget"
-msgstr ""
+msgstr "budget"
 
 #: ../../docs/guidance/language.md:65
 msgid "Total project value"
-msgstr ""
+msgstr "Total project value"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/description"
-msgstr ""
+msgstr "budget/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/amount"
-msgstr ""
+msgstr "budget/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "Amount"
-msgstr ""
+msgstr "Amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "Value"
-msgstr ""
+msgstr "Value"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/amount/amount"
-msgstr ""
+msgstr "budget/amount/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/amount/currency"
-msgstr ""
+msgstr "budget/amount/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "Currency"
-msgstr ""
+msgstr "Currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/requestDate"
-msgstr ""
+msgstr "budget/requestDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Request date"
-msgstr ""
+msgstr "Request date"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/approvalDate"
-msgstr ""
+msgstr "budget/approvalDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Approval date"
-msgstr ""
+msgstr "Approval date"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns"
-msgstr ""
+msgstr "budget/budgetBreakdowns"
 
 #: ../../docs/guidance/language.md:65
 msgid "Budget breakdowns"
-msgstr ""
+msgstr "Budget breakdowns"
 
 #: ../../docs/guidance/language.md:65
 msgid "Budget breakdown group"
-msgstr ""
+msgstr "Budget breakdown group"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/id"
-msgstr ""
+msgstr "budget/budgetBreakdowns/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/description"
-msgstr ""
+msgstr "budget/budgetBreakdowns/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown"
 
 #: ../../docs/guidance/language.md:65
 msgid "Budget breakdown"
-msgstr ""
+msgstr "Budget breakdown"
 
 #: ../../docs/guidance/language.md:65
 msgid "Detailed budget breakdown"
-msgstr ""
+msgstr "Detailed budget breakdown"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/id"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Identifier"
-msgstr ""
+msgstr "Identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/description"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/amount"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/amount/amount"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/amount/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/amount/currency"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/amount/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/uri"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "Linked budget information"
-msgstr ""
+msgstr "Linked budget information"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/period"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/period"
 
 #: ../../docs/guidance/language.md:65
 msgid "Budget period"
-msgstr ""
+msgstr "Budget period"
 
 #: ../../docs/guidance/language.md:65
 msgid "Period"
-msgstr ""
+msgstr "Period"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/period/startDate"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Start date"
-msgstr ""
+msgstr "Start date"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/period/endDate"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "End date"
-msgstr ""
+msgstr "End date"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/period/maxExtentDate"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Maximum extent"
-msgstr ""
+msgstr "Maximum extent"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/period/durationInDays"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "Duration (days)"
-msgstr ""
+msgstr "Duration (days)"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/sourceParty"
 
 #: ../../docs/guidance/language.md:65
 msgid "Source organization"
-msgstr ""
+msgstr "Source organization"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty/name"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/sourceParty/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/sourceParty/id"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/sourceParty/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/budgetBreakdowns/budgetBreakdown/approvalDate"
-msgstr ""
+msgstr "budget/budgetBreakdowns/budgetBreakdown/approvalDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance"
-msgstr ""
+msgstr "budget/finance"
 
 #: ../../docs/guidance/language.md:65
 msgid "Finance"
-msgstr ""
+msgstr "Finance"
 
 #: ../../docs/guidance/language.md:65
 msgid "Financing arrangement"
-msgstr ""
+msgstr "Financing arrangement"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/id"
-msgstr ""
+msgstr "budget/finance/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/title"
-msgstr ""
+msgstr "budget/finance/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "Title"
-msgstr ""
+msgstr "Title"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/description"
-msgstr ""
+msgstr "budget/finance/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/value"
-msgstr ""
+msgstr "budget/finance/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/value/amount"
-msgstr ""
+msgstr "budget/finance/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/value/currency"
-msgstr ""
+msgstr "budget/finance/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/financingParty"
-msgstr ""
+msgstr "budget/finance/financingParty"
 
 #: ../../docs/guidance/language.md:65
 msgid "Financing organization"
-msgstr ""
+msgstr "Financing organization"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/financingParty/name"
-msgstr ""
+msgstr "budget/finance/financingParty/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/financingParty/id"
-msgstr ""
+msgstr "budget/finance/financingParty/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/financingPartyType"
-msgstr ""
+msgstr "budget/finance/financingPartyType"
 
 #: ../../docs/guidance/language.md:65
 msgid "Financing organization type"
-msgstr ""
+msgstr "Financing organization type"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/source"
-msgstr ""
+msgstr "budget/finance/source"
 
 #: ../../docs/guidance/language.md:65
 msgid "Funding source"
-msgstr ""
+msgstr "Funding source"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/assetClass"
-msgstr ""
+msgstr "budget/finance/assetClass"
 
 #: ../../docs/guidance/language.md:65
 msgid "Asset class"
-msgstr ""
+msgstr "Asset class"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/type"
-msgstr ""
+msgstr "budget/finance/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/repaymentPriority"
-msgstr ""
+msgstr "budget/finance/repaymentPriority"
 
 #: ../../docs/guidance/language.md:65
 msgid "Repayment priority"
-msgstr ""
+msgstr "Repayment priority"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/concessional"
-msgstr ""
+msgstr "budget/finance/concessional"
 
 #: ../../docs/guidance/language.md:65
 msgid "Concessional"
-msgstr ""
+msgstr "Concessional"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/resultsBased"
-msgstr ""
+msgstr "budget/finance/resultsBased"
 
 #: ../../docs/guidance/language.md:65
 msgid "Results based"
-msgstr ""
+msgstr "Results based"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/period"
-msgstr ""
+msgstr "budget/finance/period"
 
 #: ../../docs/guidance/language.md:65
 msgid "Finance period"
-msgstr ""
+msgstr "Finance period"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/period/startDate"
-msgstr ""
+msgstr "budget/finance/period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/period/endDate"
-msgstr ""
+msgstr "budget/finance/period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/period/maxExtentDate"
-msgstr ""
+msgstr "budget/finance/period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/period/durationInDays"
-msgstr ""
+msgstr "budget/finance/period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentPeriod"
-msgstr ""
+msgstr "budget/finance/paymentPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Payment period"
-msgstr ""
+msgstr "Payment period"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentPeriod/startDate"
-msgstr ""
+msgstr "budget/finance/paymentPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentPeriod/endDate"
-msgstr ""
+msgstr "budget/finance/paymentPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentPeriod/maxExtentDate"
-msgstr ""
+msgstr "budget/finance/paymentPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentPeriod/durationInDays"
-msgstr ""
+msgstr "budget/finance/paymentPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/paymentFrequency"
-msgstr ""
+msgstr "budget/finance/paymentFrequency"
 
 #: ../../docs/guidance/language.md:65
 msgid "Payment frequency (days)"
-msgstr ""
+msgstr "Payment frequency (days)"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/interestRate"
-msgstr ""
+msgstr "budget/finance/interestRate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Interest rate"
-msgstr ""
+msgstr "Interest rate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/interestRate/base"
-msgstr ""
+msgstr "budget/finance/interestRate/base"
 
 #: ../../docs/guidance/language.md:65
 msgid "Base"
-msgstr ""
+msgstr "Base"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/interestRate/margin"
-msgstr ""
+msgstr "budget/finance/interestRate/margin"
 
 #: ../../docs/guidance/language.md:65
 msgid "Margin"
-msgstr ""
+msgstr "Margin"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/interestRate/fixed"
-msgstr ""
+msgstr "budget/finance/interestRate/fixed"
 
 #: ../../docs/guidance/language.md:65
 msgid "Fixed rate"
-msgstr ""
+msgstr "Fixed rate"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/interestRate/notes"
-msgstr ""
+msgstr "budget/finance/interestRate/notes"
 
 #: ../../docs/guidance/language.md:65
 msgid "Notes"
-msgstr ""
+msgstr "Notes"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/exchangeRateGuarantee"
-msgstr ""
+msgstr "budget/finance/exchangeRateGuarantee"
 
 #: ../../docs/guidance/language.md:65
 msgid "Exchange rate guarantees"
-msgstr ""
+msgstr "Exchange rate guarantees"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/stepInRights"
-msgstr ""
+msgstr "budget/finance/stepInRights"
 
 #: ../../docs/guidance/language.md:65
 msgid "Step in rights"
-msgstr ""
+msgstr "Step in rights"
 
 #: ../../docs/guidance/language.md:65
 msgid "budget/finance/relatedLots"
-msgstr ""
+msgstr "budget/finance/relatedLots"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related lot(s)"
-msgstr ""
+msgstr "Related lot(s)"
 
 #: ../../docs/guidance/language.md:65
 msgid "period"
-msgstr ""
+msgstr "period"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project period"
-msgstr ""
+msgstr "Project period"
 
 #: ../../docs/guidance/language.md:65
 msgid "period/startDate"
-msgstr ""
+msgstr "period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "period/endDate"
-msgstr ""
+msgstr "period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "period/maxExtentDate"
-msgstr ""
+msgstr "period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "period/durationInDays"
-msgstr ""
+msgstr "period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations"
-msgstr ""
+msgstr "locations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project locations"
-msgstr ""
+msgstr "Project locations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Delivery Location"
-msgstr ""
+msgstr "Delivery Location"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/id"
-msgstr ""
+msgstr "locations/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/description"
-msgstr ""
+msgstr "locations/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/geometry"
-msgstr ""
+msgstr "locations/geometry"
 
 #: ../../docs/guidance/language.md:65
 msgid "Geometry"
-msgstr ""
+msgstr "Geometry"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/geometry/type"
-msgstr ""
+msgstr "locations/geometry/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/geometry/coordinates"
-msgstr ""
+msgstr "locations/geometry/coordinates"
 
 #: ../../docs/guidance/language.md:65
 msgid "Coordinates"
-msgstr ""
+msgstr "Coordinates"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/gazetteer"
-msgstr ""
+msgstr "locations/gazetteer"
 
 #: ../../docs/guidance/language.md:65
 msgid "Gazetteer"
-msgstr ""
+msgstr "Gazetteer"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/gazetteer/scheme"
-msgstr ""
+msgstr "locations/gazetteer/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "Gazetteer scheme"
-msgstr ""
+msgstr "Gazetteer scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/gazetteer/identifiers"
-msgstr ""
+msgstr "locations/gazetteer/identifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/uri"
-msgstr ""
+msgstr "locations/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address"
-msgstr ""
+msgstr "locations/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "Address"
-msgstr ""
+msgstr "Address"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address/streetAddress"
-msgstr ""
+msgstr "locations/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "Street address"
-msgstr ""
+msgstr "Street address"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address/locality"
-msgstr ""
+msgstr "locations/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "Locality"
-msgstr ""
+msgstr "Locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address/region"
-msgstr ""
+msgstr "locations/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "Region"
-msgstr ""
+msgstr "Region"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address/postalCode"
-msgstr ""
+msgstr "locations/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "Postal code"
-msgstr ""
+msgstr "Postal code"
 
 #: ../../docs/guidance/language.md:65
 msgid "locations/address/countryName"
-msgstr ""
+msgstr "locations/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "Country name"
-msgstr ""
+msgstr "Country name"
 
 #: ../../docs/guidance/language.md:65
 msgid "status"
-msgstr ""
+msgstr "status"
 
 #: ../../docs/guidance/language.md:65
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: ../../docs/guidance/language.md:65
 msgid "type"
-msgstr ""
+msgstr "type"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project type"
-msgstr ""
+msgstr "Project type"
 
 #: ../../docs/guidance/language.md:65
 msgid "sector"
-msgstr ""
+msgstr "sector"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project sector"
-msgstr ""
+msgstr "Project sector"
 
 #: ../../docs/guidance/language.md:65
 msgid "purpose"
-msgstr ""
+msgstr "purpose"
 
 #: ../../docs/guidance/language.md:65
 msgid "Project purpose"
-msgstr ""
+msgstr "Project purpose"
 
 #: ../../docs/guidance/language.md:65
 msgid "additionalClassifications"
-msgstr ""
+msgstr "additionalClassifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "Additional classifications"
-msgstr ""
+msgstr "Additional classifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "Classification"
-msgstr ""
+msgstr "Classification"
 
 #: ../../docs/guidance/language.md:65
 msgid "additionalClassifications/scheme"
-msgstr ""
+msgstr "additionalClassifications/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "additionalClassifications/id"
-msgstr ""
+msgstr "additionalClassifications/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "additionalClassifications/description"
-msgstr ""
+msgstr "additionalClassifications/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "additionalClassifications/uri"
-msgstr ""
+msgstr "additionalClassifications/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties"
-msgstr ""
+msgstr "parties"
 
 #: ../../docs/guidance/language.md:65
 msgid "Parties"
-msgstr ""
+msgstr "Parties"
 
 #: ../../docs/guidance/language.md:65
 msgid "Organization"
-msgstr ""
+msgstr "Organization"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/name"
-msgstr ""
+msgstr "parties/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "Common name"
-msgstr ""
+msgstr "Common name"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/id"
-msgstr ""
+msgstr "parties/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Entity ID"
-msgstr ""
+msgstr "Entity ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/identifier"
-msgstr ""
+msgstr "parties/identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "Primary identifier"
-msgstr ""
+msgstr "Primary identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/identifier/scheme"
-msgstr ""
+msgstr "parties/identifier/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/identifier/id"
-msgstr ""
+msgstr "parties/identifier/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/identifier/legalName"
-msgstr ""
+msgstr "parties/identifier/legalName"
 
 #: ../../docs/guidance/language.md:65
 msgid "Legal Name"
-msgstr ""
+msgstr "Legal Name"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/identifier/uri"
-msgstr ""
+msgstr "parties/identifier/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/additionalIdentifiers"
-msgstr ""
+msgstr "parties/additionalIdentifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Additional identifiers"
-msgstr ""
+msgstr "Additional identifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/additionalIdentifiers/scheme"
-msgstr ""
+msgstr "parties/additionalIdentifiers/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/additionalIdentifiers/id"
-msgstr ""
+msgstr "parties/additionalIdentifiers/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/additionalIdentifiers/legalName"
-msgstr ""
+msgstr "parties/additionalIdentifiers/legalName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/additionalIdentifiers/uri"
-msgstr ""
+msgstr "parties/additionalIdentifiers/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address"
-msgstr ""
+msgstr "parties/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address/streetAddress"
-msgstr ""
+msgstr "parties/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address/locality"
-msgstr ""
+msgstr "parties/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address/region"
-msgstr ""
+msgstr "parties/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address/postalCode"
-msgstr ""
+msgstr "parties/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/address/countryName"
-msgstr ""
+msgstr "parties/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint"
-msgstr ""
+msgstr "parties/contactPoint"
 
 #: ../../docs/guidance/language.md:65
 msgid "Contact point"
-msgstr ""
+msgstr "Contact point"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint/name"
-msgstr ""
+msgstr "parties/contactPoint/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint/email"
-msgstr ""
+msgstr "parties/contactPoint/email"
 
 #: ../../docs/guidance/language.md:65
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint/telephone"
-msgstr ""
+msgstr "parties/contactPoint/telephone"
 
 #: ../../docs/guidance/language.md:65
 msgid "Telephone"
-msgstr ""
+msgstr "Telephone"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint/faxNumber"
-msgstr ""
+msgstr "parties/contactPoint/faxNumber"
 
 #: ../../docs/guidance/language.md:65
 msgid "Fax number"
-msgstr ""
+msgstr "Fax number"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/contactPoint/url"
-msgstr ""
+msgstr "parties/contactPoint/url"
 
 #: ../../docs/guidance/language.md:65
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/roles"
-msgstr ""
+msgstr "parties/roles"
 
 #: ../../docs/guidance/language.md:65
 msgid "Party roles"
-msgstr ""
+msgstr "Party roles"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners"
-msgstr ""
+msgstr "parties/beneficialOwners"
 
 #: ../../docs/guidance/language.md:65
 msgid "Beneficial owners"
-msgstr ""
+msgstr "Beneficial owners"
 
 #: ../../docs/guidance/language.md:65
 msgid "Person"
-msgstr ""
+msgstr "Person"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/id"
-msgstr ""
+msgstr "parties/beneficialOwners/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/name"
-msgstr ""
+msgstr "parties/beneficialOwners/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/identifier"
-msgstr ""
+msgstr "parties/beneficialOwners/identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/identifier/scheme"
-msgstr ""
+msgstr "parties/beneficialOwners/identifier/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/identifier/id"
-msgstr ""
+msgstr "parties/beneficialOwners/identifier/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/identifier/legalName"
-msgstr ""
+msgstr "parties/beneficialOwners/identifier/legalName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/identifier/uri"
-msgstr ""
+msgstr "parties/beneficialOwners/identifier/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/nationalities"
-msgstr ""
+msgstr "parties/beneficialOwners/nationalities"
 
 #: ../../docs/guidance/language.md:65
 msgid "Nationalities"
-msgstr ""
+msgstr "Nationalities"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address"
-msgstr ""
+msgstr "parties/beneficialOwners/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address/streetAddress"
-msgstr ""
+msgstr "parties/beneficialOwners/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address/locality"
-msgstr ""
+msgstr "parties/beneficialOwners/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address/region"
-msgstr ""
+msgstr "parties/beneficialOwners/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address/postalCode"
-msgstr ""
+msgstr "parties/beneficialOwners/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/address/countryName"
-msgstr ""
+msgstr "parties/beneficialOwners/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/email"
-msgstr ""
+msgstr "parties/beneficialOwners/email"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/faxNumber"
-msgstr ""
+msgstr "parties/beneficialOwners/faxNumber"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/telephone"
-msgstr ""
+msgstr "parties/beneficialOwners/telephone"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/beneficialOwners/jobTitle"
-msgstr ""
+msgstr "parties/beneficialOwners/jobTitle"
 
 #: ../../docs/guidance/language.md:65
 msgid "Job title"
-msgstr ""
+msgstr "Job title"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/classifications"
-msgstr ""
+msgstr "parties/classifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "Organization classifications"
-msgstr ""
+msgstr "Organization classifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/classifications/scheme"
-msgstr ""
+msgstr "parties/classifications/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/classifications/id"
-msgstr ""
+msgstr "parties/classifications/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/classifications/description"
-msgstr ""
+msgstr "parties/classifications/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/classifications/uri"
-msgstr ""
+msgstr "parties/classifications/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people"
-msgstr ""
+msgstr "parties/people"
 
 #: ../../docs/guidance/language.md:65
 msgid "People"
-msgstr ""
+msgstr "People"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/id"
-msgstr ""
+msgstr "parties/people/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/name"
-msgstr ""
+msgstr "parties/people/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/identifier"
-msgstr ""
+msgstr "parties/people/identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/identifier/scheme"
-msgstr ""
+msgstr "parties/people/identifier/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/identifier/id"
-msgstr ""
+msgstr "parties/people/identifier/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/identifier/legalName"
-msgstr ""
+msgstr "parties/people/identifier/legalName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/identifier/uri"
-msgstr ""
+msgstr "parties/people/identifier/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/nationalities"
-msgstr ""
+msgstr "parties/people/nationalities"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address"
-msgstr ""
+msgstr "parties/people/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address/streetAddress"
-msgstr ""
+msgstr "parties/people/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address/locality"
-msgstr ""
+msgstr "parties/people/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address/region"
-msgstr ""
+msgstr "parties/people/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address/postalCode"
-msgstr ""
+msgstr "parties/people/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/address/countryName"
-msgstr ""
+msgstr "parties/people/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/email"
-msgstr ""
+msgstr "parties/people/email"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/faxNumber"
-msgstr ""
+msgstr "parties/people/faxNumber"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/telephone"
-msgstr ""
+msgstr "parties/people/telephone"
 
 #: ../../docs/guidance/language.md:65
 msgid "parties/people/jobTitle"
-msgstr ""
+msgstr "parties/people/jobTitle"
 
 #: ../../docs/guidance/language.md:65
 msgid "assetLifetime"
-msgstr ""
+msgstr "assetLifetime"
 
 #: ../../docs/guidance/language.md:65
 msgid "Asset lifetime"
-msgstr ""
+msgstr "Asset lifetime"
 
 #: ../../docs/guidance/language.md:65
 msgid "assetLifetime/startDate"
-msgstr ""
+msgstr "assetLifetime/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "assetLifetime/endDate"
-msgstr ""
+msgstr "assetLifetime/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "assetLifetime/maxExtentDate"
-msgstr ""
+msgstr "assetLifetime/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "assetLifetime/durationInDays"
-msgstr ""
+msgstr "assetLifetime/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "identificationPeriod"
-msgstr ""
+msgstr "identificationPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Identification period"
-msgstr ""
+msgstr "Identification period"
 
 #: ../../docs/guidance/language.md:65
 msgid "identificationPeriod/startDate"
-msgstr ""
+msgstr "identificationPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "identificationPeriod/endDate"
-msgstr ""
+msgstr "identificationPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "identificationPeriod/maxExtentDate"
-msgstr ""
+msgstr "identificationPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "identificationPeriod/durationInDays"
-msgstr ""
+msgstr "identificationPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "preparationPeriod"
-msgstr ""
+msgstr "preparationPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Preparation period"
-msgstr ""
+msgstr "Preparation period"
 
 #: ../../docs/guidance/language.md:65
 msgid "preparationPeriod/startDate"
-msgstr ""
+msgstr "preparationPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "preparationPeriod/endDate"
-msgstr ""
+msgstr "preparationPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "preparationPeriod/maxExtentDate"
-msgstr ""
+msgstr "preparationPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "preparationPeriod/durationInDays"
-msgstr ""
+msgstr "preparationPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "implementationPeriod"
-msgstr ""
+msgstr "implementationPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Implementation period"
-msgstr ""
+msgstr "Implementation period"
 
 #: ../../docs/guidance/language.md:65
 msgid "implementationPeriod/startDate"
-msgstr ""
+msgstr "implementationPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "implementationPeriod/endDate"
-msgstr ""
+msgstr "implementationPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "implementationPeriod/maxExtentDate"
-msgstr ""
+msgstr "implementationPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "implementationPeriod/durationInDays"
-msgstr ""
+msgstr "implementationPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "completionPeriod"
-msgstr ""
+msgstr "completionPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Completion period"
-msgstr ""
+msgstr "Completion period"
 
 #: ../../docs/guidance/language.md:65
 msgid "completionPeriod/startDate"
-msgstr ""
+msgstr "completionPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "completionPeriod/endDate"
-msgstr ""
+msgstr "completionPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "completionPeriod/maxExtentDate"
-msgstr ""
+msgstr "completionPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "completionPeriod/durationInDays"
-msgstr ""
+msgstr "completionPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "maintenancePeriod"
-msgstr ""
+msgstr "maintenancePeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Maintenance period"
-msgstr ""
+msgstr "Maintenance period"
 
 #: ../../docs/guidance/language.md:65
 msgid "maintenancePeriod/startDate"
-msgstr ""
+msgstr "maintenancePeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "maintenancePeriod/endDate"
-msgstr ""
+msgstr "maintenancePeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "maintenancePeriod/maxExtentDate"
-msgstr ""
+msgstr "maintenancePeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "maintenancePeriod/durationInDays"
-msgstr ""
+msgstr "maintenancePeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "decommissioningPeriod"
-msgstr ""
+msgstr "decommissioningPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Decommissioning period"
-msgstr ""
+msgstr "Decommissioning period"
 
 #: ../../docs/guidance/language.md:65
 msgid "decommissioningPeriod/startDate"
-msgstr ""
+msgstr "decommissioningPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "decommissioningPeriod/endDate"
-msgstr ""
+msgstr "decommissioningPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "decommissioningPeriod/maxExtentDate"
-msgstr ""
+msgstr "decommissioningPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "decommissioningPeriod/durationInDays"
-msgstr ""
+msgstr "decommissioningPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts"
-msgstr ""
+msgstr "forecasts"
 
 #: ../../docs/guidance/language.md:65
 msgid "Forecasts"
-msgstr ""
+msgstr "Forecasts"
 
 #: ../../docs/guidance/language.md:65
 msgid "Metric"
-msgstr ""
+msgstr "Metric"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/id"
-msgstr ""
+msgstr "forecasts/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/title"
-msgstr ""
+msgstr "forecasts/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/description"
-msgstr ""
+msgstr "forecasts/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations"
-msgstr ""
+msgstr "forecasts/observations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Observations"
-msgstr ""
+msgstr "Observations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Observation"
-msgstr ""
+msgstr "Observation"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/id"
-msgstr ""
+msgstr "forecasts/observations/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/period"
-msgstr ""
+msgstr "forecasts/observations/period"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/period/startDate"
-msgstr ""
+msgstr "forecasts/observations/period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/period/endDate"
-msgstr ""
+msgstr "forecasts/observations/period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/period/maxExtentDate"
-msgstr ""
+msgstr "forecasts/observations/period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/period/durationInDays"
-msgstr ""
+msgstr "forecasts/observations/period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/value"
-msgstr ""
+msgstr "forecasts/observations/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/value/amount"
-msgstr ""
+msgstr "forecasts/observations/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/value/currency"
-msgstr ""
+msgstr "forecasts/observations/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/measure"
-msgstr ""
+msgstr "forecasts/observations/measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "Measure"
-msgstr ""
+msgstr "Measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "Only string measures can be internationalized."
-msgstr ""
+msgstr "Only string measures can be internationalized."
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/unit"
-msgstr ""
+msgstr "forecasts/observations/unit"
 
 #: ../../docs/guidance/language.md:65
 msgid "Unit"
-msgstr ""
+msgstr "Unit"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/unit/name"
-msgstr ""
+msgstr "forecasts/observations/unit/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "Unit name"
-msgstr ""
+msgstr "Unit name"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/unit/scheme"
-msgstr ""
+msgstr "forecasts/observations/unit/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/unit/id"
-msgstr ""
+msgstr "forecasts/observations/unit/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/unit/uri"
-msgstr ""
+msgstr "forecasts/observations/unit/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/dimensions"
-msgstr ""
+msgstr "forecasts/observations/dimensions"
 
 #: ../../docs/guidance/language.md:65
 msgid "Dimensions"
-msgstr ""
+msgstr "Dimensions"
 
 #: ../../docs/guidance/language.md:65
 msgid "forecasts/observations/notes"
-msgstr ""
+msgstr "forecasts/observations/notes"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics"
-msgstr ""
+msgstr "metrics"
 
 #: ../../docs/guidance/language.md:65
 msgid "Metrics"
-msgstr ""
+msgstr "Metrics"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/id"
-msgstr ""
+msgstr "metrics/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/title"
-msgstr ""
+msgstr "metrics/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/description"
-msgstr ""
+msgstr "metrics/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations"
-msgstr ""
+msgstr "metrics/observations"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/id"
-msgstr ""
+msgstr "metrics/observations/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/period"
-msgstr ""
+msgstr "metrics/observations/period"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/period/startDate"
-msgstr ""
+msgstr "metrics/observations/period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/period/endDate"
-msgstr ""
+msgstr "metrics/observations/period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/period/maxExtentDate"
-msgstr ""
+msgstr "metrics/observations/period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/period/durationInDays"
-msgstr ""
+msgstr "metrics/observations/period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/value"
-msgstr ""
+msgstr "metrics/observations/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/value/amount"
-msgstr ""
+msgstr "metrics/observations/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/value/currency"
-msgstr ""
+msgstr "metrics/observations/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/measure"
-msgstr ""
+msgstr "metrics/observations/measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/unit"
-msgstr ""
+msgstr "metrics/observations/unit"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/unit/name"
-msgstr ""
+msgstr "metrics/observations/unit/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/unit/scheme"
-msgstr ""
+msgstr "metrics/observations/unit/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/unit/id"
-msgstr ""
+msgstr "metrics/observations/unit/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/unit/uri"
-msgstr ""
+msgstr "metrics/observations/unit/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/dimensions"
-msgstr ""
+msgstr "metrics/observations/dimensions"
 
 #: ../../docs/guidance/language.md:65
 msgid "metrics/observations/notes"
-msgstr ""
+msgstr "metrics/observations/notes"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones"
-msgstr ""
+msgstr "milestones"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestones"
-msgstr ""
+msgstr "Milestones"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone"
-msgstr ""
+msgstr "Milestone"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/id"
-msgstr ""
+msgstr "milestones/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/title"
-msgstr ""
+msgstr "milestones/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/type"
-msgstr ""
+msgstr "milestones/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone type"
-msgstr ""
+msgstr "Milestone type"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/description"
-msgstr ""
+msgstr "milestones/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/code"
-msgstr ""
+msgstr "milestones/code"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone code"
-msgstr ""
+msgstr "Milestone code"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/dueDate"
-msgstr ""
+msgstr "milestones/dueDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Due date"
-msgstr ""
+msgstr "Due date"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/dateMet"
-msgstr ""
+msgstr "milestones/dateMet"
 
 #: ../../docs/guidance/language.md:65
 msgid "Date met"
-msgstr ""
+msgstr "Date met"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/dateModified"
-msgstr ""
+msgstr "milestones/dateModified"
 
 #: ../../docs/guidance/language.md:65
 msgid "Date modified"
-msgstr ""
+msgstr "Date modified"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/status"
-msgstr ""
+msgstr "milestones/status"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/value"
-msgstr ""
+msgstr "milestones/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/value/amount"
-msgstr ""
+msgstr "milestones/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "milestones/value/currency"
-msgstr ""
+msgstr "milestones/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion"
-msgstr ""
+msgstr "completion"
 
 #: ../../docs/guidance/language.md:65
 msgid "Completion"
-msgstr ""
+msgstr "Completion"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/endDate"
-msgstr ""
+msgstr "completion/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/endDateDetails"
-msgstr ""
+msgstr "completion/endDateDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "End date details"
-msgstr ""
+msgstr "End date details"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalValue"
-msgstr ""
+msgstr "completion/finalValue"
 
 #: ../../docs/guidance/language.md:65
 msgid "Final value"
-msgstr ""
+msgstr "Final value"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalValue/amount"
-msgstr ""
+msgstr "completion/finalValue/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalValue/currency"
-msgstr ""
+msgstr "completion/finalValue/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalValueDetails"
-msgstr ""
+msgstr "completion/finalValueDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "Final value details"
-msgstr ""
+msgstr "Final value details"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalScope"
-msgstr ""
+msgstr "completion/finalScope"
 
 #: ../../docs/guidance/language.md:65
 msgid "Final scope"
-msgstr ""
+msgstr "Final scope"
 
 #: ../../docs/guidance/language.md:65
 msgid "completion/finalScopeDetails"
-msgstr ""
+msgstr "completion/finalScopeDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "Final scope details"
-msgstr ""
+msgstr "Final scope details"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements"
-msgstr ""
+msgstr "costMeasurements"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost measurements"
-msgstr ""
+msgstr "Cost measurements"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost measurement"
-msgstr ""
+msgstr "Cost measurement"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/id"
-msgstr ""
+msgstr "costMeasurements/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Local identifier"
-msgstr ""
+msgstr "Local identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/date"
-msgstr ""
+msgstr "costMeasurements/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/lifeCycleCosting"
-msgstr ""
+msgstr "costMeasurements/lifeCycleCosting"
 
 #: ../../docs/guidance/language.md:65
 msgid "Life-cycle costing"
-msgstr ""
+msgstr "Life-cycle costing"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/lifeCycleCosting/value"
-msgstr ""
+msgstr "costMeasurements/lifeCycleCosting/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "Life-cycle cost"
-msgstr ""
+msgstr "Life-cycle cost"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/lifeCycleCosting/value/amount"
-msgstr ""
+msgstr "costMeasurements/lifeCycleCosting/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/lifeCycleCosting/value/currency"
-msgstr ""
+msgstr "costMeasurements/lifeCycleCosting/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups"
-msgstr ""
+msgstr "costMeasurements/costGroups"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost groups"
-msgstr ""
+msgstr "Cost groups"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost group"
-msgstr ""
+msgstr "Cost group"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/id"
-msgstr ""
+msgstr "costMeasurements/costGroups/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/category"
-msgstr ""
+msgstr "costMeasurements/costGroups/category"
 
 #: ../../docs/guidance/language.md:65
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs"
 
 #: ../../docs/guidance/language.md:65
 msgid "Costs"
-msgstr ""
+msgstr "Costs"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost"
-msgstr ""
+msgstr "Cost"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/id"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Local Identifier"
-msgstr ""
+msgstr "Local Identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/classification"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/classification"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/classification/scheme"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/classification/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/classification/id"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/classification/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/classification/description"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/classification/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/classification/uri"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/classification/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/value"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/value/amount"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "costMeasurements/costGroups/costs/value/currency"
-msgstr ""
+msgstr "costMeasurements/costGroups/costs/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions"
-msgstr ""
+msgstr "transactions"
 
 #: ../../docs/guidance/language.md:65
 msgid "Transactions"
-msgstr ""
+msgstr "Transactions"
 
 #: ../../docs/guidance/language.md:65
 msgid "Transaction information"
-msgstr ""
+msgstr "Transaction information"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/id"
-msgstr ""
+msgstr "transactions/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/source"
-msgstr ""
+msgstr "transactions/source"
 
 #: ../../docs/guidance/language.md:65
 msgid "Data source"
-msgstr ""
+msgstr "Data source"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/date"
-msgstr ""
+msgstr "transactions/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/value"
-msgstr ""
+msgstr "transactions/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/value/amount"
-msgstr ""
+msgstr "transactions/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/value/currency"
-msgstr ""
+msgstr "transactions/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payer"
-msgstr ""
+msgstr "transactions/payer"
 
 #: ../../docs/guidance/language.md:65
 msgid "Payer"
-msgstr ""
+msgstr "Payer"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payer/name"
-msgstr ""
+msgstr "transactions/payer/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payer/id"
-msgstr ""
+msgstr "transactions/payer/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payee"
-msgstr ""
+msgstr "transactions/payee"
 
 #: ../../docs/guidance/language.md:65
 msgid "Payee"
-msgstr ""
+msgstr "Payee"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payee/name"
-msgstr ""
+msgstr "transactions/payee/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/payee/id"
-msgstr ""
+msgstr "transactions/payee/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/uri"
-msgstr ""
+msgstr "transactions/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "Linked spending information"
-msgstr ""
+msgstr "Linked spending information"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/relatedImplementationMilestone"
-msgstr ""
+msgstr "transactions/relatedImplementationMilestone"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related implementation milestone"
-msgstr ""
+msgstr "Related implementation milestone"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone Reference"
-msgstr ""
+msgstr "Milestone Reference"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/relatedImplementationMilestone/id"
-msgstr ""
+msgstr "transactions/relatedImplementationMilestone/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone ID"
-msgstr ""
+msgstr "Milestone ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "transactions/relatedImplementationMilestone/title"
-msgstr ""
+msgstr "transactions/relatedImplementationMilestone/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "Milestone title"
-msgstr ""
+msgstr "Milestone title"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents"
-msgstr ""
+msgstr "documents"
 
 #: ../../docs/guidance/language.md:65
 msgid "Documents"
-msgstr ""
+msgstr "Documents"
 
 #: ../../docs/guidance/language.md:65
 msgid "Document"
-msgstr ""
+msgstr "Document"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/id"
-msgstr ""
+msgstr "documents/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/documentType"
-msgstr ""
+msgstr "documents/documentType"
 
 #: ../../docs/guidance/language.md:65
 msgid "Document type"
-msgstr ""
+msgstr "Document type"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/title"
-msgstr ""
+msgstr "documents/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/description"
-msgstr ""
+msgstr "documents/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/url"
-msgstr ""
+msgstr "documents/url"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/datePublished"
-msgstr ""
+msgstr "documents/datePublished"
 
 #: ../../docs/guidance/language.md:65
 msgid "Date published"
-msgstr ""
+msgstr "Date published"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/dateModified"
-msgstr ""
+msgstr "documents/dateModified"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/format"
-msgstr ""
+msgstr "documents/format"
 
 #: ../../docs/guidance/language.md:65
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/language"
-msgstr ""
+msgstr "documents/language"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/pageStart"
-msgstr ""
+msgstr "documents/pageStart"
 
 #: ../../docs/guidance/language.md:65
 msgid "Page start"
-msgstr ""
+msgstr "Page start"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/pageEnd"
-msgstr ""
+msgstr "documents/pageEnd"
 
 #: ../../docs/guidance/language.md:65
 msgid "Page end"
-msgstr ""
+msgstr "Page end"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/accessDetails"
-msgstr ""
+msgstr "documents/accessDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "Access details"
-msgstr ""
+msgstr "Access details"
 
 #: ../../docs/guidance/language.md:65
 msgid "documents/author"
-msgstr ""
+msgstr "documents/author"
 
 #: ../../docs/guidance/language.md:65
 msgid "Author"
-msgstr ""
+msgstr "Author"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses"
-msgstr ""
+msgstr "contractingProcesses"
 
 #: ../../docs/guidance/language.md:65
 msgid "Contracting processes"
-msgstr ""
+msgstr "Contracting processes"
 
 #: ../../docs/guidance/language.md:65
 msgid "Contracting process"
-msgstr ""
+msgstr "Contracting process"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/id"
-msgstr ""
+msgstr "contractingProcesses/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary"
-msgstr ""
+msgstr "contractingProcesses/summary"
 
 #: ../../docs/guidance/language.md:65
 msgid "Summary"
-msgstr ""
+msgstr "Summary"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/ocid"
-msgstr ""
+msgstr "contractingProcesses/summary/ocid"
 
 #: ../../docs/guidance/language.md:65
 msgid "Open Contracting Identifier"
-msgstr ""
+msgstr "Open Contracting Identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/externalReference"
-msgstr ""
+msgstr "contractingProcesses/summary/externalReference"
 
 #: ../../docs/guidance/language.md:65
 msgid "External reference"
-msgstr ""
+msgstr "External reference"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/nature"
-msgstr ""
+msgstr "contractingProcesses/summary/nature"
 
 #: ../../docs/guidance/language.md:65
 msgid "Nature"
-msgstr ""
+msgstr "Nature"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/title"
-msgstr ""
+msgstr "contractingProcesses/summary/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/description"
-msgstr ""
+msgstr "contractingProcesses/summary/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/status"
-msgstr ""
+msgstr "contractingProcesses/summary/status"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender"
-msgstr ""
+msgstr "contractingProcesses/summary/tender"
 
 #: ../../docs/guidance/language.md:65
 msgid "Tender"
-msgstr ""
+msgstr "Tender"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/procurementMethod"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/procurementMethod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Procurement method"
-msgstr ""
+msgstr "Procurement method"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/procurementMethodDetails"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/procurementMethodDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "Procurement method details"
-msgstr ""
+msgstr "Procurement method details"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/datePublished"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/datePublished"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/costEstimate"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/costEstimate"
 
 #: ../../docs/guidance/language.md:65
 msgid "Cost estimate"
-msgstr ""
+msgstr "Cost estimate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/costEstimate/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/costEstimate/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/costEstimate/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/costEstimate/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/numberOfTenderers"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/numberOfTenderers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Number of tenderers"
-msgstr ""
+msgstr "Number of tenderers"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/tenderers"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/tenderers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Tenderers"
-msgstr ""
+msgstr "Tenderers"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/tenderers/name"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/tenderers/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/tenderers/id"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/tenderers/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/procuringEntity"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/procuringEntity"
 
 #: ../../docs/guidance/language.md:65
 msgid "Procuring entity"
-msgstr ""
+msgstr "Procuring entity"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/procuringEntity/name"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/procuringEntity/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/procuringEntity/id"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/procuringEntity/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/administrativeEntity"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/administrativeEntity"
 
 #: ../../docs/guidance/language.md:65
 msgid "Administrative entity"
-msgstr ""
+msgstr "Administrative entity"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/administrativeEntity/name"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/administrativeEntity/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/administrativeEntity/id"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/administrativeEntity/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/sustainability"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/sustainability"
 
 #: ../../docs/guidance/language.md:65
 msgid "Sustainability"
-msgstr ""
+msgstr "Sustainability"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/tender/sustainability/strategies"
-msgstr ""
+msgstr "contractingProcesses/summary/tender/sustainability/strategies"
 
 #: ../../docs/guidance/language.md:65
 msgid "Strategies"
-msgstr ""
+msgstr "Strategies"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/suppliers"
-msgstr ""
+msgstr "contractingProcesses/summary/suppliers"
 
 #: ../../docs/guidance/language.md:65
 msgid "Suppliers"
-msgstr ""
+msgstr "Suppliers"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/suppliers/name"
-msgstr ""
+msgstr "contractingProcesses/summary/suppliers/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/suppliers/id"
-msgstr ""
+msgstr "contractingProcesses/summary/suppliers/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractValue"
-msgstr ""
+msgstr "contractingProcesses/summary/contractValue"
 
 #: ../../docs/guidance/language.md:65
 msgid "Contract value"
-msgstr ""
+msgstr "Contract value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractValue/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/contractValue/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractValue/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/contractValue/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractPeriod"
-msgstr ""
+msgstr "contractingProcesses/summary/contractPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Contract period"
-msgstr ""
+msgstr "Contract period"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractPeriod/startDate"
-msgstr ""
+msgstr "contractingProcesses/summary/contractPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractPeriod/endDate"
-msgstr ""
+msgstr "contractingProcesses/summary/contractPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractPeriod/maxExtentDate"
-msgstr ""
+msgstr "contractingProcesses/summary/contractPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/contractPeriod/durationInDays"
-msgstr ""
+msgstr "contractingProcesses/summary/contractPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finalValue"
-msgstr ""
+msgstr "contractingProcesses/summary/finalValue"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finalValue/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/finalValue/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finalValue/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/finalValue/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents"
-msgstr ""
+msgstr "contractingProcesses/summary/documents"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/id"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/documentType"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/documentType"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/title"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/description"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/url"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/url"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/datePublished"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/datePublished"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/dateModified"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/dateModified"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/format"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/format"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/language"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/language"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/pageStart"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/pageStart"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/pageEnd"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/pageEnd"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/accessDetails"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/accessDetails"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/documents/author"
-msgstr ""
+msgstr "contractingProcesses/summary/documents/author"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "Modifications"
-msgstr ""
+msgstr "Modifications"
 
 #: ../../docs/guidance/language.md:65
 msgid "Modification"
-msgstr ""
+msgstr "Modification"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/id"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/date"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/description"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/rationale"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/rationale"
 
 #: ../../docs/guidance/language.md:65
 msgid "Rationale"
-msgstr ""
+msgstr "Rationale"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/type"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/releaseID"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/releaseID"
 
 #: ../../docs/guidance/language.md:65
 msgid "Release ID"
-msgstr ""
+msgstr "Release ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractValue"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/oldContractValue"
 
 #: ../../docs/guidance/language.md:65
 msgid "Old contract value"
-msgstr ""
+msgstr "Old contract value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractValue/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/oldContractValue/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractValue/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/oldContractValue/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractValue"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/newContractValue"
 
 #: ../../docs/guidance/language.md:65
 msgid "New contract value"
-msgstr ""
+msgstr "New contract value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractValue/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/newContractValue/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractValue/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/newContractValue/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractPeriod"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/oldContractPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "Old contract period"
-msgstr ""
+msgstr "Old contract period"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractPeriod/startDate"
 msgstr ""
+"contractingProcesses/summary/modifications/oldContractPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/oldContractPeriod/endDate"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/oldContractPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/modifications/oldContractPeriod/maxExtentDate"
 msgstr ""
+"contractingProcesses/summary/modifications/oldContractPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/modifications/oldContractPeriod/durationInDays"
 msgstr ""
+"contractingProcesses/summary/modifications/oldContractPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractPeriod"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/newContractPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "New contract period"
-msgstr ""
+msgstr "New contract period"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractPeriod/startDate"
 msgstr ""
+"contractingProcesses/summary/modifications/newContractPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/modifications/newContractPeriod/endDate"
-msgstr ""
+msgstr "contractingProcesses/summary/modifications/newContractPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/modifications/newContractPeriod/maxExtentDate"
 msgstr ""
+"contractingProcesses/summary/modifications/newContractPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/modifications/newContractPeriod/durationInDays"
 msgstr ""
+"contractingProcesses/summary/modifications/newContractPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/id"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/source"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/source"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/date"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/value"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/value/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/value/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payer"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payer"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payer/name"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payer/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payer/id"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payer/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payee"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payee"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payee/name"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payee/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/payee/id"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/payee/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/transactions/uri"
-msgstr ""
+msgstr "contractingProcesses/summary/transactions/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/transactions/relatedImplementationMilestone"
 msgstr ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/transactions/relatedImplementationMilestone/id"
 msgstr ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone/id"
 
 #: ../../docs/guidance/language.md:65
 msgid ""
 "contractingProcesses/summary/transactions/relatedImplementationMilestone/title"
 msgstr ""
+"contractingProcesses/summary/transactions/relatedImplementationMilestone/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/id"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/title"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/type"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/description"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/code"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/code"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/dueDate"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/dueDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/dateMet"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/dateMet"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/dateModified"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/dateModified"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/status"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/status"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/value"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/value/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/milestones/value/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/milestones/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance"
-msgstr ""
+msgstr "contractingProcesses/summary/finance"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/id"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/title"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/description"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/value"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/value"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/value/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/value/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/value/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/value/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/financingParty"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/financingParty"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/financingParty/name"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/financingParty/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/financingParty/id"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/financingParty/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/financingPartyType"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/financingPartyType"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/source"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/source"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/assetClass"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/assetClass"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/type"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/repaymentPriority"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/repaymentPriority"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/concessional"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/concessional"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/resultsBased"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/resultsBased"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/period"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/period"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/period/startDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/period/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/period/endDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/period/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/period/maxExtentDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/period/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/period/durationInDays"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/period/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentPeriod"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentPeriod"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentPeriod/startDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentPeriod/startDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentPeriod/endDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentPeriod/endDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentPeriod/maxExtentDate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentPeriod/maxExtentDate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentPeriod/durationInDays"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentPeriod/durationInDays"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/paymentFrequency"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/paymentFrequency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/interestRate"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/interestRate"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/interestRate/base"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/interestRate/base"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/interestRate/margin"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/interestRate/margin"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/interestRate/fixed"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/interestRate/fixed"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/interestRate/notes"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/interestRate/notes"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/exchangeRateGuarantee"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/exchangeRateGuarantee"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/stepInRights"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/stepInRights"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/finance/relatedLots"
-msgstr ""
+msgstr "contractingProcesses/summary/finance/relatedLots"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social"
-msgstr ""
+msgstr "contractingProcesses/summary/social"
 
 #: ../../docs/guidance/language.md:65
 msgid "Social"
-msgstr ""
+msgstr "Social"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborBudget"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborBudget"
 
 #: ../../docs/guidance/language.md:65
 msgid "Labor budget"
-msgstr ""
+msgstr "Labor budget"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborBudget/amount"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborBudget/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborBudget/currency"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborBudget/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborObligations"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborObligations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Labor obligations"
-msgstr ""
+msgstr "Labor obligations"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborObligations/obligations"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborObligations/obligations"
 
 #: ../../docs/guidance/language.md:65
 msgid "Obligations"
-msgstr ""
+msgstr "Obligations"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/summary/social/laborObligations/description"
-msgstr ""
+msgstr "contractingProcesses/summary/social/laborObligations/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/releases"
-msgstr ""
+msgstr "contractingProcesses/releases"
 
 #: ../../docs/guidance/language.md:65
 msgid "Linked releases"
-msgstr ""
+msgstr "Linked releases"
 
 #: ../../docs/guidance/language.md:65
 msgid "Release"
-msgstr ""
+msgstr "Release"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/releases/id"
-msgstr ""
+msgstr "contractingProcesses/releases/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/releases/tag"
-msgstr ""
+msgstr "contractingProcesses/releases/tag"
 
 #: ../../docs/guidance/language.md:65
 msgid "Release tag"
-msgstr ""
+msgstr "Release tag"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/releases/date"
-msgstr ""
+msgstr "contractingProcesses/releases/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "contractingProcesses/releases/url"
-msgstr ""
+msgstr "contractingProcesses/releases/url"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects"
-msgstr ""
+msgstr "relatedProjects"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related projects"
-msgstr ""
+msgstr "Related projects"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related project"
-msgstr ""
+msgstr "Related project"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/id"
-msgstr ""
+msgstr "relatedProjects/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "Relationship ID"
-msgstr ""
+msgstr "Relationship ID"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/scheme"
-msgstr ""
+msgstr "relatedProjects/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/identifier"
-msgstr ""
+msgstr "relatedProjects/identifier"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/relationship"
-msgstr ""
+msgstr "relatedProjects/relationship"
 
 #: ../../docs/guidance/language.md:65
 msgid "Relationship"
-msgstr ""
+msgstr "Relationship"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/title"
-msgstr ""
+msgstr "relatedProjects/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related project title"
-msgstr ""
+msgstr "Related project title"
 
 #: ../../docs/guidance/language.md:65
 msgid "relatedProjects/uri"
-msgstr ""
+msgstr "relatedProjects/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "Related project URI"
-msgstr ""
+msgstr "Related project URI"
 
 #: ../../docs/guidance/language.md:65
 msgid "policyAlignment"
-msgstr ""
+msgstr "policyAlignment"
 
 #: ../../docs/guidance/language.md:65
 msgid "Policy alignment"
-msgstr ""
+msgstr "Policy alignment"
 
 #: ../../docs/guidance/language.md:65
 msgid "policyAlignment/policies"
-msgstr ""
+msgstr "policyAlignment/policies"
 
 #: ../../docs/guidance/language.md:65
 msgid "Policies"
-msgstr ""
+msgstr "Policies"
 
 #: ../../docs/guidance/language.md:65
 msgid "policyAlignment/description"
-msgstr ""
+msgstr "policyAlignment/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits"
-msgstr ""
+msgstr "benefits"
 
 #: ../../docs/guidance/language.md:65
 msgid "Benefits"
-msgstr ""
+msgstr "Benefits"
 
 #: ../../docs/guidance/language.md:65
 msgid "Benefit"
-msgstr ""
+msgstr "Benefit"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/title"
-msgstr ""
+msgstr "benefits/title"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/description"
-msgstr ""
+msgstr "benefits/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries"
-msgstr ""
+msgstr "benefits/beneficiaries"
 
 #: ../../docs/guidance/language.md:65
 msgid "Beneficiaries"
-msgstr ""
+msgstr "Beneficiaries"
 
 #: ../../docs/guidance/language.md:65
 msgid "Beneficiary"
-msgstr ""
+msgstr "Beneficiary"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location"
-msgstr ""
+msgstr "benefits/beneficiaries/location"
 
 #: ../../docs/guidance/language.md:65
 msgid "Location"
-msgstr ""
+msgstr "Location"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/id"
-msgstr ""
+msgstr "benefits/beneficiaries/location/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/description"
-msgstr ""
+msgstr "benefits/beneficiaries/location/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/geometry"
-msgstr ""
+msgstr "benefits/beneficiaries/location/geometry"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/geometry/type"
-msgstr ""
+msgstr "benefits/beneficiaries/location/geometry/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/geometry/coordinates"
-msgstr ""
+msgstr "benefits/beneficiaries/location/geometry/coordinates"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/gazetteer"
-msgstr ""
+msgstr "benefits/beneficiaries/location/gazetteer"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/gazetteer/scheme"
-msgstr ""
+msgstr "benefits/beneficiaries/location/gazetteer/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/gazetteer/identifiers"
-msgstr ""
+msgstr "benefits/beneficiaries/location/gazetteer/identifiers"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/uri"
-msgstr ""
+msgstr "benefits/beneficiaries/location/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address/streetAddress"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address/locality"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address/region"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address/postalCode"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/location/address/countryName"
-msgstr ""
+msgstr "benefits/beneficiaries/location/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/description"
-msgstr ""
+msgstr "benefits/beneficiaries/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "benefits/beneficiaries/numberOfPeople"
-msgstr ""
+msgstr "benefits/beneficiaries/numberOfPeople"
 
 #: ../../docs/guidance/language.md:65
 msgid "Number of people"
-msgstr ""
+msgstr "Number of people"
 
 #: ../../docs/guidance/language.md:65
 msgid "social"
-msgstr ""
+msgstr "social"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings"
-msgstr ""
+msgstr "social/consultationMeetings"
 
 #: ../../docs/guidance/language.md:65
 msgid "Public consultation meetings"
-msgstr ""
+msgstr "Public consultation meetings"
 
 #: ../../docs/guidance/language.md:65
 msgid "Meeting"
-msgstr ""
+msgstr "Meeting"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/id"
-msgstr ""
+msgstr "social/consultationMeetings/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/date"
-msgstr ""
+msgstr "social/consultationMeetings/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address"
-msgstr ""
+msgstr "social/consultationMeetings/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address/streetAddress"
-msgstr ""
+msgstr "social/consultationMeetings/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address/locality"
-msgstr ""
+msgstr "social/consultationMeetings/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address/region"
-msgstr ""
+msgstr "social/consultationMeetings/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address/postalCode"
-msgstr ""
+msgstr "social/consultationMeetings/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/address/countryName"
-msgstr ""
+msgstr "social/consultationMeetings/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/numberOfParticipants"
-msgstr ""
+msgstr "social/consultationMeetings/numberOfParticipants"
 
 #: ../../docs/guidance/language.md:65
 msgid "Number of participants"
-msgstr ""
+msgstr "Number of participants"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice"
 
 #: ../../docs/guidance/language.md:65
 msgid "Public office"
-msgstr ""
+msgstr "Public office"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/person"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/person"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/person/name"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/person/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/organization"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/organization"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/organization/name"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/organization/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/organization/id"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/organization/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/consultationMeetings/publicOffice/jobTitle"
-msgstr ""
+msgstr "social/consultationMeetings/publicOffice/jobTitle"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/landCompensationBudget"
-msgstr ""
+msgstr "social/landCompensationBudget"
 
 #: ../../docs/guidance/language.md:65
 msgid "Land compensation budget"
-msgstr ""
+msgstr "Land compensation budget"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/landCompensationBudget/amount"
-msgstr ""
+msgstr "social/landCompensationBudget/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/landCompensationBudget/currency"
-msgstr ""
+msgstr "social/landCompensationBudget/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/inIndigenousLand"
-msgstr ""
+msgstr "social/inIndigenousLand"
 
 #: ../../docs/guidance/language.md:65
 msgid "In indigenous land"
-msgstr ""
+msgstr "In indigenous land"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/healthAndSafety"
-msgstr ""
+msgstr "social/healthAndSafety"
 
 #: ../../docs/guidance/language.md:65
 msgid "Health and safety"
-msgstr ""
+msgstr "Health and safety"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/healthAndSafety/materialTests"
-msgstr ""
+msgstr "social/healthAndSafety/materialTests"
 
 #: ../../docs/guidance/language.md:65
 msgid "Material tests"
-msgstr ""
+msgstr "Material tests"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/healthAndSafety/materialTests/tests"
-msgstr ""
+msgstr "social/healthAndSafety/materialTests/tests"
 
 #: ../../docs/guidance/language.md:65
 msgid "Tests"
-msgstr ""
+msgstr "Tests"
 
 #: ../../docs/guidance/language.md:65
 msgid "social/healthAndSafety/materialTests/description"
-msgstr ""
+msgstr "social/healthAndSafety/materialTests/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment"
-msgstr ""
+msgstr "environment"
 
 #: ../../docs/guidance/language.md:65
 msgid "Environment"
-msgstr ""
+msgstr "Environment"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/goals"
-msgstr ""
+msgstr "environment/goals"
 
 #: ../../docs/guidance/language.md:65
 msgid "Environmental goals"
-msgstr ""
+msgstr "Environmental goals"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/climateOversightTypes"
-msgstr ""
+msgstr "environment/climateOversightTypes"
 
 #: ../../docs/guidance/language.md:65
 msgid "Climate oversight types"
-msgstr ""
+msgstr "Climate oversight types"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/hasImpactAssessment"
-msgstr ""
+msgstr "environment/hasImpactAssessment"
 
 #: ../../docs/guidance/language.md:65
 msgid "Has impact assessment"
-msgstr ""
+msgstr "Has impact assessment"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/impactCategories"
-msgstr ""
+msgstr "environment/impactCategories"
 
 #: ../../docs/guidance/language.md:65
 msgid "Impact categories"
-msgstr ""
+msgstr "Impact categories"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/impactCategories/scheme"
-msgstr ""
+msgstr "environment/impactCategories/scheme"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/impactCategories/id"
-msgstr ""
+msgstr "environment/impactCategories/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/impactCategories/description"
-msgstr ""
+msgstr "environment/impactCategories/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/impactCategories/uri"
-msgstr ""
+msgstr "environment/impactCategories/uri"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/climateMeasures"
-msgstr ""
+msgstr "environment/climateMeasures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Climate measures"
-msgstr ""
+msgstr "Climate measures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Climate measure"
-msgstr ""
+msgstr "Climate measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/climateMeasures/type"
-msgstr ""
+msgstr "environment/climateMeasures/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/climateMeasures/description"
-msgstr ""
+msgstr "environment/climateMeasures/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/conservationMeasures"
-msgstr ""
+msgstr "environment/conservationMeasures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Conservation measures"
-msgstr ""
+msgstr "Conservation measures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Conservation measure"
-msgstr ""
+msgstr "Conservation measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/conservationMeasures/type"
-msgstr ""
+msgstr "environment/conservationMeasures/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/conservationMeasures/description"
-msgstr ""
+msgstr "environment/conservationMeasures/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/environmentalMeasures"
-msgstr ""
+msgstr "environment/environmentalMeasures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Environmental measures"
-msgstr ""
+msgstr "Environmental measures"
 
 #: ../../docs/guidance/language.md:65
 msgid "Environmental measure"
-msgstr ""
+msgstr "Environmental measure"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/environmentalMeasures/type"
-msgstr ""
+msgstr "environment/environmentalMeasures/type"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/environmentalMeasures/description"
-msgstr ""
+msgstr "environment/environmentalMeasures/description"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/abatementCost"
-msgstr ""
+msgstr "environment/abatementCost"
 
 #: ../../docs/guidance/language.md:65
 msgid "Abatement cost"
-msgstr ""
+msgstr "Abatement cost"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/abatementCost/amount"
-msgstr ""
+msgstr "environment/abatementCost/amount"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/abatementCost/currency"
-msgstr ""
+msgstr "environment/abatementCost/currency"
 
 #: ../../docs/guidance/language.md:65
 msgid "environment/inProtectedArea"
-msgstr ""
+msgstr "environment/inProtectedArea"
 
 #: ../../docs/guidance/language.md:65
 msgid "In protected area"
-msgstr ""
+msgstr "In protected area"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings"
-msgstr ""
+msgstr "lobbyingMeetings"
 
 #: ../../docs/guidance/language.md:65
 msgid "Lobbying meetings"
-msgstr ""
+msgstr "Lobbying meetings"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/id"
-msgstr ""
+msgstr "lobbyingMeetings/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/date"
-msgstr ""
+msgstr "lobbyingMeetings/date"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address"
-msgstr ""
+msgstr "lobbyingMeetings/address"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address/streetAddress"
-msgstr ""
+msgstr "lobbyingMeetings/address/streetAddress"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address/locality"
-msgstr ""
+msgstr "lobbyingMeetings/address/locality"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address/region"
-msgstr ""
+msgstr "lobbyingMeetings/address/region"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address/postalCode"
-msgstr ""
+msgstr "lobbyingMeetings/address/postalCode"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/address/countryName"
-msgstr ""
+msgstr "lobbyingMeetings/address/countryName"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/numberOfParticipants"
-msgstr ""
+msgstr "lobbyingMeetings/numberOfParticipants"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/person"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/person"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/person/name"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/person/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/organization"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/organization"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/organization/name"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/organization/name"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/organization/id"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/organization/id"
 
 #: ../../docs/guidance/language.md:65
 msgid "lobbyingMeetings/publicOffice/jobTitle"
-msgstr ""
+msgstr "lobbyingMeetings/publicOffice/jobTitle"

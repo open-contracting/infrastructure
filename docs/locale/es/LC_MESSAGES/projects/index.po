@@ -251,7 +251,7 @@ msgid ""
 "contracts](../_static/images/diagram-project-contract-summary.png)"
 msgstr ""
 "![Las actividades de diseño, construcción y supervisión se pueden realizar "
-"mediante contratos](../_static/images/es/diagram-project-contract-summary.png)"
+"mediante contratos](../_static/images/diagram-project-contract-summary.png)"
 
 #: ../../docs/projects/index.md:83
 msgid ""
