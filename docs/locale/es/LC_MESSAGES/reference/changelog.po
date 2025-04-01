@@ -33,8 +33,8 @@ msgid "Changelog"
 msgstr "Registro de cambios"
 
 #: ../../docs/reference/changelog.md:3
-msgid "[0.9.5] - 2024-02-28"
-msgstr "[0.9.5] - 2024-02-28"
+msgid "[0.9.5] - 2025-04-02"
+msgstr "[0.9.5] - 2025-04-02"
 
 #: ../../docs/reference/changelog.md:5 ../../docs/reference/changelog.md:41
 #: ../../docs/reference/changelog.md:187 ../../docs/reference/changelog.md:250
