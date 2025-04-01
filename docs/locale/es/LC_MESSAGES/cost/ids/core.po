@@ -1,0 +1,1751 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Francis C. Bennaton, 2024
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/cost/ids/core.md:1
+msgid "Core standard"
+msgstr "Estándar principal"
+
+#: ../../docs/cost/ids/core.md:9
+msgid ""
+"This page documents a mapping from the \"core\" CoST IDS elements to OC4IDS "
+"fields and codes. The organization of the mapping tables reflects the "
+"structure of the CoST IDS."
+msgstr ""
+"Esta página documenta el mapeo de los elementos \"centrales\" del CoST IDS y"
+" los campos y códigos del OC4IDS. La organización de las tablas del mapeo "
+"reflejan la estructura del IDS de CoST."
+
+#: ../../docs/cost/ids/core.md:11
+msgid ""
+"The CoST IDS sets out a number of disclosure requirements under the heading "
+"of \"information for disclosure upon request,\" also known as \"reactive "
+"disclosure.\" You can disclose these elements proactively using OC4IDS. "
+"Separate tables are provided for project-level and process-level reactive "
+"disclosures."
+msgstr ""
+"El IDS de CoST establece una serie de requerimientos de divulgación bajo el "
+"título de \"información para divulgar previa solicitud\" lo que se conoce "
+"también  como \"divulgación reactiva\". Estos elementos se pueden divulgar "
+"de forma proactiva utilizando OC4IDS. Se presentan tablas individuales para "
+"divulgaciones reactivas por nivel de proyecto y nivel de processo."
+
+#: ../../docs/cost/ids/core.md:13
+msgid "Project level"
+msgstr "Nivel de Proyecto"
+
+#: ../../docs/cost/ids/core.md:15
+msgid "Identification"
+msgstr "Identificación"
+
+#: ../../docs/cost/ids/core.md:20 ../../docs/cost/ids/core.md:27
+#: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:43
+#: ../../docs/cost/ids/core.md:50 ../../docs/cost/ids/core.md:231
+#: ../../docs/cost/ids/core.md:238 ../../docs/cost/ids/core.md:247
+#: ../../docs/cost/ids/core.md:254 ../../docs/cost/ids/core.md:261
+msgid "CoST IDS element"
+msgstr "Elemento del IDS CoST "
+
+#: ../../docs/cost/ids/core.md:20 ../../docs/cost/ids/core.md:27
+#: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:43
+#: ../../docs/cost/ids/core.md:50 ../../docs/cost/ids/core.md:231
+#: ../../docs/cost/ids/core.md:238 ../../docs/cost/ids/core.md:247
+#: ../../docs/cost/ids/core.md:254 ../../docs/cost/ids/core.md:261
+msgid "Description"
+msgstr "Descripción"
+
+#: ../../docs/cost/ids/core.md:20 ../../docs/cost/ids/core.md:27
+#: ../../docs/cost/ids/core.md:34 ../../docs/cost/ids/core.md:43
+#: ../../docs/cost/ids/core.md:50 ../../docs/cost/ids/core.md:231
+#: ../../docs/cost/ids/core.md:238 ../../docs/cost/ids/core.md:247
+#: ../../docs/cost/ids/core.md:254 ../../docs/cost/ids/core.md:261
+msgid "Mapping to OC4IDS"
+msgstr "Mapeo a OC4IDS"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project owner"
+msgstr "Propietario del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Name of the sponsoring Government department"
+msgstr "Nombre del departamento gubernamental que lo patrocina"
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Project Level: Add an `Organization` object to `parties` with "
+"'publicAuthority' included in its `.roles`. Set `publicAuthority.name` and "
+"`publicAuthority.id` to the `.name` and `.id` of the object."
+msgstr ""
+"A Nivel de Proyecto: Añadir un objeto `Organization` a `parties` con "
+"'publicAuthority' como parte de sus `.roles`. Establecer el "
+"`publicAuthority.name` y la `publicAuthority.id` al `.name` y `.id` del "
+"objeto."
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Sector"
+msgstr "Sector"
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Develop a list of sectors relevant to country e.g. housing, transport, "
+"energy, water etc."
+msgstr ""
+"Desarrollar una lista de sectores pertinentes al país, por ejemplo, "
+"vivienda, transporte, energía, agua, etc."
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Project Level: Map to the projectSector codelist and publish one or more "
+"values in `sector`. Publish any additional sector classifications from local"
+" or other global codelists in `additionalClassifications`."
+msgstr ""
+"Nivel de proyecto: Mapear a la lista de códigos de projectSector y publicar "
+"uno o más valores en el `sector`. Publicar cualquier clasificación sectorial"
+" adicional de las listas de códigos locales o de otras listas de códigos "
+"globales en `additionalClassifications`."
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Subsector"
+msgstr "Subsector"
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Develop a subset for each sector e.g. Transport could be subdivided into "
+"national highway, local road, railway, port, airport etc."
+msgstr ""
+"Desarrollar un subsector para cada sector, por ejemplo, el transporte se "
+"subdivide en autopistas nacionales, carreteras locales, ferrocarril, puerto,"
+" aeropuerto etc."
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project Level: Publish in `additionalClassifications`"
+msgstr "Nivel de proyecto: Publicar en `additionalClassifications`"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project name"
+msgstr "Nombre del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Specify the project name"
+msgstr "Especificar el nombre del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project Level: Publish in `title`"
+msgstr "Nivel de proyecto: Publicar en `title`"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project Location"
+msgstr "Ubicación del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Briefly specify location of the project"
+msgstr "Especificar brevemente la ubicación del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Project Level: Publish using the `locations` fields as an address, geometry "
+"(point/line/polygon) or gazetteer entry"
+msgstr ""
+"Nivel de proyecto: Publicar utilizando los campos de `locations` como  la "
+"dirección, la geometría (point/line/polygon) o el registro de un libro "
+"geográfico"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Purpose"
+msgstr "Propósito"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Specify the socioeconomic purpose of the project"
+msgstr "Especificar el propósito socioeconómico del proyecto."
+
+#: ../../docs/cost/ids/core.md:20
+msgid ""
+"Project Level: Publish in `purpose`; if classified against a codelist, also "
+"publish in `additionalClassifications`."
+msgstr ""
+"Nivel de proyecto: Publicar en `purpose`; Si se clasifica de acuerdo a una "
+"lista de códigos, también publicar en `additionalClassifications`."
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project description"
+msgstr "Descripción de proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Concise description and details of the project"
+msgstr "Descripción breve y detalles del proyecto"
+
+#: ../../docs/cost/ids/core.md:20
+msgid "Project Level: Publish in `description`"
+msgstr "Nivel de proyecto: Publicar en `description`"
+
+#: ../../docs/cost/ids/core.md:22
+msgid "Preparation"
+msgstr "Preparación"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Project Scope (main output)"
+msgstr "Alcance del Proyecto (resultado principal)"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Main outputs from the project that are being taken forward into construction"
+" (type, quantity, unit)"
+msgstr ""
+"Principales resultados del proyecto que son parte de la construcción (tipo, "
+"cantidad, unidad)"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: Publish in `documents`, with `.documentType` set to "
+"'projectScope' and include a short description and/or a link to a document "
+"providing details"
+msgstr ""
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` y establecer"
+" un 'projectScope' e incluir una descripción breve y/o enlazar a un "
+"documento que proporcione más detalles."
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Environmental impact"
+msgstr "Impacto ambiental"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Briefly describe the environmental impacts and mitigation measures for this "
+"project e.g. impacts on flora, fauna & woodlands, areas of natural beauty, "
+"carbon emissions etc. and mitigation measures e.g. pollution control, low "
+"carbon solutions, sustainable timber etc."
+msgstr ""
+"Describir brevemente los impactos ambientales y las medidas de mitigación "
+"para este proyecto ej. Impactos sobre la flora, fauna y bosques, áreas de "
+"belleza natural, emisión de carbono etc. y medidas de mitigación, ej. "
+"control de contaminación, soluciones de baja emisión de carbono, madera "
+"sostenible, etc. "
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: Publish in `documents`, with `.documentType` set to "
+"'environmentalImpact' and include a short description and/or a link to a "
+"document providing details."
+msgstr ""
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` establecer "
+"en 'environmentalImpact' e incluir una breve descripción y/o enlazar a un "
+"documento que proporcione más detalles."
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Land and settlement impact"
+msgstr "Impacto en terrenos y asentamientos"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"State the amount of land and property that was acquired for the project e.g."
+" 25km2 land, and related impacts e.g. archaeological issues (moved Saxon "
+"burial site), local/indigenous settlements (relocated 5 indigenous villages "
+"of 500 villagers each), impacts on local businesses e.g. (30 business "
+"properties purchased)."
+msgstr ""
+"Indicar la cantidad de terrenos y propiedades adquiridas para el proyecto "
+"ej. Un terreno de 25km2  e impactos relacionados ej. aspectos arqueológicos "
+"(reubicación de un cementerio Sajón), asentamientos locales/indígenas (se "
+"reubicaron 5 comunidades indígenas con 500 habitantes cada una), impactos "
+"sobre los negocios locales, ej. (se compraron 30 propiedades de comercios)."
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: Publish in `documents`, with `.documentType` set to "
+"'landAndSettlementImpact' and include a short description and/or a link to a"
+" document providing details."
+msgstr ""
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` establecer "
+"en 'landAndSettlementImpact' e incluir una breve descripción y/o enlace a un"
+" documento que proporciones más detalles."
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Contact details"
+msgstr "Detalles de contacto"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Postal and electronic address of the Project Owner"
+msgstr "Dirección postal y electrónica del propietario del proyecto"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: Publish in the `.address` and `.contactPoint` of the party "
+"with 'publicAuthority' included in its `.roles`"
+msgstr ""
+"Nivel de proyecto: Publicar en el campo `.address` y `.contactPoint` de la "
+"parte con  'publicAuthority' incluido en sus `.roles`"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Funding sources"
+msgstr "Fuentes de financiamiento"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Name the funding organization(s)/sources of funding"
+msgstr "Nombre la(s) organización(es)/fuente(s) de financiamiento"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: If a funding organization is the project owner, add 'funder' "
+"to the `.roles` of the existing entry in `parties`. Otherwise, add a new "
+"entry to `parties` for each funding organization with 'funder' included in "
+"its `.roles`. When information on the amount provided by each funder is "
+"available, use `budget.budgetBreakdowns` to provide details"
+msgstr ""
+"Nivel de proyecto: Si una organización de financiamiento es la propietaria "
+"del proyecto, agregar 'funder' a los `.roles` del registro existente en "
+"`parties`. De lo contrario, agregar un nuevo registro en el campo `parties` "
+"para cada organización financiadora con 'funder' incluido en sus `.roles`. "
+"Cuando la información sobre la cantidad aportada por cada financiador esté "
+"disponible, utilizar `budget.budgetBreakdowns` para proporcional más "
+"detalles"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Project Budget"
+msgstr "Presupuesto del proyecto"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Specify the projected costs/allocated budget for the project (currency and "
+"amount). The budget includes land / property acquisition, environmental "
+"mitigation measures, H&S provisions, client, consultant & contractor costs, "
+"VAT etc."
+msgstr ""
+"Especificar los costos proyectados/presupuesto asignado para el proyecto "
+"(moneda y monto). El presupuesto incluye adquisición de terrenos / "
+"propiedades, medidas de mitigación ambiental, disposiciones H&S, cliente, "
+"costos consultor & contratista, IVA, etc. "
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Project Level: Publish in `budget.amount`"
+msgstr "Nivel de Proyecto: Publicar en in `budget.amount`"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Project budget approval date"
+msgstr "Fecha de aprobación del presupuesto del proyecto"
+
+#: ../../docs/cost/ids/core.md:27
+msgid "Date project budget was authorized"
+msgstr "Fecha en que se autorizó el presupuesto del proyecto"
+
+#: ../../docs/cost/ids/core.md:27
+msgid ""
+"Project Level: Publish in `budget.approvalDate` and include additional "
+"document with `.documentType` of 'budgetApproval' if required"
+msgstr ""
+"Nivel de proyecto: Publicar en `budget.approvalDate` y de ser necesario "
+"incluir documento adicional con `.documentType` de 'budgetApproval' "
+
+#: ../../docs/cost/ids/core.md:29
+msgid "Project completion"
+msgstr "Finalización del proyecto"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project status (current)"
+msgstr "Estado (actual) del proyecto"
+
+#: ../../docs/cost/ids/core.md:34
+msgid ""
+"The current stage of the project. Select from identification, preparation, "
+"construction, completion, completed or cancelled."
+msgstr ""
+"Etapa actual del proyecto. Seleccionar de identificación, preparación, "
+"construcción, finalización, finalizado o cancelado."
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project Level: Publish in `status`"
+msgstr "Nivel de Proyecto: Publicar en `status`"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project completion cost"
+msgstr "Costo de finalización del proyecto"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "State projected or actual completion cost (currency and amount)"
+msgstr "Costo del estado proyectado o finalización actual (moneda y cantidad)"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project Level: Publish in `completion.finalValue`"
+msgstr "Nivel de proyecto: Publicar en `completion.finalValue`"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Completion date"
+msgstr "Fecha de finalización"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "State projected or actual completion date"
+msgstr "Estado proyectado o fecha de finalización actual"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project Level: Publish in `completion.endDate`"
+msgstr "Nivel de proyecto: Publicar en `completion.endDate`"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Project Scope at completion (projected)"
+msgstr "Alcance del proyecto al finalizar (proyectado)"
+
+#: ../../docs/cost/ids/core.md:34
+msgid ""
+"Indicate projected or actual scope of project. Aim is to show if the "
+"completed project scope differs from the original project scope. Specify "
+"main outputs (type, quantity, unit)"
+msgstr ""
+"Indicar alcance del proyecto actual o proyectado. El objetivo demostrar si "
+"el alcance del proyecto finalizado difiere del alcance original del "
+"proyecto. Especificar productos principales (tipo, cantidad, unidad)"
+
+#: ../../docs/cost/ids/core.md:34
+msgid ""
+"Project Level: Publish free text as `completion.finalScope` and/or include "
+"document with `.documentType` of `projectScope` and dates and descriptions "
+"that show this is final scope at completion"
+msgstr ""
+"Nivel de proyecto: Publicar texto libre como `completion.finalScope` y/o "
+"incluir documento con `.documentType` de `projectScope` y fechas y "
+"descripciones que demuestran que este será el alcance final a la "
+"finalización"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Reasons for project changes"
+msgstr "Razones para cambios en el proyecto"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Summary of primary reasons for any changes in scope, time and cost"
+msgstr ""
+"Resumen de las razones principales de cualquier cambio en el alcance, plazos"
+" y costo"
+
+#: ../../docs/cost/ids/core.md:34
+msgid ""
+"Project Level: Publish using `completion.endDateDetails`, "
+"`completion.finalValueDetails` and `completion.finalScopeDetails`"
+msgstr ""
+"Nivel de proyecto: Publicar utilizando `completion.endDateDetails`, "
+"`completion.finalValueDetails` y `completion.finalScopeDetails`"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Reference to audit and evaluation reports"
+msgstr "Referencia a informes de auditoría y evaluación"
+
+#: ../../docs/cost/ids/core.md:34
+msgid "Reference to publicly available technical and financial audits"
+msgstr "Referencia a auditorías técnicas y financieras disponibles al público"
+
+#: ../../docs/cost/ids/core.md:34
+msgid ""
+"Project Level: Publish in `documents`, with `.documentType` set to "
+"'financialAuditReport' or 'technicalAuditReport' and include a short "
+"description and/or a link to a document providing details"
+msgstr ""
+"Nivel de proyecto: Publicar en`documents`, con `.documentType` definido en "
+"'financialAuditReport' o 'technicalAuditReport' e incluir una breve "
+"descripción y/o un enlace al documento que proporciona más detalles "
+
+#: ../../docs/cost/ids/core.md:36 ../../docs/cost/ids/core.md:240
+msgid "Reactive disclosures"
+msgstr "Divulgación reactiva"
+
+#: ../../docs/cost/ids/core.md:38
+msgid "Identification and preparation"
+msgstr "Identificación y preparación"
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Multi-year programme & Budget"
+msgstr "Programa y presupuesto plurianuales"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"A detailed breakdown of the budget by period and/or participating funders."
+msgstr ""
+"Un desglose detallado del presupuesto por período y/o financiadores "
+"participantes"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` "
+"incrementally and set its `.description` to 'Breakdown by year'. For each "
+"year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set"
+" its fields as follows:"
+msgstr ""
+"Agregar un objeto `BudgetBreakdowns`  a `budget/budgetBreaksdown`, definir "
+"el `.id` incrementalmente y definir la `.description` en 'Breakdown by "
+"year'. Para cada año, agregar un objeto `BudgetBreakdown` a cada matriz "
+"`.BudgetBreakdown`  y definir los campos siguientes:"
+
+#: ../../docs/cost/ids/core.md:45
+msgid "Set its `id` to the year, e.g. '2020'"
+msgstr "Establecer sus `id` al año, por ejemplo '2020'"
+
+#: ../../docs/cost/ids/core.md:46
+msgid ""
+"Set its `.amount.amount` to the amount of the budget allocated to the year "
+"and set `.amount.currency` to the currency of the budget"
+msgstr ""
+"Ajustar su `.amount.amount` al monto del presupuesto asignado al año y "
+"ajustar `.amount.currency` a la moneda del presupuesto"
+
+#: ../../docs/cost/ids/core.md:47
+msgid ""
+"Set its `.period.startDate` to the first day of the year, e.g. "
+"'2020-01-01T00:00:00Z'"
+msgstr ""
+"Configurar su `.period.startDate` al primer día del año, ej. "
+"'2020-01-01T00:00:00Z'"
+
+#: ../../docs/cost/ids/core.md:48
+msgid ""
+"Set its `.period.endDate` to the last day of the year, e.g "
+"'2020-12-31T23:59:59Z"
+msgstr ""
+"Configurar su `.period.endDate` al último día del año, ej. "
+"'2020-12-31T23:59:59Z'"
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Project brief or Feasibility study"
+msgstr "Perfil del proyecto o estudio de factibilidad"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Documentation of feasibility studies carried out for this contracting "
+"process or project, providing information on net benefits or costs of the "
+"proposed goods, works or services."
+msgstr ""
+"Documentación de los estudios de factibilidad realizados para este proceso "
+"de contratación o proyecto, que proporciona información sobre los beneficios"
+" o costos de los bienes, las obras o los servicios propuestos."
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'feasibilityStudy'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"determinar `.documentType` al 'feasibilityStudy'."
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Environmental and social impact assessment"
+msgstr "Evaluación de impacto ambiental y social"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"**Environmental impact assessment** Documentation of assessments of the "
+"environmental impacts (e.g. impacts on flora, fauna & woodlands, areas of "
+"natural beauty, carbon emissions etc.) and mitigation measures (e.g. "
+"pollution control, low carbon solutions, sustainable timber etc.) for this "
+"contracting process or project."
+msgstr ""
+"**Evaluación de impacto ambiental** Documentación de las evaluaciones de los"
+" impactos ambientales (ej. impactos en la flora, fauna y bosques, áreas de "
+"belleza natural, emisiones de carbono etc.) y medidas de mitigación (eg. "
+"control de la contaminación, soluciones de bajo nivel de carbono, madera "
+"sustentable etc) para este proceso de contratación o proyecto. "
+
+#: ../../docs/cost/ids/core.md:46
+msgid ""
+"**Social impact assessment** Documentation of assessments of the intended "
+"and unintended social consequences of this project, and documentation of "
+"mitigation measures for those social consequences. Social impacts are "
+"changes that affect people, directly or indirectly (e.g. changes to people's"
+" way of life, culture, community, health and well-being etc.)."
+msgstr ""
+"**Evaluación del impacto social** Documentación de las evaluaciones de las "
+"consecuencias sociales previstas y no deseadas de este proyecto, y "
+"documentación de las medidas de mitigación de esas consecuencias sociales. "
+"Los impactos sociales son cambios que afectan a las personas, directa o "
+"indirectamente (por ejemplo, cambios en el modo de vida, la cultura, la "
+"comunidad, la salud y el bienestar de las personas, etc.)."
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Environmental impact assessment: [Add a project document](../common.md#add-"
+"a-project-document) and set `.documentType` to 'environmentalImpact'."
+msgstr ""
+"Evaluación de impacto ambiental: [Agregar un documento de "
+"proyecto](../common.md#add-a-project-document) y determinar `.documentType` "
+"al 'environmentalImpact'."
+
+#: ../../docs/cost/ids/core.md:45
+msgid ""
+"Social impact assessment: [Add a project document](../common.md#add-a-"
+"project-document) and set `.documentType` to 'environmentalImpact' or "
+"'socialImpact'."
+msgstr ""
+"Evaluación de impacto social: [Agregar un documento de "
+"proyecto](../common.md#add-a-project-document) y establecer `.documentType` "
+"al 'environmentalImpact' o 'socialImpact'."
+
+#: ../../docs/cost/ids/core.md:47
+msgid ""
+"If a single document covers both the environmental and social impact "
+"assessment, add two documents to `documents` and set the first document's "
+"`.documentType` to 'environmentalImpact' and the second document's "
+"`.documentType` to 'socialImpact'."
+msgstr ""
+"Si un solo documento cubre tanto la evaluación de impacto ambiental como la "
+"de impacto social, agregar dos documentos a `documents` y configurar el "
+"`.documentType` del primer documento al 'environmentalImpact' y el "
+"`.documentType` del segundo documento al 'socialImpact'."
+"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Resettlement and compensation plan"
+msgstr "Plan de reasentamientos y compensaciones"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Documentation of the procedures and actions to mitigate adverse effects, "
+"compensate losses, and provide development benefits to people and "
+"communities affected by the contracting process or project."
+msgstr ""
+"Documentación de los procedimientos y acciones para mitigar efectos "
+"adversos, compensar pérdidas y proporcionar beneficios de desarrollo a las "
+"personas y comunidades afectadas por el proceso de contratación o el "
+"proyecto."
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'resettlementPlan'."
+msgstr ""
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` en 'resettlementPlan'."
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Project officials and roles"
+msgstr "Oficiales de proyecto y su rol"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Name and position of the highest authority in the procuring entity where the"
+" budget for this project is allocated (project owner)"
+msgstr ""
+"Nombre y posición de la autoridad superior en la entidad de adquisiciones a "
+"la cual se asigna el presupuesto para este proyecto (propietario del "
+"proyecto)"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"From the `parties` array, get the `Organization` object whose role is "
+"'publicAuthority'. If none exists yet:"
+msgstr ""
+"De la matriz de las partes `parties`, obtener el objeto de la `Organization`"
+" cuyo rol es el de 'publicAuthority'. Si aun no existe:"
+
+#: ../../docs/cost/ids/core.md:45
+msgid "Add a party"
+msgstr "Agregar una parte"
+
+#: ../../docs/cost/ids/core.md:46
+msgid "Set its `.name` to the name of the procuring entity"
+msgstr "Establecer el `.name` al nombre de la entidad de adquisiciones"
+
+#: ../../docs/cost/ids/core.md:47
+msgid "Set its `.role` to 'procuringEntity'"
+msgstr "Establecer el `.role` de la 'procuringEntity'"
+
+#: ../../docs/cost/ids/core.md:49 ../../docs/cost/ids/core.md:253
+msgid "Add a `Person` object to the organization's `.people` array and:"
+msgstr ""
+"Agregar un objeto `Person` a la matriz de `.people` de la organización y:"
+
+#: ../../docs/cost/ids/core.md:51 ../../docs/cost/ids/core.md:64
+#: ../../docs/cost/ids/core.md:163 ../../docs/cost/ids/core.md:255
+msgid "Set its `.id` incrementally"
+msgstr "Establecer su `.id` de forma incremental"
+
+#: ../../docs/cost/ids/core.md:52
+msgid "Set its `.name` to the project official's name"
+msgstr "Establecer el `.name` del nombre del oficial de proyecto"
+
+#: ../../docs/cost/ids/core.md:53
+msgid "Set its `.jobTitle` to the project official's job title"
+msgstr ""
+"Establecer su `.jobTitle` en el título del cargo del oficial de proyecto"
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Financial agreement"
+msgstr "Acuerdo de financiamiento"
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Loan or donation agreement with financing conditions."
+msgstr "Contrato de préstamo o donación con condiciones financieras"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'financialAgreement'."
+msgstr ""
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` a 'financialAgreement'."
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Procurement plan"
+msgstr "Plan de adquisiciones"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"Documentation that sets out the basis for this particular contracting "
+"process."
+msgstr ""
+"Documentación que establece las bases de este proceso de contratación "
+"específico"
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'procurementPlan'."
+msgstr ""
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` como 'procurementPlan'."
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Project approval decision"
+msgstr "Decisión de aprobación del proyecto"
+
+#: ../../docs/cost/ids/core.md:43
+msgid "Additional details about the approval of the budget."
+msgstr "Detalles adicionales sobre la aprobación del presupuesto."
+
+#: ../../docs/cost/ids/core.md:43
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'budgetApproval'."
+msgstr ""
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` en 'budgetApproval'."
+
+#: ../../docs/cost/ids/core.md:45
+msgid "Completion"
+msgstr "Finalización"
+
+#: ../../docs/cost/ids/core.md:50 ../../docs/cost/ids/core.md:52
+msgid "Implementation progress reports"
+msgstr "Informes de avance de la implementación"
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Planned and actual physical and financial progress over time."
+msgstr "Avances físicos y financieros planificados y reales en el tiempo."
+
+#: ../../docs/cost/ids/core.md:50
+msgid "**Documents**"
+msgstr "**Documentos**"
+
+#: ../../docs/cost/ids/core.md:52
+msgid ""
+"Physical progress reports: [Add a project document](../common.md#add-a-"
+"project-document) and set `.documentType` to 'physicalProgressReport'."
+msgstr ""
+"Informes de avance físico: [Agregar un documento de proyecto "
+"document](../common.md#add-a-project-document) y establecer `.documentType` "
+"del 'physicalProgressReport'."
+
+#: ../../docs/cost/ids/core.md:54
+msgid ""
+"Financial progress reports: [Add a project document](../common.md#add-a-"
+"project-document) and set `.documentType` to 'financialProgressReport'."
+msgstr ""
+"Informes de avances financieros: [Agregar un documento de "
+"proyecto](../common.md#add-a-project-document) y establecer el "
+"`.documentType` del 'financialProgressReport'."
+
+#: ../../docs/cost/ids/core.md:56
+msgid "**Data**"
+msgstr "**Datos**"
+
+#: ../../docs/cost/ids/core.md:58
+msgid ""
+"See [implementation progress reports](#implementation-progress-reports)"
+msgstr ""
+"Ver [Informes de avance de la implementación](#implementation-progress-"
+"reports)"
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Budget amendment decision"
+msgstr "Decisión de enmienda al presupuesto"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"Document accrediting the approval of budget expansion or extension for this "
+"project."
+msgstr ""
+"Documentación que acredita la aprobación de la ampliación o incremento del "
+"presupuesto para este proyecto"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'budgetAmendmentApproval'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` de 'budgetAmendmentApproval'."
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Project completion report"
+msgstr "Informe de finalización del proyecto"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"A completion certificate issued by a relevant authority providing evidence "
+"that works were completed to a certain level of quality. Completion "
+"certificates might only be relevant for particular kinds of contracting "
+"processes or projects."
+msgstr ""
+"Un certificado de finalización emitido por una autoridad pertinente que "
+"demuestra que las obras han sido finalizadas con cierto nivel de calidad. "
+"Los certificados de finalización de obra son pertinentes únicamente para "
+"cierto tipo de procesos de contratación o proyectos."
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'projectCompletionReport'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` del 'projectCompletionReport'."
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Project evaluation report"
+msgstr "Informe de evaluación del proyecto"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"Generally published at the conclusion of a project, providing a technical "
+"and financial summary of delivery"
+msgstr ""
+"En general publicado al finalizar un proyecto, y presenta un resumen técnico"
+" y financiero de la entrega."
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'projectEvaluation'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` del 'projectEvaluation'."
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Technical audit reports"
+msgstr "Informes de auditoría técnica"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"Documentation of checks that construction work has been undertaken as "
+"specified."
+msgstr ""
+"Documentación de las comprobaciones de que los trabajos de construcción se "
+"han realizado según lo especificado."
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'technicalAuditReport'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer el `.documentType` del 'technicalAuditReport'."
+
+#: ../../docs/cost/ids/core.md:50
+msgid "Financial audit reports"
+msgstr "Informes de auditorías financieras"
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"Documentation of checks that a project's financial statements are correct "
+"and complete."
+msgstr ""
+"Documentación de comprobación de que los estados financieros de un proyecto "
+"son correctos y completos."
+
+#: ../../docs/cost/ids/core.md:50
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set "
+"`.documentType` to 'financialAuditReport'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer el `.documentType` del 'financialAuditReport'."
+
+#: ../../docs/cost/ids/core.md:54
+msgid ""
+"In addition to the documents listed in the mapping table, you can use OC4IDS"
+" to publish structured data on planned and actual physical and financial "
+"progress."
+msgstr ""
+"Además de los documentos enumerados en la tabla del mapeo, puede utilizarse "
+"OC4IDS para publicar datos estructurados sobre avances físicos y financieros"
+" planificados y reales."
+
+#: ../../docs/cost/ids/core.md:56
+msgid ""
+"Choose from the following options, depending on the data you collect and the"
+" data needed by your use cases."
+msgstr ""
+"Eleja entre las siguientes opciones, dependiendo de los datos recopilados y "
+"los datos necesarios por sus casos de uso."
+
+#: ../../docs/cost/ids/core.md:58
+msgid "Actual progress over time"
+msgstr "Avances reales en el tiempo"
+
+#: ../../docs/cost/ids/core.md:60
+msgid "Add a `Metric` object to the `metrics` array and:"
+msgstr "Agregar un objeto de `Metric` a la matriz de `metrics` y:"
+
+#: ../../docs/cost/ids/core.md:61 ../../docs/cost/ids/core.md:160
+msgid ""
+"For financial progress, set its `id` to 'financialProgress' and set its "
+"title to 'Financial progress', or the equivalent in the language of your "
+"publication."
+msgstr ""
+"Para los avances financieros, establecer la `id` al 'financialProgress' y "
+"establcer el título del 'Financial progress', o su equivalente en el idioma "
+"de su publicación."
+
+#: ../../docs/cost/ids/core.md:62 ../../docs/cost/ids/core.md:161
+msgid ""
+"For physical progress, set its `id` to 'physicalProgress' and set its title "
+"to 'Physical progress', or the equivalent in the language of your "
+"publication."
+msgstr ""
+"Para avances físicos, establecer la `id` del 'physicalProgress' y establecer"
+" el título del 'Physical progress', o el equivalente en el idioma de su "
+"publicación."
+
+#: ../../docs/cost/ids/core.md:63
+msgid ""
+"For each progress update, add an `Observation` object to the `Metric` "
+"object's `.observations` array and:"
+msgstr ""
+"Para cada actualización del avance, añadir un objeto `Observation` a la "
+"matriz `.observations` del objeto `Metric` y:"
+
+#: ../../docs/cost/ids/core.md:65
+msgid ""
+"Set its `.measure` to the financial progress of the project. For example, "
+"for a project that is 75% complete, set `.measure` to `75`"
+msgstr ""
+"Establecer su `.measure` al avance financiero del proyecto. Por ejemplo, "
+"para un proyecto finalizado al 75%, establecer su `.measure` a `75`"
+
+#: ../../docs/cost/ids/core.md:66 ../../docs/cost/ids/core.md:165
+msgid ""
+"Set its `.unit.name` to 'percent', set its `unit.id` to 'P1' and set its "
+"`unit.scheme` to 'UNCEFACT'"
+msgstr ""
+"Establecer su `.unit.name` al 'percent', establecer su `unit.id` al 'P1' y "
+"establicer su `unit.scheme` al 'UNCEFACT'"
+
+#: ../../docs/cost/ids/core.md:67
+msgid ""
+"Set its `period.startDate` and `period.endDate` to the date on which the "
+"financial progress was measured"
+msgstr ""
+"Establecer su `period.startDate` y `period.endDate` a la fecha en la cual se"
+" midió el avance financiero "
+
+#: ../../docs/cost/ids/core.md:69 ../../docs/cost/ids/core.md:127
+#: ../../docs/cost/ids/core.md:168
+msgid "*Example:*"
+msgstr "*Ejemplo:*"
+
+#: ../../docs/cost/ids/core.md:123
+msgid "A single progress figure"
+msgstr "Una sola cifra de avance"
+
+#: ../../docs/cost/ids/core.md:125
+msgid ""
+"If your implementation does not store a change history, you can publish a "
+"single `Observation` object for each `Metric` and update the `Observation` "
+"object's `.measure` each time there is a progress update."
+msgstr ""
+"Si su implementación no almacena un historial de cambios, puede publicar un "
+"objeto único de  `Observation` para cada `Metric` y actualizar el `.measure`"
+"  del objeto  `Observation`  cada vez que se produzca una actualización del "
+"avance."
+
+#: ../../docs/cost/ids/core.md:155
+msgid "Planned progress over time"
+msgstr "Avance planificado en el tiempo"
+
+#: ../../docs/cost/ids/core.md:157
+msgid ""
+"You can use the `forecasts` array to publish progress forecasts for "
+"different points in time."
+msgstr ""
+"Puede utilizar la matriz de `forecasts` para publicar los avances para los "
+"diferentes puntos en el tiempo. "
+
+#: ../../docs/cost/ids/core.md:159
+msgid "Add a `Metric` object to the `forecasts` array and:"
+msgstr "Agregar un objeto de `Metric` para la matriz de `forecasts` y:"
+
+#: ../../docs/cost/ids/core.md:162
+msgid ""
+"For each forecast, add an `Observation` object to the `Metric` object's "
+"`.observations` array and:"
+msgstr ""
+"Para cada proyección, agregar un objeto de `Observation` a la matriz "
+"`.observations` del objeto `Metric` y:"
+
+#: ../../docs/cost/ids/core.md:164
+msgid ""
+"Set its `.measure` to the forecast progress of the project. For example, to "
+"forecast when the project is expected to be complete, set `.measure` to "
+"`100`."
+msgstr ""
+"Establecer su `.measure` a la proyección de avance del proyecto. Por "
+"ejemplo, para proyectar cuando se espera que esté finalizado el proyecto, "
+"establecer `.measure` a `100`."
+
+#: ../../docs/cost/ids/core.md:166
+msgid ""
+"Set its `period.startDate` and `period.endDate` to the date on which you "
+"expect the progress to be achieved"
+msgstr ""
+"Establecer su `period.startDate` y `period.endDate` en la fecha en que se "
+"espera que se alcance el avance"
+
+#: ../../docs/cost/ids/core.md:222
+msgid "Process level"
+msgstr "Nivel de proceso"
+
+#: ../../docs/cost/ids/core.md:224
+msgid ""
+"The mappings in this section relate to the `contractingProcesses` section of"
+" the OC4IDS schema, unless otherwise specified."
+msgstr ""
+"Los mapeos en esta sección se relacionan a la sección de  "
+"`contractingProcesses` del esquema OC4IDS, a menos que se especifique lo "
+"contrario."
+
+#: ../../docs/cost/ids/core.md:226 ../../docs/cost/ids/core.md:242
+msgid "Procurement"
+msgstr "Adquisiciones y Contrataciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Procuring entity"
+msgstr "Entidad de adquisiciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Enter name of the organization carrying out the procurement"
+msgstr "Ingresar el nombre de la organización que realiza las adquisiciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Project Level: Add an entry to `parties` with 'procuringEntity' included in "
+"its `.roles` | Contracting process: Record the name and identifier in "
+"`.summary.tender.procuringEntity`"
+msgstr ""
+"Nivel de proyecto: Agregar un registro a  `parties` con 'procuringEntity' "
+"incluido en sus `.roles` | Procesos de contratación: Registrar el nombre e "
+"identificador en`.summary.tender.procuringEntity`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Procuring entity contact details"
+msgstr "Detalles de contacto de la entidad de adquisiciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Postal and Electronic address"
+msgstr "Dirección postal y electrónica"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Project Level: Publish the postal address in `parties.address` and the "
+"electronic address in `parties.contactPoint`"
+msgstr ""
+"Nivel de Proyecto: Publicar la dirección postal en `parties.address` y la "
+"dirección electrónica en `parties.contactPoint`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract administrative entity"
+msgstr "Entidad administrativa del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Enter name of the organization carrying out the contract administrative "
+"entity if different from the Procuring Entity"
+msgstr ""
+"Ingresar el nombre de la organización que lleva a cabo el contrato de la "
+"entidad administrativa si es diferente de la Entidad de Adquisiciones y "
+"Contrataciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Project Level: Add an entry to `parties` with 'administrativeEntity' "
+"included in its `.roles` | Contracting process: Record the name and "
+"identifier in `.summary.tender.administrativeEntity`"
+msgstr ""
+"Nivel de proyecto: agregar un registro en `parties` con "
+"'administrativeEntity' incluyendo sus `.roles` | Proceso de contratación: "
+"Registre el nombre e identificador en `.summary.tender.administrativeEntity`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract status"
+msgstr "Estado del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Select from preAward, active or closed"
+msgstr "Seleccionar entre preadjudicación, activa o cerrada"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Contracting process: Publish in `.summary.status` using the "
+"contractingProcessStatus codelist"
+msgstr ""
+"Proceso de contratación: Publicar en `.summary.status` utilizando la lista "
+"de códigos contractingProcessStatus "
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Procurement process"
+msgstr "Proceso de adquisiciones"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Develop a list such as International Competitive Bidding, National "
+"Competitive Bidding, Donor Procurement Rules, Framework, Direct Award"
+msgstr ""
+"Elaborar una lista como Licitación Competitiva Internacional, Licitación "
+"Competitiva Nacional, Reglas de Adquisiciones del Donante, Marco, "
+"Adjudicación Directa"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Contracting process: Publish in `.summary.tender.procurementMethodDetails` "
+"and map to `.summary.tender.procurementMethod`"
+msgstr ""
+"Proceso de contratación: Publicar en "
+"`.summary.tender.procurementMethodDetails` y mapear a "
+"`.summary.tender.procurementMethod`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract type"
+msgstr "Tipo de contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Develop a list such as Design, Supervision, Design & Supervision, Design & "
+"Build, Construction"
+msgstr ""
+"Elaborar una lista como Diseño, Supervisión, Diseño y Supervisión, Diseño y "
+"Construcción, Construcción"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Contracting process: Add one or more values to the `.summary.nature` array. "
+"(e.g. [\"design\", \"build\"] for a design and build contract)"
+msgstr ""
+"Proceso de contratación: Agregar uno  más valores a la matriz de "
+"`.summary.nature` array. (ej. [\"diseño\", \"construcción\"] para contrato "
+"de diseño y construcción)"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Number of firms tendering"
+msgstr "Número de empresas que participan en la licitación"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Number of firms who submit a tender"
+msgstr "Número de empresas que presentan una oferta"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contracting process: Publish in `.summary.tender.numberOfTenderers`"
+msgstr ""
+"Proceso de contratación: Publicar en `.summary.tender.numberOfTenderers`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Cost estimate"
+msgstr "Estimación del costo"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Currency and amount of the original pre-tender estimate of the contract"
+msgstr ""
+"Moneda y monto de la estimación original previa a la licitación del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contracting process: Publish in `.summary.tender.costEstimate`"
+msgstr "Proceso de contratación: Publicar en `.summary.tender.costEstimate`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract title"
+msgstr "Título del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "The formal name of the contract"
+msgstr "Nombre formal del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contracting process: Publish in `.summary.title`"
+msgstr "Proceso de contratación: Publicar en `.summary.title`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract firm(s)"
+msgstr "Empresa(s) del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Legal name of supplier"
+msgstr "Nombre legal del proveedor"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Project Level: Add an entries to `parties` with 'supplier' included in their"
+" `.roles` | Contracting process: Add the names and identifiers to the "
+"`.summary.suppliers` array"
+msgstr ""
+"Nivel de proyecto: Agregar un registro a `parties` with 'supplier' "
+"incluyendo sus `.roles` | Proceso de contratación: Agregar los nombres e "
+"identificadores a la matriz `.summary.suppliers` "
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract price"
+msgstr "Precio del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Currency and price at contract award"
+msgstr "Moneda y precio en la adjudicación del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contracting process: Publish in `.summary.contractValue`"
+msgstr "Proceso de contratación: Publicar en `.summary.contractValue`"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract scope of work"
+msgstr "Alcance del trabajo del contrato"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Main outputs from the contract e.g. detailed design, supervision, project "
+"management and or type, quantity, unit for construction"
+msgstr ""
+"Principales productos del contrato por ejemplo planos detallados, "
+"supervisión, tipo y o administración del proyecto, calidad, unidad de "
+"construcción"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Contracting process: Publish in `.summary.description`. Additionally "
+"detailed documentation may be provided as documents within linked releases"
+msgstr ""
+"Proceso de contratación: Publicar en`.summary.description`. Además e puede "
+"proporcionar documentación detallada en la forma de documentos con versiones"
+" vinculadas"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contract start date and contract period (duration)"
+msgstr "Fecha de inicio del contrato y período del contrato (duración)"
+
+#: ../../docs/cost/ids/core.md:231
+msgid ""
+"Enter dates and Number of weeks from contract start date to (anticipated) "
+"completion date"
+msgstr ""
+"Ingresar fechas y número de semanas desde la fecha de inicio del contrato "
+"hasta fecha de finalización (anticipada)"
+
+#: ../../docs/cost/ids/core.md:231
+msgid "Contracting process: Publish in `.summary.contractPeriod`"
+msgstr "Proceso de contratación: Publicar en `.summary.contractPeriod`"
+
+#: ../../docs/cost/ids/core.md:233 ../../docs/cost/ids/core.md:256
+msgid "Implementation"
+msgstr "Implementación"
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Variation to contract price"
+msgstr "Variación al precio del contrato"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Difference between the price at contract award and the current projected "
+"price"
+msgstr ""
+"Diferencia entre el precio al momento de la adjudicación del contrato y el "
+"precio actual proyectado"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Contracting process: For each variation, publish an entry with a `.date` and"
+" `.description` in `.summary.modifications` with `.type` of 'value'. Provide"
+" the contract value before the variation in `.oldContractValue` and the "
+"contract value after the variation in `.newContractValue`"
+msgstr ""
+"Proceso de contratación: Para cada variación, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` of 'value'."
+" Proporcionar el valor del contrato antes de la variación en "
+"`.oldContractValue` y el valor del contrato después de la variación en "
+"`.newContractValue`"
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Escalation of contract price"
+msgstr "Aumento del precio del contrato"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Escalation to date of the price of materials, labour, equipment etc. due to "
+"fluctuations in inflation, currency etc."
+msgstr ""
+"Aumento a la fecha del precio de los materiales, mano de obra, equipo etc. "
+"debido a fluctuaciones en la inflación, la moneda etc."
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Contracting process: For each escalation, publish an entry with a `.date` "
+"and `.description` in `.summary.modifications` with `.type` of 'value'. "
+"Provide the contract value before the escalation in `.oldContractValue` and "
+"the contract value after the escalation in `.newContractValue`"
+msgstr ""
+"Proceso de contratación: Para cada aumento, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` de 'value'."
+" Proporcionar el valor del contrato antes del aumento en `.oldContractValue`"
+" y el valor del contrato después del aumento en  `.newContractValue`"
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Variation to contract duration"
+msgstr "Variación en la duración del contrato"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Difference between original duration at contract award and the current "
+"projected duration in weeks."
+msgstr ""
+"Diferencia entre la duración original al momento de la adjudicación del "
+"contrato y la duración actual proyectada en semanas."
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Contracting process: For each variation, publish an entry with a `.date` and"
+" `.description` in `.summary.modifications` with `.type` of 'duration'. "
+"Provide the contract period before the variation in `.oldContractPeriod` and"
+" the contract period after the variation in `.newContractPeriod`"
+msgstr ""
+"Proceso de contratación: Para cada variación, publicar un registro con una  "
+"`.date` y `.description` en `.summary.modifications` con `.type` de "
+"'duration'. Proporcione el período del contrato antes de la variación en  "
+"`.oldContractPeriod` y el período del contrato después de la variación en "
+"`.newContractPeriod`"
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Variation to contract scope"
+msgstr "Variación al alcance del contrato"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Any changes between original scope at contract award and the current scope"
+msgstr ""
+"Cualquier cambio entre el alcance original al contrato de adjudicación y el "
+"alcance actual"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Contracting process: For each variation, publish an entry with a `.date` and"
+" `.description` in `.summary.modifications` with `.type` of 'scope'"
+msgstr ""
+"Proceso de Contratación: Para cada variación, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` del 'scope'"
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Reasons for price changes"
+msgstr "Razones de los cambios en los precios"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead to "
+"changes in contract price, major price fluctuations and accumulative "
+"increase or decrease in price."
+msgstr ""
+"Resumen de las razones de lo cambios primarios (ej. variaciones) que después"
+" conducen a cambios en los precios del contrato, importantes fluctuaciones "
+"en los precios y aumentos o reducciones acumulativas  del precio"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Contracting process: For each variation, provide a `.rationale` in "
+"`.summary.modifications`."
+msgstr ""
+"Proceso de contratación: Para cada variación proporcione una  `.rationale` "
+"en `.summary.modifications`."
+
+#: ../../docs/cost/ids/core.md:238
+msgid "Reasons for scope and duration changes"
+msgstr "Razones de los cambios en el alcance y la duración"
+
+#: ../../docs/cost/ids/core.md:238
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead to "
+"changes in the scope and duration."
+msgstr ""
+"Resumen de los principales cambios (ej. variaciones) que luego conducen a "
+"cambios en el alcance y la duración"
+
+#: ../../docs/cost/ids/core.md:247
+msgid "Contract officials and roles"
+msgstr "Oficiales de contratos y roles"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"Name and position of the public official in charge of administration of the "
+"contract(s)."
+msgstr ""
+"Nombre y puesto del funcionario público a cargo de la administración del "
+"contrato(s)"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"From the `parties` array, get the `Organization` object whose role is "
+"'administrativeEntity'. If none exists yet:"
+msgstr ""
+"De la matriz de `parties`, obtener el objeto `Organization` cuyo  sea "
+"'administrativeEntity'. Si aún no existe alguna:"
+
+#: ../../docs/cost/ids/core.md:249
+msgid "Add an `Organization` object to the `parties` array"
+msgstr "Agregar un objeto `Organization` a la matriz de `parties` "
+
+#: ../../docs/cost/ids/core.md:250
+msgid "Set its `.name` to the name of the administrative entity"
+msgstr "Establecer el `.name` de nombre de la entidad administrativa"
+
+#: ../../docs/cost/ids/core.md:251
+msgid "Set its `.role` to 'administrativeEntity'"
+msgstr "Establecer el rol `.role` a la 'administrativeEntity'"
+
+#: ../../docs/cost/ids/core.md:256
+msgid "Set its `.name` to the contract official's name"
+msgstr "Establecer el `.name` al nombre del oficial del contrato"
+
+#: ../../docs/cost/ids/core.md:257
+msgid "Set its `.jobTitle` to the contract official's job title"
+msgstr ""
+"Establecer el `.jobTitle` al título del puesto del oficial del contrato "
+
+#: ../../docs/cost/ids/core.md:247
+msgid "Procurement method"
+msgstr "Método de adquisiciones y contrataciones"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"Specify tendering method using the method codelist (open, selective, "
+"limited, direct)."
+msgstr ""
+"Especifíque el método de licitación utilizando la lista de códigos del "
+"método (abierta, selectiva, limitada, directa)."
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"Set `.summary.tender.procurementMethod` to a value from the Method codelist."
+msgstr ""
+"Establecer `.summary.tender.procurementMethod` a un valor de la lista de "
+"códigos de Metodo."
+
+#: ../../docs/cost/ids/core.md:247
+msgid "Tender documents"
+msgstr "Documentos de la licitación"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"Documentation for potential suppliers, describing the goals of the contract "
+"(e.g. goods and services to be procured), and the bidding process."
+msgstr ""
+"Documentación para proveedores potenciales, que describen los objetivos del "
+"contrato (ej. bienes y servicios a ser adquiridos), y el proceso de la "
+"licitación"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'biddingDocuments'."
+msgstr ""
+"[Agregar un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer el`.documentType` al "
+"'biddingDocuments'."
+
+#: ../../docs/cost/ids/core.md:247
+msgid "Tender evaluation results"
+msgstr "Resultados de la evaluación de la licitación"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"Documentation on the evaluation of the bids and the application of the "
+"evaluation criteria, including the justification for the award."
+msgstr ""
+"Documentación sobre la evaluación de las ofertas y la aplicación de los "
+"criterios de evaluación, incluyendo la justificación de la adjudicación."
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'evaluationReports'."
+msgstr ""
+"[Agregar un documento del proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer el`.documentType` a los "
+"'evaluationReports'."
+
+#: ../../docs/cost/ids/core.md:247
+msgid "Project design report"
+msgstr "Informe del diseño del proyecto"
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"A record of the justification for the design approach adopted in the "
+"project, typically issued before the works start, by the consultant or firm "
+"that will supervise the works."
+msgstr ""
+"Un registro de la justificación del enfoque del diseño adoptado para el "
+"proyecto, generalmente elaborado después de iniciada las obras, por el "
+"consultor o la firma encargada de la supervisión de las obras."
+
+#: ../../docs/cost/ids/core.md:247
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'projectDesignReport'."
+msgstr ""
+"[Agregar documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer `.documentType` al "
+"'projectDesignReport'."
+
+#: ../../docs/cost/ids/core.md:249
+msgid "Contract"
+msgstr "Contrato"
+
+#: ../../docs/cost/ids/core.md:254
+msgid "Contract agreement and conditions"
+msgstr "Acuerdo y condiciones del contrato"
+
+#: ../../docs/cost/ids/core.md:254
+msgid ""
+"A copy of the signed contract. Consider providing both machine-readable "
+"(e.g. original PDF, Word or Open Document format files), and a separate "
+"document entry for scanned-signed pages where this is required."
+msgstr ""
+"Una copia del contrato firmado. Considerar la posibilidad de proporcionar "
+"tanto archivos legibles por máquina (por ejemplo, archivos originales en "
+"formato PDF, Word u Open Document), como una referencia documental separada "
+"para las páginas firmadas escaneadas cuando así se requiera."
+
+#: ../../docs/cost/ids/core.md:254
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'contractSigned'."
+msgstr ""
+"[Agrebar un documento del proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer `.documentType` del "
+"'contractSigned'."
+
+#: ../../docs/cost/ids/core.md:254
+msgid "Registration and ownership of firms"
+msgstr "Registro y propiedad de las empresas"
+
+#: ../../docs/cost/ids/core.md:254
+msgid ""
+"A document issued by the relevant government registry as confirmation of the"
+" due incorporation and valid existence of the organization."
+msgstr ""
+"Un documento emitido por el registro gubernamental pertinente como "
+"confirmación de la debida constitución y existencia válida de la "
+"organización"
+
+#: ../../docs/cost/ids/core.md:254
+msgid "**Document:**"
+msgstr "**Documento:**"
+
+#: ../../docs/cost/ids/core.md:256
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'incorporationCertificate'."
+msgstr ""
+"[Agregar un documento](../common.md#add-a-contracting-process-document) y "
+"establecer `.documentType`del 'incorporationCertificate'."
+
+#: ../../docs/cost/ids/core.md:258 ../../docs/cost/ids/core.md:261
+msgid "**Data:**"
+msgstr "**Datos:**"
+
+#: ../../docs/cost/ids/core.md:260
+msgid "Add an `Organization` object to the `parties` array and:"
+msgstr "Agregar un objeto `Organization` a la matriz de `parties` y:"
+
+#: ../../docs/cost/ids/core.md:262
+msgid "Set its `.role` to 'supplier'"
+msgstr "Establecer el `.role` del 'supplier'"
+
+#: ../../docs/cost/ids/core.md:263
+msgid "Set its `.identifier.id` to the registration number"
+msgstr "Establecer `.identifier.id` al número de registro"
+
+#: ../../docs/cost/ids/core.md:264
+msgid ""
+"Set its `.identifier.scheme` to the code from [org-id.guide](https://org-"
+"id.guide/) for the register the identifier is drawn from"
+msgstr ""
+"Establecer su `.identifier.scheme` en el código de [org-"
+"id.guide](https://org-id.guide/) para el registro del que se obtiene el "
+"identificador."
+
+#: ../../docs/cost/ids/core.md:265
+msgid "Set its `.id`"
+msgstr "Establecer su `.id`"
+
+#: ../../docs/cost/ids/core.md:254
+msgid "Specifications and drawings"
+msgstr "Especificaciones y planos"
+
+#: ../../docs/cost/ids/core.md:254
+msgid "Detailed technical information about goods or services to be provided."
+msgstr ""
+"Información técnica detallada sobre los bienes y servicios que se van a "
+"suministrar"
+
+#: ../../docs/cost/ids/core.md:254
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'technicalSpecifications'."
+msgstr ""
+"[Agregar un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer `.documentType` en "
+"'technicalSpecifications'."
+
+#: ../../docs/cost/ids/core.md:261
+msgid "List of variations, changes, amendments"
+msgstr "Lista de variaciones, cambios, enmiendas"
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"Details of changes to the duration, price, scope or other significant "
+"features of the contracting process"
+msgstr ""
+"Detalles de cambios en la  duración, el precio, el alcance u otras "
+"características significativas del proceso de contratación."
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"For each variation, change or amendment, publish an entry with a `.date` and"
+" `.description` in `.summary.modifications`."
+msgstr ""
+"Para cada variación, cambio o enmienda, publicar un registro con una `.date`"
+" y `.description` en `.summary.modifications`."
+
+#: ../../docs/cost/ids/core.md:263
+msgid ""
+"Set `.type` based on the type of change and provide the relevant "
+"before/after values in `.oldContractPeriod`, `.oldContractValue`, "
+"`.newContractPeriod` and `.newContractValue`."
+msgstr ""
+"Establecer `.type` basado en el tipo de cambio y proporcionar los valores "
+"antes/después pertinentes en `.oldContractPeriod`, `.oldContractValue`, "
+"`.newContractPeriod` y `.newContractValue`."
+
+#: ../../docs/cost/ids/core.md:261
+msgid "List of escalation approvals"
+msgstr "Lista de aprobaciónes de incrementos"
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"Documentation of one or more approved escalations of the contract price "
+"during the project life-cycle."
+msgstr ""
+"Documentación de uno o más incrementos aprobados del precio del contrato "
+"durante el ciclo de vida del proyecto."
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'escalationApprovals'."
+msgstr ""
+"[Agregar un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer `.documentType` en "
+"'escalationApprovals'."
+
+#: ../../docs/cost/ids/core.md:261
+msgid "Quality assurance reports"
+msgstr "Informes de aseguramiento de calidad"
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"Documentation identifying deficiencies in designs, specifications, "
+"standards, methods, procedures and practices, and identifying best "
+"practices."
+msgstr ""
+"Documentación que identifica deficiencias en diseños, especificaciones, "
+"normas, métodos, procedimientos y prácticas, e y que identifica las mejores "
+"prácticas."
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'qualityAssuranceReport'."
+msgstr ""
+"[Agregar un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establecer `.documentType` en "
+"'qualityAssuranceReport'."
+
+#: ../../docs/cost/ids/core.md:261
+msgid "Disbursement records or payment certificates"
+msgstr "Registros de desembolsos o certificados de pago"
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"A list of the spending transactions made against this contract and/or a "
+"document certifying that the work specified on a supplier's estimate or "
+"invoice is complete and that payment to the supplier is approved"
+msgstr ""
+"Una lista de transacciones de gastos realizadas con cargo a este contrato "
+"y/o un documento que certifica que la obra especificada en la estimación o "
+"factura del proveedor está finalizada y que se aprueba el pago al proveedor."
+
+#: ../../docs/cost/ids/core.md:263
+msgid ""
+"For each disbursement, add a `Transaction` to `.summary.transactions` and "
+"set its fields according to the schema definitions."
+msgstr ""
+"Para cada desembolso, agregar una \"Transacción\" a "
+"\".summary.transactions\" y configurar sus campos de acuerdo con las "
+"definiciones del esquema."
+
+#: ../../docs/cost/ids/core.md:265
+msgid "**Documents:**"
+msgstr "**Documentos:**"
+
+#: ../../docs/cost/ids/core.md:267
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'paymentCertificate'."
+msgstr ""
+"[Agregar un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y configurar `.documentType` del "
+"'paymentCertificate'."
+
+#: ../../docs/cost/ids/core.md:261
+msgid "Contract amendments"
+msgstr "Enmiendas al contrato"
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"A legal document that changes or adds to the terms of an existing contract."
+msgstr ""
+"Un documento legal que cambia o agrega términos a un contrato existente."
+
+#: ../../docs/cost/ids/core.md:261
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set `.documentType` to 'contractAmendment'."
+msgstr ""
+"[Agregar un documento del proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y configurar`.documentType` del "
+"'contractAmendment'."

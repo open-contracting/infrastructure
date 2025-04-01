@@ -1,7 +1,7 @@
 CoST IDS element,Description,Mapping to OC4IDS,Mapping from OCDS,OC4IDS Fields,OC4IDS Codes
 "List of variations, changes, amendments","Details of changes to the duration, price, scope or other significant features of the contracting process","For each variation, change or amendment, publish an entry with a `.date` and `.description` in `.summary.modifications`.
 
-Set `.type` based on the type of change and provide the relevant before/after values in `.oldContractPeriod`, `.oldContractValue`, ``.newContractPeriod and `.newContractValue`.","*Monitor the following fields for changes:*
+Set `.type` based on the type of change and provide the relevant before/after values in `.oldContractPeriod`, `.oldContractValue`, `.newContractPeriod` and `.newContractValue`.","*Monitor the following fields for changes:*
 
 * `/contracts/value`
 * `/contracts/period`

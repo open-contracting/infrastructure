@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Francis C. Bennaton, 2024
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-15 11:03+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/reference/prefixes.md:1
+msgid "Registered project prefixes"
+msgstr "Prefijos de proyectos registrados"
+
+#: ../../docs/reference/prefixes.md:3
+msgid ""
+"The list below shows all registered prefixes. You can [download the list as "
+"CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single=true&output=csv)."
+msgstr ""
+"La siguiente lista muestra todos los prefijos registrados. Puede [descargar "
+"la lista como "
+"CSV](https://docs.google.com/spreadsheets/d/e/2PACX-1vTWtoIa_26k35bmZVGiAziNMvdUgDS93ZM2j99XidgHaoQxm9C2dbnblckB0ZF7NUKJ6RrpDS7OQvxl/pub?gid=506986894&single"
+" =verdadero&salida=csv)."

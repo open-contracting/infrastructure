@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Open Contracting Partnership
+# This file is distributed under the same license as the Open Contracting for Infrastructure Data Standards Toolkit package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
+"PO-Revision-Date: 2023-12-14 22:18+0000\n"
+"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../docs/cost/ids/index.md:1
+msgid "CoST IDS to OC4IDS mapping"
+msgstr "Mapeo del CoST IDS al OC4IDS"
+
+#: ../../docs/cost/ids/index.md:3
+msgid "This section contains mappings from the CoST IDS to OC4IDS:"
+msgstr "Esta sección contiene el mapeo del CoST IDS al OC4IDS"
+
+#: ../../docs/cost/ids/index.md:5
+msgid ""
+"The [core standard mapping](core) describes a mapping of the proactive and "
+"reactive disclosure elements of the \"core\" CoST IDS."
+msgstr ""
+"El [core standard mapping](core) describe un mapeo de los elementos para "
+"divulgación proactiva y reactiva del \"núcleo\" del CoST IDS."
+
+#: ../../docs/cost/ids/index.md:6
+msgid ""
+"The [sustainability modules mapping](sustainability) describes a mapping of "
+"the optional CoST IDS sustainability modules."
+msgstr ""
+"El [sustainability modules mapping](sustainability) describe un mapeo a los "
+"módulos opcionales de sostenibilidad del CoST IDS. "
