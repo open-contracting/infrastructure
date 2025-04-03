@@ -1,5 +1,41 @@
 # Changelog
 
+## [0.9.5] - 2025-04-02
+
+### Documentation
+
+* [#478](https://github.com/open-contracting/infrastructure/pull/478), [#479](https://github.com/open-contracting/infrastructure/pull/479) - Fix validation errors in `example.json`.
+* [#483](https://github.com/open-contracting/infrastructure/pull/483) - Update core CoST IDS mapping to reflect latest schema.
+
+### Schema
+
+* [#476](https://github.com/open-contracting/infrastructure/pull/476) - Add `environment.environmentalMeasures`.
+
+### Codelists
+
+* [#476](https://github.com/open-contracting/infrastructure/pull/476) - Add environmentalMeasure codelist.
+* [#476](https://github.com/open-contracting/infrastructure/pull/476) - Rename climateMeasures codelist to climateMeasure.
+* Add codes:
+  * [#475](https://github.com/open-contracting/infrastructure/pull/475) - conservationMeasure:
+    * 'airManagement'
+    * 'waterManagement'
+  * documentType:
+    * [#476](https://github.com/open-contracting/infrastructure/pull/476) - 'environmentalMeasures'
+    * [#475](https://github.com/open-contracting/infrastructure/pull/475) - 'maintenancePlan'
+  * [#494](https://github.com/open-contracting/infrastructure/pull/494) - policyAlignment:
+    * 'annualBudget'
+    * 'infrastructureProjectPipeline'
+  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
+    * 'maintenance'
+* Update code definitions:
+  * [#493](https://github.com/open-contracting/infrastructure/pull/493) - projectType:
+    * 'rehabilitation'
+    * 'expansion'
+
+### Other
+
+* [#483](https://github.com/open-contracting/infrastructure/pull/483) - Add field lists to CoST IDS mappings.
+
 ## [0.9.4] - 2023-12-12
 
 ### Documentation

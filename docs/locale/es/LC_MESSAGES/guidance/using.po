@@ -8,22 +8,22 @@
 # Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2019
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
 # James McKinney, 2021
-# Andres Aguilera <aaguilera@cds.com.py>, 2021
+# Francis C. Bennaton, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-11 11:14-0400\n"
+"POT-Creation-Date: 2024-10-18 09:20+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Andres Aguilera <aaguilera@cds.com.py>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Francis C. Bennaton, 2024\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/guidance/using.md:1
 msgid "Using data from procurement systems for infrastructure monitoring"
@@ -46,21 +46,21 @@ msgstr "Cada proceso de contratación tiene un identificador único (`ocid`);"
 
 #: ../../docs/guidance/using.md:7
 msgid ""
-"Every update to that process, from planning through to implementation, "
-"should be published under the same `ocid`, and in a structured open data "
+"Every update to that process, from planning through to implementation, ought"
+" to be published under the same `ocid`, and in a structured open data "
 "format;"
 msgstr ""
-"Cada actualización a ese proceso, desde la planeación hasta la "
-"implementación, debería estar publicado bajo el mismo `ocid`, y en un "
-"formato de datos abiertos estructurado;"
+"Cada actualización de ese proceso, desde la planificación hasta la "
+"implementación, debería publicarse bajo el mismo `ocid`, y en un formato "
+"estructurado de datos abiertos;"
 
 #: ../../docs/guidance/using.md:9
 msgid ""
-"It should be possible to download bulk data in OCDS format, or access this "
-"structured data via an API."
+"It ought to be possible to download bulk data in OCDS format, or access this"
+" structured data via an API."
 msgstr ""
 "Debería ser posible descargar datos en masa en formato OCDS, o acceder a "
-"estos datos estructurados por medio de una API."
+"estos datos estructurados a través de una API."
 
 #: ../../docs/guidance/using.md:11
 msgid ""
@@ -89,13 +89,14 @@ msgstr "Para empezar"
 
 #: ../../docs/guidance/using.md:19
 msgid ""
-"*The following steps may require support from a technical expert. You can "
-"also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data"
-"@open-contracting.org)) for guidance.*"
+"*The following steps might require support from a technical expert. You can "
+"also contact the OC4IDS Helpdesk ([data@open-"
+"contracting.org](mailto:data@open-contracting.org)) for guidance.*"
 msgstr ""
-"*Los siguientes pasos pueden requerir la ayuda de un experto técnico. Usted "
-"también puede contactar con el Helpdesk de OC4IDS ([data@open-"
-"contracting.org](mailto:data@open-contracting.org)) para orientación.*"
+"*Los siguientes pasos pueden requerir la ayuda de un experto técnico. "
+"También puede ponerse en contacto con el servicio de asistencia OC4IDS "
+"([data@open-contracting.org](mailto:data@open-contracting.org)) para que le "
+"orienten.*"
 
 #: ../../docs/guidance/using.md:21
 msgid "(1) Evaluate the Open Contracting Data"
@@ -105,14 +106,14 @@ msgstr "(1) Evaluar los datos de Contrataciones Abiertas"
 msgid "Check that the data you plan to analyze is in OCDS format"
 msgstr "Verifique que los datos que planea analizar están en formato OCDS"
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:26
 msgid ""
 "You can use the [OCDS Data Review Tool](https://review.standard.open-"
 "contracting.org/) to check whether your data is in the correct format"
 msgstr ""
-"Puede usar la [Herramienta de revisión de datos OCDS](https://review.standard.open-"
-"contracting.org/) para verificar si sus datos están en el formato "
-"correcto."
+"Puede utilizar la [Herramienta de revisión de datos "
+"OCDS](https://review.standard.open-contracting.org/) para comprobar si sus "
+"datos están en el formato correcto."
 
 #: ../../docs/guidance/using.md:29
 msgid "Check which stages of the contracting process the data covers."
@@ -144,7 +145,7 @@ msgstr ""
 "consultar los datos. Otros proveen acceso a datos en masa que puede "
 "descargar y utilizar con sus herramientas de consulta propias."
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:38
 msgid ""
 "If you are working with OCDS data from an unreliable source, consider "
 "caching a copy of the OCDS releases that relate to the infrastructure "
@@ -157,7 +158,7 @@ msgstr ""
 "OC4IDS a las copias para asegurar que los releases OCDS estén disponibles "
 "para los usuarios."
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:42
 msgid ""
 "[OCDS Kingfisher](https://github.com/open-contracting/kingfisher/) is an "
 "open source tool that can load OCDS data into a PostgreSQL database. It "
@@ -184,7 +185,7 @@ msgstr ""
 "campo identificador de proyecto o de presupuesto que esté relacionado a un "
 "registro de proyectos de infraestructura."
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:50
 msgid ""
 "If the procurement data you are working with is in OCDS format, refer to the"
 " guidance on [project identifiers in OCDS](identifiers) for more information"
@@ -196,55 +197,60 @@ msgstr ""
 
 #: ../../docs/guidance/using.md:53
 msgid ""
-"However, where this is not the case, it may be possible to search for "
+"However, where this is not the case, it might be possible to search for "
 "tenders with a particular set of item classifications, or from a particular "
 "buyer."
 msgstr ""
-"Sin embargo, cuando este no sea el caso, puede ser posible buscar "
-"licitaciones con un conjunto particular de clasificaciones de artículos, o "
-"de un comprador en particular."
+"Sin embargo, cuando éste no sea el caso, podría ser posible buscar "
+"licitaciones con un conjunto determinado de clasificaciones de artículos, o "
+"de un comprador concreto."
 
 #: ../../docs/guidance/using.md:55
 msgid ""
-"This may be possible by downloading and filtering spreadsheets of the data, "
-"or may require queries written against your chosen data storage tool."
+"This might be possible by downloading and filtering spreadsheets of the "
+"data, or might involve queries written against your chosen data storage "
+"tool."
 msgstr ""
-"Esto debería ser posible descargando y filtrando hojas de cálculo con los "
-"datos, o podría requerir consultas en la herramienta de almacenamiento de "
-"datos que ha elegido usar."
+"Esto podría ser posible descargando y filtrando hojas de cálculo de los "
+"datos, o podría implicar consultas escritas en la herramienta de "
+"almacenamiento de datos elegida."
 
 #: ../../docs/guidance/using.md:57
 msgid "Worked example"
 msgstr "Ejemplo práctico"
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:60
 msgid ""
 "Using the UK Contracts Finder dataset in OCDS format, and [OCDS "
 "Kingfisher](https://github.com/open-contracting/kingfisher/), we can use the"
 " following query to fetch contracting processes classified under the "
 "['Architectural, construction, engineering and inspection "
-"services'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) hierarchy of the EU "
-"Common Procurement Vocabulary."
+"services'](https://web-"
+"archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) hierarchy of "
+"the EU Common Procurement Vocabulary."
 msgstr ""
-"Usando el conjunto de datos en formato OCDS de UK Contracts Finder y [OCDS "
-"Kingfisher](https://github.com/open-contracting/kingfisher/), podemos usar "
-"la siguiente consulta para obtener procesos de contratación clasificados "
-"bajo la jerarquía ['Servicios de arquitectura, construcción, ingeniería e "
-"inspección'](https://web-archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) del Vocabulario Común"
-" de Adquisiciones de la UE (CPV, por sus siglas en inglés)."
+"Utilizando el conjunto de datos Contracts Finder del Reino Unido en formato "
+"OCDS, y [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), "
+"se puede utilizar la siguiente consulta para obtener los procesos de "
+"contratación clasificados en la jerarquía ['Architectural, construction, "
+"engineering and inspection services'](https://web-"
+"archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) del Vocabulario"
+" Común de Contratos Públicos de la UE."
 
-#: ../../docs/guidance/using.md:29
+#: ../../docs/guidance/using.md:88
 msgid ""
 "This returns over 11,000 procurement processes related to infrastructure, "
 "covering frameworks and procurements, with a value of up to £25bn a year. "
 "These processes include design work, construction and monitoring, and each "
-"needs to be reviewed to identify if it should be subject to monitoring."
+"needs to be reviewed to identify if it ought to be subject to monitoring."
 msgstr ""
-"Esto retorna más de 11.000 procesos de adquisición relacionados a "
-"infraestructura, cubriendo convenios marco y adquisiciones, con un valor de"
-"  £25.000 millones al año. Estos procesos incluyen trabajos de diseño, "
-"construcción y supervisión, y cada uno necesita ser revisado para "
-"identificar si debería estar sujeto a monitoreo."
+"Utilizando el conjunto de datos Contracts Finder del Reino Unido en formato "
+"OCDS, y [OCDS Kingfisher](https://github.com/open-contracting/kingfisher/), "
+"se puede utilizar la siguiente consulta para obtener los procesos de "
+"contratación clasificados en la jerarquía ['Architectural, construction, "
+"engineering and inspection services'](https://web-"
+"archive.southampton.ac.uk/cpv.data.ac.uk/code-71000000.html) del Vocabulario"
+" Común de Contratos Públicos de la UE."
 
 #: ../../docs/guidance/using.md:91
 msgid "(4) Populate project-level data"
@@ -274,22 +280,22 @@ msgstr ""
 "Buscar **contratos relacionados** para enlazar cualquier otro contrato de "
 "diseño, construcción o supervisión a este proyecto;"
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:100
 msgid ""
-"When searching for related contracts, you may be looking for contracts from "
-"the same buyer, mentioning similar words or localities."
+"When searching for related contracts, you might be looking for contracts "
+"from the same buyer, mentioning similar words or localities."
 msgstr ""
-"Cuando busque contratos relacionados, podría enfocarse en contratos con el "
-"mismo comprador, mencionando palabras o ubicaciones similares."
+"Al buscar contratos relacionados, es posible buscar contratos del mismo "
+"comprador, mencionando palabras o ubicaciones similares"
 
 #: ../../docs/guidance/using.md:103
 msgid ""
-"You may not be able to fill all the project-level details from the "
-"contracts, and may need to undertake additional research to find:"
+"You might not be able to fill all the project-level details from the "
+"contracts, and might need to undertake additional research to find:"
 msgstr ""
-"Es posible que no pueda llenar todos los detalles a nivel de proyecto desde "
-"los datos de contratos, y pueda necesitar investigaciones adicionales para "
-"encontrar:"
+"Es posible que no pueda llenar todos los detalles a nivel de proyecto a "
+"partir de los contratos y que sea necesario realizar una investigación "
+"adicional para encontrarlos:"
 
 #: ../../docs/guidance/using.md:105
 msgid "The project owner and name"
@@ -311,13 +317,13 @@ msgstr ""
 "Cualquier estudio de impacto ambiental o a tierras y reasentamientos que se "
 "ha realizado"
 
-#: ../../docs/guidance/using.md:1
+#: ../../docs/guidance/using.md:111
 msgid ""
-"You can use a [blank example OC4IDS JSON file"
-"](../examples/blank.json) to get started."
+"You can use a [blank example OC4IDS JSON file](../examples/blank.json) to "
+"get started."
 msgstr ""
-"Puede usar un {archivo de ejemplo}`OC4IDS JSON en blanco "
-"<../examples/blank.json>` para empezar."
+"Puede utilizar un [blank example OC4IDS JSON file](../examples/blank.json) "
+"para empezar."
 
 #: ../../docs/guidance/using.md:114
 msgid "(5) Monitoring contracting process updates"
@@ -326,15 +332,15 @@ msgstr "(5) Monitorear actualizaciones a procesos de contratación"
 #: ../../docs/guidance/using.md:116
 msgid ""
 "When a publisher is using OCDS correctly, and is providing updates on a "
-"contracting process under the same `ocid`, you should be able to regularly "
-"fetch the latest data for each contracting process you are monitoring, and "
+"contracting process under the same `ocid`, you ought to be able to regularly"
+" fetch the latest data for each contracting process you are monitoring, and "
 "to compare it with the existing data you have, looking for changes."
 msgstr ""
-"Cuando un publicador está usando OCDS de forma correcta, y provee "
-"actualizaciones a un proceso de contratación bajo el mismo `ocid`, usted "
-"debería poder obtener regularmente los datos actualizados para cada proceso "
-"de contratación que está monitoreado, y compararlos con los datos que ya "
-"posee, para identificar cambios."
+"Cuando un editor utiliza OCDS correctamente, y proporciona actualizaciones "
+"sobre un proceso de contratación bajo el mismo `ocid`, se debería poder "
+"obtener regularmente los datos más recientes de cada proceso de contratación"
+" que se esté supervisando, y compararlos con los datos existentes, en busca "
+"de cambios."
 
 #: ../../docs/guidance/using.md:118
 msgid ""
@@ -381,29 +387,29 @@ msgstr ""
 #: ../../docs/guidance/using.md:132
 msgid ""
 "If the OCDS data includes implementation data, including transactions or "
-"final spending information, then it may be possible to compare the total sum"
-" of all contract spending against the original anticipated contract spend, "
-"and overall project budget. It may also be possible to compare final "
-"contract delivery dates with originally planned dates. This can be used to "
-"identify possible modifications that are in need to explanation."
+"final spending information, then it might be possible to compare the total "
+"sum of all contract spending against the original anticipated contract "
+"spend, and overall project budget. It might also be possible to compare "
+"final contract delivery dates with originally planned dates. This can be "
+"used to identify possible modifications that are in need to explanation."
 msgstr ""
-"Si los datos OCDS incluyen datos de implementación, incluyendo transacciones"
-" o información de gasto final, entonces sería posible comparar la suma total"
-" de todos los gastos en contratos con el gasto en contratos anticipado "
-"originalmente, y el presupuesto total del proyecto. También podría ser "
-"posible comparar las fechas finales de entrega de contratos con las fechas "
-"planeadas originalmente. Esto puede ser usado para identificar posibles "
-"modificaciones que necesitan explicación."
+"Si los datos de la OCDS incluyen datos de implementación, incluyendo "
+"transacciones o información sobre el gasto final, entonces podría ser "
+"posible comparar la suma total de todos los gastos contractuales con el "
+"gasto contractual previsto originalmente, y el presupuesto global del "
+"proyecto. También comparar las fechas finales de entrega del contrato con "
+"las fechas previstas originalmente. Esto puede servir para identificar "
+"posibles modificaciones que haya que explicar."
 
 #: ../../docs/guidance/using.md:134
 msgid ""
-"In other cases, you may need to identify other data sources (such as "
+"In other cases, you might need to identify other data sources (such as "
 "treasury or public spending data) that you can draw upon to check whether a "
 "project spend was as anticipated or not."
 msgstr ""
-"En otros casos, podría necesitar identificar otras fuentes de datos (como "
-"datos del Tesoro o de gastos públicos) a las que pueda recurrir para "
-"verificar si un gasto de proyecto se dio como estaba anticipado o no."
+"En otros casos, es posible que se deban identificar otras fuentes de datos "
+"(como datos del tesoro o del gasto público) a las que pueda recurrir para "
+"comprobar si el gasto de un proyecto fue el previsto o no."
 
 #: ../../docs/guidance/using.md:136
 msgid "Tools and platform"

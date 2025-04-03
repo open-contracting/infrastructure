@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://standard.open-contracting.org/infrastructure/schema/0__9__4/project-schema.json",
+  "id": "https://standard.open-contracting.org/infrastructure/schema/0__9__5/project-schema.json",
   "title": "Open Contracting for Infrastructure Data Standard Schema",
-  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/resource/977/). OC4IDS defines an \"infrastructure project\" as: \"the development, maintenance and decommissioning of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus. Development covers project identification, preparation, implementation and completion.\"",
+  "description": "The Open Contracting for Infrastructure Data Standard (OC4IDS) schema sets out a data structure for capturing and exchanging information about infrastructure projects in line with the disclosure requirements of the [CoST Infrastructure Data Standard](https://infrastructuretransparency.org/resource/977/). OC4IDS defines an \"infrastructure project\" as: \"the development, maintenance, rehabilitation, expansion, replacement and/or decommissioning of a set of infrastructure assets in a specified location, generally the responsibility of a single procuring entity and budget authority: for example, a highway overpass or a university campus. Development covers project identification, preparation, implementation and completion.\"",
   "type": "object",
   "required": [
     "id"
@@ -145,6 +145,7 @@
       "type": "string",
       "enum": [
         "construction",
+        "maintenance",
         "rehabilitation",
         "replacement",
         "expansion",
@@ -450,12 +451,32 @@
           "uniqueItems": true,
           "minItems": 1
         },
+        "climateMeasures": {
+          "title": "Climate measures",
+          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ClimateMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
         "conservationMeasures": {
           "title": "Conservation measures",
           "description": "The measures adopted by the project to protect and enhance biodiversity.",
           "type": "array",
           "items": {
             "$ref": "#/definitions/ConservationMeasure"
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "environmentalMeasures": {
+          "title": "Environmental measures",
+          "description": "The measures adopted by the project to mitigate or remedy environmental impacts.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EnvironmentalMeasure"
           },
           "uniqueItems": true,
           "minItems": 1
@@ -469,16 +490,6 @@
           "title": "In protected area",
           "description": "Whether the project is located in a protected area.",
           "type": "boolean"
-        },
-        "climateMeasures": {
-          "title": "Climate measures",
-          "description": "The measures adopted by the project to adapt to or mitigate against climate change.",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ClimateMeasure"
-          },
-          "uniqueItems": true,
-          "minItems": 1
         }
       },
       "minProperties": 1
@@ -580,9 +591,10 @@
           "description": "The status of this contracting process. Drawn from the [contractingProcessStatus codelist](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#contractingprocessstatus).",
           "type": "string",
           "enum": [
-            "pre-award",
+            "preAward",
             "active",
-            "closed"
+            "closed",
+            "pre-award"
           ],
           "codelist": "contractingProcessStatus.csv",
           "openCodelist": false
@@ -2593,6 +2605,35 @@
       },
       "minProperties": 1
     },
+    "ClimateMeasure": {
+      "title": "Climate measure",
+      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of climate measure, using the open [climateMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasure) codelist.",
+          "type": [
+            "array"
+          ],
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "codelist": "climateMeasure.csv",
+          "openCodelist": true,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the climate measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
     "ConservationMeasure": {
       "title": "Conservation measure",
       "description": "A measure adopted by the project to protect and enhance biodiversity.",
@@ -2609,6 +2650,28 @@
         "description": {
           "title": "Description",
           "description": "A short description of the conservation measure.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "minProperties": 1
+    },
+    "EnvironmentalMeasure": {
+      "title": "Environmental measure",
+      "description": "A measure adopted by the project to mitigate or remedy environmental impacts.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "Type",
+          "description": "The type of environmental measure, using the open [environmentalMeasure](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#environmentalMeasure) codelist.",
+          "type": "string",
+          "codelist": "environmentalMeasure.csv",
+          "openCodelist": true,
+          "minLength": 1
+        },
+        "description": {
+          "title": "Description",
+          "description": "A short description of the environmental measure.",
           "type": "string",
           "minLength": 1
         }
@@ -3159,35 +3222,6 @@
             }
           },
           "minProperties": 1
-        }
-      },
-      "minProperties": 1
-    },
-    "ClimateMeasure": {
-      "title": "Climate measure",
-      "description": "A measure adopted by the project to adapt to or mitigate against climate change.",
-      "type": "object",
-      "properties": {
-        "type": {
-          "title": "Type",
-          "description": "The type of climate measure, using the open [climateMeasures](https://standard.open-contracting.org/infrastructure/{{version}}/{{lang}}/reference/codelists/#climateMeasures) codelist.",
-          "type": [
-            "array"
-          ],
-          "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "codelist": "climateMeasures.csv",
-          "openCodelist": true,
-          "minItems": 1,
-          "uniqueItems": true
-        },
-        "description": {
-          "title": "Description",
-          "description": "A short description of the climate measure.",
-          "type": "string",
-          "minLength": 1
         }
       },
       "minProperties": 1

@@ -22,7 +22,7 @@
       "updated": "2018-12-10T15:53:00Z",
       "title": "M75 Junctions 4 to 5 upgrade smart motorway",
       "description": "Upgrading the 5km stretch of the M75 near Birmingham Airport, between junction 4 near Patcham and junction 5 at Windlesham, to an all-lane running smart motorway.",
-      "status": "completed",
+      "status": "maintenance",
       "period": {
         "startDate": "2016-01-01T00:00:00Z",
         "endDate": "2018-12-10T00:00:00Z",
@@ -198,7 +198,9 @@
         "finance": [
           {
             "id": "1",
-            "assetClass": "debt",
+            "assetClass": [
+              "debt"
+            ],
             "type": "loan",
             "concessional": true,
             "value": {
@@ -544,8 +546,7 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              },
-              "value": {}
+              }
             },
             {
               "id": "2",
@@ -592,8 +593,7 @@
               "period": {
                 "startDate": "2018-01-07T00:00:00Z",
                 "endDate": "2018-01-07T00:00:00Z"
-              },
-              "value": {}
+              }
             },
             {
               "id": "2",
@@ -794,7 +794,7 @@
             ],
             "social": {
               "laborBudget": {
-                "amount": "150000",
+                "amount": 150000,
                 "currency": "USD"
               },
               "laborObligations": {
@@ -1138,7 +1138,7 @@
               "countryName": "United Kingdom"
             },
             "date": "2024-01-15T00:00:00Z",
-            "numberOfParticipants": "25",
+            "numberOfParticipants": 25,
             "publicOffice": {
               "person": {
                 "name": "Brett Gliddon"
@@ -1158,7 +1158,7 @@
         "inIndigenousLand": false,
         "healthAndSafety": {
           "materialTests": {
-            "test": [
+            "tests": [
               "masonry",
               "metal"
             ],
@@ -1176,13 +1176,19 @@
             "description": "Detailed GIS analysis was undertaken comparing multiple potential locations to select the final project site with the lowest potentially negative ecological impact."
           }
         ],
+        "environmentalMeasures": [
+          {
+            "type": "wasteManagement",
+            "description": "Waste management plans will be incorporated into all stages of the project to minimize waste produced and ensure unavoidable waste is disposed of in an environmentally responsible manner."
+          }
+        ],
         "climateOversightTypes": [
           "internal"
         ],
         "hasImpactAssessment": true,
         "impactCategories": [
           {
-            "scheme": "ifc-environmental-social",
+            "scheme": "ifcEnvironmentalSocial",
             "id": "a"
           }
         ],
@@ -1193,7 +1199,9 @@
         "inProtectedArea": true,
         "climateMeasures": [
           {
-            "type": "regenerativeDesign",
+            "type": [
+              "regenerativeDesign"
+            ],
             "description": "Regenerative design measures for the project include biomimicry to imitate nature."
           }
         ]

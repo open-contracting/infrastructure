@@ -5,26 +5,24 @@
 # 
 # Translators:
 # Romina Fernandez <rfernandez@cds.com.py>, 2020
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2020
 # James McKinney, 2021
-# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Cecilia Casco <ceciliacasco@cds.com.py>, 2021
-# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021
+# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Open Contracting for Infrastructure Data Standards Toolkit 0.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-04 21:08-0400\n"
+"POT-Creation-Date: 2025-03-21 16:50+1300\n"
 "PO-Revision-Date: 2019-03-21 15:13+0000\n"
-"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../docs/reference/index.md:1
 msgid "Schema reference"
@@ -43,24 +41,28 @@ msgstr ""
 
 #: ../../docs/reference/index.md:5
 msgid ""
-"OC4IDS comprises a schema file and codelist files, and reference "
-"documentation is available for the [schema](schema) and "
-"[codelists](codelists)."
+"OC4IDS comprises a [schema](schema) and [codelists](codelists). The schema "
+"sets out the fields, structure, data types and validation rules for OC4IDS "
+"data. Some schema fields refer to codelists, to limit and standardize the "
+"possible values of the fields, in order to promote data interoperability."
 msgstr ""
-"OC4IDS está compuesto de un archivo de esquema y archivos de listas de "
-"código, y la documentación de referencia está disponible para el "
-"[esquema](schema) y las [listas de código](codelists)."
+"El OC4IDS comprende un [esquema](schema) y [listas de códigos](codelists). "
+"El esquema establece los campos, la estructura, los tipos de datos y las "
+"reglas de validación para los datos OC4IDS. Algunos campos del esquema hacen"
+" referencia a listas de códigos, para limitar y estandarizar los valores "
+"posibles de los campos, con el fin de promover la interoperabilidad de los "
+"datos."
 
 #: ../../docs/reference/index.md:7
 msgid ""
 "The schema can be explored using the [schema browser](browser) and can be "
-"[downloaded here](../../build/current_lang/project-schema.json). "
-"The schema is expressed using [JSON Schema, draft "
-"4](https://tools.ietf.org/html/draft-zyp-json-schema-04)."
+"[downloaded here](../../build/current_lang/project-schema.json). The schema "
+"is expressed using [JSON Schema, draft 4](https://tools.ietf.org/html/draft-"
+"zyp-json-schema-04)."
 msgstr ""
-"El esquema puede ser explorado usando el [navegador de esquema](browser) y "
-"puede ser [descargado aquí](../../build/current_lang/project-"
-"schema.json). El esquema está escrito usando [JSON Schema, borrador "
+"El esquema se puede explorar utilizando el [navegador de esquemas](browser) "
+"y se puede [descargar aquí](../../build/current_lang/project-schema.json). "
+"El esquema se expresa mediante [Esquema JSON, borrador "
 "4](https://tools.ietf.org/html/draft-zyp-json-schema-04)."
 
 #: ../../docs/reference/index.md:9
@@ -75,21 +77,17 @@ msgstr ""
 
 #: ../../docs/reference/index.md:11
 msgid ""
-"The OC4IDS schema reuses many of the building blocks from the Open "
-"Contracting Data Standard; these are introduced in the [Getting Started "
-"section of the OCDS documentation](https://standard.open-"
-"contracting.org/1.1/en/getting_started/)."
+"The OC4IDS schema reuses many fields and structures from the [Open "
+"Contracting Data Standard](https://standard.open-contracting.org)."
 msgstr ""
-"El esquema OC4IDS reutiliza mucho de los bloques del Estándar de Datos de "
-"Contrataciones Abiertas; estos son presentados en la [sección de 'Para "
-"empezar' de la documentación de OCDS](https://standard.open-"
-"contracting.org/1.1/es/getting_started/)."
+"El esquema OC4IDS reutiliza muchos campos y estructuras del [Estándar de "
+"datos de contratación abierta](https://standard.open-contracting.org)."
 
-#: ../../docs/reference/index.md:24
+#: ../../docs/reference/index.md:25
 msgid "Data validation"
 msgstr "Validación de los Datos"
 
-#: ../../docs/reference/index.md:26
+#: ../../docs/reference/index.md:27
 msgid ""
 "OC4IDS uses a permissive schema. It does not enforce strong technical "
 "validation requirements on data, other than some structural rules and data "
@@ -99,7 +97,7 @@ msgstr ""
 "técnica estrictos en los datos, aparte de algunas reglas estructurales y "
 "reglas de tipos de datos (fechas, números y cadenas de texto)."
 
-#: ../../docs/reference/index.md:28
+#: ../../docs/reference/index.md:29
 msgid ""
 "The fact that data validates against the schema cannot be used to make any "
 "judgment about the quality of that data."
@@ -107,11 +105,11 @@ msgstr ""
 "El hecho de que los datos se validen contra el esquema no puede ser usado "
 "para emitir juicio acerca de la calidad de los datos."
 
-#: ../../docs/reference/index.md:30
+#: ../../docs/reference/index.md:31
 msgid "Extending the schema"
 msgstr "Extendiendo el esquema"
 
-#: ../../docs/reference/index.md:32
+#: ../../docs/reference/index.md:33
 msgid ""
 "The schema does not restrict the use of additional objects or fields. As a "
 "result, publishers of data are free to add extra details to their data."
@@ -120,13 +118,13 @@ msgstr ""
 "tanto, los publicadores de datos son libres de añadir detalles extra a sus "
 "datos."
 
-#: ../../docs/reference/index.md:34
+#: ../../docs/reference/index.md:35
 msgid ""
 "No formal extensions mechanism currently exists for OC4IDS. However, the "
 "extensions mechanism from the Open Contracting Data Standard should be used "
 "as a reference model if such a mechanism is required in the future."
 msgstr ""
-"Actualmente no existe un mecanismo formal de extensiones para OC4IDS. Sin "
-"embargo, el mecanismo de extensiones del Estándar de Datos para las "
+"Actualmente no existe un mecanismo formal de extensiones para el OC4IDS. Sin"
+" embargo, el mecanismo de extensiones del Estándar de Datos para las "
 "Contrataciones Abiertas debería ser usado como un modelo de referencia si se"
 " requiere de un mecanismo en el futuro."
