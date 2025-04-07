@@ -468,12 +468,12 @@ def update(ppp_base_url):
         # An editor might've added an infrastructure codelist or copied an OCDS codelist, without updating this script.
         added = actual - infra_list - ocds_list
         if added:
-            sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
+            sys.exit(f"{prefix} has unexpected {', '.join(added)}: add to infra_{suffix} or ocds_{suffix}?")
 
         # An editor might've removed an infrastructure codelist, without updating this script.
         removed = infra_list - actual
         if removed:
-            sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
+            sys.exit(f"{prefix} is missing {', '.join(removed)}: remove from infra_{suffix}?")
 
     ocds_base_url = "https://standard.open-contracting.org/1.1/en/"
 
