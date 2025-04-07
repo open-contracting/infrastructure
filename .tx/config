@@ -190,6 +190,15 @@ resource_name          = infrastructure-schema
 replace_edited_strings = false
 keep_translations      = false
 
+[o:open-contracting-partnership-1:p:oc4ids-09:r:infrastructure-sustainability-mapping]
+file_filter            = docs/locale/<lang>/LC_MESSAGES/infrastructure-sustainability-mapping.po
+source_file            = build/locale/infrastructure-sustainability-mapping.pot
+type                   = PO
+minimum_perc           = 0
+resource_name          = infrastructure-sustainability-mapping
+replace_edited_strings = false
+keep_translations      = false
+
 [o:open-contracting-partnership-1:p:oc4ids-09:r:projects--index]
 file_filter            = docs/locale/<lang>/LC_MESSAGES/projects/index.po
 source_file            = build/locale/projects/index.pot

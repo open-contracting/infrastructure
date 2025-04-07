@@ -42,7 +42,7 @@ compile:
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)schema
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)codelists
 	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)mappings
-	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)sustainability_mapping
+	pybabel compile --use-fuzzy -d $(LOCALE_DIR) -D $(DOMAIN_PREFIX)sustainability-mapping
 
 # Put local targets below.
 
@@ -51,5 +51,5 @@ extract_mappings: $(POT_DIR)
 	pybabel extract -F babel_ocds_mapping.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)mappings.pot
 
 .PHONY: extract_sustainability_mapping
-extract_mappings: $(POT_DIR)
-	pybabel extract -F babel_oc4ids_sustainability_mapping.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)sustainability_mapping.pot
+extract_sustainability_mapping: $(POT_DIR)
+	pybabel extract -F babel_oc4ids_sustainability_mapping.cfg . -o $(POT_DIR)/$(DOMAIN_PREFIX)sustainability-mapping.pot

@@ -126,7 +126,7 @@ def setup(app):
     mapping_domain = f"{gettext_domain_prefix}mappings"
     # The gettext domain for sustainability mapping translations.
     # Should match the domain in the `pybabel compile` command.
-    sustainability_mapping_domain = f"{gettext_domain_prefix}sustainability_mapping"
+    sustainability_mapping_domain = f"{gettext_domain_prefix}sustainability-mapping"
 
     schema_dir = basedir / "schema" / "project-level"
     static_dir = basedir / "docs" / "_static" / "project-level"
