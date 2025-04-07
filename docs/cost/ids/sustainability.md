@@ -41,7 +41,8 @@ Disclose the procurement strategy risk assessment. This tends to be part of the 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'procurementStrategyRiskAssessment'.
 ```json
@@ -77,7 +78,8 @@ Disclose the life cycle cost of the project, which is the cost of an asset throu
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and map to its [`.lifeCycleCosting.value`](project-schema.json,/definitions/CostMeasurement,lifeCycleCosting/value).
 ```json
@@ -116,7 +118,8 @@ Disclose the methodology used to calculate the life-cycle cost. The methodology 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'lifeCycleCostMethodology'.
 ```json
@@ -151,7 +154,8 @@ Name the funding organization(s) or funding source(s) for the preparation, imple
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is "Breakdown by stage". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by stage".
 
@@ -222,7 +226,8 @@ Specify the allocated budget for preparation, implementation and maintenance. Ma
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is "Breakdown by stage". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by stage".
 
@@ -285,7 +290,8 @@ Economic assessment that tends to be part of the appraisal documents and provide
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to "ex ante cost benefit analysis".
 
@@ -329,7 +335,10 @@ A summary of the value for money analysis carried out for the project, along wit
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'valueForMoneyAnalysis'.
+
+{bdg-primary}`Project level`
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'valueForMoneyAnalysis'.
 ```json
 {
   "documents": [
@@ -362,7 +371,8 @@ In case of multiyear project implementation, disclose information on budget proj
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to "Breakdown by year of implementation".
 
@@ -430,7 +440,8 @@ Disclose any shortfall in the allocated budget, including reasons for it.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to "Budget shortfall".
 2. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its [`.id`](project-schema.json,/definitions/Observation,id) incrementally.
@@ -477,7 +488,10 @@ Disclose the maintenance plan or program. This is the documentation that describ
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'maintenancePlan'.
+
+{bdg-primary}`Project level`
+
+[Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'maintenancePlan'.
 ```json
 {
   "documents": [
@@ -510,7 +524,10 @@ Disclose the expected lifetime of the asset. This tends to be part of the design
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level: Convert to days and map to [`assetLifetime.durationInDays`](project-schema.json,/definitions/Period,durationInDays).
+
+{bdg-primary}`Project level`
+
+Convert to days and map to [`assetLifetime.durationInDays`](project-schema.json,/definitions/Period,durationInDays).
 ```json
 {
   "assetLifetime": {
@@ -547,7 +564,8 @@ Indicate the category that reflects the magnitude of environmental impact. Consi
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 If an environmental impact assessment was conducted:
 
@@ -596,7 +614,8 @@ Identify the measures adopted by the project to mitigate and/or remedy the envir
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.environmentalMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasure](../../reference/codelists.md#environmentalmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).
 
@@ -642,7 +661,8 @@ Disclose all licenses, exemptions and/or amnesties obtained for the project. Thi
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalExemption'.
 ```json
@@ -677,7 +697,8 @@ Identify whether the project is located in, or provides access to a protected ar
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 If the project is located in a protected area:
 
@@ -738,7 +759,8 @@ Disclose and provide further details on the measures adopted by the project to p
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. For each measure, add a [`ConservationMeasure`](../../reference/schema.md#conservationmeasure) object to the [`environment.conservationMeasures`](project-schema.json,,environment/conservationMeasures) array, set its [`.type`](project-schema.json,/definitions/ConservationMeasure,type) according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/ConservationMeasure,description).
 
@@ -783,7 +805,8 @@ Clarify the type of climate and disaster risks to which the project is exposed. 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateAndDisasterRiskAssessment' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -831,7 +854,8 @@ Clarify whether the project design considered climate change mitigation and/or a
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. For each measure, add a [`ClimateMeasure`](../../reference/schema.md#climatemeasure) object to the [`environment.climateMeasures`](project-schema.json,,environment/climateMeasures) array, set its [`.type`](project-schema.json,/definitions/ClimateMeasure,type) according to the open [climateMeasure](../../reference/codelists.md#climatemeasure) codelist and map any further explanation to its [`.description`](project-schema.json,/definitions/ClimateMeasure,description).
 
@@ -878,7 +902,8 @@ Disclose the forecast greenhouse gas emissions related to the project, including
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.forecasts`](project-schema.json,,forecasts) array.
 
@@ -945,7 +970,8 @@ Disclose environmental and/or climate related certifications issued for contract
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level:
+
+{bdg-secondary}`Contracting process level`
 
 [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierEnvironmentalCertification'.
 ```json
@@ -987,7 +1013,8 @@ Disclose the decommissioning plans for the project assets.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'decommissioningPlans'.
 ```json
@@ -1022,7 +1049,8 @@ Disclose the forecast decommissioning costs for the project assets.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and set its [`.id`](project-schema.json,/definitions/CostMeasurement,id) incrementally.
 
@@ -1080,7 +1108,8 @@ Disclose the main climate objective that the project addresses from the list:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Map to [`environment.goals`](project-schema.json,,environment/goals) using the closed [environmentalGoal](../../reference/codelists.md#environmentalgoal) codelist.
 ```json
@@ -1121,6 +1150,10 @@ Disclose the financial instrument type from the list:
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Set the the financing arrangement's [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) and [`.type`](project-schema.json,/definitions/Finance,type) according to the instrument type:
 
@@ -1172,7 +1205,8 @@ Clarify the theory of change, systemic transition or transformation that is inte
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateTransformation' and map any free text to [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -1207,7 +1241,8 @@ Identify who approved the climate finance investment in the country.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add an organization](../common.md#add-an-organization) for the decision maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
@@ -1244,6 +1279,8 @@ Clarify how the investment is aligned with the country's nationally determined c
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
@@ -1266,6 +1303,8 @@ Clarify how the investment is aligned with the country's Paris Agreement commitm
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [policy coherence (institutional module)](institutional-policy-coherence).
 ````
 
@@ -1288,6 +1327,8 @@ Disclose who the climate finance investment is intended to benefit and number of
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [number of beneficiaries (social module)](social-number-of-beneficiaries)
 ````
 
@@ -1310,6 +1351,10 @@ Disclose the quantum of the climate finance investment.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map to the financing arrangement's [`.value`](project-schema.json,/definitions/Finance,value).
 ```json
@@ -1348,6 +1393,10 @@ Disclose who is providing the finance.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map to the financing arrangement's [`.source`](project-schema.json,/definitions/Finance,source).
 ```json
@@ -1383,6 +1432,10 @@ For projects financed by the Green Climate Fund, disclose the accredited entitie
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
 3. Set the financing arrangement's [`.financingParty`](project-schema.json,/definitions/Finance,financingParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.
@@ -1439,6 +1492,10 @@ Disclose the type of accredited entity, from the list:
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the accredited entity. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).
 2. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its [`.id`](project-schema.json,/definitions/Classification,id).
 3. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its [`.id`](project-schema.json,/definitions/Classification,id).
@@ -1486,6 +1543,8 @@ Disclose the amounts invested in project preparation.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [budget for preparation, implementation and maintenance (economic and fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-and-maintenance).
 ````
 
@@ -1508,7 +1567,8 @@ Disclose dates for project preparation.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Map to [`preparationPeriod`](project-schema.json,,preparationPeriod).
 ```json
@@ -1543,7 +1603,8 @@ Disclose dates for project approval:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each date:
 
@@ -1592,6 +1653,8 @@ Disclose the ratio of co-finance. Select from a list to specify amounts:
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 The OC4IDS data model provides the information needed to calculate co-finance ratios by modeling a project's individual financing arrangements. For more information, see the mappings for [amount of investment](climate-finance-amount-of-investment), [funding source](climate-finance-funding-source), [Green Climate Fund Accredited Entity](climate-finance-green-climate-fund-accredited-entity) and [Accredited Entity Type](climate-finance-accredited-entity-type).
 ```json
 {
@@ -1645,6 +1708,10 @@ Disclose the financial instrument and on what terms is the finance being provide
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).
 2. Map the terms to the financing arrangement's properties:
 
@@ -1698,7 +1765,8 @@ Disclose the cost per tonne of CO2 equivalent reduction attributed to the projec
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Map to [`environment.abatementCost`](project-schema.json,,environment/abatementCost). If a document that describes the methodology used to calculate the cost is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'abatementCostMethodology'.
 ```json
@@ -1745,7 +1813,8 @@ Disclose and provide further details on the potential non-climate impacts that h
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array, map the option from the list to its [`.title`](project-schema.json,/definitions/Benefit,title) and map the explanation to its [`.description`](project-schema.json,/definitions/Benefit,description).
 ```json
@@ -1779,6 +1848,8 @@ Disclose the occurrence of public meetings with communities and impacted groups 
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [public consultation meetings (social module)](social-public-consultation-meetings).
 ````
 
@@ -1801,6 +1872,10 @@ Disclose disbursements dates according to financial agreement versus actual disb
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+{bdg-secondary}`Contracting process level`
+
 For each planned disbursement:
 
 1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.
@@ -1902,7 +1977,8 @@ Disclose the type of monitoring from the list:
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Map to [`environment.climateOversightTypes`](project-schema.json,,environment/climateOversightTypes) using the closed [climateOversightTypes](../../reference/codelists.md#climateoversighttypes) codelist.
 ```json
@@ -1936,7 +2012,8 @@ Disclose Key Performance Indicators adopted by the project.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its fields according to the schema. Prefix the metric's [`.title`](project-schema.json,/definitions/Metric,title) with "KPI: ".
 ```json
@@ -1970,7 +2047,8 @@ Clarify the project reporting period. It could be quarterly, annually, biannuall
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Get the [`Metric`](../../reference/schema.md#metric) object in the [`metrics`](project-schema.json,,metrics) array that represents the KPI and map to its [`.description`](project-schema.json,/definitions/Metric,description) using the format "Reporting period: {period}".
 ```json
@@ -2005,7 +2083,8 @@ Disclose oversight reports.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'oversightReport'.
 ```json
@@ -2040,6 +2119,8 @@ Identify the entities acting as independent monitors of the project.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [independent monitoring (institutional module)](institutional-independent-monitoring).
 ````
 
@@ -2062,7 +2143,8 @@ Disclose technical audits produced at end of the project.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each audit report, [add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'technicalAuditReport' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 ```json
@@ -2100,7 +2182,8 @@ Clarify the methodology or system to measure the long-term impact of the project
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'impactMethodology' and map any free text to its [`.description`](project-schema.json,,description).
 ```json
@@ -2136,7 +2219,8 @@ Disclose the carbon footprint of the project, including the calculation, the met
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array.
 
@@ -2203,6 +2287,9 @@ Identify the asset for disposal purpose.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+{bdg-primary}`Project level`
+
 For each set of decommissioned assets in a specified location, create a new OC4IDS project and:
 
 1. Set its [`type`](project-schema.json,,type) to 'decommissioning'.
@@ -2250,7 +2337,8 @@ Intended start and end dates of decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Map to [`decommissioningPeriod`](project-schema.json,,decommissioningPeriod).
 ```json
@@ -2282,6 +2370,8 @@ Disclose the technical plan for decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [decommissioning plans (environment and social)](environment-and-climate-decommissioning-plans).
 ````
 
@@ -2304,7 +2394,8 @@ Disclose the evaluation of CO2 savings as a result of decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array.
 
@@ -2372,7 +2463,8 @@ Disclose mitigation plan for people and communities affected by decommissioning.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'socialImpact'.
 ```json
@@ -2412,7 +2504,8 @@ Indicate the number of direct and indirect project beneficiaries. Beneficiaries 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. Add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array.
 2. Add a [`Beneficiary`](../../reference/schema.md#beneficiary) object to the benefit's [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) array, set its [`.description`](project-schema.json,/definitions/Beneficiary,description) to "Direct beneficiaries" and set its [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) to the number of direct beneficiaries.
@@ -2456,7 +2549,8 @@ Clarify whether gender, people with disabilities, and vulnerable and disadvantag
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveDesign' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).
 
@@ -2500,7 +2594,8 @@ Identify whether the project is located or cut through indigenous land. Use the 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 If the project is located in or cuts through indigenous land:
 
@@ -2542,7 +2637,8 @@ Disclose the occurrence of public meetings with communities and impacted groups 
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 For each meeting:
 
@@ -2609,7 +2705,8 @@ Disclose budget allocated to fund land compensation.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 Map to [`social.landCompensationBudget`](project-schema.json,/definitions/Social,landCompensationBudget).
 ```json
@@ -2660,7 +2757,8 @@ Disclose labor obligations in the construction contract. This can include, witho
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level:
+
+{bdg-secondary}`Contracting process level`
 
 1. Publish a summary of the labor obligations:
 
@@ -2723,7 +2821,8 @@ Disclose the amount allocated by the main contractor to cover for labor costs.
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level:
+
+{bdg-secondary}`Contracting process level`
 
 Map to [`summary.social.laborBudget`](project-schema.json,/definitions/ContractingProcessSummary,social/laborBudget).
 ```json
@@ -2764,7 +2863,8 @@ Disclose summary statistics on accidents and fatalities involving construction w
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Publish summary statistics on worker accidents:
 
@@ -2845,7 +2945,8 @@ Disclose labor related certifications issued in relation to project contractors 
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level:
+
+{bdg-secondary}`Contracting process level`
 
 [Add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'supplierHealthAndSafetyCertification'.
 ```json
@@ -2903,7 +3004,8 @@ Disclose construction materials tests performed during project implementation. T
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Publish a summary of the material tests:
 
@@ -2955,7 +3057,8 @@ Disclose building inspections during project implementation.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'buildingInspectionReport'.
 ```json
@@ -2990,7 +3093,8 @@ Disclose estimated and actual jobs (direct/indirect) during project implementati
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 Publish job creation estimates:
 
@@ -3132,7 +3236,8 @@ Disclose documentation that evidences that the project is part of, or aligned wi
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 1. For each plan or policy to which the project is aligned, add a code from the open [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the [`policyAlignment.policies`](project-schema.json,,policyAlignment/policies) array and add a further explanation of the alignment to [`policyAlignment.description`](project-schema.json,,policyAlignment/description).
 
@@ -3199,7 +3304,8 @@ Disclose Freedom of Information (FoI) requests that have been presented in relat
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each freedom of information request, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequest'.
 ```json
@@ -3234,7 +3340,8 @@ Disclose the responses provided by authorities to Freedom of Information (FoI) r
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each freedom of information request response, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'informationRequestResponse'.
 ```json
@@ -3269,7 +3376,8 @@ Disclose the occurrence of meetings with interested groups, including the number
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 For each meeting:
 
@@ -3345,7 +3453,8 @@ Disclose the beneficial owners of the contractors and suppliers appointed in the
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 For each beneficial owner:
 
@@ -3396,7 +3505,8 @@ Identify the presence of sustainability and non-price attributes in the award cr
 :columns: 8
 OC4IDS mapping
 ^^^
-Contracting process level:
+
+{bdg-secondary}`Contracting process level`
 
 Add a [`Sustainability`](../../reference/schema.md#sustainability) object to the [`summary.tender.sustainability`](project-schema.json,/definitions/ContractingProcessSummary,tender/sustainability) array and add 'awardCriteria' to its [`.strategies`](project-schema.json,/definitions/Sustainability,strategies) array.
 ```json
@@ -3440,7 +3550,8 @@ Disclose anti-corruption certifications of the project, such as ISO 37001 on Ant
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'antiCorruptionCertification'.
 ```json
@@ -3475,7 +3586,8 @@ Identify the entities acting as independent monitors of the project.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project level:
+
+{bdg-primary}`Project level`
 
 [Add an organization](../common.md#add-an-organization) for the independent monitor and add 'independentMonitor' to its [`.roles`](project-schema.json,/definitions/Organization,roles) array.
 ```json
@@ -3512,6 +3624,8 @@ Disclose Key Performance Indicators adopted by the project.
 :columns: 8
 OC4IDS mapping
 ^^^
+
+
 See [performance monitoring (climate finance)](climate-finance-performance-monitoring).
 ````
 
@@ -3534,7 +3648,8 @@ Disclose risk management plans prepared for the project.
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'riskProvisions'.
 ```json
@@ -3584,7 +3699,8 @@ Free text to add not mentioned sub-sectors
 :columns: 8
 OC4IDS mapping
 ^^^
-Project Level:
+
+{bdg-primary}`Project level`
 
 Map to [`sector`](project-schema.json,,sector), using the open [ProjectSector codelist](../../reference/codelists.md#projectsector).
 ```json
