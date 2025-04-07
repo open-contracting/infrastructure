@@ -1098,7 +1098,9 @@ def update_sustainability_docs():
                 "\nOC4IDS mapping",
                 "\n^^^\n",
                 "\n{bdg-primary}`Project level`" if "project" in element.get("mapping level", "") else "",
-                "\n{bdg-secondary}`Contracting process level`" if "contracting process" in element.get("mapping level", "") else "",
+                "\n{bdg-secondary}`Contracting process level`"
+                if "contracting process" in element.get("mapping level", "")
+                else "",
                 f"\n\n{element.get('mapping', '')}",
                 f"\n```json\n{element['example']}\n```" if element.get("example") else "",
                 "\n````",
