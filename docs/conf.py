@@ -113,7 +113,7 @@ def setup(app):
     # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
     codelist_headers = ["Title", "Description", "Extension", "Business Logic"]
     # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
-    mapping_headers = ["CoST IDS element", "CoST IDS draft definition", "Mapping to OC4IDS", "Mapping from OCDS"]
+    mapping_headers = ["CoST IDS element", "Description", "Mapping to OC4IDS", "Mapping from OCDS"]
     # Keys for values to translate in sustainability.yaml.
     # The keys in babel_oc4ids_sustainability_mapping.cfg should match these.
     sustainability_keys = ["title", "disclosure format", "mapping"]
