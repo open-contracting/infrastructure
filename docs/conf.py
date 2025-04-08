@@ -187,4 +187,3 @@ def setup(app):
                     for row in reader:
                         del row[column_index]  # Drop mapping column
                         writer.writerow(row[0:3])  # Drop OC4IDS Fields and OC4IDS Codes columns
-            path.unlink()
