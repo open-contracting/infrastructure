@@ -99,7 +99,7 @@ html_theme_options = {
     "license_url": f"{repository_url}/blob/HEAD/LICENSE",
     "repository_url": repository_url,
 }
-html_short_title = f'{html_theme_options["short_project"]} v{release}'
+html_short_title = f"{html_theme_options['short_project']} v{release}"
 
 
 def setup(app):
@@ -114,9 +114,6 @@ def setup(app):
     codelist_headers = ["Title", "Description", "Extension", "Business Logic"]
     # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
     mapping_headers = ["CoST IDS element", "Description", "Mapping to OC4IDS", "Mapping from OCDS"]
-    # Keys for values to translate in sustainability.yaml.
-    # The keys in babel_oc4ids_sustainability_mapping.cfg should match these.
-    sustainability_keys = ["title", "disclosure format", "mapping"]
 
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = f"{gettext_domain_prefix}schema"
@@ -146,7 +143,6 @@ def setup(app):
         localedir,
         language,
         codelist_headers,
-        sustainability_keys,
         version=branch,
     )
 
@@ -159,7 +155,6 @@ def setup(app):
         localedir,
         language,
         mapping_headers,
-        sustainability_keys,
         version=branch,
     )
 
@@ -172,7 +167,8 @@ def setup(app):
         localedir,
         language,
         mapping_headers,
-        sustainability_keys,
+        # Keys for values to translate in sustainability.yaml. Should match babel_oc4ids_sustainability_mapping.cfg.
+        keys=["title", "disclosure format", "mapping"],
         version=branch,
     )
 
