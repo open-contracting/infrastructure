@@ -468,12 +468,12 @@ def update(ppp_base_url):
         # An editor might've added an infrastructure codelist or copied an OCDS codelist, without updating this script.
         added = actual - infra_list - ocds_list
         if added:
-            sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
+            sys.exit(f"{prefix} has unexpected {', '.join(added)}: add to infra_{suffix} or ocds_{suffix}?")
 
         # An editor might've removed an infrastructure codelist, without updating this script.
         removed = infra_list - actual
         if removed:
-            sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
+            sys.exit(f"{prefix} is missing {', '.join(removed)}: remove from infra_{suffix}?")
 
     ocds_base_url = "https://standard.open-contracting.org/1.1/en/"
 
@@ -1082,6 +1082,7 @@ def update_sustainability_docs():
 
         title = element.get("title", "")
         target = nodes.make_id(f"{module}-{title}")
+        mapping_level = element.get("mapping level", "")
         modules[module].extend(
             [
                 f"\n({target})=",
@@ -1097,10 +1098,8 @@ def update_sustainability_docs():
                 "\n:columns: 8",
                 "\nOC4IDS mapping",
                 "\n^^^\n",
-                "\n{bdg-primary}`Project level`" if "project" in element.get("mapping level", "") else "",
-                "\n{bdg-secondary}`Contracting process level`"
-                if "contracting process" in element.get("mapping level", "")
-                else "",
+                "\n{bdg-primary}`Project level`" if "project" in mapping_level else "",
+                "\n{bdg-secondary}`Contracting process level`" if "contracting process" in mapping_level else "",
                 f"\n\n{element.get('mapping', '')}",
                 f"\n```json\n{element['example']}\n```" if element.get("example") else "",
                 "\n````",
