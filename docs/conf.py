@@ -110,11 +110,6 @@ def setup(app):
 
     language = app.config.overrides.get("language", "en")
 
-    # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
-    codelist_headers = ["Title", "Description", "Extension", "Business Logic"]
-    # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
-    mapping_headers = ["CoST IDS element", "Description", "Mapping to OC4IDS", "Mapping from OCDS"]
-
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = f"{gettext_domain_prefix}schema"
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
@@ -126,7 +121,6 @@ def setup(app):
     sustainability_mapping_domain = f"{gettext_domain_prefix}sustainability-mapping"
 
     schema_dir = basedir / "schema" / "project-level"
-    static_dir = basedir / "docs" / "_static" / "project-level"
     build_dir = basedir / "build" / language
 
     branch = os.getenv("GITHUB_REF_NAME", "latest")
@@ -134,39 +128,37 @@ def setup(app):
     translate(
         [
             # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
-            (glob(str(schema_dir / "*-schema.json")), static_dir, schema_domain),
             (glob(str(schema_dir / "*-schema.json")), build_dir, schema_domain),
             # The glob patterns in `babel_ocds_codelist.cfg` should match these.
-            (glob(str(schema_dir / "codelists" / "*.csv")), static_dir / "codelists", codelists_domain),
             (glob(str(schema_dir / "codelists" / "*.csv")), build_dir / "codelists", codelists_domain),
         ],
         localedir,
         language,
-        codelist_headers,
+        # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
+        ["Title", "Description", "Extension", "Business Logic"],
         version=branch,
     )
 
     translate(
         [
             # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
-            (glob(str(basedir / "mapping" / "*.csv")), static_dir, mapping_domain),
             (glob(str(basedir / "mapping" / "*.csv")), build_dir, mapping_domain),
         ],
         localedir,
         language,
-        mapping_headers,
+        # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
+        ["CoST IDS element", "Description", "Mapping to OC4IDS", "Mapping from OCDS"],
         version=branch,
     )
 
     translate(
         [
             # The glob patterns in `babel_oc4ids_sustainability_mapping.cfg` should match these.
-            (glob(str(basedir / "mapping" / "sustainability.yaml")), static_dir, sustainability_mapping_domain),
             (glob(str(basedir / "mapping" / "sustainability.yaml")), build_dir, sustainability_mapping_domain),
         ],
         localedir,
         language,
-        mapping_headers,
+        [],
         # Keys for values to translate in sustainability.yaml. Should match babel_oc4ids_sustainability_mapping.cfg.
         keys=["title", "disclosure format", "mapping"],
         version=branch,
