@@ -83,6 +83,8 @@ smartquotes = False
 myst_enable_extensions = ["linkify"]
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
+# WARNING: cannot cache unpickable configuration value: 'myst_heading_slug_func'
+suppress_warnings = ["config.cache"]
 
 # Theme customization.
 navigation_with_keys = False  # restore the Sphinx default
