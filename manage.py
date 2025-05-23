@@ -1000,7 +1000,7 @@ def lint(filename, additional_properties, link_fields):
                             f"{identifier} ({title}): OC4IDS is invalid: "
                             f"{e.message} ({'/'.join(e.absolute_schema_path)})"
                         )
-            except json.decoder.JSONDecodeError as e:
+            except json.JSONDecodeError as e:
                 click.echo(f"{identifier} ({title}): JSON is invalid: {e}: {example}")
 
     if additional_fields:
