@@ -1082,6 +1082,7 @@ def update_sustainability_docs():
 
         title = element.get("title", "")
         target = nodes.make_id(f"{module}-{title}")
+        mapping_level = element.get("mapping level", "")
         modules[module].extend(
             [
                 f"\n({target})=",
@@ -1097,7 +1098,9 @@ def update_sustainability_docs():
                 "\n:columns: 8",
                 "\nOC4IDS mapping",
                 "\n^^^\n",
-                element.get("mapping", ""),
+                "\n{bdg-primary}`Project level`" if "project" in mapping_level else "",
+                "\n{bdg-secondary}`Contracting process level`" if "contracting process" in mapping_level else "",
+                f"\n\n{element.get('mapping', '')}",
                 f"\n```json\n{element['example']}\n```" if element.get("example") else "",
                 "\n````",
                 "\n\n`````\n\n",

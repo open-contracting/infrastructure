@@ -1,0 +1,2639 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# 
+# Translators:
+# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-04-07 12:09+1200\n"
+"PO-Revision-Date: 2025-04-06 22:55+0000\n"
+"Last-Translator: Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025\n"
+"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#. /0/title
+#: mapping/sustainability.yaml:1
+msgid "Procurement strategy"
+msgstr "Estrategia de adquisición"
+
+#. /0/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the procurement strategy risk assessment. This tends to be part of "
+"the decision-making strategy and likely includes discussions regarding "
+"capabilities, the delivery model and the rationale for the risk allocation "
+"decision."
+msgstr ""
+"Se refiere a la evaluación de riesgo de la estrategia de adquisiciones y "
+"contrataciones. Esto suele ser parte de la estrategia de toma de decisiones "
+"y es probable que incluya discusiones sobre las capacidades, el modelo de "
+"implementación y la justificación para la decisión de asignación de riesgos."
+" "
+
+#. /0/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'procurementStrategyRiskAssessment'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"configurar el [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) a "
+"'procurementStrategyRiskAssessment'."
+
+#. /1/title
+#: mapping/sustainability.yaml:1
+msgid "Life cycle cost"
+msgstr "Costos del ciclo de vida"
+
+#. /1/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the life cycle cost of the project, which is the cost of an asset "
+"throughout its life cycle while fulfilling the performance requirements (ISO"
+" 15686-5:2017)."
+msgstr ""
+"Son los costos en los que se incurren durante el ciclo de vida del proyecto,"
+" es decir el costo de un activo durante todo su ciclo de vida útil, mientras"
+" cumple con los requerimientos del desempeño esperado (ISO 15686-5:2017)."
+
+#. /1/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object "
+"to the [`costMeasurements`](project-schema.json,,costMeasurements) array and"
+" map to its [`.lifeCycleCosting.value`](project-"
+"schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)."
+msgstr ""
+"Agregue un objeto "
+"[`CostMeasurement`](../../reference/schema.md#costmeasurement) a la matriz  "
+"[`costMeasurements`](project-schema.json,,costMeasurements) y mapee a su "
+"[`.lifeCycleCosting.value`](project-"
+"schema.json,/definitions/CostMeasurement,lifeCycleCosting/value)."
+
+#. /2/title
+#: mapping/sustainability.yaml:1
+msgid "Life cycle cost calculation methodology"
+msgstr "Metodología de cálculo de los costos del ciclo de vida"
+
+#. /2/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the methodology used to calculate the life-cycle cost. The "
+"methodology ought to specify whether income and externalities are included "
+"in the calculation and the common date, discount rate and period of analysis"
+" used."
+msgstr ""
+"La metodología utilizada para calcular el costo del ciclo de vida de un "
+"proyecto. La metodología debe especificar si los ingresos y las "
+"externalidades se incluyen en el cálculo y la fecha común, la tasa de "
+"descuento y el periodo de análisis utilizados."
+
+#. /2/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'lifeCycleCostMethodology'."
+msgstr ""
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"configurar su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) al "
+"'lifeCycleCostMethodology'."
+
+#. /3/title
+#: mapping/sustainability.yaml:1
+msgid "Funding source for preparation, implementation and maintenance"
+msgstr ""
+"Fuentes de financiamiento para la preparación, implementación y "
+"mantenimiento"
+
+#. /3/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Name the funding organization(s) or funding source(s) for the preparation, "
+"implementation and maintenance stages, and disclose the budget line(s) to "
+"which the project belongs. The maintenance stage covers any preventative or "
+"corrective maintenance and the day-to-day running of the assets; this stage "
+"is also called operation."
+msgstr ""
+"Nombre de la(s) organización(es) financiera(s) o fuente(s) de recursos para "
+"las fases de preparación, implementación y mantenimiento y la(s) línea(s) "
+"del presupuesto al que pertenece el proyecto. La fase de mantenimiento cubre"
+" cualquier mantenimiento preventivo o correctivo y el día a día de la "
+"operación de los activos. Esta etapa también se denomina operación. "
+
+#. /3/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is \"Breakdown by stage\". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to \"Breakdown by stage\".\n"
+"\n"
+"2. For each stage:\n"
+"\n"
+"   a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage and whose [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) is the identifier of the budget line. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) to the budget line identifier and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.\n"
+"\n"
+"   b. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the funding source. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).\n"
+"\n"
+"   c. Set the budget breakdown's [`.sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the funding source."
+msgstr ""
+"1. Obtenga el objeto [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) en la matriz [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) cuya [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) es \"Desglose por etapa\". Si aún no existe alguno, agregar un objeto [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) a la matriz [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) , configurar su [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) de forma incremental y su [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) en \"Desglose por fase\".\n"
+"\n"
+"2. Para cada etapa:\n"
+"\n"
+"a. Obtenga el objeto [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) en la matriz del desglose del presupuesto' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) defina la [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) y nombre de la fase [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) al identificador de la linea del presupuesto. Si aún no existe alguna, agregue el objeto [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) a la matriz de desglose del presupuesto' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) defina el [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) al identificador de la linea del presupuesto y establezca la [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) al nombre de la fase.\n"
+"\n"
+"b. Obtenga el objeto [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa la fuente de financiamiento. Si aún no existe alguna, [agregar una organización](../common.md#add-an-organization) y agregar 'funder' a sus [`.roles`](project-schema.json,/definitions/Organization,roles ).\n"
+"\n"
+"c. Establezca el [`.sourceParty`](project-schema.json,/definitions/BudgetBreakdown,sourceParty) del desglose del presupuesto en [`.id`](project-schema.json,/definitions/Organization,id) y [`.name`](project-schema.json,/definitions/Organization,name) de la fuente de financiamiento."
+
+#. /4/title
+#: mapping/sustainability.yaml:1
+msgid "Budget for preparation, implementation and maintenance"
+msgstr "Presupuesto para preparación, implementación y mantenimiento"
+
+#. /4/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Specify the allocated budget for preparation, implementation and "
+"maintenance. Maintenance covers any preventative or corrective maintenance "
+"and the day-to-day running of the assets. This stage is also called "
+"operation."
+msgstr ""
+"Especifique el presupuesto asignado para la preparación, la implementación y"
+" el mantenimiento. El mantenimiento abarca cualquier mantenimiento "
+"preventivo o correctivo y el funcionamiento diario de los activos. Esta "
+"etapa también se denomina operación."
+
+#. /4/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object in the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) is \"Breakdown by stage\". If none exists yet, add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to \"Breakdown by stage\".\n"
+"\n"
+"2. For each stage:\n"
+"\n"
+"   a. Get the [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object in the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array whose [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) is the name of the stage. If none exists yet, add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) to the name of the stage.\n"
+"\n"
+"   b. Map to the budget breakdown's [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount)."
+msgstr ""
+"1. Obtenga el objeto [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) en la matriz [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) cuya [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) es \"Desglose por etapa\". Si aún no existe alguno, agregar un objeto [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) a la matriz [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) , configurar su [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) de forma incremental y su [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) en \"Desglose por fase\".\n"
+"\n"
+"2. Para cada etapa:\n"
+"\n"
+"  a. Obtenga el objeto [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) en la matriz del desglose del presupuesto' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) defina la [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) y nombre de la fase [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) al identificador de la linea del presupuesto. Si aún no existe alguna, agregue el objeto [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) a la matriz de desglose del presupuesto' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) defina el [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) al identificador de la linea del presupuesto y establezca la [`.description`](project-schema.json,/definitions/BudgetBreakdown,description) al nombre de la fase.\n"
+"\n"
+"b. Mapee al desglose del presupuesto [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount)."
+
+#. /5/title
+#: mapping/sustainability.yaml:1
+msgid "Cost benefit analysis"
+msgstr "Análisis costo-beneficio"
+
+#. /5/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Economic assessment that tends to be part of the appraisal documents and provides information on economic net benefits and costs (\"ex ante\" cost benefit analysis). A revised assessment can be prepared during the operational phase of the project to update the information on net benefits and costs (\"ex post\" cost benefit analysis). Disclose both:\n"
+"\n"
+"- Ex ante cost benefit analysis\n"
+"- Ex post cost benefit analysis"
+msgstr ""
+"Evaluación económica que suele formar parte de los documentos de valoración y que proporciona información sobre los beneficios y costos económicos netos (análisis de costos y beneficios «ex ante»). Se puede preparar una evaluación revisada durante la fase operativa del proyecto para actualizar la información sobre los beneficios y costos netos (análisis costo-beneficio «ex post»). Divulgar ambos:\n"
+"\n"
+"- Análisis costo beneficio ex ante\n"
+"- Análisis costo beneficio ex post"
+
+#. /5/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to \"ex ante cost benefit analysis\".\n"
+"\n"
+"2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'costBenefitAnalysis' and set its [`.description`](project-schema.json,/definitions/Document,description) to \"ex post cost benefit analysis\"."
+msgstr ""
+"1. [Agregue un documento de proyecto](../common.md#add-a-project-document), establezca el [`.documentType`](project-schema.json,/definitions/Document,documentType) del 'costBenefitAnalysis' y establezca la [`.description`](project-schema.json,/definitions/Document,description) del \"análisis de costo beneficio ex ante\".\n"
+"\n"
+"2. [Agregue un documento de proyecto](../common.md#add-a-project-document), establezca el [`.documentType`](project-schema.json,/definitions/Document,documentType) en 'costBenefitAnalysis' y establezca la [`.description`](project-schema.json,/definitions/Document,description) en \"análisis de costo-beneficio ex post\"."
+
+#. /6/title
+#: mapping/sustainability.yaml:1
+msgid "Value for money"
+msgstr "Valor por dinero"
+
+#. /6/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"A summary of the value for money analysis carried out for the project, along"
+" with supporting figures, calculations and business case, based on projected"
+" or actual procurement outcomes. This tends to include considerations of "
+"economy, efficiency, effectiveness and equity, and is part of the appraisal "
+"documents."
+msgstr ""
+"Un resumen del análisis de la relación valor por dinero realizado para el "
+"proyecto, junto con cifras de apoyo, cálculos y casos comerciales, basados "
+"en los resultados proyectados o reales de la contratación. Esto suele "
+"incluir consideraciones de economía, eficiencia, eficacia y equidad, y forma"
+" parte de los documentos de valoración."
+
+#. /6/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'valueForMoneyAnalysis'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'valueForMoneyAnalysis'."
+
+#. /7/title
+#: mapping/sustainability.yaml:1
+msgid "Budget projections"
+msgstr "Proyecciones presupuestarias"
+
+#. /7/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"In case of multiyear project implementation, disclose information on budget "
+"projection for all years of implementation."
+msgstr ""
+"En el caso de una implementación de un proyecto plurianual, agregue la "
+"información sobre la proyección presupuestaria para todos los años de "
+"implementación."
+
+#. /7/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) object to the [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns) array, set its [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) incrementally and set its [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) to \"Breakdown by year of implementation\".\n"
+"\n"
+"2. For each year:\n"
+"\n"
+"   1. Add a [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) object to the budget breakdowns' [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) array and set its [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) incrementally.\n"
+"\n"
+"   2. Map the year's start and end dates to its [`.period`](project-schema.json,/definitions/BudgetBreakdown,period)\n"
+"\n"
+"   3. Map the budget projection to its [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount)."
+msgstr ""
+"1. Agregue un objeto [`BudgetBreakdowns`](../../reference/schema.md#budgetbreakdowns) a la matriz [`budget.budgetBreakdowns`](project-schema.json,,budget/budgetBreakdowns), establecer la [`.id`](project-schema.json,/definitions/BudgetBreakdowns,id) de forma incremental y establezca su [`.description`](project-schema.json,/definitions/BudgetBreakdowns,description) en \"Desglose por año de implementación\" .\n"
+"\n"
+"2. Para cada año:\n"
+"\n"
+"1. Agregue un objeto [`BudgetBreakdown`](../../reference/schema.md#budgetbreakdown) a la matriz [`.budgetBreakdown`](project-schema.json,/definitions/BudgetBreakdowns,budgetBreakdown) de los desgloses del presupuesto y establezca la [`.id`](project-schema.json,/definitions/BudgetBreakdown,id) de forma incremental.\n"
+"\n"
+"2. Mapee de las fechas de inicio y finalización del año a su [`.period`](project-schema.json,/definitions/BudgetBreakdown,period)\n"
+"\n"
+"3. Asigne la proyección presupuestaria a su [`.amount`](project-schema.json,/definitions/BudgetBreakdown,amount)."
+
+#. /8/title
+#: mapping/sustainability.yaml:1
+msgid "Budget shortfall"
+msgstr "Déficit presupuestario"
+
+#. /8/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose any shortfall in the allocated budget, including reasons for it."
+msgstr ""
+"Cualquier déficit en el presupuesto asignado, incluyendo las razones del "
+"mismo."
+
+#. /8/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to \"Budget shortfall\".\n"
+"2. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its [`.id`](project-schema.json,/definitions/Observation,id) incrementally.\n"
+"3. Map the shortfall's value to its [`.value`](project-schema.json,/definitions/Observation,value).\n"
+"4. Map the reasons for the shortfall to its [`.notes`](project-schema.json,/definitions/Observation,notes)."
+msgstr ""
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz de la métrica [`metrics`](project-schema.json,,metrics), establezca su [`.id`](project-schema.json,/definitions/Metric,id) de forma incremental y establezca su [`.title`](project-schema.json,/definitions/Metric,title) en \"Déficit de presupuesto\".\n"
+"2. Agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matriz de la métrica [`.observations`](project-schema.json,/definitions/Metric,observations) y establezca su [`.id`](project-schema.json,/definitions/Observation,id) de forma incremental.\n"
+"3. Asigne el valor del déficit a su [`.value`](project-schema.json,/definitions/Observation,value).\n"
+"4. Mapee los motivos del déficit a sus [`.notes`](project-schema.json,/definitions/Observation,notes)."
+
+#. /9/title
+#: mapping/sustainability.yaml:1
+msgid "Maintenance plan or program"
+msgstr "Plan o programa de mantenimiento"
+
+#. /9/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the maintenance plan or program. This is the documentation that "
+"describes work to slow the deterioration of the asset."
+msgstr ""
+"Este es el documento que describe los trabajos para desacelerar el deterioro"
+" de los activos."
+
+#. /9/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'maintenancePlan'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en el 'maintenancePlan'."
+
+#. /10/title
+#: mapping/sustainability.yaml:1
+msgid "Asset lifetime"
+msgstr "Tiempo de vida del activo"
+
+#. /10/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the expected lifetime of the asset. This tends to be part of the "
+"design report."
+msgstr ""
+"La vida útil esperada del activo. Esto tiende a ser parte del informe de "
+"diseño."
+
+#. /10/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Convert to days and map to [`assetLifetime.durationInDays`](project-"
+"schema.json,/definitions/Period,durationInDays)."
+msgstr ""
+"Convierta los días y mapee al [`assetLifetime.durationInDays`](project-"
+"schema.json,/definitions/Period,durationInDays)."
+
+#. /11/title
+#: mapping/sustainability.yaml:1
+msgid "Environmental impact category"
+msgstr "Categoría de impacto ambiental"
+
+#. /11/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Indicate the category that reflects the magnitude of environmental impact. Consider the following to rate the project:\n"
+"\n"
+"- Category A: projects with potential significant adverse environmental or social risks and/or impacts that are diverse, irreversible, or unprecedented.\n"
+"\n"
+"- Category B: projects with potential limited adverse environmental or social risks and/or impacts that are few in number, generally site-specific, largely reversible, and readily addressed through mitigation measures.\n"
+"\n"
+"- Category C: projects with minimal or no adverse environmental or social risks and/or impacts."
+msgstr ""
+"Indique la categoría que refleja la magnitud del impacto ambiental. Para clasificar el proyecto tome en consideración lo siguiente:\n"
+"\n"
+"- Categoría A: proyectos con riesgos y/o impactos medioambientales o sociales potencialmente adversos y significativos que sean diversos, irreversibles o sin precedentes.\n"
+"\n"
+"- Categoría B: proyectos con un potencial limitado de riesgos y/o impactos medioambientales o sociales adversos que son pocos en número, generalmente específicos del lugar, en gran medida reversibles y fácilmente abordables mediante medidas de mitigación.\n"
+"\n"
+"- Categoría C: proyectos con riesgos y/o impactos medioambientales o sociales adversos mínimos o inexistentes."
+
+#. /11/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"If an environmental impact assessment was conducted:\n"
+"\n"
+"1. Set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `true`.\n"
+"2. Add a [`Classification`](../../reference/schema.md#classification) object to the [`environment.impactCategories`](project-schema.json,,environment/impactCategories) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'ifcEnvironmentalSocial' and set its [`.id`](project-schema.json,/definitions/Classification,id) to the lowercase letter of the category into which the project falls.\n"
+"\n"
+"If an environmental impact assessment was not conducted, set [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) to `false`."
+msgstr ""
+"Si se realizó una evaluación de impacto ambiental:\n"
+"1. Configure el [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) a `true`.\n"
+"2. Agregue un objeto [`Classification`](../../reference/schema.md#classification) a la matriz [`environment.impactCategories`](project-schema.json,,environment/impactCategories), establezca su [`.scheme`](project-schema.json,/definitions/Classification,scheme) en 'ifcEnvironmentalSocial' y establezca su [`.id`](project-schema.json,/definitions/Classification,id) a la letra minúscula de la categoría en la que cae el proyecto.\n"
+"\n"
+"Si no se realizó una evaluación de impacto ambiental, configure [`environment.hasImpactAssessment`](project-schema.json,,environment/hasImpactAssessment) a \"falso\"."
+
+#. /12/title
+#: mapping/sustainability.yaml:1
+msgid "Environmental measures"
+msgstr "Medidas ambientales"
+
+#. /12/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Identify the measures adopted by the project to mitigate and/or remedy the environmental impact, disclosing the corresponding document that describes the project's environmental measures. This can include, without limitation, the following:\n"
+"\n"
+"- waste management\n"
+"- disposal of construction by-products\n"
+"- environmentally responsible sourcing of materials\n"
+"- environmentally responsible use of land, water and air\n"
+"- water contamination management\n"
+"- others (explain)"
+msgstr ""
+"Identifique las medidas adoptadas por el proyecto para mitigar y/o remediar el impacto ambiental, divulgando el documento correspondiente que describa las medidas ambientales del proyecto. Esto puede incluir, sin limitación, lo siguiente:\n"
+"\n"
+"- tratamiento de los desechos\n"
+"- eliminación de subproductos de la construcción\n"
+"- abastecimiento de materiales ambientalmente responsables\n"
+"- uso ambientalmente responsable de la tierra, el agua y el aire.\n"
+"- gestión de la contaminación del agua\n"
+"- otros (explicar)"
+
+#. /12/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. For each measure, add an [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) object to the [`environment.environmentalMeasures`](project-schema.json,,environment/environmentalMeasures) array, set its [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) according to the open [environmentalMeasure](../../reference/codelists.md#environmentalmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).\n"
+"\n"
+"2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'environmentalMeasures'."
+msgstr ""
+"1. Para cada medida, agregue un objeto [`EnvironmentalMeasure`](../../reference/schema.md#environmentalmeasure) a la matriz [`environment.environmentalMeasures`](project-schema.json,,environment/environmentalMeasures), establezca su [`.type`](project-schema.json,/definitions/EnvironmentalMeasure,type) de acuerdo con la lista de códigos abierta [environmentalMeasure](../../reference/codelists.md#environmentalmeasure) y mapee más detalles en su [`.description`](project-schema.json,/definitions/EnvironmentalMeasure,description).\n"
+"\n"
+"2. Si hay documentación de respaldo disponible [agregar un documento de proyecto](../common.md#add-a-project-document) y configure el [`.documentType`](project-schema.json,/definitions/Document,documentType) de las 'environmentalMeasures'."
+
+#. /13/title
+#: mapping/sustainability.yaml:1
+msgid "Environmental licenses and exemptions"
+msgstr "Licencias ambientales y exenciones"
+
+#. /13/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose all licenses, exemptions and/or amnesties obtained for the project."
+" This can be related to Preparation, Implementation and/or Maintenance. "
+"These stages are also known as Planning, Construction and Operation "
+"respectively."
+msgstr ""
+"Las licencias, exenciones y/o amnistías obtenidas para el proyecto. Esto "
+"puede estar relacionado con la Preparación, Implementación y/o "
+"Mantenimiento. Estas etapas también se conocen como Planificación, "
+"Construcción y Operación respectivamente."
+
+#. /13/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'environmentalExemption'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca el [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) de 'environmentalExemption'."
+
+#. /14/title
+#: mapping/sustainability.yaml:1
+msgid "Protected area"
+msgstr "Área protegida"
+
+#. /14/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Identify whether the project is located in, or provides access to a "
+"protected area. Use the project location/coordinates at the WDPA - World "
+"Database of Protected Areas to disclose the information."
+msgstr ""
+"Identifique si el proyecto está ubicado en o proporciona acceso a un área "
+"protegida. Utilice la ubicación/coordenadas del proyecto en la WDPA - Base "
+"de Datos Mundial de Áreas Protegidas para presentar la información."
+
+#. /14/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"If the project is located in a protected area:\n"
+"\n"
+"1. Set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `true`.\n"
+"2. Add a [`Location`](../../reference/schema.md#location) object to the [`.locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its [`.gazetteer.scheme`](project-schema.json,/definitions/Location,gazetteer/scheme) to 'WDPA'.\n"
+"3. For each protected area in which the project is located, add the area's WDPA identifier to the [`.gazetteer.identifiers`](project-schema.json,/definitions/Location,gazetteer/identifiers) array.\n"
+"\n"
+"If the project is not located in a protected area, set [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) to `false`."
+msgstr ""
+"Si el proyecto está ubicado en un área protegida:\n"
+"\n"
+"1. Configure [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) a `true`.\n"
+"2. Agregue un objeto [`Location`](../../reference/schema.md#location) a la matriz [`.locations`](project-schema.json,,locations), establezca su [`.id` ](project-schema.json,/definitions/Location,id) de forma incremental y establezca su [`.gazetteer.scheme`](project-schema.json,/definitions/Location,gazetteer/scheme) en 'WDPA'.\n"
+"3. Para cada área protegida en la que se encuentra el proyecto, agregue a la matriz el identificador WDPA del área [`.gazetteer.identifiers`](project-schema.json,/definitions/Location,gazetteer/identifiers).\n"
+"\n"
+"Si el proyecto no está ubicado en un área protegida, configure [`environment.inProtectedArea`](project-schema.json,,environment/inProtectedArea) a `false`."
+
+#. /15/title
+#: mapping/sustainability.yaml:1
+msgid "Conservation measures"
+msgstr "Medidas de conservación"
+
+#. /15/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose and provide further details on the measures adopted by the project to protect and enhance biodiversity. This can comprise, without limitation the following:\n"
+"\n"
+"- avoidance of ecological sitting\n"
+"- buffers for ecological land\n"
+"- nature-based solutions\n"
+"- land restoration\n"
+"- protection to landscape and historical sites\n"
+"- invasive species management\n"
+"- management of wildlife mortality risk\n"
+"- reduce habitat loss\n"
+"- pollution reduction\n"
+"- land, water and air management\n"
+"- hazardous material management\n"
+"- others (explain)"
+msgstr ""
+"Proporcione más detalles sobre las medidas adoptadas por el proyecto para proteger y mejorar la biodiversidad. Este puede incluir, sin limitación, lo siguiente:\n"
+"\n"
+"- evitar la sedentarización ecológica\n"
+"- amortiguadores para tierras ecológicas\n"
+"- soluciones basadas en la naturaleza\n"
+"- restauración del terreno\n"
+"- protección del paisaje y de los sitios históricos\n"
+"- manejo de especies invasoras\n"
+"- gestión del riesgo de mortalidad de la vida silvestre\n"
+"- reducción de la pérdida de hábitat\n"
+"- reducción de la contaminación\n"
+"- gestión de la tierra, el agua y el aire\n"
+"- manejo de materiales peligrosos\n"
+"- otros (explicar)"
+
+#. /15/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. For each measure, add a [`ConservationMeasure`](../../reference/schema.md#conservationmeasure) object to the [`environment.conservationMeasures`](project-schema.json,,environment/conservationMeasures) array, set its [`.type`](project-schema.json,/definitions/ConservationMeasure,type) according to the open [conservationMeasure](../../reference/codelists.md#conservationmeasure) codelist and map any further details to its [`.description`](project-schema.json,/definitions/ConservationMeasure,description).\n"
+"\n"
+"2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'conservationMeasures'."
+msgstr ""
+"1. Para cada medida agregue un objeto [`ConservationMeasure`](../../reference/schema.md#conservationmeasure)a la matriz [`environment.conservationMeasures`](project-schema.json,,environment/conservationMeasures), configure su [`.type`](project-schema.json,/definitions/ConservationMeasure,type) de acuerdo a la lista de códigos abierta [conservationMeasure](../../reference/codelists.md#conservationmeasure) y mapee otros detalles en su [`.description`](project-schema.json,/definitions/ConservationMeasure,description).\n"
+"\n"
+"2. Si hay documentación de respaldo disponible [agregue un documento de proyecto](../common.md#add-a-project-document) y establezca el [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'conservationMeasures'."
+
+#. /16/title
+#: mapping/sustainability.yaml:1
+msgid "Climate and disaster risk assessment"
+msgstr "Evaluación del riesgo climático y de desastres"
+
+#. /16/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify the type of climate and disaster risks to which the project is "
+"exposed. This tends to be part of the appraisal documents."
+msgstr ""
+"Aclare el tipo de riesgos climáticos y de desastres a los que está expuesto "
+"el proyecto. Esto tiende a ser parte de los documentos de valoración. "
+
+#. /16/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document), set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'climateAndDisasterRiskAssessment' and map any free text to its "
+"[`.description`](project-schema.json,/definitions/Document,description)."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document), "
+"establezca el [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en "
+"'climateAndDisasterRiskAssessment' y mapee cualquier texto libre de su "
+"[`.description`](project-schema.json,/definitions/Document,description)."
+
+#. /17/title
+#: mapping/sustainability.yaml:1
+msgid "Climate measures"
+msgstr "Medidas climáticas"
+
+#. /17/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify whether the project design considered climate change mitigation and/or adaptation measures, disclosing the design demonstrating how the measures were incorporated. This can comprise, without limitation the following:\n"
+"\n"
+"- use of lower-emission sources of energy\n"
+"- use of lower-emission materials\n"
+"- use of recycled and reused materials\n"
+"- regenerative design\n"
+"- retrofitting design\n"
+"- use of carbon capture technology\n"
+"- assessment of extreme weather events\n"
+"- assessment of precipitation patterns\n"
+"- assessment of rising temperatures\n"
+"- assessment of rising sea levels\n"
+"- others (explain)."
+msgstr ""
+"Aclare si el diseño del proyecto consideró medidas de mitigación y/o adaptación al cambio climático, divulgando y demostrando cómo el diseño incorpora las medidas. Este puede incluir, sin limitación, lo siguiente:\n"
+"\n"
+"- uso de fuentes de energía con emisiones bajas\n"
+"- uso de materiales con emisiones bajas\n"
+"- uso de materiales reciclados y reutilizados\n"
+"- diseño regenerativo\n"
+"- diseño de re-adapatación\n"
+"- uso de tecnología de captura de carbono\n"
+"- evaluación de eventos climáticos extremos\n"
+"- evaluación de patrones de precipitación\n"
+"- evaluación del aumento de temperaturas\n"
+"- evaluación del aumento del nivel del mar\n"
+"- otros (explicar)."
+
+#. /17/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. For each measure, add a [`ClimateMeasure`](../../reference/schema.md#climatemeasure) object to the [`environment.climateMeasures`](project-schema.json,,environment/climateMeasures) array, set its [`.type`](project-schema.json,/definitions/ClimateMeasure,type) according to the open [climateMeasure](../../reference/codelists.md#climatemeasure) codelist and map any further explanation to its [`.description`](project-schema.json,/definitions/ClimateMeasure,description).\n"
+"\n"
+"2. If there is an accompanying document, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'climateMeasures'."
+msgstr ""
+"1. Para cada medida, agregue un objeto [`ClimateMeasure`](../../reference/schema.md#climatemeasure) a la matriz [`environment.climateMeasures`](project-schema.json,,environment/climateMeasures), configure su [`.type`](project-schema.json,/definitions/ClimateMeasure,type) de acuerdo a la lista de códigos abierta [climateMeasure](../../reference/codelists.md#climatemeasure) y mapee otras explicaciones a su [`.description`](project-schema.json,/definitions/ClimateMeasure,description).\n"
+"\n"
+"2. Si hay documentación de respaldo disponible [agregue un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'climateMeasures'."
+
+#. /18/title
+#: mapping/sustainability.yaml:1
+msgid "Forecast of greenhouse gas emissions"
+msgstr "Pronóstico de las emisiones de gases efecto invernadero"
+
+#. /18/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the forecast greenhouse gas emissions related to the project, "
+"including the calculation, the methodology applied and where the calculation"
+" can be found."
+msgstr ""
+"Las proyecciones de emisiones de gases de efecto invernadero relacionadas "
+"con el proyecto, incluyendo el cálculo, la metodología aplicada y el lugar "
+"donde se puede encontrar el cálculo."
+
+#. /18/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`.forecasts`](project-schema.json,,forecasts) array.\n"
+"\n"
+"2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to \"Greenhouse gas emissions (carbon dioxide equivalent)\" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:\n"
+"\n"
+"- Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)\n"
+"- Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to \"Tonne (metric ton)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to \"TNE\"\n"
+"- Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the forecast.\n"
+"\n"
+"4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissionsForecast'."
+msgstr ""
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`.forecasts`](project-schema.json,,forecasts).\n"
+"\n"
+"2. Establezca el [`.title`](project-schema.json,/definitions/Metric,title) de la métrica en \"Emisiones de gases de efecto invernadero (equivalente a dióxido de carbono)\" y mapee la aclaración de la metodología de su [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matriz [`.observations`](project-schema.json,/definitions/Metric,observations) de la métrica y:\n"
+"\n"
+"- Mapee la cantidad de emisiones de gases de efecto invernadero en toneladas de CO2 equivalentes a la [`.measure`](project-schema.json,/definitions/Observation,measure) de la observación\n"
+"- Establezca [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) en \"Tonelada (tonelada métrica)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) a 'UNCEFACT' y [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) a \"TNE\"\n"
+"- Establezca [`.period`](project-schema.json,/definitions/Observation,period) en el período cubierto por la proyección.\n"
+"\n"
+"4. Si hay documentación de respaldo disponible, [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType ) a 'ghgEmissionsForecast'."
+
+#. /19/title
+#: mapping/sustainability.yaml:1
+msgid "Environmental certifications"
+msgstr "Certificaciones ambientales"
+
+#. /19/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose environmental and/or climate related certifications issued for "
+"contractors and subcontractors such as ISO 14001 for environmental "
+"management."
+msgstr ""
+"Son las certificaciones ambientales y/o climáticas emitidas para "
+"contratistas y subcontratistas, como la ISO 14001 para gestión ambiental."
+
+#. /19/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set its [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) to "
+"'supplierEnvironmentalCertification'."
+msgstr ""
+"[Agregue un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en "
+"'supplierEnvironmentalCertification'."
+
+#. /20/title
+#: mapping/sustainability.yaml:1
+msgid "Decommissioning plans"
+msgstr "Planes de desmantelamiento"
+
+#. /20/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the decommissioning plans for the project assets."
+msgstr "Los planes de desmantelamiento de los activos del proyecto."
+
+#. /20/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'decommissioningPlans'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'decommissioningPlans'."
+
+#. /21/title
+#: mapping/sustainability.yaml:1
+msgid "Decommissioning cost forecast"
+msgstr "Proyección de los costos de desmantelamiento"
+
+#. /21/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the forecast decommissioning costs for the project assets."
+msgstr "Costos de desmantelamiento previstos para los activos del proyecto."
+
+#. /21/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`CostMeasurement`](../../reference/schema.md#costmeasurement) object to the [`costMeasurements`](project-schema.json,,costMeasurements) array and set its [`.id`](project-schema.json,/definitions/CostMeasurement,id) incrementally.\n"
+"\n"
+"2. Add a [`CostGroup`](../../reference/schema.md#costgroup) object to the cost measurement's [`.costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups) array, set its [`.id`](project-schema.json,/definitions/CostGroup,id) incrementally and set its [`.category`](project-schema.json,/definitions/CostGroup,category) to 'endOfLife'.\n"
+"\n"
+"3. Add a [`Cost`](../../reference/schema.md#cost) object to the cost group's [`.costs`](project-schema.json,/definitions/CostGroup,costs) array, set its [`.id`](project-schema.json,/definitions/Cost,id) incrementally and map to its [`.value`](project-schema.json,/definitions/Cost,value)."
+msgstr ""
+"1. Agregue un objeto [`CostMeasurement`](../../reference/schema.md#costmeasurement) a la matriz [`costMeasurements`](project-schema.json,,costMeasurements) y establezca su [`.id`](project-schema.json,/definitions/CostMeasurement,id) de forma incremental.\n"
+"\n"
+"2. Agregue un objeto [`CostGroup`](../../reference/schema.md#costgroup) a la matriz [`.costGroups`](project-schema.json,/definitions/CostMeasurement,costGroups) de la medición de costos, establezca su [`.id`](project-schema.json,/definitions/CostGroup,id) de forma incremental y establezca su [`.category`](project-schema.json,/definitions/CostGroup,category) en 'endOfLife'.\n"
+"\n"
+"3. Agregue un objeto [`Cost`](../../reference/schema.md#cost) a la matriz [`.costs`](project-schema.json,/definitions/CostGroup,costs) del grupo de costos, establezca su [`.id`](project-schema.json,/definitions/Cost,id) de forma incremental y mapee su [`.value`](project-schema.json,/definitions/Cost,value)."
+
+#. /22/title
+#: mapping/sustainability.yaml:1
+msgid "Climate objective"
+msgstr "Objetivo climático"
+
+#. /22/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the main climate objective that the project addresses from the list:\n"
+"\n"
+"- mitigation\n"
+"- adaptation\n"
+"- cross-cutting"
+msgstr ""
+"El objetivo climático principal que el proyecto aborda de la lista:\n"
+"\n"
+"- mitigación\n"
+"- adaptación\n"
+"- transversal"
+
+#. /22/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`environment.goals`](project-schema.json,,environment/goals) using "
+"the closed "
+"[environmentalGoal](../../reference/codelists.md#environmentalgoal) "
+"codelist."
+msgstr ""
+"Mapee a [`environment.goals`](project-schema.json,,environment/goals) usando"
+" la lista de códigos cerrada "
+"[environmentalGoal](../../reference/codelists.md#environmentalgoal)."
+
+#. /23/title
+#: mapping/sustainability.yaml:1
+msgid "Financial instrument"
+msgstr "Instrumento financiero"
+
+#. /23/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the financial instrument type from the list:\n"
+"\n"
+"- loan\n"
+"  - concessional\n"
+"  - non-concessional\n"
+"- grant\n"
+"- equity\n"
+"- guarantees"
+msgstr ""
+"El tipo de instrumento financiero de la lista:\n"
+"\n"
+"- préstamo\n"
+"  - concesional\n"
+"  - no concesional\n"
+"- donación\n"
+"- capital o patrimonio\n"
+"- garantías"
+
+#. /23/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Finance`](../../reference/schema.md#finance) object in [`.budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Set the the financing arrangement's [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) and [`.type`](project-schema.json,/definitions/Finance,type) according to the instrument type:\n"
+"\n"
+"Instrument type | [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) | [`.type`](project-schema.json,/definitions/Finance,type)\n"
+"-- | -- | --\n"
+"loan | 'debt' | 'loan'\n"
+"grant | | 'grant'\n"
+"equity | 'equity' | 'shares.listed' or 'shares.unlisted'\n"
+"guarantee | | 'guarantee'\n"
+"\n"
+"3. If the instrument is a concessional loan, set [`.concessional`](project-schema.json,/definitions/Finance,concessional) to `true`.\n"
+"4. If the instrument is a non-concessional loan, set [`.concessional`](project-schema.json,/definitions/Finance,concessional) to `false`.\n"
+"5. If the instrument is results-based, set [`.resultsBased`](project-schema.json,/definitions/Finance,resultsBased) to `true`."
+msgstr ""
+"1. Obtenga el objeto [`Finance`](../../reference/schema.md#finance) en [`.budget.finance`](project-schema.json,,budget/finance) o en [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) que representa el acuerdo financiero. Si no existe todavía [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Establezca el [`.assetClass`](project-schema.json,/definitions/Finance,assetClass) de los arreglos financieros y el [`.type`](project-schema.json,/definitions/Finance,type) de acuerdo al tipo de instrumento:\n"
+"-- | -- | --\n"
+"préstamo | 'debt' | 'loan'\n"
+"donación | | 'grant'\n"
+"capital o patrimonio | 'equity' | 'shares.listed' or 'shares.unlisted'\n"
+"garantías | | 'guarantee'\n"
+"3. Si el instrumento es un préstamo concesional, configure [`.concessional`](project-schema.json,/definitions/Finance,concessional) a `true`.\n"
+"4. Si el instrumento es un préstamo no concesional, configure [`.concessional`](project-schema.json,/definitions/Finance,concessional) a `false`.\n"
+"5. Si el instrumento se basa en resultados, configure [`.resultsBased`](project-schema.json,/definitions/Finance,resultsBased) a `true`."
+
+#. /24/title
+#: mapping/sustainability.yaml:1
+msgid "Climate transformation"
+msgstr "Transformación climática"
+
+#. /24/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify the theory of change, systemic transition or transformation that is "
+"intended."
+msgstr ""
+"Aclare la teoría del cambio, transición sistémica o transformación que se "
+"pretende utilizar."
+
+#. /24/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document), set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'climateTransformation' and map any free text to [`.description`](project-"
+"schema.json,/definitions/Document,description)."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document), "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'climateTransformation' y"
+" mapee cualquier texto libre en [`.description`](project-"
+"schema.json,/definitions/Document,description)."
+
+#. /25/title
+#: mapping/sustainability.yaml:1
+msgid "Climate finance decision-maker"
+msgstr "Tomador de decisiones sobre financiamiento climático"
+
+#. /25/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Identify who approved the climate finance investment in the country."
+msgstr ""
+"Identifique quién aprobó la inversión de financiamiento climático en el "
+"país."
+
+#. /25/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add an organization](../common.md#add-an-organization) for the decision "
+"maker and add 'climateFinanceFocalPoint' to its [`.roles`](project-"
+"schema.json,/definitions/Organization,roles) array."
+msgstr ""
+"[Agregue una organización](../common.md#add-an-organization) para quien toma"
+" las decisiones y  agregue 'climateFinanceFocalPoint' a su "
+"[`.roles`](project-schema.json,/definitions/Organization,roles) matriz."
+
+#. /26/title
+#: mapping/sustainability.yaml:1
+msgid "Nationally Determined Contributions (NDC)"
+msgstr "Contribuciones determinadas a nivel nacional (NDC)"
+
+#. /26/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify how the investment is aligned with the country's nationally "
+"determined contributions."
+msgstr ""
+"Aclare cómo se alinea la inversión con las contribuciones determinadas a "
+"nivel nacional del país."
+
+#. /26/mapping
+#. /27/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [policy coherence (institutional module)](institutional-policy-"
+"coherence)."
+msgstr ""
+"Vea [coherencia de las políticas (módulo institucional)](institutional-"
+"policy-coherence)."
+
+#. /27/title
+#: mapping/sustainability.yaml:1
+msgid "Paris Agreement"
+msgstr "Acuerdo de París"
+
+#. /27/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify how the investment is aligned with the country's Paris Agreement "
+"commitments."
+msgstr ""
+"Aclare cómo s e alinea la inversión con los compromisos del país en el "
+"Acuerdo de París."
+
+#. /28/title
+#: mapping/sustainability.yaml:1
+msgid "Beneficiaries"
+msgstr "Beneficiarios"
+
+#. /28/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose who the climate finance investment is intended to benefit and "
+"number of beneficiaries. Beneficiaries are the individuals who benefit "
+"directly or indirectly from the project; they are the target group of the "
+"infrastructure project and their needs are addressed by the intervention."
+msgstr ""
+"A quién se destina la inversión de financiamiento climático y el número de "
+"beneficiarios. Los beneficiarios son las personas que se benefician directa "
+"o indirectamente del proyecto; ellos son el grupo meta del proyecto de "
+"infraestructura y la intervención aborda sus necesidades."
+
+#. /28/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [number of beneficiaries (social module)](social-number-of-"
+"beneficiaries)"
+msgstr ""
+"Vea [número de beneficiarios (módulo social)](social-number-of-"
+"beneficiaries)"
+
+#. /29/title
+#: mapping/sustainability.yaml:1
+msgid "Amount of investment"
+msgstr "Cantidad de la inversión"
+
+#. /29/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the quantum of the climate finance investment."
+msgstr "El monto de la inversión en financiamiento climático."
+
+#. /29/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Map to the financing arrangement's [`.value`](project-schema.json,/definitions/Finance,value)."
+msgstr ""
+"1. Obtenga el objeto [`Finance`](../../reference/schema.md#finance) en [`budget.finance`](project-schema.json,,budget/finance) o [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) que representa el acuerdo de financiamiento. Si aún no existe alguno, [agregar un acuerdo de financiamiento](../common.md#add-a-financing-arrangement).\n"
+"2. Mapee el [`.value`](project-schema.json,/definitions/Finance,value) del acuerdo de financiamiento."
+
+#. /30/title
+#: mapping/sustainability.yaml:1
+msgid "Funding source"
+msgstr "Fuente de financiamiento"
+
+#. /30/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose who is providing the finance."
+msgstr "Fuente que proporciona el financiamiento."
+
+#. /30/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Map to the financing arrangement's [`.source`](project-schema.json,/definitions/Finance,source)."
+msgstr ""
+"1. Obtenga el objeto [`Finance`](../../reference/schema.md#finance) en [`budget.finance`](project-schema.json,,budget/finance) o [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) que representa el acuerdo de financiamiento. Si aún no existe alguno, [agregar un acuerdo de financiamiento](../common.md#add-a-financing-arrangement).\n"
+"2. Mapee al [`.source`](project-schema.json,/definitions/Finance,source) del acuerdo de financiamiento."
+
+#. /31/title
+#: mapping/sustainability.yaml:1
+msgid "Green Climate Fund Accredited Entity"
+msgstr "Entidad acreditada en el Fondo Verde para el Clima (GCF)"
+
+#. /31/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"For projects financed by the Green Climate Fund, disclose the accredited "
+"entities through which GCF resources are accessed."
+msgstr ""
+"Para proyectos financiados por el Fondo Verde para el Clima, indique  las "
+"entidades acreditadas mediante las cuales se accede a los recursos del GCF."
+
+#. /31/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the party providing the finance. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).\n"
+"3. Set the financing arrangement's [`.financingParty`](project-schema.json,/definitions/Finance,financingParty) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization."
+msgstr ""
+"1. Obtenga el objeto [`Finance`](../../reference/schema.md#finance) en [`budget.finance`](project-schema.json,,budget/finance) o [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) que representa el acuerdo de financiamiento. Si aún no existe alguno, [agregar un acuerdo de financiamiento](../common.md#add-a-financing-arrangement).\n"
+"2. Obtenga el objeto [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa a la parte que proporciona financiamiento. Si aún no existe alguno, [agregar una organización](../common.md#add-an-organization) y agregue 'funder' a su [`.roles`](project-schema.json,/definitions/Organization,roles).\n"
+"3. Establezca el [`.financingParty`](project-schema.json,/definitions/Finance,financingParty) del acuerdo de financiamiento en [`.id`](project-schema.json,/definitions/Organization,id) y [`.name`](project-schema.json,/definitions/Organization,name) de la organización."
+
+#. /32/title
+#: mapping/sustainability.yaml:1
+msgid "Accredited Entity Type"
+msgstr "Tipo de entidad acreditada"
+
+#. /32/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the type of accredited entity, from the list:\n"
+"\n"
+"- private\n"
+"- public\n"
+"- non-governmental\n"
+"- sub-national\n"
+"- national\n"
+"- regional\n"
+"- international"
+msgstr ""
+"Tiipo de entidad acreditada, de la lista:\n"
+"\n"
+"- privada\n"
+"- pública\n"
+"- no gubernamental\n"
+"- subnacional\n"
+"- nacional\n"
+"- regional\n"
+"- internacional"
+
+#. /32/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Organization`](../../reference/schema.md#organization) object in [`parties`](project-schema.json,,parties) that represents the accredited entity. If none exists yet, [add an organization](../common.md#add-an-organization) and add 'funder' to its [`.roles`](project-schema.json,/definitions/Organization,roles).\n"
+"2. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsLegalType' and map the organization's legal type ('private', 'public' or 'non-government') to its [`.id`](project-schema.json,/definitions/Classification,id).\n"
+"3. Add a [`Classification`](../../reference/schema.md#classification) object to the organization's [`.classifications`](project-schema.json,/definitions/Organization,classifications) array, set its [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'costIdsAdministrativeLevel' and map the organization's administrative level ('international', 'regional', 'national' or 'sub-national') to its [`.id`](project-schema.json,/definitions/Classification,id)."
+msgstr ""
+"1. Obtenga el objeto [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa la entidad acreditada. Si aún no existe alguna, [agregue una organización](../common.md#add-an-organization) y agregue 'funder' a su [`.roles`](project-schema.json,/definitions/Organization,roles ).\n"
+"2. Agregue un objeto [`Classification`](../../reference/schema.md#classification) a la matriz [`.classifications`](project-schema.json,/definitions/Organization,classifications) de la organización, establezca su [`.scheme`](project-schema.json,/definitions/Classification,scheme) a 'costIdsLegalType' y mapee el tipo legal de la organización ('private', 'public' or 'non-government') a su [`.id`](project-schema.json,/definitions/Classification,id).\n"
+"3. Agregue un objeto [`Classification`](../../reference/schema.md#classification) a la matriz [`.classifications`](project-schema.json,/definitions/Organization,classifications) de la organización, establezca su [`.scheme`](project-schema.json,/definitions/Classification,scheme) a 'costIdsAdministrativeLevel' y mapee el nivel administrativo de la organización ('international', 'regional', 'national' or 'sub-national') a su [`.id`](project-schema.json,/definitions/Classification,id)."
+
+#. /33/title
+#: mapping/sustainability.yaml:1
+msgid "Project preparation costs"
+msgstr "Costos de preparación del proyecto"
+
+#. /33/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the amounts invested in project preparation."
+msgstr "Estos son los montos invertidos en la preparación del proyecto."
+
+#. /33/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [budget for preparation, implementation and maintenance (economic and "
+"fiscal module)](economic-and-fiscal-budget-for-preparation-implementation-"
+"and-maintenance)."
+msgstr ""
+"Vea [presupuesto-de-elaboración-implementación-y-mantenimiento (módulo "
+"económico y fiscal)](economic-and-fiscal-budget-for-preparation-"
+"implementation-and-maintenance)."
+
+#. /34/title
+#: mapping/sustainability.yaml:1
+msgid "Project preparation period"
+msgstr "Período de preparación del proyecto"
+
+#. /34/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose dates for project preparation."
+msgstr "Fechas de inicio y final para la preparación del proyecto."
+
+#. /34/mapping
+#: mapping/sustainability.yaml:1
+msgid "Map to [`preparationPeriod`](project-schema.json,,preparationPeriod)."
+msgstr ""
+"Mapee a [`preparationPeriod`](project-schema.json,,preparationPeriod)."
+
+#. /35/title
+#: mapping/sustainability.yaml:1
+msgid "Project approval period"
+msgstr "Período de aprobación del proyecto"
+
+#. /35/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose dates for project approval:\n"
+"\n"
+"- submission date\n"
+"- approval date"
+msgstr ""
+"Fechas para la aprobación del proyecto:\n"
+"\n"
+"- fecha de entrega\n"
+"- fecha de aprobación"
+
+#. /35/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each date:\n"
+"\n"
+"1. Add a [`Milestone`](../../reference/schema.md#milestone) to the [`milestones`](project-schema.json,,milestones) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Milestone,id) incrementally\n"
+"- [`.type`](project-schema.json,/definitions/Milestone,type) to 'financing'\n"
+"- [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'\n"
+"\n"
+"2. If disclosing the submission date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to \"Climate finance submission\" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the submission.\n"
+"3. If disclosing the approval date, set the milestone's [`.title`](project-schema.json,/definitions/Milestone,title) to \"Climate finance approval\" and its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the approval."
+msgstr ""
+"Para cada fecha:\n"
+"\n"
+"1. Agregue un [`Milestone`](../../reference/schema.md#milestone) a la matriz [`milestones`](project-schema.json,,milestones) y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Milestone,id) de forma incremental\n"
+"- [`.type`](project-schema.json,/definitions/Milestone,type) a 'financing'\n"
+"- [`.status`](project-schema.json,/definitions/Milestone,status) a 'met'\n"
+"\n"
+"2. Si divulga la fecha de presentación, establezca el [`.title`](project-schema.json,/definitions/Milestone,title) del hito en \"Climate finance submission\" y su [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) a la fecha de presentación.\n"
+"3. Si se divulga la fecha de aprobación, establezca el [`.title`](project-schema.json,/definitions/Milestone,title) del hito en \"Aprobación del financiamiento climático\" y su [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) a la fecha de aprobación."
+
+#. /36/title
+#: mapping/sustainability.yaml:1
+msgid "Ratio of co-finance"
+msgstr "Coeficiente de co-financiamiento"
+
+#. /36/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the ratio of co-finance. Select from a list to specify amounts:\n"
+"\n"
+"- domestic mobilisations\n"
+"- private finance"
+msgstr ""
+"El coeficiente de cofinanciamiento. Seleccionar de una lista para especificar cantidades:\n"
+"\n"
+"- movilizaciones internas\n"
+"- financiación privada"
+
+#. /36/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"The OC4IDS data model provides the information needed to calculate co-"
+"finance ratios by modeling a project's individual financing arrangements. "
+"For more information, see the mappings for [amount of investment](climate-"
+"finance-amount-of-investment), [funding source](climate-finance-funding-"
+"source), [Green Climate Fund Accredited Entity](climate-finance-green-"
+"climate-fund-accredited-entity) and [Accredited Entity Type](climate-"
+"finance-accredited-entity-type)."
+msgstr ""
+"El modelo de datos OC4IDS proporciona la información necesaria para calcular"
+" los coeficientes de cofinanciación modelando los acuerdos de financiación "
+"individuales de un proyecto. Para más información, consulte los mapeos de [ "
+"monto de la inversión](climate-finance-amount-of-investment), [fuente de "
+"financiación](climate-finance-funding-source), [entidad acreditada por el "
+"Fondo Verde para el Clima](climate-finance-green-climate-fund-accredited-"
+"entity) y [tipo de entidad acreditada](climate-finance-accredited-entity-"
+"type)."
+
+#. /37/title
+#: mapping/sustainability.yaml:1
+msgid "Terms of climate finance"
+msgstr "Términos del financiamiento climático"
+
+#. /37/disclosure format
+#: mapping/sustainability.yaml:1
+#, python-format
+msgid ""
+"Disclose the financial instrument and on what terms is the finance being provided. This includes several financial terms:\n"
+"\n"
+"- maturity (years)\n"
+"- grace period (years)\n"
+"- annual principal repayment years (%% of initial principle)\n"
+"- interest (%)\n"
+"- service fee (per annum)\n"
+"- commitment fee (per annum)"
+msgstr ""
+"Este es el instrumento financiero y las condiciones bajo las cuales se proporciona el financiamiento. Esto incluye varios términos financieros:\n"
+"\n"
+"- vencimiento (años)\n"
+"- periodo de gracia (años)\n"
+"- Años de amortización anual del principal (%% del principio inicial)\n"
+"- interés (%)\n"
+"- comisión por servicio (por año)\n"
+"- comisión de compromiso (por año)"
+
+#. /37/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Get the [`Finance`](../../reference/schema.md#finance) object in [`budget.finance`](project-schema.json,,budget/finance) or [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) that represents the financing arrangement. If none exists yet, [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Map the terms to the financing arrangement's properties:\n"
+"\n"
+"- Maturity: [`.period`](project-schema.json,,period)\n"
+"- Grace period: Map the period over which payments will be made to [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod). The grace period is the difference between [`.period`](project-schema.json,,period) and [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod).\n"
+"- Annual principal repayment years: [`.description`](project-schema.json,/definitions/Finance,description)\n"
+"- Interest: [`.interestRate`](project-schema.json,/definitions/Finance,interestRate)\n"
+"- Service fee: [`.description`](project-schema.json,/definitions/Finance,description)\n"
+"- Commitment fee: [`.description`](project-schema.json,/definitions/Finance,description)"
+msgstr ""
+"1. Obtenga el objeto [`Finance`](../../reference/schema.md#finance) en [`.budget.finance`](project-schema.json,,budget/finance) o en [`contractingProcesses.summary.finance`](project-schema.json,/definitions/ContractingProcessSummary,finance) que representa el acuerdo financiero. Si no existe todavía [add a financing arrangement](../common.md#add-a-financing-arrangement).\n"
+"2. Mapee los términos a las propiedades del acuerdo de financiamiento:\n"
+"\n"
+"- Vencimiento: [`.period`](project-schema.json,,period)\n"
+"- Período de gracia: Mapear el período durante el cual se realizarán los pagos a [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod). El período de gracia es la diferencia entre el [`.period`](project-schema.json,,period) y el [`.paymentPeriod`](project-schema.json,/definitions/Finance,paymentPeriod).\n"
+"- Años de amortización anual del principal: [`.description`](project-schema.json,/definitions/Finance,description)\n"
+"- Interés: [`.interestRate`](project-schema.json,/definitions/Finance,interestRate)\n"
+"- Comisión de servicio: [`.description`](project-schema.json,/definitions/Finance,description)\n"
+"- Comisión de compromiso: [`.description`](project-schema.json,/definitions/Finance,description)"
+
+#. /38/title
+#: mapping/sustainability.yaml:1
+msgid "Carbon efficiency"
+msgstr "Eficiencia de carbono"
+
+#. /38/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the cost per tonne of CO2 equivalent reduction attributed to the "
+"project."
+msgstr ""
+"El costo por tonelada de reducción equivalente de CO2 atribuida al proyecto."
+
+#. /38/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`environment.abatementCost`](project-"
+"schema.json,,environment/abatementCost). If a document that describes the "
+"methodology used to calculate the cost is available, [add a project "
+"document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'abatementCostMethodology'."
+msgstr ""
+"Mapee a [`environment.abatementCost`](project-"
+"schema.json,,environment/abatementCost). Si está disponible un documento que"
+" describe la metodología utilizada para calcular el costo, [agregue un "
+"documento de proyecto](../common.md#add-a-project-document) y establezca su "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
+"'abatementCostMethodology'."
+
+#. /39/title
+#: mapping/sustainability.yaml:1
+msgid "Non-climate co-benefits"
+msgstr "Cobeneficios no climáticos"
+
+#. /39/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose and provide further details on the potential non-climate impacts that have been factored into the project planning. This can comprise, without limitation the following:\n"
+"\n"
+"- economic\n"
+"- social\n"
+"- environmental\n"
+"- gender empowerment.\n"
+"- others (explain)"
+msgstr ""
+"Provea detalles sobre los impactos potenciales no climáticos que han sido tomados en consideración en la planificación del proyecto.\n"
+"\n"
+"- económico\n"
+"- social\n"
+"- ambiental\n"
+"- empoderamiento de género.\n"
+"- otros (explicar)"
+
+#. /39/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each co-benefit, add a [`Benefit`](../../reference/schema.md#benefit) "
+"object to the [`benefits`](project-schema.json,,benefits) array, map the "
+"option from the list to its [`.title`](project-"
+"schema.json,/definitions/Benefit,title) and map the explanation to its "
+"[`.description`](project-schema.json,/definitions/Benefit,description)."
+msgstr ""
+"Para cada cobeneficio, agregue un objeto "
+"[`Benefit`](../../reference/schema.md#benefit) a la matriz "
+"[`benefits`](project-schema.json,,benefits), mapee la opción de la lista a "
+"su [`.title`](project-schema.json,/definitions/Benefit,title) y mapee la "
+"explicación a su [`.description`](project-"
+"schema.json,/definitions/Benefit,description)."
+
+#. /40/title
+#. /58/title
+#: mapping/sustainability.yaml:1
+msgid "Public consultation meetings"
+msgstr "Reuniones de consulta pública"
+
+#. /40/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the occurrence of public meetings with communities and impacted "
+"groups including the meeting invite, the number of participants, dates and "
+"location of these meetings."
+msgstr ""
+"Datos e información sobre la realización de reuniones públicas con las "
+"comunidades y los grupos afectados, incluyendo la invitación a la reunión, "
+"el número de participantes, las fechas y el lugar de estas reuniones."
+
+#. /40/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [public consultation meetings (social module)](social-public-"
+"consultation-meetings)."
+msgstr ""
+"Vea [reuniones de consulta pública (módulo social)](social-public-"
+"consultation-meetings)."
+
+#. /41/title
+#: mapping/sustainability.yaml:1
+msgid "Disbursement records"
+msgstr "Registros de los desembolsos"
+
+#. /41/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose disbursements dates according to financial agreement versus actual "
+"disbursements dates."
+msgstr ""
+"Fechas de los desembolsos conforme al acuerdo de financiamiento versus las "
+"fechas reales de los desembolsos"
+
+#. /41/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each planned disbursement:\n"
+"\n"
+"1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Milestone`](../../reference/schema.md#milestone) object to its [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Milestone`](../../reference/schema.md#milestone) object to the project-level [`milestones`](project-schema.json,,milestones) array.\n"
+"2. Set the milestone's:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Milestone,id) incrementally\n"
+"- [`.status`](project-schema.json,/definitions/Milestone,status) to 'scheduled'\n"
+"- [`.dueDate`](project-schema.json,/definitions/Milestone,dueDate) to the date on which the disbursement is planned to occur\n"
+"- [`.type`](project-schema.json,/definitions/Milestone,type) to 'payment'\n"
+"- [`.value`](project-schema.json,/definitions/Milestone,value) to the amount and currency of the planned disbursement\n"
+"\n"
+"For each actual disbursement:\n"
+"\n"
+"1. If the disbursement relates to a contracting processes, for example a payment from a funder to a supplier or to a subcontractor of a supplier, get the [`ContractingProcess`](../../reference/schema.md#contractingprocess) in the [`contractingProcesses`](project-schema.json,,contractingProcesses) array to which the disbursement relates and add a [`Transaction`](../../reference/schema.md#transaction) object to its [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions) array. Otherwise, if the disbursement relates to the project, for example a payment from a funder to the public authority, add a [`Transaction`](../../reference/schema.md#transaction) object to the project-level [`transactions`](project-schema.json,,transactions) array.\n"
+"\n"
+"2. Set the transaction's:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Transaction,id) incrementally\n"
+"- [`.date`](project-schema.json,/definitions/Transaction,date) to the date of the disbursement\n"
+"- [`.value`](project-schema.json,/definitions/Transaction,value) to the amount and currency of the disbursement.\n"
+"\n"
+"3. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payer. If none exists yet, [add an organization](../common.md#add-an-organization) for the payer:\n"
+"\n"
+"- Add 'payer' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array\n"
+"- Set the transaction's [`.payer`](project-schema.json,/definitions/Transaction,payer) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.\n"
+"\n"
+"4. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the payee. If none exists yet, [add an organization](../common.md#add-an-organization) for the payee:\n"
+"\n"
+"- Add 'payee' to the organization's [`.roles`](project-schema.json,/definitions/Organization,roles) array.\n"
+"- Set the transaction's [`.payee`](project-schema.json,/definitions/Transaction,payee) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.\n"
+"\n"
+"5. Get the [`Milestone`](../../reference/schema.md#milestone) in [`milestones`](project-schema.json,,milestones) that represents that planned disbursement:\n"
+"\n"
+"- Set its [`.status`](project-schema.json,/definitions/Milestone,status) to 'met'\n"
+"- Set its [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) to the date of the disbursement\n"
+"- Set the transaction's [`.relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone) to the [`.id`](project-schema.json,/definitions/Milestone,id) and [`.title`](project-schema.json,/definitions/Milestone,title) of the milestone."
+msgstr ""
+"Para cada desembolso previsto:\n"
+"\n"
+"1. Si el desembolso se relaciona con procesos de contratación, por ejemplo, un pago de un financiador a un proveedor o a un subcontratista de un proveedor, obtenga el [`ContractingProcess`](../../reference/schema.md#contractingprocess) en la matriz [`contractingProcesses`](project-schema.json,,contractingProcesses) con la que se relaciona el desembolso y agregue un objeto [`Milestone`](../../reference/schema.md#milestone) a su [`.summary.milestones`](project-schema.json,/definitions/ContractingProcessSummary,milestones) matriz. De lo contrario, si el desembolso se relaciona con el proyecto, por ejemplo, un pago de un financiador a la autoridad pública, agregue un objeto [`Milestone`](../../reference/schema.md#milestone) a la matriz del nivel de proyecto [`milestones`](project-schema.json,,milestones).\n"
+"\n"
+"2. Establezca los hitos:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Milestone,id) de forma incremental\n"
+"- [`.status`](project-schema.json,/definitions/Milestone,status) a 'scheduled'\n"
+"- [`.dueDate`](project-schema.json,/definitions/Milestone,dueDate) a la fecha en la que se planea realizar el desembolso\n"
+"- [`.type`](project-schema.json,/definitions/Milestone,type) a 'payment'\n"
+"- [`.value`](project-schema.json,/definitions/Milestone,value) al monto y moneda del desembolso planificado\n"
+"\n"
+"Para cada desembolso real:\n"
+"\n"
+"1. Si el desembolso se relaciona con procesos de contratación, por ejemplo un pago de un financiador a un proveedor o a un subcontratista de un proveedor, obtener el [`ContractingProcess`](../../reference/schema.md#contractingprocess) en la matriz [`contractingProcesses`](project-schema.json,,contractingProcesses) con la que se relaciona el desembolso y agregar un objeto [`Transaction`](../../reference/schema.md#transaction) a su matriz [`.summary.transactions`](project-schema.json,/definitions/ContractingProcessSummary,transactions). De lo contrario, si el desembolso se relaciona con un proyecto, por ejemplo un pago de un financiador a la autoridad pública, agregar un objeto, [`Transaction`](../../reference/schema.md#transaction) a la matriz del nivel de proyecto [`transactions`](project-schema.json,,transactions).\n"
+"\n"
+"2. Configure la transacción:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Transaction,id) de forma incremental\n"
+"- [`.date`](project-schema.json,/definitions/Transaction,date) a la fecha del desembolso\n"
+"- [`.value`](project-schema.json,/definitions/Transaction,value) al monto y moneda del desembolso.\n"
+"\n"
+"3. Obtenga la [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa al pagador. Si aún no existe alguna, [agregue una organización](../common.md#add-an-organization) para el pagador:\n"
+"\n"
+"- Agregue 'payer' a la matriz [`.roles`](project-schema.json,/definitions/Organization,roles) de la organización\n"
+"- Establezca el [`.payer`](project-schema.json,/definitions/Transaction,payer) de la transacción en [`.id`](project-schema.json,/definitions/Organization,id) y [`.name`](project-schema.json,/definitions/Organization,name) nombre de la organización.\n"
+"\n"
+"4. Obtenga la [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa al acreedor. Si aún no existe alguna, [agregue una organización](../common.md#add-an-organization) para el acreedor:\n"
+"\n"
+"- Agregue 'payee' a la matriz [`.roles`](project-schema.json,/definitions/Organization,roles) de la organización.\n"
+"- Establezca el [`.payee`](project-schema.json,/definitions/Transaction,payee) de la transacción en [`.id`](project-schema.json,/definitions/Organization,id) y [`.name`](project-schema.json,/definitions/Organization,name) de la organización.\n"
+"\n"
+"5. Obtenga el [`Milestone`](../../reference/schema.md#milestone) en [`milestones`](project-schema.json,,milestones) que representa ese desembolso planificado:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Milestone,id) de forma incremental\n"
+"- Establezca su [`.status`](project-schema.json,/definitions/Milestone,status) en 'met'\n"
+"- Establezca su [`.dateMet`](project-schema.json,/definitions/Milestone,dateMet) en la fecha del desembolso\n"
+"- Establezca el [`.relatedImplementationMilestone`](project-schema.json,/definitions/Transaction,relatedImplementationMilestone) de la transacción en [`.id`](project-schema.json,/definitions/Milestone,id) y [`.title`](project-schema.json,/definitions/Milestone,title) del hito.\n"
+"- "
+
+#. /42/title
+#: mapping/sustainability.yaml:1
+msgid "Type of project monitoring"
+msgstr "Tipo de monitoreo del proyecto"
+
+#. /42/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the type of monitoring from the list:\n"
+"\n"
+"- internal\n"
+"- external\n"
+"- mixed"
+msgstr ""
+"El tipo de monitoreo de la lista:\n"
+"\n"
+"- interno\n"
+"- externo\n"
+"- mixto"
+
+#. /42/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`environment.climateOversightTypes`](project-"
+"schema.json,,environment/climateOversightTypes) using the closed "
+"[climateOversightTypes](../../reference/codelists.md#climateoversighttypes) "
+"codelist."
+msgstr ""
+"Mapee a [`environment.climateOversightTypes`](project-"
+"schema.json,,environment/climateOversightTypes) utilizando la lista de "
+"códigos cerrada "
+"[climateOversightTypes](../../reference/codelists.md#climateoversighttypes)."
+
+#. /43/title
+#. /75/title
+#: mapping/sustainability.yaml:1
+msgid "Performance monitoring"
+msgstr "Monitoreo del desempeño"
+
+#. /43/disclosure format
+#. /75/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose Key Performance Indicators adopted by the project."
+msgstr "Los indicadores clave de desempeño adoptados por el proyecto."
+
+#. /43/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each KPI, add a [`Metric`](../../reference/schema.md#metric) object to "
+"the [`metrics`](project-schema.json,,metrics) array and set its fields "
+"according to the schema. Prefix the metric's [`.title`](project-"
+"schema.json,/definitions/Metric,title) with \"KPI: \"."
+msgstr ""
+"Para cada KPI, agregue un objeto "
+"[`Metric`](../../reference/schema.md#metric) a la matriz "
+"[`metrics`](project-schema.json,,metrics) y configure sus campos de acuerdo "
+"al esquema. Anteponga el [`.title`](project-"
+"schema.json,/definitions/Metric,title) de la métrica con \"KPI:\"."
+
+#. /44/title
+#: mapping/sustainability.yaml:1
+msgid "Reporting period"
+msgstr "Período de reporte"
+
+#. /44/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify the project reporting period. It could be quarterly, annually, "
+"biannually."
+msgstr ""
+"Aclare el período del informe del proyecto. Podría ser trimestral, anual o "
+"semestral."
+
+#. /44/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Get the [`Metric`](../../reference/schema.md#metric) object in the "
+"[`metrics`](project-schema.json,,metrics) array that represents the KPI and "
+"map to its [`.description`](project-"
+"schema.json,/definitions/Metric,description) using the format \"Reporting "
+"period: {period}\"."
+msgstr ""
+"Obtenga el objeto [`Metric`](../../reference/schema.md#metric) en la matriz "
+"[`metrics`](project-schema.json,,metrics) que representa el KPI y mapee su ["
+" `.description`](project-schema.json,/definitions/Metric,description) "
+"utilizando el formato \"Período de Informes: {período}\"."
+
+#. /45/title
+#: mapping/sustainability.yaml:1
+msgid "Oversight reports"
+msgstr "Informes de supervisión "
+
+#. /45/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose oversight reports."
+msgstr "Informes de supervisión."
+
+#. /45/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'oversightReport'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'oversightReport'."
+
+#. /46/title
+#. /74/title
+#: mapping/sustainability.yaml:1
+msgid "Independent monitoring"
+msgstr "Monitoreo independiente "
+
+#. /46/disclosure format
+#. /74/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Identify the entities acting as independent monitors of the project."
+msgstr ""
+"Identifique las entidades que actúan como monitores independientes del "
+"proyecto."
+
+#. /46/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [independent monitoring (institutional module)](institutional-"
+"independent-monitoring)."
+msgstr ""
+"Vea [monitoreo independiente (módulo institucional)](institutional-"
+"independent-monitoring)."
+
+#. /47/title
+#: mapping/sustainability.yaml:1
+msgid "Independent evaluation"
+msgstr "Evaluación independiente "
+
+#. /47/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose technical audits produced at end of the project."
+msgstr "Las auditorías técnicas producidas al final del proyecto."
+
+#. /47/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each audit report, [add a project document](../common.md#add-a-project-"
+"document), set its [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) to 'technicalAuditReport' "
+"and map any free text to its [`.description`](project-"
+"schema.json,/definitions/Document,description)."
+msgstr ""
+"Para cada informe de auditoría, [agregue un documento de "
+"proyecto](../common.md#add-a-project-document), establezca su "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
+"'technicalAuditReport' y mapee cualquier texto libre de su "
+"[`.description`](project-schema.json,/definitions/Document,description)."
+
+#. /48/title
+#: mapping/sustainability.yaml:1
+msgid "Impact measurement"
+msgstr "Medición del impacto"
+
+#. /48/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify the methodology or system to measure the long-term impact of the "
+"project solution."
+msgstr ""
+"Aclare la metodología o sistema para medir el impacto a largo plazo de la "
+"solución del proyecto."
+
+#. /48/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document), set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'impactMethodology' and map any free text to its [`.description`](project-"
+"schema.json,,description)."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document), "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'impactMethodology' y "
+"mapee cualquier texto libre en su [`.description`](project-"
+"schema.json,,description)."
+
+#. /49/title
+#: mapping/sustainability.yaml:1
+msgid "Carbon footprint"
+msgstr "Huella de carbono"
+
+#. /49/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the carbon footprint of the project, including the calculation, the"
+" methodology applied, and where the calculation can be found."
+msgstr ""
+"La huella de carbono del proyecto, incluyendo el cálculo, la metodología "
+"aplicada y dónde se puede encontrar el cálculo."
+
+#. /49/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array.\n"
+"\n"
+"2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to \"Greenhouse gas emissions (carbon dioxide equivalent)\" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:\n"
+"\n"
+"- Map the amount of greenhouse gas emissions in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)\n"
+"- Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to \"Tonne (metric ton)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to \"TNE\"\n"
+"- Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the calculation.\n"
+"\n"
+"4. If supporting documentation is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissions'."
+msgstr ""
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`metrics`](project-schema.json,,metrics).\n"
+"\n"
+"2. Establezca el [`.title`](project-schema.json,/definitions/Metric,title) de la métrica en \"Emisiones de gases de efecto invernadero (equivalente a dióxido de carbono)\" y mapee la aclaración de la metodología de su [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matriz [`.observations`](project-schema.json,/definitions/Metric,observations) de la métrica y:\n"
+"\n"
+"- Mapee la cantidad de emisiones de gases de efecto invernadero en toneladas de CO2 equivalentes a la [`.measure`](project-schema.json,/definitions/Observation,measure) de la observación\n"
+"- Establezca [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) en \"Tonelada (tonelada métrica)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) a 'UNCEFACT' y [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) a \"TNE\"\n"
+"- Establezca [`.period`](project-schema.json,/definitions/Observation,period) en el período cubierto por el cálculo.\n"
+"\n"
+"4. Si hay documentación de respaldo disponible, [agregue un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType ) a 'ghgEmissions'."
+
+#. /50/title
+#: mapping/sustainability.yaml:1
+msgid "Infrastructure assets to be decommissioned"
+msgstr "Activos a ser desmantelados"
+
+#. /50/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Identify the asset for disposal purpose."
+msgstr "Identifique el activo para fines de desmantelamiento."
+
+#. /50/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each set of decommissioned assets in a specified location, create a new OC4IDS project and:\n"
+"\n"
+"1. Set its [`type`](project-schema.json,,type) to 'decommissioning'.\n"
+"\n"
+"2. Set its [`title`](project-schema.json,,title) to the name of the asset.\n"
+"\n"
+"3. Add a [`RelatedProject`](../../reference/schema.md#relatedproject) object to the [`relatedProjects`](project-schema.json,,relatedProjects) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/RelatedProject,id) and [`.title`](project-schema.json,/definitions/RelatedProject,title) to the [`.id`](project-schema.json,,id) and [`.title`](project-schema.json,,title) of the OC4IDS project for the replacement of the asset\n"
+"- [`.scheme`](project-schema.json,/definitions/RelatedProject,scheme) to 'oc4ids'\n"
+"- [`.relationship`](project-schema.json,/definitions/RelatedProject,relationship) to 'replacement'."
+msgstr ""
+"Para cada conjunto de activos dados de baja o desmantelados en una ubicación especificada, cree un nuevo proyecto OC4IDS y::\n"
+"\n"
+"1. Establezca su [`type`](project-schema.json,,type)\n"
+"\n"
+"2. Establezca su [`title`](project-schema.json,,title) con el nombre del activo.\n"
+"\n"
+"3. Agregue un objeto [`RelatedProject`](../../reference/schema.md#relatedproject) a la matriz [`relatedProjects`](project-schema.json,,relatedProjects) y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/RelatedProject,id) y [`.title`](project-schema.json,/definitions/RelatedProject,title) al [`.id`]( project-schema.json,,id) y [`.title`](project-schema.json,,title) del proyecto OC4IDS para la sustitución del activo\n"
+"- [`.scheme`](project-schema.json,/definitions/RelatedProject,scheme) a 'oc4ids'\n"
+"- [`.relationship`](project-schema.json,/definitions/RelatedProject,relationship) a 'replacement'."
+
+#. /51/title
+#: mapping/sustainability.yaml:1
+msgid "Decommission period"
+msgstr "Período de desmantelamiento"
+
+#. /51/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Intended start and end dates of decommissioning."
+msgstr "Fechas previstas de inicio y finalización del desmantelamiento."
+
+#. /51/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`decommissioningPeriod`](project-"
+"schema.json,,decommissioningPeriod)."
+msgstr ""
+"Mapee a [`decommissioningPeriod`](project-"
+"schema.json,,decommissioningPeriod)."
+
+#. /52/title
+#: mapping/sustainability.yaml:1
+msgid "Decommission plan"
+msgstr "Plan de desmantelamiento "
+
+#. /52/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the technical plan for decommissioning."
+msgstr "El plan técnico de desmantelamiento."
+
+#. /52/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [decommissioning plans (environment and social)](environment-and-"
+"climate-decommissioning-plans)."
+msgstr ""
+"Vea [planes de desmantelamiento (ambientales y sociales)](environment-and-"
+"climate-decommissioning-plans)."
+
+#. /53/title
+#: mapping/sustainability.yaml:1
+msgid "Carbon decommission savings"
+msgstr "Ahorros de carbono con el desmantelamiento "
+
+#. /53/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose the evaluation of CO2 savings as a result of decommissioning."
+msgstr "La evaluación del ahorro de CO2 como resultado del desmantelamiento."
+
+#. /53/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array.\n"
+"\n"
+"2. Set the metric's [`.title`](project-schema.json,/definitions/Metric,title) to \"Greenhouse gas emissions reduction (carbon dioxide equivalent)\" and map the methodology clarification to its [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and:\n"
+"\n"
+"- Map the amount of greenhouse gas emission savings in tonnes of CO2 equivalent to the observation's [`.measure`](project-schema.json,/definitions/Observation,measure)\n"
+"- Set the [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) to \"Tonne (metric ton)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) to 'UNCEFACT' and [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) to \"TNE\"\n"
+"- Set [`.period`](project-schema.json,/definitions/Observation,period) to the period covered by the calculation.\n"
+"\n"
+"4. If supporting documentation is available, [Add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'ghgEmissionsReduction'."
+msgstr ""
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`forecasts`](project-schema.json,,forecasts).\n"
+"\n"
+"2. Establezca el [`.title`](project-schema.json,/definitions/Metric,title) de la métrica en \"Reducción de emisiones de gases de efecto invernadero (equivalente a dióxido de carbono)\" y mapee la aclaración de la metodología de su [`.description`](project-schema.json,/definitions/Metric,description).\n"
+"\n"
+"3. Agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matriz [`.observations`](project-schema.json,/definitions/Metric,observations) de la métrica y:\n"
+"\n"
+"- Mapee la cantidad de ahorro de emisiones de gases de efecto invernadero en toneladas de CO2 equivalentes a la [`.measure`](project-schema.json,/definitions/Observation,measure) de la observación\n"
+"- Establezca [`.unit.name`](project-schema.json,/definitions/Observation,unit/name) en \"Tonelada (tonelada métrica)\", [`.unit.scheme`](project-schema.json,/definitions/Observation,unit/scheme) a 'UNCEFACT' y [`.unit.id`](project-schema.json,/definitions/Observation,unit/id) a \"TNE\"\n"
+"- Establezca [`.period`](project-schema.json,/definitions/Observation,period) en el período cubierto por el cálculo.\n"
+"\n"
+"4. Si hay documentación de respaldo disponible, [Agregue un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType ) a 'ghgEmissionsReduction'."
+
+#. /54/title
+#: mapping/sustainability.yaml:1
+msgid "Decommission mitigation plan"
+msgstr "Plan de mitigación del desmantelamiento"
+
+#. /54/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose mitigation plan for people and communities affected by "
+"decommissioning."
+msgstr ""
+"El plan de mitigación para las personas y comunidades afectadas por el "
+"desmantelamiento."
+
+#. /54/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'socialImpact'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en 'socialImpact'."
+
+#. /55/title
+#: mapping/sustainability.yaml:1
+msgid "Number of beneficiaries"
+msgstr "Número de beneficiarios"
+
+#. /55/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Indicate the number of direct and indirect project beneficiaries. "
+"Beneficiaries are the individuals who benefit directly or indirectly from "
+"the project; they are the target group of the infrastructure project and "
+"their needs are addressed by the intervention."
+msgstr ""
+"Indique el número de beneficiarios directos e indirectos del proyecto. Los "
+"beneficiarios son las personas que se benefician directa o indirectamente "
+"del proyecto;  son el grupo meta del proyecto de infraestructura y la "
+"intervención aborda sus necesidades."
+
+#. /55/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Add a [`Benefit`](../../reference/schema.md#benefit) object to the [`benefits`](project-schema.json,,benefits) array.\n"
+"2. Add a [`Beneficiary`](../../reference/schema.md#beneficiary) object to the benefit's [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) array, set its [`.description`](project-schema.json,/definitions/Beneficiary,description) to \"Direct beneficiaries\" and set its [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) to the number of direct beneficiaries.\n"
+"3. Add a [`Beneficiary`](../../reference/schema.md#beneficiary) object to the benefit's [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) array, set its [`.description`](project-schema.json,/definitions/Beneficiary,description) to \"Indirect beneficiaries\" and set its [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) to the number of indirect beneficiaries."
+msgstr ""
+"1. Agregue un objeto [`Benefit`](../../reference/schema.md#benefit) a la matriz [`benefits`](project-schema.json,,benefits).\n"
+"\n"
+"2. Agregue un objeto [`Beneficiary`](../../reference/schema.md#beneficiary) a la matriz [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) del beneficio, establezca su [`.description`](project-schema.json,/definitions/Beneficiary,description) en \"Beneficiarios directos\" y establezca su [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) al número de beneficiarios directos.\n"
+"\n"
+"3. Agregue un objeto [`Beneficiary`](../../reference/schema.md#beneficiary) a la matriz [`.beneficiaries`](project-schema.json,/definitions/Benefit,beneficiaries) del beneficio, establezca su [`.description`](project-schema.json,/definitions/Beneficiary,description) en \"Beneficiarios indirectos\" y establecer su [`.numberOfPeople`](project-schema.json,/definitions/Beneficiary,numberOfPeople) en el número de beneficiarios indirectos."
+
+#. /56/title
+#: mapping/sustainability.yaml:1
+msgid "Inclusive design and implementation"
+msgstr "Diseño e implementación inclusiva"
+
+#. /56/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Clarify whether gender, people with disabilities, and vulnerable and "
+"disadvantaged populations were considered in the project design and project "
+"implementation, providing details on how the design and implementation "
+"practices meet inclusion goals."
+msgstr ""
+"Aclarare si en el diseño y la implementación del proyecto se tuvieron en "
+"cuenta el género, las personas con discapacidad y las poblaciones "
+"vulnerables y desfavorecidas, proporcionando detalles sobre cómo las "
+"prácticas de diseño e implementación cumplen los objetivos de inclusión."
+
+#. /56/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveDesign' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description).\n"
+"\n"
+"2. [Add a project document](../common.md#add-a-project-document), set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'inclusiveImplementation' and map any free text to its [`.description`](project-schema.json,/definitions/Document,description)."
+msgstr ""
+"1. [Agregue un documento de proyecto](../common.md#add-a-project-document), establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) en 'inclusiveDesign' y mapee cualquier texto libre a su [`.description`](project-schema.json,/definitions/Document,description).\n"
+"\n"
+"2. [Agregue un documento de proyecto](../common.md#add-a-project-document), establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) en 'inclusiveImplementation' y mapee cualquier texto libre a su [`.description`](project-schema.json,/definitions/Document,description)."
+
+#. /57/title
+#: mapping/sustainability.yaml:1
+msgid "Indigenous land"
+msgstr "Tierra indígena"
+
+#. /57/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Identify whether the project is located or cut through indigenous land. Use "
+"the information at the [LandMark - Global Platform of Indigenous and "
+"Community "
+"Lands](https://www.landmarkmap.org/map/#x=-102.46&y=13.47&l=3&a=community_FormalDoc%2Ccommunity_NoDoc%2Ccommunity_FormalClaim%2Ccommunity_Occupied%2Cindigenous_FormalDoc%2Cindigenous_NoDoc%2Cindigenous_FormalClaim%2Cindigenous_Occupied)"
+" on both databases Indigenous Lands Acknowledged by Government and Not "
+"Acknowledged by Government (customary tenure or with formal land claim "
+"submitted) to disclose the information."
+msgstr ""
+"Identifique si el proyecto está ubicado en o atraviesa tierras indígenas. "
+"Utilice la información en [LandMark - Plataforma Global de Tierras Indígenas"
+" y "
+"Comunitarias](https://www.landmarkmap.org/map/#x=-102.46&y=13.47&l=3&a=community_FormalDoc%2Ccommunity_NoDoc%2Ccommunity_FormalClaim%2Ccommunity_Occupied%2Cindigenous_FormalDoc%2Cindigenous_NoDoc%2Cindigenous_FormalClaim%2Cindigenous_Occupied)"
+" en ambas bases de datos Tierras Indígenas Reconocidas por el Gobierno y No "
+"Reconocidas por el Gobierno (tenencia consuetudinaria o con reclamo formal "
+"de tierras presentado ) para divulgar la información."
+
+#. /57/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"If the project is located in or cuts through indigenous land:\n"
+"\n"
+"1. Set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `true`.\n"
+"2. Add a [`Location`](../../reference/schema.md#location) object to the [`locations`](project-schema.json,,locations) array, set its [`.id`](project-schema.json,/definitions/Location,id) incrementally and set its description to \"Indigenous land: <Name> (<Category>)\" substituting <Name> and <Category> for the name and land category from the Landmark database.\n"
+"\n"
+"If the project is not located in and does not cut through indigenous land, set [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) to `false`."
+msgstr ""
+"Si el proyecto está ubicado en o atraviesa tierras indígenas:\n"
+"\n"
+"1. Configure [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) a `true`.\n"
+"\n"
+"2. Agregue un objeto [`Location`](../../reference/schema.md#location) a la matriz [`locations`](project-schema.json,,locations), establezca su [`.id`](project-schema.json,/definitions/Location,id) de forma incremental y establezca su descripción en \"tierraIndígena: 1 (2)\" sustituyendo 3 y 4 por el nombre y la categoría de terreno de la base de datos Landmark.\n"
+"\n"
+"Si el proyecto no está ubicado en ni atraviesa tierras indígenas, configure [`social.inIndigenousLand`](project-schema.json,/definitions/Social,inIndigenousLand) a `false`."
+
+#. /58/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the occurrence of public meetings with communities and impacted "
+"groups including meeting invite, the number of the participants, dates and "
+"location of these meetings."
+msgstr ""
+"Datos e información de la realización de reuniones públicas con comunidades "
+"y grupos afectados, incluida la invitación a reuniones, el número de "
+"participantes, las fechas y el lugar de estas reuniones."
+
+#. /58/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each meeting:\n"
+"\n"
+"1. Publish the meeting invite: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'consultationMeetingInvitation'.\n"
+"\n"
+"2. Publish the meeting details: add a [`Meeting`](../../reference/schema.md#meeting) object to the [`social.consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Meeting,id) incrementally\n"
+"- [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting\n"
+"- [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting\n"
+"- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people that participated in the meeting.\n"
+"\n"
+"3. Publish the meeting minutes: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'minutes.consultationMeeting'."
+msgstr ""
+"Para cada reunión:\n"
+"\n"
+"1. Publique la invitación a la reunión: [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'consultationMeetingInvitation'.\n"
+"\n"
+"2. Publique los detalles de la reunión: agregue un objeto [`Meeting`](../../reference/schema.md#meeting) [`social.consultationMeetings`](project-schema.json,/definitions/Social,consultationMeetings ) a la matriz y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Meeting,id) de forma incremental\n"
+"- [`.date`](project-schema.json,/definitions/Meeting,date) a la fecha de la reunión\n"
+"- [`.address`](project-schema.json,/definitions/Meeting,address) a la dirección de la reunión\n"
+"- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) al número de personas que participaron en la reunión.\n"
+"\n"
+"3. Publique las actas de la reunión: [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'minutes.consultationMeeting'."
+
+#. /59/title
+#: mapping/sustainability.yaml:1
+msgid "Land compensation budget"
+msgstr "Presupuesto de compensación de tierras"
+
+#. /59/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose budget allocated to fund land compensation."
+msgstr "El presupuesto asignado para financiar la compensación de tierras."
+
+#. /59/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`social.landCompensationBudget`](project-"
+"schema.json,/definitions/Social,landCompensationBudget)."
+msgstr ""
+"Mapee a [`social.landCompensationBudget`](project-"
+"schema.json,/definitions/Social,landCompensationBudget)."
+
+#. /60/title
+#: mapping/sustainability.yaml:1
+msgid "Labor obligations"
+msgstr "Obligaciones laborales"
+
+#. /60/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose labor obligations in the construction contract. This can include, without limitation, the following:\n"
+"\n"
+"- minimum wage\n"
+"- overtime\n"
+"- prohibition of forced labor\n"
+"- prohibition of child labor\n"
+"- equal opportunity\n"
+"- non-discrimination\n"
+"- freedom of association\n"
+"- grievance mechanism\n"
+"- working at height\n"
+"- underground work\n"
+"- handling of materials/equipment\n"
+"- monitoring of accidents\n"
+"- traffic management\n"
+"- accommodation\n"
+"- protective equipment\n"
+"- others (explain)"
+msgstr ""
+"Las obligaciones laborales en el contrato de construcción. Esto puede incluir, sin limitación, lo siguiente:\n"
+"\n"
+"- salario mínimo\n"
+"- Horas extra\n"
+"- prohibición del trabajo forzoso\n"
+"- prohibición del trabajo infantil\n"
+"- igualdad de oportunidades\n"
+"- no discriminación\n"
+"- Libertad de asociación\n"
+"- mecanismo de quejas\n"
+"- Trabajando en altura\n"
+"- trabajo subterráneo\n"
+"- manejo de materiales/equipos\n"
+"- monitoreo de accidentes\n"
+"- gestión del tráfico\n"
+"- alojamiento\n"
+"- equipo de proteccion\n"
+"- otros (explicar)"
+
+#. /60/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. Publish a summary of the labor obligations:\n"
+"\n"
+"   1. For each labor obligation, add the relevant code from the open [laborObligations](../../reference/codelists.md#laborobligations) codelist to the [`.summary.social.laborObligations.obligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/obligations) array.\n"
+"   2. Optionally, add a further explanation of the labor obligations to [`summary.social.laborObligations.description`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/description).\n"
+"\n"
+"2. Publish the bidding documents that specify labor obligations: [add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'biddingDocuments'.\n"
+"\n"
+"3. Publish the signed contract that includes labor obligations:  [add a contracting process document](../common.md#add-a-contracting-process-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'contractSigned'."
+msgstr ""
+"1. Publique un resumen de las obligaciones laborales:\n"
+"\n"
+"  1. Para cada obligación laboral, agregue el código pertinente de la lista de códigos abierta [Obligaciones laborales](../../reference/codelists.md#laborobligations) a la [`.summary.social.laborObligations.obligations`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/obligations) matriz.\n"
+"  2. Opcionalmente, agregue una explicación más detallada de las obligaciones laborales a [`summary.social.laborObligations.description`](project-schema.json,/definitions/ContractingProcessSummary,social/laborObligations/description).\n"
+"\n"
+"2. Publique los documentos de licitación que especifican las obligaciones laborales: [agregar un documento de proceso de contratación](../common.md#add-a-contracting-process-document) y establecer su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'biddingDocuments'.\n"
+"\n"
+"3. Publique el contrato firmado que incluye obligaciones laborales: [agregar un documento de proceso de contratación](../common.md#add-a-contracting-process-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'contractSigned'."
+
+#. /61/title
+#: mapping/sustainability.yaml:1
+msgid "Labor budget"
+msgstr "Presupuesto laboral"
+
+#. /61/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the amount allocated by the main contractor to cover for labor "
+"costs."
+msgstr ""
+"Indique el monto asignado por el contratista principal para cubrir los "
+"costos laborales."
+
+#. /61/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`summary.social.laborBudget`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborBudget)."
+msgstr ""
+"Mapee un [`summary.social.laborBudget`](project-"
+"schema.json,/definitions/ContractingProcessSummary,social/laborBudget)."
+
+#. /62/title
+#: mapping/sustainability.yaml:1
+msgid "Workers' accidents"
+msgstr "Accidentes de los trabajadores"
+
+#. /62/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose summary statistics on accidents and fatalities involving "
+"construction workers, and an explanation of these events."
+msgstr ""
+"Estadísticas resumidas sobre accidentes y muertes que involucran a "
+"trabajadores de la construcción y una explicación de estos eventos."
+
+#. /62/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Publish summary statistics on worker accidents:\n"
+"\n"
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to \"Worker accidents\".\n"
+"\n"
+"2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) incrementally\n"
+"- [`.period`](project-schema.json,/definitions/Observation,period) to the reporting period\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of accidents.\n"
+"\n"
+"3. If further details are available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field.\n"
+"\n"
+"Publish summary statistics on worker fatalities:\n"
+"\n"
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array, set its [`.id`](project-schema.json,/definitions/Metric,id) incrementally and set its [`.title`](project-schema.json,/definitions/Metric,title) to \"Worker fatalities\".\n"
+"\n"
+"2. For each reporting period, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) incrementally\n"
+"- [`.period`](project-schema.json,/definitions/Observation,period) to the reporting period\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of fatalities.\n"
+"\n"
+"3. If further details available, add them to the observation's [`.notes`](project-schema.json,/definitions/Observation,notes) field."
+msgstr ""
+"Publique estadísticas resumidas sobre accidentes laborales:\n"
+"\n"
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`metrics`](project-schema.json,,metrics), establecer su [`.id`](project-schema.json,/definitions/Metric,id) de forma incremental y establezca su [`.title`](project-schema.json,/definitions/Metric,title) en \"accidentesLaborales\".\n"
+"\n"
+"2. Para cada período de informe, agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matiz de la métrica [`.observations`](project-schema.json,/definitions/Metric,observations) de la métrica y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) de forma incremental\n"
+"- [`.period`](project-schema.json,/definitions/Observation,period) al período del informe\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) al número de accidentes.\n"
+"\n"
+"Publique estadísticas resumidas sobre muertes de trabajadores:\n"
+"\n"
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`metrics`](project-schema.json,,metrics), establezca su [`.id`](project-schema.json,/definitions/Metric,id) de forma incremental y establezca su [`.title`](project-schema.json,/definitions/Metric,title) en \"Muertes de trabajadores\".\n"
+"\n"
+"2. Para cada período del informe, agregue un objeto [`Observation`](../../reference/schema.md#observation) a la matriz de la métrica [`.observations`](project-schema.json,/definitions/Metric,observations) y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) de forma incremental\n"
+"- [`.period`](project-schema.json,/definitions/Observation,period) al período del informe\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) al número de muertes.\n"
+"\n"
+"3. Si hay más detalles disponibles, agrégarlos al campo [`.notes`](project-schema.json,/definitions/Observation,notes) de la observación."
+
+#. /63/title
+#: mapping/sustainability.yaml:1
+msgid "Health and safety certifications"
+msgstr "Certificaciones de salud y seguridad ocupacional"
+
+#. /63/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose labor related certifications issued in relation to project "
+"contractors and subcontractors such as ISO 45001 for Health and Safety."
+msgstr ""
+"Certificaciones relacionadas con el trabajo emitidas en relación con los "
+"contratistas y subcontratistas del proyecto, como la ISO 45001 de Salud y "
+"Seguridad."
+
+#. /63/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a contracting process document](../common.md#add-a-contracting-process-"
+"document) and set its [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) to "
+"'supplierHealthAndSafetyCertification'."
+msgstr ""
+"[Agregue un documento de proceso de contratación](../common.md#add-a-"
+"contracting-process-document) y establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en "
+"'supplierHealthAndSafetyCertification'."
+
+#. /64/title
+#: mapping/sustainability.yaml:1
+msgid "Construction materials testing"
+msgstr "Pruebas de materiales de construcción"
+
+#. /64/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose construction materials tests performed during project implementation. This can include, without limitation, the following:\n"
+"\n"
+"- asphalt\n"
+"- aggregate and rock\n"
+"- bricks\n"
+"- cement\n"
+"- concrete\n"
+"- coarse and fine aggregate\n"
+"- masonry\n"
+"- metallic materials\n"
+"- mortar\n"
+"- plywood\n"
+"- timber\n"
+"- resin and polymer\n"
+"- soil\n"
+"- stone\n"
+"- others (explain)."
+msgstr ""
+"Las pruebas de materiales de construcción realizadas durante la implementación del proyecto. Esto puede incluir, sin limitación, lo siguiente:\n"
+"\n"
+"- asfalto\n"
+"- agregado y roca\n"
+"- ladrillos\n"
+"- cemento\n"
+"- concreto\n"
+"- agregado grueso y fino\n"
+"- albañilería\n"
+"- materiales metálicos\n"
+"- mortero\n"
+"- madera contrachapada\n"
+"- madera\n"
+"- resina y polímero\n"
+"- tierra\n"
+"- piedra\n"
+"- otros (explicar)"
+
+#. /64/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Publish a summary of the material tests:\n"
+"\n"
+"1. For each material test, add a code from the open [constructionMaterial](../../reference/codelists.md#constructionmaterial) codelist to the [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests) array.\n"
+"\n"
+"2. Add any further explanation of the tests to [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests), including the international or national standards that the tests conform to.\n"
+"\n"
+"Publish test results: For each test result, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'materialTestResults'."
+msgstr ""
+"Publique un resumen de las pruebas de materiales:\n"
+"\n"
+"1. Para cada prueba de material, agregue un código de la lista de códigos abierta [constructionMaterial](../../reference/codelists.md#constructionmaterial) a la matriz [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests).\n"
+"\n"
+"2. Agregue cualquier explicación adicional de las pruebas a [`social.healthAndSafety.materialTests.tests`](project-schema.json,/definitions/HealthAndSafety,materialTests/tests), incluidos los estándares internacionales o nacionales a los que se ajustan las pruebas.\n"
+"\n"
+"Publique los resultados de la prueba: para cada resultado de prueba, [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'materialTestResults'."
+
+#. /65/title
+#: mapping/sustainability.yaml:1
+msgid "Building inspections"
+msgstr "Inspecciones de edificios"
+
+#. /65/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose building inspections during project implementation."
+msgstr ""
+"Las inspecciones de construcción durante la implementación del proyecto."
+
+#. /65/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'buildingInspectionReport'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) en "
+"'buildingInspectionReport'."
+
+#. /66/title
+#: mapping/sustainability.yaml:1
+msgid "Jobs generated"
+msgstr "Trabajos generados"
+
+#. /66/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose estimated and actual jobs (direct/indirect) during project "
+"implementation and estimated and actual jobs during operation "
+"(direct/indirect)."
+msgstr ""
+"Los trabajos estimados y reales (directos/indirectos) durante la "
+"implementación del proyecto y los trabajos estimados y reales durante la "
+"operación (directos/indirectos)."
+
+#. /66/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Publish job creation estimates:\n"
+"\n"
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`forecasts`](project-schema.json,,forecasts) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to \"Jobs created\".\n"
+"\n"
+"2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) incrementally\n"
+"- [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship (\"direct\" or \"indirect\")\n"
+"- [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) to the stage (\"implementation\" or \"operation\")\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs.\n"
+"\n"
+"Publish actual jobs created:\n"
+"\n"
+"1. Add a [`Metric`](../../reference/schema.md#metric) object to the [`metrics`](project-schema.json,,metrics) array and set its [`.title`](project-schema.json,/definitions/Metric,title) to 'Jobs created'.\n"
+"\n"
+"2. For each job relationship - stage pair, add an [`Observation`](../../reference/schema.md#observation) object to the metric's [`.observations`](project-schema.json,/definitions/Metric,observations) array and set its:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) incrementally\n"
+"- [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) to the relationship (\"direct\" or \"indirect\")\n"
+"- [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) to the stage (\"implementation\" or \"operation\")\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) to the number of jobs"
+msgstr ""
+"Publique estimaciones de creación de empleo:\n"
+"\n"
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`forecasts`](project-schema.json,,forecasts) y establezca su [`.title`](project-schema.json,/definitions/Metric,title) en \"Trabajos creados\".\n"
+"\n"
+"2. Para cada relación de trabajo - par de etapas, agregue un objeto [`Observation`](../../reference/schema.md#observation) la matriz de la métrica [`.observations`](project-schema.json,/definitions/Metric,observations) y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) de forma incremental\n"
+"- [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) con la relación (\"directa\" o \"indirecta\")\n"
+"- [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) al escenario (\"implementación\" u \"operación\")\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) al número de trabajos.\n"
+"\n"
+"Publique trabajos reales creados:\n"
+"\n"
+"1. Agregue un objeto [`Metric`](../../reference/schema.md#metric) a la matriz [`metrics`](project-schema.json,,metrics) y establezca su [`.title`](project-schema.json,/definitions/Metric,title) en 'Jobs created'.\n"
+"\n"
+"2. Para cada relación de trabajo - par de etapas, agregue un objeto [`Observation`](../../reference/schema.md#observation) la matriz de la métrica [`.observations`](project-schema.json,/definitions/Metric,observations) y establezca su:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Observation,id) de forma incremental\n"
+"- [`.dimensions.relationship`](project-schema.json,/definitions/Observation,dimensions) con la relación (\"directa\" o \"indirecta\")\n"
+"- [`.dimensions.stage`](project-schema.json,/definitions/Observation,dimensions) al escenario (\"implementación\" u \"operación\")\n"
+"- [`.measure`](project-schema.json,/definitions/Observation,measure) al número de trabajos."
+
+#. /67/title
+#: mapping/sustainability.yaml:1
+msgid "Policy coherence"
+msgstr "Coherencia política"
+
+#. /67/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose documentation that evidences that the project is part of, or aligned with existing plans and policies, providing further details on the project's policy alignment. Consider alignment with:\n"
+"\n"
+"- SDGs\n"
+"- National plan or strategy\n"
+"- Infrastructure plan or strategy\n"
+"- Sector plan or strategy\n"
+"- Procuring entity plan or strategy\n"
+"- Paris Agreement\n"
+"- Nationally Determined Contributions (NDCs)\n"
+"- National Adaptation Plans\n"
+"- Medium-term fiscal/budget frameworks\n"
+"- Annual budgets\n"
+"- Pipeline of infrastructure projects"
+msgstr ""
+"La documentación que demuestre que el proyecto es parte o está alineado con planes y políticas existentes, proporcionando más detalles sobre la alineación de las políticas del proyecto. Considere la alineación con:\n"
+"\n"
+"- ODS\n"
+"- Plan o estrategia nacional\n"
+"- Plan o estrategia de infraestructura\n"
+"- Plan o estrategia sectorial\n"
+"- Plan o estrategia de la entidad contratante\n"
+"- Acuerdo de París\n"
+"- Contribuciones determinadas a nivel nacional (NDC)\n"
+"- Planes Nacionales de Adaptación\n"
+"- Marco fiscal/presupuestario de medio plazo\n"
+"- Presupuestos anuales\n"
+"- Lista fuente de proyectos de infraestructura"
+
+#. /67/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"1. For each plan or policy to which the project is aligned, add a code from the open [policyAlignment](../../reference/codelists.md#policyalignment) codelist to the [`policyAlignment.policies`](project-schema.json,,policyAlignment/policies) array and add a further explanation of the alignment to [`policyAlignment.description`](project-schema.json,,policyAlignment/description).\n"
+"\n"
+"2. For each United Nations Sustainable Development Goal to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:\n"
+"\n"
+"- [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdg'\n"
+"- [`.id`](project-schema.json,/definitions/Classification,id) to the goal's number\n"
+"- [`.description`](project-schema.json,/definitions/Classification,description) to the goal's title.\n"
+"\n"
+"3. For each United Nations Sustainable Development Goal Target to which the project is aligned, add a [`Classification`](../../reference/schema.md#classification) object to the [`additionalClassifications`](project-schema.json,,additionalClassifications) array and set its:\n"
+"\n"
+"- [`.scheme`](project-schema.json,/definitions/Classification,scheme) to 'sdgTarget'\n"
+"- [`.id`](project-schema.json,/definitions/Classification,id) to the target's number\n"
+"- [`.description`](project-schema.json,/definitions/Classification,description) to the target's title.\n"
+"\n"
+"4. If further documentation of the project's policy alignment is available, [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'policyAlignment'."
+msgstr ""
+"1. Para cada plan o política con el que el proyecto esté alineado , agregue un código de la lista de códigos abierta [policyAlignment](../../reference/codelists.md#policyalignment) a la [`policyAlignment.policies`](project-schema.json,,policyAlignment/policies) matriz y agregue una explicación adicional de la alineación a [`policyAlignment.description`](project-schema.json,,policyAlignment/description).\n"
+"\n"
+"2. Para cada Objetivo de Desarrollo Sostenible de las Naciones Unidas con el que esté alineado el proyecto, agregue un objeto [`Classification`](../../reference/schema.md#classification) a la [`additionalClassifications`](project-schema.json,,additionalClassifications) matriz y establezca su:\n"
+"\n"
+"- [`.scheme`](project-schema.json,/definitions/Classification,scheme) a 'sdg'\n"
+"- [`.id`](project-schema.json,/definitions/Classification,id) al número del objetivo\n"
+"- [`.description`](project-schema.json,/definitions/Classification,description) al título del objetivo.\n"
+"\n"
+"3. Para cada meta de los Objetivos de Desarrollo Sostenible de las Naciones Unidas con la que esté alineado el proyecto, agregar un objeto [`Classification`](../../reference/schema.md#classification) a la matriz [`additionalClassifications`](project-schema.json,,additionalClassifications) y establezca su:\n"
+"\n"
+"- [`.scheme`](project-schema.json,/definitions/Classification,scheme) a 'sdgTarget'\n"
+"- [`.id`](project-schema.json,/definitions/Classification,id) al número de la meta\n"
+"- [`.description`](project-schema.json,/definitions/Classification,description) al título de la meta.\n"
+"\n"
+"4. Si hay más documentación disponible sobre la alineación de políticas del proyecto, [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'policyAlignment'."
+
+#. /68/title
+#: mapping/sustainability.yaml:1
+msgid "Freedom of information requests"
+msgstr "Solicitudes de acceso a la información"
+
+#. /68/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose Freedom of Information (FoI) requests that have been presented in "
+"relation to the project. Note that FoI requests can also be known as access "
+"to information requests."
+msgstr ""
+"Las solicitudes de acceso a la información (FoI) que se hayan presentado en "
+"relación con el proyecto. Se debe tener en cuenta que las solicitudes de "
+"libertad de información también pueden conocerse como solicitudes de acceso "
+"a la información."
+
+#. /68/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each freedom of information request, [add a project "
+"document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'informationRequest'."
+msgstr ""
+"Para cada solicitud de acceso a la información, [agregar un documento de "
+"proyecto](../common.md#add-a-project-document) y establezca su "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'informationRequest'."
+
+#. /69/title
+#: mapping/sustainability.yaml:1
+msgid "Answers to Freedom of information requests"
+msgstr "Respuestas a las solicitudes de acceso a la información"
+
+#. /69/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the responses provided by authorities to Freedom of Information "
+"(FoI) requests related to the project. Note that FoI requests may also be "
+"known as access to information requests."
+msgstr ""
+"Las respuestas proporcionadas por las autoridades a las solicitudes de "
+"acceso a la Información (FoI) relacionadas con el proyecto. Cabe notar que "
+"las solicitudes de libertad de información también pueden conocerse como "
+"solicitudes de acceso a la información."
+
+#. /69/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each freedom of information request response, [add a project "
+"document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'informationRequestResponse'."
+msgstr ""
+"Para cada respuesta a una solicitud de libertad de información, [agregar un "
+"documento de proyecto](../common.md#add-a-project-document) y establecer su "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) a "
+"'informationRequestResponse'."
+
+#. /70/title
+#: mapping/sustainability.yaml:1
+msgid "Lobbying transparency"
+msgstr "Transparencia del cabildeo"
+
+#. /70/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the occurrence of meetings with interested groups, including the "
+"number of participants, date, location and minutes of these meetings, as "
+"well as the name and job title of the person representing the public office "
+"present at the meeting."
+msgstr ""
+"Datos e información sobre la realización de reuniones con grupos "
+"interesados, incluyendo el número de participantes, fecha, lugar y actas de "
+"estas reuniones, así como el nombre y cargo de la persona que representa el "
+"cargo público presente en la reunión."
+
+#. /70/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each meeting:\n"
+"\n"
+"Publish the meeting details:\n"
+"\n"
+"1. Add a [`Meeting`](../../reference/schema.md#meeting) object to the [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings) array and set:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Meeting,id) incrementally\n"
+"- [`.date`](project-schema.json,/definitions/Meeting,date) to the date of the meeting\n"
+"- [`.address`](project-schema.json,/definitions/Meeting,address) to the address of the meeting\n"
+"- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) to the number of people present at the meeting\n"
+"- [`.publicOffice.person.name`](project-schema.json,/definitions/PublicOffice,person/name) to the name of the person representing the public office present at the meeting\n"
+"- [`.publicOffice.jobTitle`](project-schema.json,/definitions/PublicOffice,jobTitle) to the job title of the person representing the public office present at the meeting.\n"
+"\n"
+"2. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the public office. If none exists yet, [add an organization](../common.md#add-an-organization).\n"
+"\n"
+"3. Set the meeting's [`.publicOffice.organization`](project-schema.json,/definitions/PublicOffice,organization) to the [`.id`](project-schema.json,/definitions/Organization,id) and [`.name`](project-schema.json,/definitions/Organization,name) of the organization.\n"
+"\n"
+"Publish the meeting minutes: [add a project document](../common.md#add-a-project-document) and set its [`.documentType`](project-schema.json,/definitions/Document,documentType) to 'minutes.lobbyingMeeting'."
+msgstr ""
+"Para cada reunión:\n"
+"\n"
+"Publique los detalles de la reunión:\n"
+"\n"
+"1. Agregue un objeto [`Meeting`](../../reference/schema.md#meeting) a la matriz [`lobbyingMeetings`](project-schema.json,,lobbyingMeetings) y establezca:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Meeting,id) de forma incremental\n"
+"- [`.date`](project-schema.json,/definitions/Meeting,date) a la fecha de la reunión\n"
+"- [`.address`](project-schema.json,/definitions/Meeting,address) a la dirección de la reunión\n"
+"- [`.numberOfParticipants`](project-schema.json,/definitions/Meeting,numberOfParticipants) al número de personas que asisten en la reunión\n"
+"- [`.publicOffice.person.name`](project-schema.json,/definitions/PublicOffice,person/name) al nombre de la persona que representa el cargo público presente en la reunión\n"
+"- [`.publicOffice.jobTitle`](project-schema.json,/definitions/PublicOffice,jobTitle) al puesto de trabajo de la persona que representa el cargo público presente en la reunión.\n"
+"\n"
+"2. Obtenga la [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa el cargo público. Si todavía no existe alguno, [agregar una organización](../common.md#add-an-organization).\n"
+"\n"
+"3. Establezca la [`.publicOffice.organization`](project-schema.json,/definitions/PublicOffice,organization) de la reunión en [`.id`](project-schema.json,/definitions/Organization,id) y [`.name`](project-schema.json,/definitions/Organization,name) de la organización.\n"
+"\n"
+"Publique las actas de la reunión: [agregar un documento de proyecto](../common.md#add-a-project-document) y establezca su [`.documentType`](project-schema.json,/definitions/Document,documentType) a 'minutes.lobbyingMeeting'."
+
+#. /71/title
+#: mapping/sustainability.yaml:1
+msgid "Beneficial ownership"
+msgstr "Beneficiario final"
+
+#. /71/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose the beneficial owners of the contractors and suppliers appointed in"
+" the project."
+msgstr ""
+"Los beneficiarios finales de los contratistas y proveedores designados en el"
+" proyecto."
+
+#. /71/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"For each beneficial owner:\n"
+"\n"
+"1. Get the [`Organization`](../../reference/schema.md#organization) in [`parties`](project-schema.json,,parties) that represents the contractor or supplier.\n"
+"2. Add a [`Person`](../../reference/schema.md#person) object to the organization's [`.beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners) array.\n"
+"3. Set the person's:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Person,id) incrementally\n"
+"- [`.name`](project-schema.json,/definitions/Person,name) to the beneficial owner's name\n"
+"- [`.identifier`](project-schema.json,/definitions/Person,identifier) to the beneficial owner's identifier"
+msgstr ""
+"Para cada beneficiario legal:\n"
+"\n"
+"1. Obtenga la [`Organization`](../../reference/schema.md#organization) en [`parties`](project-schema.json,,parties) que representa al contratista o proveedor.\n"
+"2. Agregue un objeto [`Person`](../../reference/schema.md#person) a la matriz [`.beneficialOwners`](project-schema.json,/definitions/Organization,beneficialOwners) de la organización.\n"
+"3. Establecer de la persona:\n"
+"\n"
+"- [`.id`](project-schema.json,/definitions/Person,id) de forma incremental\n"
+"- [`.name`](project-schema.json,/definitions/Person,name) al nombre del beneficiario legal\n"
+"- [`.identifier`](project-schema.json,/definitions/Person,identifier) al identificador del beneficiario legal"
+
+#. /72/title
+#: mapping/sustainability.yaml:1
+msgid "Sustainability criteria"
+msgstr "Criterios de sostenibilidad"
+
+#. /72/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Identify the presence of sustainability and non-price attributes in the "
+"award criteria."
+msgstr ""
+"Identifique la presencia de atributos de sostenibilidad y no relacionados "
+"con el precio en los criterios de adjudicación."
+
+#. /72/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Add a [`Sustainability`](../../reference/schema.md#sustainability) object to"
+" the [`summary.tender.sustainability`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/sustainability) "
+"array and add 'awardCriteria' to its [`.strategies`](project-"
+"schema.json,/definitions/Sustainability,strategies) array."
+msgstr ""
+"Agregue un objeto "
+"[`Sustainability`](../../reference/schema.md#sustainability) a la matriz "
+"[`summary.tender.sustainability`](project-"
+"schema.json,/definitions/ContractingProcessSummary,tender/sustainability) y "
+"agregue 'awardCriteria' a su matriz  [`.strategies`](project-"
+"schema.json,/definitions/Sustainability,strategies)."
+
+#. /73/title
+#: mapping/sustainability.yaml:1
+msgid "Anti-corruption certifications"
+msgstr "Certificaciones Anticorrupción"
+
+#. /73/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Disclose anti-corruption certifications of the project, such as ISO 37001 on"
+" Anti-Bribery Management Systems Standard."
+msgstr ""
+"Las certificaciones anticorrupción del proyecto, como la ISO 37001 sobre "
+"Estándar de Sistemas de Gestión Antisoborno."
+
+#. /73/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'antiCorruptionCertification'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) a "
+"'antiCorruptionCertification'."
+
+#. /74/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add an organization](../common.md#add-an-organization) for the independent "
+"monitor and add 'independentMonitor' to its [`.roles`](project-"
+"schema.json,/definitions/Organization,roles) array."
+msgstr ""
+"[Agregue una organización](../common.md#add-an-organization) para el monitor"
+" independiente y agregue 'independentMonitor' a su [`.roles`](project-"
+"schema.json,/definitions/Organization,roles) matriz."
+
+#. /75/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"See [performance monitoring (climate finance)](climate-finance-performance-"
+"monitoring)."
+msgstr ""
+"Véase [monitoreo del desempeño (finanzas climáticas)](climate-finance-"
+"performance-monitoring)."
+
+#. /76/title
+#: mapping/sustainability.yaml:1
+msgid "Risk management plans"
+msgstr "Planes de manejo de riesgos"
+
+#. /76/disclosure format
+#: mapping/sustainability.yaml:1
+msgid "Disclose risk management plans prepared for the project."
+msgstr "Los planes de gestión de riesgos elaborados para el proyecto."
+
+#. /76/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"[Add a project document](../common.md#add-a-project-document) and set its "
+"[`.documentType`](project-schema.json,/definitions/Document,documentType) to"
+" 'riskProvisions'."
+msgstr ""
+"[Agregue un documento de proyecto](../common.md#add-a-project-document) y "
+"establezca su [`.documentType`](project-"
+"schema.json,/definitions/Document,documentType) a 'riskProvisions'."
+
+#. /77/title
+#: mapping/sustainability.yaml:1
+msgid "Sustainable sub-sectors"
+msgstr "Sub sectores sostenibles"
+
+#. /77/disclosure format
+#: mapping/sustainability.yaml:1
+msgid ""
+"Identify relevant sub-sectors related to the project scope.\n"
+"Select from a list (non-exhaustive):\n"
+"\n"
+"- Renewable energy\n"
+"  - Solar\n"
+"  - Wind\n"
+"  - Hydropower\n"
+"  - Biomass\n"
+"  - Geothermal\n"
+"- Water and wastewater management\n"
+"- Transport\n"
+"  - Low carbon transport\n"
+"- Natural resource management\n"
+"  - Flood protection\n"
+"\n"
+"Free text to add not mentioned sub-sectors"
+msgstr ""
+"Identifique subsectores pertinentes relacionados con el alcance del proyecto. Seleccione de una lista (no exhaustiva):\n"
+"\n"
+"- Energía renovable\n"
+"  - Solar\n"
+"  - Eólica\n"
+"  - Hidroeléctrica\n"
+"  - Biomasa\n"
+"  - Geotérmica\n"
+"- Gestión del agua y de las aguas residuales\n"
+"- Transporte\n"
+"  - Transporte bajo en carbono\n"
+"- Gestión de recursos naturales\n"
+"  - Protección contra inundaciones\n"
+"\n"
+"Texto libre para añadir subsectores no mencionados"
+
+#. /77/mapping
+#: mapping/sustainability.yaml:1
+msgid ""
+"Map to [`sector`](project-schema.json,,sector), using the open "
+"[ProjectSector codelist](../../reference/codelists.md#projectsector)."
+msgstr ""
+"Mapee a [`sector`](project-schema.json,,sector), usando la lista abierta "
+"[ProjectSector codelist](../../reference/codelists.md#projectsector)."

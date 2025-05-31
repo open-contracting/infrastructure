@@ -2,7 +2,8 @@
 
 # Add your own requirements below.
 
-sphinxcontrib-opencontracting==0.0.8
+ocds-babel[yaml]
+sphinxcontrib-opencontracting==0.0.10
 sphinxcontrib-opendataservices-jsonschema==0.7.1
 sphinxcontrib-opendataservices==0.5.0
 sphinx-design

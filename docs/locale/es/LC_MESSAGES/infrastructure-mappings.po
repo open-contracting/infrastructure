@@ -2,29 +2,20 @@
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
-# 
-# Translators:
-# James McKinney, 2021
-# Dulce Jazmín Areco Maggereger <dulceareco@cds.com.py>, 2021
-# Francis C. Bennaton, 2024
-# Duncan Dewhurst <duncan.dewhurst@opendataservices.coop>, 2025
-# Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-25 15:32+1300\n"
-"PO-Revision-Date: 2020-06-25 01:03+0000\n"
-"Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
-"Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
+"POT-Creation-Date: 2025-04-08 14:36+1200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: mapping/process-level-implementation.csv
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
@@ -36,7 +27,7 @@ msgstr ""
 #: mapping/reactive-project-level-completion.csv
 #: mapping/reactive-project-level-identification-preparation.csv
 msgid "CoST IDS element"
-msgstr "Elemento del CoST IDS"
+msgstr "Elemento del IDS CoST "
 
 #: mapping/process-level-implementation.csv
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
@@ -72,7 +63,7 @@ msgstr "Mapeo a OC4IDS"
 #: mapping/reactive-project-level-completion.csv
 #: mapping/reactive-project-level-identification-preparation.csv
 msgid "Mapping from OCDS"
-msgstr "Mapeo desde OCDS"
+msgstr ""
 
 #: mapping/process-level-implementation.csv
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
@@ -84,7 +75,7 @@ msgstr "Mapeo desde OCDS"
 #: mapping/reactive-project-level-completion.csv
 #: mapping/reactive-project-level-identification-preparation.csv
 msgid "OC4IDS Fields"
-msgstr "Campos OC4IDS"
+msgstr ""
 
 #: mapping/process-level-implementation.csv
 #: mapping/process-level-procurement.csv mapping/project-level-completion.csv
@@ -96,24 +87,33 @@ msgstr "Campos OC4IDS"
 #: mapping/reactive-project-level-completion.csv
 #: mapping/reactive-project-level-identification-preparation.csv
 msgid "OC4IDS Codes"
-msgstr "Códigos OC4IDS"
+msgstr ""
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:1
 msgid "Variation to contract price"
-msgstr "Variación del precio del contrato"
+msgstr "Variación al precio del contrato"
+
+#. Description
+#: mapping/process-level-implementation.csv:1
+msgid ""
+"Difference between the price at contract award and the current projected "
+"price"
+msgstr ""
+"Diferencia entre el precio al momento de la adjudicación del contrato y el "
+"precio actual proyectado"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:1
 msgid ""
-"Contracting process: For each variation, publish an entry with a `.date` and"
-" `.description` in `.summary.modifications` with `.type` of 'value'. Provide"
-" the contract value before the variation in `.oldContractValue` and the "
-"contract value after the variation in `.newContractValue`"
+"Contracting process: For each variation, publish an entry with a `.date` "
+"and `.description` in `.summary.modifications` with `.type` of 'value'. "
+"Provide the contract value before the variation in `.oldContractValue` "
+"and the contract value after the variation in `.newContractValue`"
 msgstr ""
-"Proceso de contratación: Para cada variación, publicar una entrada con "
-"`.date` y `.description` en `.summary.modifications` con `.type` de 'value'."
-"  Proporcionar el valor del contrato antes de la variación en "
+"Proceso de contratación: Para cada variación, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` of 'value'. "
+"Proporcionar el valor del contrato antes de la variación en "
 "`.oldContractValue` y el valor del contrato después de la variación en "
 "`.newContractValue`"
 
@@ -125,45 +125,61 @@ msgid ""
 "`/contracts/amendments/description` to `.description` and `/date` to "
 "`.date`.*"
 msgstr ""
-"*Monitorear `/contracts/value` para cambios. Copiar "
-"`/contracts/amendments/description` a `.description` y `/date` to `.date`.*"
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:2
 msgid "Escalation of contract price"
-msgstr "Aumento en el precio del contrato"
+msgstr "Aumento del precio del contrato"
+
+#. Description
+#: mapping/process-level-implementation.csv:2
+msgid ""
+"Escalation to date of the price of materials, labour, equipment etc. due "
+"to fluctuations in inflation, currency etc."
+msgstr ""
+"Aumento a la fecha del precio de los materiales, mano de obra, equipo etc. "
+"debido a fluctuaciones en la inflación, la moneda etc."
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:2
 msgid ""
-"Contracting process: For each escalation, publish an entry with a `.date` "
-"and `.description` in `.summary.modifications` with `.type` of 'value'. "
-"Provide the contract value before the escalation in `.oldContractValue` and "
-"the contract value after the escalation in `.newContractValue`"
+"Contracting process: For each escalation, publish an entry with a `.date`"
+" and `.description` in `.summary.modifications` with `.type` of 'value'. "
+"Provide the contract value before the escalation in `.oldContractValue` "
+"and the contract value after the escalation in `.newContractValue`"
 msgstr ""
-"Proceso de contratación: Para cada escalamiento, publique una entrada con "
-"`.date` y `.description` en `.summary.modifications` con `.type` del "
-"'value'. Proporcione el valor del contrato antes del escalamiento en "
-"`.oldContractValue` y el valor del contrato después del escalamiento en "
-"`.newContractValue`"
+"Proceso de contratación: Para cada aumento, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` de 'value'. "
+"Proporcionar el valor del contrato antes del aumento en `.oldContractValue` "
+"y el valor del contrato después del aumento en  `.newContractValue`"
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:3
 msgid "Variation to contract duration"
 msgstr "Variación en la duración del contrato"
 
+#. Description
+#: mapping/process-level-implementation.csv:3
+msgid ""
+"Difference between original duration at contract award and the current "
+"projected duration in weeks."
+msgstr ""
+"Diferencia entre la duración original al momento de la adjudicación del "
+"contrato y la duración actual proyectada en semanas."
+
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:3
 msgid ""
-"Contracting process: For each variation, publish an entry with a `.date` and"
-" `.description` in `.summary.modifications` with `.type` of 'duration'. "
-"Provide the contract period before the variation in `.oldContractPeriod` and"
-" the contract period after the variation in `.newContractPeriod`"
+"Contracting process: For each variation, publish an entry with a `.date` "
+"and `.description` in `.summary.modifications` with `.type` of "
+"'duration'. Provide the contract period before the variation in "
+"`.oldContractPeriod` and the contract period after the variation in "
+"`.newContractPeriod`"
 msgstr ""
-"Proceso de contratación: Para cada variación, publicar una entrada con "
+"Proceso de contratación: Para cada variación, publicar un registro con una  "
 "`.date` y `.description` en `.summary.modifications` con `.type` de "
-"'duration'. Proporcionar el periodo del contrato antes de la variación en "
-"`.oldContractPeriod` y el periodo del contrato después de la variación en "
+"'duration'. Proporcione el período del contrato antes de la variación en  "
+"`.oldContractPeriod` y el período del contrato después de la variación en "
 "`.newContractPeriod`"
 
 #. Mapping from OCDS
@@ -173,22 +189,27 @@ msgid ""
 "`/contracts/amendments/description` to `.description` and `/date` to "
 "`.date`.*"
 msgstr ""
-"*Monitorear `/contracts/period` para cambios. Copiar "
-"`/contracts/amendments/description` a `.description` y `/date` a `.date`.*"
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:4
 msgid "Variation to contract scope"
-msgstr "Variación en el alcance del contrato"
+msgstr "Variación al alcance del contrato"
+
+#. Description
+#: mapping/process-level-implementation.csv:4
+msgid "Any changes between original scope at contract award and the current scope"
+msgstr ""
+"Cualquier cambio entre el alcance original al contrato de adjudicación y el "
+"alcance actual"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:4
 msgid ""
-"Contracting process: For each variation, publish an entry with a `.date` and"
-" `.description` in `.summary.modifications` with `.type` of 'scope'"
+"Contracting process: For each variation, publish an entry with a `.date` "
+"and `.description` in `.summary.modifications` with `.type` of 'scope'"
 msgstr ""
-"Proceso de contratación: Para cada variación, publicar una entrada con "
-"`.date` y `.description` en `.summary.modifications` con `.type` de 'scope'"
+"Proceso de Contratación: Para cada variación, publicar un registro con una "
+"`.date` y `.description` en `.summary.modifications` con `.type` del 'scope'"
 
 #. Mapping from OCDS
 #: mapping/process-level-implementation.csv:4
@@ -198,14 +219,22 @@ msgid ""
 "`/contracts/amendments/description` to `.description` and `/date` to "
 "`.date`.*"
 msgstr ""
-"**Monitorear `/contracts/description`, `/contracts/items` y "
-"`/contracts/implementation/milestones` para cambios. Copiar  "
-"`/contracts/amendments/description` a  `.description` y  `/date` a `.date`.*"
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:5
 msgid "Reasons for price changes"
-msgstr "Razones de los cambios de precios"
+msgstr "Razones de los cambios en los precios"
+
+#. Description
+#: mapping/process-level-implementation.csv:5
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead "
+"to changes in contract price, major price fluctuations and accumulative "
+"increase or decrease in price."
+msgstr ""
+"Resumen de las razones de lo cambios primarios (ej. variaciones) que después "
+"conducen a cambios en los precios del contrato, importantes fluctuaciones en "
+"los precios y aumentos o reducciones acumulativas  del precio"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-implementation.csv:5
@@ -214,60 +243,72 @@ msgid ""
 "Contracting process: For each variation, provide a `.rationale` in "
 "`.summary.modifications`."
 msgstr ""
-"Proceso de contratación: Para cada variación, proporcionar `.rationale` en "
-"`.summary.modifications`."
+"Proceso de contratación: Para cada variación proporcione una  `.rationale` "
+"en `.summary.modifications`."
 
 #. Mapping from OCDS
 #: mapping/process-level-implementation.csv:5
 #: mapping/process-level-implementation.csv:6
 msgid "*Copy `contracts/amendments/rationale` to `.rationale`.*"
 msgstr ""
-"**Copiar el valor de `contracts/amendments/rationale` a `.rationale`.*"
 
 #. CoST IDS element
 #: mapping/process-level-implementation.csv:6
 msgid "Reasons for scope and duration changes"
 msgstr "Razones de los cambios en el alcance y la duración"
 
+#. Description
+#: mapping/process-level-implementation.csv:6
+msgid ""
+"Summary of reasons for primary changes (e.g. variations) that then lead "
+"to changes in the scope and duration."
+msgstr ""
+"Resumen de los principales cambios (ej. variaciones) que luego conducen a "
+"cambios en el alcance y la duración"
+
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:1
 msgid "Procuring entity"
-msgstr "Entidad contratante"
+msgstr "Entidad de adquisiciones"
+
+#. Description
+#: mapping/process-level-procurement.csv:1
+msgid "Enter name of the organization carrying out the procurement"
+msgstr "Ingresar el nombre de la organización que realiza las adquisiciones"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:1
 msgid ""
-"Project Level: Add an entry to `parties` with 'procuringEntity' included in "
-"its `.roles` | Contracting process: Record the name and identifier in "
+"Project Level: Add an entry to `parties` with 'procuringEntity' included "
+"in its `.roles` | Contracting process: Record the name and identifier in "
 "`.summary.tender.procuringEntity`"
 msgstr ""
-"Nivel de proyecto: Agregar una entrada a `parties` con el campo "
-"'procuringEntity' incluido en `.roles` | Proceso de contratación: Registrar "
-"el nombre y el identificador en `.summary.tender.procuringEntity`"
+"Nivel de proyecto: Agregar un registro a  `parties` con 'procuringEntity' "
+"incluido en sus `.roles` | Procesos de contratación: Registrar el nombre e "
+"identificador en`.summary.tender.procuringEntity`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:1
 #: mapping/process-level-procurement.csv:2
 #: mapping/reactive-project-level-identification-preparation.csv:5
 msgid ""
-"Check the `/parties` array for `Organization` objects with 'procuringEntity'"
-" in `/roles`. Copy each object to the `parties` array in OC4IDS. If there is"
-" more than one procuring entity, do not set "
+"Check the `/parties` array for `Organization` objects with "
+"'procuringEntity' in `/roles`. Copy each object to the `parties` array in"
+" OC4IDS. If there is more than one procuring entity, do not set "
 "`.summary.tender.procuringEntity.name` and "
-"`.summary.tender.procuringEntity.id`; otherwise, set them to the procuring "
-"entity's `.name` and `.id`."
+"`.summary.tender.procuringEntity.id`; otherwise, set them to the "
+"procuring entity's `.name` and `.id`."
 msgstr ""
-"*Verifique la lista `/parties` para el objeto `Organization` con "
-"'administrativeEntity' en `/roles`. Copiar cada uno de los objetos a la "
-"lista `parties` en OC4IDS. Si hay más de una una entidad contratante, no "
-"establecer `.summary.tender.procuringEntity.name` y "
-"`.summary.tender.procuringEntity.id`; caso contrario establecer `.name` y "
-"`.id`. de las entidades contratantes.*"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:2
 msgid "Procuring entity contact details"
-msgstr "Datos de contacto de la entidad contratante"
+msgstr "Detalles de contacto de la entidad de adquisiciones"
+
+#. Description
+#: mapping/process-level-procurement.csv:2
+msgid "Postal and Electronic address"
+msgstr "Dirección postal y electrónica"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:2
@@ -275,13 +316,23 @@ msgid ""
 "Project Level: Publish the postal address in `parties.address` and the "
 "electronic address in `parties.contactPoint`"
 msgstr ""
-"Nivel de proyecto: Publique la dirección postal en el campo "
-"`parties.address` y la dirección electrónica en `parties.contactPoint`"
+"Nivel de Proyecto: Publicar la dirección postal en `parties.address` y la "
+"dirección electrónica en `parties.contactPoint`"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:3
 msgid "Contract administrative entity"
 msgstr "Entidad administrativa del contrato"
+
+#. Description
+#: mapping/process-level-procurement.csv:3
+msgid ""
+"Enter name of the organization carrying out the contract administrative "
+"entity if different from the Procuring Entity"
+msgstr ""
+"Ingresar el nombre de la organización que lleva a cabo el contrato de la "
+"entidad administrativa si es diferente de la Entidad de Adquisiciones y "
+"Contrataciones"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:3
@@ -290,32 +341,30 @@ msgid ""
 "included in its `.roles` | Contracting process: Record the name and "
 "identifier in `.summary.tender.administrativeEntity`"
 msgstr ""
-"Nivel de proyecto: Agregar una entrada a `parties` con el campo "
-"'administrativeEntity' incluido en `.roles` | Proceso de contratación: "
-"Registrar el nombre y el identificador en "
-"`.summary.tender.administrativeEntity`"
+"Nivel de proyecto: agregar un registro en `parties` con "
+"'administrativeEntity' incluyendo sus `.roles` | Proceso de contratación: "
+"Registre el nombre e identificador en `.summary.tender.administrativeEntity`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:3
 msgid ""
 "Check the `/parties` array for `Organization` objects with "
-"'administrativeEntity' in `/roles`. Copy each object to the `parties` array "
-"in OC4IDS. If there is more than one procuring entity, do not set "
+"'administrativeEntity' in `/roles`. Copy each object to the `parties` "
+"array in OC4IDS. If there is more than one procuring entity, do not set "
 "`.summary.tender.administrativeEntity.name` and "
 "`.summary.tender.administrativeEntity.id`; otherwise, set them to the "
 "procuring entity's `.name` and `.id`."
 msgstr ""
-"*Verifique la lista `/parties` para el objeto `Organization` con "
-"'administrativeEntity' en `/roles`. Copiar cada uno de los objetos a la "
-"lista `parties` en OC4IDS. Si hay más de una entidad contratante, no "
-"establecer `.summary.tender.administrativeEntity.name` y "
-"`.summary.tender.administrativeEntity.id`; caso contrario establecer `.name`"
-" y `.id`. de las entidades contratantes.*"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:4
 msgid "Contract status"
 msgstr "Estado del contrato"
+
+#. Description
+#: mapping/process-level-procurement.csv:4
+msgid "Select from preAward, active or closed"
+msgstr "Seleccionar entre preadjudicación, activa o cerrada"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:4
@@ -323,32 +372,40 @@ msgid ""
 "Contracting process: Publish in `.summary.status` using the "
 "contractingProcessStatus codelist"
 msgstr ""
-"Proceso de contratación: Publicar en el campo `.summary.status` utilizando "
-"la lista de códigos de contractingProcessStatus"
+"Proceso de contratación: Publicar en `.summary.status` utilizando la lista "
+"de códigos contractingProcessStatus "
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:4
 msgid ""
-"Set `.summary.status` to a value from the contractingProcessStatus codelist "
-"according to the business logic in the codelist."
+"Set `.summary.status` to a value from the contractingProcessStatus "
+"codelist according to the business logic in the codelist."
 msgstr ""
-"Establezca `.summary.status` a un valor de la lista de códigos "
-"contractingProcessStatus de acuerdo con la lógica empresarial en la lista de"
-" códigos."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:5
 msgid "Procurement process"
-msgstr "Proceso de adquisición"
+msgstr "Proceso de adquisiciones"
+
+#. Description
+#: mapping/process-level-procurement.csv:5
+msgid ""
+"Develop a list such as International Competitive Bidding, National "
+"Competitive Bidding, Donor Procurement Rules, Framework, Direct Award"
+msgstr ""
+"Elaborar una lista como Licitación Competitiva Internacional, Licitación "
+"Competitiva Nacional, Reglas de Adquisiciones del Donante, Marco, "
+"Adjudicación Directa"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:5
 msgid ""
-"Contracting process: Publish in `.summary.tender.procurementMethodDetails` "
-"and map to `.summary.tender.procurementMethod`"
+"Contracting process: Publish in "
+"`.summary.tender.procurementMethodDetails` and map to "
+"`.summary.tender.procurementMethod`"
 msgstr ""
-"Proceso de contratación: Publicar en el campo "
-"`.summary.tender.procurementMethodDetails` y mapear al campo "
+"Proceso de contratación: Publicar en "
+"`.summary.tender.procurementMethodDetails` y mapear a "
 "`.summary.tender.procurementMethod`"
 
 #. Mapping from OCDS
@@ -359,25 +416,30 @@ msgid ""
 "`/tender/procurementMethod` and `/tender/procurementMethodDetails` "
 "respectively."
 msgstr ""
-"Establezca `.summary.tender.procurementMethod` y "
-"`.summary.tender.procurementMethodDetails` a los valores de "
-"`/tender/procurementMethod` y `/tender/procurementMethodDetails` "
-"respectivamente."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:6
 msgid "Contract type"
 msgstr "Tipo de contrato"
 
+#. Description
+#: mapping/process-level-procurement.csv:6
+msgid ""
+"Develop a list such as Design, Supervision, Design & Supervision, Design "
+"& Build, Construction"
+msgstr ""
+"Elaborar una lista como Diseño, Supervisión, Diseño y Supervisión, Diseño y "
+"Construcción, Construcción"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:6
 msgid ""
-"Contracting process: Add one or more values to the `.summary.nature` array. "
-"(e.g. [\"design\", \"build\"] for a design and build contract)"
+"Contracting process: Add one or more values to the `.summary.nature` "
+"array. (e.g. [\"design\", \"build\"] for a design and build contract)"
 msgstr ""
-"Proceso de contratación: Agregar uno o más valores a la lista "
-"`.summary.nature`. (por ejemplo [\"diseño\", \"construcción\"] para un "
-"contrato de diseño y construcción)"
+"Proceso de contratación: Agregar uno  más valores a la matriz de "
+"`.summary.nature` array. (ej. [\"diseño\", \"construcción\"] para contrato "
+"de diseño y construcción)"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:6
@@ -386,21 +448,22 @@ msgid ""
 "`/tender/items/additionalClassifications` or infer from "
 "`/tender/description`.*"
 msgstr ""
-"*Mapee de `/tender/items/classification` o "
-"`/tender/items/additionalClassifications` o inferir el valor basándose en "
-"`/tender/description`.*"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:7
 msgid "Number of firms tendering"
 msgstr "Número de empresas que participan en la licitación"
 
+#. Description
+#: mapping/process-level-procurement.csv:7
+msgid "Number of firms who submit a tender"
+msgstr "Número de empresas que presentan una oferta"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:7
 msgid "Contracting process: Publish in `.summary.tender.numberOfTenderers`"
 msgstr ""
-"Proceso de contratación: Publicar en el campo "
-"`.summary.tender.numberOfTenderers`"
+"Proceso de contratación: Publicar en `.summary.tender.numberOfTenderers`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:7
@@ -408,221 +471,249 @@ msgid ""
 "Set `.summary.numberOfTenderers` to the value of "
 "`/tender/numberOfTenderers`."
 msgstr ""
-"Establezca `.summary.numberOfTenderers` al valor de "
-"`/tender/numberOfTenderers`."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:8
 msgid "Cost estimate"
 msgstr "Estimación del costo"
 
+#. Description
+#: mapping/process-level-procurement.csv:8
+msgid "Currency and amount of the original pre-tender estimate of the contract"
+msgstr ""
+"Moneda y monto de la estimación original previa a la licitación del contrato"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:8
 msgid "Contracting process: Publish in `.summary.tender.costEstimate`"
-msgstr ""
-"Proceso de contratación: Publicar en el campo `.summary.tender.costEstimate`"
+msgstr "Proceso de contratación: Publicar en `.summary.tender.costEstimate`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:8
 msgid ""
 "Check the individual releases for the contracting process and set "
-"`.summary.tender.costEstimate` to the value of `/tender/value` in the most "
-"recent release with `/tender/status` set to 'planning'."
+"`.summary.tender.costEstimate` to the value of `/tender/value` in the "
+"most recent release with `/tender/status` set to 'planning'."
 msgstr ""
-"Valide las entregas individuales para el proceso de  contratación y "
-"establecer  `.summary.tender.costEstimate` al valor de `/tender/value` en la"
-" entrega más reciente con `/tender/status` establecido en 'planning'."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:9
 msgid "Contract title"
 msgstr "Título del contrato"
 
+#. Description
+#: mapping/process-level-procurement.csv:9
+msgid "The formal name of the contract"
+msgstr "Nombre formal del contrato"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:9
 msgid "Contracting process: Publish in `.summary.title`"
-msgstr "Proceso de contratación: Publicar en el campo `.summary.title`"
+msgstr "Proceso de contratación: Publicar en `.summary.title`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:9
 msgid ""
-"If the contracting process has only one `Contract` object in `/contracts`, "
-"set `.summary.title` to the value of the contract's `/title`; if not "
-"available and the contracting process has only one `Award` object in "
-"`/awards`, use its `/title`. Otherwise, use `/tender/title`."
+"If the contracting process has only one `Contract` object in "
+"`/contracts`, set `.summary.title` to the value of the contract's "
+"`/title`; if not available and the contracting process has only one "
+"`Award` object in `/awards`, use its `/title`. Otherwise, use "
+"`/tender/title`."
 msgstr ""
-"Si el proceso de contratación tiene un solo objeto `Contract` en "
-"`/contracts`, establecer `.summary.title` al valor de los contratos "
-"`/title`; si no esta disponible y el proceso de contratación tiene solo un "
-"objeto `Award` en `/awards`, usar `/title`. Caso contrario, "
-"usar`/tender/title`."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:10
 msgid "Contract firm(s)"
-msgstr "Empresa(s) contratada(s)"
+msgstr "Empresa(s) del contrato"
+
+#. Description
+#: mapping/process-level-procurement.csv:10
+msgid "Legal name of supplier"
+msgstr "Nombre legal del proveedor"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:10
 msgid ""
-"Project Level: Add an entries to `parties` with 'supplier' included in their"
-" `.roles` | Contracting process: Add the names and identifiers to the "
-"`.summary.suppliers` array"
+"Project Level: Add an entries to `parties` with 'supplier' included in "
+"their `.roles` | Contracting process: Add the names and identifiers to "
+"the `.summary.suppliers` array"
 msgstr ""
-"Nivel de proyecto: Agregue una entrada a `parties` con el campo 'supplier' "
-"incluido en sus `.roles` | Proceso de contratación: Agregue los nombres e "
-"identificadores a la lista `.summary.suppliers`"
+"Nivel de proyecto: Agregar un registro a `parties` with 'supplier' "
+"incluyendo sus `.roles` | Proceso de contratación: Agregar los nombres e "
+"identificadores a la matriz `.summary.suppliers` "
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:10
 msgid ""
 "Check the `/parties` array for `Organization` objects with 'supplier' in "
-"`/roles`. For each such object, copy it to the `parties` array in OC4IDS, "
-"add an `OrganizationReference` object to `.summary.suppliers` and set the "
-"`.name` and `.id` of the `OrganizationReference` to the `.name` and `.id` of"
-" the `Organization`."
+"`/roles`. For each such object, copy it to the `parties` array in OC4IDS,"
+" add an `OrganizationReference` object to `.summary.suppliers` and set "
+"the `.name` and `.id` of the `OrganizationReference` to the `.name` and "
+"`.id` of the `Organization`."
 msgstr ""
-"Verifique la lista  `/parties` para los objetos `Organization` con  "
-"'supplier' en `/roles`. Para cada uno de los objetos copiarlos a la lista "
-"`parties` en OC4IDS, agregar un objeto `OrganizationReference` a "
-"`.summary.suppliers` y establecer `.name` y `.id` de la "
-"`OrganizationReference` al `.name` y `.id` de la `Organization`."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:11
 msgid "Contract price"
-msgstr "Precio de contrato"
+msgstr "Precio del contrato"
+
+#. Description
+#: mapping/process-level-procurement.csv:11
+msgid "Currency and price at contract award"
+msgstr "Moneda y precio en la adjudicación del contrato"
 
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:11
 msgid "Contracting process: Publish in `.summary.contractValue`"
-msgstr ""
-"Proceso de contratación: Publique en el campo `.summary.contractValue`"
+msgstr "Proceso de contratación: Publicar en `.summary.contractValue`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:11
 msgid ""
 "If the value of `/value/currency` is the same for all `Award` objects in "
-"`/awards`, set `.summary.contractValue.amount` to the sum of `/value/amount`"
-" in each `Award` object and set `.summary.contractValue.currency` to the "
-"value of `/value/currency`.  *Otherwise, convert `/value/amount` in each "
-"`Award` object to a base currency, set `.summary.contractValue.amount` to "
-"the sum of the converted values and set `.summary.contractValue.currency` to"
-" the base currency.*"
+"`/awards`, set `.summary.contractValue.amount` to the sum of "
+"`/value/amount` in each `Award` object and set "
+"`.summary.contractValue.currency` to the value of `/value/currency`.  "
+"*Otherwise, convert `/value/amount` in each `Award` object to a base "
+"currency, set `.summary.contractValue.amount` to the sum of the converted"
+" values and set `.summary.contractValue.currency` to the base currency.*"
 msgstr ""
-"Si el valor de `/value/currency` es el mismo para todos los objetos `Award` "
-"en `/awards`, establecer `.summary.contractValue.amount` a la suma de "
-"`/value/amount` en cada objeto `Award` y establecer "
-"`.summary.contractValue.currency` al valor de `/value/currency`. *Caso "
-"contrario, convertir `/value/amount` en cada objeto `Award` a la moneda "
-"base, establecer `.summary.contractValue.amount` a la suma de los valores "
-"convertidos y establecer `.summary.contractValue.currency` a la moneda "
-"base.*"
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:12
 msgid "Contract scope of work"
 msgstr "Alcance del trabajo del contrato"
 
+#. Description
+#: mapping/process-level-procurement.csv:12
+msgid ""
+"Main outputs from the contract e.g. detailed design, supervision, project"
+" management and or type, quantity, unit for construction"
+msgstr ""
+"Principales productos del contrato por ejemplo planos detallados, "
+"supervisión, tipo y o administración del proyecto, calidad, unidad de "
+"construcción"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:12
 msgid ""
 "Contracting process: Publish in `.summary.description`. Additionally "
-"detailed documentation may be provided as documents within linked releases"
+"detailed documentation may be provided as documents within linked "
+"releases"
 msgstr ""
-"Proceso de contratación: Publicar en el campo `.summary.description`. "
-"Además, la documentación detallada puede proporcionarse como documentos "
-"dentro de las entregas vinculadas."
+"Proceso de contratación: Publicar en`.summary.description`. Además e puede "
+"proporcionar documentación detallada en la forma de documentos con versiones "
+"vinculadas"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:12
 msgid ""
-"If there is more than one `Contract` object in `/contracts` or more than one `Award` object in `/awards`, set `.summary.description` to the value of `/tender/description`; if unavailable and if there is only one `Item` object in `/tender/items`, then set `.summary.description` to the value of the item's `/description`.\n"
+"If there is more than one `Contract` object in `/contracts` or more than "
+"one `Award` object in `/awards`, set `.summary.description` to the value "
+"of `/tender/description`; if unavailable and if there is only one `Item` "
+"object in `/tender/items`, then set `.summary.description` to the value "
+"of the item's `/description`.\n"
 "\n"
-"Otherwise, if there is only one `Award` or `Contract` object with a `/description` field, set `.summary.description` to the value of the object's `/description`.\n"
+"Otherwise, if there is only one `Award` or `Contract` object with a "
+"`/description` field, set `.summary.description` to the value of the "
+"object's `/description`.\n"
 "\n"
-"Otherwise, if there is only one `Item` with a `/description` field in `/awards/items` and `/contracts/items`, set `.summary.description` to the value of the item's `/description`."
+"Otherwise, if there is only one `Item` with a `/description` field in "
+"`/awards/items` and `/contracts/items`, set `.summary.description` to the"
+" value of the item's `/description`."
 msgstr ""
-"Si hay más de un objeto `Contract` en `/contracts` o más de un objeto `Award` en `/awards`, establecer `.summary.description` al valor de `/tender/description`; si no está disponible y hay solo un objeto `Item` en `/tender/items`, entonces establecer `.summary.description` al valor de uno de los ítems `/description`.\n"
-"\n"
-"Por otro parte, si hay solo un objeto `Award` o `Contract` con el campo de `/description`, establecer `.summary.description` al valor del objeto `/description`.\n"
-"\n"
-"Por otra parte, si hay solo un `Item` con el un campo  `/description` en `/awards/items` y `/contracts/items`, establecer `.summary.description` al valor de `/description` del ítem."
 
 #. CoST IDS element
 #: mapping/process-level-procurement.csv:13
 msgid "Contract start date and contract period (duration)"
 msgstr "Fecha de inicio del contrato y período del contrato (duración)"
 
+#. Description
+#: mapping/process-level-procurement.csv:13
+msgid ""
+"Enter dates and Number of weeks from contract start date to (anticipated)"
+" completion date"
+msgstr ""
+"Ingresar fechas y número de semanas desde la fecha de inicio del contrato "
+"hasta fecha de finalización (anticipada)"
+
 #. Mapping to OC4IDS
 #: mapping/process-level-procurement.csv:13
 msgid "Contracting process: Publish in `.summary.contractPeriod`"
-msgstr ""
-"Proceso de contratación: Publicar en el campo `.summary.contractPeriod`"
+msgstr "Proceso de contratación: Publicar en `.summary.contractPeriod`"
 
 #. Mapping from OCDS
 #: mapping/process-level-procurement.csv:13
 msgid ""
 "Set `.summary.contractPeriod.startDate` to the earliest "
 "`/contractPeriod/startDate` of all `Award` objects in `/awards` and set "
-"`.summary.contractPeriod.endDate` to the latest `/contractPeriod/endDate` of"
-" all `Award` objects in `/awards`; if not available,  set "
+"`.summary.contractPeriod.endDate` to the latest `/contractPeriod/endDate`"
+" of all `Award` objects in `/awards`; if not available,  set "
 "`.summary.contractPeriod` to the value of `/tender/contractPeriod`."
 msgstr ""
-"Establezca `.summary.contractPeriod.startDate` con el primer "
-"`/contractPeriod/startDate` de todos los objetos `Award` en `/awards` y "
-"establecer `.summary.contractPeriod.endDate` con el último "
-"`/contractPeriod/endDate` de todos objetos `Award` en `/awards`; si no está "
-"disponible, establecer `.summary.contractPeriod` con el valor de "
-"`/tender/contractPeriod`."
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:1
 msgid "Project status (current)"
-msgstr "Estado del proyecto (actual)"
+msgstr "Estado (actual) del proyecto"
+
+#. Description
+#: mapping/project-level-completion.csv:1
+msgid ""
+"The current stage of the project. Select from identification, "
+"preparation, construction, completion, completed or cancelled."
+msgstr ""
+"Etapa actual del proyecto. Seleccionar de identificación, preparación, "
+"construcción, finalización, finalizado o cancelado."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:1
 msgid "Project Level: Publish in `status`"
-msgstr "Nivel de proyecto: Publicar en el campo `status`"
+msgstr "Nivel de Proyecto: Publicar en `status`"
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:1
 msgid "*Infer from `/tag` of most recent release.*"
-msgstr " *Inferir a partir de `/tag` de la entrega más reciente.*"
+msgstr ""
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:2
 msgid "Project completion cost"
 msgstr "Costo de finalización del proyecto"
 
+#. Description
+#: mapping/project-level-completion.csv:2
+msgid "State projected or actual completion cost (currency and amount)"
+msgstr "Costo del estado proyectado o finalización actual (moneda y cantidad)"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:2
 msgid "Project Level: Publish in `completion.finalValue`"
-msgstr "Nivel de proyecto: Publicar en el campo `completion.finalValue`"
+msgstr "Nivel de proyecto: Publicar en `completion.finalValue`"
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:2
 msgid ""
 "*Infer projected cost from `/contracts/value` and infer actual cost from "
-"`/contracts/implementation/finalValue` (Contract completion extension); if "
-"not available, infer from total of "
+"`/contracts/implementation/finalValue` (Contract completion extension); "
+"if not available, infer from total of "
 "`/contracts/implementation/transactions/value`.*"
 msgstr ""
-"*Infiera el costo proyectado a partir de `/contracts/value` e inferir el "
-"costo real a partir de `/contracts/implementation/finalValue` (Extensión de "
-"Cumplimiento del contrato); si este no está disponible, inferir el valor a "
-"partir del total de `/contracts/implementation/transactions/value`.*"
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:3
 msgid "Completion date"
 msgstr "Fecha de finalización"
 
+#. Description
+#: mapping/project-level-completion.csv:3
+msgid "State projected or actual completion date"
+msgstr "Estado proyectado o fecha de finalización actual"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:3
 msgid "Project Level: Publish in `completion.endDate`"
-msgstr "Nivel de proyecto: Publicar en el campo `completion.endDate`"
+msgstr "Nivel de proyecto: Publicar en `completion.endDate`"
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:3
@@ -630,26 +721,33 @@ msgid ""
 "*Infer from `/contracts/implementation/endDate` (Contract completion "
 "extension); if not available, infer from `/contracts/period/endDate`.*"
 msgstr ""
-"*Infiera a partir de `/contracts/implementation/endDate` (Extensión de "
-"Cumplimiento de Contrato); si no está disponible, inferir el valor a partir "
-"de `/contracts/period/endDate`.*"
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:4
 msgid "Project Scope at completion (projected)"
 msgstr "Alcance del proyecto al finalizar (proyectado)"
 
+#. Description
+#: mapping/project-level-completion.csv:4
+msgid ""
+"Indicate projected or actual scope of project. Aim is to show if the "
+"completed project scope differs from the original project scope. Specify "
+"main outputs (type, quantity, unit)"
+msgstr ""
+"Indicar alcance del proyecto actual o proyectado. El objetivo demostrar si "
+"el alcance del proyecto finalizado difiere del alcance original del "
+"proyecto. Especificar productos principales (tipo, cantidad, unidad)"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:4
 msgid ""
-"Project Level: Publish free text as `completion.finalScope` and/or include "
-"document with `.documentType` of `projectScope` and dates and descriptions "
-"that show this is final scope at completion"
+"Project Level: Publish free text as `completion.finalScope` and/or "
+"include document with `.documentType` of `projectScope` and dates and "
+"descriptions that show this is final scope at completion"
 msgstr ""
-"Nivel de proyecto: Publicar texto libre en el campo `completion.finalScope` "
-"y/o incluir un documento con `.documentType` del `projectScope` y fechas y "
-"descripciones que muestren que este es el alcance final al momento de la "
-"finalización."
+"Nivel de proyecto: Publicar texto libre como `completion.finalScope` y/o "
+"incluir documento con `.documentType` de `projectScope` y fechas y "
+"descripciones que demuestran que este será el alcance final a la finalización"
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:4
@@ -658,14 +756,18 @@ msgid ""
 "`projectScope` or infer from `/contracts/items` or "
 "`/contracts/implementation/milestones`.*"
 msgstr ""
-"*Valide en `/planning/documents` para documentos con  `/type` establecido a "
-"`projectScope` o inferir el valor a partir de `/contracts/items` o "
-"`/contracts/implementation/milestones`.*"
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:5
 msgid "Reasons for project changes"
-msgstr "Razones para los cambios en el proyecto."
+msgstr "Razones para cambios en el proyecto"
+
+#. Description
+#: mapping/project-level-completion.csv:5
+msgid "Summary of primary reasons for any changes in scope, time and cost"
+msgstr ""
+"Resumen de las razones principales de cualquier cambio en el alcance, plazos "
+"y costo"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:5
@@ -673,9 +775,8 @@ msgid ""
 "Project Level: Publish using `completion.endDateDetails`, "
 "`completion.finalValueDetails` and `completion.finalScopeDetails`"
 msgstr ""
-"Nivel de Proyecto: Publicar utilizando los campos "
-"`completion.endDateDetails`, `completion.finalValueDetails` y "
-"`completion.finalScopeDetails`"
+"Nivel de proyecto: Publicar utilizando `completion.endDateDetails`, "
+"`completion.finalValueDetails` y `completion.finalScopeDetails`"
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:5
@@ -684,15 +785,16 @@ msgid ""
 "`/contracts/implementation/finalValueDetails` (Contract completion "
 "extension); if not available, infer from `/contracts/amendments`.*"
 msgstr ""
-"*Infiera partir de `/contracts/implementation/endDateDetails` y  "
-"`/contracts/implementation/finalValueDetails` (Extensión de Cumplimiento del"
-" Contrato); si estos no están disponibles, inferira partir de "
-"`/contracts/amendments`.*"
 
 #. CoST IDS element
 #: mapping/project-level-completion.csv:6
 msgid "Reference to audit and evaluation reports"
 msgstr "Referencia a informes de auditoría y evaluación"
+
+#. Description
+#: mapping/project-level-completion.csv:6
+msgid "Reference to publicly available technical and financial audits"
+msgstr "Referencia a auditorías técnicas y financieras disponibles al público"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-completion.csv:6
@@ -701,36 +803,39 @@ msgid ""
 "'financialAuditReport' or 'technicalAuditReport' and include a short "
 "description and/or a link to a document providing details"
 msgstr ""
-"Nivel de Proyecto: Publique en `documents`, con `.documentType` establecido "
-"a 'financialAuditReport' o 'technicalAuditReport' e incluya una breve "
-"descripción y/o un enlace a un documento que proporcione detalles"
+"Nivel de proyecto: Publicar en`documents`, con `.documentType` definido en "
+"'financialAuditReport' o 'technicalAuditReport' e incluir una breve "
+"descripción y/o un enlace al documento que proporciona más detalles "
 
 #. Mapping from OCDS
 #: mapping/project-level-completion.csv:6
 msgid ""
-"Check the `/contracts/implementation/documents` array for `Document` objects"
-" with `/type` set to 'finalAudit'. Copy each such object to the `documents` "
-"array."
+"Check the `/contracts/implementation/documents` array for `Document` "
+"objects with `/type` set to 'finalAudit'. Copy each such object to the "
+"`documents` array."
 msgstr ""
-"Valide ficar la lista `/contracts/implementation/documents` para objetos "
-"`Document` con `/type` establecidos a 'finalAudit'. Copie cada objeto a la "
-"lista `documents`."
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:1
 msgid "Project owner"
-msgstr "Dueño del proyecto"
+msgstr "Propietario del proyecto"
+
+#. Description
+#: mapping/project-level-identification.csv:1
+msgid "Name of the sponsoring Government department"
+msgstr "Nombre del departamento gubernamental que lo patrocina"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:1
 msgid ""
 "Project Level: Add an `Organization` object to `parties` with "
-"'publicAuthority' included in its `.roles`. Set `publicAuthority.name` and "
-"`publicAuthority.id` to the `.name` and `.id` of the object."
+"'publicAuthority' included in its `.roles`. Set `publicAuthority.name` "
+"and `publicAuthority.id` to the `.name` and `.id` of the object."
 msgstr ""
-"Nivel de proyecto: Agregue un objeto `Organization` a `parties` con "
-"'publicAuthority' incluido en `.roles`. Establecer `publicAuthority.name` y "
-"`publicAuthority.id` al `.name` y `.id` del objeto."
+"A Nivel de Proyecto: Añadir un objeto `Organization` a `parties` con "
+"'publicAuthority' como parte de sus `.roles`. Establecer el "
+"`publicAuthority.name` y la `publicAuthority.id` al `.name` y `.id` del "
+"objeto."
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:1
@@ -741,95 +846,110 @@ msgid ""
 "authority, do not set `publicAuthority.name` and `publicAuthority.id`; "
 "otherwise, set them to the public authority's `.name` and `.id`.*"
 msgstr ""
-"Valide la lista `/parties` para los objetos `Organization` con  'buyer' en "
-"`/roles`. Copiar cada uno de los objetos a la lista `parties` en OC4IDS y "
-"agregar 'publicAuthority' a sus `.roles`.  Si hay más de una autoridad "
-"pública, no establecer `publicAuthority.name`  y `publicAuthority.id`; caso "
-"contrario, establecer `.name` y `.id`.* de las autoridades públicas. "
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:2
 msgid "Sector"
 msgstr "Sector"
 
+#. Description
+#: mapping/project-level-identification.csv:2
+msgid ""
+"Develop a list of sectors relevant to country e.g. housing, transport, "
+"energy, water etc."
+msgstr ""
+"Desarrollar una lista de sectores pertinentes al país, por ejemplo, "
+"vivienda, transporte, energía, agua, etc."
+
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:2
 msgid ""
 "Project Level: Map to the projectSector codelist and publish one or more "
-"values in `sector`. Publish any additional sector classifications from local"
-" or other global codelists in `additionalClassifications`."
+"values in `sector`. Publish any additional sector classifications from "
+"local or other global codelists in `additionalClassifications`."
 msgstr ""
-"Nivel de proyecto: Mapee a la lista de códigos projectSector y publicar uno "
-"o más valores en  `sector`. Publicar cualquier clasificación adicional de "
-"sectores de las listas de códigos local o global en "
-"`additionalClassifications`."
+"Nivel de proyecto: Mapear a la lista de códigos de projectSector y publicar "
+"uno o más valores en el `sector`. Publicar cualquier clasificación sectorial "
+"adicional de las listas de códigos locales o de otras listas de códigos "
+"globales en `additionalClassifications`."
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:2
 msgid ""
-"*Copy the `Classification` object from `/planning/project/sector` (Project "
-"extension) to the `additionalClassifications` array. Additionally, map the "
-"classification used in OCDS to the projectSector codelist and publish one or"
-" more values in `sector`.*"
+"*Copy the `Classification` object from `/planning/project/sector` "
+"(Project extension) to the `additionalClassifications` array. "
+"Additionally, map the classification used in OCDS to the projectSector "
+"codelist and publish one or more values in `sector`.*"
 msgstr ""
-"*Copie el objeto `Classification` de `/planning/project/sector` (Extensión "
-"del Proyecto) a la lista `additionalClassifications`. Adicionalmente, mapee "
-"la clasificación utilizada en OCDS a la lista de códigos projectSector y "
-"publique uno o más valores en `sector`.*"
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:3
 msgid "Subsector"
 msgstr "Subsector"
 
+#. Description
+#: mapping/project-level-identification.csv:3
+msgid ""
+"Develop a subset for each sector e.g. Transport could be subdivided into "
+"national highway, local road, railway, port, airport etc."
+msgstr ""
+"Desarrollar un subsector para cada sector, por ejemplo, el transporte se "
+"subdivide en autopistas nacionales, carreteras locales, ferrocarril, puerto, "
+"aeropuerto etc."
+
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:3
 msgid "Project Level: Publish in `additionalClassifications`"
-msgstr "Nivel de proyecto: Publique en el campo `additionalClassifications`"
+msgstr "Nivel de proyecto: Publicar en `additionalClassifications`"
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:3
 msgid ""
 "Copy each `Classification` object from the "
-"`/planning/project/additionalClassifications` array (Project extension) to "
-"the `additionalClassifications` array."
+"`/planning/project/additionalClassifications` array (Project extension) "
+"to the `additionalClassifications` array."
 msgstr ""
-"Copie cada uno de los objetos `Classification` desde la lista de "
-"`/planning/project/additionalClassifications` (Extensión del Proyecto), a la"
-" lista `additionalClassifications`."
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:4
 msgid "Project name"
 msgstr "Nombre del proyecto"
 
+#. Description
+#: mapping/project-level-identification.csv:4
+msgid "Specify the project name"
+msgstr "Especificar el nombre del proyecto"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:4
 msgid "Project Level: Publish in `title`"
-msgstr "Nivel de proyecto: Publique en el campo `title`"
+msgstr "Nivel de proyecto: Publicar en `title`"
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:4
 msgid ""
-"Set `title` to the value of `/planning/project/title` (Project extension); "
-"if not available, optionally use `/tender/title`."
+"Set `title` to the value of `/planning/project/title` (Project "
+"extension); if not available, optionally use `/tender/title`."
 msgstr ""
-"Establezca `title` al valor de `/planning/project/title` (Extensión del "
-"Proyecto); si no está disponible, opcionalmente utilizar `/tender/title`."
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:5
 msgid "Project Location"
 msgstr "Ubicación del proyecto"
 
+#. Description
+#: mapping/project-level-identification.csv:5
+msgid "Briefly specify location of the project"
+msgstr "Especificar brevemente la ubicación del proyecto"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:5
 msgid ""
-"Project Level: Publish using the `locations` fields as an address, geometry "
-"(point/line/polygon) or gazetteer entry"
+"Project Level: Publish using the `locations` fields as an address, "
+"geometry (point/line/polygon) or gazetteer entry"
 msgstr ""
-"Nivel de proyecto: Publique utilizando los campos `locations` como una "
-"dirección, geometría (punto/línea/polígono) o entrada en un diccionario "
+"Nivel de proyecto: Publicar utilizando los campos de `locations` como  la "
+"dirección, la geometría (point/line/polygon) o el registro de un libro "
 "geográfico"
 
 #. Mapping from OCDS
@@ -840,24 +960,25 @@ msgid ""
 "`/tender/items/deliveryLocation` or `/tender/items/deliveryAddress` "
 "(Location extension). Add an `.id` to each `Location` object."
 msgstr ""
-"Copie cada objeto `Location` de `/planning/project/locations` (Extensión del"
-" Proyecto) a la lista `locations`; si no está disponible, opcionalmente "
-"utilizar `/tender/items/deliveryLocation` o `/tender/items/deliveryAddress` "
-"(Extensión de ubicación). Agregar un `.id` a cada objeto `Location`."
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:6
 msgid "Purpose"
 msgstr "Propósito"
 
+#. Description
+#: mapping/project-level-identification.csv:6
+msgid "Specify the socioeconomic purpose of the project"
+msgstr "Especificar el propósito socioeconómico del proyecto."
+
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:6
 msgid ""
-"Project Level: Publish in `purpose`; if classified against a codelist, also "
-"publish in `additionalClassifications`."
+"Project Level: Publish in `purpose`; if classified against a codelist, "
+"also publish in `additionalClassifications`."
 msgstr ""
-"Nivel de proyecto: Publicar en el campo `purpose`; si se clasifica según una"
-" lista de códigos, publicar también en `additionalClassifications`."
+"Nivel de proyecto: Publicar en `purpose`; Si se clasifica de acuerdo a una "
+"lista de códigos, también publicar en `additionalClassifications`."
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:6
@@ -867,46 +988,54 @@ msgid ""
 "with `/type` set to 'needsAssessment' and copy each object to the "
 "`documents` array."
 msgstr ""
-"Establezca `purpose` al valor de `/planning/rationale`; si no esta "
-"disponible, opcionalmente verfifique la lista `/planning/documents` para los"
-" objetos `Document` con `/type` establecidos a 'needsAssessment' y copie "
-"cada uno de los objetos a la lista `documents`."
 
 #. CoST IDS element
 #: mapping/project-level-identification.csv:7
 msgid "Project description"
-msgstr "Descripción del proyecto"
+msgstr "Descripción de proyecto"
+
+#. Description
+#: mapping/project-level-identification.csv:7
+msgid "Concise description and details of the project"
+msgstr "Descripción breve y detalles del proyecto"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-identification.csv:7
 msgid "Project Level: Publish in `description`"
-msgstr "Nivel de proyecto: Publique en el campo `description`"
+msgstr "Nivel de proyecto: Publicar en `description`"
 
 #. Mapping from OCDS
 #: mapping/project-level-identification.csv:7
 msgid ""
-"Set `description` to the value of `/planning/project/description` (Project "
-"extension); if not available, optionally use `/tender/description`."
-msgstr ""
-"Establezca `description` al valor de `/planning/project/description` "
-"(Extensión del Proyecto); si no está disponible, opcionalmente use "
+"Set `description` to the value of `/planning/project/description` "
+"(Project extension); if not available, optionally use "
 "`/tender/description`."
+msgstr ""
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:1
 msgid "Project Scope (main output)"
-msgstr "Alcance del proyecto (producto principal)"
+msgstr "Alcance del Proyecto (resultado principal)"
+
+#. Description
+#: mapping/project-level-preparation.csv:1
+msgid ""
+"Main outputs from the project that are being taken forward into "
+"construction (type, quantity, unit)"
+msgstr ""
+"Principales resultados del proyecto que son parte de la construcción (tipo, "
+"cantidad, unidad)"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:1
 msgid ""
 "Project Level: Publish in `documents`, with `.documentType` set to "
-"'projectScope' and include a short description and/or a link to a document "
-"providing details"
+"'projectScope' and include a short description and/or a link to a "
+"document providing details"
 msgstr ""
-"Nivel de proyecto: publicar en `documents`, con `.documentType` y establecer"
-" a 'projectScope' e incluir una breve descripción y/o un enlace a un "
-"documento que proporcione más detalles"
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` y establecer "
+"un 'projectScope' e incluir una descripción breve y/o enlazar a un documento "
+"que proporcione más detalles."
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:1
@@ -918,17 +1047,25 @@ msgid ""
 "`Milestone` objects from `/tender/milestones` to "
 "`contractingProcesses.summary.tender.milestones`."
 msgstr ""
-"Revise la secuencia `/planning/documents` para objetos `Document` con "
-"`.documentType` empezando por 'projectScope'  y copie cada objeto a la "
-"secuencia `documents` ; sino está disponible, copie opcionalmente objetos "
-"`Item` desde `/tender/items` to `contractingProcesses.summary.tender.items` "
-"y copie objetos `Milestone` desde `/tender/milestones` a "
-"`contractingProcesses.summary.tender.milestones`."
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:2
 msgid "Environmental impact"
-msgstr "Impacto al medio ambiente"
+msgstr "Impacto ambiental"
+
+#. Description
+#: mapping/project-level-preparation.csv:2
+msgid ""
+"Briefly describe the environmental impacts and mitigation measures for "
+"this project e.g. impacts on flora, fauna & woodlands, areas of natural "
+"beauty, carbon emissions etc. and mitigation measures e.g. pollution "
+"control, low carbon solutions, sustainable timber etc."
+msgstr ""
+"Describir brevemente los impactos ambientales y las medidas de mitigación "
+"para este proyecto ej. Impactos sobre la flora, fauna y bosques, áreas de "
+"belleza natural, emisión de carbono etc. y medidas de mitigación, ej. "
+"control de contaminación, soluciones de baja emisión de carbono, madera "
+"sostenible, etc. "
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:2
@@ -937,147 +1074,166 @@ msgid ""
 "'environmentalImpact' and include a short description and/or a link to a "
 "document providing details."
 msgstr ""
-"Nivel de proyecto: Publique en `documents`, con `.documentType` establecido "
-"a 'environmentalImpact' e incluir una breve descripción y/o un enlace a un "
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` establecer "
+"en 'environmentalImpact' e incluir una breve descripción y/o enlazar a un "
 "documento que proporcione más detalles."
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:2
 msgid ""
-"Check the `/planning/documents` array for `Document` objects with `/type` "
-"set to 'environmentalImpact'. Copy each object to the `documents` array."
+"Check the `/planning/documents` array for `Document` objects with `/type`"
+" set to 'environmentalImpact'. Copy each object to the `documents` array."
 msgstr ""
-"Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'environmentalImpact'. Copiar cada objeto a "
-"la lista `documents`."
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:3
 msgid "Land and settlement impact"
-msgstr "Impacto sobre la tierra y los asentamientos"
+msgstr "Impacto en terrenos y asentamientos"
+
+#. Description
+#: mapping/project-level-preparation.csv:3
+msgid ""
+"State the amount of land and property that was acquired for the project "
+"e.g. 25km2 land, and related impacts e.g. archaeological issues (moved "
+"Saxon burial site), local/indigenous settlements (relocated 5 indigenous "
+"villages of 500 villagers each), impacts on local businesses e.g. (30 "
+"business properties purchased)."
+msgstr ""
+"Indicar la cantidad de terrenos y propiedades adquiridas para el proyecto "
+"ej. Un terreno de 25km2  e impactos relacionados ej. aspectos arqueológicos ("
+"reubicación de un cementerio Sajón), asentamientos locales/indígenas (se "
+"reubicaron 5 comunidades indígenas con 500 habitantes cada una), impactos "
+"sobre los negocios locales, ej. (se compraron 30 propiedades de comercios)."
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:3
 msgid ""
 "Project Level: Publish in `documents`, with `.documentType` set to "
-"'landAndSettlementImpact' and include a short description and/or a link to a"
-" document providing details."
+"'landAndSettlementImpact' and include a short description and/or a link "
+"to a document providing details."
 msgstr ""
-"Nivel de proyecto: Publique en `documents`, con `.documentType` establecido "
-"a 'landAndSettlementImpact' e incluir una breve descripción y/o un enlace a "
-"un documento que proporcione más detalles"
+"Nivel de proyecto: Publicar en `documents`, con `.documentType` establecer "
+"en 'landAndSettlementImpact' e incluir una breve descripción y/o enlace a un "
+"documento que proporciones más detalles."
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:3
 msgid ""
-"Check the `/planning/documents` array for `Document` objects with `/type` "
-"set to 'landAndSettlementImpact'. Copy each object to the `documents`."
+"Check the `/planning/documents` array for `Document` objects with `/type`"
+" set to 'landAndSettlementImpact'. Copy each object to the `documents`."
 msgstr ""
-"Valide la lista `/planning/documents` para objetos `Document` con `/type` "
-"establecidos a 'landAndSettlementImpact'. Copiar cada objeto a `documents`."
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:4
 msgid "Contact details"
 msgstr "Detalles de contacto"
 
+#. Description
+#: mapping/project-level-preparation.csv:4
+msgid "Postal and electronic address of the Project Owner"
+msgstr "Dirección postal y electrónica del propietario del proyecto"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:4
 msgid ""
-"Project Level: Publish in the `.address` and `.contactPoint` of the party "
-"with 'publicAuthority' included in its `.roles`"
+"Project Level: Publish in the `.address` and `.contactPoint` of the party"
+" with 'publicAuthority' included in its `.roles`"
 msgstr ""
 "Nivel de proyecto: Publicar en el campo `.address` y `.contactPoint` de la "
-"parte con 'publicAuthority' incluido en `.roles`"
+"parte con  'publicAuthority' incluido en sus `.roles`"
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:4
 msgid ""
-"Check the `/parties` array for `Organization` objects with  `/role` set to "
-"'buyer'. Copy each object to the `parties` array in OC4IDS and add "
+"Check the `/parties` array for `Organization` objects with  `/role` set "
+"to 'buyer'. Copy each object to the `parties` array in OC4IDS and add "
 "'publicAuthority' to its `.roles`."
 msgstr ""
-"Valide la lista `/parties` para objetos `Organization` con `/role` "
-"establecido a 'buyer'. Copiar cada uno de los objetos a la lista `parties` "
-"en OC4IDS y agregar 'publicAuthority' a `.roles`.   "
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:5
 msgid "Funding sources"
 msgstr "Fuentes de financiamiento"
 
+#. Description
+#: mapping/project-level-preparation.csv:5
+msgid "Name the funding organization(s)/sources of funding"
+msgstr "Nombre la(s) organización(es)/fuente(s) de financiamiento"
+
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:5
 msgid ""
-"Project Level: If a funding organization is the project owner, add 'funder' "
-"to the `.roles` of the existing entry in `parties`. Otherwise, add a new "
-"entry to `parties` for each funding organization with 'funder' included in "
-"its `.roles`. When information on the amount provided by each funder is "
-"available, use `budget.budgetBreakdowns` to provide details"
+"Project Level: If a funding organization is the project owner, add "
+"'funder' to the `.roles` of the existing entry in `parties`. Otherwise, "
+"add a new entry to `parties` for each funding organization with 'funder' "
+"included in its `.roles`. When information on the amount provided by each"
+" funder is available, use `budget.budgetBreakdowns` to provide details"
 msgstr ""
-"Nivel de proyecto: Si una organización financiadora es la dueña del proyecto"
-" agregue 'funder' a `.roles` de la entrada existente en `parties`. De lo "
-"contrario, agregue una nueva entrada a `parties` para cada organización "
-"financiadora con 'funder' incluido en los `.roles`. Cuando la información "
-"sobre las cantidades proveídas por cada ente financiador esté disponible, "
-"use  `budget.budgetBreakdowns` para dar los detalles. "
+"Nivel de proyecto: Si una organización de financiamiento es la propietaria "
+"del proyecto, agregar 'funder' a los `.roles` del registro existente en "
+"`parties`. De lo contrario, agregar un nuevo registro en el campo `parties` "
+"para cada organización financiadora con 'funder' incluido en sus `.roles`. "
+"Cuando la información sobre la cantidad aportada por cada financiador esté "
+"disponible, utilizar `budget.budgetBreakdowns` para proporcional más detalles"
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:5
 msgid ""
 "Check the `/parties` array for `Organization` objects referenced in "
-"`/planning/budgetBreakdown/sourceParty` (Budget breakdown extension), copy "
-"each object to the `parties` array in OC4IDS and add 'funder' to its "
-"`.roles`; if not available, check the `/parties` array for parties with "
-"'funder' in `/roles` and copy each object to the `parties` array in OC4IDS."
+"`/planning/budgetBreakdown/sourceParty` (Budget breakdown extension), "
+"copy each object to the `parties` array in OC4IDS and add 'funder' to its"
+" `.roles`; if not available, check the `/parties` array for parties with "
+"'funder' in `/roles` and copy each object to the `parties` array in "
+"OC4IDS."
 msgstr ""
-"Valide la lista `/parties` para objetos `Organization` referenciados en "
-"`/planning/budgetBreakdown/sourceParty` (Extensión Desglose del "
-"presupuesto), copie cada uno de los objetos a la lista `parties` en OC4IDS y"
-" agregue  'funder' a `.roles`; si no esta disponible, valide la lista "
-"`/parties` para partes con 'funder' en `/roles` y copie cada uno de los "
-"objetos a la lista de `parties` en el OC4IDS."
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:6
 msgid "Project Budget"
 msgstr "Presupuesto del proyecto"
 
+#. Description
+#: mapping/project-level-preparation.csv:6
+msgid ""
+"Specify the projected costs/allocated budget for the project (currency "
+"and amount). The budget includes land / property acquisition, "
+"environmental mitigation measures, H&S provisions, client, consultant & "
+"contractor costs, VAT etc."
+msgstr ""
+"Especificar los costos proyectados/presupuesto asignado para el proyecto ("
+"moneda y monto). El presupuesto incluye adquisición de terrenos / "
+"propiedades, medidas de mitigación ambiental, disposiciones H&S, cliente, "
+"costos consultor & contratista, IVA, etc. "
+
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:6
 msgid "Project Level: Publish in `budget.amount`"
-msgstr "Nivel de proyecto: Publique en el campo `budget.amount`"
+msgstr "Nivel de Proyecto: Publicar en in `budget.amount`"
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:6
 msgid ""
 "If the project has only one contracting process, set `budget.amount` and "
 "`budget.currency` in OC4IDS to the values of `/budget/amount` and "
-"`/budget/currency`. If the project has more than one contracting process and"
-" the value of `/budget/currency` is the same in all contracting processes, "
-"set `budget.amount` in OC4IDS to the sum of the value of `/budget/amount` in"
-" each contracting process and set `budget.currency` in OC4IDS to the value "
-"of `/budget/currency`.  *Otherwise, convert the values of `/budget/amount` "
-"in each contracting process to a base currency, set `budget.amount` in "
-"OC4IDS to the sum of the converted values and set `budget.currency` in "
-"OC4IDS to the base currency.*"
+"`/budget/currency`. If the project has more than one contracting process "
+"and the value of `/budget/currency` is the same in all contracting "
+"processes, set `budget.amount` in OC4IDS to the sum of the value of "
+"`/budget/amount` in each contracting process and set `budget.currency` in"
+" OC4IDS to the value of `/budget/currency`.  *Otherwise, convert the "
+"values of `/budget/amount` in each contracting process to a base "
+"currency, set `budget.amount` in OC4IDS to the sum of the converted "
+"values and set `budget.currency` in OC4IDS to the base currency.*"
 msgstr ""
-"Si el proyecto tiene un solo proceso de contratación, establecer "
-"`budget.amount` y `budget.currency` en OC4IDS a los valores de "
-"`/budget/amount` y `/budget/currency`. Si el proyecto tiene más de un "
-"proceso de contratación y el valor de `/budget/currency` es el mismo en "
-"todos los procesos de contratación, establecer `budget.amount` en OC4IDS a "
-"la suma del valor de  `/budget/amount`  en cada proceso de contratación y "
-"establecer `budget.currency` en OC4IDS al valor de `/budget/currency` . "
-"*Caso contrario, convertir los valores de `/budget/amount` a la moneda base "
-"de cada uno de los procesos de contratación, establecer `budget.amount` en "
-"OC4IDS a la suma de los valores convertidos y establecer en OC4IDS "
-"`budget.currency` a la moneda base.*"
 
 #. CoST IDS element
 #: mapping/project-level-preparation.csv:7
 msgid "Project budget approval date"
 msgstr "Fecha de aprobación del presupuesto del proyecto"
+
+#. Description
+#: mapping/project-level-preparation.csv:7
+msgid "Date project budget was authorized"
+msgstr "Fecha en que se autorizó el presupuesto del proyecto"
 
 #. Mapping to OC4IDS
 #: mapping/project-level-preparation.csv:7
@@ -1085,37 +1241,44 @@ msgid ""
 "Project Level: Publish in `budget.approvalDate` and include additional "
 "document with `.documentType` of 'budgetApproval' if required"
 msgstr ""
-"Nivel de proyecto: Publique en el campo `budget.approvalDate` e incluir un "
-"documento adicional con `.documentType` del 'budgetApproval' si es necesario"
+"Nivel de proyecto: Publicar en `budget.approvalDate` y de ser necesario "
+"incluir documento adicional con `.documentType` de 'budgetApproval' "
 
 #. Mapping from OCDS
 #: mapping/project-level-preparation.csv:7
 msgid ""
-"Check the `/planning/documents` array for `Document` objects with `/type` "
-"set to 'budgetApproval' and copy each object to the `documents` array; *if "
-"not available, optionally check `/planning/milestones` for `Milestone` "
-"objects with `/type` set to 'approval' and set `budget/approvalDate` to the "
-"value of `/dateMet`.*"
+"Check the `/planning/documents` array for `Document` objects with `/type`"
+" set to 'budgetApproval' and copy each object to the `documents` array; "
+"*if not available, optionally check `/planning/milestones` for "
+"`Milestone` objects with `/type` set to 'approval' and set "
+"`budget/approvalDate` to the value of `/dateMet`.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con `/type` "
-"establecidos a 'budgetApproval' y copie cada uno de los objetos a la lista "
-"`documents`; *si no está disponible, opcionalmente verifique "
-"`/planning/milestones` para objetos `Milestone` con `/type` establecidos a "
-"'approval' y establezca `budget/approvalDate` al valor de `/dateMet`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-contract.csv:1
 msgid "Contract agreement and conditions"
-msgstr "Acuerdo y condiciones del contrato ."
+msgstr "Acuerdo y condiciones del contrato"
+
+#. Description
+#: mapping/reactive-process-level-contract.csv:1
+msgid ""
+"A copy of the signed contract. Consider providing both machine-readable "
+"(e.g. original PDF, Word or Open Document format files), and a separate "
+"document entry for scanned-signed pages where this is required."
+msgstr ""
+"Una copia del contrato firmado. Considerar la posibilidad de proporcionar "
+"tanto archivos legibles por máquina (por ejemplo, archivos originales en "
+"formato PDF, Word u Open Document), como una referencia documental separada "
+"para las páginas firmadas escaneadas cuando así se requiera."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-contract.csv:1
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'contractSigned'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'contractSigned'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` en "
+"[Agrebar un documento del proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer `.documentType` del "
 "'contractSigned'."
 
 #. Mapping from OCDS
@@ -1125,21 +1288,29 @@ msgid ""
 "`.documentType` set to 'contractSigned' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Validar la lista `/contracts/documents` para objetos `Document` con "
-"`.documentType` establecidos con 'contractSigned' y copiar cada uno de los "
-"objetos a la lista  `.summary.documents` .*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-contract.csv:2
 msgid "Registration and ownership of firms"
-msgstr "Registro y propiedad de empresas."
+msgstr "Registro y propiedad de las empresas"
+
+#. Description
+#: mapping/reactive-process-level-contract.csv:2
+msgid ""
+"A document issued by the relevant government registry as confirmation of "
+"the due incorporation and valid existence of the organization."
+msgstr ""
+"Un documento emitido por el registro gubernamental pertinente como "
+"confirmación de la debida constitución y existencia válida de la organización"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-contract.csv:2
 msgid ""
 "**Document:**\n"
 "\n"
-"[Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to 'incorporationCertificate'.\n"
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'incorporationCertificate'."
+"\n"
 "\n"
 "**Data:**\n"
 "\n"
@@ -1147,74 +1318,79 @@ msgid ""
 "\n"
 "* Set its `.role` to 'supplier'\n"
 "* Set its `.identifier.id` to the registration number\n"
-"* Set its `.identifier.scheme` to the code from [org-id.guide](https://org-id.guide/) for the register the identifier is drawn from\n"
+"* Set its `.identifier.scheme` to the code from [org-id.guide](https"
+"://org-id.guide/) for the register the identifier is drawn from\n"
 "* Set its `.id`"
 msgstr ""
-"**Documento:**\n"
-"\n"
-"[ Agregue un documento de proceso de contratación](../common.md#add-a-contracting-process-document) y establecer `.documentType` a 'incorporationCertificate'.\n"
-"\n"
-"**Datos:**\n"
-"\n"
-"Agregue un objeto `Organization` a la matriz `parties` y:\n"
-"\n"
-"* Establezca su `.role` a 'supplier'\n"
-"* Establezca su `.identifier.id` al número de registro\n"
-"* Establezca su `.identifier.scheme` al código de [org-id.guide](https://org-id.guide/) para el registro del que se extrae el identificador\n"
-"* Establezca su `.id`"
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-contract.csv:2
 msgid ""
-"*Check the `/contracts/documents` array for `Document` objects with `/type` set to 'incorporationCertificate' and copy each object to the `.summary.documents` array.*\n"
+"*Check the `/contracts/documents` array for `Document` objects with "
+"`/type` set to 'incorporationCertificate' and copy each object to the "
+"`.summary.documents` array.*\n"
 "\n"
-"Check the `/parties` array for `Organization` objects with 'supplier' in `/roles`. For each such object, copy it to the `parties` array in OC4IDS, add an `OrganizationReference` object to `.summary.suppliers` and set the `OrganizationReference`'s `.name` and `.id` to the `Organization`'s `.name` and `.id`."
+"Check the `/parties` array for `Organization` objects with 'supplier' in "
+"`/roles`. For each such object, copy it to the `parties` array in OC4IDS,"
+" add an `OrganizationReference` object to `.summary.suppliers` and set "
+"the `OrganizationReference`'s `.name` and `.id` to the `Organization`'s "
+"`.name` and `.id`."
 msgstr ""
-"*Valide la lista `/contracts/documents` para objetos `Document` con `/type` establecidos a 'incorporationCertificate' y copie cada uno de los objetos a la lista `.summary.documents`.*\n"
-"\n"
-"Valide la lista `/parties` para objetos `Organization` con 'supplier' en `/roles`. Para cada objeto, copie a la lista  `parties` en OC4IDS, agregue un objeto  `OrganizationReference` a `.summary.suppliers` y establecer `.name` y `.id` de `OrganizationReference` con los valores de `.name` y `.id` de  `Organization`."
 
 #. CoST IDS element
 #: mapping/reactive-process-level-contract.csv:3
 msgid "Specifications and drawings"
-msgstr "Especificaciones y planos."
+msgstr "Especificaciones y planos"
+
+#. Description
+#: mapping/reactive-process-level-contract.csv:3
+msgid "Detailed technical information about goods or services to be provided."
+msgstr ""
+"Información técnica detallada sobre los bienes y servicios que se van a "
+"suministrar"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-contract.csv:3
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'technicalSpecifications'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'technicalSpecifications'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establecer `.documentType` a "
+"[Agregar un documento de proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer `.documentType` en "
 "'technicalSpecifications'."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-contract.csv:3
 msgid ""
-"*Check the `/contracts/documents` array for `Document` objects with `/type` "
-"set to 'technicalSpecifications' and copy each object to the "
+"*Check the `/contracts/documents` array for `Document` objects with "
+"`/type` set to 'technicalSpecifications' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/documents` para objetos `Document` con `/type` "
-"establecidos a 'technicalSpecifications' y copie cada uno de los objetos a "
-"la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-implementation.csv:1
 msgid "List of variations, changes, amendments"
-msgstr "Lista de variaciones, cambios, modificaciones."
+msgstr "Lista de variaciones, cambios, enmiendas"
+
+#. Description
+#: mapping/reactive-process-level-implementation.csv:1
+msgid ""
+"Details of changes to the duration, price, scope or other significant "
+"features of the contracting process"
+msgstr ""
+"Detalles de cambios en la  duración, el precio, el alcance u otras "
+"características significativas del proceso de contratación."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-implementation.csv:1
 msgid ""
-"For each variation, change or amendment, publish an entry with a `.date` and `.description` in `.summary.modifications`.\n"
+"For each variation, change or amendment, publish an entry with a `.date` "
+"and `.description` in `.summary.modifications`.\n"
 "\n"
-"Set `.type` based on the type of change and provide the relevant before/after values in `.oldContractPeriod`, `.oldContractValue`, `.newContractPeriod` and `.newContractValue`."
+"Set `.type` based on the type of change and provide the relevant "
+"before/after values in `.oldContractPeriod`, `.oldContractValue`, "
+"`.newContractPeriod` and `.newContractValue`."
 msgstr ""
-"Por cada variación, cambio o enmienda, publique una entrada con `.date` y `.description` en `.summary.modifications`.\n"
-"\n"
-"Establezca `.type` sobre el tipo de cambio y proporcione los valores relevantes de antes/después en `.oldContractPeriod`, `.oldContractValue`, `.newContractPeriod` y `.newContractValue`."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-implementation.csv:1
@@ -1227,122 +1403,141 @@ msgid ""
 "* `/contracts/items`\n"
 "* `/contracts/implementation/milestones`\n"
 "\n"
-"*Copy `/contracts/amendments/description` to `summary.modifications.description` and `/date` to `.summary.modifications.date`.*"
+"*Copy `/contracts/amendments/description` to "
+"`summary.modifications.description` and `/date` to "
+"`.summary.modifications.date`.*"
 msgstr ""
-"*Monitoree los siguientes campos en busca de cambios:*\n"
-"\n"
-"* `/contracts/value`\n"
-"* `/contracts/period`\n"
-"* `/contracts/description`\n"
-"* `/contracts/items`\n"
-"* `/contracts/implementation/milestones`\n"
-"\n"
-"*Copie `/contracts/amendments/description` a `summary.modifications.description` y `/date` a `.summary.modifications.date`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-implementation.csv:2
 msgid "List of escalation approvals"
-msgstr "Lista de aprobaciones de incrementos"
+msgstr "Lista de aprobaciónes de incrementos"
+
+#. Description
+#: mapping/reactive-process-level-implementation.csv:2
+msgid ""
+"Documentation of one or more approved escalations of the contract price "
+"during the project life-cycle."
+msgstr ""
+"Documentación de uno o más incrementos aprobados del precio del contrato "
+"durante el ciclo de vida del proyecto."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-implementation.csv:2
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'escalationApprovals'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'escalationApprovals'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` en "
+"[Agregar un documento de proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer `.documentType` en "
 "'escalationApprovals'."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-implementation.csv:2
 msgid ""
-"*Check the `/contracts/documents` and `/contracts/implementation/documents` "
-"arrays for `Document` objects with `.documentType` set to "
-"'escalationApprovals' and copy each object to the `.summary.documents` "
-"array.*"
+"*Check the `/contracts/documents` and "
+"`/contracts/implementation/documents` arrays for `Document` objects with "
+"`.documentType` set to 'escalationApprovals' and copy each object to the "
+"`.summary.documents` array.*"
 msgstr ""
-"*Valide las listas `/contracts/documents` y "
-"`/contracts/implementation/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'escalationApprovals' y copie cada uno de los"
-" objetos a la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-implementation.csv:3
 msgid "Quality assurance reports"
-msgstr "Informes de aseguramiento de calidad."
+msgstr "Informes de aseguramiento de calidad"
+
+#. Description
+#: mapping/reactive-process-level-implementation.csv:3
+msgid ""
+"Documentation identifying deficiencies in designs, specifications, "
+"standards, methods, procedures and practices, and identifying best "
+"practices."
+msgstr ""
+"Documentación que identifica deficiencias en diseños, especificaciones, "
+"normas, métodos, procedimientos y prácticas, e y que identifica las mejores "
+"prácticas."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-implementation.csv:3
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'qualityAssuranceReport'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'qualityAssuranceReport'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` a "
+"[Agregar un documento de proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer `.documentType` en "
 "'qualityAssuranceReport'."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-implementation.csv:3
 msgid ""
-"*Check the `/contracts/documents` and `/contracts/implementation/documents` "
-"arrays for `Document` objects with `.documentType` set to "
-"'qualityAssuranceReport' and copy each object to the `.summary.documents` "
-"array.*"
+"*Check the `/contracts/documents` and "
+"`/contracts/implementation/documents` arrays for `Document` objects with "
+"`.documentType` set to 'qualityAssuranceReport' and copy each object to "
+"the `.summary.documents` array.*"
 msgstr ""
-"*Valide las listas `/contracts/documents` y "
-"`/contracts/implementation/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'qualityAssuranceReport' y copie cada uno de "
-"los objetos a la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-implementation.csv:4
 msgid "Disbursement records or payment certificates"
-msgstr "Registros de desembolso o certificados de pago"
+msgstr "Registros de desembolsos o certificados de pago"
+
+#. Description
+#: mapping/reactive-process-level-implementation.csv:4
+msgid ""
+"A list of the spending transactions made against this contract and/or a "
+"document certifying that the work specified on a supplier's estimate or "
+"invoice is complete and that payment to the supplier is approved"
+msgstr ""
+"Una lista de transacciones de gastos realizadas con cargo a este contrato y/"
+"o un documento que certifica que la obra especificada en la estimación o "
+"factura del proveedor está finalizada y que se aprueba el pago al proveedor."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-implementation.csv:4
 msgid ""
 "**Data:**\n"
 "\n"
-"For each disbursement, add a `Transaction` to `.summary.transactions` and set its fields according to the schema definitions.\n"
+"For each disbursement, add a `Transaction` to `.summary.transactions` and"
+" set its fields according to the schema definitions.\n"
 "\n"
 "**Documents:**\n"
 "\n"
-"[Add a contracting process document](../common.md#add-a-contracting-process-document) and set `.documentType` to 'paymentCertificate'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'paymentCertificate'."
 msgstr ""
-"**Datos:**\n"
-"\n"
-"Para cada desembolso, agregue una `Transaction` to `.summary.transactions` y establezca sus campos de acuerdo con las definiciones del esquema.\n"
-"\n"
-"**Documentos:**\n"
-"\n"
-"[Agregue un documento de proceso de contratación](../common.md#add-a-contracting-process-document) y establezca `.documentType` como 'paymentCertificate'."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-implementation.csv:4
 msgid ""
-"*Copy the contents of the `/contracts/implementation/transactions` array to `.summary.transactions`.*\n"
+"*Copy the contents of the `/contracts/implementation/transactions` array "
+"to `.summary.transactions`.*\n"
 "\n"
-"*Check the `/contracts/implementation/documents` array for `Document` objects with `.documentType` set to 'paymentCertificate' and copy each object to the `.summary.documents` array.*"
+"*Check the `/contracts/implementation/documents` array for `Document` "
+"objects with `.documentType` set to 'paymentCertificate' and copy each "
+"object to the `.summary.documents` array.*"
 msgstr ""
-"*Copie los contenidos de la lista `/contracts/implementation/transactions` a `.summary.transactions`.*\n"
-"\n"
-"*Valide la lista `/contracts/implementation/documents` para objetos `Document` con `.documentType` establecidos a 'paymentCertificate' y copie cada uno de los objetos a la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-implementation.csv:5
 msgid "Contract amendments"
-msgstr "Enmiendas del contrato"
+msgstr "Enmiendas al contrato"
+
+#. Description
+#: mapping/reactive-process-level-implementation.csv:5
+msgid ""
+"A legal document that changes or adds to the terms of an existing "
+"contract."
+msgstr ""
+"Un documento legal que cambia o agrega términos a un contrato existente."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-implementation.csv:5
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'contractAmendment'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'contractAmendment'."
 msgstr ""
-"[ Agregar un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establecer `.documentType` a "
+"[Agregar un documento del proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y configurar`.documentType` del "
 "'contractAmendment'."
 
 #. Mapping from OCDS
@@ -1352,19 +1547,26 @@ msgid ""
 "`.documentType` set to 'contractAmendment' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'contractAmendment' y copie cada uno de los "
-"objetos a la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-procurement.csv:1
 msgid "Contract officials and roles"
-msgstr "Oficiales contratados y roles"
+msgstr "Oficiales de contratos y roles"
+
+#. Description
+#: mapping/reactive-process-level-procurement.csv:1
+msgid ""
+"Name and position of the public official in charge of administration of "
+"the contract(s)."
+msgstr ""
+"Nombre y puesto del funcionario público a cargo de la administración del "
+"contrato(s)"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-procurement.csv:1
 msgid ""
-"From the `parties` array, get the `Organization` object whose role is 'administrativeEntity'. If none exists yet:\n"
+"From the `parties` array, get the `Organization` object whose role is "
+"'administrativeEntity'. If none exists yet:\n"
 "\n"
 "* Add an `Organization` object to the `parties` array\n"
 "* Set its `.name` to the name of the administrative entity\n"
@@ -1376,47 +1578,40 @@ msgid ""
 "* Set its `.name` to the contract official's name\n"
 "* Set its `.jobTitle` to the contract official's job title"
 msgstr ""
-"De la lista `parties`, obtener el objeto `Organization` cuyo rol es 'administrativeEntity'. Sí aún no existe ninguno:\n"
-"\n"
-"* Agregue un objeto `Organization` a la lista `parties`\n"
-"* Establezca `.name` al nombre de la entidad administrativa\n"
-"* Establezca su `.role` a 'administrativeEntity'\n"
-"\n"
-"Agregue un objeto `Person` de la lista `.people` de la organización y:\n"
-"\n"
-"* Establezca su `.id` de forma incremental\n"
-"* Establezca su `.name` al nombre del funcionario contratado\n"
-"* Establezca su `.jobTitle` al cargo del funcionario contratado"
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-procurement.csv:1
 msgid ""
 "*Check the `/parties` array for `Organization` objects with "
-"'administrativeEntity' in `/roles`. Copy each object to the `parties` array "
-"in OC4IDS. If there is more than one procuring entity, do not set "
+"'administrativeEntity' in `/roles`. Copy each object to the `parties` "
+"array in OC4IDS. If there is more than one procuring entity, do not set "
 "`.summary.tender.procuringEntity.name` and "
-"`.summary.tender.procuringEntity.id`; otherwise, set them to the procuring "
-"entity's `.name` and `.id`.*"
+"`.summary.tender.procuringEntity.id`; otherwise, set them to the "
+"procuring entity's `.name` and `.id`.*"
 msgstr ""
-"*Valide la lista `/parties` para objetos `Organization` con "
-"'administrativeEntity' en `/roles`. Copie cada uno de los objetos a la lista"
-" `parties` en OC4IDS. Si hay más de una una entidad contratante, no "
-"establecer `.summary.tender.procuringEntity.name` y "
-"`.summary.tender.procuringEntity.id`; caso contrario establecer `.name` y "
-"`.id`. de las entidades contratantes.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-procurement.csv:2
 msgid "Procurement method"
-msgstr "Método de adquisición"
+msgstr "Método de adquisiciones y contrataciones"
+
+#. Description
+#: mapping/reactive-process-level-procurement.csv:2
+msgid ""
+"Specify tendering method using the method codelist (open, selective, "
+"limited, direct)."
+msgstr ""
+"Especifíque el método de licitación utilizando la lista de códigos del "
+"método (abierta, selectiva, limitada, directa)."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-procurement.csv:2
 msgid ""
-"Set `.summary.tender.procurementMethod` to a value from the Method codelist."
+"Set `.summary.tender.procurementMethod` to a value from the Method "
+"codelist."
 msgstr ""
-"Establezca `.summary.tender.procurementMethod` con un valor de la lista de "
-"códigos del Método."
+"Establecer `.summary.tender.procurementMethod` a un valor de la lista de "
+"códigos de Metodo."
 
 #. Mapping from OCDS
 #: mapping/reactive-process-level-procurement.csv:2
@@ -1424,22 +1619,31 @@ msgid ""
 "Set `.summary.tender.procurementMethod` to the value of "
 "`/tender/procurementMethod`."
 msgstr ""
-"Establezca `.summary.tender.procurementMethod` al valor de "
-"`/tender/procurementMethod`."
 
 #. CoST IDS element
 #: mapping/reactive-process-level-procurement.csv:3
 msgid "Tender documents"
-msgstr "Documentos de licitación"
+msgstr "Documentos de la licitación"
+
+#. Description
+#: mapping/reactive-process-level-procurement.csv:3
+msgid ""
+"Documentation for potential suppliers, describing the goals of the "
+"contract (e.g. goods and services to be procured), and the bidding "
+"process."
+msgstr ""
+"Documentación para proveedores potenciales, que describen los objetivos del "
+"contrato (ej. bienes y servicios a ser adquiridos), y el proceso de la "
+"licitación"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-procurement.csv:3
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'biddingDocuments'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'biddingDocuments'."
 msgstr ""
-"[ Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` a "
+"[Agregar un documento de proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer el`.documentType` al "
 "'biddingDocuments'."
 
 #. Mapping from OCDS
@@ -1449,23 +1653,29 @@ msgid ""
 "`.documentType` set to 'biddingDocuments' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Valide la lista `/tender/documents` para los objetos  `Document` con "
-"`.documentType` establecidos a 'biddingDocuments' y copie cada uno de los "
-"objetos a la lista `.summary.documents`.* "
 
 #. CoST IDS element
 #: mapping/reactive-process-level-procurement.csv:4
 msgid "Tender evaluation results"
 msgstr "Resultados de la evaluación de la licitación"
 
+#. Description
+#: mapping/reactive-process-level-procurement.csv:4
+msgid ""
+"Documentation on the evaluation of the bids and the application of the "
+"evaluation criteria, including the justification for the award."
+msgstr ""
+"Documentación sobre la evaluación de las ofertas y la aplicación de los "
+"criterios de evaluación, incluyendo la justificación de la adjudicación."
+
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-procurement.csv:4
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'evaluationReports'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'evaluationReports'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` a "
+"[Agregar un documento del proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer el`.documentType` a los "
 "'evaluationReports'."
 
 #. Mapping from OCDS
@@ -1475,23 +1685,31 @@ msgid ""
 "`.documentType` set to 'evaluationReports' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Valide la lista `/tender/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'evaluationReports' y copie cada objeto a la "
-"lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-process-level-procurement.csv:5
 msgid "Project design report"
-msgstr "Informe de diseño del proyecto."
+msgstr "Informe del diseño del proyecto"
+
+#. Description
+#: mapping/reactive-process-level-procurement.csv:5
+msgid ""
+"A record of the justification for the design approach adopted in the "
+"project, typically issued before the works start, by the consultant or "
+"firm that will supervise the works."
+msgstr ""
+"Un registro de la justificación del enfoque del diseño adoptado para el "
+"proyecto, generalmente elaborado después de iniciada las obras, por el "
+"consultor o la firma encargada de la supervisión de las obras."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-process-level-procurement.csv:5
 msgid ""
-"[Add a contracting process document](../common.md#add-a-contracting-process-"
-"document) and set `.documentType` to 'projectDesignReport'."
+"[Add a contracting process document](../common.md#add-a-contracting-"
+"process-document) and set `.documentType` to 'projectDesignReport'."
 msgstr ""
-"[Agregue un documento de proceso de contratación](../common.md#add-a-"
-"contracting-process-document) y establezca `.documentType` en "
+"[Agregar documento de proceso de contratación](../common.md#add-a"
+"-contracting-process-document) y establecer `.documentType` al "
 "'projectDesignReport'."
 
 #. Mapping from OCDS
@@ -1501,53 +1719,60 @@ msgid ""
 "`.documentType` set to 'projectDesignReport' and copy each object to the "
 "`.summary.documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` estblecidos a  'projectDesignReport' y copie cada objeto a "
-"la lista `.summary.documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:1
 msgid "Implementation progress reports"
-msgstr "Informes de progreso de implementación"
+msgstr "Informes de avance de la implementación"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:1
+msgid "Planned and actual physical and financial progress over time."
+msgstr "Avances físicos y financieros planificados y reales en el tiempo."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:1
 msgid ""
 "**Documents**\n"
 "\n"
-"Physical progress reports: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'physicalProgressReport'.\n"
+"Physical progress reports: [Add a project document](../common.md#add-a"
+"-project-document) and set `.documentType` to 'physicalProgressReport'.\n"
 "\n"
-"Financial progress reports: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'financialProgressReport'.\n"
+"Financial progress reports: [Add a project document](../common.md#add-a"
+"-project-document) and set `.documentType` to 'financialProgressReport'."
+"\n"
 "\n"
 "**Data**\n"
 "\n"
 "See [implementation progress reports](#implementation-progress-reports)"
 msgstr ""
-"**Documentos**\n"
-"\n"
-"Informes de progreso físico: [ Agregue un documento de proyecto](../common.md#add-a-project-document) y establezca `.documentType` a 'physicalProgressReport'.\n"
-"\n"
-"Informes de progreso financiero: [ Agregue un documento de proyecto](../common.md#add-a-project-document) y establezca `.documentType` a 'financialProgressReport'.\n"
-"\n"
-"**Datos**\n"
-"\n"
-"Vea [informes de progreso de implementación](#implementation-progress-reports)"
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:1
 msgid ""
-"*Optionally, check the `/contracts/implementation` array for `Document` objects with `.documentType` set to 'physicalProgressReport' or 'financialProgressReport and copy each object to the `.summary.documents` array.*\n"
+"*Optionally, check the `/contracts/implementation` array for `Document` "
+"objects with `.documentType` set to 'physicalProgressReport' or "
+"'financialProgressReport and copy each object to the `.summary.documents`"
+" array.*\n"
 "\n"
-"*Optionally, copy the contents of the `/planning/forecasts` array to `forecasts` and copy the contents of the `/contracts/implementation/metrics` array to `metrics`.*"
+"*Optionally, copy the contents of the `/planning/forecasts` array to "
+"`forecasts` and copy the contents of the "
+"`/contracts/implementation/metrics` array to `metrics`.*"
 msgstr ""
-"*Opcionalmente, valide la lista  `/contracts/implementation` para objetos `/contracts/implementation` con `.documentType` establecidos a 'physicalProgressReport' o  'financialProgressReport y copie cada objeto a la lista `.summary.documents`.*\n"
-"\n"
-"*Opcionalmente, copie el contenido de la lista `/planning/forecasts` a `forecasts` y copie elcontenido de la lista `/contracts/implementation/metrics` a `metrics`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:2
 msgid "Budget amendment decision"
-msgstr "Decisión de modificación del presupuesto"
+msgstr "Decisión de enmienda al presupuesto"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:2
+msgid ""
+"Document accrediting the approval of budget expansion or extension for "
+"this project."
+msgstr ""
+"Documentación que acredita la aprobación de la ampliación o incremento del "
+"presupuesto para este proyecto"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:2
@@ -1555,24 +1780,34 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'budgetAmendmentApproval'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` en 'budgetAmendmentApproval'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` de 'budgetAmendmentApproval'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:2
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.documentType` set to 'budgetAmendmentApproval' and copy each object to the"
-" `documents` array.*"
+"`.documentType` set to 'budgetAmendmentApproval' and copy each object to "
+"the `documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a  'budgetAmendmentApproval' y copie cada "
-"objeto a la lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:3
 msgid "Project completion report"
 msgstr "Informe de finalización del proyecto"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:3
+msgid ""
+"A completion certificate issued by a relevant authority providing "
+"evidence that works were completed to a certain level of quality. "
+"Completion certificates might only be relevant for particular kinds of "
+"contracting processes or projects."
+msgstr ""
+"Un certificado de finalización emitido por una autoridad pertinente que "
+"demuestra que las obras han sido finalizadas con cierto nivel de calidad. "
+"Los certificados de finalización de obra son pertinentes únicamente para "
+"cierto tipo de procesos de contratación o proyectos."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:3
@@ -1580,24 +1815,30 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'projectCompletionReport'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` a 'projectCompletionReport'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` del 'projectCompletionReport'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:3
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.documentType` set to 'projectCompletionReport' and copy each object to the"
-" `documents` array.*"
+"`.documentType` set to 'projectCompletionReport' and copy each object to "
+"the `documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/implementation` para objetos `Document` con "
-"`.documentType` establecidos a 'projectCompletionReport' y copie cada objeto"
-" a la lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:4
 msgid "Project evaluation report"
 msgstr "Informe de evaluación del proyecto"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:4
+msgid ""
+"Generally published at the conclusion of a project, providing a technical"
+" and financial summary of delivery"
+msgstr ""
+"En general publicado al finalizar un proyecto, y presenta un resumen técnico "
+"y financiero de la entrega."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:4
@@ -1605,8 +1846,8 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'projectEvaluation'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` a 'projectEvaluation'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` del 'projectEvaluation'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:4
@@ -1615,14 +1856,20 @@ msgid ""
 "`.documentType` set to 'projectEvaluation' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/implementation` para objetos `Document` con "
-"`.documentType` establecidos a 'projectEvaluation' y copie cada objeto a la "
-"lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:5
 msgid "Technical audit reports"
 msgstr "Informes de auditoría técnica"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:5
+msgid ""
+"Documentation of checks that construction work has been undertaken as "
+"specified."
+msgstr ""
+"Documentación de las comprobaciones de que los trabajos de construcción se "
+"han realizado según lo especificado."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:5
@@ -1630,24 +1877,30 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'technicalAuditReport'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca`.documentType` en 'technicalAuditReport'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer el `.documentType` del 'technicalAuditReport'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:5
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.documentType` set to 'technicalAuditReport' and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to 'technicalAuditReport' and copy each object to the"
+" `documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/implementation` para objetos `Document` con "
-"`.documentType` establecidos a 'technicalAuditReport' y copie cada objeto a "
-"la lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-completion.csv:6
 msgid "Financial audit reports"
-msgstr "Informes de auditoría financiera"
+msgstr "Informes de auditorías financieras"
+
+#. Description
+#: mapping/reactive-project-level-completion.csv:6
+msgid ""
+"Documentation of checks that a project's financial statements are correct"
+" and complete."
+msgstr ""
+"Documentación de comprobación de que los estados financieros de un proyecto "
+"son correctos y completos."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-completion.csv:6
@@ -1655,55 +1908,68 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'financialAuditReport'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca`.documentType` como 'financialAuditReport'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer el `.documentType` del 'financialAuditReport'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-completion.csv:6
 msgid ""
 "*Check the `/contracts/implementation` array for `Document` objects with "
-"`.documentType` set to 'financialAuditReport' and copy each object to the "
-"`documents` array.*"
+"`.documentType` set to 'financialAuditReport' and copy each object to the"
+" `documents` array.*"
 msgstr ""
-"*Valide la lista `/contracts/implementation` para objetos `Document` con "
-"`.documentType` establecidos a 'financialAuditReport' y copie cada objeto a "
-"la lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:1
 msgid "Multi-year programme & Budget"
-msgstr "Programa y presupuesto plurianual"
+msgstr "Programa y presupuesto plurianuales"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:1
+msgid "A detailed breakdown of the budget by period and/or participating funders."
+msgstr ""
+"Un desglose detallado del presupuesto por período y/o financiadores "
+"participantes"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:1
 msgid ""
-"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its `.id` incrementally and set its `.description` to 'Breakdown by year'. For each year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` array and set its fields as follows:\n"
+"Add a `BudgetBreakdowns` object to `budget/budgetBreaksdown`, set its "
+"`.id` incrementally and set its `.description` to 'Breakdown by year'. "
+"For each year, add a `BudgetBreakdown` object to its `.BudgetBreakdown` "
+"array and set its fields as follows:\n"
 "\n"
 "* Set its `id` to the year, e.g. '2020'\n"
-"* Set its `.amount.amount` to the amount of the budget allocated to the year and set `.amount.currency` to the currency of the budget\n"
-"* Set its `.period.startDate` to the first day of the year, e.g. '2020-01-01T00:00:00Z'\n"
-"* Set its `.period.endDate` to the last day of the year, e.g '2020-12-31T23:59:59Z"
+"* Set its `.amount.amount` to the amount of the budget allocated to the "
+"year and set `.amount.currency` to the currency of the budget\n"
+"* Set its `.period.startDate` to the first day of the year, e.g. "
+"'2020-01-01T00:00:00Z'\n"
+"* Set its `.period.endDate` to the last day of the year, e.g "
+"'2020-12-31T23:59:59Z"
 msgstr ""
-"Agregue un objeto `BudgetBreakdowns` a `budget/budgetBreaksdown`, establezca el `.id` incrementalmente y establezca `.description` a 'Breakdown by year'. Para cada año, agregue un objeto `BudgetBreakdown` a su secuencia `.BudgetBreakdown`  y establezca los campos como sigue:\n"
-"\n"
-"* Establezca su `id` al año, e.g. '2020'\n"
-"* Establezca su `.amount.amount` a la cantidad del presupuesto asignado al año y establezca  `.amount.currency` a la moneda del presupuesto \n"
-"* Establezca su `.period.startDate` al primer día del año, e.g. '2020-01-01T00:00:00Z'\n"
-"* Establezca su `.period.endDate` al último día del año, e.g '2020-12-31T23:59:59Z"
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:1
 msgid ""
-"*Copy the contents of `/planning/budget/budgetBreakdown` in each contracting"
-" process to `budget.BudgetBreakdown`.*"
+"*Copy the contents of `/planning/budget/budgetBreakdown` in each "
+"contracting process to `budget.BudgetBreakdown`.*"
 msgstr ""
-"*Copie el contenido de `/planning/budget/budgetBreakdown` en cada proceso de"
-" contratación a `budget.BudgetBreakdown`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:2
 msgid "Project brief or Feasibility study"
-msgstr "Resumen del proyecto o estudio de factibilidad"
+msgstr "Perfil del proyecto o estudio de factibilidad"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:2
+msgid ""
+"Documentation of feasibility studies carried out for this contracting "
+"process or project, providing information on net benefits or costs of the"
+" proposed goods, works or services."
+msgstr ""
+"Documentación de los estudios de factibilidad realizados para este proceso "
+"de contratación o proyecto, que proporciona información sobre los beneficios "
+"o costos de los bienes, las obras o los servicios propuestos."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:2
@@ -1711,8 +1977,8 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'feasibilityStudy'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` en 'feasibilityStudy'."
+"[Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"determinar `.documentType` al 'feasibilityStudy'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:2
@@ -1721,45 +1987,71 @@ msgid ""
 "`.documentType` set to 'feasibilityStudy' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'feasibilityStudy' y copie cada objeto a la "
-"lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:3
 msgid "Environmental and social impact assessment"
 msgstr "Evaluación de impacto ambiental y social"
 
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:3
+msgid ""
+"**Environmental impact assessment**\n"
+"Documentation of assessments of the environmental impacts (e.g. impacts "
+"on flora, fauna & woodlands, areas of natural beauty, carbon emissions "
+"etc.) and mitigation measures (e.g. pollution control, low carbon "
+"solutions, sustainable timber etc.) for this contracting process or "
+"project.\n"
+"\n"
+"**Social impact assessment**\n"
+"Documentation of assessments of the intended and unintended social "
+"consequences of this project, and documentation of mitigation measures "
+"for those social consequences. Social impacts are changes that affect "
+"people, directly or indirectly (e.g. changes to people's way of life, "
+"culture, community, health and well-being etc.)."
+msgstr ""
+
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:3
 msgid ""
-"Environmental impact assessment: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'environmentalImpact'.\n"
+"Environmental impact assessment: [Add a project "
+"document](../common.md#add-a-project-document) and set `.documentType` to"
+" 'environmentalImpact'.\n"
 "\n"
-"Social impact assessment: [Add a project document](../common.md#add-a-project-document) and set `.documentType` to 'environmentalImpact' or 'socialImpact'.\n"
+"Social impact assessment: [Add a project document](../common.md#add-a"
+"-project-document) and set `.documentType` to 'environmentalImpact' or "
+"'socialImpact'.\n"
 "\n"
-"If a single document covers both the environmental and social impact assessment, add two documents to `documents` and set the first document's `.documentType` to 'environmentalImpact' and the second document's `.documentType` to 'socialImpact'."
+"If a single document covers both the environmental and social impact "
+"assessment, add two documents to `documents` and set the first document's"
+" `.documentType` to 'environmentalImpact' and the second document's "
+"`.documentType` to 'socialImpact'."
 msgstr ""
-"Evaluación del impacto ambiental: [ Agregue un documento de proyecto](../common.md#add-a-project-document) y establezca `.documentType` en 'environmentalImpact'.\n"
-"\n"
-"Evaluación del impacto social: [ Agregar un documento de proyecto](../common.md#add-a-project-document) y establezca `.documentType` en 'environmentalImpact' o 'socialImpact'.\n"
-"\n"
-"Si un único documento abarca tanto la evaluación del impacto ambiental como la social, agregue dos documentos a `documents` y establezca el `.documentType` del primer documento en 'environmentalImpact' y el `.documentType` del segundo en 'socialImpact'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:3
 msgid ""
 "*Check the `/planning/documents` array for `Document` objects with "
-"`.documentType` set to 'environmentalImpact' or 'socialImpact' and copy each"
-" object to the `documents` array.*"
+"`.documentType` set to 'environmentalImpact' or 'socialImpact' and copy "
+"each object to the `documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'environmentalImpact' o 'socialImpact' y "
-"copie cada objeto a la lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:4
 msgid "Resettlement and compensation plan"
-msgstr "Plan de reasentamiento y compensación."
+msgstr "Plan de reasentamientos y compensaciones"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:4
+msgid ""
+"Documentation of the procedures and actions to mitigate adverse effects, "
+"compensate losses, and provide development benefits to people and "
+"communities affected by the contracting process or project."
+msgstr ""
+"Documentación de los procedimientos y acciones para mitigar efectos "
+"adversos, compensar pérdidas y proporcionar beneficios de desarrollo a las "
+"personas y comunidades afectadas por el proceso de contratación o el "
+"proyecto."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:4
@@ -1777,19 +2069,27 @@ msgid ""
 "`.documentType` set to 'resettlementPlan' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` ajustados a 'resettlementPlan' y copie cada objeto a la "
-"lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:5
 msgid "Project officials and roles"
-msgstr "Oficiales de proyecto y roles "
+msgstr "Oficiales de proyecto y su rol"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:5
+msgid ""
+"Name and position of the highest authority in the procuring entity where "
+"the budget for this project is allocated (project owner)"
+msgstr ""
+"Nombre y posición de la autoridad superior en la entidad de adquisiciones a "
+"la cual se asigna el presupuesto para este proyecto (propietario del "
+"proyecto)"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:5
 msgid ""
-"From the `parties` array, get the `Organization` object whose role is 'publicAuthority'. If none exists yet:\n"
+"From the `parties` array, get the `Organization` object whose role is "
+"'publicAuthority'. If none exists yet:\n"
 "\n"
 "* Add a party\n"
 "* Set its `.name` to the name of the procuring entity\n"
@@ -1801,22 +2101,16 @@ msgid ""
 "* Set its `.name` to the project official's name\n"
 "* Set its `.jobTitle` to the project official's job title"
 msgstr ""
-"De la lista `parties`, obtenga el objeto `Organization` cuyo rol es  'publicAuthority'. Si todavía no existe ninguno:\n"
-"\n"
-"* Agregue una parte\n"
-"* Establezca `.name` al nombre de la entidad contratante\n"
-"* Establezca su `.role` a 'procuringEntity'\n"
-"\n"
-"Agregue un objeto `Person` a la lista `.people` de la organización y:\n"
-"\n"
-"* Establezca su `.id` de forma incremental\n"
-"* Establezca `.name` al nombre del funcionario del proyecto\n"
-"* Establezca `.jobTitle` al cargo del funcionario del proyecto"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:6
 msgid "Financial agreement"
-msgstr "Contrato financiero"
+msgstr "Acuerdo de financiamiento"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:6
+msgid "Loan or donation agreement with financing conditions."
+msgstr "Contrato de préstamo o donación con condiciones financieras"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:6
@@ -1824,8 +2118,8 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'financialAgreement'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` a 'financialAgreement'."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` a 'financialAgreement'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:6
@@ -1834,14 +2128,20 @@ msgid ""
 "`.documentType` set to 'financialAgreement' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'financialAgreement' y copie cada objeto a la"
-" lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:7
 msgid "Procurement plan"
 msgstr "Plan de adquisiciones"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:7
+msgid ""
+"Documentation that sets out the basis for this particular contracting "
+"process."
+msgstr ""
+"Documentación que establece las bases de este proceso de contratación "
+"específico"
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:7
@@ -1849,8 +2149,8 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'procurementPlan'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` como 'procurementPlan'."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` como 'procurementPlan'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:7
@@ -1859,14 +2159,16 @@ msgid ""
 "`.documentType` set to 'procurementPlan' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a 'procurementPlan' y copie cada objeto a la "
-"lista `documents`.*"
 
 #. CoST IDS element
 #: mapping/reactive-project-level-identification-preparation.csv:8
 msgid "Project approval decision"
 msgstr "Decisión de aprobación del proyecto"
+
+#. Description
+#: mapping/reactive-project-level-identification-preparation.csv:8
+msgid "Additional details about the approval of the budget."
+msgstr "Detalles adicionales sobre la aprobación del presupuesto."
 
 #. Mapping to OC4IDS
 #: mapping/reactive-project-level-identification-preparation.csv:8
@@ -1874,8 +2176,8 @@ msgid ""
 "[Add a project document](../common.md#add-a-project-document) and set "
 "`.documentType` to 'budgetApproval'."
 msgstr ""
-"[ Agregue un documento de proyecto](../common.md#add-a-project-document) y "
-"establezca `.documentType` en 'budgetApproval'."
+"[ Agregar un documento de proyecto](../common.md#add-a-project-document) y "
+"establecer `.documentType` en 'budgetApproval'."
 
 #. Mapping from OCDS
 #: mapping/reactive-project-level-identification-preparation.csv:8
@@ -1884,6 +2186,3 @@ msgid ""
 "`.documentType` set to 'budgetApproval' and copy each object to the "
 "`documents` array.*"
 msgstr ""
-"*Valide la lista `/planning/documents` para objetos `Document` con "
-"`.documentType` establecidos a  'budgetApproval' y copiar cada objeto a la "
-"lista `documents`.*"

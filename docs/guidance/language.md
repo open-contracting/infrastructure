@@ -53,7 +53,7 @@ flatten-tool flatten -s https://standard.open-contracting.org/infrastructure/0.9
 
 ## Publishing in multiple languages
 
-To publish data in multiple languages, follow the above guidance and publish a separate [project package](../../reference/package.md) for each language. You need to ensure that the values of `id` fields are consistent across packages, so that users can find the translations of objects.
+To publish data in multiple languages, follow the above guidance and publish a separate [project package](../reference/package.md) for each language. You need to ensure that the values of `id` fields are consistent across packages, so that users can find the translations of objects.
 
 ## Internationalization lookup table
 

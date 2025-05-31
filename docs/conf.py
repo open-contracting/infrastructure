@@ -83,6 +83,8 @@ smartquotes = False
 myst_enable_extensions = ["linkify"]
 myst_heading_anchors = 6
 myst_heading_slug_func = make_id
+# WARNING: cannot cache unpickable configuration value: 'myst_heading_slug_func'
+suppress_warnings = ["config.cache"]
 
 # Theme customization.
 navigation_with_keys = False  # restore the Sphinx default
@@ -110,20 +112,17 @@ def setup(app):
 
     language = app.config.overrides.get("language", "en")
 
-    # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
-    codelist_headers = ["Title", "Description", "Extension", "Business Logic"]
-    # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
-    mapping_headers = ["CoST IDS element", "CoST IDS draft definition", "Mapping to OC4IDS", "Mapping from OCDS"]
-
     # The gettext domain for schema translations. Should match the domain in the `pybabel compile` command.
     schema_domain = f"{gettext_domain_prefix}schema"
     # The gettext domain for codelist translations. Should match the domain in the `pybabel compile` command.
     codelists_domain = f"{gettext_domain_prefix}codelists"
     # The gettext domain for mapping translations. Should match the domain in the `pybabel compile` command.
     mapping_domain = f"{gettext_domain_prefix}mappings"
+    # The gettext domain for sustainability mapping translations.
+    # Should match the domain in the `pybabel compile` command.
+    sustainability_mapping_domain = f"{gettext_domain_prefix}sustainability-mapping"
 
     schema_dir = basedir / "schema" / "project-level"
-    static_dir = basedir / "docs" / "_static" / "project-level"
     build_dir = basedir / "build" / language
 
     branch = os.getenv("GITHUB_REF_NAME", "latest")
@@ -131,27 +130,39 @@ def setup(app):
     translate(
         [
             # The glob patterns in `babel_ocds_schema.cfg` should match these filenames.
-            (glob(str(schema_dir / "*-schema.json")), static_dir, schema_domain),
             (glob(str(schema_dir / "*-schema.json")), build_dir, schema_domain),
             # The glob patterns in `babel_ocds_codelist.cfg` should match these.
-            (glob(str(schema_dir / "codelists" / "*.csv")), static_dir / "codelists", codelists_domain),
             (glob(str(schema_dir / "codelists" / "*.csv")), build_dir / "codelists", codelists_domain),
         ],
         localedir,
         language,
-        codelist_headers,
+        # Headers for columns to translate in codelist CSVs. The headers in babel_ocds_mapping.cfg should match these.
+        ["Title", "Description", "Extension", "Business Logic"],
         version=branch,
     )
 
     translate(
         [
             # The glob patterns in `babel_ocds_mapping.cfg` should match these filenames.
-            (glob(str(basedir / "mapping" / "*.csv")), static_dir, mapping_domain),
             (glob(str(basedir / "mapping" / "*.csv")), build_dir, mapping_domain),
         ],
         localedir,
         language,
-        mapping_headers,
+        # Headers for columns to translate in mapping CSVs. The headers in babel_ocds_mapping.cfg should match these.
+        ["CoST IDS element", "Description", "Mapping to OC4IDS", "Mapping from OCDS"],
+        version=branch,
+    )
+
+    translate(
+        [
+            # The glob patterns in `babel_oc4ids_sustainability_mapping.cfg` should match these.
+            (glob(str(basedir / "mapping" / "sustainability.yaml")), build_dir, sustainability_mapping_domain),
+        ],
+        localedir,
+        language,
+        [],
+        # Keys for values to translate in sustainability.yaml. Should match babel_oc4ids_sustainability_mapping.cfg.
+        keys=["title", "disclosure format", "mapping"],
         version=branch,
     )
 
@@ -166,4 +177,3 @@ def setup(app):
                     for row in reader:
                         del row[column_index]  # Drop mapping column
                         writer.writerow(row[0:3])  # Drop OC4IDS Fields and OC4IDS Codes columns
-            path.unlink()
