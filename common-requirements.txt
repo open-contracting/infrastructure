@@ -42,7 +42,7 @@ docutils==0.18
     # via
     #   myst-parser
     #   sphinx
-elastic-transport==8.4.0
+elastic-transport==8.17.1
     # via elasticsearch
 elasticsearch==8.6.2
     # via ocdsindex
@@ -158,7 +158,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@185b1be837be4158bf7e04c143bca0911862e35b#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@c83a80cb13b71bab23e251bc7353c1c76fabb228#egg=standard_theme
     # via -r common-requirements.in
 starlette==0.40.0
     # via sphinx-autobuild
@@ -180,7 +180,7 @@ uc-micro-py==1.0.1
     # via linkify-it-py
 url-normalize==1.4.3
     # via requests-cache
-urllib3==1.26.19
+urllib3==2.5.0
     # via
     #   elastic-transport
     #   requests
