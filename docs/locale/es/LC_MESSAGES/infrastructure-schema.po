@@ -18,14 +18,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-25 15:32+1300\n"
+"POT-Creation-Date: 2025-09-02 20:56-0400\n"
 "PO-Revision-Date: 2020-06-25 01:03+0000\n"
 "Last-Translator: Evelyn Dinora Hernandez Martinez <e.hernandez@infrastructuretransparency.org>, 2025\n"
 "Language-Team: Spanish (https://app.transifex.com/open-contracting-partnership-1/teams/112299/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.17.0\n"
 "Language: es\n"
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
@@ -2280,6 +2280,7 @@ msgstr ""
 
 #. /definitions/Organization/properties/id/description
 #: schema/project-level/project-schema.json:1
+#, python-brace-format
 msgid ""
 "The ID used for cross-referencing to this party from other sections of the "
 "release. This field may be built with the following structure "
@@ -3238,6 +3239,7 @@ msgstr "El nombre completo de la persona."
 
 #. /definitions/Person/properties/identifier/description
 #: schema/project-level/project-schema.json:1
+#, python-brace-format
 msgid ""
 "An official identifier for the person. The scheme should follow the pattern "
 "{JURISDICTION}-{TYPE}, where JURISDICTION is a three-letter, uppercase ISO "
