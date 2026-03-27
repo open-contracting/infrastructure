@@ -182,5 +182,5 @@ Review the [CoST IDS mapping](https://standard.open-contracting.org/infrastructu
 ```{admonition} Are you ready to start using OC4IDS?
 :class: Tip
 
-Complete the [OC4IDS scoping template](https://www.open-contracting.org/resources/oc4ids-scoping-template/) and share it with the [OC4IDS helpdesk](mailto:data@open-contracting.org).
+Complete the [OC4IDS scoping template](https://www.open-contracting.org/resources/oc4ids-scoping-template/) and share it with the [OC4IDS Helpdesk](../../support).
 ```
