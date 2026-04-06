@@ -714,10 +714,8 @@ def update(ppp_base_url):
         "Organization",
         {
             # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
-            ("properties", "roles", "description"): lambda s: (
-                s.replace("contracting process", "project").replace(
-                    "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
-                )
+            ("properties", "roles", "description"): lambda s: s.replace("contracting process", "project").replace(
+                "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
             ),
         },
     )
@@ -778,8 +776,8 @@ def update(ppp_base_url):
         "Document",
         {
             # Link to infrastructure codelist instead of PPP codelist.
-            ("properties", "documentType", "description"): lambda s: (
-                s.replace("profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/")
+            ("properties", "documentType", "description"): lambda s: s.replace(
+                "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
             ),
         },
     )
@@ -799,8 +797,8 @@ def update(ppp_base_url):
     _copy_element(
         "Metric",
         {
-            ("properties", "id", "description"): lambda s: (
-                s.replace("contracting process", "contracting process or project")
+            ("properties", "id", "description"): lambda s: s.replace(
+                "contracting process", "contracting process or project"
             ),
         },
     )
@@ -844,11 +842,9 @@ def update(ppp_base_url):
         "MilestoneReference",
         {
             # Remove reference to release, add reference to project.
-            ("properties", "id", "description"): lambda s: (
-                s.replace(
-                    " described elsewhere in a release about this contracting process.",
-                    " in this project or contracting process's `.milestones`.",
-                )
+            ("properties", "id", "description"): lambda s: s.replace(
+                " described elsewhere in a release about this contracting process.",
+                " in this project or contracting process's `.milestones`.",
             ),
         },
     )
