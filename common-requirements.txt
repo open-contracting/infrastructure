@@ -69,7 +69,7 @@ jsonref==1.0.0.post1
     # via ocdsextensionregistry
 linkify-it-py==1.0.1
     # via -r common-requirements.in
-lxml==6.0.2
+lxml==6.0.4
     # via ocdsindex
 markdown-it-py==2.2.0
     # via
@@ -110,7 +110,7 @@ pygments==2.20.0
     #   sphinx
 pysocks==1.7.1
     # via urllib3
-pytest==9.0.2
+pytest==9.0.3
     # via -r common-requirements.in
 python-dateutil==2.9.0.post0
     # via elasticsearch
@@ -164,7 +164,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@5ab01a75d04b92c39a7826b91250157667521cff#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@91c74b23da0079f05813fc8b4a4bc795026e8ae7#egg=standard_theme
     # via -r common-requirements.in
 starlette==0.50.0
     # via sphinx-autobuild
