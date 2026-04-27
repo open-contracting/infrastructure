@@ -233,7 +233,7 @@
           "date": "2024-05-01T00:00:00Z",
           "lifeCycleCosting": {
             "value": {
-              "amount": 10000000,
+              "amount": 60000000,
               "currency": "USD"
             }
           },
@@ -245,7 +245,7 @@
                 {
                   "id": "1",
                   "value": {
-                    "amount": 50000000,
+                    "amount": 5000000,
                     "currency": "USD"
                   },
                   "classification": {

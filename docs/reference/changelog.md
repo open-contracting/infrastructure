@@ -1,5 +1,11 @@
 # Changelog
 
+## [X.X.X] - YYYY-MM-DD
+
+### Documentation 
+
+* [#287](https://github.com/open-contracting/infrastructure/pull/522) - correct `costMeasurements` so that the sum of cost groups is less than `lifeCycleCosting` in example file.
+
 ## [0.9.5] - 2025-04-02
 
 ### Documentation
