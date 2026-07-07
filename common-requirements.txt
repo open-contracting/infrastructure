@@ -48,7 +48,7 @@ h11==0.16.0
     # via
     #   uvicorn
     #   wsproto
-idna==3.7
+idna==3.15
     # via
     #   anyio
     #   requests
@@ -69,7 +69,7 @@ jsonref==1.0.0.post1
     # via ocdsextensionregistry
 linkify-it-py==1.0.1
     # via -r common-requirements.in
-lxml==6.0.4
+lxml==6.1.0
     # via ocdsindex
 markdown-it-py==2.2.0
     # via
@@ -164,9 +164,9 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@91c74b23da0079f05813fc8b4a4bc795026e8ae7#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@e86740617bdff1e9518b7905423201a1eca00a37#egg=standard_theme
     # via -r common-requirements.in
-starlette==0.50.0
+starlette==1.3.1
     # via sphinx-autobuild
 trio==0.32.0
     # via
@@ -191,7 +191,7 @@ uc-micro-py==1.0.1
     # via linkify-it-py
 url-normalize==1.4.3
     # via requests-cache
-urllib3==2.6.3
+urllib3==2.7.0
     # via
     #   elastic-transport
     #   requests

@@ -7,5 +7,3 @@ jobs:
       contents: write
     secrets:
       personal-access-token: ${{ secrets.PAT }}
-    with:
-      ocds-disallow-null: true
