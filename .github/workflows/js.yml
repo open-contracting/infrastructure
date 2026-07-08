@@ -5,5 +5,3 @@ jobs:
     uses: open-contracting/.github/.github/workflows/js.yml@main
     permissions:
       contents: read
-    with:
-      filenames: docs/_static/json-example-format.js  # ignore renderjson.js, docson

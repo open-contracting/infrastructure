@@ -164,7 +164,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@e86740617bdff1e9518b7905423201a1eca00a37#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@267fa534587afba86f5569bcaff256cff9d30746#egg=standard_theme
     # via -r common-requirements.in
 starlette==1.3.1
     # via sphinx-autobuild
