@@ -126,7 +126,7 @@ requests-cache==1.1.0
     # via ocdsextensionregistry
 selenium==4.40.0
     # via -r common-requirements.in
-setuptools==82.0.1
+setuptools==84.0.0
     # via sphinx-intl
 six==1.16.0
     # via
@@ -164,7 +164,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-standard-theme @ git+https://github.com/open-contracting/standard_theme.git@267fa534587afba86f5569bcaff256cff9d30746#egg=standard_theme
+standard-theme @ git+https://github.com/open-contracting/standard_theme.git@c1594b82ed4f9d75b85b3cd0dfb86b3a0d9ef965#egg=standard_theme
     # via -r common-requirements.in
 starlette==1.3.1
     # via sphinx-autobuild
