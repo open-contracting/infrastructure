@@ -1,7 +1,7 @@
 name: Lint JavaScript
 on: [push, pull_request]
 jobs:
-  lint:
+  js:
     uses: open-contracting/.github/.github/workflows/js.yml@main
-    with:
-      filenames: docs/_static/json-example-format.js
+    permissions:
+      contents: read

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import csv
 import json
 import re
@@ -468,12 +468,12 @@ def update(ppp_base_url):
         # An editor might've added an infrastructure codelist or copied an OCDS codelist, without updating this script.
         added = actual - infra_list - ocds_list
         if added:
-            sys.exit(f'{prefix} has unexpected {", ".join(added)}: add to infra_{suffix} or ocds_{suffix}?')
+            sys.exit(f"{prefix} has unexpected {', '.join(added)}: add to infra_{suffix} or ocds_{suffix}?")
 
         # An editor might've removed an infrastructure codelist, without updating this script.
         removed = infra_list - actual
         if removed:
-            sys.exit(f'{prefix} is missing {", ".join(removed)}: remove from infra_{suffix}?')
+            sys.exit(f"{prefix} is missing {', '.join(removed)}: remove from infra_{suffix}?")
 
     ocds_base_url = "https://standard.open-contracting.org/1.1/en/"
 
@@ -714,10 +714,8 @@ def update(ppp_base_url):
         "Organization",
         {
             # Refer to project instead of contracting process, link to infrastructure codelist instead of PPP codelist.
-            ("properties", "roles", "description"): lambda s: (
-                s.replace("contracting process", "project").replace(
-                    "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
-                )
+            ("properties", "roles", "description"): lambda s: s.replace("contracting process", "project").replace(
+                "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
             ),
         },
     )
@@ -778,8 +776,8 @@ def update(ppp_base_url):
         "Document",
         {
             # Link to infrastructure codelist instead of PPP codelist.
-            ("properties", "documentType", "description"): lambda s: (
-                s.replace("profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/")
+            ("properties", "documentType", "description"): lambda s: s.replace(
+                "profiles/ppp/latest/en/", "infrastructure/{{version}}/{{lang}}/"
             ),
         },
     )
@@ -799,8 +797,8 @@ def update(ppp_base_url):
     _copy_element(
         "Metric",
         {
-            ("properties", "id", "description"): lambda s: (
-                s.replace("contracting process", "contracting process or project")
+            ("properties", "id", "description"): lambda s: s.replace(
+                "contracting process", "contracting process or project"
             ),
         },
     )
@@ -844,11 +842,9 @@ def update(ppp_base_url):
         "MilestoneReference",
         {
             # Remove reference to release, add reference to project.
-            ("properties", "id", "description"): lambda s: (
-                s.replace(
-                    " described elsewhere in a release about this contracting process.",
-                    " in this project or contracting process's `.milestones`.",
-                )
+            ("properties", "id", "description"): lambda s: s.replace(
+                " described elsewhere in a release about this contracting process.",
+                " in this project or contracting process's `.milestones`.",
             ),
         },
     )
@@ -1000,7 +996,7 @@ def lint(filename, additional_properties, link_fields):
                             f"{identifier} ({title}): OC4IDS is invalid: "
                             f"{e.message} ({'/'.join(e.absolute_schema_path)})"
                         )
-            except json.decoder.JSONDecodeError as e:
+            except json.JSONDecodeError as e:
                 click.echo(f"{identifier} ({title}): JSON is invalid: {e}: {example}")
 
     if additional_fields:

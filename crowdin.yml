@@ -1,0 +1,166 @@
+{
+  "project_id": 825758,
+  "preserve_hierarchy": true,
+  "files": [
+    {
+      "source": "/build/locale/404.pot",
+      "dest": "404.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/404.po"
+    },
+    {
+      "source": "/build/locale/about.pot",
+      "dest": "about.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/about.po"
+    },
+    {
+      "source": "/build/locale/cost/common.pot",
+      "dest": "cost/common.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/common.po"
+    },
+    {
+      "source": "/build/locale/cost/ids/core.pot",
+      "dest": "cost/ids/core.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/ids/core.po"
+    },
+    {
+      "source": "/build/locale/cost/ids/index.pot",
+      "dest": "cost/ids/index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/ids/index.po"
+    },
+    {
+      "source": "/build/locale/cost/ids/sustainability.pot",
+      "dest": "cost/ids/sustainability.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/ids/sustainability.po"
+    },
+    {
+      "source": "/build/locale/cost/index.pot",
+      "dest": "cost/index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/index.po"
+    },
+    {
+      "source": "/build/locale/cost/ocds.pot",
+      "dest": "cost/ocds.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/cost/ocds.po"
+    },
+    {
+      "source": "/build/locale/guidance/data_user_guide.pot",
+      "dest": "guidance/data_user_guide.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/data_user_guide.po"
+    },
+    {
+      "source": "/build/locale/guidance/evaluating.pot",
+      "dest": "guidance/evaluating.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/evaluating.po"
+    },
+    {
+      "source": "/build/locale/guidance/example.pot",
+      "dest": "guidance/example.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/example.po"
+    },
+    {
+      "source": "/build/locale/guidance/identifiers.pot",
+      "dest": "guidance/identifiers.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/identifiers.po"
+    },
+    {
+      "source": "/build/locale/guidance/implementation.pot",
+      "dest": "guidance/implementation.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/implementation.po"
+    },
+    {
+      "source": "/build/locale/guidance/index.pot",
+      "dest": "guidance/index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/index.po"
+    },
+    {
+      "source": "/build/locale/guidance/language.pot",
+      "dest": "guidance/language.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/language.po"
+    },
+    {
+      "source": "/build/locale/guidance/publishing.pot",
+      "dest": "guidance/publishing.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/publishing.po"
+    },
+    {
+      "source": "/build/locale/guidance/using.pot",
+      "dest": "guidance/using.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/guidance/using.po"
+    },
+    {
+      "source": "/build/locale/index.pot",
+      "dest": "index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/index.po"
+    },
+    {
+      "source": "/build/locale/infrastructure-codelists.pot",
+      "dest": "infrastructure-codelists.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/infrastructure-codelists.po"
+    },
+    {
+      "source": "/build/locale/infrastructure-mappings.pot",
+      "dest": "infrastructure-mappings.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/infrastructure-mappings.po"
+    },
+    {
+      "source": "/build/locale/infrastructure-schema.pot",
+      "dest": "infrastructure-schema.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/infrastructure-schema.po"
+    },
+    {
+      "source": "/build/locale/infrastructure-theme.pot",
+      "dest": "infrastructure-theme.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/infrastructure-theme.po"
+    },
+    {
+      "source": "/build/locale/projects/index.pot",
+      "dest": "projects/index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/projects/index.po"
+    },
+    {
+      "source": "/build/locale/reference/browser.pot",
+      "dest": "reference/browser.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/browser.po"
+    },
+    {
+      "source": "/build/locale/reference/changelog.pot",
+      "dest": "reference/changelog.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/changelog.po"
+    },
+    {
+      "source": "/build/locale/reference/codelists.pot",
+      "dest": "reference/codelists.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/codelists.po"
+    },
+    {
+      "source": "/build/locale/reference/index.pot",
+      "dest": "reference/index.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/index.po"
+    },
+    {
+      "source": "/build/locale/reference/package.pot",
+      "dest": "reference/package.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/package.po"
+    },
+    {
+      "source": "/build/locale/reference/prefixes.pot",
+      "dest": "reference/prefixes.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/prefixes.po"
+    },
+    {
+      "source": "/build/locale/reference/schema.pot",
+      "dest": "reference/schema.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/reference/schema.po"
+    },
+    {
+      "source": "/build/locale/sphinx.pot",
+      "dest": "sphinx.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/sphinx.po"
+    },
+    {
+      "source": "/build/locale/support.pot",
+      "dest": "support.pot",
+      "translation": "/docs/locale/%two_letters_code%/LC_MESSAGES/support.po"
+    }
+  ]
+}
