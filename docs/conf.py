@@ -78,8 +78,9 @@ html_theme_options = {
     "analytics_id": "YEWDOOEQ",
     "display_version": True,
     "root_url": f"/{profile_identifier}" if profile_identifier else "",
-    # Render the banner and version switcher in the theme, instead of with Apache's server-side includes.
+    # Relative to the version's directory, so that one value serves the live and staging copies.
     "versions_url": "../versions.json",
+    "languages": {"en": "English", "es": "Español"},
     "short_project": "OC4IDS",
     "copyright": copyright,
     "license_name": "Apache License 2.0",
