@@ -40,7 +40,7 @@ Project identifiers in OC4IDS need to be globally unique; this means that, acros
 
 If local project identifiers are available in existing systems or data, these ought to be reused to create globally unique project identifiers for use in OC4IDS. Otherwise, if local project identifiers are not available, publishers are allowed to assign local identifiers to projects in the new systems used to generate OC4IDS data.
 
-To make local project identifiers globally unique for use in OC4IDS, a publisher requests a project identifier prefix from the [OC4IDS Helpdesk](mailto:data@open-contracting.org). The publisher needs to then use the assigned prefix in all its project identifiers, according to following structure: `[project identifier prefix]-[local project identifier]`.
+To make local project identifiers globally unique for use in OC4IDS, a publisher requests a project identifier prefix from the [OC4IDS Helpdesk](../../support). The publisher needs to then use the assigned prefix in all its project identifiers, according to following structure: `[project identifier prefix]-[local project identifier]`.
 
 For example: CoST Honduras requests a project identifier prefix from the OC4IDS Helpdesk. The OC4IDS Helpdesk assigns the randomly-generated prefix `oc4ids-qu8r7p`. CoST Honduras then creates globally unique project identifiers, by combining its assigned prefix with each local project identifier from its SISOCS system.
 

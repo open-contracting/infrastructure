@@ -8,7 +8,7 @@ It is not possible to fully automate checks of whether disclosures from a partic
 
 ## Getting started
 
-*The following steps might require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
+*The following steps might require support from a technical expert. You can also contact the [OC4IDS Helpdesk](../../support) for guidance.*
 
 ### (1) Check your data formats
 
