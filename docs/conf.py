@@ -40,7 +40,6 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "**/docson/[!p]**", "**/
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "standard_theme"  # 'pydata_sphinx_theme'
-html_favicon = "_static/favicon-16x16.ico"
 html_static_path = ["_static", "examples", "../mapping/sustainability.yaml"]
 html_css_files = ["renderjson.css", "https://fonts.googleapis.com/css?family=Montserrat", "custom.css"]
 html_js_files = ["renderjson.js", "json-example-format.js"]
@@ -76,13 +75,8 @@ html_theme_options = {
     "analytics_id": "YEWDOOEQ",
     "display_version": True,
     "root_url": f"/{profile_identifier}" if profile_identifier else "",
-    # Relative to the version's directory, so that one value serves the live and staging copies.
-    "versions_url": "../versions.json",
     "languages": {"en": "English", "es": "Español"},
     "short_project": "OC4IDS",
-    "copyright": copyright,
-    "license_name": "Apache License 2.0",
-    "license_url": f"{repository_url}/blob/HEAD/LICENSE",
     "repository_url": repository_url,
 }
 html_short_title = f"{html_theme_options['short_project']} v{release}"
