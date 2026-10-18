@@ -37,7 +37,7 @@ The fields whose values can be translated are listed in the [internationalizatio
 
 In order to ease access for non-English speakers, instead of using the field *names* as column headers (which are always in English), you can use the field *titles*.
 
-The titles are currently available in English and Spanish. If you would like to translate the titles to your own language, please [contact the OC4IDS Helpdesk](mailto:data@open-contracting.org).
+The titles are currently available in English and Spanish. If you would like to translate the titles to your own language, please contact the [OC4IDS Helpdesk](../../support).
 
 For example, this CSV excerpt uses field titles from the Spanish translation of OC4IDS:
 

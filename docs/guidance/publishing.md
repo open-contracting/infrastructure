@@ -16,7 +16,7 @@ For example, [Highways England](https://highwaysengland.co.uk/roads/) provides l
 
 ## Getting started
 
-*Some of the following steps might require support from a technical expert. You can also contact the OC4IDS Helpdesk ([data@open-contracting.org](mailto:data@open-contracting.org)) for guidance.*
+*Some of the following steps might require support from a technical expert. You can also contact the [OC4IDS Helpdesk](../../support) for guidance.*
 
 ### (1) Make a commitment
 
